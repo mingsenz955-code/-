@@ -1,0 +1,1072 @@
+[
+  {
+    "file": "360gift.lua",
+    "status": "literal-table-read",
+    "rows": 5
+  },
+  {
+    "file": "5daybuy.lua",
+    "status": "literal-table-read",
+    "rows": 8
+  },
+  {
+    "file": "7daybuy.lua",
+    "status": "literal-table-read",
+    "rows": 8
+  },
+  {
+    "file": "7dayfuli_denglu.lua",
+    "status": "literal-table-read",
+    "rows": 7
+  },
+  {
+    "file": "7dayfuli_renwu.lua",
+    "status": "literal-table-read",
+    "rows": 7
+  },
+  {
+    "file": "7dayfuli_shangpin.lua",
+    "status": "literal-table-read",
+    "rows": 7
+  },
+  {
+    "file": "ActiveLimitBuy.lua",
+    "status": "literal-table-read",
+    "rows": 1
+  },
+  {
+    "file": "ActiveLimitBuyReward.lua",
+    "status": "literal-table-read",
+    "rows": 10
+  },
+  {
+    "file": "ActiveTimer.lua",
+    "status": "literal-table-read",
+    "rows": 5
+  },
+  {
+    "file": "Arpuhuodong.lua",
+    "status": "literal-table-read",
+    "rows": 42
+  },
+  {
+    "file": "attacks.lua",
+    "status": "literal-table-read",
+    "rows": 33
+  },
+  {
+    "file": "baoshitehui.lua",
+    "status": "literal-table-read",
+    "rows": 2
+  },
+  {
+    "file": "baoxiang_duihuan.lua",
+    "status": "literal-table-read",
+    "rows": 13
+  },
+  {
+    "file": "BloodWar.lua",
+    "status": "literal-table-read",
+    "rows": 485
+  },
+  {
+    "file": "BloodWarLevel.lua",
+    "status": "literal-table-read",
+    "rows": 50
+  },
+  {
+    "file": "BlueDmdDailyReward.lua",
+    "status": "literal-table-read",
+    "rows": 7
+  },
+  {
+    "file": "Boss.lua",
+    "status": "literal-table-read",
+    "rows": 30
+  },
+  {
+    "file": "breed_oposite.lua",
+    "status": "literal-table-read",
+    "rows": 8
+  },
+  {
+    "file": "buchanglibao.lua",
+    "status": "literal-table-read",
+    "rows": 8
+  },
+  {
+    "file": "buff_new.lua",
+    "status": "literal-table-read",
+    "rows": 464
+  },
+  {
+    "file": "categories.lua",
+    "status": "literal-table-read",
+    "rows": 7
+  },
+  {
+    "file": "CDKlibao.lua",
+    "status": "literal-table-read",
+    "rows": 31
+  },
+  {
+    "file": "chongzhifanli.lua",
+    "status": "literal-table-read",
+    "rows": 9
+  },
+  {
+    "file": "chongzhijiangli.lua",
+    "status": "literal-table-read",
+    "rows": 5
+  },
+  {
+    "file": "chongzhijifen.lua",
+    "status": "literal-table-read",
+    "rows": 9
+  },
+  {
+    "file": "chongzhixiangou.lua",
+    "status": "literal-table-read",
+    "rows": 10
+  },
+  {
+    "file": "choujiangyulan.lua",
+    "status": "literal-table-read",
+    "rows": 53
+  },
+  {
+    "file": "chunjierenwu.lua",
+    "status": "literal-table-read",
+    "rows": 10
+  },
+  {
+    "file": "chunjiexiaohao.lua",
+    "status": "literal-table-read",
+    "rows": 4
+  },
+  {
+    "file": "chunjiezhuanpan.lua",
+    "status": "literal-table-read",
+    "rows": 12
+  },
+  {
+    "file": "coition.lua",
+    "status": "literal-table-read",
+    "rows": 4762
+  },
+  {
+    "file": "coition_open.lua",
+    "status": "literal-table-read",
+    "rows": 16
+  },
+  {
+    "file": "collections.lua",
+    "status": "literal-table-read",
+    "rows": 15
+  },
+  {
+    "file": "dafuweng.lua",
+    "status": "literal-table-read",
+    "rows": 20
+  },
+  {
+    "file": "dafuweng_randgive.lua",
+    "status": "literal-table-read",
+    "rows": 286
+  },
+  {
+    "file": "dafuweng_zhanshi.lua",
+    "status": "literal-table-read",
+    "rows": 44
+  },
+  {
+    "file": "dafuwengfanli.lua",
+    "status": "literal-table-read",
+    "rows": 22
+  },
+  {
+    "file": "danchong.lua",
+    "status": "literal-table-read",
+    "rows": 6
+  },
+  {
+    "file": "dengjicanshu.lua",
+    "status": "literal-table-read",
+    "rows": 100
+  },
+  {
+    "file": "DiceReward.lua",
+    "status": "literal-table-read",
+    "rows": 350
+  },
+  {
+    "file": "Dragon_atks.lua",
+    "status": "literal-table-read",
+    "rows": 580
+  },
+  {
+    "file": "Dragon_birth.lua",
+    "status": "literal-table-read",
+    "rows": 90
+  },
+  {
+    "file": "Dragon_computer_array_nine.lua",
+    "status": "literal-table-read",
+    "rows": 3483
+  },
+  {
+    "file": "dragon_extend.lua",
+    "status": "literal-table-read",
+    "rows": 90
+  },
+  {
+    "file": "dragon_juexingjingyan.lua",
+    "status": "literal-table-read",
+    "rows": 13
+  },
+  {
+    "file": "dragon_juexingshengxing.lua",
+    "status": "literal-table-read",
+    "rows": 78
+  },
+  {
+    "file": "dragon_juexingshuxing.lua",
+    "status": "literal-table-read",
+    "rows": 468
+  },
+  {
+    "file": "Dragon_peiyang.lua",
+    "status": "literal-table-read",
+    "rows": 12
+  },
+  {
+    "file": "Dragon_peiyangshuxing.lua",
+    "status": "literal-table-read",
+    "rows": 36
+  },
+  {
+    "file": "dragon_star.lua",
+    "status": "literal-table-read",
+    "rows": 7
+  },
+  {
+    "file": "DragonBook.lua",
+    "status": "literal-table-read",
+    "rows": 17
+  },
+  {
+    "file": "DragonFenJie.lua",
+    "status": "literal-table-read",
+    "rows": 5
+  },
+  {
+    "file": "dragongamerobot.lua",
+    "status": "literal-table-read",
+    "rows": 160
+  },
+  {
+    "file": "Dragonrand.lua",
+    "status": "literal-table-read",
+    "rows": 43
+  },
+  {
+    "file": "duelrobot.lua",
+    "status": "literal-table-read",
+    "rows": 3000
+  },
+  {
+    "file": "duihuan.lua",
+    "status": "literal-table-read",
+    "rows": 32
+  },
+  {
+    "file": "Enhanced_Stone.lua",
+    "status": "literal-table-read",
+    "rows": 6
+  },
+  {
+    "file": "Enhanced_Stone_jiangli.lua",
+    "status": "literal-table-read",
+    "rows": 5
+  },
+  {
+    "file": "Enhanced_Stone_jifen.lua",
+    "status": "literal-table-read",
+    "rows": 5
+  },
+  {
+    "file": "equipinfo.lua",
+    "status": "literal-table-read",
+    "rows": 6000
+  },
+  {
+    "file": "equipinfofragment.lua",
+    "status": "literal-table-read",
+    "rows": 48
+  },
+  {
+    "file": "equipinforand.lua",
+    "status": "literal-table-read",
+    "rows": 5
+  },
+  {
+    "file": "equipinfostar.lua",
+    "status": "literal-table-read",
+    "rows": 192
+  },
+  {
+    "file": "Evolution.lua",
+    "status": "literal-table-read",
+    "rows": 40
+  },
+  {
+    "file": "EvolutionMax.lua",
+    "status": "literal-table-read",
+    "rows": 50
+  },
+  {
+    "file": "expansion_prices.lua",
+    "status": "literal-table-read",
+    "rows": 100
+  },
+  {
+    "file": "friendsInvite.lua",
+    "status": "literal-table-read",
+    "rows": 16
+  },
+  {
+    "file": "funcswitch.lua",
+    "status": "literal-table-read",
+    "rows": 49
+  },
+  {
+    "file": "fuwen.lua",
+    "status": "literal-table-read",
+    "rows": 246
+  },
+  {
+    "file": "fuwen_diaoluo.lua",
+    "status": "literal-table-read",
+    "rows": 5
+  },
+  {
+    "file": "fuwen_shenfu.lua",
+    "status": "literal-table-read",
+    "rows": 53
+  },
+  {
+    "file": "gameconfig.lua",
+    "status": "literal-table-read",
+    "rows": 9
+  },
+  {
+    "file": "Gaming_table.lua",
+    "status": "literal-table-read",
+    "rows": 13
+  },
+  {
+    "file": "Gaming_table2.lua",
+    "status": "literal-table-read",
+    "rows": 8
+  },
+  {
+    "file": "Gaming_table3.lua",
+    "status": "literal-table-read",
+    "rows": 12
+  },
+  {
+    "file": "Gaming_table3_0.lua",
+    "status": "literal-table-read",
+    "rows": 12
+  },
+  {
+    "file": "Gaming_table3_1.lua",
+    "status": "literal-table-read",
+    "rows": 12
+  },
+  {
+    "file": "Gaming_table3_2.lua",
+    "status": "literal-table-read",
+    "rows": 12
+  },
+  {
+    "file": "Gaming_table3_3.lua",
+    "status": "literal-table-read",
+    "rows": 12
+  },
+  {
+    "file": "Gaming_table3_4.lua",
+    "status": "literal-table-read",
+    "rows": 12
+  },
+  {
+    "file": "Gaming_table3_5.lua",
+    "status": "literal-table-read",
+    "rows": 12
+  },
+  {
+    "file": "goals.lua",
+    "status": "literal-table-read",
+    "rows": 223
+  },
+  {
+    "file": "god.lua",
+    "status": "literal-table-read",
+    "rows": 808
+  },
+  {
+    "file": "godfire.lua",
+    "status": "literal-table-read",
+    "rows": 360
+  },
+  {
+    "file": "godlevel.lua",
+    "status": "literal-table-read",
+    "rows": 101
+  },
+  {
+    "file": "godrandnpc.lua",
+    "status": "literal-table-read",
+    "rows": 5
+  },
+  {
+    "file": "gonggao.lua",
+    "status": "literal-table-read",
+    "rows": 22
+  },
+  {
+    "file": "gonghui_dengji.lua",
+    "status": "literal-table-read",
+    "rows": 20
+  },
+  {
+    "file": "gonghui_fubenboss.lua",
+    "status": "literal-table-read",
+    "rows": 20
+  },
+  {
+    "file": "gonghui_fubenguanqia.lua",
+    "status": "literal-table-read",
+    "rows": 4
+  },
+  {
+    "file": "gonghui_fubenjiangli.lua",
+    "status": "literal-table-read",
+    "rows": 54
+  },
+  {
+    "file": "gonghui_fubenjiangli_geren.lua",
+    "status": "literal-table-read",
+    "rows": 32
+  },
+  {
+    "file": "gonghui_juanxian.lua",
+    "status": "literal-table-read",
+    "rows": 3
+  },
+  {
+    "file": "gonghui_keji.lua",
+    "status": "literal-table-read",
+    "rows": 90
+  },
+  {
+    "file": "gonghui_shangdian.lua",
+    "status": "literal-table-read",
+    "rows": 21
+  },
+  {
+    "file": "growth_plan.lua",
+    "status": "literal-table-read",
+    "rows": 13
+  },
+  {
+    "file": "guildbattletime.lua",
+    "status": "literal-table-read",
+    "rows": 6
+  },
+  {
+    "file": "guilddragonnest.lua",
+    "status": "literal-table-read",
+    "rows": 40
+  },
+  {
+    "file": "guildJobPower.lua",
+    "status": "literal-table-read",
+    "rows": 4
+  },
+  {
+    "file": "guildLevel.lua",
+    "status": "literal-table-read",
+    "rows": 15
+  },
+  {
+    "file": "guildnotice.lua",
+    "status": "literal-table-read",
+    "rows": 0
+  },
+  {
+    "file": "guildSource.lua",
+    "status": "literal-table-read",
+    "rows": 2
+  },
+  {
+    "file": "guildwarenergy.lua",
+    "status": "literal-table-read",
+    "rows": 11
+  },
+  {
+    "file": "guildwargroup.lua",
+    "status": "literal-table-read",
+    "rows": 5
+  },
+  {
+    "file": "guildwarnest.lua",
+    "status": "literal-table-read",
+    "rows": 9
+  },
+  {
+    "file": "guildwarreward.lua",
+    "status": "literal-table-read",
+    "rows": 16
+  },
+  {
+    "file": "hongbao.lua",
+    "status": "literal-table-read",
+    "rows": 4
+  },
+  {
+    "file": "huodong.lua",
+    "status": "literal-table-read",
+    "rows": 8
+  },
+  {
+    "file": "images.lua",
+    "status": "literal-table-read",
+    "rows": 608
+  },
+  {
+    "file": "inventory_items.lua",
+    "status": "literal-table-read",
+    "rows": 90
+  },
+  {
+    "file": "items.lua",
+    "status": "literal-table-read",
+    "rows": 408
+  },
+  {
+    "file": "jingjichang.lua",
+    "status": "literal-table-read",
+    "rows": 310
+  },
+  {
+    "file": "jinquanhuodong.lua",
+    "status": "literal-table-read",
+    "rows": 3
+  },
+  {
+    "file": "jinquanlibao.lua",
+    "status": "not-converted",
+    "reason": "Non-literal text token"
+  },
+  {
+    "file": "Jiyin_duihuan.lua",
+    "status": "literal-table-read",
+    "rows": 13
+  },
+  {
+    "file": "Jiyin_fenjie.lua",
+    "status": "literal-table-read",
+    "rows": 3
+  },
+  {
+    "file": "kaixiangtexiao.lua",
+    "status": "literal-table-read",
+    "rows": 14
+  },
+  {
+    "file": "level_ranking_reward.lua",
+    "status": "literal-table-read",
+    "rows": 50
+  },
+  {
+    "file": "levels.lua",
+    "status": "literal-table-read",
+    "rows": 100
+  },
+  {
+    "file": "limits.lua",
+    "status": "literal-table-read",
+    "rows": 49
+  },
+  {
+    "file": "longdan_jiangli.lua",
+    "status": "literal-table-read",
+    "rows": 100
+  },
+  {
+    "file": "longdan_zhonglei.lua",
+    "status": "literal-table-read",
+    "rows": 40
+  },
+  {
+    "file": "loser.lua",
+    "status": "literal-table-read",
+    "rows": 40
+  },
+  {
+    "file": "love_duihuan.lua",
+    "status": "literal-table-read",
+    "rows": 7
+  },
+  {
+    "file": "LvDailyReward.lua",
+    "status": "literal-table-read",
+    "rows": 100
+  },
+  {
+    "file": "map.lua",
+    "status": "literal-table-read",
+    "rows": 20
+  },
+  {
+    "file": "map_level.lua",
+    "status": "not-converted",
+    "reason": "Non-literal value juqing018"
+  },
+  {
+    "file": "mapevents.lua",
+    "status": "literal-table-read",
+    "rows": 400
+  },
+  {
+    "file": "mapeventsflop.lua",
+    "status": "literal-table-read",
+    "rows": 400
+  },
+  {
+    "file": "maps.lua",
+    "status": "literal-table-read",
+    "rows": 20
+  },
+  {
+    "file": "meirimiaosha.lua",
+    "status": "literal-table-read",
+    "rows": 10
+  },
+  {
+    "file": "MiBaoJiHuo.lua",
+    "status": "literal-table-read",
+    "rows": 25
+  },
+  {
+    "file": "money_cat.lua",
+    "status": "literal-table-read",
+    "rows": 10
+  },
+  {
+    "file": "monster.lua",
+    "status": "literal-table-read",
+    "rows": 9976
+  },
+  {
+    "file": "mountfragment.lua",
+    "status": "literal-table-read",
+    "rows": 15
+  },
+  {
+    "file": "offer_packs.lua",
+    "status": "literal-table-read",
+    "rows": 1
+  },
+  {
+    "file": "opposite_elements.lua",
+    "status": "literal-table-read",
+    "rows": 10
+  },
+  {
+    "file": "peiyangduihuan.lua",
+    "status": "literal-table-read",
+    "rows": 10
+  },
+  {
+    "file": "peiyanghuodongjifen.lua",
+    "status": "literal-table-read",
+    "rows": 13
+  },
+  {
+    "file": "peiyangjifenduihuan.lua",
+    "status": "literal-table-read",
+    "rows": 4
+  },
+  {
+    "file": "peiyangpaihangjiangli.lua",
+    "status": "literal-table-read",
+    "rows": 7
+  },
+  {
+    "file": "peiyangrenwu.lua",
+    "status": "literal-table-read",
+    "rows": 14
+  },
+  {
+    "file": "pingbizi.lua",
+    "status": "literal-table-read",
+    "rows": 39321
+  },
+  {
+    "file": "PVPduihuan.lua",
+    "status": "literal-table-read",
+    "rows": 27
+  },
+  {
+    "file": "PVPjiangli.lua",
+    "status": "literal-table-read",
+    "rows": 30
+  },
+  {
+    "file": "PVPOpen.lua",
+    "status": "literal-table-read",
+    "rows": 5
+  },
+  {
+    "file": "PVPshaizi.lua",
+    "status": "literal-table-read",
+    "rows": 20
+  },
+  {
+    "file": "qiandao.lua",
+    "status": "literal-table-read",
+    "rows": 15
+  },
+  {
+    "file": "qiandao_meiyue.lua",
+    "status": "literal-table-read",
+    "rows": 366
+  },
+  {
+    "file": "qianggouchengzhuang.lua",
+    "status": "literal-table-read",
+    "rows": 4
+  },
+  {
+    "file": "qianghuatehui.lua",
+    "status": "literal-table-read",
+    "rows": 15
+  },
+  {
+    "file": "randgive.lua",
+    "status": "literal-table-read",
+    "rows": 3468
+  },
+  {
+    "file": "randomattribute.lua",
+    "status": "literal-table-read",
+    "rows": 6
+  },
+  {
+    "file": "randomevent_cf.lua",
+    "status": "literal-table-read",
+    "rows": 10
+  },
+  {
+    "file": "randomevent_nr.lua",
+    "status": "literal-table-read",
+    "rows": 14
+  },
+  {
+    "file": "randomname.lua",
+    "status": "literal-table-read",
+    "rows": 759
+  },
+  {
+    "file": "Recharge_table1-1.lua",
+    "status": "literal-table-read",
+    "rows": 24
+  },
+  {
+    "file": "rune.lua",
+    "status": "literal-table-read",
+    "rows": 464
+  },
+  {
+    "file": "runehuodong.lua",
+    "status": "literal-table-read",
+    "rows": 8
+  },
+  {
+    "file": "runehuodong_1.lua",
+    "status": "literal-table-read",
+    "rows": 8
+  },
+  {
+    "file": "runehuodong_2.lua",
+    "status": "literal-table-read",
+    "rows": 8
+  },
+  {
+    "file": "runehuodong_3.lua",
+    "status": "literal-table-read",
+    "rows": 8
+  },
+  {
+    "file": "runehuodong_4.lua",
+    "status": "literal-table-read",
+    "rows": 8
+  },
+  {
+    "file": "runetable.lua",
+    "status": "literal-table-read",
+    "rows": 72
+  },
+  {
+    "file": "savesigil.lua",
+    "status": "literal-table-read",
+    "rows": 3
+  },
+  {
+    "file": "seed.lua",
+    "status": "literal-table-read",
+    "rows": 57
+  },
+  {
+    "file": "seedrobot.lua",
+    "status": "literal-table-read",
+    "rows": 3
+  },
+  {
+    "file": "seedwar.lua",
+    "status": "literal-table-read",
+    "rows": 12
+  },
+  {
+    "file": "setmap.lua",
+    "status": "literal-table-read",
+    "rows": 129
+  },
+  {
+    "file": "shenlong_1.lua",
+    "status": "literal-table-read",
+    "rows": 11
+  },
+  {
+    "file": "shenlong_2.lua",
+    "status": "literal-table-read",
+    "rows": 11
+  },
+  {
+    "file": "shenlong_3.lua",
+    "status": "literal-table-read",
+    "rows": 11
+  },
+  {
+    "file": "shenlong_4.lua",
+    "status": "literal-table-read",
+    "rows": 11
+  },
+  {
+    "file": "shenlong_5.lua",
+    "status": "literal-table-read",
+    "rows": 11
+  },
+  {
+    "file": "shouchong.lua",
+    "status": "literal-table-read",
+    "rows": 4
+  },
+  {
+    "file": "shuxingjiejie.lua",
+    "status": "literal-table-read",
+    "rows": 28
+  },
+  {
+    "file": "skill_info.lua",
+    "status": "literal-table-read",
+    "rows": 349
+  },
+  {
+    "file": "skill_new.lua",
+    "status": "literal-table-read",
+    "rows": 347
+  },
+  {
+    "file": "skill_new_colour.lua",
+    "status": "literal-table-read",
+    "rows": 44
+  },
+  {
+    "file": "skill_new_lv.lua",
+    "status": "literal-table-read",
+    "rows": 15
+  },
+  {
+    "file": "skilllevel.lua",
+    "status": "literal-table-read",
+    "rows": 1
+  },
+  {
+    "file": "skilltypes.lua",
+    "status": "literal-table-read",
+    "rows": 42
+  },
+  {
+    "file": "social_items.lua",
+    "status": "literal-table-read",
+    "rows": 8
+  },
+  {
+    "file": "sounds.lua",
+    "status": "literal-table-read",
+    "rows": 76
+  },
+  {
+    "file": "subcategories.lua",
+    "status": "literal-table-read",
+    "rows": 32
+  },
+  {
+    "file": "tanxian_baoxiang.lua",
+    "status": "literal-table-read",
+    "rows": 10
+  },
+  {
+    "file": "tanxian_guanqia.lua",
+    "status": "literal-table-read",
+    "rows": 100
+  },
+  {
+    "file": "tongji_canyu.lua",
+    "status": "literal-table-read",
+    "rows": 87
+  },
+  {
+    "file": "tongji_daoju.lua",
+    "status": "literal-table-read",
+    "rows": 37
+  },
+  {
+    "file": "tournaments.lua",
+    "status": "literal-table-read",
+    "rows": 48
+  },
+  {
+    "file": "treasure_items.lua",
+    "status": "literal-table-read",
+    "rows": 135
+  },
+  {
+    "file": "tuhao.lua",
+    "status": "literal-table-read",
+    "rows": 16
+  },
+  {
+    "file": "tuhao_1.lua",
+    "status": "literal-table-read",
+    "rows": 18
+  },
+  {
+    "file": "tuhao_2.lua",
+    "status": "literal-table-read",
+    "rows": 48
+  },
+  {
+    "file": "tuhao_3.lua",
+    "status": "literal-table-read",
+    "rows": 18
+  },
+  {
+    "file": "tuhao_4.lua",
+    "status": "literal-table-read",
+    "rows": 18
+  },
+  {
+    "file": "tujian_new.lua",
+    "status": "literal-table-read",
+    "rows": 86
+  },
+  {
+    "file": "uibutton.lua",
+    "status": "literal-table-read",
+    "rows": 11
+  },
+  {
+    "file": "vip.lua",
+    "status": "literal-table-read",
+    "rows": 11
+  },
+  {
+    "file": "world_boss.lua",
+    "status": "literal-table-read",
+    "rows": 22
+  },
+  {
+    "file": "world_boss_chengjiu.lua",
+    "status": "literal-table-read",
+    "rows": 8
+  },
+  {
+    "file": "world_boss_paiming.lua",
+    "status": "literal-table-read",
+    "rows": 5
+  },
+  {
+    "file": "xiaofeifanli.lua",
+    "status": "literal-table-read",
+    "rows": 8
+  },
+  {
+    "file": "xiaofeifanli2.lua",
+    "status": "literal-table-read",
+    "rows": 25
+  },
+  {
+    "file": "xiaomigift.lua",
+    "status": "literal-table-read",
+    "rows": 6
+  },
+  {
+    "file": "xingzuo_fenjie.lua",
+    "status": "literal-table-read",
+    "rows": 5
+  },
+  {
+    "file": "xingzuo_hecheng.lua",
+    "status": "literal-table-read",
+    "rows": 2
+  },
+  {
+    "file": "xingzuo_jiacheng.lua",
+    "status": "literal-table-read",
+    "rows": 7
+  },
+  {
+    "file": "xingzuo_jihuo.lua",
+    "status": "literal-table-read",
+    "rows": 26
+  },
+  {
+    "file": "xinshoulibao.lua",
+    "status": "literal-table-read",
+    "rows": 3
+  },
+  {
+    "file": "xinshoulibaoxianzhi.lua",
+    "status": "literal-table-read",
+    "rows": 1
+  },
+  {
+    "file": "zadanhuodong.lua",
+    "status": "literal-table-read",
+    "rows": 2
+  },
+  {
+    "file": "zanghua.lua",
+    "status": "literal-table-read",
+    "rows": 39321
+  },
+  {
+    "file": "zhanbuwu.lua",
+    "status": "literal-table-read",
+    "rows": 89
+  }
+]

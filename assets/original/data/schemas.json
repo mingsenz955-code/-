@@ -1,0 +1,409 @@
+{
+  "LibAdventureBoxInfo": {
+    "source": "dragon/pconfig/librarys/adventure/LibAdventureBoxInfo.lua",
+    "columns": {
+      "id": 1,
+      "belong": 2,
+      "maxOpenCount": 3,
+      "imgID": 4,
+      "dropID_1": 5,
+      "dropNum_1": 6,
+      "dropID_2": 7,
+      "dropNum_2": 8,
+      "dropID_3": 9,
+      "dropNum_3": 10,
+      "previewType_1": 11,
+      "previewID_1": 12,
+      "previewQuality_1": 13,
+      "previewType_2": 14,
+      "previewID_2": 15,
+      "previewQuality_2": 16,
+      "previewType_3": 17,
+      "previewID_3": 18,
+      "previewQuality_3": 19,
+      "previewType_4": 20,
+      "previewID_4": 21,
+      "previewQuality_4": 22,
+      "price_1": 23,
+      "price_2": 24,
+      "price_3": 25,
+      "price_4": 26,
+      "price_5": 27,
+      "price_6": 28,
+      "price_7": 29,
+      "price_8": 30
+    }
+  },
+  "LibAdventureInfo": {
+    "source": "dragon/pconfig/librarys/adventure/LibAdventureInfo.lua",
+    "columns": {
+      "id": 1,
+      "islandType": 2,
+      "boxID": 3,
+      "monsterID": 4,
+      "awardID_1": 5,
+      "awardNum_1": 6,
+      "awardID_2": 7,
+      "awardNum_2": 8,
+      "awardID_3": 9,
+      "awardNum_3": 10,
+      "previewType_1": 11,
+      "previewID_1": 12,
+      "previewQuality_1": 13,
+      "previewType_2": 14,
+      "previewID_2": 15,
+      "previewQuality_2": 16,
+      "previewType_3": 17,
+      "previewID_3": 18,
+      "previewQuality_3": 19,
+      "previewType_4": 20,
+      "previewID_4": 21,
+      "previewQuality_4": 22
+    }
+  },
+  "LibbigrewardInfo": {
+    "source": "dragon/pconfig/librarys/bigreward/LibbigrewardInfo.lua",
+    "columns": {
+      "id": 1,
+      "cost": 2,
+      "type1": 3,
+      "typeID1": 4,
+      "typenum1": 5,
+      "pin1": 6,
+      "type2": 7,
+      "typeID2": 8,
+      "typenum2": 9,
+      "pin2": 10,
+      "type3": 11,
+      "typeID3": 12,
+      "typenum3": 13,
+      "pin3": 14,
+      "rewardlist": 14
+    }
+  },
+  "LibDanbichongzhiInfo": {
+    "source": "dragon/pconfig/librarys/danbichongzhi/LibDanbichongzhiInfo.lua",
+    "columns": {
+      "id": 1,
+      "androidCost": 2,
+      "iosCost": 3,
+      "awardType_1": 4,
+      "awardID_1": 5,
+      "awardNum_1": 6,
+      "awardQuality_1": 7,
+      "awardType_2": 8,
+      "awardID_2": 9,
+      "awardNum_2": 10,
+      "awardQuality_2": 11,
+      "awardType_3": 12,
+      "awardID_3": 13,
+      "awardNum_3": 14,
+      "awardQuality_3": 15,
+      "costYuan": 16,
+      "costIOS": 17
+    }
+  },
+  "LibDragonExtendInfo": {
+    "source": "dragon/pconfig/librarys/dragonExtend/LibDragonExtendInfo.lua",
+    "columns": {
+      "id": 1,
+      "baseID": 2,
+      "step": 3,
+      "starExp": 4,
+      "collectLevel": 6,
+      "isLegend": 7,
+      "starMax": 8,
+      "isInBook": 9,
+      "orderInBook": 10,
+      "collectType": 11,
+      "collectVaule": 12,
+      "colorArg1": 13,
+      "colorArg2": 14,
+      "colorArg3": 15,
+      "colorArg4": 16,
+      "colorArg5": 17,
+      "phaseOutput1": 18,
+      "phaseOutput2": 19,
+      "phaseOutput3": 20,
+      "starUpCost1": 21,
+      "starUpCost2": 22,
+      "starUpCost3": 23,
+      "position": 24,
+      "quality": 25,
+      "queuePriority": 26,
+      "offsetY": 27,
+      "bulletHeight": 28,
+      "headX": 29,
+      "headY": 30,
+      "scaleInBattle": 31,
+      "bulletOffsetX": 32,
+      "isSanctify": 33,
+      "canWakeup": 34,
+      "maxStar": 35
+    }
+  },
+  "LibFiveInfo": {
+    "source": "dragon/pconfig/librarys/five/LibFiveInfo.lua",
+    "columns": {
+      "id": 1,
+      "day": 2,
+      "rewardList": 2,
+      "cost": 15
+    }
+  },
+  "LibfuncswitchInfo": {
+    "source": "dragon/pconfig/librarys/funcswitch/LibfuncswitchInfo.lua",
+    "columns": {
+      "id": 1,
+      "type": 2,
+      "doc": 4,
+      "args": 13
+    }
+  },
+  "LibFuwenDiaoluoInfo": {
+    "source": "dragon/pconfig/librarys/fuwen/LibFuwenDiaoluoInfo.lua",
+    "columns": {
+      "id": 1,
+      "name": 2,
+      "costType": 3,
+      "costID": 4,
+      "costNum": 5,
+      "suc": 6,
+      "dropID": 7
+    }
+  },
+  "LibFuwenInfo": {
+    "source": "dragon/pconfig/librarys/fuwen/LibFuwenInfo.lua",
+    "columns": {
+      "id": 1,
+      "quality": 2,
+      "equipType": 3,
+      "level": 4,
+      "needExp": 5,
+      "offerExp": 6,
+      "levelUpID": 7,
+      "exchangeID": 8,
+      "exchangeNum": 9,
+      "name": 10,
+      "image": 11,
+      "desc": 12,
+      "exchangeVisible": 13
+    }
+  },
+  "LibShenfuInfo": {
+    "source": "dragon/pconfig/librarys/fuwen/LibShenfuInfo.lua",
+    "columns": {
+      "id": 1,
+      "cd": 2,
+      "costType": 3,
+      "costNum": 4,
+      "awardType": 5,
+      "awardID": 6,
+      "awardNum": 7
+    }
+  },
+  "LibMonsterInfo": {
+    "source": "dragon/pconfig/librarys/monster/LibMonsterInfo.lua",
+    "columns": {
+      "name": 21,
+      "ai": 21,
+      "isGround": 23
+    }
+  },
+  "LibTreasureInfo": {
+    "source": "dragon/pconfig/librarys/treasure/LibTreasureInfo.lua",
+    "columns": {
+      "name": 2,
+      "amount": 2,
+      "costtype": 4,
+      "price": 4,
+      "rebate": 6,
+      "rebateMultiple": 7,
+      "type": [
+        "index",
+        [
+          "arr"
+        ],
+        7
+      ],
+      "display_order": [
+        "index",
+        [
+          "arr"
+        ],
+        7
+      ],
+      "badge": [
+        "index",
+        [
+          "arr"
+        ],
+        7
+      ],
+      "abtest_a": [
+        "index",
+        [
+          "arr"
+        ],
+        7
+      ],
+      "abtest_b": [
+        "index",
+        [
+          "arr"
+        ],
+        7
+      ],
+      "abtest_c": [
+        "index",
+        [
+          "arr"
+        ],
+        7
+      ],
+      "abtest_d": [
+        "index",
+        [
+          "arr"
+        ],
+        7
+      ],
+      "xid": [
+        "index",
+        [
+          "arr"
+        ],
+        7
+      ],
+      "enable": [
+        "index",
+        [
+          "arr"
+        ],
+        7
+      ],
+      "des": [
+        "index",
+        [
+          "arr"
+        ],
+        [
+          "index",
+          [
+            "arr"
+          ],
+          7
+        ]
+      ],
+      "shoptype": [
+        "index",
+        [
+          "arr"
+        ],
+        [
+          "index",
+          [
+            "arr"
+          ],
+          7
+        ]
+      ],
+      "platform": [
+        "index",
+        [
+          "arr"
+        ],
+        [
+          "index",
+          [
+            "arr"
+          ],
+          [
+            "index",
+            [
+              "arr"
+            ],
+            7
+          ]
+        ]
+      ],
+      "img": [
+        "index",
+        [
+          "arr"
+        ],
+        [
+          "index",
+          [
+            "arr"
+          ],
+          [
+            "index",
+            [
+              "arr"
+            ],
+            [
+              "index",
+              [
+                "arr"
+              ],
+              7
+            ]
+          ]
+        ]
+      ],
+      "iszhekou": 21,
+      "zhekouIcon": 21
+    }
+  },
+  "LibWelfareInfo": {
+    "source": "dragon/pconfig/librarys/welfare/LibWelfareInfo.lua",
+    "columns": {
+      "id": 1,
+      "month": 2,
+      "rank": 3,
+      "type": 4,
+      "typeId": 5,
+      "pinzhi": 6,
+      "num": 7,
+      "double": 8,
+      "vip": 9
+    }
+  },
+  "LibXianshixiaofeiInfo": {
+    "source": "dragon/pconfig/librarys/xianshixiaofei/LibXianshixiaofeiInfo.lua",
+    "columns": {
+      "id": 1,
+      "day": 2,
+      "cost": 3,
+      "awardType_1": 4,
+      "awardID_1": 5,
+      "awardNum_1": 6,
+      "awardQuality_1": 7,
+      "awardType_2": 8,
+      "awardID_2": 9,
+      "awardNum_2": 10,
+      "awardQuality_2": 11,
+      "awardType_3": 12,
+      "awardID_3": 13,
+      "awardNum_3": 14,
+      "awardQuality_3": 15
+    }
+  },
+  "LibBloodWarLevelInfo": {
+    "source": "dragon/pconfig/librarys/battle/blood/LibBloodWarLevelInfo.lua",
+    "columns": {
+      "buff_1_desc": 6,
+      "buff_2_id": 6,
+      "buff_2_cost": 6,
+      "buff_2_desc": 9,
+      "buff_3_id": 9,
+      "buff_3_cost": 9,
+      "buff_3_desc": 12,
+      "prevID": 13,
+      "nextID": 14,
+      "costMojing": 15,
+      "getScore": 16
+    }
+  }
+}

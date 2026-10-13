@@ -1,0 +1,11 @@
+{
+  "package": "com.sincetimes.dragonfarmii.dl",
+  "version": "2.9.35",
+  "resourceVersion": "202402271124",
+  "namedConfigSource": "assets/res/config/config_cn_qq.json",
+  "namedConfigSha256": "84b4e22d525b8dc14cbbdbf5f3f5a15cceede9949dbf4ccd87a2e38ac13de8e9",
+  "namedItems": 404,
+  "pcfItems": 408,
+  "literalTables": 212,
+  "note": "Named legacy config and pcf config may differ. Server updates, actual pool probabilities and battle simulation require comparison."
+}
