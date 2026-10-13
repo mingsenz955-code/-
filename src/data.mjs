@@ -1,4 +1,4 @@
-// Economy and breeding rules are prototype data. `original` identifies verified APK art only.
+// Source-backed data and legacy compatibility defaults are distinguished in docs/EVIDENCE.md.
 import ORIGINAL_CATALOG from '../assets/original/catalog.mjs';
 import {ORIGINAL_BREEDING} from '../assets/original/data/rules.mjs';
 export const SPECIES = {
@@ -18,10 +18,10 @@ for(const record of ORIGINAL_CATALOG){const key=speciesKey(record.id);SPECIES[ke
 const breedIndex=new Map(ORIGINAL_BREEDING.map(row=>[[row[1],row[2]].sort((a,b)=>a-b).join('+'),row]));
 export function breedingOptions(a,b){const sa=SPECIES[a],sb=SPECIES[b];if(!sa?.originalId||!sb?.originalId)return null;const row=breedIndex.get([sa.originalId,sb.originalId].sort((a,b)=>a-b).join('+'));if(!row||row[3]!==1)return [];const result=[];for(let i=4;i<row.length;i+=2)if(row[i]>0&&row[i+1]>0&&SPECIES[speciesKey(row[i])])result.push({species:speciesKey(row[i]),weight:row[i+1]});return result;}
 export const ROADMAP = [
- ['龙种与皮肤','3 种已接入原版龙外观 + 3 种测试配方龙；已收集原版图集，完整规则与皮肤待核实'],
- ['牧场与养成','首版已实现种植、收获、栖息地、金币产出和喂养'],
- ['繁殖与孵化','首版已实现亲代选择、计时、孵化、入驻；配方为测试规则'],
- ['皇冠 / 羽翼 / 升星','已列入范围，原版装备槽、材料与成长规则待核实'],
+ ['龙种与皮肤','90 条原版记录、87 条三阶段模型与1734段动作；缺失模型、完整皮肤和特效继续核对'],
+ ['牧场与养成','已接入原版农场、四次喂养、产金与18项元素巢定义；原版界面和地块继续还原'],
+ ['繁殖与孵化','培育山与育龙塔独立并发；采用原版客户端基础池，服务器概率仍待核实'],
+ ['皇冠 / 羽翼 / 升星','原版六槽和装备表已取得，穿戴、培养、星级与数值仍待实现'],
  ['装备与宝石','待建立装备、镶嵌、强化数据与原版界面对照'],
  ['战斗与副本','待核实阵型、属性克制、技能和副本关卡'],
  ['历史活动与抽奖','待取得活动时间、奖池、概率和保底证据；计划离线重放'],

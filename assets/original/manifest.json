@@ -9609,6 +9609,3138 @@
       "width": 405,
       "height": 340,
       "sha256": "872d06009eb2834506057d2a84767dce688df0e7ce02368ea555ee678b23e871"
+    },
+    "models/1000_dragon_plant_b_1.webp": {
+      "archive": "assets/res/dragons/1000_dragon_plant_b_1.xml",
+      "texture": "assets/res/dragons/1000_dragon_plant_b_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "83fe91bb9e6b0a06c25986c02a774da21b5f7292e57c454a9a82e7fa39ae3750"
+    },
+    "models/1000_dragon_plant_b_1.json": {
+      "archive": "assets/res/dragons/1000_dragon_plant_b_1.xml",
+      "texture": "assets/res/dragons/1000_dragon_plant_b_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "da27c2362ca8b3036711c81259b521bfd11c48c30b360c8dc99afa5abd6fe942"
+    },
+    "models/1000_dragon_plant_b_2.webp": {
+      "archive": "assets/res/dragons/1000_dragon_plant_b_2.xml",
+      "texture": "assets/res/dragons/1000_dragon_plant_b_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "f14914ec982ff03348e223c407c03c599223c63d1e6a06c370c42ea93430d98c"
+    },
+    "models/1000_dragon_plant_b_2.json": {
+      "archive": "assets/res/dragons/1000_dragon_plant_b_2.xml",
+      "texture": "assets/res/dragons/1000_dragon_plant_b_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "c69df92b357ab2efc7e45d0d7a9ac91097f6fbfee6aeb651b7a1265cc336e6a3"
+    },
+    "models/1000_dragon_plant_b_3.webp": {
+      "archive": "assets/res/dragons/1000_dragon_plant_b_3.xml",
+      "texture": "assets/res/dragons/1000_dragon_plant_b_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "7b45a15c3b4e4dfca4e542a1e47f0596d7af1dbf452dd0067b726fc20d22e37f"
+    },
+    "models/1000_dragon_plant_b_3.json": {
+      "archive": "assets/res/dragons/1000_dragon_plant_b_3.xml",
+      "texture": "assets/res/dragons/1000_dragon_plant_b_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "a43edb183448d965a7b94e716e3fcc4a0f3b8777804e434f029e07adbb2105d6"
+    },
+    "models/1020_dragon_fire_a_1.webp": {
+      "archive": "assets/res/dragons/1020_dragon_fire_a_1.xml",
+      "texture": "assets/res/dragons/1020_dragon_fire_a_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "78eaab332c51b34f3f81c16c3b4fba2008c8823a0a3213da0e4947c4cbc39a83"
+    },
+    "models/1020_dragon_fire_a_1.json": {
+      "archive": "assets/res/dragons/1020_dragon_fire_a_1.xml",
+      "texture": "assets/res/dragons/1020_dragon_fire_a_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "6e5b4f2c56b593ba6094f8aa520ad7706e8580754d45f6d9c7f479a62eefebad"
+    },
+    "models/1020_dragon_fire_a_2.webp": {
+      "archive": "assets/res/dragons/1020_dragon_fire_a_2.xml",
+      "texture": "assets/res/dragons/1020_dragon_fire_a_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "e43d2e6ced4de47a04de45d9a5c521cdfbf236d65197f1f8a32552a2fb8f45f8"
+    },
+    "models/1020_dragon_fire_a_2.json": {
+      "archive": "assets/res/dragons/1020_dragon_fire_a_2.xml",
+      "texture": "assets/res/dragons/1020_dragon_fire_a_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "a7b600876413857a39a82297cd52062886bbefb626b350bf6307c28e74234ecd"
+    },
+    "models/1020_dragon_fire_a_3.webp": {
+      "archive": "assets/res/dragons/1020_dragon_fire_a_3.xml",
+      "texture": "assets/res/dragons/1020_dragon_fire_a_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "0f4ccc06242b3a7679dd3eda5fb5cd8fc98eb32ad55c5c647784f6a0a1a33def"
+    },
+    "models/1020_dragon_fire_a_3.json": {
+      "archive": "assets/res/dragons/1020_dragon_fire_a_3.xml",
+      "texture": "assets/res/dragons/1020_dragon_fire_a_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "e2c7e83f55ac9b18bc11223ad64db4f8df20653fa89adc8307e234171702f1f2"
+    },
+    "models/1033_dragon_water_a_1.webp": {
+      "archive": "assets/res/dragons/1033_dragon_water_a_1.xml",
+      "texture": "assets/res/dragons/1033_dragon_water_a_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "30fa0a9469a7099a1dc8aad98cb6cb66edc5cddce6d90e5badada023d59204e2"
+    },
+    "models/1033_dragon_water_a_1.json": {
+      "archive": "assets/res/dragons/1033_dragon_water_a_1.xml",
+      "texture": "assets/res/dragons/1033_dragon_water_a_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "20c57a092b9bfd0dc21cc5e81cb8804b8688b7af97b6554f94349897b5a19429"
+    },
+    "models/1033_dragon_water_a_2.webp": {
+      "archive": "assets/res/dragons/1033_dragon_water_a_2.xml",
+      "texture": "assets/res/dragons/1033_dragon_water_a_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "8782b69a0a570ca4350482559f65b9cb913c49ecd0bdc138dfbe8c2ce288a202"
+    },
+    "models/1033_dragon_water_a_2.json": {
+      "archive": "assets/res/dragons/1033_dragon_water_a_2.xml",
+      "texture": "assets/res/dragons/1033_dragon_water_a_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "5264b28850c31d496370933d278d08a915c086b7dfbbbb03c01f25e3e6cd0602"
+    },
+    "models/1033_dragon_water_a_3.webp": {
+      "archive": "assets/res/dragons/1033_dragon_water_a_3.xml",
+      "texture": "assets/res/dragons/1033_dragon_water_a_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "ace739c9d3afe7c223c3cb9ed2b0fd11c266761c493e2ef1e25355cee182534f"
+    },
+    "models/1033_dragon_water_a_3.json": {
+      "archive": "assets/res/dragons/1033_dragon_water_a_3.xml",
+      "texture": "assets/res/dragons/1033_dragon_water_a_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "86747e683267cd6756b3d0e73d4d552265b5c0a1e2f7fb516d1765e4facca91b"
+    },
+    "models/1001_dragon_fire_bird_b_1.webp": {
+      "archive": "assets/res/dragons/1001_dragon_fire_bird_b_1.xml",
+      "texture": "assets/res/dragons/1001_dragon_fire_bird_b_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "3e7b6c4f3eb5b096caf59a8ba60804e8f7a3b2a82f618336b8fada0889ba8075"
+    },
+    "models/1001_dragon_fire_bird_b_1.json": {
+      "archive": "assets/res/dragons/1001_dragon_fire_bird_b_1.xml",
+      "texture": "assets/res/dragons/1001_dragon_fire_bird_b_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "1e5f87166bc480ac13327ba717803f238166258545b6102ab18098a332b3004d"
+    },
+    "models/1001_dragon_fire_bird_b_2.webp": {
+      "archive": "assets/res/dragons/1001_dragon_fire_bird_b_2.xml",
+      "texture": "assets/res/dragons/1001_dragon_fire_bird_b_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "c410bb8b876473168de402e4aaadc0b4f425ca12d21dc77e2d40dfe883327739"
+    },
+    "models/1001_dragon_fire_bird_b_2.json": {
+      "archive": "assets/res/dragons/1001_dragon_fire_bird_b_2.xml",
+      "texture": "assets/res/dragons/1001_dragon_fire_bird_b_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "055e31a80d77c1a4939da99ccdc953c65d70ef00a6a71c9d43c42266ffbd2d1e"
+    },
+    "models/1001_dragon_fire_bird_b_3.webp": {
+      "archive": "assets/res/dragons/1001_dragon_fire_bird_b_3.xml",
+      "texture": "assets/res/dragons/1001_dragon_fire_bird_b_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "b3ab976e4bd7cac5ba1d3028b108391e708eee9611226399a7c52e5b70253ce4"
+    },
+    "models/1001_dragon_fire_bird_b_3.json": {
+      "archive": "assets/res/dragons/1001_dragon_fire_bird_b_3.xml",
+      "texture": "assets/res/dragons/1001_dragon_fire_bird_b_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "3fcd8a0c85444a946b4013c8912137a304184e401a63b83ed7f68f9cb5019f30"
+    },
+    "models/1002_dragon_mercurium_b_1.webp": {
+      "archive": "assets/res/dragons/1002_dragon_mercurium_b_1.xml",
+      "texture": "assets/res/dragons/1002_dragon_mercurium_b_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "1d24e0cc2c30b2b5061803e1917ca2528f3a29829fa4519e5312c6f2f25f7256"
+    },
+    "models/1002_dragon_mercurium_b_1.json": {
+      "archive": "assets/res/dragons/1002_dragon_mercurium_b_1.xml",
+      "texture": "assets/res/dragons/1002_dragon_mercurium_b_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "4353007fd4464a8566c2caff7749c8e2a5b51a9bfffeb63b20499dcabe8bf768"
+    },
+    "models/1002_dragon_mercurium_b_2.webp": {
+      "archive": "assets/res/dragons/1002_dragon_mercurium_b_2.xml",
+      "texture": "assets/res/dragons/1002_dragon_mercurium_b_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "976e44f2f4504e6f31f1b7d78f04305ee433f8a6e52fbd6bee18ef000ab86e4f"
+    },
+    "models/1002_dragon_mercurium_b_2.json": {
+      "archive": "assets/res/dragons/1002_dragon_mercurium_b_2.xml",
+      "texture": "assets/res/dragons/1002_dragon_mercurium_b_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "ab1886733e458e2382eb3027b8af2f4d6e4eed012aa35b78c3fc21e460f5d532"
+    },
+    "models/1002_dragon_mercurium_b_3.webp": {
+      "archive": "assets/res/dragons/1002_dragon_mercurium_b_3.xml",
+      "texture": "assets/res/dragons/1002_dragon_mercurium_b_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "61456cfe7ff2ee3738564297769f3e805cf5083f9acc8e55a2433fc8728dd1b5"
+    },
+    "models/1002_dragon_mercurium_b_3.json": {
+      "archive": "assets/res/dragons/1002_dragon_mercurium_b_3.xml",
+      "texture": "assets/res/dragons/1002_dragon_mercurium_b_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "31ff5ba0d43dfdd23544407658f6e44d754526d7f13a3498c05abc33d4c7d2ed"
+    },
+    "models/1003_dragon_gummy_b_1.webp": {
+      "archive": "assets/res/dragons/1003_dragon_gummy_b_1.xml",
+      "texture": "assets/res/dragons/1003_dragon_gummy_b_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "d0690930a9ddd02a6abc8074467ee370ab31208da41a951742a48b867a199cc1"
+    },
+    "models/1003_dragon_gummy_b_1.json": {
+      "archive": "assets/res/dragons/1003_dragon_gummy_b_1.xml",
+      "texture": "assets/res/dragons/1003_dragon_gummy_b_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "8e46fe07fc6264d9f7062d6a150f55b5863334aee3f503fbee7e2eeb3cb9aa7f"
+    },
+    "models/1003_dragon_gummy_b_2.webp": {
+      "archive": "assets/res/dragons/1003_dragon_gummy_b_2.xml",
+      "texture": "assets/res/dragons/1003_dragon_gummy_b_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "97e7b6b2abf9e52f8b5ffeeb2227e45d897c0ea74960508c3bbcaae5155a7884"
+    },
+    "models/1003_dragon_gummy_b_2.json": {
+      "archive": "assets/res/dragons/1003_dragon_gummy_b_2.xml",
+      "texture": "assets/res/dragons/1003_dragon_gummy_b_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "1a2cd0f461d375423aa28827c74a0d64f07f8a46fd7aeefb0db4128e280eb166"
+    },
+    "models/1003_dragon_gummy_b_3.webp": {
+      "archive": "assets/res/dragons/1003_dragon_gummy_b_3.xml",
+      "texture": "assets/res/dragons/1003_dragon_gummy_b_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "a972d7bae5a1f4057772df2acb17ab147e1dceda258d2438b34c126a5715858e"
+    },
+    "models/1003_dragon_gummy_b_3.json": {
+      "archive": "assets/res/dragons/1003_dragon_gummy_b_3.xml",
+      "texture": "assets/res/dragons/1003_dragon_gummy_b_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "40b98986e06da9623a220bd025e23bc467c6ff65ddaf3988aa99101b26b55cec"
+    },
+    "models/1004_dragon_lantern_a_1.webp": {
+      "archive": "assets/res/dragons/1004_dragon_lantern_a_1.xml",
+      "texture": "assets/res/dragons/1004_dragon_lantern_a_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "8277659891bdb24292984ebbd383439f77fa8650542f85a52b7de3767e57f765"
+    },
+    "models/1004_dragon_lantern_a_1.json": {
+      "archive": "assets/res/dragons/1004_dragon_lantern_a_1.xml",
+      "texture": "assets/res/dragons/1004_dragon_lantern_a_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "b292a93bd47ced20d0ab90b2d500087d2ba54c4004fd623540f1296c7bfe8a9c"
+    },
+    "models/1004_dragon_lantern_a_2.webp": {
+      "archive": "assets/res/dragons/1004_dragon_lantern_a_2.xml",
+      "texture": "assets/res/dragons/1004_dragon_lantern_a_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "5cad0333889306b0ebebd9968a2ddbaf168cba8bb14fea0e0dfd2345344fc02c"
+    },
+    "models/1004_dragon_lantern_a_2.json": {
+      "archive": "assets/res/dragons/1004_dragon_lantern_a_2.xml",
+      "texture": "assets/res/dragons/1004_dragon_lantern_a_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "95595567ba9b92afe0e7bd1c80e13299004070fa28bd75773bc7941dd38b991e"
+    },
+    "models/1004_dragon_lantern_a_3.webp": {
+      "archive": "assets/res/dragons/1004_dragon_lantern_a_3.xml",
+      "texture": "assets/res/dragons/1004_dragon_lantern_a_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "76ec06d8dc8d4a86f061f82db57f69f13c3589c8d96c1442009b5eba480dbd5d"
+    },
+    "models/1004_dragon_lantern_a_3.json": {
+      "archive": "assets/res/dragons/1004_dragon_lantern_a_3.xml",
+      "texture": "assets/res/dragons/1004_dragon_lantern_a_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "f05f04764a1f35f8269227e8fed5c6e74299a72ec603c54fc173800a11c878f6"
+    },
+    "models/1005_dragon_tropical_b_1.webp": {
+      "archive": "assets/res/dragons/1005_dragon_tropical_b_1.xml",
+      "texture": "assets/res/dragons/1005_dragon_tropical_b_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "18a345efaaf92663f8fae96f8f59c837fc822d91c67cc1ab37faf0d25e3cc342"
+    },
+    "models/1005_dragon_tropical_b_1.json": {
+      "archive": "assets/res/dragons/1005_dragon_tropical_b_1.xml",
+      "texture": "assets/res/dragons/1005_dragon_tropical_b_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "f61bbc9f2357945383c4b572538b4470b5516bcb8fc2d03842aae90bd6387dfd"
+    },
+    "models/1005_dragon_tropical_b_2.webp": {
+      "archive": "assets/res/dragons/1005_dragon_tropical_b_2.xml",
+      "texture": "assets/res/dragons/1005_dragon_tropical_b_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "8c5e799d79288d343e7690fae8800d046b80b0fe395998011899cf3395129c43"
+    },
+    "models/1005_dragon_tropical_b_2.json": {
+      "archive": "assets/res/dragons/1005_dragon_tropical_b_2.xml",
+      "texture": "assets/res/dragons/1005_dragon_tropical_b_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "5fb191fed666e66002f68109feebc280213a8ead9a24ac74a6d8ddfd1d5bb8d6"
+    },
+    "models/1005_dragon_tropical_b_3.webp": {
+      "archive": "assets/res/dragons/1005_dragon_tropical_b_3.xml",
+      "texture": "assets/res/dragons/1005_dragon_tropical_b_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "c7376c51d537941736d3c02ebfce272571c8c30995ab82f4236d1695633beee6"
+    },
+    "models/1005_dragon_tropical_b_3.json": {
+      "archive": "assets/res/dragons/1005_dragon_tropical_b_3.xml",
+      "texture": "assets/res/dragons/1005_dragon_tropical_b_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "59fb5390f92f515242cb350878f834651e89ca12bae0e25016a06ff35510cd82"
+    },
+    "models/1006_dragon_zombie_a_1.webp": {
+      "archive": "assets/res/dragons/1006_dragon_zombie_a_1.xml",
+      "texture": "assets/res/dragons/1006_dragon_zombie_a_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "67a0f4fa98f53117f611e649d9041383587c2fafd89097fe48187f0f4aa6818f"
+    },
+    "models/1006_dragon_zombie_a_1.json": {
+      "archive": "assets/res/dragons/1006_dragon_zombie_a_1.xml",
+      "texture": "assets/res/dragons/1006_dragon_zombie_a_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "40ac3b274cfaa2c5433c569def68661fd558bb160aed80b23aa58edb5fedf5c9"
+    },
+    "models/1006_dragon_zombie_a_2.webp": {
+      "archive": "assets/res/dragons/1006_dragon_zombie_a_2.xml",
+      "texture": "assets/res/dragons/1006_dragon_zombie_a_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "551a1cc8cf795547bdf1f75fab9475720acfa66084471c10fe523ce1fa4efd0b"
+    },
+    "models/1006_dragon_zombie_a_2.json": {
+      "archive": "assets/res/dragons/1006_dragon_zombie_a_2.xml",
+      "texture": "assets/res/dragons/1006_dragon_zombie_a_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "0b895e45fff8fef2dbff3be95dcb70ee0e495f4ea96a357cc8d9c2f1c4346b9e"
+    },
+    "models/1006_dragon_zombie_a_3.webp": {
+      "archive": "assets/res/dragons/1006_dragon_zombie_a_3.xml",
+      "texture": "assets/res/dragons/1006_dragon_zombie_a_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "2431ed6fbf3541e5ae0dce3f6e84a8642f034280036043ec221224466232cce2"
+    },
+    "models/1006_dragon_zombie_a_3.json": {
+      "archive": "assets/res/dragons/1006_dragon_zombie_a_3.xml",
+      "texture": "assets/res/dragons/1006_dragon_zombie_a_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "b9e9475a2c7c387cea10e90c40064e6a04d4821b9199b1bf54e3031fc85ab35d"
+    },
+    "models/1007_dragon_petroleum_a_1.webp": {
+      "archive": "assets/res/dragons/1007_dragon_petroleum_a_1.xml",
+      "texture": "assets/res/dragons/1007_dragon_petroleum_a_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "da492fed14decec942945af6157384b5819bd54a051270f473bb424ce871e597"
+    },
+    "models/1007_dragon_petroleum_a_1.json": {
+      "archive": "assets/res/dragons/1007_dragon_petroleum_a_1.xml",
+      "texture": "assets/res/dragons/1007_dragon_petroleum_a_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "dfa420c6470d25ab5b56fd972bb3fcc6b1354880dc120f6ff35f216adad3132b"
+    },
+    "models/1007_dragon_petroleum_a_2.webp": {
+      "archive": "assets/res/dragons/1007_dragon_petroleum_a_2.xml",
+      "texture": "assets/res/dragons/1007_dragon_petroleum_a_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "2f7796490bc10edfed2c7742d10b6976784dba819836c07d38de962e9d74748f"
+    },
+    "models/1007_dragon_petroleum_a_2.json": {
+      "archive": "assets/res/dragons/1007_dragon_petroleum_a_2.xml",
+      "texture": "assets/res/dragons/1007_dragon_petroleum_a_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "65595ccc066693c40b7980d277762ac655d17a20f3ee4e4caf3086994af5f560"
+    },
+    "models/1007_dragon_petroleum_a_3.webp": {
+      "archive": "assets/res/dragons/1007_dragon_petroleum_a_3.xml",
+      "texture": "assets/res/dragons/1007_dragon_petroleum_a_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "4beb8ab856b0b113b809d58e10b220826cad75f3654701bef5c2002d104e73f2"
+    },
+    "models/1007_dragon_petroleum_a_3.json": {
+      "archive": "assets/res/dragons/1007_dragon_petroleum_a_3.xml",
+      "texture": "assets/res/dragons/1007_dragon_petroleum_a_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "f1168810f5cf21451c505b9c0db4813c8960e4e1bd3b9670bdf4751d912cd1ad"
+    },
+    "models/1008_dragon_dandelion_a_1.webp": {
+      "archive": "assets/res/dragons/1008_dragon_dandelion_a_1.xml",
+      "texture": "assets/res/dragons/1008_dragon_dandelion_a_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "a17f0b42d2244379075bd24411b0ec8c8c39fed08937ae5a5e5fb2da3f40dab9"
+    },
+    "models/1008_dragon_dandelion_a_1.json": {
+      "archive": "assets/res/dragons/1008_dragon_dandelion_a_1.xml",
+      "texture": "assets/res/dragons/1008_dragon_dandelion_a_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "a06f0672f013642d22a1fd79123aa6ec4525e93ccb40782955a90b0d30970a6f"
+    },
+    "models/1008_dragon_dandelion_a_2.webp": {
+      "archive": "assets/res/dragons/1008_dragon_dandelion_a_2.xml",
+      "texture": "assets/res/dragons/1008_dragon_dandelion_a_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "194f465386b4c6959ddaf83401ea4b2d5179bfcf127e5ac082324417c3933935"
+    },
+    "models/1008_dragon_dandelion_a_2.json": {
+      "archive": "assets/res/dragons/1008_dragon_dandelion_a_2.xml",
+      "texture": "assets/res/dragons/1008_dragon_dandelion_a_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "8ecea963136dc6173171693dab71856f23fec8d5d9a671f7185b9cbad832aba0"
+    },
+    "models/1008_dragon_dandelion_a_3.webp": {
+      "archive": "assets/res/dragons/1008_dragon_dandelion_a_3.xml",
+      "texture": "assets/res/dragons/1008_dragon_dandelion_a_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "478f38f792bc5a1d0f7fc3f2c6b0a31a0c9a049784a524f51cbf14cbfc2849ae"
+    },
+    "models/1008_dragon_dandelion_a_3.json": {
+      "archive": "assets/res/dragons/1008_dragon_dandelion_a_3.xml",
+      "texture": "assets/res/dragons/1008_dragon_dandelion_a_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "06215038c8993cce2f9ac508247c73c1d8a2ef3a87639272d6f7a2f24524312d"
+    },
+    "models/1009_dragon_jade_a_1.webp": {
+      "archive": "assets/res/dragons/1009_dragon_jade_a_1.xml",
+      "texture": "assets/res/dragons/1009_dragon_jade_a_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "15f1d3a2a2595c32681896365c2f3ba5bc529fc92ebabe822a26cb2051faa7d9"
+    },
+    "models/1009_dragon_jade_a_1.json": {
+      "archive": "assets/res/dragons/1009_dragon_jade_a_1.xml",
+      "texture": "assets/res/dragons/1009_dragon_jade_a_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "4951244b8026f5cba7a569dc16c4e19c9c48a88b089a7d6848249c79257a6d27"
+    },
+    "models/1009_dragon_jade_a_2.webp": {
+      "archive": "assets/res/dragons/1009_dragon_jade_a_2.xml",
+      "texture": "assets/res/dragons/1009_dragon_jade_a_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "174464a27b9b136f777b538ecb8a4d6fd720f205013967ee7835337c006ffc98"
+    },
+    "models/1009_dragon_jade_a_2.json": {
+      "archive": "assets/res/dragons/1009_dragon_jade_a_2.xml",
+      "texture": "assets/res/dragons/1009_dragon_jade_a_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "864d0313be408942a87656a87c9b58bfddd1a1e0e347a9d32cd3ae06143ee22e"
+    },
+    "models/1009_dragon_jade_a_3.webp": {
+      "archive": "assets/res/dragons/1009_dragon_jade_a_3.xml",
+      "texture": "assets/res/dragons/1009_dragon_jade_a_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "71b0f5e5ff5f0e33c32665b1e7415db20ae744e1179ccba8f87d6833da8fd096"
+    },
+    "models/1009_dragon_jade_a_3.json": {
+      "archive": "assets/res/dragons/1009_dragon_jade_a_3.xml",
+      "texture": "assets/res/dragons/1009_dragon_jade_a_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "832d62d7f377bd77b7da4c5a8a44e31741849fd4367abb2e08ae027bc019904d"
+    },
+    "models/1010_dragon_star_c_1.webp": {
+      "archive": "assets/res/dragons/1010_dragon_star_c_1.xml",
+      "texture": "assets/res/dragons/1010_dragon_star_c_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "f4368988ada19a42eb1b3845348f8eaed31b7c2e314a515c7bc2aaf5baf00fa6"
+    },
+    "models/1010_dragon_star_c_1.json": {
+      "archive": "assets/res/dragons/1010_dragon_star_c_1.xml",
+      "texture": "assets/res/dragons/1010_dragon_star_c_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "7ffebd1fe7281fefdf1eef672bcf3ca06400fb165cb5e28439894909ddbdbd25"
+    },
+    "models/1010_dragon_star_c_2.webp": {
+      "archive": "assets/res/dragons/1010_dragon_star_c_2.xml",
+      "texture": "assets/res/dragons/1010_dragon_star_c_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "885673470b00323c85f8669cb34db5aff8dcfae1281b97e671705623bccf02a3"
+    },
+    "models/1010_dragon_star_c_2.json": {
+      "archive": "assets/res/dragons/1010_dragon_star_c_2.xml",
+      "texture": "assets/res/dragons/1010_dragon_star_c_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "8098545d6dcd83d533731e947ff4d659aac4618949ccc70db5e01854ceea87b5"
+    },
+    "models/1010_dragon_star_c_3.webp": {
+      "archive": "assets/res/dragons/1010_dragon_star_c_3.xml",
+      "texture": "assets/res/dragons/1010_dragon_star_c_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "637217cb49f3c207fac18b603494ac0fe5bdf07d4a8422490a34845e2341a2b7"
+    },
+    "models/1010_dragon_star_c_3.json": {
+      "archive": "assets/res/dragons/1010_dragon_star_c_3.xml",
+      "texture": "assets/res/dragons/1010_dragon_star_c_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "90d396d164cf23b4383f2026e138a71cb2b6ac741fabc3282362fc419f71d194"
+    },
+    "models/1011_dragon_earth_a_1.webp": {
+      "archive": "assets/res/dragons/1011_dragon_earth_a_1.xml",
+      "texture": "assets/res/dragons/1011_dragon_earth_a_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "9b7df85996a081a8642df206d8012494c98c5cad3418118c62c92265d14e873b"
+    },
+    "models/1011_dragon_earth_a_1.json": {
+      "archive": "assets/res/dragons/1011_dragon_earth_a_1.xml",
+      "texture": "assets/res/dragons/1011_dragon_earth_a_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "9175bb929b5d84a4761f0bde00cd2f6e42e3025e70278ba2841dbb9d96cb7e60"
+    },
+    "models/1011_dragon_earth_a_2.webp": {
+      "archive": "assets/res/dragons/1011_dragon_earth_a_2.xml",
+      "texture": "assets/res/dragons/1011_dragon_earth_a_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "ce917868ff83c465142423aedc9a813657051a262f78c37dcf1e741765d44025"
+    },
+    "models/1011_dragon_earth_a_2.json": {
+      "archive": "assets/res/dragons/1011_dragon_earth_a_2.xml",
+      "texture": "assets/res/dragons/1011_dragon_earth_a_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "f7c26eabc3c48e724871d8aab0491d082e6b7cdbfbb0bda3110c9b093bca3976"
+    },
+    "models/1011_dragon_earth_a_3.webp": {
+      "archive": "assets/res/dragons/1011_dragon_earth_a_3.xml",
+      "texture": "assets/res/dragons/1011_dragon_earth_a_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "f5a731db5cd560a6f6d03c2c4cdec4f2f26e14bc72e85ad2ddd1e05960bed580"
+    },
+    "models/1011_dragon_earth_a_3.json": {
+      "archive": "assets/res/dragons/1011_dragon_earth_a_3.xml",
+      "texture": "assets/res/dragons/1011_dragon_earth_a_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "661295fa3b959657c2f6fd78304d4f02ded596a1ac89d609b9c8718e1c63f142"
+    },
+    "models/1012_dragon_flaming_rock_a_1.webp": {
+      "archive": "assets/res/dragons/1012_dragon_flaming_rock_a_1.xml",
+      "texture": "assets/res/dragons/1012_dragon_flaming_rock_a_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "0b1cfaeab55f855de8c2e9e8c50129aad47bdfa92af85bcbc68500079d87fc0a"
+    },
+    "models/1012_dragon_flaming_rock_a_1.json": {
+      "archive": "assets/res/dragons/1012_dragon_flaming_rock_a_1.xml",
+      "texture": "assets/res/dragons/1012_dragon_flaming_rock_a_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "f378e81f101e5ce076828d77f994ea45b46f6628438839be017560b65a51205c"
+    },
+    "models/1012_dragon_flaming_rock_a_2.webp": {
+      "archive": "assets/res/dragons/1012_dragon_flaming_rock_a_2.xml",
+      "texture": "assets/res/dragons/1012_dragon_flaming_rock_a_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "abad813c3b199f62afb1b0dca3f4d4d9a10de3f475cee9a524f68532881bea78"
+    },
+    "models/1012_dragon_flaming_rock_a_2.json": {
+      "archive": "assets/res/dragons/1012_dragon_flaming_rock_a_2.xml",
+      "texture": "assets/res/dragons/1012_dragon_flaming_rock_a_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "f5648cecd6fee4d68e5ae0433c3ee948553d2e0f1d9e03fa3fd05ce225cc6626"
+    },
+    "models/1012_dragon_flaming_rock_a_3.webp": {
+      "archive": "assets/res/dragons/1012_dragon_flaming_rock_a_3.xml",
+      "texture": "assets/res/dragons/1012_dragon_flaming_rock_a_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "f6c3b3d5bd76b505eebf65483eff39b4f68a98f27f8cf610ec72b4c96c65fc0a"
+    },
+    "models/1012_dragon_flaming_rock_a_3.json": {
+      "archive": "assets/res/dragons/1012_dragon_flaming_rock_a_3.xml",
+      "texture": "assets/res/dragons/1012_dragon_flaming_rock_a_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "f20459649d5b0e5ccfe1a1b1778e962f64ecc4df11688f20ac1241c14cb23b80"
+    },
+    "models/1013_dragon_armadillo_a_1.webp": {
+      "archive": "assets/res/dragons/1013_dragon_armadillo_a_1.xml",
+      "texture": "assets/res/dragons/1013_dragon_armadillo_a_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "166e7756784eaa8e9382a2e801c5cd27b5df5df8dda70a99aa35d523a5893550"
+    },
+    "models/1013_dragon_armadillo_a_1.json": {
+      "archive": "assets/res/dragons/1013_dragon_armadillo_a_1.xml",
+      "texture": "assets/res/dragons/1013_dragon_armadillo_a_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "110e6675c029520776b5442a9b9e88877e12298e7f99edc93ddf8c16573aa8c6"
+    },
+    "models/1013_dragon_armadillo_a_2.webp": {
+      "archive": "assets/res/dragons/1013_dragon_armadillo_a_2.xml",
+      "texture": "assets/res/dragons/1013_dragon_armadillo_a_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "80a4fb184d8caeb5fdad2e7c014183725bca65d61f67b18581b4446a1e24611a"
+    },
+    "models/1013_dragon_armadillo_a_2.json": {
+      "archive": "assets/res/dragons/1013_dragon_armadillo_a_2.xml",
+      "texture": "assets/res/dragons/1013_dragon_armadillo_a_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "33b22389a1072c71427307f1b84b02585ed2366c8f2cee0c525ed5fb4fa30a40"
+    },
+    "models/1013_dragon_armadillo_a_3.webp": {
+      "archive": "assets/res/dragons/1013_dragon_armadillo_a_3.xml",
+      "texture": "assets/res/dragons/1013_dragon_armadillo_a_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "65e83126f4237758e1e4ddf9e0ffa7212a3b731debebb1414b0164bb2031507e"
+    },
+    "models/1013_dragon_armadillo_a_3.json": {
+      "archive": "assets/res/dragons/1013_dragon_armadillo_a_3.xml",
+      "texture": "assets/res/dragons/1013_dragon_armadillo_a_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "b0f4e09bdc4f0c29749c116e0fdb4e971b9bd471141c345060d2be17debf5ef1"
+    },
+    "models/1014_dragon_cloud_a_1.webp": {
+      "archive": "assets/res/dragons/1014_dragon_cloud_a_1.xml",
+      "texture": "assets/res/dragons/1014_dragon_cloud_a_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "afbfa007fd77d9504b7f36d07bda2b82f1e42b5afdd00961738661f26242e33b"
+    },
+    "models/1014_dragon_cloud_a_1.json": {
+      "archive": "assets/res/dragons/1014_dragon_cloud_a_1.xml",
+      "texture": "assets/res/dragons/1014_dragon_cloud_a_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "906ac86bbd354f8bdb91699c52e230bf9874c110048374f1f149388107fa8b58"
+    },
+    "models/1014_dragon_cloud_a_2.webp": {
+      "archive": "assets/res/dragons/1014_dragon_cloud_a_2.xml",
+      "texture": "assets/res/dragons/1014_dragon_cloud_a_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "bce4a30b502f01d566ffe880b87d52c37e2ede62841be7ead69fb123df230208"
+    },
+    "models/1014_dragon_cloud_a_2.json": {
+      "archive": "assets/res/dragons/1014_dragon_cloud_a_2.xml",
+      "texture": "assets/res/dragons/1014_dragon_cloud_a_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "549698d82113dac51b0fddcb41e6d6b6eb014941a6886a7d8b3f907476efc80c"
+    },
+    "models/1014_dragon_cloud_a_3.webp": {
+      "archive": "assets/res/dragons/1014_dragon_cloud_a_3.xml",
+      "texture": "assets/res/dragons/1014_dragon_cloud_a_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "4b6284791a3e3067f15ea95b0bb5b6c26270bd15c1c3e9310d3c180f2a3d9d21"
+    },
+    "models/1014_dragon_cloud_a_3.json": {
+      "archive": "assets/res/dragons/1014_dragon_cloud_a_3.xml",
+      "texture": "assets/res/dragons/1014_dragon_cloud_a_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "aef5d0600ae9ee36341b9c2005480be8c0b847a68c1cc14ce697958f4e113602"
+    },
+    "models/1015_dragon_laser_b_1.webp": {
+      "archive": "assets/res/dragons/1015_dragon_laser_b_1.xml",
+      "texture": "assets/res/dragons/1015_dragon_laser_b_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "a4ee0aaa52c61110953c961c654d568ec3bd468027c065f6e0fa0e622623da60"
+    },
+    "models/1015_dragon_laser_b_1.json": {
+      "archive": "assets/res/dragons/1015_dragon_laser_b_1.xml",
+      "texture": "assets/res/dragons/1015_dragon_laser_b_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "9271816394ea5befcb23fb5e8c2b1a1036052dc7d1fee3b536d2508d7d6c7311"
+    },
+    "models/1015_dragon_laser_b_2.webp": {
+      "archive": "assets/res/dragons/1015_dragon_laser_b_2.xml",
+      "texture": "assets/res/dragons/1015_dragon_laser_b_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "bd6a9eb5132609cc5a2b3f6fb5da7ce141437198dec834b0f46f7aa30b70ee40"
+    },
+    "models/1015_dragon_laser_b_2.json": {
+      "archive": "assets/res/dragons/1015_dragon_laser_b_2.xml",
+      "texture": "assets/res/dragons/1015_dragon_laser_b_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "c85f08ec028f0b41e1acf3dd8240713344ee32d6f4f2c7b7fcdfa7d540eb00dd"
+    },
+    "models/1015_dragon_laser_b_3.webp": {
+      "archive": "assets/res/dragons/1015_dragon_laser_b_3.xml",
+      "texture": "assets/res/dragons/1015_dragon_laser_b_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "631a1641c41fb03ffe755c2fa2c81cf2aa10b929e3861b3818b9e3a4daeae54e"
+    },
+    "models/1015_dragon_laser_b_3.json": {
+      "archive": "assets/res/dragons/1015_dragon_laser_b_3.xml",
+      "texture": "assets/res/dragons/1015_dragon_laser_b_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "8b4cd05c4d1f46789ce6a990f20aad7f1c077316be522bfd35190c4b0c2961a4"
+    },
+    "models/1016_dragon_mud_a_1.webp": {
+      "archive": "assets/res/dragons/1016_dragon_mud_a_1.xml",
+      "texture": "assets/res/dragons/1016_dragon_mud_a_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "4c8e5b85e3c54831b24029749922898a56ac16a972b21245179898033f730f32"
+    },
+    "models/1016_dragon_mud_a_1.json": {
+      "archive": "assets/res/dragons/1016_dragon_mud_a_1.xml",
+      "texture": "assets/res/dragons/1016_dragon_mud_a_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "e5f63dc31c8e621f883556059943a13e9ecbbcce3dafea7b511330a7c6e36857"
+    },
+    "models/1016_dragon_mud_a_2.webp": {
+      "archive": "assets/res/dragons/1016_dragon_mud_a_2.xml",
+      "texture": "assets/res/dragons/1016_dragon_mud_a_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "9d99c30bb4b5020df0b3e8c34517a4151149631ca310825051c5881303ec94c2"
+    },
+    "models/1016_dragon_mud_a_2.json": {
+      "archive": "assets/res/dragons/1016_dragon_mud_a_2.xml",
+      "texture": "assets/res/dragons/1016_dragon_mud_a_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "2eb8951b51dc1d1318bde8712b978bb181b0f7c340d0c59f94e6fad1b1bbf157"
+    },
+    "models/1016_dragon_mud_a_3.webp": {
+      "archive": "assets/res/dragons/1016_dragon_mud_a_3.xml",
+      "texture": "assets/res/dragons/1016_dragon_mud_a_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "2a47fd4523d36f353f8dcc7a00372fb18494df9e89412f65fea5fbeb388c9908"
+    },
+    "models/1016_dragon_mud_a_3.json": {
+      "archive": "assets/res/dragons/1016_dragon_mud_a_3.xml",
+      "texture": "assets/res/dragons/1016_dragon_mud_a_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "39262bfaa956c0916e49461f647a872cb34d5bcf38489874df53bd8915868dc8"
+    },
+    "models/1017_dragon_nenufar_a_1.webp": {
+      "archive": "assets/res/dragons/1017_dragon_nenufar_a_1.xml",
+      "texture": "assets/res/dragons/1017_dragon_nenufar_a_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "b5dfef39280ca9b477d7ee68f1a21d6d4f819d4903a6014ee281198514a11904"
+    },
+    "models/1017_dragon_nenufar_a_1.json": {
+      "archive": "assets/res/dragons/1017_dragon_nenufar_a_1.xml",
+      "texture": "assets/res/dragons/1017_dragon_nenufar_a_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "987259b7bc6688ec34df7180a466dc59187a0017258e6a7d818de3ee15ca5883"
+    },
+    "models/1017_dragon_nenufar_a_2.webp": {
+      "archive": "assets/res/dragons/1017_dragon_nenufar_a_2.xml",
+      "texture": "assets/res/dragons/1017_dragon_nenufar_a_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "030e623659066e17038deea2d461c52f679d3c5696c3b824ddc7056daa4aa2c9"
+    },
+    "models/1017_dragon_nenufar_a_2.json": {
+      "archive": "assets/res/dragons/1017_dragon_nenufar_a_2.xml",
+      "texture": "assets/res/dragons/1017_dragon_nenufar_a_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "1ee781f0b7cb4f887cd41edf07a7e582f31e35a788d924d117051bd5a5f9ac1e"
+    },
+    "models/1017_dragon_nenufar_a_3.webp": {
+      "archive": "assets/res/dragons/1017_dragon_nenufar_a_3.xml",
+      "texture": "assets/res/dragons/1017_dragon_nenufar_a_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "ffb7f112042ddcdf3b9a0932cf80b9e4ca6b50ed290d4a7789fa63d5f4dc6c9a"
+    },
+    "models/1017_dragon_nenufar_a_3.json": {
+      "archive": "assets/res/dragons/1017_dragon_nenufar_a_3.xml",
+      "texture": "assets/res/dragons/1017_dragon_nenufar_a_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "9bec34eaf011ccd30d5bdf8f6418c2719dd3b899ef7bcb4d7d3bf91a273e3d96"
+    },
+    "models/1018_dragon_hedgehog_a_1.webp": {
+      "archive": "assets/res/dragons/1018_dragon_hedgehog_a_1.xml",
+      "texture": "assets/res/dragons/1018_dragon_hedgehog_a_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "4adb367a0cc7a1a6b9f635331cb606464a00a8101700b938d42a4185b22eef50"
+    },
+    "models/1018_dragon_hedgehog_a_1.json": {
+      "archive": "assets/res/dragons/1018_dragon_hedgehog_a_1.xml",
+      "texture": "assets/res/dragons/1018_dragon_hedgehog_a_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "83a91b2e0b664cb42d935eaa5ebd5c9de39d133e82c5d56fe6bd9c2b269f1f19"
+    },
+    "models/1018_dragon_hedgehog_a_2.webp": {
+      "archive": "assets/res/dragons/1018_dragon_hedgehog_a_2.xml",
+      "texture": "assets/res/dragons/1018_dragon_hedgehog_a_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "485c9f176145eaa549a2f925c984ce20768064d35c1203b5493779e01f6b0a14"
+    },
+    "models/1018_dragon_hedgehog_a_2.json": {
+      "archive": "assets/res/dragons/1018_dragon_hedgehog_a_2.xml",
+      "texture": "assets/res/dragons/1018_dragon_hedgehog_a_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "bff4f5aca1b8fd145ae712755d2dc41ec2a02729d6992d9dc7a92789c1a80cfd"
+    },
+    "models/1018_dragon_hedgehog_a_3.webp": {
+      "archive": "assets/res/dragons/1018_dragon_hedgehog_a_3.xml",
+      "texture": "assets/res/dragons/1018_dragon_hedgehog_a_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "ebd035efed88e85f123c3f01a47006aaf8650cce21bf3a36964d44e430b9f78b"
+    },
+    "models/1018_dragon_hedgehog_a_3.json": {
+      "archive": "assets/res/dragons/1018_dragon_hedgehog_a_3.xml",
+      "texture": "assets/res/dragons/1018_dragon_hedgehog_a_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "34f873c8c68f031bfc1f9ca7b496789431774c30f11909272d6c2d4fbd21f7bc"
+    },
+    "models/1019_dragon_icecube_b_1.webp": {
+      "archive": "assets/res/dragons/1019_dragon_icecube_b_1.xml",
+      "texture": "assets/res/dragons/1019_dragon_icecube_b_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "8a1b4b0d26410206161833a606f64729b6f1121cc1f13ae8e5437c49923ebb16"
+    },
+    "models/1019_dragon_icecube_b_1.json": {
+      "archive": "assets/res/dragons/1019_dragon_icecube_b_1.xml",
+      "texture": "assets/res/dragons/1019_dragon_icecube_b_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "8708dc5a849ae83bdd2eee434393076b6b6619e684f956de45a2cbf2aeca8c30"
+    },
+    "models/1019_dragon_icecube_b_2.webp": {
+      "archive": "assets/res/dragons/1019_dragon_icecube_b_2.xml",
+      "texture": "assets/res/dragons/1019_dragon_icecube_b_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "272fcc6c3276ded38701170dbf5fa8bb3ee0c4eb2fd889f0ca3efe9d28b07a83"
+    },
+    "models/1019_dragon_icecube_b_2.json": {
+      "archive": "assets/res/dragons/1019_dragon_icecube_b_2.xml",
+      "texture": "assets/res/dragons/1019_dragon_icecube_b_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "a3c8b60a409ba2004f2bd5716466a02f4aece690b4bb190043e72dac5a5dcbe3"
+    },
+    "models/1019_dragon_icecube_b_3.webp": {
+      "archive": "assets/res/dragons/1019_dragon_icecube_b_3.xml",
+      "texture": "assets/res/dragons/1019_dragon_icecube_b_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "2cfeb85be93274977c84d5e4c149e85ab8eeab9c51426c28a2960fd8992276a8"
+    },
+    "models/1019_dragon_icecube_b_3.json": {
+      "archive": "assets/res/dragons/1019_dragon_icecube_b_3.xml",
+      "texture": "assets/res/dragons/1019_dragon_icecube_b_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "2b726d57550b0287003aa5159f1f533acf41e79d609fbd66fc220953f2e9d19b"
+    },
+    "models/1021_dragon_neon_b_1.webp": {
+      "archive": "assets/res/dragons/1021_dragon_neon_b_1.xml",
+      "texture": "assets/res/dragons/1021_dragon_neon_b_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "0e4c15d1aff63b3285011f83c98b6a6ce90483005ad4f77c55e7de0199c3f251"
+    },
+    "models/1021_dragon_neon_b_1.json": {
+      "archive": "assets/res/dragons/1021_dragon_neon_b_1.xml",
+      "texture": "assets/res/dragons/1021_dragon_neon_b_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "c0fbc3ba4edc579e37eff01e7d20a9eb555ad64fcb025e8e9a30a5adfac5a851"
+    },
+    "models/1021_dragon_neon_b_2.webp": {
+      "archive": "assets/res/dragons/1021_dragon_neon_b_2.xml",
+      "texture": "assets/res/dragons/1021_dragon_neon_b_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "e917cd793e035d97e4f010c80d8494484fbf794016ca5720956382837e2637b3"
+    },
+    "models/1021_dragon_neon_b_2.json": {
+      "archive": "assets/res/dragons/1021_dragon_neon_b_2.xml",
+      "texture": "assets/res/dragons/1021_dragon_neon_b_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "d714ce6c9a001184eeeac1ac1492f1bc8679522153ba8d883d851371ad1dda82"
+    },
+    "models/1021_dragon_neon_b_3.webp": {
+      "archive": "assets/res/dragons/1021_dragon_neon_b_3.xml",
+      "texture": "assets/res/dragons/1021_dragon_neon_b_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "e77cd434e2745bb6883ce8af241ecbe2088a2107f4c8ab741b27470b44535f28"
+    },
+    "models/1021_dragon_neon_b_3.json": {
+      "archive": "assets/res/dragons/1021_dragon_neon_b_3.xml",
+      "texture": "assets/res/dragons/1021_dragon_neon_b_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "4b880bc0fb03d7bfa0f9902445b9bd6f0f7e0cff8fa0ddbb15cfae212a9c2ca7"
+    },
+    "models/1022_dragon_pearl_b_1.webp": {
+      "archive": "assets/res/dragons/1022_dragon_pearl_b_1.xml",
+      "texture": "assets/res/dragons/1022_dragon_pearl_b_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "bd546d089a53d1d9fd1c83f76d67abfc1c4176361ffe421f1e3bc8ce59095f6b"
+    },
+    "models/1022_dragon_pearl_b_1.json": {
+      "archive": "assets/res/dragons/1022_dragon_pearl_b_1.xml",
+      "texture": "assets/res/dragons/1022_dragon_pearl_b_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "a4fe329b3f30401d6f4d6bd38ac5423cb6bed23854689a5355513a6bc2d60fc4"
+    },
+    "models/1022_dragon_pearl_b_2.webp": {
+      "archive": "assets/res/dragons/1022_dragon_pearl_b_2.xml",
+      "texture": "assets/res/dragons/1022_dragon_pearl_b_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "588a4b626275fcb4a2b833cc1c76e8d914495696242384a578062adc25250ea8"
+    },
+    "models/1022_dragon_pearl_b_2.json": {
+      "archive": "assets/res/dragons/1022_dragon_pearl_b_2.xml",
+      "texture": "assets/res/dragons/1022_dragon_pearl_b_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "68c7ba118f43f741501a7529b7049cacf18e66bd64f4ec3970193f5c28430d0f"
+    },
+    "models/1022_dragon_pearl_b_3.webp": {
+      "archive": "assets/res/dragons/1022_dragon_pearl_b_3.xml",
+      "texture": "assets/res/dragons/1022_dragon_pearl_b_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "463a7b3a757e8900a5f89dea8b5a2eb00cd3ede60365a8d3844425c97ad6d173"
+    },
+    "models/1022_dragon_pearl_b_3.json": {
+      "archive": "assets/res/dragons/1022_dragon_pearl_b_3.xml",
+      "texture": "assets/res/dragons/1022_dragon_pearl_b_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "788af145aea0c936a00496e87e5b2b5964b648eeb572edf5690c7d37ad7fb007"
+    },
+    "models/1023_dragon_cool_fire_a_1.webp": {
+      "archive": "assets/res/dragons/1023_dragon_cool_fire_a_1.xml",
+      "texture": "assets/res/dragons/1023_dragon_cool_fire_a_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "cb6007fe1e3ef1b966cd13226b32f06b673421cfaae13b9a0ddc8a03b389c71b"
+    },
+    "models/1023_dragon_cool_fire_a_1.json": {
+      "archive": "assets/res/dragons/1023_dragon_cool_fire_a_1.xml",
+      "texture": "assets/res/dragons/1023_dragon_cool_fire_a_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "68c6d56fbe9414063a8d1c330be4fd650f4a6f2bc6fc4414f789d3afef15fc36"
+    },
+    "models/1023_dragon_cool_fire_a_2.webp": {
+      "archive": "assets/res/dragons/1023_dragon_cool_fire_a_2.xml",
+      "texture": "assets/res/dragons/1023_dragon_cool_fire_a_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "f86c0ebfc02d786a69ca46b9409575d991efb022b53a3966d8416ca5dc013799"
+    },
+    "models/1023_dragon_cool_fire_a_2.json": {
+      "archive": "assets/res/dragons/1023_dragon_cool_fire_a_2.xml",
+      "texture": "assets/res/dragons/1023_dragon_cool_fire_a_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "9f8b20ed69958e1975e7b637d36d7eea3e97c2c85df7278eef7a5ec3a9ac0d79"
+    },
+    "models/1023_dragon_cool_fire_a_3.webp": {
+      "archive": "assets/res/dragons/1023_dragon_cool_fire_a_3.xml",
+      "texture": "assets/res/dragons/1023_dragon_cool_fire_a_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "1122b0c4fb70839d796effa52737a541bcfc77e37ed5eb7cb3e23c4298814869"
+    },
+    "models/1023_dragon_cool_fire_a_3.json": {
+      "archive": "assets/res/dragons/1023_dragon_cool_fire_a_3.xml",
+      "texture": "assets/res/dragons/1023_dragon_cool_fire_a_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "1079892595895072239d82b5976f56773d6ccc233da1c9511234451cd20dff33"
+    },
+    "models/1024_dragon_medieval_b_1.webp": {
+      "archive": "assets/res/dragons/1024_dragon_medieval_b_1.xml",
+      "texture": "assets/res/dragons/1024_dragon_medieval_b_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "f5ed4d7488df017f056f78b165a30f26f6ba2e59aaa98e325acb7de32add4a7d"
+    },
+    "models/1024_dragon_medieval_b_1.json": {
+      "archive": "assets/res/dragons/1024_dragon_medieval_b_1.xml",
+      "texture": "assets/res/dragons/1024_dragon_medieval_b_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "369b099b6fc08ffc0af752e234c920585330c82195996627b66b6833e5438704"
+    },
+    "models/1024_dragon_medieval_b_2.webp": {
+      "archive": "assets/res/dragons/1024_dragon_medieval_b_2.xml",
+      "texture": "assets/res/dragons/1024_dragon_medieval_b_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "24553fc3fc705769f5681262ecd2136067209e2b274ab5ea71bf4bc509707412"
+    },
+    "models/1024_dragon_medieval_b_2.json": {
+      "archive": "assets/res/dragons/1024_dragon_medieval_b_2.xml",
+      "texture": "assets/res/dragons/1024_dragon_medieval_b_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "92cbcab6bf59111c79f473bf8efbc1d97a951ae4323efd611b061cf8b393c0da"
+    },
+    "models/1024_dragon_medieval_b_3.webp": {
+      "archive": "assets/res/dragons/1024_dragon_medieval_b_3.xml",
+      "texture": "assets/res/dragons/1024_dragon_medieval_b_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "8b6e8acd534660bcb3e4463c7aae259a212851a50d759e09796a9253b3d4718b"
+    },
+    "models/1024_dragon_medieval_b_3.json": {
+      "archive": "assets/res/dragons/1024_dragon_medieval_b_3.xml",
+      "texture": "assets/res/dragons/1024_dragon_medieval_b_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "0755217b8de9379b7a777280f382bb60d5598c5ec95713b371ff13c83c212bb7"
+    },
+    "models/1025_dragon_penguin_a_1.webp": {
+      "archive": "assets/res/dragons/1025_dragon_penguin_a_1.xml",
+      "texture": "assets/res/dragons/1025_dragon_penguin_a_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "311ed467b8bafa51a6d18c6b85414b860b2b54964218d4f82eedcc7120969158"
+    },
+    "models/1025_dragon_penguin_a_1.json": {
+      "archive": "assets/res/dragons/1025_dragon_penguin_a_1.xml",
+      "texture": "assets/res/dragons/1025_dragon_penguin_a_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "96442f88de771c2ad652eccd23cb0ba8c394ba3e60e89b493232cba0988cc053"
+    },
+    "models/1025_dragon_penguin_a_2.webp": {
+      "archive": "assets/res/dragons/1025_dragon_penguin_a_2.xml",
+      "texture": "assets/res/dragons/1025_dragon_penguin_a_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "bbdc4a49a9f8f393d96cdf9022356accb458ca91f7ffc714fcca31bc202c5f07"
+    },
+    "models/1025_dragon_penguin_a_2.json": {
+      "archive": "assets/res/dragons/1025_dragon_penguin_a_2.xml",
+      "texture": "assets/res/dragons/1025_dragon_penguin_a_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "3695e3550457058c8489f4628c84f6f54465fb2b2fa0c4ed66d998226a87f6ba"
+    },
+    "models/1025_dragon_penguin_a_3.webp": {
+      "archive": "assets/res/dragons/1025_dragon_penguin_a_3.xml",
+      "texture": "assets/res/dragons/1025_dragon_penguin_a_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "1c383e744698049bb542f5bb61ef95d4610105cf9bc1345778551134bab27467"
+    },
+    "models/1025_dragon_penguin_a_3.json": {
+      "archive": "assets/res/dragons/1025_dragon_penguin_a_3.xml",
+      "texture": "assets/res/dragons/1025_dragon_penguin_a_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "9cd67ef845f5fd17aa665cdf8ac047d31210d2d9ae7540c7aa47afa9efc4543d"
+    },
+    "models/1026_dragon_ice_b_1.webp": {
+      "archive": "assets/res/dragons/1026_dragon_ice_b_1.xml",
+      "texture": "assets/res/dragons/1026_dragon_ice_b_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "64bd1cd0f12811e4761600bf32f1db79d7a174c65083bf0cd3b5f436ade6b5d4"
+    },
+    "models/1026_dragon_ice_b_1.json": {
+      "archive": "assets/res/dragons/1026_dragon_ice_b_1.xml",
+      "texture": "assets/res/dragons/1026_dragon_ice_b_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "7d68c76cdb6d36908c632b2d066db0cc48cb6b86df2261f1ebc2c6c75431b2ca"
+    },
+    "models/1026_dragon_ice_b_2.webp": {
+      "archive": "assets/res/dragons/1026_dragon_ice_b_2.xml",
+      "texture": "assets/res/dragons/1026_dragon_ice_b_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "f3c6cc726eedfd5236dde3e2d471b1cccbd09e3ce589501b1258d1a14d2fbf5c"
+    },
+    "models/1026_dragon_ice_b_2.json": {
+      "archive": "assets/res/dragons/1026_dragon_ice_b_2.xml",
+      "texture": "assets/res/dragons/1026_dragon_ice_b_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "e23171067a0e6616231df146ba7d308809c9537cc80bf26caa2862c1241bed1a"
+    },
+    "models/1026_dragon_ice_b_3.webp": {
+      "archive": "assets/res/dragons/1026_dragon_ice_b_3.xml",
+      "texture": "assets/res/dragons/1026_dragon_ice_b_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "85b6e76cb5dc47d48e005478605f908ff36a973f4cc476bf4c9f79f46b0c2db5"
+    },
+    "models/1026_dragon_ice_b_3.json": {
+      "archive": "assets/res/dragons/1026_dragon_ice_b_3.xml",
+      "texture": "assets/res/dragons/1026_dragon_ice_b_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "039bd03f55be524c378e08535ddc616a97568a6db37e7960f983b3e422787f69"
+    },
+    "models/1028_dragon_carnivore_b_1.webp": {
+      "archive": "assets/res/dragons/1028_dragon_carnivore_b_1.xml",
+      "texture": "assets/res/dragons/1028_dragon_carnivore_b_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "2214b40949557e5109f93e49832ef61b8df19136091cc34e42ff075cff01cc19"
+    },
+    "models/1028_dragon_carnivore_b_1.json": {
+      "archive": "assets/res/dragons/1028_dragon_carnivore_b_1.xml",
+      "texture": "assets/res/dragons/1028_dragon_carnivore_b_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "2738dcbefa2149ff846c1eb5e29cf7494182ee52924508144eb7709bb51c799a"
+    },
+    "models/1028_dragon_carnivore_b_2.webp": {
+      "archive": "assets/res/dragons/1028_dragon_carnivore_b_2.xml",
+      "texture": "assets/res/dragons/1028_dragon_carnivore_b_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "ce80743dbea9ea4bf592f684f8577a58e57ba036e5638d386fc2d2dbd08e39cd"
+    },
+    "models/1028_dragon_carnivore_b_2.json": {
+      "archive": "assets/res/dragons/1028_dragon_carnivore_b_2.xml",
+      "texture": "assets/res/dragons/1028_dragon_carnivore_b_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "860c31ff9853e31333a84f45e0339b789c11ee1f52bee46164e044f20e60561d"
+    },
+    "models/1028_dragon_carnivore_b_3.webp": {
+      "archive": "assets/res/dragons/1028_dragon_carnivore_b_3.xml",
+      "texture": "assets/res/dragons/1028_dragon_carnivore_b_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "95f58c2e2c3d9d0b99e13868b4177674c5d62b988d468db15680734f7e8c5555"
+    },
+    "models/1028_dragon_carnivore_b_3.json": {
+      "archive": "assets/res/dragons/1028_dragon_carnivore_b_3.xml",
+      "texture": "assets/res/dragons/1028_dragon_carnivore_b_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "33b286f7810c689a145f26f6adf042201ea90fda691f53a28dacc1ed7a16ad58"
+    },
+    "models/1029_dragon_fluorescent_b_1.webp": {
+      "archive": "assets/res/dragons/1029_dragon_fluorescent_b_1.xml",
+      "texture": "assets/res/dragons/1029_dragon_fluorescent_b_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "9ea352b891cf0869ee740fea38f5e40fdea4484be81a036bc532d5a4056b7863"
+    },
+    "models/1029_dragon_fluorescent_b_1.json": {
+      "archive": "assets/res/dragons/1029_dragon_fluorescent_b_1.xml",
+      "texture": "assets/res/dragons/1029_dragon_fluorescent_b_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "a89312c7584284ce1ec0621456863bf32a52d54c5ae21f4da421db29dcf45eb7"
+    },
+    "models/1029_dragon_fluorescent_b_2.webp": {
+      "archive": "assets/res/dragons/1029_dragon_fluorescent_b_2.xml",
+      "texture": "assets/res/dragons/1029_dragon_fluorescent_b_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "471ef1e18d8eaa06d88b579e0811a880b435739a823bc08a702bc303d5e5502a"
+    },
+    "models/1029_dragon_fluorescent_b_2.json": {
+      "archive": "assets/res/dragons/1029_dragon_fluorescent_b_2.xml",
+      "texture": "assets/res/dragons/1029_dragon_fluorescent_b_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "7eaba25b13380e2b1e000261eb08ad09ab25825b4876e3ff91c497e216eb8e4b"
+    },
+    "models/1029_dragon_fluorescent_b_3.webp": {
+      "archive": "assets/res/dragons/1029_dragon_fluorescent_b_3.xml",
+      "texture": "assets/res/dragons/1029_dragon_fluorescent_b_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "7debae75573dcabdb279d7dfebe2f07fa9ab25531b473dc11a06a9d02bd2f44f"
+    },
+    "models/1029_dragon_fluorescent_b_3.json": {
+      "archive": "assets/res/dragons/1029_dragon_fluorescent_b_3.xml",
+      "texture": "assets/res/dragons/1029_dragon_fluorescent_b_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "d6be76d242d6a6be67c4cdfbd32ef2bfa30cb6174635268ccdc4caa6822121e1"
+    },
+    "models/1031_dragon_electric_b_1.webp": {
+      "archive": "assets/res/dragons/1031_dragon_electric_b_1.xml",
+      "texture": "assets/res/dragons/1031_dragon_electric_b_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "5e75f0d96b703c980581e4b2b55eeec339f0f224751d201db41a4ebdc1cd97f9"
+    },
+    "models/1031_dragon_electric_b_1.json": {
+      "archive": "assets/res/dragons/1031_dragon_electric_b_1.xml",
+      "texture": "assets/res/dragons/1031_dragon_electric_b_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "33b65f56dc80bac5c82b94d30bb8a112d7dedad553218fa1d9d3a0930f2f343e"
+    },
+    "models/1031_dragon_electric_b_2.webp": {
+      "archive": "assets/res/dragons/1031_dragon_electric_b_2.xml",
+      "texture": "assets/res/dragons/1031_dragon_electric_b_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "dfcc7cbfbd31dee340480453747c78d172d19ec0aa68b9e369e275c523acbf17"
+    },
+    "models/1031_dragon_electric_b_2.json": {
+      "archive": "assets/res/dragons/1031_dragon_electric_b_2.xml",
+      "texture": "assets/res/dragons/1031_dragon_electric_b_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "3252d5d474448f872c011c1930444f9233875235cad016eaf9f4430ec459a5b9"
+    },
+    "models/1031_dragon_electric_b_3.webp": {
+      "archive": "assets/res/dragons/1031_dragon_electric_b_3.xml",
+      "texture": "assets/res/dragons/1031_dragon_electric_b_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "265c89590bf85f7a77a7408add09cbd6634b85aa79c9882af022031eac7549b3"
+    },
+    "models/1031_dragon_electric_b_3.json": {
+      "archive": "assets/res/dragons/1031_dragon_electric_b_3.xml",
+      "texture": "assets/res/dragons/1031_dragon_electric_b_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "f1c97ac7823c56df1753c8866e0c1715741d17d02a5f3412d410ebc3044455d2"
+    },
+    "models/1032_dragon_battery_b_1.webp": {
+      "archive": "assets/res/dragons/1032_dragon_battery_b_1.xml",
+      "texture": "assets/res/dragons/1032_dragon_battery_b_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "527ee40fd6b145d638d956c5d27a5549c19812f20b4ae0132b9ee7b213a312c8"
+    },
+    "models/1032_dragon_battery_b_1.json": {
+      "archive": "assets/res/dragons/1032_dragon_battery_b_1.xml",
+      "texture": "assets/res/dragons/1032_dragon_battery_b_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "f247d8b6bacb187b5ad8ea08aa8671bec8d565e4d5489a51a53fa38886adc526"
+    },
+    "models/1032_dragon_battery_b_2.webp": {
+      "archive": "assets/res/dragons/1032_dragon_battery_b_2.xml",
+      "texture": "assets/res/dragons/1032_dragon_battery_b_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "771f0bff288420d27de3a7314105b7318846cb704977b1f45218b7bd1c1c0336"
+    },
+    "models/1032_dragon_battery_b_2.json": {
+      "archive": "assets/res/dragons/1032_dragon_battery_b_2.xml",
+      "texture": "assets/res/dragons/1032_dragon_battery_b_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "aaed864dbe0c45cfc039b790d41906a7f705ad919bb3b5b89a7c62bd5fbc61b2"
+    },
+    "models/1032_dragon_battery_b_3.webp": {
+      "archive": "assets/res/dragons/1032_dragon_battery_b_3.xml",
+      "texture": "assets/res/dragons/1032_dragon_battery_b_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "f0ab93bcb382a87ac07ddb818aa15a256419ab0a188a8d1ff5c7ed229a7e8e27"
+    },
+    "models/1032_dragon_battery_b_3.json": {
+      "archive": "assets/res/dragons/1032_dragon_battery_b_3.xml",
+      "texture": "assets/res/dragons/1032_dragon_battery_b_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "e562c734aa46935dc2f226158edf6752824021b81de94eb85aee16fa20b75b94"
+    },
+    "models/1039_dragon_metal_b_1.webp": {
+      "archive": "assets/res/dragons/1039_dragon_metal_b_1.xml",
+      "texture": "assets/res/dragons/1039_dragon_metal_b_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "ab57b6ee14d5532de3c7765de4e00528c6976fc823d6fd3d1af77c32bdd00c0b"
+    },
+    "models/1039_dragon_metal_b_1.json": {
+      "archive": "assets/res/dragons/1039_dragon_metal_b_1.xml",
+      "texture": "assets/res/dragons/1039_dragon_metal_b_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "55549aa4060a738f2227ad4460e3100252d32b83aeba232b5b94d91ab7e9f306"
+    },
+    "models/1039_dragon_metal_b_2.webp": {
+      "archive": "assets/res/dragons/1039_dragon_metal_b_2.xml",
+      "texture": "assets/res/dragons/1039_dragon_metal_b_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "4621010d899f617b7906b0aa11dbced51a949799fa79f7772fca63b070a3d47a"
+    },
+    "models/1039_dragon_metal_b_2.json": {
+      "archive": "assets/res/dragons/1039_dragon_metal_b_2.xml",
+      "texture": "assets/res/dragons/1039_dragon_metal_b_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "41a18e2128dd4755602b05c2e744d631ec0b18db8acd3d165abe855bb92fc569"
+    },
+    "models/1039_dragon_metal_b_3.webp": {
+      "archive": "assets/res/dragons/1039_dragon_metal_b_3.xml",
+      "texture": "assets/res/dragons/1039_dragon_metal_b_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "e3d46890002792617a566d376dd135bfc7cbd1131046c0f979164731c844af55"
+    },
+    "models/1039_dragon_metal_b_3.json": {
+      "archive": "assets/res/dragons/1039_dragon_metal_b_3.xml",
+      "texture": "assets/res/dragons/1039_dragon_metal_b_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "83315edc509a430635e58755f45c6f39ddbe5e4f6e0678a3360c86d0a04ce633"
+    },
+    "models/1040_dragon_dark_b_1.webp": {
+      "archive": "assets/res/dragons/1040_dragon_dark_b_1.xml",
+      "texture": "assets/res/dragons/1040_dragon_dark_b_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "f3fde3b1bd909750e5e0caf1fd4025f9f1d116e28f3c42dd3c3a68e28be39ac9"
+    },
+    "models/1040_dragon_dark_b_1.json": {
+      "archive": "assets/res/dragons/1040_dragon_dark_b_1.xml",
+      "texture": "assets/res/dragons/1040_dragon_dark_b_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "d325c621410a797ec25e0da4a42dbd5ed95c774710e97cc6a440354e319db7fc"
+    },
+    "models/1040_dragon_dark_b_2.webp": {
+      "archive": "assets/res/dragons/1040_dragon_dark_b_2.xml",
+      "texture": "assets/res/dragons/1040_dragon_dark_b_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "3a9bf2e823e0ceef4f89725ca0d721907d5ed3c6890c76e17680297eee5b6aab"
+    },
+    "models/1040_dragon_dark_b_2.json": {
+      "archive": "assets/res/dragons/1040_dragon_dark_b_2.xml",
+      "texture": "assets/res/dragons/1040_dragon_dark_b_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "7b201ad56f830514caa1f4e54187de876836a0d02b9e061a2916fda5ec07158b"
+    },
+    "models/1040_dragon_dark_b_3.webp": {
+      "archive": "assets/res/dragons/1040_dragon_dark_b_3.xml",
+      "texture": "assets/res/dragons/1040_dragon_dark_b_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "d0e620a7a5f47ccb32021dc6dfe98d2b91217dd24d5fc2c24b65e83f4fe97f38"
+    },
+    "models/1040_dragon_dark_b_3.json": {
+      "archive": "assets/res/dragons/1040_dragon_dark_b_3.xml",
+      "texture": "assets/res/dragons/1040_dragon_dark_b_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "02c42322a7278e8101b18bf4a3c5e7d244659ce818001b8ebb925b485edb1d0b"
+    },
+    "models/1041_dragon_legend_b_1.webp": {
+      "archive": "assets/res/dragons/1041_dragon_legend_b_1.xml",
+      "texture": "assets/res/dragons/1041_dragon_legend_b_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "b9d1c0a5f4c39277dc909e48ca36a28fd3995a5c4a3177e3fc8fe116651f4d2a"
+    },
+    "models/1041_dragon_legend_b_1.json": {
+      "archive": "assets/res/dragons/1041_dragon_legend_b_1.xml",
+      "texture": "assets/res/dragons/1041_dragon_legend_b_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "87ab25e822a589040ff5e0313b6654ce0e84fbded2711443f48ed594b2c17651"
+    },
+    "models/1041_dragon_legend_b_2.webp": {
+      "archive": "assets/res/dragons/1041_dragon_legend_b_2.xml",
+      "texture": "assets/res/dragons/1041_dragon_legend_b_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "cc531b83b92bccb44c8956ea8cf337ea02b72f1f8b83140085e46819e5343cb8"
+    },
+    "models/1041_dragon_legend_b_2.json": {
+      "archive": "assets/res/dragons/1041_dragon_legend_b_2.xml",
+      "texture": "assets/res/dragons/1041_dragon_legend_b_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "2e45bd950acb63810348e63d1ceb94db5f46826d58a9f361cbd3a0e325f3abb8"
+    },
+    "models/1041_dragon_legend_b_3.webp": {
+      "archive": "assets/res/dragons/1041_dragon_legend_b_3.xml",
+      "texture": "assets/res/dragons/1041_dragon_legend_b_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "4951d17bce3e6bcda9389d0c427b36a75edb7279f7e53db9d30806fa63a084e5"
+    },
+    "models/1041_dragon_legend_b_3.json": {
+      "archive": "assets/res/dragons/1041_dragon_legend_b_3.xml",
+      "texture": "assets/res/dragons/1041_dragon_legend_b_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "66d9147e167970eeebd5b3be6ac7ac1ae147046017ebd0dfab1d60a4ce0c340a"
+    },
+    "models/1042_dragon_vampire_a_1.webp": {
+      "archive": "assets/res/dragons/1042_dragon_vampire_a_1.xml",
+      "texture": "assets/res/dragons/1042_dragon_vampire_a_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "10d183f66226f2dd130cfb2ee714efbd79838cec494e99d9a10374a9493fe9ce"
+    },
+    "models/1042_dragon_vampire_a_1.json": {
+      "archive": "assets/res/dragons/1042_dragon_vampire_a_1.xml",
+      "texture": "assets/res/dragons/1042_dragon_vampire_a_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "b8a862d98d19fcbdb3c4c5d5108cfd4841e1489693395122ee34b2a0e09ead5f"
+    },
+    "models/1042_dragon_vampire_a_2.webp": {
+      "archive": "assets/res/dragons/1042_dragon_vampire_a_2.xml",
+      "texture": "assets/res/dragons/1042_dragon_vampire_a_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "70f1f0efc0c3c3375f0e744c53692111a1d6ed041ac127c4ce9c517797d010f4"
+    },
+    "models/1042_dragon_vampire_a_2.json": {
+      "archive": "assets/res/dragons/1042_dragon_vampire_a_2.xml",
+      "texture": "assets/res/dragons/1042_dragon_vampire_a_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "53cc11cb9669a8dac9f8a8d3ca41f9b55537bef4d20ae699a42cb98c050d44b9"
+    },
+    "models/1042_dragon_vampire_a_3.webp": {
+      "archive": "assets/res/dragons/1042_dragon_vampire_a_3.xml",
+      "texture": "assets/res/dragons/1042_dragon_vampire_a_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "a4f0f0e32e0e644c8ca0edae56bf873f6b8bf79ab04f64cee2ea4017a12f50e4"
+    },
+    "models/1042_dragon_vampire_a_3.json": {
+      "archive": "assets/res/dragons/1042_dragon_vampire_a_3.xml",
+      "texture": "assets/res/dragons/1042_dragon_vampire_a_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "a67a9f929680dbc7d9c1b6b9ac59f3f3e364e1c78c58c42c6aacb918009dd732"
+    },
+    "models/1043_dragon_alpine_a_1.webp": {
+      "archive": "assets/res/dragons/1043_dragon_alpine_a_1.xml",
+      "texture": "assets/res/dragons/1043_dragon_alpine_a_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "f0e13409ac5e7a1b52b6f5e550a9bb8aa7b7effb3ff33c0ede4c5861bdca8ef7"
+    },
+    "models/1043_dragon_alpine_a_1.json": {
+      "archive": "assets/res/dragons/1043_dragon_alpine_a_1.xml",
+      "texture": "assets/res/dragons/1043_dragon_alpine_a_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "d7facd631b79d2d30bececb731e86b0a5610ce829e557e1de21bf2df50492f9b"
+    },
+    "models/1043_dragon_alpine_a_2.webp": {
+      "archive": "assets/res/dragons/1043_dragon_alpine_a_2.xml",
+      "texture": "assets/res/dragons/1043_dragon_alpine_a_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "46402811a33373f4197f5b7a7540dee0c8f4ceedd30ce68f39f0f6679cf4dc78"
+    },
+    "models/1043_dragon_alpine_a_2.json": {
+      "archive": "assets/res/dragons/1043_dragon_alpine_a_2.xml",
+      "texture": "assets/res/dragons/1043_dragon_alpine_a_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "53208426eadc106d624312dd59ab625550da0585f5f40a40c53e3d97e53c6141"
+    },
+    "models/1043_dragon_alpine_a_3.webp": {
+      "archive": "assets/res/dragons/1043_dragon_alpine_a_3.xml",
+      "texture": "assets/res/dragons/1043_dragon_alpine_a_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "f2910a6457c895dec6bd49372b6e2afc181e1bfe09688ec747da28f442e80213"
+    },
+    "models/1043_dragon_alpine_a_3.json": {
+      "archive": "assets/res/dragons/1043_dragon_alpine_a_3.xml",
+      "texture": "assets/res/dragons/1043_dragon_alpine_a_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "0515c2fbb2f7916c6a33e6abcccff91eb53f974d231ab37d987681be3264662e"
+    },
+    "models/1044_dragon_shit_a_1.webp": {
+      "archive": "assets/res/dragons/1044_dragon_shit_a_1.xml",
+      "texture": "assets/res/dragons/1044_dragon_shit_a_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "bf61e6bd1cb5c99d63da35fa0bcfc91feff6c1793a3890327c617c9e8ef000bb"
+    },
+    "models/1044_dragon_shit_a_1.json": {
+      "archive": "assets/res/dragons/1044_dragon_shit_a_1.xml",
+      "texture": "assets/res/dragons/1044_dragon_shit_a_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "8d5112d8095f4a5957fe92cad47ddfbd6c24bfb4572e38c0d9b742954950459e"
+    },
+    "models/1044_dragon_shit_a_2.webp": {
+      "archive": "assets/res/dragons/1044_dragon_shit_a_2.xml",
+      "texture": "assets/res/dragons/1044_dragon_shit_a_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "a75515767807dfd562224e22a3dc606af1a823833fb1724dfdc4d3f6fb396e7f"
+    },
+    "models/1044_dragon_shit_a_2.json": {
+      "archive": "assets/res/dragons/1044_dragon_shit_a_2.xml",
+      "texture": "assets/res/dragons/1044_dragon_shit_a_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "c1e0e181707b6d13251f6d8acead2cc5fc3ab77f5267f0ff1feab0f9860d9a2a"
+    },
+    "models/1044_dragon_shit_a_3.webp": {
+      "archive": "assets/res/dragons/1044_dragon_shit_a_3.xml",
+      "texture": "assets/res/dragons/1044_dragon_shit_a_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "60005db408770e788bbc52fecb86cd10e6716d10af696078d34e6ac382429c8a"
+    },
+    "models/1044_dragon_shit_a_3.json": {
+      "archive": "assets/res/dragons/1044_dragon_shit_a_3.xml",
+      "texture": "assets/res/dragons/1044_dragon_shit_a_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "68164b37543f449911511716e8fab169bdde88137a0bff565f2130116e39e201"
+    },
+    "models/1045_dragon_vulcano_a_1.webp": {
+      "archive": "assets/res/dragons/1045_dragon_vulcano_a_1.xml",
+      "texture": "assets/res/dragons/1045_dragon_vulcano_a_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "583f48cdbe0581fbdb69bd2be21753c41f4f0155fa47a9e1cc74216a8a425089"
+    },
+    "models/1045_dragon_vulcano_a_1.json": {
+      "archive": "assets/res/dragons/1045_dragon_vulcano_a_1.xml",
+      "texture": "assets/res/dragons/1045_dragon_vulcano_a_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "8f510172d2a026fad5400a814d3fe6d2319f2e95310396df4a950dcb2a21c144"
+    },
+    "models/1045_dragon_vulcano_a_2.webp": {
+      "archive": "assets/res/dragons/1045_dragon_vulcano_a_2.xml",
+      "texture": "assets/res/dragons/1045_dragon_vulcano_a_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "04c39d18455a95e1ab9028ee1d3f12a9977d83195798486431abc2881bae9c0a"
+    },
+    "models/1045_dragon_vulcano_a_2.json": {
+      "archive": "assets/res/dragons/1045_dragon_vulcano_a_2.xml",
+      "texture": "assets/res/dragons/1045_dragon_vulcano_a_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "c089af1be35e6573cb100e94f6cecac1fa43a238047d4ba2450a96935e98348f"
+    },
+    "models/1045_dragon_vulcano_a_3.webp": {
+      "archive": "assets/res/dragons/1045_dragon_vulcano_a_3.xml",
+      "texture": "assets/res/dragons/1045_dragon_vulcano_a_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "5ae71c2d33bdd69c74f561207002eeb1196e3c425b0f76da464653bd00f85de0"
+    },
+    "models/1045_dragon_vulcano_a_3.json": {
+      "archive": "assets/res/dragons/1045_dragon_vulcano_a_3.xml",
+      "texture": "assets/res/dragons/1045_dragon_vulcano_a_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "9d6baebe72751cc18b99b211cf5b16e92f83a02dd96853499b55a751f9340b3b"
+    },
+    "models/1046_dragon_blizzard_b_1.webp": {
+      "archive": "assets/res/dragons/1046_dragon_blizzard_b_1.xml",
+      "texture": "assets/res/dragons/1046_dragon_blizzard_b_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "efd67aeb55c34a718770f09abc4e3cbaca070dab6d2865424aeac88086f4cdda"
+    },
+    "models/1046_dragon_blizzard_b_1.json": {
+      "archive": "assets/res/dragons/1046_dragon_blizzard_b_1.xml",
+      "texture": "assets/res/dragons/1046_dragon_blizzard_b_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "504cd1698d8c6dc4782b828aacbf28a872502fa35f410b1b7a370441413d98a8"
+    },
+    "models/1046_dragon_blizzard_b_2.webp": {
+      "archive": "assets/res/dragons/1046_dragon_blizzard_b_2.xml",
+      "texture": "assets/res/dragons/1046_dragon_blizzard_b_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "6bd64e9dca1d2bf9f14134408ca032acd192a5ff458999f821b7e4f80c00f4b4"
+    },
+    "models/1046_dragon_blizzard_b_2.json": {
+      "archive": "assets/res/dragons/1046_dragon_blizzard_b_2.xml",
+      "texture": "assets/res/dragons/1046_dragon_blizzard_b_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "c2ee9b511ba04886a800c05ab9217c290e19d0cabdfd948c364a07d2ae03354c"
+    },
+    "models/1046_dragon_blizzard_b_3.webp": {
+      "archive": "assets/res/dragons/1046_dragon_blizzard_b_3.xml",
+      "texture": "assets/res/dragons/1046_dragon_blizzard_b_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "21ca2a3e6b63b801b8201b9b6269e5218c587b9623b634a5e86c3ec5ca641a5a"
+    },
+    "models/1046_dragon_blizzard_b_3.json": {
+      "archive": "assets/res/dragons/1046_dragon_blizzard_b_3.xml",
+      "texture": "assets/res/dragons/1046_dragon_blizzard_b_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "505591bb8c57ed31fa611a433d6fd9d3e73b1143e3ff2b4dfa92c3821a537b5a"
+    },
+    "models/1047_dragon_rattlesnake_a_1.webp": {
+      "archive": "assets/res/dragons/1047_dragon_rattlesnake_a_1.xml",
+      "texture": "assets/res/dragons/1047_dragon_rattlesnake_a_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "442d5ceb1638b61e2a2046214a497a7480963291eb373a13def4a656e8616ac7"
+    },
+    "models/1047_dragon_rattlesnake_a_1.json": {
+      "archive": "assets/res/dragons/1047_dragon_rattlesnake_a_1.xml",
+      "texture": "assets/res/dragons/1047_dragon_rattlesnake_a_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "4b6c6302bad89a2db3b51e577649cdac84c4d0fa8322d197533a7f46b73dde06"
+    },
+    "models/1047_dragon_rattlesnake_a_2.webp": {
+      "archive": "assets/res/dragons/1047_dragon_rattlesnake_a_2.xml",
+      "texture": "assets/res/dragons/1047_dragon_rattlesnake_a_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "34179ebcd2c007395b1ed1f2bbc2293902a541660fcbf2b6b79717e550881fff"
+    },
+    "models/1047_dragon_rattlesnake_a_2.json": {
+      "archive": "assets/res/dragons/1047_dragon_rattlesnake_a_2.xml",
+      "texture": "assets/res/dragons/1047_dragon_rattlesnake_a_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "bb9de1e74efa89f799e3ba83206f78eedea17636ce09bb192e17182cbef6fbd6"
+    },
+    "models/1047_dragon_rattlesnake_a_3.webp": {
+      "archive": "assets/res/dragons/1047_dragon_rattlesnake_a_3.xml",
+      "texture": "assets/res/dragons/1047_dragon_rattlesnake_a_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "17116b4302263d9487ab68974db5123f05d830fd8eefe6ba407c1e19b62e017f"
+    },
+    "models/1047_dragon_rattlesnake_a_3.json": {
+      "archive": "assets/res/dragons/1047_dragon_rattlesnake_a_3.xml",
+      "texture": "assets/res/dragons/1047_dragon_rattlesnake_a_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "90d49db283ca422c732810674b47ac52ba16e84013558638b2d779c72e59a521"
+    },
+    "models/1048_dragon_gold_a_1.webp": {
+      "archive": "assets/res/dragons/1048_dragon_gold_a_1.xml",
+      "texture": "assets/res/dragons/1048_dragon_gold_a_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "90d9243e73b7c6378034ee84fb43b98be5e958a318a666c5e4588b1ca77cfad9"
+    },
+    "models/1048_dragon_gold_a_1.json": {
+      "archive": "assets/res/dragons/1048_dragon_gold_a_1.xml",
+      "texture": "assets/res/dragons/1048_dragon_gold_a_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "16fa76f972ba79dcccdbf0529e635387c7c6283a57bca89936be2f611adfd71e"
+    },
+    "models/1048_dragon_gold_a_2.webp": {
+      "archive": "assets/res/dragons/1048_dragon_gold_a_2.xml",
+      "texture": "assets/res/dragons/1048_dragon_gold_a_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "2ede06d2859498a0e69535cbeec07bf3ee925db569b3bfd7e98715a2db7f198c"
+    },
+    "models/1048_dragon_gold_a_2.json": {
+      "archive": "assets/res/dragons/1048_dragon_gold_a_2.xml",
+      "texture": "assets/res/dragons/1048_dragon_gold_a_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "17a2868ce4cac80e1ab3e29beed0c4120861db6548643be993fbd8c8cde1117e"
+    },
+    "models/1048_dragon_gold_a_3.webp": {
+      "archive": "assets/res/dragons/1048_dragon_gold_a_3.xml",
+      "texture": "assets/res/dragons/1048_dragon_gold_a_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "fb29fdecc5bedac25fe10e833bb3cc6e3a25d4dc59b6ba8b9a7c33f4f8d3a0a8"
+    },
+    "models/1048_dragon_gold_a_3.json": {
+      "archive": "assets/res/dragons/1048_dragon_gold_a_3.xml",
+      "texture": "assets/res/dragons/1048_dragon_gold_a_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "3c4a1c0227e7fc649f29ee572ed335d3eafa2fc1e96aae144cbd021c6be31aee"
+    },
+    "models/1049_dragon_soccer_a_1.webp": {
+      "archive": "assets/res/dragons/1049_dragon_soccer_a_1.xml",
+      "texture": "assets/res/dragons/1049_dragon_soccer_a_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "0b9b20201f1a4537649519a3588f0865c84e6164948e9c798ebdad0ce8cf4398"
+    },
+    "models/1049_dragon_soccer_a_1.json": {
+      "archive": "assets/res/dragons/1049_dragon_soccer_a_1.xml",
+      "texture": "assets/res/dragons/1049_dragon_soccer_a_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "3010422d6d7a3ebb64c9b237b9f4ce842a10f46a5d9267147d0c51901c171a05"
+    },
+    "models/1049_dragon_soccer_a_2.webp": {
+      "archive": "assets/res/dragons/1049_dragon_soccer_a_2.xml",
+      "texture": "assets/res/dragons/1049_dragon_soccer_a_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "15fa1f2b717c3a2fdedc6f84baf1452dac73686b7ba82f3650a5a92f85165a19"
+    },
+    "models/1049_dragon_soccer_a_2.json": {
+      "archive": "assets/res/dragons/1049_dragon_soccer_a_2.xml",
+      "texture": "assets/res/dragons/1049_dragon_soccer_a_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "d8f8b28c0813cbd308c39172808d8b669ab0b42409626c488e6efe63f97260a3"
+    },
+    "models/1049_dragon_soccer_a_3.webp": {
+      "archive": "assets/res/dragons/1049_dragon_soccer_a_3.xml",
+      "texture": "assets/res/dragons/1049_dragon_soccer_a_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "535cb19de429d1774dcb73e9aff6cf7746dc6856428f59a07a70b5fc1bbfc4d9"
+    },
+    "models/1049_dragon_soccer_a_3.json": {
+      "archive": "assets/res/dragons/1049_dragon_soccer_a_3.xml",
+      "texture": "assets/res/dragons/1049_dragon_soccer_a_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "a025dc4b7f53126853ceb6740b8c4597dfeb008134cde8f6956e3afa611adfed"
+    },
+    "models/1050_dragon_platinum_a_1.webp": {
+      "archive": "assets/res/dragons/1050_dragon_platinum_a_1.xml",
+      "texture": "assets/res/dragons/1050_dragon_platinum_a_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "ec7042f47670c5eee126c6bbf9809f6dd1b7782a1e9cceab1e0df4d366162e48"
+    },
+    "models/1050_dragon_platinum_a_1.json": {
+      "archive": "assets/res/dragons/1050_dragon_platinum_a_1.xml",
+      "texture": "assets/res/dragons/1050_dragon_platinum_a_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "c95f6c3dcb96cbaa61bc6a55a237823a1520d2fa6e5f2ddedf038f33e502bf59"
+    },
+    "models/1050_dragon_platinum_a_2.webp": {
+      "archive": "assets/res/dragons/1050_dragon_platinum_a_2.xml",
+      "texture": "assets/res/dragons/1050_dragon_platinum_a_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "4a2742ffe13fcb38a7334d42cc8f71093d21d1ca24a59d2a2b4e4411e4090ba9"
+    },
+    "models/1050_dragon_platinum_a_2.json": {
+      "archive": "assets/res/dragons/1050_dragon_platinum_a_2.xml",
+      "texture": "assets/res/dragons/1050_dragon_platinum_a_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "9b7037e1dcc82cdf523c54178cbc00308229926b412b4579a617f2c4f4156d3c"
+    },
+    "models/1050_dragon_platinum_a_3.webp": {
+      "archive": "assets/res/dragons/1050_dragon_platinum_a_3.xml",
+      "texture": "assets/res/dragons/1050_dragon_platinum_a_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "915d8f5767f33204fec95b9d622c8a546cda87dea28662d66092739269a8fd8c"
+    },
+    "models/1050_dragon_platinum_a_3.json": {
+      "archive": "assets/res/dragons/1050_dragon_platinum_a_3.xml",
+      "texture": "assets/res/dragons/1050_dragon_platinum_a_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "bed7f0fe76dc5a809c210173c50a0fff68cf66cce5d351bb9694e877d6e214e4"
+    },
+    "models/1051_dragon_pirate_a_1.webp": {
+      "archive": "assets/res/dragons/1051_dragon_pirate_a_1.xml",
+      "texture": "assets/res/dragons/1051_dragon_pirate_a_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "bf5099d7b66f9e1c862d2bb215fca502d0d8947c45c2075cb16dc9c35dc2de2a"
+    },
+    "models/1051_dragon_pirate_a_1.json": {
+      "archive": "assets/res/dragons/1051_dragon_pirate_a_1.xml",
+      "texture": "assets/res/dragons/1051_dragon_pirate_a_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "6844f56e8a7abcb2bdd3ad3ab377a0251c1d5bc7a6610e876b13b95b263e8fc1"
+    },
+    "models/1051_dragon_pirate_a_2.webp": {
+      "archive": "assets/res/dragons/1051_dragon_pirate_a_2.xml",
+      "texture": "assets/res/dragons/1051_dragon_pirate_a_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "13da4a811044ec56d2b4ed42d3874f762c69e3ca62a705b5deb2f87f9162fb43"
+    },
+    "models/1051_dragon_pirate_a_2.json": {
+      "archive": "assets/res/dragons/1051_dragon_pirate_a_2.xml",
+      "texture": "assets/res/dragons/1051_dragon_pirate_a_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "ce7620f3762543c970650f9da828a8dfcee9920ad213ce837e822a1ac407187f"
+    },
+    "models/1051_dragon_pirate_a_3.webp": {
+      "archive": "assets/res/dragons/1051_dragon_pirate_a_3.xml",
+      "texture": "assets/res/dragons/1051_dragon_pirate_a_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "d3f2288ccb3bba75fa4a6f2f5c54ef4c09a634c4e16f94b657aa84174ac3cb0c"
+    },
+    "models/1051_dragon_pirate_a_3.json": {
+      "archive": "assets/res/dragons/1051_dragon_pirate_a_3.xml",
+      "texture": "assets/res/dragons/1051_dragon_pirate_a_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "db22cddea74a3070be8dd588bce1fb125f0780c4192b9989498c704989127b32"
+    },
+    "models/1055_dragon_coral_a_1.webp": {
+      "archive": "assets/res/dragons/1055_dragon_coral_a_1.xml",
+      "texture": "assets/res/dragons/1055_dragon_coral_a_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "02a197d4d12365872e4045bfb6a4c73e4529102c63b78ee3cf9058383b9cf9b7"
+    },
+    "models/1055_dragon_coral_a_1.json": {
+      "archive": "assets/res/dragons/1055_dragon_coral_a_1.xml",
+      "texture": "assets/res/dragons/1055_dragon_coral_a_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "195e0997a400ea5828fb60aff81f8f5d53f473399657d20e166b0a8a28654cb9"
+    },
+    "models/1055_dragon_coral_a_2.webp": {
+      "archive": "assets/res/dragons/1055_dragon_coral_a_2.xml",
+      "texture": "assets/res/dragons/1055_dragon_coral_a_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "f8fa260bd49a7d744912911f176fd169ce8e9e5a87815649daae905f8b392065"
+    },
+    "models/1055_dragon_coral_a_2.json": {
+      "archive": "assets/res/dragons/1055_dragon_coral_a_2.xml",
+      "texture": "assets/res/dragons/1055_dragon_coral_a_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "62bbddedf63bd3f6d7d655b680823f87d2cd894de5d52c38879e1b864cbc7fd9"
+    },
+    "models/1055_dragon_coral_a_3.webp": {
+      "archive": "assets/res/dragons/1055_dragon_coral_a_3.xml",
+      "texture": "assets/res/dragons/1055_dragon_coral_a_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "147c77fd57657c7575d82872df8d46bcf86eca2ef8b20cb7480bccf174a71c7d"
+    },
+    "models/1055_dragon_coral_a_3.json": {
+      "archive": "assets/res/dragons/1055_dragon_coral_a_3.xml",
+      "texture": "assets/res/dragons/1055_dragon_coral_a_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "820d4966475e9fadedbc06dcbe92eb8590e65b949064c71ea9e41ac512803a2f"
+    },
+    "models/1056_dragon_chili_a_1.webp": {
+      "archive": "assets/res/dragons/1056_dragon_chili_a_1.xml",
+      "texture": "assets/res/dragons/1056_dragon_chili_a_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "3b43d2027a2d1dd5f49651b307eef7fb957d448cbddd4fc63a7050d39ab164ba"
+    },
+    "models/1056_dragon_chili_a_1.json": {
+      "archive": "assets/res/dragons/1056_dragon_chili_a_1.xml",
+      "texture": "assets/res/dragons/1056_dragon_chili_a_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "d95061d3bb3f01fde83f8c60c5d31b037c91d4539b18e23298a6736ad17d6ca9"
+    },
+    "models/1056_dragon_chili_a_2.webp": {
+      "archive": "assets/res/dragons/1056_dragon_chili_a_2.xml",
+      "texture": "assets/res/dragons/1056_dragon_chili_a_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "1a6bd8bbf0a96e81ec444c8d93f82a556e4adbbae649ef932278a187ea8ce158"
+    },
+    "models/1056_dragon_chili_a_2.json": {
+      "archive": "assets/res/dragons/1056_dragon_chili_a_2.xml",
+      "texture": "assets/res/dragons/1056_dragon_chili_a_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "f4361fd96f5c55ecc00a922701334344b46dce2adf602862091cf1a1f37fc60d"
+    },
+    "models/1056_dragon_chili_a_3.webp": {
+      "archive": "assets/res/dragons/1056_dragon_chili_a_3.xml",
+      "texture": "assets/res/dragons/1056_dragon_chili_a_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "da25b8eff74d41deadbabcca9c05880a49f66880e885e5329ade0bde03ba6066"
+    },
+    "models/1056_dragon_chili_a_3.json": {
+      "archive": "assets/res/dragons/1056_dragon_chili_a_3.xml",
+      "texture": "assets/res/dragons/1056_dragon_chili_a_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "14d65595c31f1a21c91bb872ec121308cacca10f7beb077ea0d7a62f23de35fb"
+    },
+    "models/1057_dragon_waterfall_a_1.webp": {
+      "archive": "assets/res/dragons/1057_dragon_waterfall_a_1.xml",
+      "texture": "assets/res/dragons/1057_dragon_waterfall_a_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "c2c02a705d4793ea79e5af4ad009b2b6f3b2d0d380b0a174bbb7338ad1a0b6e8"
+    },
+    "models/1057_dragon_waterfall_a_1.json": {
+      "archive": "assets/res/dragons/1057_dragon_waterfall_a_1.xml",
+      "texture": "assets/res/dragons/1057_dragon_waterfall_a_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "26ab2eae20ff150a829f70efeea4dafac3ff37d583d84b41a9c3009b7634e82a"
+    },
+    "models/1057_dragon_waterfall_a_2.webp": {
+      "archive": "assets/res/dragons/1057_dragon_waterfall_a_2.xml",
+      "texture": "assets/res/dragons/1057_dragon_waterfall_a_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "f87008aa64af2fb35ad45dae336cebf3893853c0fdfd7b2354a1ff7c3e897b60"
+    },
+    "models/1057_dragon_waterfall_a_2.json": {
+      "archive": "assets/res/dragons/1057_dragon_waterfall_a_2.xml",
+      "texture": "assets/res/dragons/1057_dragon_waterfall_a_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "63dfc70aa3d5c68b066d8a18f89f3f75d6b4271160c918ae99f134ae95b1f80f"
+    },
+    "models/1057_dragon_waterfall_a_3.webp": {
+      "archive": "assets/res/dragons/1057_dragon_waterfall_a_3.xml",
+      "texture": "assets/res/dragons/1057_dragon_waterfall_a_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "273f1b15b86c019747761f6da6092cd88b4dcf954e3a586d6d29cdb1631e42c1"
+    },
+    "models/1057_dragon_waterfall_a_3.json": {
+      "archive": "assets/res/dragons/1057_dragon_waterfall_a_3.xml",
+      "texture": "assets/res/dragons/1057_dragon_waterfall_a_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "b44da2b6b8accaf2a6890716162556e826ca739c8e1d3039aae849984ee85bd2"
+    },
+    "models/1058_dragon_cactus_a_1.webp": {
+      "archive": "assets/res/dragons/1058_dragon_cactus_a_1.xml",
+      "texture": "assets/res/dragons/1058_dragon_cactus_a_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "2a79cd01baf3a05dcddf7c590b8b1c8d8310c9d0e45d9b63213ad99dd91a0134"
+    },
+    "models/1058_dragon_cactus_a_1.json": {
+      "archive": "assets/res/dragons/1058_dragon_cactus_a_1.xml",
+      "texture": "assets/res/dragons/1058_dragon_cactus_a_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "43a1853b12b84cd1a25c4ad5b7f34f087e56172e87e8577190ee35d5b7c2447b"
+    },
+    "models/1058_dragon_cactus_a_2.webp": {
+      "archive": "assets/res/dragons/1058_dragon_cactus_a_2.xml",
+      "texture": "assets/res/dragons/1058_dragon_cactus_a_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "cf4f250b3e6092264c7d8423b25c96f099853df94dbc868d0221bf8ef58b44e1"
+    },
+    "models/1058_dragon_cactus_a_2.json": {
+      "archive": "assets/res/dragons/1058_dragon_cactus_a_2.xml",
+      "texture": "assets/res/dragons/1058_dragon_cactus_a_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "66c28032fa7e9c755f354d977145897069e0f6608c5da2545d65b8987189b4fb"
+    },
+    "models/1058_dragon_cactus_a_3.webp": {
+      "archive": "assets/res/dragons/1058_dragon_cactus_a_3.xml",
+      "texture": "assets/res/dragons/1058_dragon_cactus_a_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "64d8902c33d3fbdc8b3864a17a97322105bf4c3f9e6192eeb12fb0d9043a4d79"
+    },
+    "models/1058_dragon_cactus_a_3.json": {
+      "archive": "assets/res/dragons/1058_dragon_cactus_a_3.xml",
+      "texture": "assets/res/dragons/1058_dragon_cactus_a_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "aeef57d9311d18ef02252ac00a0118caa07839ecda8b34f0392b3a1fe8b71cab"
+    },
+    "models/1059_dragon_storm_a_1.webp": {
+      "archive": "assets/res/dragons/1059_dragon_storm_a_1.xml",
+      "texture": "assets/res/dragons/1059_dragon_storm_a_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "c6c9f82b8587322c7433c70a898c9ea17a6a144d188b42614779c8073f0c48bd"
+    },
+    "models/1059_dragon_storm_a_1.json": {
+      "archive": "assets/res/dragons/1059_dragon_storm_a_1.xml",
+      "texture": "assets/res/dragons/1059_dragon_storm_a_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "a9e327c876497963c0414c6963888f2637c6d09647a39e9d74a382913b6a0501"
+    },
+    "models/1059_dragon_storm_a_2.webp": {
+      "archive": "assets/res/dragons/1059_dragon_storm_a_2.xml",
+      "texture": "assets/res/dragons/1059_dragon_storm_a_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "cd5568c9f872922f1aa61e25f698738445167f2a34693efc474642f59fbe1f46"
+    },
+    "models/1059_dragon_storm_a_2.json": {
+      "archive": "assets/res/dragons/1059_dragon_storm_a_2.xml",
+      "texture": "assets/res/dragons/1059_dragon_storm_a_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "12f3da2840d10af0366bb3fa87b98c2d67efb0274b3cd534cc9fe317d3882f3f"
+    },
+    "models/1059_dragon_storm_a_3.webp": {
+      "archive": "assets/res/dragons/1059_dragon_storm_a_3.xml",
+      "texture": "assets/res/dragons/1059_dragon_storm_a_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "94438ec9b7cdd3aee06b54fe9b31cb5d54efbb5311ba21933648e187bdb66bce"
+    },
+    "models/1059_dragon_storm_a_3.json": {
+      "archive": "assets/res/dragons/1059_dragon_storm_a_3.xml",
+      "texture": "assets/res/dragons/1059_dragon_storm_a_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "47974366021a33bc812852e1f7524504120878559e9497796fb80208e0dbcdfc"
+    },
+    "models/1060_dragon_icecream_a_1.webp": {
+      "archive": "assets/res/dragons/1060_dragon_icecream_a_1.xml",
+      "texture": "assets/res/dragons/1060_dragon_icecream_a_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "bce444b76416ee8ee8b67acec3afcde9fea6877239358588becd65cdde597d0b"
+    },
+    "models/1060_dragon_icecream_a_1.json": {
+      "archive": "assets/res/dragons/1060_dragon_icecream_a_1.xml",
+      "texture": "assets/res/dragons/1060_dragon_icecream_a_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "d9246908bfee516afae6c78f42389c8c434d32019f8bf884a4b0934fe61ccd47"
+    },
+    "models/1060_dragon_icecream_a_2.webp": {
+      "archive": "assets/res/dragons/1060_dragon_icecream_a_2.xml",
+      "texture": "assets/res/dragons/1060_dragon_icecream_a_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "e04acc497c8365767084ca2cd44a4690fb852f7414afbb96ca37f728b46acc99"
+    },
+    "models/1060_dragon_icecream_a_2.json": {
+      "archive": "assets/res/dragons/1060_dragon_icecream_a_2.xml",
+      "texture": "assets/res/dragons/1060_dragon_icecream_a_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "c556d6ec0c3de200593537474fcd292a631c2fb7a5269d11fa1f42f18f718f5b"
+    },
+    "models/1060_dragon_icecream_a_3.webp": {
+      "archive": "assets/res/dragons/1060_dragon_icecream_a_3.xml",
+      "texture": "assets/res/dragons/1060_dragon_icecream_a_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "fb152a9e4c5ca41fd00e2d167d97381821dfbceb245d5e8d3c707bdfb6f3f7bb"
+    },
+    "models/1060_dragon_icecream_a_3.json": {
+      "archive": "assets/res/dragons/1060_dragon_icecream_a_3.xml",
+      "texture": "assets/res/dragons/1060_dragon_icecream_a_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "02c320340a294cf4e99aa9fc9e097b88a11a67f50c7f28de0aa2cc16a2020d23"
+    },
+    "models/1061_dragon_mojito_a_1.webp": {
+      "archive": "assets/res/dragons/1061_dragon_mojito_a_1.xml",
+      "texture": "assets/res/dragons/1061_dragon_mojito_a_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "c60c9ad046902b3298a1fbda994fb34c130bebdc0324ed18f5e9dec7836c3cae"
+    },
+    "models/1061_dragon_mojito_a_1.json": {
+      "archive": "assets/res/dragons/1061_dragon_mojito_a_1.xml",
+      "texture": "assets/res/dragons/1061_dragon_mojito_a_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "36c9d30e46ea6e6a3b3c163101aa2573c7099bbaa412cfce2b085ca527d38b56"
+    },
+    "models/1061_dragon_mojito_a_2.webp": {
+      "archive": "assets/res/dragons/1061_dragon_mojito_a_2.xml",
+      "texture": "assets/res/dragons/1061_dragon_mojito_a_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "12103fe4ee1c99792e1dab5d5b58653639678c6cc40875f597c7cb7c57072b04"
+    },
+    "models/1061_dragon_mojito_a_2.json": {
+      "archive": "assets/res/dragons/1061_dragon_mojito_a_2.xml",
+      "texture": "assets/res/dragons/1061_dragon_mojito_a_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "df18a641b81ba84f0bbf71b13645eb4c3f2f5baa55acbea359607e2a8ab773a8"
+    },
+    "models/1061_dragon_mojito_a_3.webp": {
+      "archive": "assets/res/dragons/1061_dragon_mojito_a_3.xml",
+      "texture": "assets/res/dragons/1061_dragon_mojito_a_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "9cef281f4f09258a2daf7ee6ed8e4a37331e26bc1bd39679e3949aebc6fb57a2"
+    },
+    "models/1061_dragon_mojito_a_3.json": {
+      "archive": "assets/res/dragons/1061_dragon_mojito_a_3.xml",
+      "texture": "assets/res/dragons/1061_dragon_mojito_a_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "96a500a9148b8ebdc29b554c32723906ba52813cab93653006a24c5d6a2c6a33"
+    },
+    "models/1062_dragon_chameleon_1.webp": {
+      "archive": "assets/res/dragons/1062_dragon_chameleon_1.xml",
+      "texture": "assets/res/dragons/1062_dragon_chameleon_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "4df72b760c5dca8c9f70d55f87b2cb2c6e2b4bb05c9453121b7bfe65cc3f0f8c"
+    },
+    "models/1062_dragon_chameleon_1.json": {
+      "archive": "assets/res/dragons/1062_dragon_chameleon_1.xml",
+      "texture": "assets/res/dragons/1062_dragon_chameleon_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "55449813fcea9ef18cd24e0fb8761b846196cb05aef335273c4e9114e82a8a08"
+    },
+    "models/1062_dragon_chameleon_2.webp": {
+      "archive": "assets/res/dragons/1062_dragon_chameleon_2.xml",
+      "texture": "assets/res/dragons/1062_dragon_chameleon_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "1b4dfa6a306cb6389ff8e238a4b54a81a32e78fda5ca5ba5cd179c01aefd0b95"
+    },
+    "models/1062_dragon_chameleon_2.json": {
+      "archive": "assets/res/dragons/1062_dragon_chameleon_2.xml",
+      "texture": "assets/res/dragons/1062_dragon_chameleon_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "4b81a69d7060397114772c842d7a35ca15307c000eb43439b2c8a669580caec8"
+    },
+    "models/1062_dragon_chameleon_3.webp": {
+      "archive": "assets/res/dragons/1062_dragon_chameleon_3.xml",
+      "texture": "assets/res/dragons/1062_dragon_chameleon_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "d97f7031a200fe63c3e4c6eb41a35da816dd3131913123f09fc3260157b4d51d"
+    },
+    "models/1062_dragon_chameleon_3.json": {
+      "archive": "assets/res/dragons/1062_dragon_chameleon_3.xml",
+      "texture": "assets/res/dragons/1062_dragon_chameleon_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "35432ce5081b4637dedfd16c29cdc954802a065d9fa88ce9282185c5b9f296ca"
+    },
+    "models/1063_dragon_incandescent_1.webp": {
+      "archive": "assets/res/dragons/1063_dragon_incandescent_1.xml",
+      "texture": "assets/res/dragons/1063_dragon_incandescent_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "4e7cf8b325108a543b5bb5d5ea265ff2c82af05b5bd3f3b3bdcc77962d5f61b8"
+    },
+    "models/1063_dragon_incandescent_1.json": {
+      "archive": "assets/res/dragons/1063_dragon_incandescent_1.xml",
+      "texture": "assets/res/dragons/1063_dragon_incandescent_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "4862311889ec5666724ae15feddd6e5f387519e436bb993c666c36297ebb92c9"
+    },
+    "models/1063_dragon_incandescent_2.webp": {
+      "archive": "assets/res/dragons/1063_dragon_incandescent_2.xml",
+      "texture": "assets/res/dragons/1063_dragon_incandescent_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "a2ca4c0c2533968aa70a243341ec2cda9d995eb6b4a3066a731e591c6ed9cc52"
+    },
+    "models/1063_dragon_incandescent_2.json": {
+      "archive": "assets/res/dragons/1063_dragon_incandescent_2.xml",
+      "texture": "assets/res/dragons/1063_dragon_incandescent_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "b49cb1ea502d1355f161f161e320c1eab7bf8c42af0f77e2b07e63ebc64f6e1f"
+    },
+    "models/1063_dragon_incandescent_3.webp": {
+      "archive": "assets/res/dragons/1063_dragon_incandescent_3.xml",
+      "texture": "assets/res/dragons/1063_dragon_incandescent_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "d64fa3fe0d5a76b3918a658f8b053e73cc2dc66cdbafe2f5cbb415c472ddd016"
+    },
+    "models/1063_dragon_incandescent_3.json": {
+      "archive": "assets/res/dragons/1063_dragon_incandescent_3.xml",
+      "texture": "assets/res/dragons/1063_dragon_incandescent_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "b4519f4c39617473436ae7312ecae37d4b8aef4e6b495282cf072255fc6ada22"
+    },
+    "models/1064_dragon_snowflake_1.webp": {
+      "archive": "assets/res/dragons/1064_dragon_snowflake_1.xml",
+      "texture": "assets/res/dragons/1064_dragon_snowflake_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "df03f46c8742714f90fb1224ddd8d2b42476f6e5e8d6208d0cd685b7d8127830"
+    },
+    "models/1064_dragon_snowflake_1.json": {
+      "archive": "assets/res/dragons/1064_dragon_snowflake_1.xml",
+      "texture": "assets/res/dragons/1064_dragon_snowflake_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "ffef6b1d89eaf2fc40e94556e26985baf4334b293070169c423af47481327d8b"
+    },
+    "models/1064_dragon_snowflake_2.webp": {
+      "archive": "assets/res/dragons/1064_dragon_snowflake_2.xml",
+      "texture": "assets/res/dragons/1064_dragon_snowflake_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "cb1d93573ac5afb51cccfcb130f58aff7809a83bec722e3726679c660e9dfd30"
+    },
+    "models/1064_dragon_snowflake_2.json": {
+      "archive": "assets/res/dragons/1064_dragon_snowflake_2.xml",
+      "texture": "assets/res/dragons/1064_dragon_snowflake_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "cc4a7cd3a2ea39ece8f1ef2f38328f9548096b36607be076c54a4b8d34737e0d"
+    },
+    "models/1064_dragon_snowflake_3.webp": {
+      "archive": "assets/res/dragons/1064_dragon_snowflake_3.xml",
+      "texture": "assets/res/dragons/1064_dragon_snowflake_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "c7d0c7da07b04eb5388c63e49755e2294c6b2ef1c715614dcb2981a15758acf9"
+    },
+    "models/1064_dragon_snowflake_3.json": {
+      "archive": "assets/res/dragons/1064_dragon_snowflake_3.xml",
+      "texture": "assets/res/dragons/1064_dragon_snowflake_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "f35d0bb4388542a70ea73c5b28ff80c103854c867dbf76dbd4efe019e01de07b"
+    },
+    "models/1065_dragon_seashell_1.webp": {
+      "archive": "assets/res/dragons/1065_dragon_seashell_1.xml",
+      "texture": "assets/res/dragons/1065_dragon_seashell_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "8125854bb845f516b08708fc9f29d79d8fb14fd950100513c25abca5bef3b3b8"
+    },
+    "models/1065_dragon_seashell_1.json": {
+      "archive": "assets/res/dragons/1065_dragon_seashell_1.xml",
+      "texture": "assets/res/dragons/1065_dragon_seashell_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "0b8bd02672d62bf669d03d0167609bfb577e90875e1a1c928b7dcc948f2be769"
+    },
+    "models/1065_dragon_seashell_2.webp": {
+      "archive": "assets/res/dragons/1065_dragon_seashell_2.xml",
+      "texture": "assets/res/dragons/1065_dragon_seashell_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "0c3bdcdb1f673b19d0682d2ea19cec20f48b854fa356feb918ef6e7e256ea265"
+    },
+    "models/1065_dragon_seashell_2.json": {
+      "archive": "assets/res/dragons/1065_dragon_seashell_2.xml",
+      "texture": "assets/res/dragons/1065_dragon_seashell_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "2ebb928f5d94d061389df0e5808453b4698c50bd991c9b4f0f90a670b64ec1fb"
+    },
+    "models/1065_dragon_seashell_3.webp": {
+      "archive": "assets/res/dragons/1065_dragon_seashell_3.xml",
+      "texture": "assets/res/dragons/1065_dragon_seashell_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "9bd95a27f589f661fd14ecf60e67eb6758d19f2bc29b117c659cd0e8d2116001"
+    },
+    "models/1065_dragon_seashell_3.json": {
+      "archive": "assets/res/dragons/1065_dragon_seashell_3.xml",
+      "texture": "assets/res/dragons/1065_dragon_seashell_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "4c733f738a30c57f2b840968883a6bf34a67ae046de90e721b17f009086efbbe"
+    },
+    "models/1066_dragon_moose_1.webp": {
+      "archive": "assets/res/dragons/1066_dragon_moose_1.xml",
+      "texture": "assets/res/dragons/1066_dragon_moose_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "ba28579a1739722c3d65a73aadfa4443dc08655c5190ca806beccfc77dcdf66a"
+    },
+    "models/1066_dragon_moose_1.json": {
+      "archive": "assets/res/dragons/1066_dragon_moose_1.xml",
+      "texture": "assets/res/dragons/1066_dragon_moose_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "c8f3a9654ec3f4562e4f7243ace0e2f1e9bf332bd7448bdcffec028a2842a67c"
+    },
+    "models/1066_dragon_moose_2.webp": {
+      "archive": "assets/res/dragons/1066_dragon_moose_2.xml",
+      "texture": "assets/res/dragons/1066_dragon_moose_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "780a3b393c99f2588d7cba7b52976d03d3ceb6729ed389fbe83883faa4d87b63"
+    },
+    "models/1066_dragon_moose_2.json": {
+      "archive": "assets/res/dragons/1066_dragon_moose_2.xml",
+      "texture": "assets/res/dragons/1066_dragon_moose_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "9542f0c9def5212e86c0e81b7ee4243561fd0cc977ae16d100c39b7852e79142"
+    },
+    "models/1066_dragon_moose_3.webp": {
+      "archive": "assets/res/dragons/1066_dragon_moose_3.xml",
+      "texture": "assets/res/dragons/1066_dragon_moose_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "66bda32330198f6ab770b99be724a435987d3ee32a996d73a164772fb018a65c"
+    },
+    "models/1066_dragon_moose_3.json": {
+      "archive": "assets/res/dragons/1066_dragon_moose_3.xml",
+      "texture": "assets/res/dragons/1066_dragon_moose_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "22c1b852e687e927e5fd79c7787abcde4b493250523d1a58bd2b079ff8e0adfc"
+    },
+    "models/1067_dragon_dragonfly_1.webp": {
+      "archive": "assets/res/dragons/1067_dragon_dragonfly_1.xml",
+      "texture": "assets/res/dragons/1067_dragon_dragonfly_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "69c0e8986b14aad1fdb22323aeb93fbe1195aed88347d4a7b5fe22f89df6d1c5"
+    },
+    "models/1067_dragon_dragonfly_1.json": {
+      "archive": "assets/res/dragons/1067_dragon_dragonfly_1.xml",
+      "texture": "assets/res/dragons/1067_dragon_dragonfly_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "482e66036c4abe71ac7fe88e13a15761084f975c0714d24b75de277177b61324"
+    },
+    "models/1067_dragon_dragonfly_2.webp": {
+      "archive": "assets/res/dragons/1067_dragon_dragonfly_2.xml",
+      "texture": "assets/res/dragons/1067_dragon_dragonfly_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "554134ef5b99c39d4e162e2a217db49220f552b365e5ec4d1b59bb2be8a77cab"
+    },
+    "models/1067_dragon_dragonfly_2.json": {
+      "archive": "assets/res/dragons/1067_dragon_dragonfly_2.xml",
+      "texture": "assets/res/dragons/1067_dragon_dragonfly_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "474f5132225b6740289339c93512ebc2f9585fb1d9b8a9ff46613623cb0b78b8"
+    },
+    "models/1067_dragon_dragonfly_3.webp": {
+      "archive": "assets/res/dragons/1067_dragon_dragonfly_3.xml",
+      "texture": "assets/res/dragons/1067_dragon_dragonfly_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "669bdcd5ba297afcdbc3e6194227ea47112d09f28f7a8dc420ceeb35bc67f074"
+    },
+    "models/1067_dragon_dragonfly_3.json": {
+      "archive": "assets/res/dragons/1067_dragon_dragonfly_3.xml",
+      "texture": "assets/res/dragons/1067_dragon_dragonfly_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "111862332dc1de74f7c16a46a24a7c3d0fe7cb1b4d0ea8923cc708e72b2171cc"
+    },
+    "models/1068_dragon_venom_1.webp": {
+      "archive": "assets/res/dragons/1068_dragon_venom_1.xml",
+      "texture": "assets/res/dragons/1068_dragon_venom_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "325613c5d00fb6c1c3f6b5da8a9d53c71064cd64ae825e3c5b544e8e77e902b1"
+    },
+    "models/1068_dragon_venom_1.json": {
+      "archive": "assets/res/dragons/1068_dragon_venom_1.xml",
+      "texture": "assets/res/dragons/1068_dragon_venom_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "74ed352e4c5ec7d2e18ab73ce23f2955d7388fbb40d9c5f79e3e40474b5f0150"
+    },
+    "models/1068_dragon_venom_2.webp": {
+      "archive": "assets/res/dragons/1068_dragon_venom_2.xml",
+      "texture": "assets/res/dragons/1068_dragon_venom_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "cc8a5cec2bea36ac210169562b0831fa9883f28798285fcfced91c0ad1eee452"
+    },
+    "models/1068_dragon_venom_2.json": {
+      "archive": "assets/res/dragons/1068_dragon_venom_2.xml",
+      "texture": "assets/res/dragons/1068_dragon_venom_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "ada5de2c1fc0d0ab5246c217db1fe986b97996e548ed629ceebd114f44d72f68"
+    },
+    "models/1068_dragon_venom_3.webp": {
+      "archive": "assets/res/dragons/1068_dragon_venom_3.xml",
+      "texture": "assets/res/dragons/1068_dragon_venom_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "09451bb440512b5fbe561a3fd5bbf21d573facadbcd0deec565f5051438b9cb5"
+    },
+    "models/1068_dragon_venom_3.json": {
+      "archive": "assets/res/dragons/1068_dragon_venom_3.xml",
+      "texture": "assets/res/dragons/1068_dragon_venom_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "79ff3c743290b1e2e5fd1f0d2b9134dda04767d0797ab3b914bb407f40f2e817"
+    },
+    "models/1069_dragon_steampunk_1.webp": {
+      "archive": "assets/res/dragons/1069_dragon_steampunk_1.xml",
+      "texture": "assets/res/dragons/1069_dragon_steampunk_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "fd835cc2aa761897a70bb7d550fd44fc585a14cf3171bdd22f055a63d5d39f7b"
+    },
+    "models/1069_dragon_steampunk_1.json": {
+      "archive": "assets/res/dragons/1069_dragon_steampunk_1.xml",
+      "texture": "assets/res/dragons/1069_dragon_steampunk_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "71bfc88ee8b2ee550ae2c790f909447bdda2bdfcd2579f88334bbb52bce036d2"
+    },
+    "models/1069_dragon_steampunk_2.webp": {
+      "archive": "assets/res/dragons/1069_dragon_steampunk_2.xml",
+      "texture": "assets/res/dragons/1069_dragon_steampunk_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "43282c9ff036e6b66b43b31185189606181eda46fbde972e5735dbfb26cb3bc4"
+    },
+    "models/1069_dragon_steampunk_2.json": {
+      "archive": "assets/res/dragons/1069_dragon_steampunk_2.xml",
+      "texture": "assets/res/dragons/1069_dragon_steampunk_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "ad657005e2af95fcc72e6e6f166895b28e83e52e454158428974466ac89a4d4f"
+    },
+    "models/1069_dragon_steampunk_3.webp": {
+      "archive": "assets/res/dragons/1069_dragon_steampunk_3.xml",
+      "texture": "assets/res/dragons/1069_dragon_steampunk_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "29a6cb3708c69ba564fd055823d2460030076bea173ff76076a1b21d104d2926"
+    },
+    "models/1069_dragon_steampunk_3.json": {
+      "archive": "assets/res/dragons/1069_dragon_steampunk_3.xml",
+      "texture": "assets/res/dragons/1069_dragon_steampunk_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "c8daa27619bf803515f77c6d1478044d83308433bee2ad134c67b2bc21e704ac"
+    },
+    "models/1070_dragon_darkfire_1.webp": {
+      "archive": "assets/res/dragons/1070_dragon_darkfire_1.xml",
+      "texture": "assets/res/dragons/1070_dragon_darkfire_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "b67f036c8a95650aca8d93c4bb6e113a5f233f6cc9af362577252a7d70367674"
+    },
+    "models/1070_dragon_darkfire_1.json": {
+      "archive": "assets/res/dragons/1070_dragon_darkfire_1.xml",
+      "texture": "assets/res/dragons/1070_dragon_darkfire_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "726b49c728f76bd206abb26816059ebeddab193114d107d242b1f1c27db88a4a"
+    },
+    "models/1070_dragon_darkfire_2.webp": {
+      "archive": "assets/res/dragons/1070_dragon_darkfire_2.xml",
+      "texture": "assets/res/dragons/1070_dragon_darkfire_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "6c5b33b1ebbc720303a4d45a75ffe6147783da53fbcdb2aa2e1f6488cdcb3b8a"
+    },
+    "models/1070_dragon_darkfire_2.json": {
+      "archive": "assets/res/dragons/1070_dragon_darkfire_2.xml",
+      "texture": "assets/res/dragons/1070_dragon_darkfire_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "eb2e81398f6ef7898369b5f383dcf2c4148ed9b04c202578355b4f1b4398803d"
+    },
+    "models/1070_dragon_darkfire_3.webp": {
+      "archive": "assets/res/dragons/1070_dragon_darkfire_3.xml",
+      "texture": "assets/res/dragons/1070_dragon_darkfire_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "c529e54334ba57cb28e8c719078a77ff27cd60152fa1c9ab9b3b08b19d250da6"
+    },
+    "models/1070_dragon_darkfire_3.json": {
+      "archive": "assets/res/dragons/1070_dragon_darkfire_3.xml",
+      "texture": "assets/res/dragons/1070_dragon_darkfire_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "77fd71c1be39e290f2fbdc3eafe80d3141dce8b244a438c367fd08ceaf2b00a0"
+    },
+    "models/1071_dragon_she_1.webp": {
+      "archive": "assets/res/dragons/1071_dragon_she_1.xml",
+      "texture": "assets/res/dragons/1071_dragon_she_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "3b157a0b8d1565af365e1c1e23d83b245322ca14398ef2b2ea398fbf6d9148a6"
+    },
+    "models/1071_dragon_she_1.json": {
+      "archive": "assets/res/dragons/1071_dragon_she_1.xml",
+      "texture": "assets/res/dragons/1071_dragon_she_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "0c8d750afea9b4443ed7785f47c24a63ad93e7f8751df5b7184437ce2153d81a"
+    },
+    "models/1071_dragon_she_2.webp": {
+      "archive": "assets/res/dragons/1071_dragon_she_2.xml",
+      "texture": "assets/res/dragons/1071_dragon_she_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "ab495023c74a9d5863b1f33bd7a1a3831ba465d4aa22945a66aec1ec627dfbe0"
+    },
+    "models/1071_dragon_she_2.json": {
+      "archive": "assets/res/dragons/1071_dragon_she_2.xml",
+      "texture": "assets/res/dragons/1071_dragon_she_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "88db97edfc6d68cd154592f061f6aa51939da0174972819a54b529cb41e75d6a"
+    },
+    "models/1071_dragon_she_3.webp": {
+      "archive": "assets/res/dragons/1071_dragon_she_3.xml",
+      "texture": "assets/res/dragons/1071_dragon_she_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "13b1064bb52b8739df4618a185fbeaf9b27b90b3a9321d355a76f036acb03821"
+    },
+    "models/1071_dragon_she_3.json": {
+      "archive": "assets/res/dragons/1071_dragon_she_3.xml",
+      "texture": "assets/res/dragons/1071_dragon_she_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "210869deb1e9794c256c75ac214b7b50a452a033cd47a79d71fbd7a58803ff5e"
+    },
+    "models/1072_dragon_Yellowlion_1.webp": {
+      "archive": "assets/res/dragons/1072_dragon_Yellowlion_1.xml",
+      "texture": "assets/res/dragons/1072_dragon_Yellowlion_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "a49123adcf0016d8cec88f8c9cbd84b4aa12362150c915c5d7c0e98057f75b2b"
+    },
+    "models/1072_dragon_Yellowlion_1.json": {
+      "archive": "assets/res/dragons/1072_dragon_Yellowlion_1.xml",
+      "texture": "assets/res/dragons/1072_dragon_Yellowlion_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "4cceed253398483638f6915fc30481af4c6eebc33b78e0530aee379cd8d71d88"
+    },
+    "models/1072_dragon_Yellowlion_2.webp": {
+      "archive": "assets/res/dragons/1072_dragon_Yellowlion_2.xml",
+      "texture": "assets/res/dragons/1072_dragon_Yellowlion_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "47c2dcfd2588f6e48cdc6909571faf24fabc15a98d0051344fa2d13cf3422a22"
+    },
+    "models/1072_dragon_Yellowlion_2.json": {
+      "archive": "assets/res/dragons/1072_dragon_Yellowlion_2.xml",
+      "texture": "assets/res/dragons/1072_dragon_Yellowlion_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "5e3619217e2d7882853eaf16fbe7e8c5e3ac8c6b7c1c10d0f1e36298b32eaa38"
+    },
+    "models/1072_dragon_Yellowlion_3.webp": {
+      "archive": "assets/res/dragons/1072_dragon_Yellowlion_3.xml",
+      "texture": "assets/res/dragons/1072_dragon_Yellowlion_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "30354baf13659be2cdc53e91e31a0cb88256c13e223948eb583390ec5baaa7bf"
+    },
+    "models/1072_dragon_Yellowlion_3.json": {
+      "archive": "assets/res/dragons/1072_dragon_Yellowlion_3.xml",
+      "texture": "assets/res/dragons/1072_dragon_Yellowlion_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "212f6f4c6b3c932834f70e173f6f3e18a2023c71157bfae108cbd27d6211059a"
+    },
+    "models/1073_dragon_brucelee_b_1.webp": {
+      "archive": "assets/res/dragons/1073_dragon_brucelee_b_1.xml",
+      "texture": "assets/res/dragons/1073_dragon_brucelee_b_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "5637eab5b6d7d56cf425a483a70373c0e78cd27e471682b428a9d68da5f3e2a5"
+    },
+    "models/1073_dragon_brucelee_b_1.json": {
+      "archive": "assets/res/dragons/1073_dragon_brucelee_b_1.xml",
+      "texture": "assets/res/dragons/1073_dragon_brucelee_b_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "985cce747a9c7f3a2ec58eda4bd964ac9da644a0b52ef9a885ec2e4b8e6920a6"
+    },
+    "models/1073_dragon_brucelee_b_2.webp": {
+      "archive": "assets/res/dragons/1073_dragon_brucelee_b_2.xml",
+      "texture": "assets/res/dragons/1073_dragon_brucelee_b_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "9d80f0efbf1be4d0baba5f2afa432dc81468946d5c80eb1b6cb5adbc1ebf87ea"
+    },
+    "models/1073_dragon_brucelee_b_2.json": {
+      "archive": "assets/res/dragons/1073_dragon_brucelee_b_2.xml",
+      "texture": "assets/res/dragons/1073_dragon_brucelee_b_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "cc70d1ed2935ba2e80d69aeec3db7183b726f9cfd9b130e8dacd2f5be7854a4e"
+    },
+    "models/1073_dragon_brucelee_b_3.webp": {
+      "archive": "assets/res/dragons/1073_dragon_brucelee_b_3.xml",
+      "texture": "assets/res/dragons/1073_dragon_brucelee_b_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "6f336d575cf59395e513031d615bec3038da4dcd8bac5173fd57ea47c3603680"
+    },
+    "models/1073_dragon_brucelee_b_3.json": {
+      "archive": "assets/res/dragons/1073_dragon_brucelee_b_3.xml",
+      "texture": "assets/res/dragons/1073_dragon_brucelee_b_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "163b26765202c153017856beeb9db9a49fc57c0b3749b76e8875bfe7bf55c301"
+    },
+    "models/1074_dragon_icedark_a_1.webp": {
+      "archive": "assets/res/dragons/1074_dragon_icedark_a_1.xml",
+      "texture": "assets/res/dragons/1074_dragon_icedark_a_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "3db2f619edf23c73123fca30e5cfdd1385c92f59c705f2fdbaef9b92139c867f"
+    },
+    "models/1074_dragon_icedark_a_1.json": {
+      "archive": "assets/res/dragons/1074_dragon_icedark_a_1.xml",
+      "texture": "assets/res/dragons/1074_dragon_icedark_a_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "89256a3a056dce997cf2d67206dce392afafeb8d34ceb0330ee2215c7c1ca8ae"
+    },
+    "models/1074_dragon_icedark_a_2.webp": {
+      "archive": "assets/res/dragons/1074_dragon_icedark_a_2.xml",
+      "texture": "assets/res/dragons/1074_dragon_icedark_a_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "4c2066ded81dfd04f5eb8055d9b9072839cc2a03220fd45c1ad388bfb4a6ffac"
+    },
+    "models/1074_dragon_icedark_a_2.json": {
+      "archive": "assets/res/dragons/1074_dragon_icedark_a_2.xml",
+      "texture": "assets/res/dragons/1074_dragon_icedark_a_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "1bceca1877761e2328d2380ebd8a19a4a01e822f75fba267fc9ca40cb4e24e47"
+    },
+    "models/1074_dragon_icedark_a_3.webp": {
+      "archive": "assets/res/dragons/1074_dragon_icedark_a_3.xml",
+      "texture": "assets/res/dragons/1074_dragon_icedark_a_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "91abc10899e895cf10524a05499f1d5847c9d23f77ab0e1ffaf71ca346140ff9"
+    },
+    "models/1074_dragon_icedark_a_3.json": {
+      "archive": "assets/res/dragons/1074_dragon_icedark_a_3.xml",
+      "texture": "assets/res/dragons/1074_dragon_icedark_a_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "5cf5c5032025d2cfb5e00ba8b244b2bde16f0c880b6636d847f5fc732a3c8c3f"
+    },
+    "models/1075_dragon_xiaomage_1.webp": {
+      "archive": "assets/res/dragons/1075_dragon_xiaomage_1.xml",
+      "texture": "assets/res/dragons/1075_dragon_xiaomage_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "32b3f4031a7401a2afa21fc9554259d2aeac7bdeb03af567445d4e36254d84be"
+    },
+    "models/1075_dragon_xiaomage_1.json": {
+      "archive": "assets/res/dragons/1075_dragon_xiaomage_1.xml",
+      "texture": "assets/res/dragons/1075_dragon_xiaomage_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "682dbd95a62b1312de2929df7eeb1fda28604ef6ca00b84d920bcfcb4d6cfed7"
+    },
+    "models/1075_dragon_xiaomage_2.webp": {
+      "archive": "assets/res/dragons/1075_dragon_xiaomage_2.xml",
+      "texture": "assets/res/dragons/1075_dragon_xiaomage_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "438effd892a2cc7b63e0cfc47cd95c5a8a16ae38e2a0f46368b3aecb5e16a534"
+    },
+    "models/1075_dragon_xiaomage_2.json": {
+      "archive": "assets/res/dragons/1075_dragon_xiaomage_2.xml",
+      "texture": "assets/res/dragons/1075_dragon_xiaomage_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "a0270a81d69a367c286efaadddf544169362c1d2350712f138aa8fbeebe1187d"
+    },
+    "models/1075_dragon_xiaomage_3.webp": {
+      "archive": "assets/res/dragons/1075_dragon_xiaomage_3.xml",
+      "texture": "assets/res/dragons/1075_dragon_xiaomage_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "3b41f2d34f226ada92d01e97b75f2da5379172fec353d6afb5fb5a899c20143f"
+    },
+    "models/1075_dragon_xiaomage_3.json": {
+      "archive": "assets/res/dragons/1075_dragon_xiaomage_3.xml",
+      "texture": "assets/res/dragons/1075_dragon_xiaomage_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "f121fc036dd321ec2e4c86cd9636547178959b47678f671c2ec43a54f34a6bae"
+    },
+    "models/1076_dragon_skeleton_1.webp": {
+      "archive": "assets/res/dragons/1076_dragon_skeleton_1.xml",
+      "texture": "assets/res/dragons/1076_dragon_skeleton_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "80785f4b9b84d16a8cd57faf8f9ca44c94e8eb7179b8432f4693cc6f2c46107d"
+    },
+    "models/1076_dragon_skeleton_1.json": {
+      "archive": "assets/res/dragons/1076_dragon_skeleton_1.xml",
+      "texture": "assets/res/dragons/1076_dragon_skeleton_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "53a6a6d5cccd8456492b436b10efc8c0881649adc12683be6e9a3e14e1645f21"
+    },
+    "models/1076_dragon_skeleton_2.webp": {
+      "archive": "assets/res/dragons/1076_dragon_skeleton_2.xml",
+      "texture": "assets/res/dragons/1076_dragon_skeleton_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "8d420a0c75926ebc29b7a577cc1e0447478613f9389379441e958b62dc4518a0"
+    },
+    "models/1076_dragon_skeleton_2.json": {
+      "archive": "assets/res/dragons/1076_dragon_skeleton_2.xml",
+      "texture": "assets/res/dragons/1076_dragon_skeleton_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "4441c054031ce5f9fb12a366d60bf5e116675fbcfc9929053bd6c261e80f70b2"
+    },
+    "models/1076_dragon_skeleton_3.webp": {
+      "archive": "assets/res/dragons/1076_dragon_skeleton_3.xml",
+      "texture": "assets/res/dragons/1076_dragon_skeleton_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "52dc6e5e3fbeefda322ea2abdf3b324305e62b353990bee86e6b2338114e58b0"
+    },
+    "models/1076_dragon_skeleton_3.json": {
+      "archive": "assets/res/dragons/1076_dragon_skeleton_3.xml",
+      "texture": "assets/res/dragons/1076_dragon_skeleton_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "acdd3eca738ab60efc59cf4de145b97696ecc7ca734a63d50c8dadc97a77106e"
+    },
+    "models/1092_dargon_legendfire_b_1.webp": {
+      "archive": "assets/res/dragons/1092_dargon_legendfire_b_1.xml",
+      "texture": "assets/res/dragons/1092_dargon_legendfire_b_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "2b530ca15329081e3ab78dfe391e731f3b3ae10dccbb896f816f070fa96be33c"
+    },
+    "models/1092_dargon_legendfire_b_1.json": {
+      "archive": "assets/res/dragons/1092_dargon_legendfire_b_1.xml",
+      "texture": "assets/res/dragons/1092_dargon_legendfire_b_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "55777c9c61a9d9f7f0b2a8cd06409c1fd200ef1355c06c855ce22d771fa0cd5b"
+    },
+    "models/1092_dargon_legendfire_b_2.webp": {
+      "archive": "assets/res/dragons/1092_dargon_legendfire_b_2.xml",
+      "texture": "assets/res/dragons/1092_dargon_legendfire_b_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "f599704c8062049dd637cbe0901775877265aedbe1383d7dafbec2b4196ef9fd"
+    },
+    "models/1092_dargon_legendfire_b_2.json": {
+      "archive": "assets/res/dragons/1092_dargon_legendfire_b_2.xml",
+      "texture": "assets/res/dragons/1092_dargon_legendfire_b_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "4466d72776a8b0c6295a9cdb1cd5d4ba81e8778b4786f6bbda00e387b6793e84"
+    },
+    "models/1092_dargon_legendfire_b_3.webp": {
+      "archive": "assets/res/dragons/1092_dargon_legendfire_b_3.xml",
+      "texture": "assets/res/dragons/1092_dargon_legendfire_b_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "b38d75d3ce958801a2418665a9b3b82d1231b4b9d7e2e70598c154a86b3626c4"
+    },
+    "models/1092_dargon_legendfire_b_3.json": {
+      "archive": "assets/res/dragons/1092_dargon_legendfire_b_3.xml",
+      "texture": "assets/res/dragons/1092_dargon_legendfire_b_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "0d61ff759e61666279f6bd1ee7f497df3ee9226ac99e78d75193be2e81b72e41"
+    },
+    "models/1093_dragon_sheep_1.webp": {
+      "archive": "assets/res/dragons/1093_dragon_sheep_1.xml",
+      "texture": "assets/res/dragons/1093_dragon_sheep_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "4fb916bcb5c01e7dac42f501f949402d16109fc41c45b94a43cc609a6f4b6155"
+    },
+    "models/1093_dragon_sheep_1.json": {
+      "archive": "assets/res/dragons/1093_dragon_sheep_1.xml",
+      "texture": "assets/res/dragons/1093_dragon_sheep_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "d2baa11a0b31b4599f91a24f00610aeced9f9c3af80d23ed3be096b61826dd14"
+    },
+    "models/1093_dragon_sheep_2.webp": {
+      "archive": "assets/res/dragons/1093_dragon_sheep_2.xml",
+      "texture": "assets/res/dragons/1093_dragon_sheep_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "72a7869c48b3be7af7b57ef7b928c8801f10f2442f38e5c48e85a5cc070421c0"
+    },
+    "models/1093_dragon_sheep_2.json": {
+      "archive": "assets/res/dragons/1093_dragon_sheep_2.xml",
+      "texture": "assets/res/dragons/1093_dragon_sheep_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "da67dacdae06502e7f0e8e363f23b49415203323d43f16e4a0d83a4a82fcd215"
+    },
+    "models/1093_dragon_sheep_3.webp": {
+      "archive": "assets/res/dragons/1093_dragon_sheep_3.xml",
+      "texture": "assets/res/dragons/1093_dragon_sheep_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "da2b4684982e5b18be8b6124657a8a3cfa9251fc1de57d4cdfecdce41fbe1c69"
+    },
+    "models/1093_dragon_sheep_3.json": {
+      "archive": "assets/res/dragons/1093_dragon_sheep_3.xml",
+      "texture": "assets/res/dragons/1093_dragon_sheep_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "e04f580c65c7b6146ace743e478d78ac0ae38ff7fa2cd850e859b98a568376ed"
+    },
+    "models/1100_dragon_cat_1.webp": {
+      "archive": "assets/res/dragons/1100_dragon_cat_1.xml",
+      "texture": "assets/res/dragons/1100_dragon_cat_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "5c468d95cfa2a900653ef7fa416fe8b6b80ae85766c455ec902a9bf01b5a9277"
+    },
+    "models/1100_dragon_cat_1.json": {
+      "archive": "assets/res/dragons/1100_dragon_cat_1.xml",
+      "texture": "assets/res/dragons/1100_dragon_cat_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "54e9e63e314c93d6362c0daea14c06756a9ae7dcfc8ec8bedbc3f15a59d9e6fb"
+    },
+    "models/1100_dragon_cat_2.webp": {
+      "archive": "assets/res/dragons/1100_dragon_cat_2.xml",
+      "texture": "assets/res/dragons/1100_dragon_cat_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "1090fbe3156c4d01af01616df32bf10f55537271d46f41c5f79e278fed337be7"
+    },
+    "models/1100_dragon_cat_2.json": {
+      "archive": "assets/res/dragons/1100_dragon_cat_2.xml",
+      "texture": "assets/res/dragons/1100_dragon_cat_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "c2c90395438f23e1e96e040fff88ceaaba0a80b793b20dce07ce927f9ee94265"
+    },
+    "models/1100_dragon_cat_3.webp": {
+      "archive": "assets/res/dragons/1100_dragon_cat_3.xml",
+      "texture": "assets/res/dragons/1100_dragon_cat_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "edda1500a99a73d2db9372eabdb942bc56623a5677424a07ea87b7798e78a9c6"
+    },
+    "models/1100_dragon_cat_3.json": {
+      "archive": "assets/res/dragons/1100_dragon_cat_3.xml",
+      "texture": "assets/res/dragons/1100_dragon_cat_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "e09fad446f2cddd3dc7f4a4824058ead319848681538f6a9e7c5067b1200a650"
+    },
+    "models/1200_dragon_kuanglong_1.webp": {
+      "archive": "assets/res/dragons/1200_dragon_kuanglong_1.xml",
+      "texture": "assets/res/dragons/1200_dragon_kuanglong_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "1856a21a80434e12a2bac25096f6603f26ed1de86b9bf7af112614b730b03100"
+    },
+    "models/1200_dragon_kuanglong_1.json": {
+      "archive": "assets/res/dragons/1200_dragon_kuanglong_1.xml",
+      "texture": "assets/res/dragons/1200_dragon_kuanglong_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "3e739a0609595e41c63b56ee05ce9b539574a4ee692787477b713a95b0ea4525"
+    },
+    "models/1200_dragon_kuanglong_2.webp": {
+      "archive": "assets/res/dragons/1200_dragon_kuanglong_2.xml",
+      "texture": "assets/res/dragons/1200_dragon_kuanglong_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "4fdad1feb724348df8b0d1dabbdbd9756058dc2281cba252689227e4f3900427"
+    },
+    "models/1200_dragon_kuanglong_2.json": {
+      "archive": "assets/res/dragons/1200_dragon_kuanglong_2.xml",
+      "texture": "assets/res/dragons/1200_dragon_kuanglong_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "fa41e133ea3bd7d8a811d196fe728b420c7dfef4567233593e2fc75026ea9f08"
+    },
+    "models/1200_dragon_kuanglong_3.webp": {
+      "archive": "assets/res/dragons/1200_dragon_kuanglong_3.xml",
+      "texture": "assets/res/dragons/1200_dragon_kuanglong_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "5b111ea5f68097363e7c1202eecab78d05b897e898cc0c5f4592351387b41cb9"
+    },
+    "models/1200_dragon_kuanglong_3.json": {
+      "archive": "assets/res/dragons/1200_dragon_kuanglong_3.xml",
+      "texture": "assets/res/dragons/1200_dragon_kuanglong_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "63cffb6a1cd4566b934c156cb933e50542dcc727e7bef5993fbbaf2c48961f1a"
+    },
+    "models/1201_dragon_golden_1.webp": {
+      "archive": "assets/res/dragons/1201_dragon_golden_1.xml",
+      "texture": "assets/res/dragons/1201_dragon_golden_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "040a19c84c7b2c4145ad4d694df820253108b37d9d15bea769f58db3442a9305"
+    },
+    "models/1201_dragon_golden_1.json": {
+      "archive": "assets/res/dragons/1201_dragon_golden_1.xml",
+      "texture": "assets/res/dragons/1201_dragon_golden_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "291ea0d279c48c340c190ac9be0339f252103073a22eaa7f54004846cba49ba9"
+    },
+    "models/1201_dragon_golden_2.webp": {
+      "archive": "assets/res/dragons/1201_dragon_golden_2.xml",
+      "texture": "assets/res/dragons/1201_dragon_golden_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "56a9981765194005a25f56566eaba33b6f3bfbf1c21b96000235a2bc10f8df76"
+    },
+    "models/1201_dragon_golden_2.json": {
+      "archive": "assets/res/dragons/1201_dragon_golden_2.xml",
+      "texture": "assets/res/dragons/1201_dragon_golden_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "23c19e046ebd0719e80d6dfe267c06218b238129ee62b65641feb10d826ab933"
+    },
+    "models/1201_dragon_golden_3.webp": {
+      "archive": "assets/res/dragons/1201_dragon_golden_3.xml",
+      "texture": "assets/res/dragons/1201_dragon_golden_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "676de8ee986318c97cca38c63ba361dbaba1ad66c0b458d106b557e7b471c152"
+    },
+    "models/1201_dragon_golden_3.json": {
+      "archive": "assets/res/dragons/1201_dragon_golden_3.xml",
+      "texture": "assets/res/dragons/1201_dragon_golden_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "4810ac744329aa1cfb5c98a138f22ff54787789c991216c396893f468bd4716e"
+    },
+    "models/1202_dragon_gaoneng_1.webp": {
+      "archive": "assets/res/dragons/1202_dragon_gaoneng_1.xml",
+      "texture": "assets/res/dragons/1202_dragon_gaoneng_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "91572b1a634aa43e02cfbc8afe7fb9f8a9c15c9130593cb83cd66c2324b220ae"
+    },
+    "models/1202_dragon_gaoneng_1.json": {
+      "archive": "assets/res/dragons/1202_dragon_gaoneng_1.xml",
+      "texture": "assets/res/dragons/1202_dragon_gaoneng_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "28eaf2b3c1de55723994aa605c3e19daa5c5eda8b9ca6a2834ab045380c55586"
+    },
+    "models/1202_dragon_gaoneng_2.webp": {
+      "archive": "assets/res/dragons/1202_dragon_gaoneng_2.xml",
+      "texture": "assets/res/dragons/1202_dragon_gaoneng_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "fa3150dc5c39dcf79c785deadc9a1f7184c768b7998278128f21a85462ce6438"
+    },
+    "models/1202_dragon_gaoneng_2.json": {
+      "archive": "assets/res/dragons/1202_dragon_gaoneng_2.xml",
+      "texture": "assets/res/dragons/1202_dragon_gaoneng_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "b4b09896ff0b8b37357b5bc5c9864a28825b58142ab178703f0d29ad147c6105"
+    },
+    "models/1202_dragon_gaoneng_3.webp": {
+      "archive": "assets/res/dragons/1202_dragon_gaoneng_3.xml",
+      "texture": "assets/res/dragons/1202_dragon_gaoneng_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "1f39e64eeca7b2bdca7d875135e15d80b7262df36331d9c72148a221add59b88"
+    },
+    "models/1202_dragon_gaoneng_3.json": {
+      "archive": "assets/res/dragons/1202_dragon_gaoneng_3.xml",
+      "texture": "assets/res/dragons/1202_dragon_gaoneng_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "9372c6696aced1f6ae47282124146255ae2e79c4c161b322ce915486bbf5b3f6"
+    },
+    "models/1203_dragon_dasheng_1.webp": {
+      "archive": "assets/res/dragons/1203_dragon_dasheng_1.xml",
+      "texture": "assets/res/dragons/1203_dragon_dasheng_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "cef2d27e303a1669348b3c009d99e2f9939438d5653bb749de3b187915465d9d"
+    },
+    "models/1203_dragon_dasheng_1.json": {
+      "archive": "assets/res/dragons/1203_dragon_dasheng_1.xml",
+      "texture": "assets/res/dragons/1203_dragon_dasheng_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "55f1b693195fa32fb31b6ea0db2fdf588a98b58837ee8f3975aec7857c7143be"
+    },
+    "models/1203_dragon_dasheng_2.webp": {
+      "archive": "assets/res/dragons/1203_dragon_dasheng_2.xml",
+      "texture": "assets/res/dragons/1203_dragon_dasheng_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "931c0c03df6e94e4147ead98b61cfa98af8afa008febb5af2e3d2393c746865c"
+    },
+    "models/1203_dragon_dasheng_2.json": {
+      "archive": "assets/res/dragons/1203_dragon_dasheng_2.xml",
+      "texture": "assets/res/dragons/1203_dragon_dasheng_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "4162e5f21fe83569fbac537b9e22118c6d06aa1844123cdba5672118fe9b9ea5"
+    },
+    "models/1203_dragon_dasheng_3.webp": {
+      "archive": "assets/res/dragons/1203_dragon_dasheng_3.xml",
+      "texture": "assets/res/dragons/1203_dragon_dasheng_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "35776070303b15a5c4ef15aa325f52f503aafd211c0f9b14506e2810bdfd9cee"
+    },
+    "models/1203_dragon_dasheng_3.json": {
+      "archive": "assets/res/dragons/1203_dragon_dasheng_3.xml",
+      "texture": "assets/res/dragons/1203_dragon_dasheng_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "d0c1aad07ef78972868d516aaf1cc7f7d17f31f28661bcb2029856336dabf0fc"
+    },
+    "models/1204_dragon_danke_1.webp": {
+      "archive": "assets/res/dragons/1204_dragon_danke_1.xml",
+      "texture": "assets/res/dragons/1204_dragon_danke_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "8c6b76bfbbb520857348869c31d18be574124fe4287525bba17bdd8766ee5f52"
+    },
+    "models/1204_dragon_danke_1.json": {
+      "archive": "assets/res/dragons/1204_dragon_danke_1.xml",
+      "texture": "assets/res/dragons/1204_dragon_danke_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "7790e3d23bf4bcfe119c23fc8e55c191a9f2cd9269cd4e01b7e43a8147d1cfcf"
+    },
+    "models/1204_dragon_danke_2.webp": {
+      "archive": "assets/res/dragons/1204_dragon_danke_2.xml",
+      "texture": "assets/res/dragons/1204_dragon_danke_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "1dc352c6aea9b4d4e8170f6e93f5b76525dd96fe6136c30911e90dd00031cc67"
+    },
+    "models/1204_dragon_danke_2.json": {
+      "archive": "assets/res/dragons/1204_dragon_danke_2.xml",
+      "texture": "assets/res/dragons/1204_dragon_danke_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "bb5ab425fb5f7dc7c57ad08596befa7cf7c8e078b476d6dc178cb893e9011346"
+    },
+    "models/1204_dragon_danke_3.webp": {
+      "archive": "assets/res/dragons/1204_dragon_danke_3.xml",
+      "texture": "assets/res/dragons/1204_dragon_danke_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "11ee4098e4c1ed3a9d37dcc8e40874a55e104a087bca9c1038f7d0acdc2e79ae"
+    },
+    "models/1204_dragon_danke_3.json": {
+      "archive": "assets/res/dragons/1204_dragon_danke_3.xml",
+      "texture": "assets/res/dragons/1204_dragon_danke_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "1651df3515d6021b7bde597aac21ad4ff2d18acd607a42c07987388f572499db"
+    },
+    "models/1205_dragon_bee_1.webp": {
+      "archive": "assets/res/dragons/1205_dragon_bee_1.xml",
+      "texture": "assets/res/dragons/1205_dragon_bee_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "ff7cc597706ce8828f63086a70015d29c161641592c47f272661903f2375f7ff"
+    },
+    "models/1205_dragon_bee_1.json": {
+      "archive": "assets/res/dragons/1205_dragon_bee_1.xml",
+      "texture": "assets/res/dragons/1205_dragon_bee_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "0cb8c6befb0cf50bfdfb5f2b4c50b393982aa4de18ae7c0eb00a539559797757"
+    },
+    "models/1205_dragon_bee_2.webp": {
+      "archive": "assets/res/dragons/1205_dragon_bee_2.xml",
+      "texture": "assets/res/dragons/1205_dragon_bee_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "0b57694a0682b5934aba19b80136353d0eee9c857a64fb32102f9959d22edd10"
+    },
+    "models/1205_dragon_bee_2.json": {
+      "archive": "assets/res/dragons/1205_dragon_bee_2.xml",
+      "texture": "assets/res/dragons/1205_dragon_bee_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "f7c963fe0083876eb6e404e3d925609cf9614cd44e8035aba33b50b7fb7d76df"
+    },
+    "models/1205_dragon_bee_3.webp": {
+      "archive": "assets/res/dragons/1205_dragon_bee_3.xml",
+      "texture": "assets/res/dragons/1205_dragon_bee_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "25a5dfca5c9a7fec9cbe078f9c5682dc5b3ad91b82f8e1e8152432f8a0231847"
+    },
+    "models/1205_dragon_bee_3.json": {
+      "archive": "assets/res/dragons/1205_dragon_bee_3.xml",
+      "texture": "assets/res/dragons/1205_dragon_bee_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "b72e005574ea4e5de3ad5a1d78489448c0b5dd4a368a84caaac3cee963a3232c"
+    },
+    "models/1206_dragon_dasheng_1.webp": {
+      "archive": "assets/res/dragons/1206_dragon_dasheng_1.xml",
+      "texture": "assets/res/dragons/1206_dragon_dasheng_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "186ca3dff82550d74a6729d0a77df2606056a60afb4925519c98c32f6a54579d"
+    },
+    "models/1206_dragon_dasheng_1.json": {
+      "archive": "assets/res/dragons/1206_dragon_dasheng_1.xml",
+      "texture": "assets/res/dragons/1206_dragon_dasheng_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "5ae529b9bdaae6bb98195f425a8aea9160779672715833905b40a886e465184f"
+    },
+    "models/1206_dragon_dasheng_2.webp": {
+      "archive": "assets/res/dragons/1206_dragon_dasheng_2.xml",
+      "texture": "assets/res/dragons/1206_dragon_dasheng_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "c666d1c351753adf6155ca2f40b063a9653abe0cd0c20731306e172a7f6c4561"
+    },
+    "models/1206_dragon_dasheng_2.json": {
+      "archive": "assets/res/dragons/1206_dragon_dasheng_2.xml",
+      "texture": "assets/res/dragons/1206_dragon_dasheng_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "0f11881406febc8f94b39b4ccf8eeeec0af466c3f3fb66c451de76405dc26d51"
+    },
+    "models/1206_dragon_dasheng_3.webp": {
+      "archive": "assets/res/dragons/1206_dragon_dasheng_3.xml",
+      "texture": "assets/res/dragons/1206_dragon_dasheng_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "cf80656c2d433d797a07ed3347b8f22bd287cd9902a8fda63417a0e01185a962"
+    },
+    "models/1206_dragon_dasheng_3.json": {
+      "archive": "assets/res/dragons/1206_dragon_dasheng_3.xml",
+      "texture": "assets/res/dragons/1206_dragon_dasheng_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "a05f3b8341f4555e0bd758c71106174df776c0ebd36800b2c2baa4aea62a128a"
+    },
+    "models/2002_dragon_mercurium_b_1.webp": {
+      "archive": "assets/res/dragons/2002_dragon_mercurium_b_1.xml",
+      "texture": "assets/res/dragons/2002_dragon_mercurium_b_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "a4c51b87c064e25c1fe578fc1899041def88f9da105069f423cc08909443d1af"
+    },
+    "models/2002_dragon_mercurium_b_1.json": {
+      "archive": "assets/res/dragons/2002_dragon_mercurium_b_1.xml",
+      "texture": "assets/res/dragons/2002_dragon_mercurium_b_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "8541e4660f09ff1f13166c5a7a1a29cd479272adc46dd1f62a831dc98c3cfbc6"
+    },
+    "models/2002_dragon_mercurium_b_2.webp": {
+      "archive": "assets/res/dragons/2002_dragon_mercurium_b_2.xml",
+      "texture": "assets/res/dragons/2002_dragon_mercurium_b_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "6e633212cf25d9c1b82e08d25e7923b8791b9b4cd75d74565972305aa1e36f77"
+    },
+    "models/2002_dragon_mercurium_b_2.json": {
+      "archive": "assets/res/dragons/2002_dragon_mercurium_b_2.xml",
+      "texture": "assets/res/dragons/2002_dragon_mercurium_b_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "1ed4ec907ebefdb448f12881d62e1caa93c376344a4d44bc73098b2ae7f0ef3b"
+    },
+    "models/2002_dragon_mercurium_b_3.webp": {
+      "archive": "assets/res/dragons/2002_dragon_mercurium_b_3.xml",
+      "texture": "assets/res/dragons/2002_dragon_mercurium_b_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "f65dd0a0579a1add33b4c3fa1879a8f55ef0459927b87e101c27c2eda5557783"
+    },
+    "models/2002_dragon_mercurium_b_3.json": {
+      "archive": "assets/res/dragons/2002_dragon_mercurium_b_3.xml",
+      "texture": "assets/res/dragons/2002_dragon_mercurium_b_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "33f724ed92c56230605c426247ecffb72a70e1bba57d09c60ee52ea76daeedd2"
+    },
+    "models/2003_dragon_gummy_b_1.webp": {
+      "archive": "assets/res/dragons/2003_dragon_gummy_b_1.xml",
+      "texture": "assets/res/dragons/2003_dragon_gummy_b_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "66d1c5cf6c769fac4b6848e168020ea5394448ea00672eeed485afd383f9e9d9"
+    },
+    "models/2003_dragon_gummy_b_1.json": {
+      "archive": "assets/res/dragons/2003_dragon_gummy_b_1.xml",
+      "texture": "assets/res/dragons/2003_dragon_gummy_b_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "26a5d18781d16f4d4230b856bf7b751e019e6885b1cdf9752ed4b0e8884ce6f8"
+    },
+    "models/2003_dragon_gummy_b_2.webp": {
+      "archive": "assets/res/dragons/2003_dragon_gummy_b_2.xml",
+      "texture": "assets/res/dragons/2003_dragon_gummy_b_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "8e78f9d07baab87ac0d3351830c71fff957dadb884afeb7e9e89a1013168bcdb"
+    },
+    "models/2003_dragon_gummy_b_2.json": {
+      "archive": "assets/res/dragons/2003_dragon_gummy_b_2.xml",
+      "texture": "assets/res/dragons/2003_dragon_gummy_b_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "4b336b484aff2ec324e59dd256af246a006abd9241742fe6a11c219d745e95b7"
+    },
+    "models/2003_dragon_gummy_b_3.webp": {
+      "archive": "assets/res/dragons/2003_dragon_gummy_b_3.xml",
+      "texture": "assets/res/dragons/2003_dragon_gummy_b_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "d008ddd5ad23f801d2e4a0a6d098933da932e2c973b0121ea4d31c833daf7ddb"
+    },
+    "models/2003_dragon_gummy_b_3.json": {
+      "archive": "assets/res/dragons/2003_dragon_gummy_b_3.xml",
+      "texture": "assets/res/dragons/2003_dragon_gummy_b_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "e5f6a8da56d638a48b8a24e953ff8ff9125f43c57289cb22ada47d432164ac95"
+    },
+    "models/2004_dragon_lantern_a_1.webp": {
+      "archive": "assets/res/dragons/2004_dragon_lantern_a_1.xml",
+      "texture": "assets/res/dragons/2004_dragon_lantern_a_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "061722016230b8a49398829aac1cc6173c6f813443bfa78e37048e744edc5917"
+    },
+    "models/2004_dragon_lantern_a_1.json": {
+      "archive": "assets/res/dragons/2004_dragon_lantern_a_1.xml",
+      "texture": "assets/res/dragons/2004_dragon_lantern_a_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "945b4453ce7be097bf61268e3ea174b4b11c9906b7031b886ca643c18d433bcd"
+    },
+    "models/2004_dragon_lantern_a_2.webp": {
+      "archive": "assets/res/dragons/2004_dragon_lantern_a_2.xml",
+      "texture": "assets/res/dragons/2004_dragon_lantern_a_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "7d3527a1a9d4b55d4ac7f92119fa2e4ed8654259eef410058df1498bd248058e"
+    },
+    "models/2004_dragon_lantern_a_2.json": {
+      "archive": "assets/res/dragons/2004_dragon_lantern_a_2.xml",
+      "texture": "assets/res/dragons/2004_dragon_lantern_a_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "d7fa1274cd8233ed8e27c4a98a71c3ce58121c487720fbe4228cde4920928cfc"
+    },
+    "models/2004_dragon_lantern_a_3.webp": {
+      "archive": "assets/res/dragons/2004_dragon_lantern_a_3.xml",
+      "texture": "assets/res/dragons/2004_dragon_lantern_a_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "a2f8dc939025677a8b718389cecef81da3e74fb6d04745b0d4f63e2f9f81f2ce"
+    },
+    "models/2004_dragon_lantern_a_3.json": {
+      "archive": "assets/res/dragons/2004_dragon_lantern_a_3.xml",
+      "texture": "assets/res/dragons/2004_dragon_lantern_a_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "b15f90f51a90bb85e651bcf14e90cbeb78888959f258c1fe76f7dd1944c54567"
+    },
+    "models/2013_dragon_armadillo_a_1.webp": {
+      "archive": "assets/res/dragons/2013_dragon_armadillo_a_1.xml",
+      "texture": "assets/res/dragons/2013_dragon_armadillo_a_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "cb09562acf8f93ee4672fbe792abcd3fb272672d73420af8e8d0cde287866eae"
+    },
+    "models/2013_dragon_armadillo_a_1.json": {
+      "archive": "assets/res/dragons/2013_dragon_armadillo_a_1.xml",
+      "texture": "assets/res/dragons/2013_dragon_armadillo_a_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "c9dde270e95c7ab9d1e90652d17d1d802bac5389430a2c6a1397b2425787259e"
+    },
+    "models/2013_dragon_armadillo_a_2.webp": {
+      "archive": "assets/res/dragons/2013_dragon_armadillo_a_2.xml",
+      "texture": "assets/res/dragons/2013_dragon_armadillo_a_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "caeff512758f3da9ae25a6f895109b709e9d8d7b114995ab434302f0e95923cc"
+    },
+    "models/2013_dragon_armadillo_a_2.json": {
+      "archive": "assets/res/dragons/2013_dragon_armadillo_a_2.xml",
+      "texture": "assets/res/dragons/2013_dragon_armadillo_a_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "33c70e5e4342aa657d2564cbbf2c6a886270258fbe473b0f6c955732a69bf993"
+    },
+    "models/2013_dragon_armadillo_a_3.webp": {
+      "archive": "assets/res/dragons/2013_dragon_armadillo_a_3.xml",
+      "texture": "assets/res/dragons/2013_dragon_armadillo_a_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "58058e122aff223879ef7a7dbda76d5c0fd8ea3ff6b6acebe6f1fa3803b752fc"
+    },
+    "models/2013_dragon_armadillo_a_3.json": {
+      "archive": "assets/res/dragons/2013_dragon_armadillo_a_3.xml",
+      "texture": "assets/res/dragons/2013_dragon_armadillo_a_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "092a1f00f53afc46c5daea8aeff970079b7e1d381d9b8ce261249948c4e05ecd"
+    },
+    "models/2023_dragon_cool_fire_a_1.webp": {
+      "archive": "assets/res/dragons/2023_dragon_cool_fire_a_1.xml",
+      "texture": "assets/res/dragons/2023_dragon_cool_fire_a_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "ecfafb5252b6c941b5edb4300ef2b2c23c91534f5093af8e5902ea39ca1f0617"
+    },
+    "models/2023_dragon_cool_fire_a_1.json": {
+      "archive": "assets/res/dragons/2023_dragon_cool_fire_a_1.xml",
+      "texture": "assets/res/dragons/2023_dragon_cool_fire_a_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "aefa3414cdbf095e5b8dab22aaab438a621a1da4e09e34983d52d96c3217430d"
+    },
+    "models/2023_dragon_cool_fire_a_2.webp": {
+      "archive": "assets/res/dragons/2023_dragon_cool_fire_a_2.xml",
+      "texture": "assets/res/dragons/2023_dragon_cool_fire_a_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "28ced88f7a3f4513024dcdb573421912201fe276d1f286650e35bf58ada78d44"
+    },
+    "models/2023_dragon_cool_fire_a_2.json": {
+      "archive": "assets/res/dragons/2023_dragon_cool_fire_a_2.xml",
+      "texture": "assets/res/dragons/2023_dragon_cool_fire_a_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "479c3efa7a158d3ca769226f38ef58f33ed8f489410a58f2cd3fa5e144a81363"
+    },
+    "models/2023_dragon_cool_fire_a_3.webp": {
+      "archive": "assets/res/dragons/2023_dragon_cool_fire_a_3.xml",
+      "texture": "assets/res/dragons/2023_dragon_cool_fire_a_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "dfd56640fd150810cbbf6ae6a8a13c3854308db457fc15dddc92dd61b5d5bede"
+    },
+    "models/2023_dragon_cool_fire_a_3.json": {
+      "archive": "assets/res/dragons/2023_dragon_cool_fire_a_3.xml",
+      "texture": "assets/res/dragons/2023_dragon_cool_fire_a_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "7052dd66c4b2ca963e3188ec4916c06d6884de3f5d2888dde42f4237f3f8a93f"
+    },
+    "models/2024_dragon_medieval_b_1.webp": {
+      "archive": "assets/res/dragons/2024_dragon_medieval_b_1.xml",
+      "texture": "assets/res/dragons/2024_dragon_medieval_b_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "f6d1ddf6d5619cfed113e438cd59dc5f9a09b8a8a3b87c5a1bf2f6cdba664140"
+    },
+    "models/2024_dragon_medieval_b_1.json": {
+      "archive": "assets/res/dragons/2024_dragon_medieval_b_1.xml",
+      "texture": "assets/res/dragons/2024_dragon_medieval_b_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "d10ab33eda9bc327a16d892d706eb64cd7d2907a8b66f4be02d28c59bb89096c"
+    },
+    "models/2024_dragon_medieval_b_2.webp": {
+      "archive": "assets/res/dragons/2024_dragon_medieval_b_2.xml",
+      "texture": "assets/res/dragons/2024_dragon_medieval_b_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "06dd020d0b95cb8a422de4612c3c2a3c554cad662756b2569f8863b218650834"
+    },
+    "models/2024_dragon_medieval_b_2.json": {
+      "archive": "assets/res/dragons/2024_dragon_medieval_b_2.xml",
+      "texture": "assets/res/dragons/2024_dragon_medieval_b_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "54523ab237d5e9aaf26fa1606f245aeaff06b1f5e9379115294cdfaf18375e5c"
+    },
+    "models/2024_dragon_medieval_b_3.webp": {
+      "archive": "assets/res/dragons/2024_dragon_medieval_b_3.xml",
+      "texture": "assets/res/dragons/2024_dragon_medieval_b_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "eb0a14b2d17e37bf75ac34c26da3589d8de1fe1ecfe5311f9f0f7e020af31a80"
+    },
+    "models/2024_dragon_medieval_b_3.json": {
+      "archive": "assets/res/dragons/2024_dragon_medieval_b_3.xml",
+      "texture": "assets/res/dragons/2024_dragon_medieval_b_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "bf74408d693e1ed8b3138997554a40ac0f2983f053ed7760928a2f9520c54076"
+    },
+    "models/2049_dragon_soccer_a_1.webp": {
+      "archive": "assets/res/dragons/2049_dragon_soccer_a_1.xml",
+      "texture": "assets/res/dragons/2049_dragon_soccer_a_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "fb8d3387cb0769adc6b78742a300d109a14b7c281d4f858a1c866e465273b1bc"
+    },
+    "models/2049_dragon_soccer_a_1.json": {
+      "archive": "assets/res/dragons/2049_dragon_soccer_a_1.xml",
+      "texture": "assets/res/dragons/2049_dragon_soccer_a_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "ef1acf1edc2b9d25719e2b6bbc40863ea7f17a1858566d44af624e84b08f6540"
+    },
+    "models/2049_dragon_soccer_a_2.webp": {
+      "archive": "assets/res/dragons/2049_dragon_soccer_a_2.xml",
+      "texture": "assets/res/dragons/2049_dragon_soccer_a_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "a48c30c9726c6c84e41974b7b59140ac3bf114f0801997cda5c866d747b986a0"
+    },
+    "models/2049_dragon_soccer_a_2.json": {
+      "archive": "assets/res/dragons/2049_dragon_soccer_a_2.xml",
+      "texture": "assets/res/dragons/2049_dragon_soccer_a_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "02e7a36dfcb0348159ec62db66b8833b98fcf96a93748a7091adbf4f0e1b406f"
+    },
+    "models/2049_dragon_soccer_a_3.webp": {
+      "archive": "assets/res/dragons/2049_dragon_soccer_a_3.xml",
+      "texture": "assets/res/dragons/2049_dragon_soccer_a_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "1b2e0d45c121672faac1c413ae49b6d81f44e90476b86709b202da6b6ea83f0b"
+    },
+    "models/2049_dragon_soccer_a_3.json": {
+      "archive": "assets/res/dragons/2049_dragon_soccer_a_3.xml",
+      "texture": "assets/res/dragons/2049_dragon_soccer_a_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "7a63eb6636a985b3fa87aea63b45ca13c54381d118b5c01d38b6987d661966f3"
+    },
+    "models/2050_dragon_platinum_a_1.webp": {
+      "archive": "assets/res/dragons/2050_dragon_platinum_a_1.xml",
+      "texture": "assets/res/dragons/2050_dragon_platinum_a_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "a11ad503d7c729030bf6e835743dba29640aeb902506348ef08c9fba89a88573"
+    },
+    "models/2050_dragon_platinum_a_1.json": {
+      "archive": "assets/res/dragons/2050_dragon_platinum_a_1.xml",
+      "texture": "assets/res/dragons/2050_dragon_platinum_a_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "2dabd71a155bcce93cc9b3e86141dfbf7f663f3969370d664ccfa2b5e21c0a50"
+    },
+    "models/2050_dragon_platinum_a_2.webp": {
+      "archive": "assets/res/dragons/2050_dragon_platinum_a_2.xml",
+      "texture": "assets/res/dragons/2050_dragon_platinum_a_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "d85f5235ecba69c133bba8a20db4c9f4338d9686fb1a23950e157243a7e3ebc4"
+    },
+    "models/2050_dragon_platinum_a_2.json": {
+      "archive": "assets/res/dragons/2050_dragon_platinum_a_2.xml",
+      "texture": "assets/res/dragons/2050_dragon_platinum_a_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "8d1fcc546cda56830894f4ce913682154b16235d35859263a022be121f3b6988"
+    },
+    "models/2050_dragon_platinum_a_3.webp": {
+      "archive": "assets/res/dragons/2050_dragon_platinum_a_3.xml",
+      "texture": "assets/res/dragons/2050_dragon_platinum_a_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "0c79a0f74c1bc0c6a105784b087d01186377f4d1db486c8441ac5eb0c26d074a"
+    },
+    "models/2050_dragon_platinum_a_3.json": {
+      "archive": "assets/res/dragons/2050_dragon_platinum_a_3.xml",
+      "texture": "assets/res/dragons/2050_dragon_platinum_a_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "fcd6064bf06cc8c1fd7fba03b90d8523266537114a08271bdc2f2083d5857999"
+    },
+    "models/2062_dragon_chameleon_1.webp": {
+      "archive": "assets/res/dragons/2062_dragon_chameleon_1.xml",
+      "texture": "assets/res/dragons/2062_dragon_chameleon_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "6d79b10ea82316375057e23f8aed298e8168af6e1518f34d0c902aa75f2648f9"
+    },
+    "models/2062_dragon_chameleon_1.json": {
+      "archive": "assets/res/dragons/2062_dragon_chameleon_1.xml",
+      "texture": "assets/res/dragons/2062_dragon_chameleon_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "83e1db583c484d6d276c28df84b48fb0d9ac8ee9fe23a888ad9ab39351ed759b"
+    },
+    "models/2062_dragon_chameleon_2.webp": {
+      "archive": "assets/res/dragons/2062_dragon_chameleon_2.xml",
+      "texture": "assets/res/dragons/2062_dragon_chameleon_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "849be85225e291bff12db746e7fc6938dc30bb13cadca7419ab29f7e66e35e11"
+    },
+    "models/2062_dragon_chameleon_2.json": {
+      "archive": "assets/res/dragons/2062_dragon_chameleon_2.xml",
+      "texture": "assets/res/dragons/2062_dragon_chameleon_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "ae3a2ce4edc90addc7f26a6f2e9ca41a2f44a8b516988ce1fc4f292cff6665ec"
+    },
+    "models/2062_dragon_chameleon_3.webp": {
+      "archive": "assets/res/dragons/2062_dragon_chameleon_3.xml",
+      "texture": "assets/res/dragons/2062_dragon_chameleon_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "aca89f6d7a51099f410422c939ee24696f35cb61e700195043ebaccf28e5894f"
+    },
+    "models/2062_dragon_chameleon_3.json": {
+      "archive": "assets/res/dragons/2062_dragon_chameleon_3.xml",
+      "texture": "assets/res/dragons/2062_dragon_chameleon_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "87c0130deba52e5fb0f2b2bdd9fd187cf19f062c6dd6559c401b1113fdb5ba7a"
+    },
+    "models/2063_dragon_incandescent_1.webp": {
+      "archive": "assets/res/dragons/2063_dragon_incandescent_1.xml",
+      "texture": "assets/res/dragons/2063_dragon_incandescent_1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "e03b5be3d419a4ba5cd7a3b4d0b236c8c766b49d2f9892db4e01ef1be120ad45"
+    },
+    "models/2063_dragon_incandescent_1.json": {
+      "archive": "assets/res/dragons/2063_dragon_incandescent_1.xml",
+      "texture": "assets/res/dragons/2063_dragon_incandescent_1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "c85f6a4fda62cb38c565fa26eca41ef1e0d9ffacc60648dbbb52faa5e3f9fbc5"
+    },
+    "models/2063_dragon_incandescent_2.webp": {
+      "archive": "assets/res/dragons/2063_dragon_incandescent_2.xml",
+      "texture": "assets/res/dragons/2063_dragon_incandescent_2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "ac67d3271508bf91c4dfcd3b89cf5247277c22916be85240251314f8c2f72bec"
+    },
+    "models/2063_dragon_incandescent_2.json": {
+      "archive": "assets/res/dragons/2063_dragon_incandescent_2.xml",
+      "texture": "assets/res/dragons/2063_dragon_incandescent_2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "dd0fefb814b7630c3ffa2a75e6079872b2c7cab51e5c6a21f347ee041ed04cfe"
+    },
+    "models/2063_dragon_incandescent_3.webp": {
+      "archive": "assets/res/dragons/2063_dragon_incandescent_3.xml",
+      "texture": "assets/res/dragons/2063_dragon_incandescent_3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "44690ead5477253e53027ce910df30bcaa000e199c1bec601377087dfd89e300"
+    },
+    "models/2063_dragon_incandescent_3.json": {
+      "archive": "assets/res/dragons/2063_dragon_incandescent_3.xml",
+      "texture": "assets/res/dragons/2063_dragon_incandescent_3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "f592ff417e61839c8909fc62da90b42709e9a60f9ca769d37020dcdb4d17d96e"
     }
   }
 }

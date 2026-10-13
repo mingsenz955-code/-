@@ -91,3 +91,11 @@
 - 繁殖/孵化时长与后代基础池仍用原记录。忙塔阻止转入、蛋在山保留、单槽并发为本地实现；完整蛋仓库/高级育龙塔数量及服务器转移边界继续核实。
 - 父母收入延续此前时间区间计算。模型在readyAt恢复父母；原版实际state改变可能依赖领取/服务器响应，暂不能保证时刻完全一致。
 - scripts/export-dragon-eggs.py按照原base或唯一原id关联76/90条原图集蛋缩略图；14条不存在则null，不用别的蛋替代。
+
+## E05 原版模型扩展 — v0.6
+- 静态扫描原APK assets/res/dragons/{原base}_{1/2/3}.xml及同名plist/ETC1纹理：90条目录龙中87条具有三阶段，共261个模型；1052/1053/1054三条的9阶段XML缺失，没有改用他龙。
+- 动作计数1734，全部模型具有breath/walk/especial；还包含成年战斗各动作和少量特殊动作。frameRate直接读XML，当前资源为30fps。
+- scripts/export-dragon-models.py导出35MB量级的无损WebP图集和数值轨道；manifest增加522个模型/纹理记录，共1720项登记。不运行原APK脚本或原生库。
+- src/dragon-models.mjs本地播放原纹理与轨道，忽略0×0占位display，支持RGBA颜色/透明度与普通twR。暂未复刻数值缓动、twR_、动作衔接、粒子/部分混合效果，不能因“可绘制”认定原版运行时一致。
+- 对照参考引擎源码（不是已确认本APK原生引擎版本）：https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-2.2.6/extensions/CocoStudio/Armature/utils/CCDataReaderHelper.cpp 与 datas/CCDatas.cpp（同目录树）。其中读取颜色、tweenRotate和缓动的逻辑说明只恢复坐标不足以保证动作一致。具体原生库版本还要确认。
+- 骨骼XML包含colorTransform子项；颜色按M百分比与通道偏移保留到数值轨道。完整源色彩/原生混合仍需截图比对。
