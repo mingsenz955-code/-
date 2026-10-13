@@ -99,3 +99,10 @@
 - src/dragon-models.mjs本地播放原纹理与轨道，忽略0×0占位display，支持RGBA颜色/透明度与普通twR。暂未复刻数值缓动、twR_、动作衔接、粒子/部分混合效果，不能因“可绘制”认定原版运行时一致。
 - 对照参考引擎源码（不是已确认本APK原生引擎版本）：https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-2.2.6/extensions/CocoStudio/Armature/utils/CCDataReaderHelper.cpp 与 datas/CCDatas.cpp（同目录树）。其中读取颜色、tweenRotate和缓动的逻辑说明只恢复坐标不足以保证动作一致。具体原生库版本还要确认。
 - 骨骼XML包含colorTransform子项；颜色按M百分比与通道偏移保留到数值轨道。完整源色彩/原生混合仍需截图比对。
+
+## E05 原版喂养布局 — v0.7
+- 直接读取已安全导出的layout/ui_dragon.lua→assets/original/layouts/ui_dragon.json（1024×768），未运行原脚本。名称、产出、等级、属性、食物、喂养/移动与四格进度来自该布局的命名节点。
+- src/source-layout.mjs复用原坐标：标签/九宫格左锚点，普通精灵/按钮中心锚点，子节点使用父原点。文字仍用系统字体，九宫格CSS切片和模型视觉锚点需与同分辨率原实况继续核验。
+- 补入原ui_evolution/ui_star/ui_daojukuang/ui_mydragon四图集所需资源，新增64条原图登记，manifest共1784项（含模型JSON，不等于1784张图）。
+- 喂食仍用已有原四次/级与价格公式，原进度图以feedsInLevel/4裁切，Lv4模型阶段变化仍按既有源规则。UI产出明确显示每分钟本地rate，原运行时单位格式待对照。
+- 战斗生命/攻击/防御/抗性/暴击/战斗力当前显示“—”，不从未核对成长公式伪造数字。原进化、一键喂食和出售入口保留禁用；出售不会删除玩家龙。

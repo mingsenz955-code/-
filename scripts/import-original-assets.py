@@ -36,7 +36,7 @@ def unpack(base,folder):
   canvas=Image.new('RGBA',(sw,sh));canvas.paste(tile,(color[0],color[1]))
   safe=Path(key).name;dest=OUT/folder/safe;dest.parent.mkdir(parents=True,exist_ok=True);canvas.save(dest,optimize=True)
   manifest['assets'][folder+'/'+safe]={'archive':base+'.plist','frame':key,'texture':base+('.png' if base+'.png' in names else '.pkm'),'width':sw,'height':sh,'sha256':hashlib.file_digest(dest.open('rb'),'sha256').hexdigest()}
-for name in ['ui_FunctionIcons1','ui_FunctionIcons2','ui_FramesNormal','ui_FramesAlpha','ui_ButtonNormal','ui_activitybutton','ui_Book','ui_Breed','thumbs_dragon','thumbs_egg','thumbs_equip','ui_AttributeIcon','ui_Map','ui_mapland','ui_mapshadow','ui_Plant','ui_egg','ui_world','ui_entrance','ui_mail']:
+for name in ['ui_evolution','ui_star','ui_daojukuang','ui_mydragon','ui_FunctionIcons1','ui_FunctionIcons2','ui_FramesNormal','ui_FramesAlpha','ui_ButtonNormal','ui_activitybutton','ui_Book','ui_Breed','thumbs_dragon','thumbs_egg','thumbs_equip','ui_AttributeIcon','ui_Map','ui_mapland','ui_mapshadow','ui_Plant','ui_egg','ui_world','ui_entrance','ui_mail']:
  base='assets/res/ui/'+name
  if base+'.plist' in names:unpack(base,'ui')
 habitat_atlases=[g.split('/')[-1] for p in (OUT/'layouts').glob('00*_habitat_*.json') for g in json.loads(p.read_text(encoding='utf8'))['group']]
@@ -49,7 +49,7 @@ for dragon in ['1000_dragon_plant_b','1020_dragon_fire_a','1033_dragon_water_a']
   base='assets/res/dragons/'+dragon+'_'+str(stage)
   root=ET.fromstring(z.read(base+'.xml'));sheet=decode(base);pl=plistlib.loads(z.read(base+'.plist'));bones=root.findall('armatures/armature/b')
   clips={m.attrib['name']:{'attributes':m.attrib,'bones':{b.attrib['name']:[f.attrib for f in b.findall('f')] for b in m.findall('b')}} for m in root.findall('animations/animation/mov')}
-  (OUT/'skeletons'/f'{dragon}_{stage}.json').write_text(json.dumps({'source':base+'.xml','bones':[{'attributes':b.attrib,'displays':[d.attrib for d in b]} for b in bones],'animations':clips},ensure_ascii=False),encoding='utf8')
+  (OUT/'skeletons'/f'{dragon}_{stage}.json').write_text(json.dumps({'source':base+'.xml','bones':[{'attributes':b.attrib,'displays':[d.attrib for d in b]} for b in bones],'animations':clips},ensure_ascii=False),encoding='utf8',newline='\n')
   layers=[]
   for bone in bones:
    display=bone.find('d')
@@ -80,7 +80,7 @@ for dragon in ['1000_dragon_plant_b','1020_dragon_fire_a','1033_dragon_water_a']
    canvas.alpha_composite(tile.transform(canvas.size,Image.Transform.AFFINE,coefficients,resample=Image.Resampling.BICUBIC))
   dest=OUT/'skeletons'/f'{dragon}_{stage}.png';canvas.save(dest)
   manifest['assets'][str(dest.relative_to(OUT)).replace('\\','/')]={'archive':base+'.xml','texture':base+'.pkm','conversion':'skeletal breath first-frame reconstruction; transform needs motion validation','width':canvas.width,'height':canvas.height,'sha256':hashlib.file_digest(dest.open('rb'),'sha256').hexdigest()}
-(OUT/'dragon-labels.json').write_text(json.dumps({k[7:]:v for k,v in translation.items() if k.startswith('DRAGON.')},ensure_ascii=False,indent=2),encoding='utf8')
+(OUT/'dragon-labels.json').write_text(json.dumps({k[7:]:v for k,v in translation.items() if k.startswith('DRAGON.')},ensure_ascii=False,indent=2),encoding='utf8',newline='\n')
 labels={k[7:]:v for k,v in translation.items() if k.startswith('DRAGON.')}
 normalize=lambda s:re.sub(r'[^a-z0-9]','',s.lower().replace('dargon','dragon').replace('dragon',''))
 translations={normalize(k):(k,v) for k,v in labels.items()}
@@ -92,8 +92,8 @@ for base in bases:
  match=translations.get(key)
  catalog.append({'id':original_id,'base':base,'name':match[1] if match else '名称待核对 '+str(original_id),'english':match[0] if match else None,'nameVerified':bool(match),'images':[f'assets/original/ui/thumbs_{base}_{stage}.png' for stage in range(4)]})
 if not (OUT/'data/client-config.json').exists():
- (OUT/'catalog.json').write_text(json.dumps(catalog,ensure_ascii=False,indent=2),encoding='utf8')
- (OUT/'catalog.mjs').write_text('export default '+json.dumps(catalog,ensure_ascii=False)+';\n',encoding='utf8')
-(OUT/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf8')
-(ROOT/'docs/reference/apk-inventory.json').write_text(json.dumps({'source':manifest['source'],'archiveBytes':ARCHIVE.stat().st_size,'entries':len(names),'files':[{'name':n,'size':z.getinfo(n).file_size} for n in sorted(names) if n.startswith('assets/res/')]},ensure_ascii=False,indent=2),encoding='utf8')
-print('Imported',len(manifest['assets']),'original atlas frames; original source is recorded in assets/original/manifest.json')
+ (OUT/'catalog.json').write_text(json.dumps(catalog,ensure_ascii=False,indent=2),encoding='utf8',newline='\n')
+ (OUT/'catalog.mjs').write_text('export default '+json.dumps(catalog,ensure_ascii=False)+';\n',encoding='utf8',newline='\n')
+(OUT/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf8',newline='\n')
+(ROOT/'docs/reference/apk-inventory.json').write_text(json.dumps({'source':manifest['source'],'archiveBytes':ARCHIVE.stat().st_size,'entries':len(names),'files':[{'name':n,'size':z.getinfo(n).file_size} for n in sorted(names) if n.startswith('assets/res/')]},ensure_ascii=False,indent=2),encoding='utf8',newline='\n')
+print('Imported',len(manifest['assets']),'provenance records; original source is recorded in assets/original/manifest.json')
