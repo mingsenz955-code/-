@@ -10,3 +10,5 @@ dialog.farm-dialog{width:850px;max-width:94vw;min-height:470px;overflow:visible;
 .app{min-height:0}
 
 .habitat-preview{display:block;width:100%;height:135px;object-fit:contain}.world-object[data-place-id]{touch-action:none;user-select:none}.world-object[data-place-id] img{pointer-events:none;-webkit-user-drag:none}
+
+.breeding-parents{position:absolute;display:flex;left:10%;top:30%;pointer-events:none}.breeding-parents .dragon{width:55px;height:65px;object-fit:contain}

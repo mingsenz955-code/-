@@ -6,7 +6,7 @@ exports.run=async(window,store,verify)=>{
  const errors=[];window.webContents.on('console-message',(event,level,message)=>{if(event.level==='error'||level===3)errors.push(event.message||message)});
  for(let i=0;i<60;i++){if(await js("!!document.querySelector('.original-hud')"))break;await wait(100)}
  const click=async selector=>{assert(await js(`(()=>{const e=document.querySelector(${JSON.stringify(selector)});return e&&!e.disabled&&e.getBoundingClientRect().height>0})()`),selector);await js(`document.querySelector(${JSON.stringify(selector)}).click();true`);await wait(300)};
- if(verify){const s=await state();assert.equal(s.habitats[1].buildingId,27);assert.equal(s.dragons[2].habitatId,5);assert(s.habitats[1].position.every((v,i)=>Math.abs(v-[56,61][i])<.15));assert.equal(s.version,3);assert.equal(s.habitats[0].storedCoins>=777,true);console.log('PASS habitat restart: v3 save, upgraded earth habitat, original residents/coins and placement restored')}
+ if(verify){const s=await state();assert.equal(s.habitats[1].buildingId,27);assert.equal(s.dragons[2].habitatId,5);assert(s.habitats[1].position.every((v,i)=>Math.abs(v-[56,61][i])<.15));assert.equal(s.version,4);assert.equal(s.habitats[0].storedCoins>=777,true);console.log('PASS habitat restart: v4 save, upgraded earth habitat, original residents/coins and placement restored')}
  else{
   await click('[data-place-id="1"]');assert.equal(await js("document.querySelectorAll('.habitat-shop .card').length"),17);await wait(300);assert(await js("Array.from(document.querySelectorAll('.habitat-shop img')).every(i=>i.complete&&i.naturalWidth>0)"));
   await click('[data-action=build][data-building-id="26"]');assert.equal((await state()).coins,49900);assert.equal((await state()).habitats[1].job.kind,'build');

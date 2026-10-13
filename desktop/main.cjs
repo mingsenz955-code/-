@@ -1,9 +1,10 @@
 const {app,BrowserWindow,ipcMain,dialog,screen}=require('electron');
 const path=require('node:path');
 const fs=require('node:fs/promises');
+const dualSmoke=process.argv.includes('--smoke-dual'),dualVerify=process.argv.includes('--verify-dual');
 const habitatSmoke=process.argv.includes('--smoke-habitats'),habitatVerify=process.argv.includes('--verify-habitats');
 const farmSmoke=process.argv.includes('--smoke-farm-upgrade');
-const smoke=process.argv.includes('--smoke-test')||farmSmoke||habitatSmoke,verify=habitatVerify||process.argv.includes('--smoke-verify');
+const smoke=process.argv.includes('--smoke-test')||farmSmoke||habitatSmoke||dualSmoke,verify=dualVerify||habitatVerify||process.argv.includes('--smoke-verify');
 const testProfile=process.argv.find(a=>a.startsWith('--test-profile='))?.split('=')[1]||'smoke-profile';
 if(!/^[a-z0-9-]+$/.test(testProfile))throw new Error('Invalid test profile name');
 if(smoke||verify)app.setPath('userData',path.join(__dirname,'..','work',testProfile));
@@ -14,6 +15,7 @@ app.on('second-instance',()=>{if(window){if(window.isMinimized())window.restore(
 if(locked)app.whenReady().then(async()=>{
  const {SaveStore}=await import('./save-store.mjs');const {validate}=await import('../src/game.mjs');
  const store=new SaveStore(path.join(app.getPath('userData'),'saves'));
+ if(dualSmoke)await require('./smoke-dual.cjs').prepare(store);
  if(habitatSmoke)await require('./smoke-habitats.cjs').prepare(store);
  if(farmSmoke)await require('./smoke.cjs').prepareFarmProfile(store);
  ipcMain.handle('save:load',()=>store.load());
@@ -30,6 +32,6 @@ if(locked)app.whenReady().then(async()=>{
   if(!await window.webContents.executeJavaScript("!!document.querySelector('.original-hud')"))throw new Error('Live game did not reach the ranch UI; existing save was not overwritten.');
   await new Promise(resolve=>setTimeout(resolve,700));const destination=path.join(__dirname,'..','work','live-preview.png');await fs.mkdir(path.dirname(destination),{recursive:true});await fs.writeFile(destination,(await window.webContents.capturePage()).toPNG());console.log('LIVE_PREVIEW_READY '+destination);
  }
- if(smoke||verify){try{const tests=require('./smoke.cjs'); if(habitatSmoke||habitatVerify)await require('./smoke-habitats.cjs').run(window,store,habitatVerify);else if(farmSmoke)await tests.runFarmUpgrade(window,store);else await tests.run(window,store,verify);app.exit(0)}catch(error){console.error(error);app.exit(1)}}
+ if(smoke||verify){try{const tests=require('./smoke.cjs'); if(dualSmoke||dualVerify)await require('./smoke-dual.cjs').run(window,store,dualVerify);else if(habitatSmoke||habitatVerify)await require('./smoke-habitats.cjs').run(window,store,habitatVerify);else if(farmSmoke)await tests.runFarmUpgrade(window,store);else await tests.run(window,store,verify);app.exit(0)}catch(error){console.error(error);app.exit(1)}}
 }).catch(e=>{console.error(e);app.exit(1)});
 app.on('window-all-closed',()=>app.quit());

@@ -15,11 +15,11 @@ exports.run=async(window,store,verify)=>{
  await click('[data-action=showMore]');await click('#modal [data-tab=dragons]');for(let i=0;i<12;i++)await click('[data-action=feed]');
  await click('[data-action=selectDragon][data-id="3"]');for(let i=0;i<12;i++)await click('[data-action=feed]');
  assert((await snapshot()).dragons.every(d=>d.level===4));
- await click('[data-tab=breeding]');await click('[data-action=breed]');assert.equal((await snapshot()).nest.phase,'breeding');
+ await click('[data-tab=breeding]');await click('[data-action=breed]');assert.equal((await snapshot()).breeding.phase,'breeding');
  // Simulate long original timers only in this isolated test profile; production uses wall clock.
  const advance=async at=>{await js(`Date.now=()=>${at};true`);await wait(400)};
- await advance((await snapshot()).nest.readyAt+1);await click('[data-action=takeEgg]');await click('[data-action=incubate]');
- await advance((await snapshot()).nest.readyAt+1);await click('[data-action=hatch]');assert.equal((await snapshot()).dragons.length,3);assert.equal((await snapshot()).stats.hatches,1);
+ await advance((await snapshot()).breeding.readyAt+1);await click('[data-action=takeEgg]');await click('[data-action=incubate]');
+ await advance((await snapshot()).incubator.readyAt+1);await click('[data-action=hatch]');assert.equal((await snapshot()).dragons.length,3);assert.equal((await snapshot()).stats.hatches,1);
  await click('[data-tab=habitats]');await click('[data-action=collect]');await click('[data-tab=ranch]');
  const image=await window.webContents.capturePage();await fs.mkdir(path.join(__dirname,'..','work'),{recursive:true});await fs.writeFile(path.join(__dirname,'..','work','desktop-qa.png'),image.toPNG());
  assert.deepEqual(errors,[]);console.log('PASS desktop UI: original crop in real time, 24 feeds, client breeding pool, original long breeding/hatch timers with isolated simulated clock, collect, automatic disk save; screenshot work/desktop-qa.png');
