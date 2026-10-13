@@ -3,7 +3,7 @@ import path from 'node:path';
 import {validate} from '../src/game.mjs';
 export class SaveStore {
  constructor(directory){this.directory=directory;this.file=path.join(directory,'ranch-v1.json');this.backup=this.file+'.bak';this.queue=Promise.resolve()}
- async read(file){const raw=await fs.readFile(file,'utf8');if(raw.length>2e6)throw new Error('存档过大。');const parsed=JSON.parse(raw);if(parsed.version>2){const e=new Error('存档来自更新版本，请升级游戏；未回退或覆盖存档。');e.code='FUTURE_VERSION';throw e}return validate(parsed)}
+ async read(file){const raw=await fs.readFile(file,'utf8');if(raw.length>2e6)throw new Error('存档过大。');const parsed=JSON.parse(raw);if(parsed.version>3){const e=new Error('存档来自更新版本，请升级游戏；未回退或覆盖存档。');e.code='FUTURE_VERSION';throw e}return validate(parsed)}
  async load(){
   try{return {state:await this.read(this.file),location:this.file}}catch(error){
    if(error.code==='FUTURE_VERSION')throw error;

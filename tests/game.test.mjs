@@ -14,7 +14,7 @@ test('invalid commands are transactional; resource and parent restrictions',()=>
  const s=createGame(T),before=structuredClone(s);assert.throws(()=>action(s,'breed',{a:2,b:2},T),/不同/);assert.deepEqual(s,before);
  assert.throws(()=>action(s,'breed',{a:2,b:3},T),/4 级/);
  s.food=0;assert.throws(()=>action(s,'feed',{id:2},T),/龙粮不足/);assert.equal(s.dragons[0].level,1);
- s.coins=0;assert.throws(()=>action(s,'build',{},T),/金币不足/);
+ s.coins=0;s.playerXp=ORIGINAL_LEVELS.find(l=>l.level===2).xp_required;assert.throws(()=>action(s,'build',{},T),/金币不足/);
 });
 test('original minute income, storage cap and feeding settle without auto-collection',()=>{
  let s=createGame(T);assert.equal(income(s,s.habitats[0],T-100),0);assert.equal(income(s,s.habitats[0],T+24*3600000),7500);assert.equal(income(s,s.habitats[0],T+60000),6);
@@ -23,13 +23,13 @@ test('original minute income, storage cap and feeding settle without auto-collec
 });
 test('capacity failure retains ready egg; new habitat allows hatching',()=>{
  let s=createGame(T);s.dragons.push({id:4,species:'tide',level:1,habitatId:1});s.nextId=5;s.nest={phase:'hatching',species:'bloom',parents:[2,3],readyAt:T};
- assert.throws(()=>action(s,'hatch',{habitatId:1},T),/已满/);assert.equal(s.nest.phase,'hatching');s=action(s,'build',{},T);s=action(s,'hatch',{habitatId:5},T);assert.equal(s.dragons.length,4);
+ assert.throws(()=>action(s,'hatch',{habitatId:1},T),/已满/);assert.equal(s.nest.phase,'hatching');s.playerXp=ORIGINAL_LEVELS.find(l=>l.level===2).xp_required;s=action(s,'build',{buildingId:28},T);s=action(s,'completeHabitat',{id:5},T+10000);s.nest.species='ember';s=action(s,'hatch',{habitatId:5},T+10000);assert.equal(s.dragons.length,4);
 });
 test('save rejects future version, duplicate ids, bad species, malformed jobs and overcapacity',()=>{
- for(const mutate of [s=>s.version=3,s=>s.coins=-1,s=>s.dragons[0].species='unknown',s=>s.dragons[0].id=1,s=>s.nextId=2,s=>s.farm={readyAt:'bad'},s=>s.nest={phase:'oops'},s=>s.log=['x'.repeat(201)]]){const s=createGame(T);mutate(s);assert.throws(()=>validate(s))}
+ for(const mutate of [s=>s.version=4,s=>s.coins=-1,s=>s.dragons[0].species='unknown',s=>s.dragons[0].id=1,s=>s.nextId=2,s=>s.farm={readyAt:'bad'},s=>s.nest={phase:'oops'},s=>s.log=['x'.repeat(201)]]){const s=createGame(T);mutate(s);assert.throws(()=>validate(s))}
 });
 test('moving dragons settles old and new income at the correct time',()=>{
- let s=action(createGame(T),'build',{},T);s=action(s,'move',{id:2,habitatId:4},T+60000);assert.equal(s.coins,900);assert.equal(income(s,s.habitats[1],T+120000),1);assert.equal(income(s,s.habitats[0],T+120000),11);
+ let s=createGame(T);s.playerXp=ORIGINAL_LEVELS.find(l=>l.level===2).xp_required;s=action(s,'build',{buildingId:28},T);s=action(s,'completeHabitat',{id:4},T+10000);s=action(s,'move',{id:2,habitatId:4},T+60000);assert.equal(s.coins,1050);assert.equal(income(s,s.habitats[1],T+120000),1);assert.equal(income(s,s.habitats[0],T+120000),11);
 });
 test('four feeds per level and original food price breakpoint',()=>{
  let s=createGame(T);for(let i=0;i<3;i++)s=action(s,'feed',{id:2},T);assert.equal(s.dragons[0].level,1);assert.equal(s.dragons[0].feedsInLevel,3);assert.equal(s.food,385);s=action(s,'feed',{id:2},T);assert.equal(s.dragons[0].level,2);assert.equal(s.dragons[0].feedsInLevel,0);assert.equal(s.food,380);
@@ -51,7 +51,7 @@ test('crop XP crosses original cumulative level thresholds and awards each level
  let s=action(createGame(T),'plant',{cropId:3},T);s=action(s,'harvest',{},s.farm.readyAt);assert.equal(s.playerXp,1000);assert.equal(s.gems,2);assert.deepEqual(playerProgress(s),{level:3,xp:1000,percent:55});const restored=validate(JSON.parse(JSON.stringify(s)));assert.equal(restored.gems,2);
 });
 test('v1 migration preserves resources, old dragons and in-progress legacy crops',()=>{
- const old=createGame(T);old.version=1;delete old.playerXp;delete old.gems;old.farm={readyAt:T+15000};const migrated=validate(old);assert.equal(migrated.version,2);assert.equal(migrated.coins,old.coins);assert.deepEqual(migrated.dragons,old.dragons);assert.equal(action(migrated,'harvest',{},T+15000).food,490);assert.equal(old.version,1);
+ const old=createGame(T);old.version=1;delete old.playerXp;delete old.gems;old.farm={readyAt:T+15000};const migrated=validate(old);assert.equal(migrated.version,3);assert.equal(migrated.coins,old.coins);assert.deepEqual(migrated.dragons,old.dragons);assert.equal(action(migrated,'harvest',{},T+15000).food,490);assert.equal(old.version,1);
 });
 test('original farm upgrade gates, timer and crop tier persist across saves',()=>{
  let s=createGame(T);assert.throws(()=>action(s,'upgradeFarm',{},T),/等级 8/);s.playerXp=ORIGINAL_LEVELS.find(l=>l.level===8).xp_required;s.coins=50000;s=action(s,'upgradeFarm',{},T);assert.equal(s.coins,25000);assert.equal(s.farmUpgrade.readyAt,T+10000);assert.throws(()=>action(s,'plant',{},T),/正在升级/);assert.throws(()=>action(s,'completeFarmUpgrade',{},T+1),/尚未完成/);s=validate(JSON.parse(JSON.stringify(s)));s=action(s,'completeFarmUpgrade',{},T+10000);assert.equal(s.farmBuildingId,17);assert.equal(unlockedCrops(s).length,6);s=action(s,'plant',{cropId:4},T+10000);assert.equal(s.farm.cropId,4);

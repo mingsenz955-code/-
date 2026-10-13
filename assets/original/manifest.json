@@ -9489,6 +9489,126 @@
       "width": 344,
       "height": 227,
       "sha256": "9591afda144c10e74fe09449668d31893a3dc5c2a0444a76a83450a2e17da791"
+    },
+    "world/0025_habitat_plant_2_g_bg.png": {
+      "archive": "assets/res/buildings/0025_habitat_plant_2_g.plist",
+      "frame": "0025_habitat_plant_2_g_bg.png",
+      "texture": "assets/res/buildings/0025_habitat_plant_2_g.png",
+      "width": 405,
+      "height": 332,
+      "sha256": "372cc93a032204df126c2b4a860a34167d4d55123b718ded929dbe2649404487"
+    },
+    "world/0026_habitat_earth_1_g_bg.png": {
+      "archive": "assets/res/buildings/0026_habitat_earth_1_g.plist",
+      "frame": "0026_habitat_earth_1_g_bg.png",
+      "texture": "assets/res/buildings/0026_habitat_earth_1_g.png",
+      "width": 404,
+      "height": 259,
+      "sha256": "a694895ce7026bf07d57e15984da756732d89492ec8610994fc1ff20c1b0fe28"
+    },
+    "world/0027_habitat_earth_2_g_bg.png": {
+      "archive": "assets/res/buildings/0027_habitat_earth_2_g.plist",
+      "frame": "0027_habitat_earth_2_g_bg.png",
+      "texture": "assets/res/buildings/0027_habitat_earth_2_g.png",
+      "width": 405,
+      "height": 265,
+      "sha256": "dc9f9a3f7374e5cfa3057a78c48b3e19f64c6071a072daee78a33ea27b55c307"
+    },
+    "world/0029_habitat_fire_a_2_g_bg.png": {
+      "archive": "assets/res/buildings/0029_habitat_fire_a_2_g.plist",
+      "frame": "0029_habitat_fire_a_2_g_bg.png",
+      "texture": "assets/res/buildings/0029_habitat_fire_a_2_g.png",
+      "width": 404,
+      "height": 281,
+      "sha256": "947684b204a8792854fed5ff443cf8ed90e316973c7eee3691b8b5f2fd8c0820"
+    },
+    "world/0031_habitat_water_a_2_g_bg.png": {
+      "archive": "assets/res/buildings/0031_habitat_water_a_2_g.plist",
+      "frame": "0031_habitat_water_a_2_g_bg.png",
+      "texture": "assets/res/buildings/0031_habitat_water_a_2_g.png",
+      "width": 442,
+      "height": 282,
+      "sha256": "c2b940c1710f30efff17214667f29be7effe2c6dd514e95aeee11e31ede4fd3a"
+    },
+    "world/0032_habitat_ice_1_g_bg.png": {
+      "archive": "assets/res/buildings/0032_habitat_ice_1_g.plist",
+      "frame": "0032_habitat_ice_1_g_bg.png",
+      "texture": "assets/res/buildings/0032_habitat_ice_1_g.png",
+      "width": 404,
+      "height": 288,
+      "sha256": "e8a81bda7123e2fb61d7dc2b00a0fe8b2bc73211ad5cd64178093a0033bb6706"
+    },
+    "world/0033_habitat_ice_2_g_bg.png": {
+      "archive": "assets/res/buildings/0033_habitat_ice_2_g.plist",
+      "frame": "0033_habitat_ice_2_g_bg.png",
+      "texture": "assets/res/buildings/0033_habitat_ice_2_g.png",
+      "width": 404,
+      "height": 302,
+      "sha256": "2baa71764861eac1aa8fb9e459550a933da60c8dee06b49160f6e46729dbea62"
+    },
+    "world/0034_habitat_electric_a_1_g_bg.png": {
+      "archive": "assets/res/buildings/0034_habitat_electric_a_1_g.plist",
+      "frame": "0034_habitat_electric_a_1_g_bg.png",
+      "texture": "assets/res/buildings/0034_habitat_electric_a_1_g.png",
+      "width": 410,
+      "height": 296,
+      "sha256": "a4bf56d4269cd849cc24a245bce62ccbbb26214fed3132cf7633c5bfb45875c6"
+    },
+    "world/0035_habitat_electric_b_2_g_bg.png": {
+      "archive": "assets/res/buildings/0035_habitat_electric_b_2_g.plist",
+      "frame": "0035_habitat_electric_b_2_g_bg.png",
+      "texture": "assets/res/buildings/0035_habitat_electric_b_2_g.png",
+      "width": 440,
+      "height": 329,
+      "sha256": "f74dcab653a251f30c2fab3172af0a70cdae2f428ebfb268c08d48a25b634809"
+    },
+    "world/0036_habitat_metal_1_g_bg.png": {
+      "archive": "assets/res/buildings/0036_habitat_metal_1_g.plist",
+      "frame": "0036_habitat_metal_1_g_bg.png",
+      "texture": "assets/res/buildings/0036_habitat_metal_1_g.png",
+      "width": 404,
+      "height": 298,
+      "sha256": "4afb9f01abafde4f6139eb585a03ade0fbe568dd656ce5edfa99d8311cc3aee0"
+    },
+    "world/0037_habitat_metal_2_g_bg.png": {
+      "archive": "assets/res/buildings/0037_habitat_metal_2_g.plist",
+      "frame": "0037_habitat_metal_2_g_bg.png",
+      "texture": "assets/res/buildings/0037_habitat_metal_2_g.png",
+      "width": 404,
+      "height": 311,
+      "sha256": "189e98c4a0a7af7be8b62f5a7c5205415721c209a53328b9f2221651398b1198"
+    },
+    "world/0038_habitat_dark_1_g_bg.png": {
+      "archive": "assets/res/buildings/0038_habitat_dark_1_g.plist",
+      "frame": "0038_habitat_dark_1_g_bg.png",
+      "texture": "assets/res/buildings/0038_habitat_dark_1_g.png",
+      "width": 404,
+      "height": 291,
+      "sha256": "d26fbb4330df7d69a10ec21deedca93ae927a9ad1abab39790e455f824c56f7d"
+    },
+    "world/0039_habitat_dark_2_g_bg.png": {
+      "archive": "assets/res/buildings/0039_habitat_dark_2_g.plist",
+      "frame": "0039_habitat_dark_2_g_bg.png",
+      "texture": "assets/res/buildings/0039_habitat_dark_2_g.png",
+      "width": 405,
+      "height": 292,
+      "sha256": "01826e9f6e28e6b1137031c1c33b70f9a50227ad91e0614de63ef534c9b72a38"
+    },
+    "world/0040_habitat_legend_a_g_bg.png": {
+      "archive": "assets/res/buildings/0040_habitat_legend_a_g.plist",
+      "frame": "0040_habitat_legend_a_g_bg.png",
+      "texture": "assets/res/buildings/0040_habitat_legend_a_g.png",
+      "width": 506,
+      "height": 377,
+      "sha256": "f7647fb0a6f19dc386069cffc59ab589a5b0d813b35d01a4d1bea5b42108017d"
+    },
+    "world/0041_habitat_legend_b_g_bg.png": {
+      "archive": "assets/res/buildings/0041_habitat_legend_b_g.plist",
+      "frame": "0041_habitat_legend_b_g_bg.png",
+      "texture": "assets/res/buildings/0041_habitat_legend_b_g.png",
+      "width": 405,
+      "height": 340,
+      "sha256": "872d06009eb2834506057d2a84767dce688df0e7ce02368ea555ee678b23e871"
     }
   }
 }
