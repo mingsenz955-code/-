@@ -1,0 +1,19 @@
+{
+  "group": [
+    "ui_gonghuihongbao"
+  ],
+  "width": 97,
+  "height": 84,
+  "children": [
+    {
+      "name": "btn",
+      "type": "btn",
+      "img_normal": "#ui_gonghuihongbao_icon_gonghuihongbao.png",
+      "img_down": "#ui_gonghuihongbao_icon_gonghuihongbao.png",
+      "img_disable": "#ui_gonghuihongbao_icon_gonghuihongbao.png",
+      "x": -0.5,
+      "width": 97,
+      "height": 84
+    }
+  ]
+}

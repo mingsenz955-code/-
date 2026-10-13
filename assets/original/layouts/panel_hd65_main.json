@@ -1,0 +1,249 @@
+{
+  "group": [
+    "ui_xianshixiaofei",
+    "ui_hd65"
+  ],
+  "width": 1043,
+  "height": 607,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "grid": {
+        "x": 108,
+        "y": 111,
+        "width": 46,
+        "height": 27
+      },
+      "x": -521,
+      "y": -11,
+      "width": 1043,
+      "height": 586,
+      "maxw": 1043,
+      "maxh": 586
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "grid": {
+        "x": 25,
+        "y": 20,
+        "width": 10,
+        "height": 10
+      },
+      "x": -521,
+      "y": 259,
+      "width": 1039,
+      "height": 55,
+      "maxw": 1039,
+      "maxh": 55
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_xianshixiaofei_bg2.png",
+      "scale9": 1,
+      "grid": {
+        "x": 11,
+        "y": 11,
+        "width": 22,
+        "height": 22
+      },
+      "x": -170,
+      "y": -47,
+      "width": 665,
+      "height": 465,
+      "maxw": 665,
+      "maxh": 465
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_xianshixiaofei_bg2.png",
+      "scale9": 1,
+      "grid": {
+        "x": 11,
+        "y": 11,
+        "width": 22,
+        "height": 22
+      },
+      "x": -496,
+      "y": -48,
+      "width": 321,
+      "height": 464,
+      "maxw": 321,
+      "maxh": 464
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_haoyoulan2.png",
+      "scale9": 1,
+      "grid": {
+        "x": 28,
+        "y": 29,
+        "width": 38,
+        "height": 36
+      },
+      "x": -164,
+      "y": -49,
+      "width": 652,
+      "height": 447,
+      "maxw": 652,
+      "maxh": 447
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_haoyoulan2.png",
+      "scale9": 1,
+      "grid": {
+        "x": 28,
+        "y": 29,
+        "width": 38,
+        "height": 36
+      },
+      "x": -487,
+      "y": -48,
+      "width": 303,
+      "height": 447,
+      "maxw": 303,
+      "maxh": 447
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_xianshixiaofei_titlebg.png",
+      "x": 8,
+      "y": 261,
+      "width": 544,
+      "height": 84
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_hd65_title.png",
+      "x": 8,
+      "y": 264,
+      "width": 359,
+      "height": 54
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_hd65_bg.png",
+      "x": -337,
+      "y": -43,
+      "width": 285,
+      "height": 230
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "x": 159,
+      "y": -47,
+      "width": 632,
+      "height": 423
+    },
+    {
+      "name": "txt_startendtime",
+      "type": "label",
+      "text": "活动时间",
+      "align": "center",
+      "size": 22,
+      "color": 2237154047,
+      "x": -494,
+      "y": 205,
+      "width": 983,
+      "height": 29
+    },
+    {
+      "name": "txt_4",
+      "type": "label",
+      "text": "即可领取相应奖励",
+      "align": "center",
+      "size": 21,
+      "color": 2237154047,
+      "x": -458,
+      "y": 105,
+      "width": 246,
+      "height": 27
+    },
+    {
+      "name": "txt_3",
+      "type": "label",
+      "text": "达成条件后请及时领取奖励,",
+      "align": "center",
+      "size": 20,
+      "color": 4278190335,
+      "x": -480,
+      "y": -189,
+      "width": 286,
+      "height": 26
+    },
+    {
+      "name": "txt_2",
+      "type": "label",
+      "text": "以免活动结束后不能领取",
+      "align": "center",
+      "size": 20,
+      "color": 4278190335,
+      "x": -480,
+      "y": -218,
+      "width": 286,
+      "height": 28
+    },
+    {
+      "name": "txt_1",
+      "type": "label",
+      "text": "活动期间达成右侧条件",
+      "align": "center",
+      "size": 21,
+      "color": 2237154047,
+      "x": -458,
+      "y": 133,
+      "width": 246,
+      "height": 27
+    },
+    {
+      "name": "node_btn_recharge",
+      "type": "node",
+      "x": -333,
+      "y": -115,
+      "width": 144,
+      "height": 56,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn4.png",
+          "img_down": "#ui_common_btn5.png",
+          "img_disable": "#ui_common_btn6.png",
+          "x": -5,
+          "width": 133,
+          "height": 56
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "立即充值",
+          "align": "center",
+          "size": 26,
+          "color": 4294967295,
+          "outlineColor": 11882262,
+          "x": -75,
+          "y": 3,
+          "width": 144,
+          "height": 33
+        }
+      ]
+    },
+    {
+      "name": "node_nowexpense",
+      "type": "label",
+      "text": "--元",
+      "align": "center",
+      "size": 22,
+      "color": 4294967295,
+      "x": -446,
+      "y": -59,
+      "width": 219,
+      "height": 29
+    }
+  ]
+}

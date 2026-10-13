@@ -1,0 +1,30 @@
+{
+  "group": [
+    "buildings/0017_farm_2_g"
+  ],
+  "width": 344,
+  "height": 230,
+  "children": [
+    {
+      "name": "s1",
+      "type": "sprite",
+      "img": "#0017_farm_2_g_s1.png",
+      "x": 6.5,
+      "y": 124
+    },
+    {
+      "name": "s2",
+      "type": "sprite",
+      "img": "#0017_farm_2_g_s2.png",
+      "x": 7,
+      "y": 124
+    },
+    {
+      "name": "s3",
+      "type": "sprite",
+      "img": "#0017_farm_2_g_s3.png",
+      "x": 8.85,
+      "y": 123.4
+    }
+  ]
+}

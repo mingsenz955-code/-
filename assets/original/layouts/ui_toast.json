@@ -1,0 +1,25 @@
+{
+  "group": {},
+  "width": 150,
+  "height": 150,
+  "children": [
+    {
+      "name": "area",
+      "type": "sprite",
+      "img": "ui/areablackCircular.png",
+      "scale9": 2,
+      "grid": {
+        "x": 17,
+        "y": 15,
+        "width": 116,
+        "height": 117.94999999999999
+      },
+      "x": -20,
+      "y": -55,
+      "width": 150,
+      "height": 150,
+      "maxw": 150,
+      "maxh": 150
+    }
+  ]
+}

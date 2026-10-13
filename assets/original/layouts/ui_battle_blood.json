@@ -1,0 +1,868 @@
+{
+  "group": [
+    "ui_Bloodwar",
+    "ui_Batlle"
+  ],
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png"
+    },
+    {
+      "name": "title_panel",
+      "type": "node",
+      "x": -2,
+      "y": 339,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_battle_jd1.png",
+          "width": 510,
+          "height": 60,
+          "y": -9
+        },
+        {
+          "name": "title_txt",
+          "type": "label",
+          "text": "血战到底",
+          "size": 26,
+          "align": "center",
+          "color": 4294967295,
+          "x": -100,
+          "y": -6,
+          "width": 200,
+          "height": 40
+        },
+        {
+          "name": "close",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_GuanBi1.png",
+          "img_down": "#ui_common_btn_GuanBi2.png",
+          "right": 40
+        }
+      ]
+    },
+    {
+      "name": "left_panel",
+      "type": "node",
+      "x": -276,
+      "y": 18,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_DiBan_YangBiZhi.png",
+          "width": 460,
+          "height": 440,
+          "scale9": 1,
+          "x": -230,
+          "y": 12
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_invite_title_bg.png",
+          "width": 438,
+          "height": 84,
+          "x": 0,
+          "y": 220
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_line400.png",
+          "width": 400,
+          "height": 4,
+          "x": 0,
+          "y": 80
+        },
+        {
+          "name": "stage_txt",
+          "type": "node",
+          "x": 0,
+          "y": 235,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_bloodwar_text_stage.png",
+              "width": 161,
+              "height": 44
+            }
+          ]
+        },
+        {
+          "name": "stage_record_txt",
+          "type": "label",
+          "text": "最高纪录：--积分",
+          "size": 22,
+          "align": "left",
+          "color": 255,
+          "x": -187,
+          "y": 109,
+          "width": 370,
+          "height": 48
+        },
+        {
+          "name": "stage_reward_txt",
+          "type": "label",
+          "text": "本关奖励：本次获得积分xN培养丹",
+          "size": 22,
+          "align": "left",
+          "color": 255,
+          "x": -187,
+          "y": 147,
+          "width": 370,
+          "height": 48
+        },
+        {
+          "name": "player_score_txt",
+          "type": "label",
+          "text": "我的积分：--",
+          "size": 22,
+          "align": "left",
+          "color": 4278190335,
+          "x": -187,
+          "y": 54,
+          "width": 370,
+          "height": 48
+        },
+        {
+          "type": "label",
+          "text": "积分只在本次闯关有效，闯关结束后积分清零",
+          "size": 22,
+          "align": "left",
+          "color": 4278190335,
+          "x": -187,
+          "y": -134,
+          "width": 370,
+          "height": 96
+        },
+        {
+          "name": "buff_atk_node",
+          "type": "node",
+          "x": -132,
+          "y": -16,
+          "width": 112,
+          "height": 103,
+          "children": [
+            {
+              "name": "buff_atk",
+              "type": "node",
+              "x": -3,
+              "width": 106,
+              "height": 103,
+              "children": [
+                {
+                  "name": "image_open",
+                  "type": "sprite",
+                  "img": "#ui_bloodwar_btn_atk.png",
+                  "x": -6,
+                  "y": 5,
+                  "width": 93,
+                  "height": 93
+                },
+                {
+                  "name": "image_close",
+                  "type": "sprite",
+                  "img": "#ui_bloodwar_btn_atk0.png",
+                  "x": -6,
+                  "y": 5,
+                  "width": 93,
+                  "height": 93
+                }
+              ]
+            },
+            {
+              "name": "buff_atk_txt",
+              "type": "label",
+              "text": "+?%",
+              "align": "right",
+              "size": 20,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -62,
+              "y": -26,
+              "width": 94,
+              "height": 27
+            }
+          ]
+        },
+        {
+          "name": "buff_def_node",
+          "type": "node",
+          "x": -2,
+          "y": -16,
+          "width": 112,
+          "height": 103,
+          "children": [
+            {
+              "name": "buff_def",
+              "type": "node",
+              "x": -3,
+              "width": 106,
+              "height": 103,
+              "children": [
+                {
+                  "name": "image_open",
+                  "type": "sprite",
+                  "img": "#ui_bloodwar_btn_def.png",
+                  "x": -6,
+                  "y": 5,
+                  "width": 93,
+                  "height": 93
+                },
+                {
+                  "name": "image_close",
+                  "type": "sprite",
+                  "img": "#ui_bloodwar_btn_def0.png",
+                  "x": -6,
+                  "y": 5,
+                  "width": 93,
+                  "height": 93
+                }
+              ]
+            },
+            {
+              "name": "buff_def_txt",
+              "type": "label",
+              "text": "+?%",
+              "align": "right",
+              "size": 20,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -62,
+              "y": -27,
+              "width": 94,
+              "height": 27
+            }
+          ]
+        },
+        {
+          "name": "buff_hp_node",
+          "type": "node",
+          "x": 128,
+          "y": -16,
+          "width": 113,
+          "height": 103,
+          "children": [
+            {
+              "name": "buff_hp",
+              "type": "node",
+              "x": -3,
+              "width": 106,
+              "height": 103,
+              "children": [
+                {
+                  "name": "image_open",
+                  "type": "sprite",
+                  "img": "#ui_bloodwar_btn_hp.png",
+                  "x": -6,
+                  "y": 5,
+                  "width": 93,
+                  "height": 93
+                },
+                {
+                  "name": "image_close",
+                  "type": "sprite",
+                  "img": "#ui_bloodwar_btn_hp0.png",
+                  "x": -6,
+                  "y": 5,
+                  "width": 93,
+                  "height": 93
+                }
+              ]
+            },
+            {
+              "name": "buff_hp_txt",
+              "type": "label",
+              "text": "+?%",
+              "align": "right",
+              "size": 20,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -63,
+              "y": -28,
+              "width": 94,
+              "height": 27
+            }
+          ]
+        },
+        {
+          "name": "fight_btn_node",
+          "type": "node",
+          "x": -154,
+          "y": -245,
+          "children": [
+            {
+              "name": "fight_btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btn_1.png",
+              "img_down": "#ui_common_btn_2.png",
+              "img_disable": "#ui_common_btn_2c.png"
+            },
+            {
+              "name": "fight_btn_txt",
+              "type": "label",
+              "text": "开始挑战",
+              "size": 24,
+              "align": "center",
+              "color": 4294967295,
+              "x": -72,
+              "width": 144,
+              "height": 85
+            }
+          ]
+        },
+        {
+          "name": "auto_btn_node",
+          "type": "node",
+          "x": 0,
+          "y": -245,
+          "children": [
+            {
+              "name": "auto_btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btn_1.png",
+              "img_down": "#ui_common_btn_2.png",
+              "img_disable": "#ui_common_btn_2c.png"
+            },
+            {
+              "name": "auto_btn_txt",
+              "type": "label",
+              "text": "自动过关",
+              "size": 24,
+              "align": "center",
+              "color": 4294967295,
+              "x": -72,
+              "width": 144,
+              "height": 85
+            }
+          ]
+        },
+        {
+          "name": "reset_btn_node",
+          "type": "node",
+          "x": 154,
+          "y": -245,
+          "children": [
+            {
+              "name": "reset_btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btn_1.png",
+              "img_down": "#ui_common_btn_2.png",
+              "img_disable": "#ui_common_btn_2c.png"
+            },
+            {
+              "name": "reset_btn_txt",
+              "type": "label",
+              "text": "重置关卡",
+              "size": 24,
+              "align": "center",
+              "color": 4294967295,
+              "x": -72,
+              "width": 144,
+              "height": 85
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "right_panel",
+      "type": "node",
+      "x": 226,
+      "y": 0,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_battle_b4.png",
+          "x": -270,
+          "y": 0,
+          "width": 540,
+          "height": 520,
+          "scale9": 1
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_b2.png",
+          "width": -200,
+          "height": 76,
+          "x": -178,
+          "y": 240
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_bloodwar_text_select.png",
+          "width": 138,
+          "height": 25,
+          "x": -186,
+          "y": 253
+        },
+        {
+          "name": "selection_1_node",
+          "type": "node",
+          "x": 0,
+          "y": 140,
+          "children": [
+            {
+              "name": "selection_1_sel",
+              "type": "btn",
+              "img_normal": "#ui_bloodwar_sel_1.png",
+              "img_down": "#ui_bloodwar_sel_2.png"
+            },
+            {
+              "name": "selection_1_selected",
+              "type": "sprite",
+              "img": "#ui_bloodwar_sel_2.png",
+              "x": 0,
+              "y": 0,
+              "width": 512,
+              "height": 141
+            },
+            {
+              "type": "label",
+              "text": "战斗力",
+              "size": 22,
+              "align": "center",
+              "color": 4291297535,
+              "outlineColor": 4278190080,
+              "x": -240,
+              "y": 20,
+              "width": 120,
+              "height": 48
+            },
+            {
+              "type": "label",
+              "text": "奖励",
+              "size": 22,
+              "align": "center",
+              "color": 4291297535,
+              "outlineColor": 4278190080,
+              "x": 145,
+              "y": 20,
+              "width": 100,
+              "height": 48
+            },
+            {
+              "name": "s1_ATB_txt",
+              "type": "label",
+              "text": "--------",
+              "size": 22,
+              "align": "center",
+              "color": 4294967295,
+              "x": -240,
+              "y": -15,
+              "width": 120,
+              "height": 48
+            },
+            {
+              "name": "s1_RWD_txt",
+              "type": "label",
+              "text": "--积分",
+              "size": 22,
+              "align": "center",
+              "color": 4294967295,
+              "x": 145,
+              "y": -15,
+              "width": 100,
+              "height": 48
+            },
+            {
+              "name": "s1_slot_1",
+              "type": "node",
+              "x": -65,
+              "y": 10,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_common_DaoJuKuang1.png",
+                  "width": 80,
+                  "height": 80
+                }
+              ]
+            },
+            {
+              "name": "s1_slot_2",
+              "type": "node",
+              "x": 25,
+              "y": 10,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_common_DaoJuKuang1.png",
+                  "width": 80,
+                  "height": 80
+                }
+              ]
+            },
+            {
+              "name": "s1_slot_3",
+              "type": "node",
+              "x": 115,
+              "y": 10,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_common_DaoJuKuang1.png",
+                  "width": 80,
+                  "height": 80
+                }
+              ]
+            },
+            {
+              "name": "s1_star_node",
+              "type": "node",
+              "x": -181,
+              "y": 64,
+              "children": {}
+            }
+          ]
+        },
+        {
+          "name": "selection_2_node",
+          "type": "node",
+          "x": 0,
+          "y": -15,
+          "children": [
+            {
+              "name": "selection_2_sel",
+              "type": "btn",
+              "img_normal": "#ui_bloodwar_sel_1.png",
+              "img_down": "#ui_bloodwar_sel_2.png"
+            },
+            {
+              "name": "selection_2_selected",
+              "type": "sprite",
+              "img": "#ui_bloodwar_sel_2.png",
+              "x": 0,
+              "y": 0,
+              "width": 512,
+              "height": 141
+            },
+            {
+              "type": "label",
+              "text": "战斗力",
+              "size": 22,
+              "align": "center",
+              "color": 4291297535,
+              "outlineColor": 4278190080,
+              "x": -240,
+              "y": 20,
+              "width": 120,
+              "height": 48
+            },
+            {
+              "type": "label",
+              "text": "奖励",
+              "size": 22,
+              "align": "center",
+              "color": 4291297535,
+              "outlineColor": 4278190080,
+              "x": 145,
+              "y": 20,
+              "width": 100,
+              "height": 48
+            },
+            {
+              "name": "s2_ATB_txt",
+              "type": "label",
+              "text": "--------",
+              "size": 22,
+              "align": "center",
+              "color": 4294967295,
+              "x": -240,
+              "y": -15,
+              "width": 120,
+              "height": 48
+            },
+            {
+              "name": "s2_RWD_txt",
+              "type": "label",
+              "text": "--积分",
+              "size": 22,
+              "align": "center",
+              "color": 4294967295,
+              "x": 145,
+              "y": -15,
+              "width": 100,
+              "height": 48
+            },
+            {
+              "name": "s2_slot_1",
+              "type": "node",
+              "x": -65,
+              "y": 10,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_common_DaoJuKuang1.png",
+                  "width": 80,
+                  "height": 80
+                }
+              ]
+            },
+            {
+              "name": "s2_slot_2",
+              "type": "node",
+              "x": 25,
+              "y": 10,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_common_DaoJuKuang1.png",
+                  "width": 80,
+                  "height": 80
+                }
+              ]
+            },
+            {
+              "name": "s2_slot_3",
+              "type": "node",
+              "x": 115,
+              "y": 10,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_common_DaoJuKuang1.png",
+                  "width": 80,
+                  "height": 80
+                }
+              ]
+            },
+            {
+              "name": "s2_star_node",
+              "type": "node",
+              "x": -181,
+              "y": 64,
+              "children": {}
+            }
+          ]
+        },
+        {
+          "name": "selection_3_node",
+          "type": "node",
+          "x": 0,
+          "y": -170,
+          "children": [
+            {
+              "name": "selection_3_sel",
+              "type": "btn",
+              "img_normal": "#ui_bloodwar_sel_1.png",
+              "img_down": "#ui_bloodwar_sel_2.png"
+            },
+            {
+              "name": "selection_3_selected",
+              "type": "sprite",
+              "img": "#ui_bloodwar_sel_2.png",
+              "x": 0,
+              "y": 0,
+              "width": 512,
+              "height": 141
+            },
+            {
+              "type": "label",
+              "text": "战斗力",
+              "size": 22,
+              "align": "center",
+              "color": 4291297535,
+              "outlineColor": 4278190080,
+              "x": -240,
+              "y": 20,
+              "width": 120,
+              "height": 48
+            },
+            {
+              "type": "label",
+              "text": "奖励",
+              "size": 22,
+              "align": "center",
+              "color": 4291297535,
+              "outlineColor": 4278190080,
+              "x": 145,
+              "y": 20,
+              "width": 100,
+              "height": 48
+            },
+            {
+              "name": "s3_ATB_txt",
+              "type": "label",
+              "text": "--------",
+              "size": 22,
+              "align": "center",
+              "color": 4294967295,
+              "x": -240,
+              "y": -15,
+              "width": 120,
+              "height": 48
+            },
+            {
+              "name": "s3_RWD_txt",
+              "type": "label",
+              "text": "--积分",
+              "size": 22,
+              "align": "center",
+              "color": 4294967295,
+              "x": 145,
+              "y": -15,
+              "width": 100,
+              "height": 48
+            },
+            {
+              "name": "s3_slot_1",
+              "type": "node",
+              "x": -65,
+              "y": 10,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_common_DaoJuKuang1.png",
+                  "width": 80,
+                  "height": 80
+                }
+              ]
+            },
+            {
+              "name": "s3_slot_2",
+              "type": "node",
+              "x": 25,
+              "y": 10,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_common_DaoJuKuang1.png",
+                  "width": 80,
+                  "height": 80
+                }
+              ]
+            },
+            {
+              "name": "s3_slot_3",
+              "type": "node",
+              "x": 115,
+              "y": 10,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_common_DaoJuKuang1.png",
+                  "width": 80,
+                  "height": 80
+                }
+              ]
+            },
+            {
+              "name": "s3_star_node",
+              "type": "node",
+              "x": -181,
+              "y": 64,
+              "children": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ATK_panel",
+      "type": "node",
+      "left": 165,
+      "bottom": 40,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_zhandouli.png",
+          "width": 340,
+          "height": 60
+        },
+        {
+          "name": "player_ATB_txt",
+          "type": "label",
+          "text": "当前队伍战斗力：999999999",
+          "size": 20,
+          "align": "left",
+          "color": 4294967295,
+          "x": -150,
+          "y": -2,
+          "width": 300,
+          "height": 40
+        }
+      ]
+    },
+    {
+      "name": "txt_leftreset",
+      "type": "label",
+      "text": "剩余重置次数:?",
+      "align": "center",
+      "size": 30,
+      "color": 4294967295,
+      "x": -154,
+      "y": -296,
+      "width": 284,
+      "height": 38
+    },
+    {
+      "type": "node",
+      "x": 307,
+      "y": -321.5,
+      "width": 118,
+      "height": 122,
+      "children": [
+        {
+          "name": "buzhen",
+          "type": "btn",
+          "img_normal": "#ui_main_Z_ico-bg0003.png",
+          "img_down": "#ui_main_Z_ico-bg0004.png",
+          "x": 1.5,
+          "y": 5.5,
+          "width": 101,
+          "height": 111
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_Z_ico-BuZhen.png",
+          "x": 1,
+          "y": 12.5,
+          "width": 94,
+          "height": 79
+        },
+        {
+          "type": "sprite",
+          "img": "#t_buzhen_cn.png",
+          "y": -42,
+          "width": 118,
+          "height": 38
+        }
+      ]
+    },
+    {
+      "type": "node",
+      "x": 429.35,
+      "y": -321.53,
+      "width": 118,
+      "height": 121.45,
+      "children": [
+        {
+          "name": "zhandouli",
+          "type": "btn",
+          "img_normal": "#ui_main_Z_ico-bg0003.png",
+          "img_down": "#ui_main_Z_ico-bg0004.png",
+          "x": 2.5,
+          "y": 4.23,
+          "width": 101,
+          "height": 111
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_Z_ico-ZhuangBei.png",
+          "x": 4,
+          "y": 18.73,
+          "width": 88,
+          "height": 84
+        },
+        {
+          "type": "sprite",
+          "img": "#t_zhuangbei_cn.png",
+          "y": -41.73,
+          "width": 118,
+          "height": 38
+        }
+      ]
+    }
+  ]
+}

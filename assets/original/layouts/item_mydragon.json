@@ -1,0 +1,209 @@
+{
+  "group": [
+    "ui_mydragon",
+    "ui_star"
+  ],
+  "width": 287,
+  "height": 459,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_mydragon_diban1.png",
+      "width": 287,
+      "height": 459
+    },
+    {
+      "name": "pinzhi",
+      "type": "node",
+      "x": -0.5,
+      "y": 93.65,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "dragon_name_shadow",
+      "type": "label",
+      "text": "神圣的中国龙",
+      "align": "center",
+      "size": 25,
+      "color": 255,
+      "x": -83,
+      "y": 202.9,
+      "width": 188,
+      "height": 32.1
+    },
+    {
+      "name": "dragon_name",
+      "type": "label",
+      "text": "神圣的中国龙",
+      "align": "center",
+      "size": 25,
+      "color": 4294967295,
+      "x": -83,
+      "y": 204.9,
+      "width": 188,
+      "height": 32.1
+    },
+    {
+      "name": "icon_dragon",
+      "type": "node",
+      "y": -50,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "lvbg",
+      "type": "sprite",
+      "img": "#ui_mydragon_lvbg.png",
+      "x": -106.5,
+      "y": 142.5,
+      "width": 47,
+      "height": 51
+    },
+    {
+      "name": "level",
+      "type": "label",
+      "text": "55",
+      "align": "center",
+      "size": 30,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -132,
+      "y": 144.07,
+      "width": 47,
+      "height": 37.75
+    },
+    {
+      "name": "type",
+      "type": "node",
+      "x": -106,
+      "y": 81.25,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_mydragon_diban4.png",
+      "y": -180,
+      "width": 241,
+      "height": 99
+    },
+    {
+      "name": "element",
+      "type": "node",
+      "y": -180,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "lv1",
+      "type": "node",
+      "x": -66.65,
+      "y": -101.35,
+      "width": 29,
+      "height": 35,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_star_x0008.png",
+          "width": 29,
+          "height": 35
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "lv2",
+      "type": "node",
+      "x": -33.5,
+      "y": -101.35,
+      "width": 29,
+      "height": 35,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_star_x0008.png",
+          "width": 29,
+          "height": 35
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "lv3",
+      "type": "node",
+      "x": -0.35,
+      "y": -101.35,
+      "width": 29,
+      "height": 35,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_star_x0008.png",
+          "width": 29,
+          "height": 35
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "lv4",
+      "type": "node",
+      "x": 32.8,
+      "y": -101.35,
+      "width": 29,
+      "height": 35,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_star_x0008.png",
+          "width": 29,
+          "height": 35
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "lv5",
+      "type": "node",
+      "x": 65.95,
+      "y": -101.35,
+      "width": 29,
+      "height": 35,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_star_x0008.png",
+          "width": 29,
+          "height": 35
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        }
+      ]
+    }
+  ]
+}

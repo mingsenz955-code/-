@@ -1,0 +1,144 @@
+{
+  "group": [
+    "ui_lotterydragon"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "name": "bg",
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768,
+      "alpha": 0
+    },
+    {
+      "name": "hint",
+      "type": "label",
+      "text": "获得的龙蛋，可在仓库中查看",
+      "align": "center",
+      "size": 22,
+      "color": 4294967295,
+      "x": -450,
+      "y": -174.63,
+      "width": 900,
+      "height": 28.75
+    },
+    {
+      "name": "quit",
+      "type": "node",
+      "x": -91.3,
+      "y": -232.35,
+      "width": 647,
+      "height": 85,
+      "children": [
+        {
+          "name": "coinbg",
+          "type": "sprite",
+          "img": "#ui_common_d2.png",
+          "scale9": 1,
+          "x": -323.5,
+          "y": 2.05,
+          "width": 174,
+          "height": 57,
+          "maxw": 174,
+          "maxh": 57
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "123456",
+          "align": "left",
+          "size": 30,
+          "color": 4294967295,
+          "x": -272.35,
+          "y": 3.48,
+          "width": 110,
+          "height": 37.75
+        },
+        {
+          "name": "icon",
+          "type": "sprite",
+          "img": "#ui_lotterydragon_mojing.png",
+          "x": -294.35,
+          "y": 1.5,
+          "width": 44,
+          "height": 60
+        },
+        {
+          "name": "btn_too",
+          "type": "node",
+          "x": -27.5,
+          "width": 200,
+          "height": 85,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btn_3.png",
+              "img_down": "#ui_common_btn_4.png",
+              "img_disable": "#ui_common_btn_4c.png",
+              "width": 200,
+              "height": 85
+            },
+            {
+              "name": "miaoshu",
+              "type": "label",
+              "text": "再来一次",
+              "align": "center",
+              "size": 30,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -86,
+              "y": 3.63,
+              "width": 170,
+              "height": 37.75
+            }
+          ]
+        },
+        {
+          "name": "btn_yes",
+          "type": "node",
+          "x": 223.5,
+          "width": 200,
+          "height": 85,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btn_3.png",
+              "img_down": "#ui_common_btn_4.png",
+              "img_disable": "#ui_common_btn_4c.png",
+              "width": 200,
+              "height": 85
+            },
+            {
+              "name": "miaoshu",
+              "type": "label",
+              "text": "确    定",
+              "align": "center",
+              "size": 30,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -85.9,
+              "y": 3.63,
+              "width": 170,
+              "height": 37.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "title",
+      "type": "sprite",
+      "img": "#ui_lotterydragon_title.png",
+      "x": 4,
+      "y": 253,
+      "width": 494,
+      "height": 58
+    }
+  ]
+}

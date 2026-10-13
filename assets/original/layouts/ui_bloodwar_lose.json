@@ -1,0 +1,92 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "alpha": 0
+    },
+    {
+      "name": "basenode",
+      "type": "node"
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_invite_dress_rect.png",
+      "width": 530,
+      "height": 360,
+      "scale9": 1,
+      "x": -265.0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "width": 518,
+      "height": 351,
+      "scale9": 1,
+      "x": -259.0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_bloodwar_losepanel.png",
+      "width": 506,
+      "height": 94,
+      "y": 224
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_bloodwar_text_bfailure.png",
+      "width": 188,
+      "height": 78,
+      "y": 191
+    },
+    {
+      "name": "stage",
+      "type": "label",
+      "text": "",
+      "size": 20,
+      "align": "left",
+      "width": 400,
+      "height": 100,
+      "x": -200,
+      "y": 50,
+      "color": 2336560127
+    },
+    {
+      "type": "label",
+      "text": "（提示：确定挑战不过本关，可以点击“重置关卡”按钮，返回第一关开始挑战）",
+      "size": 20,
+      "align": "left",
+      "width": 400,
+      "height": 100,
+      "x": -200,
+      "y": -30,
+      "color": 4278190335
+    },
+    {
+      "type": "node",
+      "y": -110,
+      "children": [
+        {
+          "name": "btn_ok",
+          "type": "maskBtn",
+          "img_normal": "#ui_invite_long_btn_1.png",
+          "img_down": "#ui_invite_long_btn_2.png",
+          "width": 222.4,
+          "height": 59.2
+        },
+        {
+          "type": "label",
+          "text": "确　定",
+          "size": 24,
+          "align": "center",
+          "color": 4294967295,
+          "width": 200,
+          "height": 40,
+          "x": -100
+        }
+      ]
+    }
+  ]
+}

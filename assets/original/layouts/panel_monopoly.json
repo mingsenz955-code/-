@@ -1,0 +1,842 @@
+{
+  "group": [
+    "ui_xianshixiaofei",
+    "ui_dafuweng",
+    "ui_activityxianshi",
+    "ui_guild"
+  ],
+  "width": 940,
+  "height": 666,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "grid": {
+        "x": 108,
+        "y": 111,
+        "width": 46,
+        "height": 27
+      },
+      "x": -452,
+      "y": -9,
+      "width": 917,
+      "height": 633,
+      "maxw": 917,
+      "maxh": 633
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_haoyoulan2.png",
+      "scale9": 1,
+      "grid": {
+        "x": 28,
+        "y": 29,
+        "width": 38,
+        "height": 36
+      },
+      "x": -423,
+      "y": -47,
+      "width": 857,
+      "height": 493,
+      "maxw": 857,
+      "maxh": 493
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "grid": {
+        "x": 25,
+        "y": 20,
+        "width": 10,
+        "height": 10
+      },
+      "x": -452,
+      "y": 283,
+      "width": 914,
+      "height": 55,
+      "maxw": 914,
+      "maxh": 55
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_xianshixiaofei_titlebg.png",
+      "x": 11,
+      "y": 294,
+      "width": 544,
+      "height": 84
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_dafuweng_titile.png",
+      "x": 2,
+      "y": 299,
+      "width": 241,
+      "height": 53
+    },
+    {
+      "type": "label",
+      "text": "小提示：入场券可在“大富翁充值返利”中获得",
+      "align": "center",
+      "size": 16,
+      "color": 858993663,
+      "x": -253,
+      "y": -275,
+      "width": 505,
+      "height": 22
+    },
+    {
+      "name": "btn_close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 448,
+      "y": 297,
+      "width": 80,
+      "height": 86
+    },
+    {
+      "name": "txt_time",
+      "type": "label",
+      "text": "活动时间",
+      "align": "left",
+      "size": 22,
+      "color": 2237154047,
+      "x": -412,
+      "y": 223,
+      "width": 580,
+      "height": 29
+    },
+    {
+      "name": "node_btn_rewardinfo",
+      "type": "node",
+      "x": 371,
+      "y": 222,
+      "width": 119,
+      "height": 39,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_activityxianshi_rb1.png",
+          "img_down": "#ui_activityxianshi_rb2.png",
+          "width": 119,
+          "height": 39
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "奖励介绍",
+          "align": "center",
+          "size": 22,
+          "color": 4294967295,
+          "x": -53,
+          "y": 1,
+          "width": 106,
+          "height": 29
+        }
+      ]
+    },
+    {
+      "name": "node_btn_help",
+      "type": "node",
+      "x": 242,
+      "y": 222,
+      "width": 119,
+      "height": 39,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_activityxianshi_rb1.png",
+          "img_down": "#ui_activityxianshi_rb2.png",
+          "width": 119,
+          "height": 39
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "规则说明",
+          "align": "center",
+          "size": 22,
+          "color": 4294967295,
+          "x": -53,
+          "y": 1,
+          "width": 106,
+          "height": 29
+        }
+      ]
+    },
+    {
+      "name": "node_adv3",
+      "type": "node",
+      "x": 403,
+      "y": -250,
+      "width": 278,
+      "height": 439,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_dafuweng_butu.png",
+          "x": -117,
+          "y": 209,
+          "width": 262,
+          "height": 421
+        },
+        {
+          "name": "node_cost",
+          "type": "node",
+          "x": -117,
+          "y": 94,
+          "width": 230,
+          "height": 47,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_dafuweng_jgk.png",
+              "x": -1,
+              "width": 228,
+              "height": 47
+            },
+            {
+              "name": "txt_cost",
+              "type": "label",
+              "text": "--",
+              "align": "center",
+              "size": 20,
+              "color": 4294967295,
+              "x": -39,
+              "y": -1,
+              "width": 53,
+              "height": 27
+            },
+            {
+              "name": "txt_1",
+              "type": "label",
+              "text": "消耗",
+              "align": "right",
+              "size": 18,
+              "color": 992815615,
+              "x": -117,
+              "y": -2,
+              "width": 44,
+              "height": 24
+            }
+          ]
+        },
+        {
+          "name": "node_have",
+          "type": "node",
+          "x": -117,
+          "y": 42,
+          "width": 230,
+          "height": 47,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_dafuweng_jgk.png",
+              "x": -1,
+              "width": 228,
+              "height": 47
+            },
+            {
+              "name": "txt_cost",
+              "type": "label",
+              "text": "--",
+              "align": "center",
+              "size": 20,
+              "color": 4294967295,
+              "x": -39,
+              "y": -1,
+              "width": 53,
+              "height": 27
+            },
+            {
+              "name": "txt_1",
+              "type": "label",
+              "text": "消耗",
+              "align": "right",
+              "size": 18,
+              "color": 992815615,
+              "x": -117,
+              "y": -2,
+              "width": 44,
+              "height": 24
+            }
+          ]
+        },
+        {
+          "name": "node_buy",
+          "type": "node",
+          "x": -46,
+          "y": 43,
+          "width": 92,
+          "height": 46,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btndh1.png",
+              "img_down": "#ui_common_btndh2.png",
+              "img_disable": "#ui_common_btndh3.png",
+              "width": 92,
+              "height": 46
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "获取",
+              "align": "center",
+              "size": 26,
+              "color": 992815615,
+              "outlineColor": 13941402,
+              "x": -44,
+              "y": -1,
+              "width": 85,
+              "height": 33
+            }
+          ]
+        },
+        {
+          "name": "node_enter",
+          "type": "node",
+          "x": -46,
+          "y": 94,
+          "width": 92,
+          "height": 46,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_guild_btnred1.png",
+              "img_down": "#ui_guild_btnred2.png",
+              "width": 92,
+              "height": 46
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "进入",
+              "align": "center",
+              "size": 26,
+              "color": 992815615,
+              "outlineColor": 13941402,
+              "x": -42,
+              "y": -1,
+              "width": 85,
+              "height": 33
+            }
+          ]
+        },
+        {
+          "type": "label",
+          "text": "掉落道具品质:",
+          "align": "right",
+          "size": 20,
+          "color": 992815615,
+          "x": -232,
+          "y": 142,
+          "width": 137,
+          "height": 27
+        },
+        {
+          "name": "node_quality",
+          "type": "node",
+          "x": -71,
+          "y": 142,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "type": "node",
+          "batchable": true,
+          "x": -116,
+          "y": 229,
+          "width": 278,
+          "height": 418,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_dafuweng_m3.png",
+              "y": 56,
+              "width": 278,
+              "height": 204
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_dafuweng_mm3.png",
+              "x": -1,
+              "y": 184,
+              "width": 265,
+              "height": 51
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_dafuweng_t3.png",
+              "x": -56,
+              "y": -135,
+              "width": 31,
+              "height": 39
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_dafuweng_t3.png",
+              "x": -57,
+              "y": -189,
+              "width": 31,
+              "height": 39
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "node_adv2",
+      "type": "node",
+      "x": 121,
+      "y": -249,
+      "width": 278,
+      "height": 439,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_dafuweng_butu.png",
+          "x": -117,
+          "y": 209,
+          "width": 262,
+          "height": 421
+        },
+        {
+          "name": "node_cost",
+          "type": "node",
+          "x": -117,
+          "y": 94,
+          "width": 230,
+          "height": 47,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_dafuweng_jgk.png",
+              "x": -1,
+              "width": 228,
+              "height": 47
+            },
+            {
+              "name": "txt_cost",
+              "type": "label",
+              "text": "--",
+              "align": "center",
+              "size": 20,
+              "color": 4294967295,
+              "x": -39,
+              "y": -1,
+              "width": 53,
+              "height": 27
+            },
+            {
+              "name": "txt_1",
+              "type": "label",
+              "text": "消耗",
+              "align": "right",
+              "size": 18,
+              "color": 992815615,
+              "x": -117,
+              "y": -2,
+              "width": 44,
+              "height": 24
+            }
+          ]
+        },
+        {
+          "name": "node_have",
+          "type": "node",
+          "x": -117,
+          "y": 42,
+          "width": 230,
+          "height": 47,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_dafuweng_jgk.png",
+              "x": -1,
+              "width": 228,
+              "height": 47
+            },
+            {
+              "name": "txt_cost",
+              "type": "label",
+              "text": "--",
+              "align": "center",
+              "size": 20,
+              "color": 4294967295,
+              "x": -39,
+              "y": -1,
+              "width": 53,
+              "height": 27
+            },
+            {
+              "name": "txt_1",
+              "type": "label",
+              "text": "消耗",
+              "align": "right",
+              "size": 18,
+              "color": 992815615,
+              "x": -117,
+              "y": -2,
+              "width": 44,
+              "height": 24
+            }
+          ]
+        },
+        {
+          "name": "node_buy",
+          "type": "node",
+          "x": -46,
+          "y": 42,
+          "width": 92,
+          "height": 46,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btndh1.png",
+              "img_down": "#ui_common_btndh2.png",
+              "img_disable": "#ui_common_btndh3.png",
+              "width": 92,
+              "height": 46
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "获取",
+              "align": "center",
+              "size": 26,
+              "color": 992815615,
+              "outlineColor": 13941402,
+              "x": -44,
+              "y": -1,
+              "width": 85,
+              "height": 33
+            }
+          ]
+        },
+        {
+          "name": "node_enter",
+          "type": "node",
+          "x": -46,
+          "y": 93,
+          "width": 92,
+          "height": 46,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_guild_btnred1.png",
+              "img_down": "#ui_guild_btnred2.png",
+              "width": 92,
+              "height": 46
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "进入",
+              "align": "center",
+              "size": 26,
+              "color": 992815615,
+              "outlineColor": 13941402,
+              "x": -42,
+              "y": -1,
+              "width": 85,
+              "height": 33
+            }
+          ]
+        },
+        {
+          "type": "label",
+          "text": "掉落道具品质:",
+          "align": "right",
+          "size": 20,
+          "color": 992815615,
+          "x": -232,
+          "y": 142,
+          "width": 137,
+          "height": 27
+        },
+        {
+          "name": "node_quality",
+          "type": "node",
+          "x": -71,
+          "y": 141,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "type": "node",
+          "batchable": true,
+          "x": -117,
+          "y": 229,
+          "width": 278,
+          "height": 416,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_dafuweng_mm2.png",
+              "x": 1,
+              "y": 182,
+              "width": 265,
+              "height": 51
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_dafuweng_m2.png",
+              "y": 55,
+              "width": 278,
+              "height": 204
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_dafuweng_t2.png",
+              "x": -55,
+              "y": -136,
+              "width": 31,
+              "height": 39
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_dafuweng_t2.png",
+              "x": -55,
+              "y": -188,
+              "width": 31,
+              "height": 39
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "node_adv1",
+      "type": "node",
+      "x": -160,
+      "y": -248,
+      "width": 278,
+      "height": 436,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_dafuweng_butu.png",
+          "x": -117,
+          "y": 207,
+          "width": 262,
+          "height": 421
+        },
+        {
+          "name": "node_cost",
+          "type": "node",
+          "x": -117,
+          "y": 93,
+          "width": 230,
+          "height": 47,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_dafuweng_jgk.png",
+              "x": -1,
+              "width": 228,
+              "height": 47
+            },
+            {
+              "name": "txt_cost",
+              "type": "label",
+              "text": "--",
+              "align": "center",
+              "size": 20,
+              "color": 4294967295,
+              "x": -39,
+              "y": -1,
+              "width": 53,
+              "height": 27
+            },
+            {
+              "name": "txt_1",
+              "type": "label",
+              "text": "消耗",
+              "align": "right",
+              "size": 18,
+              "color": 992815615,
+              "x": -117,
+              "y": -2,
+              "width": 44,
+              "height": 24
+            }
+          ]
+        },
+        {
+          "name": "node_have",
+          "type": "node",
+          "x": -117,
+          "y": 41,
+          "width": 230,
+          "height": 47,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_dafuweng_jgk.png",
+              "x": -1,
+              "width": 228,
+              "height": 47
+            },
+            {
+              "name": "txt_cost",
+              "type": "label",
+              "text": "--",
+              "align": "center",
+              "size": 20,
+              "color": 4294967295,
+              "x": -39,
+              "y": -1,
+              "width": 53,
+              "height": 27
+            },
+            {
+              "name": "txt_1",
+              "type": "label",
+              "text": "消耗",
+              "align": "right",
+              "size": 18,
+              "color": 992815615,
+              "x": -117,
+              "y": -2,
+              "width": 44,
+              "height": 24
+            }
+          ]
+        },
+        {
+          "name": "node_buy",
+          "type": "node",
+          "x": -46,
+          "y": 41,
+          "width": 92,
+          "height": 46,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btndh1.png",
+              "img_down": "#ui_common_btndh2.png",
+              "img_disable": "#ui_common_btndh3.png",
+              "width": 92,
+              "height": 46
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "获取",
+              "align": "center",
+              "size": 26,
+              "color": 992815615,
+              "outlineColor": 13941402,
+              "x": -44,
+              "y": -1,
+              "width": 85,
+              "height": 33
+            }
+          ]
+        },
+        {
+          "name": "node_enter",
+          "type": "node",
+          "x": -46,
+          "y": 92,
+          "width": 92,
+          "height": 46,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_guild_btnred1.png",
+              "img_down": "#ui_guild_btnred2.png",
+              "width": 92,
+              "height": 46
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "进入",
+              "align": "center",
+              "size": 26,
+              "color": 992815615,
+              "outlineColor": 13941402,
+              "x": -42,
+              "y": -1,
+              "width": 85,
+              "height": 33
+            }
+          ]
+        },
+        {
+          "type": "label",
+          "text": "掉落道具品质:",
+          "align": "right",
+          "size": 20,
+          "color": 992815615,
+          "x": -232,
+          "y": 141,
+          "width": 137,
+          "height": 27
+        },
+        {
+          "name": "node_quality",
+          "type": "node",
+          "x": -71,
+          "y": 140,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "type": "node",
+          "batchable": true,
+          "x": -110,
+          "y": 227,
+          "width": 278,
+          "height": 413,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_dafuweng_mm1.png",
+              "x": -6,
+              "y": 181,
+              "width": 265,
+              "height": 51
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_dafuweng_t1.png",
+              "x": -64,
+              "y": -136,
+              "width": 31,
+              "height": 39
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_dafuweng_t1.png",
+              "x": -63,
+              "y": -187,
+              "width": 31,
+              "height": 39
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_dafuweng_m1.png",
+              "x": -8,
+              "y": 52,
+              "width": 278,
+              "height": 204
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

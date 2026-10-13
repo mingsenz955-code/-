@@ -1,0 +1,442 @@
+{
+  "group": [
+    "ui_activityxianshi",
+    "ui_daojukuang"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768,
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -266.3,
+      "y": -1.75,
+      "width": 527,
+      "height": 411,
+      "maxw": 527,
+      "maxh": 411
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -272.6,
+      "y": 191.4,
+      "width": 533,
+      "height": 55,
+      "maxw": 533,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "限时神龙奖励",
+      "align": "center",
+      "size": 25,
+      "color": 4294967295,
+      "x": -250.1,
+      "y": 193.95,
+      "width": 493,
+      "height": 32.1
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 232.6,
+      "y": 194.85,
+      "width": 80,
+      "height": 86
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_activityxianshi_kkk.png",
+      "scale9": 1,
+      "x": -233.5,
+      "y": -7.5,
+      "width": 463,
+      "height": 279,
+      "maxw": 463,
+      "maxh": 279
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_activityxianshi_title.png",
+      "x": -2,
+      "y": 130.45,
+      "width": 400,
+      "height": 57
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_activityxianshi_hhh2.png",
+      "x": -2,
+      "y": 137.45,
+      "width": 263,
+      "height": 31
+    },
+    {
+      "name": "item",
+      "type": "node",
+      "x": 168.85,
+      "y": -129.05,
+      "width": 351,
+      "height": 230,
+      "children": [
+        {
+          "name": "item1",
+          "type": "node",
+          "x": -296,
+          "y": 175,
+          "width": 110,
+          "height": 110,
+          "children": [
+            {
+              "name": "add",
+              "type": "sprite",
+              "img": "#ui_daojukuang_DaoJuKuang1.png",
+              "width": 110,
+              "height": 110
+            },
+            {
+              "name": "xiangkuang",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon_long",
+              "type": "node",
+              "x": -0.85,
+              "y": 2.8,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_num",
+              "type": "label",
+              "text": " ",
+              "align": "right",
+              "size": 20,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -37.1,
+              "y": -25.6,
+              "width": 77,
+              "height": 26.5
+            },
+            {
+              "name": "biaoji_pinzhi",
+              "type": "node",
+              "x": -36.35,
+              "y": 38.55,
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "item2",
+          "type": "node",
+          "x": -175.5,
+          "y": 175,
+          "width": 110,
+          "height": 110,
+          "children": [
+            {
+              "name": "add",
+              "type": "sprite",
+              "img": "#ui_daojukuang_DaoJuKuang1.png",
+              "width": 110,
+              "height": 110
+            },
+            {
+              "name": "xiangkuang",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon_long",
+              "type": "node",
+              "x": -0.85,
+              "y": 2.8,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_num",
+              "type": "label",
+              "text": " ",
+              "align": "right",
+              "size": 20,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -37.1,
+              "y": -25.6,
+              "width": 77,
+              "height": 26.5
+            },
+            {
+              "name": "biaoji_pinzhi",
+              "type": "node",
+              "x": -36.35,
+              "y": 38.55,
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "item3",
+          "type": "node",
+          "x": -55,
+          "y": 175,
+          "width": 110,
+          "height": 110,
+          "children": [
+            {
+              "name": "add",
+              "type": "sprite",
+              "img": "#ui_daojukuang_DaoJuKuang1.png",
+              "width": 110,
+              "height": 110
+            },
+            {
+              "name": "xiangkuang",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon_long",
+              "type": "node",
+              "x": -0.85,
+              "y": 2.8,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_num",
+              "type": "label",
+              "text": " ",
+              "align": "right",
+              "size": 20,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -37.1,
+              "y": -25.6,
+              "width": 77,
+              "height": 26.5
+            },
+            {
+              "name": "biaoji_pinzhi",
+              "type": "node",
+              "x": -36.35,
+              "y": 38.55,
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "item4",
+          "type": "node",
+          "x": -296,
+          "y": 55,
+          "width": 110,
+          "height": 110,
+          "children": [
+            {
+              "name": "add",
+              "type": "sprite",
+              "img": "#ui_daojukuang_DaoJuKuang1.png",
+              "width": 110,
+              "height": 110
+            },
+            {
+              "name": "xiangkuang",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon_long",
+              "type": "node",
+              "x": -0.85,
+              "y": 2.8,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_num",
+              "type": "label",
+              "text": " ",
+              "align": "right",
+              "size": 20,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -37.1,
+              "y": -25.6,
+              "width": 77,
+              "height": 26.5
+            },
+            {
+              "name": "biaoji_pinzhi",
+              "type": "node",
+              "x": -36.35,
+              "y": 38.55,
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "item5",
+          "type": "node",
+          "x": -175.5,
+          "y": 55,
+          "width": 110,
+          "height": 110,
+          "children": [
+            {
+              "name": "add",
+              "type": "sprite",
+              "img": "#ui_daojukuang_DaoJuKuang1.png",
+              "width": 110,
+              "height": 110
+            },
+            {
+              "name": "xiangkuang",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon_long",
+              "type": "node",
+              "x": -0.85,
+              "y": 2.8,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_num",
+              "type": "label",
+              "text": " ",
+              "align": "right",
+              "size": 20,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -37.1,
+              "y": -25.6,
+              "width": 77,
+              "height": 26.5
+            },
+            {
+              "name": "biaoji_pinzhi",
+              "type": "node",
+              "x": -36.35,
+              "y": 38.55,
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "item6",
+          "type": "node",
+          "x": -55,
+          "y": 55,
+          "width": 110,
+          "height": 110,
+          "children": [
+            {
+              "name": "add",
+              "type": "sprite",
+              "img": "#ui_daojukuang_DaoJuKuang1.png",
+              "width": 110,
+              "height": 110
+            },
+            {
+              "name": "xiangkuang",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon_long",
+              "type": "node",
+              "x": -0.85,
+              "y": 2.8,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_num",
+              "type": "label",
+              "text": " ",
+              "align": "right",
+              "size": 20,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -37.1,
+              "y": -25.6,
+              "width": 77,
+              "height": 26.5
+            },
+            {
+              "name": "biaoji_pinzhi",
+              "type": "node",
+              "x": -36.35,
+              "y": 38.55,
+              "width": 0,
+              "height": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "btn_yes",
+      "type": "node",
+      "x": -2,
+      "y": -195.35,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png",
+          "img_disable": "#ui_common_btn_2c.png",
+          "width": 144,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "确定",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    }
+  ]
+}

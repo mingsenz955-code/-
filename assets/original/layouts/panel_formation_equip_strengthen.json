@@ -1,0 +1,483 @@
+{
+  "group": [
+    "ui_daojukuang",
+    "ui_PowerUp"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768,
+      "alpha": 0
+    },
+    {
+      "name": "diban_zuo",
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "grid": {
+        "x": 108,
+        "y": 111,
+        "width": 46,
+        "height": 27
+      },
+      "x": -258,
+      "y": 14,
+      "width": 517,
+      "height": 592,
+      "maxw": 517,
+      "maxh": 592
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "grid": {
+        "x": 25,
+        "y": 20,
+        "width": 10,
+        "height": 10
+      },
+      "x": -260,
+      "y": 303,
+      "width": 520,
+      "height": 55,
+      "maxw": 520,
+      "maxh": 55
+    },
+    {
+      "name": "tx_name",
+      "type": "label",
+      "text": "装备强化",
+      "align": "center",
+      "size": 21,
+      "color": 4294967295,
+      "x": -234,
+      "y": 305,
+      "width": 469,
+      "height": 30
+    },
+    {
+      "name": "qianghua",
+      "type": "node",
+      "x": -101,
+      "y": -268,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png",
+          "img_disable": "#ui_common_btn_2c.png",
+          "width": 144,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "强化",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -51,
+          "y": 5,
+          "width": 103,
+          "height": 45
+        }
+      ]
+    },
+    {
+      "name": "qianghuaall",
+      "type": "node",
+      "x": 102,
+      "y": -268,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png",
+          "img_disable": "#ui_common_btn_2c.png",
+          "width": 144,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "强化10次",
+          "align": "center",
+          "size": 28,
+          "color": 4294967295,
+          "x": -63,
+          "y": 5,
+          "width": 127,
+          "height": 35
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_starup_line5.png",
+      "x": 2,
+      "y": -167,
+      "width": 400,
+      "height": 4
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_d1.png",
+      "scale9": 1,
+      "grid": {
+        "x": 10,
+        "y": 12,
+        "width": 11,
+        "height": 8
+      },
+      "x": -17,
+      "y": -197,
+      "width": 146,
+      "height": 30,
+      "maxw": 146,
+      "maxh": 30
+    },
+    {
+      "name": "expense_txt",
+      "type": "label",
+      "text": "消耗：",
+      "align": "right",
+      "size": 22,
+      "color": 1092488703,
+      "x": -122,
+      "y": -196,
+      "width": 74,
+      "height": 29
+    },
+    {
+      "name": "expense_num",
+      "type": "label",
+      "text": "0",
+      "align": "left",
+      "size": 22,
+      "color": 1092488703,
+      "x": -12,
+      "y": -196,
+      "width": 134,
+      "height": 29
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_main_pbar_bg2.png",
+      "scale9": 1,
+      "grid": {
+        "x": 14,
+        "y": 19,
+        "width": 10,
+        "height": 13
+      },
+      "x": -165,
+      "y": 251,
+      "width": 172,
+      "height": 46,
+      "maxw": 172,
+      "maxh": 46
+    },
+    {
+      "name": "txt_ShiWu",
+      "type": "label",
+      "text": "",
+      "align": "right",
+      "size": 24,
+      "color": 858993663,
+      "x": -164,
+      "y": 252,
+      "width": 161,
+      "height": 33
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_starup_qhl1.png",
+      "x": 1,
+      "y": 33,
+      "width": 410,
+      "height": 380
+    },
+    {
+      "name": "stove",
+      "type": "sprite",
+      "img": "#ui_starup_qhl2.png",
+      "x": 1,
+      "y": 33,
+      "width": 410,
+      "height": 380
+    },
+    {
+      "name": "add",
+      "type": "sprite",
+      "img": "#ui_daojukuang_DaoJuKuang1.png",
+      "x": 1,
+      "y": 51,
+      "width": 110,
+      "height": 110
+    },
+    {
+      "name": "xiangkuang",
+      "type": "node",
+      "x": 1,
+      "y": 51,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "icon_long",
+      "type": "node",
+      "x": 0,
+      "y": 54,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "tx_lv",
+      "type": "label",
+      "text": "Lv99",
+      "align": "right",
+      "size": 22,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -35,
+      "y": 23,
+      "width": 77,
+      "height": 29
+    },
+    {
+      "name": "shuxing",
+      "type": "node",
+      "x": -11,
+      "y": -90,
+      "width": 371,
+      "height": 90,
+      "children": [
+        {
+          "name": "shuxing1",
+          "type": "node",
+          "x": 76,
+          "y": 28,
+          "width": 371,
+          "height": 30,
+          "children": [
+            {
+              "name": "miaoshu",
+              "type": "label",
+              "text": "寒冰系防御力：",
+              "align": "right",
+              "size": 20,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -253,
+              "y": 2,
+              "width": 163,
+              "height": 27
+            },
+            {
+              "name": "shuzi",
+              "type": "label",
+              "text": "999999",
+              "align": "justify",
+              "size": 20,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -90,
+              "y": 2,
+              "width": 91,
+              "height": 27
+            },
+            {
+              "name": "fujia",
+              "type": "label",
+              "text": "999999",
+              "align": "justify",
+              "size": 20,
+              "color": 16711935,
+              "outlineColor": 0,
+              "x": 26,
+              "y": 2,
+              "width": 92,
+              "height": 27
+            },
+            {
+              "name": "up_biaoji",
+              "type": "sprite",
+              "img": "#ui_starup_jiantou.png",
+              "x": 2,
+              "y": 2,
+              "width": 45,
+              "height": 30
+            }
+          ]
+        },
+        {
+          "name": "shuxing2",
+          "type": "node",
+          "x": 76,
+          "y": -2,
+          "width": 371,
+          "height": 30,
+          "children": [
+            {
+              "name": "miaoshu",
+              "type": "label",
+              "text": "寒冰系防御力：",
+              "align": "right",
+              "size": 20,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -253,
+              "y": 2,
+              "width": 163,
+              "height": 27
+            },
+            {
+              "name": "shuzi",
+              "type": "label",
+              "text": "999999",
+              "align": "justify",
+              "size": 20,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -90,
+              "y": 2,
+              "width": 91,
+              "height": 27
+            },
+            {
+              "name": "fujia",
+              "type": "label",
+              "text": "999999",
+              "align": "justify",
+              "size": 20,
+              "color": 16711935,
+              "outlineColor": 0,
+              "x": 26,
+              "y": 2,
+              "width": 92,
+              "height": 27
+            },
+            {
+              "name": "up_biaoji",
+              "type": "sprite",
+              "img": "#ui_starup_jiantou.png",
+              "x": 2,
+              "y": 2,
+              "width": 45,
+              "height": 30
+            }
+          ]
+        },
+        {
+          "name": "shuxing3",
+          "type": "node",
+          "x": 76,
+          "y": -32,
+          "width": 371,
+          "height": 30,
+          "children": [
+            {
+              "name": "miaoshu",
+              "type": "label",
+              "text": "寒冰系防御力：",
+              "align": "right",
+              "size": 20,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -253,
+              "y": 2,
+              "width": 163,
+              "height": 27
+            },
+            {
+              "name": "shuzi",
+              "type": "label",
+              "text": "999999",
+              "align": "justify",
+              "size": 20,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -90,
+              "y": 2,
+              "width": 91,
+              "height": 27
+            },
+            {
+              "name": "fujia",
+              "type": "label",
+              "text": "999999",
+              "align": "justify",
+              "size": 20,
+              "color": 16711935,
+              "outlineColor": 0,
+              "x": 26,
+              "y": 2,
+              "width": 92,
+              "height": 27
+            },
+            {
+              "name": "up_biaoji",
+              "type": "sprite",
+              "img": "#ui_starup_jiantou.png",
+              "x": 2,
+              "y": 2,
+              "width": 45,
+              "height": 30
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "zhuangbei_name",
+      "type": "label",
+      "text": " ",
+      "align": "center",
+      "size": 26,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -119,
+      "y": 188,
+      "width": 240,
+      "height": 33
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 242,
+      "y": 303,
+      "width": 80,
+      "height": 86
+    },
+    {
+      "name": "node_showicon",
+      "type": "node",
+      "x": -196,
+      "y": 265,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "node_costiicon",
+      "type": "node",
+      "x": -48,
+      "y": -182,
+      "width": 0,
+      "height": 0
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "group": {},
+  "children": [
+    {
+      "name": "btn",
+      "type": "btn",
+      "img_normal": "#ui_battle_island.png",
+      "img_down": "#ui_battle_island.png",
+      "y": -10.15
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_touxiang2.png",
+      "x": 20.85,
+      "y": 39.5,
+      "width": 61,
+      "height": 61
+    },
+    {
+      "name": "flag",
+      "type": "sprite",
+      "img": "#ui_battle_flag.png",
+      "x": -35.2,
+      "y": 29.5,
+      "width": 36,
+      "height": 59
+    },
+    {
+      "name": "con_head",
+      "type": "node",
+      "x": 20.65,
+      "y": 37.95,
+      "width": 0,
+      "height": 0
+    }
+  ]
+}

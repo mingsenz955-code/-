@@ -1,0 +1,85 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_starup_line_8.png",
+      "y": -36.05,
+      "width": 687,
+      "height": 2
+    },
+    {
+      "name": "con_icon",
+      "type": "node",
+      "x": -302.5,
+      "y": 8.55,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "tx_miaoshu",
+      "type": "label",
+      "text": "每级怎加生命100和暴击等级100",
+      "size": 19,
+      "align": "left",
+      "color": 1092488703,
+      "x": -136.5,
+      "y": 4,
+      "width": 305,
+      "height": 66
+    },
+    {
+      "name": "tx_xiangmu",
+      "type": "label",
+      "text": "啥啥啥啥",
+      "size": 24,
+      "align": "justify",
+      "color": 1092488703,
+      "x": -256.15,
+      "y": 6.9,
+      "width": 115,
+      "height": 31
+    },
+    {
+      "name": "yujin_num",
+      "type": "label",
+      "text": "99",
+      "size": 24,
+      "align": "center",
+      "color": 1092488703,
+      "x": 178.85,
+      "y": 6.9,
+      "width": 68,
+      "height": 31
+    },
+    {
+      "name": "duihuan",
+      "type": "node",
+      "x": 301.1,
+      "y": 4.2,
+      "width": 92,
+      "height": 46,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btndh1.png",
+          "img_down": "#ui_common_btndh2.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "兑换",
+          "size": 30,
+          "align": "center",
+          "color": 992815615,
+          "outlineColor": 13941402,
+          "x": -44,
+          "y": -0.13,
+          "width": 85,
+          "height": 37.75
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "group": {},
+  "children": [
+    {
+      "name": "diban_zuo",
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -182,
+      "width": 364,
+      "height": 502,
+      "maxw": 364,
+      "maxh": 502
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_haoyoulan2.png",
+      "scale9": 1,
+      "x": -150.6,
+      "y": 20.5,
+      "width": 302,
+      "height": 384,
+      "maxw": 302,
+      "maxh": 384
+    },
+    {
+      "name": "txt_max",
+      "type": "label",
+      "text": "",
+      "size": 20,
+      "align": "left",
+      "color": 1092488703,
+      "x": -144.7,
+      "y": -114.05,
+      "width": 290,
+      "height": 96
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_carnival_fg.png",
+      "x": 3,
+      "y": 39.65,
+      "width": 340,
+      "height": 340
+    },
+    {
+      "name": "item_name",
+      "type": "label",
+      "text": "本月赠送冰月龙",
+      "size": 26,
+      "align": "center",
+      "color": 1092488703,
+      "x": -143.7,
+      "y": 165.28,
+      "width": 288,
+      "height": 33.25
+    },
+    {
+      "name": "tx_today",
+      "type": "label",
+      "text": "今日已签",
+      "size": 26,
+      "align": "center",
+      "color": 4278190335,
+      "x": -145.6,
+      "y": -198.88,
+      "width": 293,
+      "height": 33.25
+    },
+    {
+      "name": "jiangli",
+      "type": "node",
+      "x": -0.05,
+      "y": 41.6,
+      "width": 106,
+      "height": 136,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_hhh2.png",
+          "scale9": 1,
+          "x": -53,
+          "width": 106,
+          "height": 136,
+          "maxw": 106,
+          "maxh": 136
+        },
+        {
+          "name": "jiangpin",
+          "type": "node",
+          "x": 41.8,
+          "y": -30.85,
+          "width": 85,
+          "height": 85,
+          "children": [
+            {
+              "name": "diban",
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "x": -42.5,
+              "y": 42.5,
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "x": -42.5,
+              "y": 42.5,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": " ",
+              "size": 22,
+              "align": "right",
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -78.5,
+              "y": 21.58,
+              "width": 73,
+              "height": 28.75
+            }
+          ]
+        },
+        {
+          "name": "tx_daoju",
+          "type": "label",
+          "text": "金币",
+          "size": 18,
+          "align": "center",
+          "color": 1092488703,
+          "x": -48.2,
+          "y": -43.88,
+          "width": 97,
+          "height": 24.25
+        }
+      ]
+    }
+  ]
+}

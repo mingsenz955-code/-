@@ -1,0 +1,138 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -260.3,
+      "y": 2.15,
+      "width": 530,
+      "height": 320,
+      "maxw": 426,
+      "maxh": 227
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -261.9,
+      "y": 133.35,
+      "width": 530,
+      "height": 55,
+      "maxw": 430,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "您的CDKEY",
+      "size": 30,
+      "align": "center",
+      "color": 4294967295,
+      "x": -133.4,
+      "y": 135.9,
+      "width": 300,
+      "height": 32.1
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_haoyoulan2.png",
+      "scale9": 1,
+      "x": -216.6,
+      "y": 8,
+      "width": 440,
+      "height": 170
+    },
+    {
+      "name": "txt_1",
+      "type": "label",
+      "text": "CDKEY1:",
+      "size": 25,
+      "align": "left",
+      "color": 1092488703,
+      "x": -190.15,
+      "y": 37,
+      "width": 120,
+      "height": 50
+    },
+    {
+      "name": "txt_cdkey1",
+      "type": "label",
+      "text": "未解锁",
+      "size": 25,
+      "align": "left",
+      "color": 1092488703,
+      "x": -71.15,
+      "y": 37,
+      "width": 300,
+      "height": 50
+    },
+    {
+      "name": "txt_2",
+      "type": "label",
+      "text": "CDKEY2:",
+      "size": 25,
+      "align": "left",
+      "color": 1092488703,
+      "x": -190.15,
+      "y": -27,
+      "width": 120,
+      "height": 50
+    },
+    {
+      "name": "txt_cdkey2",
+      "type": "label",
+      "text": "未解锁\n解锁条件：孵化出闪电龙",
+      "size": 25,
+      "align": "left",
+      "color": 1092488703,
+      "x": -71.15,
+      "y": -27,
+      "width": 300,
+      "height": 70
+    },
+    {
+      "name": "btn_QueDing",
+      "type": "node",
+      "x": 15.6,
+      "y": -104.5,
+      "width": 144,
+      "height": -100,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "确定",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "name": "btn_close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 249.05,
+      "y": 133
+    }
+  ]
+}

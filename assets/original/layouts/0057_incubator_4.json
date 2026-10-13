@@ -1,0 +1,47 @@
+{
+  "group": [
+    "buildings/0057_incubator_4_g"
+  ],
+  "width": 433,
+  "height": 367,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0057_incubator_4_g_bg.png",
+      "x": 15.55,
+      "y": 204.45
+    },
+    {
+      "name": "egg1",
+      "type": "node",
+      "x": 13,
+      "y": 340.95
+    },
+    {
+      "name": "egg2",
+      "type": "node",
+      "x": 79,
+      "y": 273.95
+    },
+    {
+      "name": "egg3",
+      "type": "node",
+      "x": -75,
+      "y": 225.95
+    },
+    {
+      "name": "egg4",
+      "type": "node",
+      "x": 26,
+      "y": 182.95
+    },
+    {
+      "name": "s1",
+      "type": "sprite",
+      "img": "#0057_incubator_4_g_s1.png",
+      "x": 0.95,
+      "y": 270.95
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "group": {},
+  "children": [
+    {
+      "name": "n1",
+      "type": "node",
+      "x": -397,
+      "y": 115,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "n2",
+      "type": "node",
+      "x": -198.5,
+      "y": 115,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "n3",
+      "type": "node",
+      "y": 115,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "n4",
+      "type": "node",
+      "x": 198.5,
+      "y": 115,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "n5",
+      "type": "node",
+      "x": 397,
+      "y": 115,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "n6",
+      "type": "node",
+      "x": -397,
+      "y": -115,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "n7",
+      "type": "node",
+      "x": -198.5,
+      "y": -115,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "n8",
+      "type": "node",
+      "y": -115,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "n9",
+      "type": "node",
+      "x": 198.5,
+      "y": -115,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "n10",
+      "type": "node",
+      "x": 397,
+      "y": -115,
+      "width": 0,
+      "height": 0
+    }
+  ]
+}

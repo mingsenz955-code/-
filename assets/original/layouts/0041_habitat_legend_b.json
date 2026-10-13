@@ -1,0 +1,40 @@
+{
+  "group": [
+    "buildings/0041_habitat_legend_b_g"
+  ],
+  "width": 405,
+  "height": 340,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0041_habitat_legend_b_g_bg.png",
+      "x": -2.5,
+      "y": 184.95
+    },
+    {
+      "name": "zuobiao1",
+      "type": "node",
+      "x": -84,
+      "y": 277.95
+    },
+    {
+      "name": "zuobiao2",
+      "type": "node",
+      "y": 219.95
+    },
+    {
+      "name": "zuobiao3",
+      "type": "node",
+      "x": 55,
+      "y": 275.95
+    },
+    {
+      "name": "eff",
+      "type": "eff",
+      "eff": "0041_habitat_legend_b_eff",
+      "width": 72.5,
+      "height": 95.75
+    }
+  ]
+}

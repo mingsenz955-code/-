@@ -1,0 +1,197 @@
+{
+  "group": [
+    "ui_entrance"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768,
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -271.3,
+      "y": -10.35,
+      "width": 569,
+      "height": 380,
+      "maxw": 569,
+      "maxh": 380
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -272.9,
+      "y": 167.35,
+      "width": 568.95,
+      "height": 55,
+      "maxw": 568.95,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "修改昵称",
+      "align": "center",
+      "size": 25,
+      "color": 4294967295,
+      "x": -214.4,
+      "y": 169.9,
+      "width": 458,
+      "height": 32.1
+    },
+    {
+      "name": "hint",
+      "type": "label",
+      "text": "为你的牧场起个名字",
+      "align": "left",
+      "size": 28,
+      "color": 1092488703,
+      "x": -199.5,
+      "y": 89.5,
+      "width": 321,
+      "height": 35.5
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_entrance_mingchengshuru.png",
+      "x": 1.5,
+      "y": 5.5,
+      "width": 397,
+      "height": 55
+    },
+    {
+      "name": "player_name",
+      "type": "node",
+      "x": -169.95,
+      "y": 5.2,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "btn_yes",
+      "type": "node",
+      "x": -122.65,
+      "y": -166.35,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "width": 200,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "确定",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -79.5,
+          "y": 4.93,
+          "width": 160,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "name": "btn_no",
+      "type": "node",
+      "x": 163.35,
+      "y": -166.35,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "width": 200,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "取消",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -79.5,
+          "y": 4.93,
+          "width": 160,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "name": "txt",
+      "type": "node",
+      "x": -28.45,
+      "y": -90.05,
+      "width": 341,
+      "height": 60,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "改名花费：",
+          "align": "left",
+          "size": 28,
+          "color": 1092488703,
+          "x": -170.5,
+          "y": 12.25,
+          "width": 161,
+          "height": 35.5
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_08.png",
+          "x": -14.5,
+          "y": 15,
+          "width": 60,
+          "height": 60
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "100",
+          "align": "left",
+          "size": 28,
+          "color": 1092488703,
+          "x": 9.5,
+          "y": 12.25,
+          "width": 161,
+          "height": 35.5
+        }
+      ]
+    },
+    {
+      "name": "txt2",
+      "type": "label",
+      "text": "首次修改昵称免费",
+      "align": "left",
+      "size": 28,
+      "color": 1109331711,
+      "x": -197.95,
+      "y": -78.6,
+      "width": 378.95,
+      "height": 35.5
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -299,
+      "y": -5,
+      "width": 618,
+      "height": 500,
+      "maxw": 618,
+      "maxh": 500
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -298,
+      "y": 212.5,
+      "width": 612,
+      "height": 55,
+      "maxw": 612,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "日志",
+      "size": 25,
+      "align": "center",
+      "color": 4294967295,
+      "x": -267.85,
+      "y": 215.05,
+      "width": 538,
+      "height": 32.1
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_haoyoulan2.png",
+      "scale9": 1,
+      "x": -272.75,
+      "y": -31,
+      "width": 562,
+      "height": 338,
+      "maxw": 562,
+      "maxh": 338
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "x": 8,
+      "y": -32.45,
+      "width": 542,
+      "height": 322
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_goal_di2.png",
+      "scale9": 1,
+      "x": -269.75,
+      "y": 156,
+      "width": 564,
+      "height": 43,
+      "maxw": 564,
+      "maxh": 43
+    },
+    {
+      "name": "txt_event",
+      "type": "label",
+      "text": "事件",
+      "size": 22,
+      "align": "center",
+      "color": 1092488703,
+      "x": -112,
+      "y": 158.88,
+      "width": 405.5,
+      "height": 33.25
+    },
+    {
+      "name": "txt_time",
+      "type": "label",
+      "text": "时间",
+      "size": 22,
+      "align": "center",
+      "color": 1092488703,
+      "x": -266.5,
+      "y": 158.88,
+      "width": 146.55,
+      "height": 33.25
+    },
+    {
+      "name": "btn_GuanBiXiao",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 302.5,
+      "y": 215
+    },
+    {
+      "name": "queding",
+      "type": "node",
+      "x": 4,
+      "y": -246.2,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "确定",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    }
+  ]
+}

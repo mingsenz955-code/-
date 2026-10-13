@@ -1,0 +1,190 @@
+{
+  "group": [
+    "ui_guild",
+    "ui_bgpuzzle"
+  ],
+  "width": 719,
+  "height": 512,
+  "children": [
+    {
+      "name": "hint_name",
+      "type": "label",
+      "text": "公会名称：",
+      "align": "left",
+      "size": 27,
+      "color": 4294967295,
+      "x": -359.4,
+      "y": 234.22,
+      "width": 156,
+      "height": 34.35
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_guild_hahaha.png",
+      "x": 70.9,
+      "y": 234.05,
+      "width": 577,
+      "height": 44
+    },
+    {
+      "name": "guild_name",
+      "type": "node",
+      "x": -202.4,
+      "y": 234.2,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "hint_flag",
+      "type": "label",
+      "text": "公会图标：",
+      "align": "left",
+      "size": 27,
+      "color": 4294967295,
+      "x": -359.4,
+      "y": 144.22,
+      "width": 156,
+      "height": 34.35
+    },
+    {
+      "name": "flag04",
+      "type": "sprite",
+      "img": "#ui_guild_flag04.png",
+      "x": 269.55,
+      "y": 102.95,
+      "width": 123,
+      "height": 135
+    },
+    {
+      "name": "flag03",
+      "type": "sprite",
+      "img": "#ui_guild_flag03.png",
+      "x": 129.9,
+      "y": 102.95,
+      "width": 123,
+      "height": 135
+    },
+    {
+      "name": "flag02",
+      "type": "sprite",
+      "img": "#ui_guild_flag02.png",
+      "x": -9.75,
+      "y": 102.95,
+      "width": 123,
+      "height": 135
+    },
+    {
+      "name": "flag01",
+      "type": "sprite",
+      "img": "#ui_guild_flag01.png",
+      "x": -149.4,
+      "y": 102.95,
+      "width": 123,
+      "height": 135
+    },
+    {
+      "name": "flag_selected",
+      "type": "sprite",
+      "img": "#ui_guild_xuanzhong.png",
+      "x": -151.8,
+      "y": 94.15,
+      "width": 154,
+      "height": 180
+    },
+    {
+      "name": "hint_guild_slogan",
+      "type": "label",
+      "text": "公会宣言：",
+      "align": "left",
+      "size": 27,
+      "color": 4294967295,
+      "x": -359.4,
+      "y": -25.77,
+      "width": 156,
+      "height": 34.35
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_bgpuzzle_dage.png",
+      "scale9": 1,
+      "x": -221.6,
+      "y": -56.05,
+      "width": 577,
+      "height": 111,
+      "maxw": 577,
+      "maxh": 111
+    },
+    {
+      "name": "guild_slogan",
+      "type": "node",
+      "x": -202.4,
+      "y": -8.6,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "hint_guild_price",
+      "type": "label",
+      "text": "花       费：",
+      "align": "left",
+      "size": 27,
+      "color": 4294967295,
+      "x": -359.4,
+      "y": -145.78,
+      "width": 156,
+      "height": 34.35
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_guild_mj1.png",
+      "x": -198.6,
+      "y": -149.55,
+      "width": 46,
+      "height": 64
+    },
+    {
+      "name": "guild_price_num",
+      "type": "label",
+      "text": "00",
+      "align": "left",
+      "size": 27,
+      "color": 4294967295,
+      "x": -179.4,
+      "y": -145.78,
+      "width": 402,
+      "height": 34.35
+    },
+    {
+      "name": "btn_chuangjia",
+      "type": "node",
+      "x": 25.9,
+      "y": -213.55,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "width": 200,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "创建",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -79.5,
+          "y": 4.93,
+          "width": 160,
+          "height": 45.15
+        }
+      ]
+    }
+  ]
+}

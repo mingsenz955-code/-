@@ -1,0 +1,199 @@
+{
+  "group": [
+    "ui_mydragon",
+    "ui_star"
+  ],
+  "width": 287,
+  "height": 546,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_mydragon_diban1.png",
+      "y": 42.35,
+      "width": 287,
+      "height": 459
+    },
+    {
+      "name": "pinzhi",
+      "type": "node",
+      "x": -0.5,
+      "y": 136,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "dragon_name_shadow",
+      "type": "label",
+      "text": "神圣的中国龙",
+      "align": "center",
+      "size": 25,
+      "color": 255,
+      "x": -83,
+      "y": 245.25,
+      "width": 188,
+      "height": 32.1
+    },
+    {
+      "name": "dragon_name",
+      "type": "label",
+      "text": "神圣的中国龙",
+      "align": "center",
+      "size": 25,
+      "color": 4294967295,
+      "x": -83,
+      "y": 247.25,
+      "width": 188,
+      "height": 32.1
+    },
+    {
+      "name": "icon_dragon",
+      "type": "node",
+      "y": -7.65,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "lvbg",
+      "type": "sprite",
+      "img": "#ui_mydragon_lvbg.png",
+      "x": -106.5,
+      "y": 184.85,
+      "width": 47,
+      "height": 51
+    },
+    {
+      "name": "level",
+      "type": "label",
+      "text": "55",
+      "align": "center",
+      "size": 30,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -132,
+      "y": 186.43,
+      "width": 47,
+      "height": 37.75
+    },
+    {
+      "name": "type",
+      "type": "node",
+      "x": -106,
+      "y": 133.6,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "type_position",
+      "type": "node",
+      "x": -106,
+      "y": 83.6,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_mydragon_diban4.png",
+      "y": -143.65,
+      "width": 241,
+      "height": 87
+    },
+    {
+      "name": "element",
+      "type": "node",
+      "y": -143.65,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_mydragon_zhandoulibiaoji.png",
+      "x": -50,
+      "y": -84.5,
+      "width": 78,
+      "height": 25
+    },
+    {
+      "name": "power",
+      "type": "label",
+      "text": "",
+      "align": "left",
+      "font": "yellow_22.fnt",
+      "bmp": 1,
+      "x": -7.95,
+      "y": -86.63,
+      "width": 136,
+      "height": 28.75
+    },
+    {
+      "name": "lv1",
+      "type": "node",
+      "x": -66.3,
+      "y": -50.35,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "lv2",
+      "type": "node",
+      "x": -33.15,
+      "y": -50.35,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "lv3",
+      "type": "node",
+      "y": -50.35,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "lv4",
+      "type": "node",
+      "x": 33.15,
+      "y": -50.35,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "lv5",
+      "type": "node",
+      "x": 66.3,
+      "y": -50.35,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "battle",
+      "type": "node",
+      "x": -1.6,
+      "y": -232,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "width": 200,
+          "height": 85
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "出战",
+          "align": "center",
+          "size": 30,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -85.9,
+          "y": 3.63,
+          "width": 170,
+          "height": 37.75
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,687 @@
+{
+  "group": [
+    "ui_equipformation",
+    "ui_daojukuang"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768,
+      "alpha": 0
+    },
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -300.45,
+      "y": -10.3,
+      "width": 600.95,
+      "height": 410,
+      "maxw": 600.95,
+      "maxh": 410
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_equipformation_bg9.png",
+      "scale9": 1,
+      "x": -266.9,
+      "y": -15.75,
+      "width": 254,
+      "height": 342,
+      "maxw": 254,
+      "maxh": 342
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_equipformation_bg9.png",
+      "scale9": 1,
+      "x": 3.1,
+      "y": -15.75,
+      "width": 254,
+      "height": 342,
+      "maxw": 254,
+      "maxh": 342
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -300.35,
+      "y": 187.75,
+      "width": 599,
+      "height": 55,
+      "maxw": 599,
+      "maxh": 55
+    },
+    {
+      "name": "tx_title",
+      "type": "label",
+      "text": "装备来源",
+      "align": "center",
+      "size": 21,
+      "color": 4294967295,
+      "x": -273.45,
+      "y": 189.17,
+      "width": 525,
+      "height": 29.85
+    },
+    {
+      "name": "add",
+      "type": "sprite",
+      "img": "#ui_daojukuang_DaoJuKuang1.png",
+      "x": -140.7,
+      "y": 72.35,
+      "width": 110,
+      "height": 110
+    },
+    {
+      "name": "xiangkuang",
+      "type": "node",
+      "x": -140.7,
+      "y": 72.35,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "icon_long",
+      "type": "node",
+      "x": -141.55,
+      "y": 75.15,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "tx_lv",
+      "type": "label",
+      "text": "Lv99",
+      "align": "right",
+      "size": 22,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -176.55,
+      "y": 44.33,
+      "width": 77,
+      "height": 28.75
+    },
+    {
+      "name": "tx_name",
+      "type": "label",
+      "text": "装备名称",
+      "align": "center",
+      "size": 21,
+      "color": 1411781375,
+      "x": -252.8,
+      "y": -8.38,
+      "width": 224,
+      "height": 29.85
+    },
+    {
+      "name": "shuxing3",
+      "type": "node",
+      "x": -140.03,
+      "y": -121.33,
+      "width": 225.55,
+      "height": 29.85,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "生命：",
+          "align": "justify",
+          "size": 21,
+          "color": 1411781375,
+          "x": -112.78,
+          "width": 81.95,
+          "height": 29.85
+        },
+        {
+          "name": "shuzi",
+          "type": "label",
+          "text": "9999 - 9999",
+          "align": "justify",
+          "size": 21,
+          "color": 6684927,
+          "x": -30.23,
+          "width": 143,
+          "height": 29.85
+        }
+      ]
+    },
+    {
+      "name": "shuxing2",
+      "type": "node",
+      "x": -140.03,
+      "y": -83.67,
+      "width": 225.55,
+      "height": 29.85,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "生命：",
+          "align": "justify",
+          "size": 21,
+          "color": 1411781375,
+          "x": -112.78,
+          "width": 81.95,
+          "height": 29.85
+        },
+        {
+          "name": "shuzi",
+          "type": "label",
+          "text": "9999 - 9999",
+          "align": "justify",
+          "size": 21,
+          "color": 6684927,
+          "x": -30.23,
+          "width": 143,
+          "height": 29.85
+        }
+      ]
+    },
+    {
+      "name": "shuxing1",
+      "type": "node",
+      "x": -140.03,
+      "y": -46.03,
+      "width": 225.55,
+      "height": 29.85,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "生命：",
+          "align": "justify",
+          "size": 21,
+          "color": 1411781375,
+          "x": -112.78,
+          "width": 81.95,
+          "height": 29.85
+        },
+        {
+          "name": "shuzi",
+          "type": "label",
+          "text": "9999 - 9999",
+          "align": "justify",
+          "size": 21,
+          "color": 6684927,
+          "x": -30.23,
+          "width": 143,
+          "height": 29.85
+        }
+      ]
+    },
+    {
+      "name": "pingding",
+      "type": "node",
+      "x": -139.33,
+      "y": -157.85,
+      "width": 226.95,
+      "height": 27.6,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "装备评定：",
+          "align": "justify",
+          "size": 21,
+          "color": 1411781375,
+          "x": -113.47,
+          "width": 114.95,
+          "height": 27.6
+        },
+        {
+          "name": "shuzi",
+          "type": "label",
+          "text": "99999999",
+          "align": "justify",
+          "size": 21,
+          "color": 2566914303,
+          "x": 0.48,
+          "width": 113,
+          "height": 27.6
+        }
+      ]
+    },
+    {
+      "name": "btn_down",
+      "type": "node",
+      "y": 302,
+      "width": 269,
+      "height": 110,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "x": 3.8,
+          "y": 0.2,
+          "width": 200,
+          "height": 110,
+          "alpha": 0
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_equipformation_jiantouxia.png",
+          "x": 3.8,
+          "y": 26.65,
+          "width": 89,
+          "height": 55
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "获得更多装备",
+          "align": "center",
+          "size": 34,
+          "color": 4291559679,
+          "outlineColor": 0,
+          "x": -134.5,
+          "y": -32.58,
+          "width": 269,
+          "height": 42.25
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_equipformation_dizuo.png",
+      "x": 2.05,
+      "y": -341.5,
+      "width": 760,
+      "height": 85
+    },
+    {
+      "name": "item1",
+      "type": "node",
+      "x": -194.7,
+      "y": -362,
+      "width": 126,
+      "height": 126,
+      "children": [
+        {
+          "name": "add",
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "x": -61.75,
+          "y": 60.25,
+          "width": 110,
+          "height": 110
+        },
+        {
+          "name": "xiangkuang",
+          "type": "node",
+          "x": -61.75,
+          "y": 60.25,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "x": -62.6,
+          "y": 63.05,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "selected",
+          "type": "sprite",
+          "img": "#ui_daojukuang_selected85.png",
+          "x": -63,
+          "y": 63,
+          "width": 126,
+          "height": 126
+        },
+        {
+          "name": "tx_lv",
+          "type": "label",
+          "text": "Lv99",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -97.6,
+          "y": 32.35,
+          "width": 77,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "item2",
+      "type": "node",
+      "x": -65.95,
+      "y": -362,
+      "width": 126,
+      "height": 126,
+      "children": [
+        {
+          "name": "add",
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "x": -61.75,
+          "y": 60.25,
+          "width": 110,
+          "height": 110
+        },
+        {
+          "name": "xiangkuang",
+          "type": "node",
+          "x": -61.75,
+          "y": 60.25,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "x": -62.6,
+          "y": 63.05,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "selected",
+          "type": "sprite",
+          "img": "#ui_daojukuang_selected85.png",
+          "x": -63,
+          "y": 63,
+          "width": 126,
+          "height": 126
+        },
+        {
+          "name": "tx_lv",
+          "type": "label",
+          "text": "Lv99",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -97.6,
+          "y": 32.35,
+          "width": 77,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "item3",
+      "type": "node",
+      "x": 62.8,
+      "y": -362,
+      "width": 126,
+      "height": 126,
+      "children": [
+        {
+          "name": "add",
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "x": -61.75,
+          "y": 60.25,
+          "width": 110,
+          "height": 110
+        },
+        {
+          "name": "xiangkuang",
+          "type": "node",
+          "x": -61.75,
+          "y": 60.25,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "x": -62.6,
+          "y": 63.05,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "selected",
+          "type": "sprite",
+          "img": "#ui_daojukuang_selected85.png",
+          "x": -63,
+          "y": 63,
+          "width": 126,
+          "height": 126
+        },
+        {
+          "name": "tx_lv",
+          "type": "label",
+          "text": "Lv99",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -97.6,
+          "y": 32.35,
+          "width": 77,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "item4",
+      "type": "node",
+      "x": 191.55,
+      "y": -362,
+      "width": 126,
+      "height": 126,
+      "children": [
+        {
+          "name": "add",
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "x": -61.75,
+          "y": 60.25,
+          "width": 110,
+          "height": 110
+        },
+        {
+          "name": "xiangkuang",
+          "type": "node",
+          "x": -61.75,
+          "y": 60.25,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "x": -62.6,
+          "y": 63.05,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "selected",
+          "type": "sprite",
+          "img": "#ui_daojukuang_selected85.png",
+          "x": -63,
+          "y": 63,
+          "width": 126,
+          "height": 126
+        },
+        {
+          "name": "tx_lv",
+          "type": "label",
+          "text": "Lv99",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -97.6,
+          "y": 32.35,
+          "width": 77,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "item5",
+      "type": "node",
+      "x": 320.3,
+      "y": -362,
+      "width": 126,
+      "height": 126,
+      "children": [
+        {
+          "name": "add",
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "x": -61.75,
+          "y": 60.25,
+          "width": 110,
+          "height": 110
+        },
+        {
+          "name": "xiangkuang",
+          "type": "node",
+          "x": -61.75,
+          "y": 60.25,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "x": -62.6,
+          "y": 63.05,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "selected",
+          "type": "sprite",
+          "img": "#ui_daojukuang_selected85.png",
+          "x": -63,
+          "y": 63,
+          "width": 126,
+          "height": 126
+        },
+        {
+          "name": "tx_lv",
+          "type": "label",
+          "text": "Lv99",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -97.6,
+          "y": 32.35,
+          "width": 77,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "hint_box",
+      "type": "node",
+      "x": 128.5,
+      "y": 51.02,
+      "width": 151,
+      "height": 123.95,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_equipformation_box.png",
+          "y": 11.98,
+          "width": 100,
+          "height": 100
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "宝箱抽取",
+          "align": "center",
+          "size": 24,
+          "color": 1411781375,
+          "x": -75.5,
+          "y": -46.48,
+          "width": 151,
+          "height": 31
+        }
+      ]
+    },
+    {
+      "name": "hint_pve",
+      "type": "node",
+      "x": 128.5,
+      "y": -93.72,
+      "width": 243,
+      "height": 157.45,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_equipformation_long.png",
+          "y": 28.72,
+          "width": 100,
+          "height": 100
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "龙境仙踪",
+          "align": "center",
+          "size": 24,
+          "color": 1411781375,
+          "x": -75.5,
+          "y": -29.73,
+          "width": 151,
+          "height": 31
+        },
+        {
+          "name": "hint",
+          "type": "label",
+          "text": "第12章-第12点",
+          "align": "center",
+          "size": 24,
+          "color": 4278190335,
+          "x": -121.5,
+          "y": -63.23,
+          "width": 243,
+          "height": 31
+        }
+      ]
+    },
+    {
+      "name": "hint_activity",
+      "type": "node",
+      "x": 128.5,
+      "y": -83.97,
+      "width": 151,
+      "height": 123.95,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_equipformation_huodong.png",
+          "y": 14.98,
+          "width": 94,
+          "height": 94
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "活动获得",
+          "align": "center",
+          "size": 24,
+          "color": 1411781375,
+          "x": -75.5,
+          "y": -46.48,
+          "width": 151,
+          "height": 31
+        }
+      ]
+    }
+  ]
+}

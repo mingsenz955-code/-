@@ -1,0 +1,76 @@
+{
+  "group": {},
+  "children": [
+    {
+      "name": "huadong",
+      "type": "list",
+      "y": 9.65,
+      "width": 1024,
+      "height": 454,
+      "left": 0,
+      "right": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_d3.png",
+      "scale9": 1,
+      "x": -385.85,
+      "y": -262,
+      "width": 780,
+      "height": 40,
+      "maxw": 780,
+      "maxh": 40
+    },
+    {
+      "name": "goumai_shuoming",
+      "type": "label",
+      "text": "",
+      "size": 20,
+      "align": "left",
+      "color": 4294967295,
+      "x": -371.25,
+      "y": -261.45,
+      "width": 759.95,
+      "height": 26.5
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_main_pbar_bg2.png",
+      "scale9": 1,
+      "x": -470.6,
+      "y": 250.5,
+      "width": 114,
+      "height": 46,
+      "maxw": 114,
+      "maxh": 46
+    },
+    {
+      "name": "txt_MoJing",
+      "type": "label",
+      "text": "999999",
+      "size": 24,
+      "align": "right",
+      "color": 858993663,
+      "x": -470.45,
+      "y": 249.52,
+      "width": 102.95,
+      "height": 33.25
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_main_08.png",
+      "x": -471.85,
+      "y": 249.5,
+      "width": 60,
+      "height": 60
+    },
+    {
+      "name": "btn_MoJing",
+      "type": "btn",
+      "img_normal": "#ui_main_05.png",
+      "img_down": "#ui_main_05-2.png",
+      "x": -343.05,
+      "y": 249.95
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "group": {},
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "mask",
+      "maskRGBA": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 175
+      },
+      "maskAnchor": {
+        "x": 1,
+        "y": 1
+      },
+      "scale9mask": true
+    },
+    {
+      "name": "zuhe",
+      "type": "node",
+      "x": -74.65,
+      "y": 8.68,
+      "width": 687.7,
+      "height": 354.75,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#UI_RW_L_icon_5.png",
+          "x": -238.43,
+          "y": 18.85,
+          "width": 205,
+          "height": 244
+        },
+        {
+          "type": "sprite",
+          "img": "#hint_bg.png",
+          "scale9": 1,
+          "x": -132.98,
+          "y": 16.35,
+          "width": 474,
+          "height": 167,
+          "maxw": 474,
+          "maxh": 167
+        },
+        {
+          "type": "sprite",
+          "img": "#hint_bg_t.png",
+          "x": -148.48,
+          "y": 36.85,
+          "width": 49,
+          "height": 36
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": " ",
+          "align": "center",
+          "size": 25,
+          "color": 1714618623,
+          "x": -115.95,
+          "y": 16.17,
+          "width": 445,
+          "height": 150
+        },
+        {
+          "name": "close",
+          "type": "node",
+          "x": 103.3,
+          "y": -133.82,
+          "width": 200,
+          "height": 85,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btn_3.png",
+              "img_down": "#ui_common_btn_4.png",
+              "width": 200,
+              "height": 85
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "确定",
+              "align": "center",
+              "size": 35,
+              "color": 4294967295,
+              "x": -79,
+              "y": 4.4,
+              "width": 156,
+              "height": 46.2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

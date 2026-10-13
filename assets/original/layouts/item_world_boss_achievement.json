@@ -1,0 +1,277 @@
+{
+  "group": [
+    "ui_world",
+    "ui_daojukuang"
+  ],
+  "width": 490,
+  "height": 160,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_world_diban2.png",
+      "width": 490,
+      "height": 160
+    },
+    {
+      "name": "biaoji_kelingqu",
+      "type": "sprite",
+      "img": "#ui_world_xiewen.png",
+      "x": 64.5,
+      "width": 361,
+      "height": 156
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_world_hengtiao.png",
+      "y": 55,
+      "width": 490,
+      "height": 50
+    },
+    {
+      "name": "tiaojian",
+      "type": "label",
+      "text": " ",
+      "align": "left",
+      "size": 22,
+      "color": 4294967295,
+      "outlineColor": 16711680,
+      "x": -232,
+      "y": 58.63,
+      "width": 248.95,
+      "height": 28.75
+    },
+    {
+      "name": "gift1",
+      "type": "node",
+      "x": -162.55,
+      "y": -19,
+      "width": 110,
+      "height": 110,
+      "children": [
+        {
+          "name": "add",
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "width": 110,
+          "height": 110
+        },
+        {
+          "name": "xiangkuang",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "x": -0.85,
+          "y": 2.8,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -37.1,
+          "y": -25.6,
+          "width": 77,
+          "height": 26.5
+        },
+        {
+          "name": "level",
+          "type": "node",
+          "x": -16.5,
+          "y": -29.1,
+          "width": 55,
+          "height": 26.5,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_world_xiaoheidi.png",
+              "x": -1.5,
+              "y": 1.25,
+              "width": 52,
+              "height": 24
+            },
+            {
+              "name": "txt_level",
+              "type": "label",
+              "text": "",
+              "align": "left",
+              "size": 20,
+              "color": 4294967295,
+              "x": -25.7,
+              "y": 0.95,
+              "width": 53.2,
+              "height": 26.5
+            }
+          ]
+        },
+        {
+          "name": "biaoji_pinzhi",
+          "type": "node",
+          "x": -36.35,
+          "y": 38.55,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "gift2",
+      "type": "node",
+      "x": -48.55,
+      "y": -19,
+      "width": 110,
+      "height": 110,
+      "children": [
+        {
+          "name": "add",
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "width": 110,
+          "height": 110
+        },
+        {
+          "name": "xiangkuang",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "x": -0.85,
+          "y": 2.8,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -37.1,
+          "y": -25.6,
+          "width": 77,
+          "height": 26.5
+        },
+        {
+          "name": "level",
+          "type": "node",
+          "x": -16.5,
+          "y": -29.1,
+          "width": 55,
+          "height": 26.5,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_world_xiaoheidi.png",
+              "x": -1.5,
+              "y": 1.25,
+              "width": 52,
+              "height": 24
+            },
+            {
+              "name": "txt_level",
+              "type": "label",
+              "text": "",
+              "align": "left",
+              "size": 20,
+              "color": 4294967295,
+              "x": -25.7,
+              "y": 0.95,
+              "width": 53.2,
+              "height": 26.5
+            }
+          ]
+        },
+        {
+          "name": "biaoji_pinzhi",
+          "type": "node",
+          "x": -36.35,
+          "y": 38.55,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "biaoji_yilingqu",
+      "type": "sprite",
+      "img": "#ui_world_yilingqu.png",
+      "x": 128.95,
+      "y": -9.5,
+      "width": 89,
+      "height": 89
+    },
+    {
+      "name": "btn",
+      "type": "node",
+      "x": 129.3,
+      "y": -11.35,
+      "width": 154,
+      "height": 46,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_pppp1.png",
+          "img_down": "#ui_common_btn_pppp2.png",
+          "width": 154,
+          "height": 46
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "可领取",
+          "align": "center",
+          "size": 26,
+          "color": 992815615,
+          "outlineColor": 13941402,
+          "x": -73,
+          "y": -0.88,
+          "width": 144,
+          "height": 33.25
+        }
+      ]
+    },
+    {
+      "name": "disable",
+      "type": "node",
+      "x": 129.3,
+      "y": -11.35,
+      "width": 154,
+      "height": 46,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_btn_pppp3.png",
+          "width": 154,
+          "height": 46
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "未达成",
+          "align": "center",
+          "size": 26,
+          "color": 992815615,
+          "outlineColor": 13421772,
+          "x": -73,
+          "y": -0.88,
+          "width": 144,
+          "height": 33.25
+        }
+      ]
+    }
+  ]
+}

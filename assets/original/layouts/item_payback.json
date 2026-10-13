@@ -1,0 +1,114 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -162.5,
+      "y": 7.1,
+      "width": 325.6,
+      "height": 437.4,
+      "maxw": 325.6,
+      "maxh": 437.4
+    },
+    {
+      "name": "goumai_shuzi",
+      "type": "node",
+      "x": 4,
+      "y": -193.1,
+      "width": 170,
+      "height": 85,
+      "children": [
+        {
+          "name": "buy_btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_3_2.png"
+        },
+        {
+          "name": "buy_txt",
+          "type": "label",
+          "text": "购买",
+          "size": 30,
+          "align": "center",
+          "color": 4294967295,
+          "x": -85.5,
+          "y": 4.93,
+          "width": 170,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_WuPinKuan.png",
+      "x": 1.5,
+      "y": 15.95,
+      "width": 202,
+      "height": 202
+    },
+    {
+      "name": "con_img",
+      "type": "node",
+      "x": 1.5,
+      "y": 15.8,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -162.5,
+      "y": 202.5,
+      "width": 325,
+      "height": 55,
+      "maxw": 325,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "充值物品",
+      "size": 22,
+      "align": "center",
+      "color": 4294967295,
+      "x": -137.95,
+      "y": 202.85,
+      "width": 275.45,
+      "height": 30.1
+    },
+    {
+      "name": "rlogo",
+      "type": "sprite",
+      "img": "#ui_shop_payback_panel.png",
+      "x": -92.7,
+      "y": 166.85,
+      "width": 129,
+      "height": 132
+    },
+    {
+      "name": "wlogo",
+      "type": "sprite",
+      "img": "#ui_shop_payback_panel_w.png",
+      "x": -92.7,
+      "y": 166.85,
+      "width": 129,
+      "height": 132
+    },
+    {
+      "name": "tx_power",
+      "type": "label",
+      "text": "送9999魔晶，仅限一次",
+      "size": 22,
+      "align": "left",
+      "color": 4294967295,
+      "outlineColor": 4267533,
+      "x": -76,
+      "y": -56.92,
+      "width": 169,
+      "height": 110.75
+    }
+  ]
+}

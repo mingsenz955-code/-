@@ -1,0 +1,144 @@
+{
+  "group": {},
+  "children": [
+    {
+      "name": "jiangli",
+      "type": "node",
+      "x": 45.4,
+      "y": -70.85,
+      "width": 85,
+      "height": 85,
+      "children": [
+        {
+          "name": "diban",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "",
+          "size": 22,
+          "align": "right",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -78.5,
+          "y": 21.58,
+          "width": 73,
+          "height": 28.75
+        }
+      ]
+    },
+    {
+      "name": "player",
+      "type": "node",
+      "x": -5.6,
+      "y": 70.15,
+      "width": 88.5,
+      "height": 100.3,
+      "children": [
+        {
+          "name": "touxiang_diban",
+          "type": "sprite",
+          "img": "#ui_holytree_touxiang1.png",
+          "x": 7.25,
+          "y": -9.5,
+          "width": 74,
+          "height": 90
+        },
+        {
+          "name": "con_head",
+          "type": "node",
+          "x": 8.05,
+          "y": -3.55,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "zhuangshi",
+          "type": "sprite",
+          "img": "#ui_holytree_dengjixing.png",
+          "x": -22.75,
+          "y": 18.65,
+          "width": 43,
+          "height": 43
+        },
+        {
+          "name": "txt_lv",
+          "type": "label",
+          "text": "",
+          "size": 20,
+          "align": "center",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -38.6,
+          "y": 32.55,
+          "width": 32,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "txt_time",
+      "type": "label",
+      "text": "02:02:02",
+      "size": 20,
+      "align": "center",
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -42.45,
+      "y": -86.95,
+      "width": 91,
+      "height": 26.5
+    },
+    {
+      "name": "qiangduo",
+      "type": "node",
+      "x": 3.9,
+      "y": -125.3,
+      "width": 92,
+      "height": 46,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btndh1.png",
+          "img_down": "#ui_common_btndh2.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "抢夺",
+          "size": 24,
+          "align": "center",
+          "color": 992815615,
+          "outlineColor": 13941402,
+          "x": -37,
+          "y": -0.75,
+          "width": 73,
+          "height": 31
+        }
+      ]
+    }
+  ]
+}

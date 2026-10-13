@@ -1,0 +1,37 @@
+{
+  "group": [
+    "buildings/islandbottom_g"
+  ],
+  "width": 1057,
+  "height": 794,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#islandbottom_g_bg.png"
+    },
+    {
+      "name": "entry",
+      "type": "sprite",
+      "img": "#islandbottom_g_entry.png",
+      "x": 27,
+      "y": 259.85
+    },
+    {
+      "name": "lock",
+      "type": "sprite",
+      "img": "#islandbottom_g_lock.png",
+      "x": 14,
+      "y": 343.45
+    },
+    {
+      "name": "btn",
+      "type": "btn",
+      "img_normal": "#islandbottom_g_bottom_btn.png",
+      "img_down": "#islandbottom_g_bottom_btn.png",
+      "x": 13.55,
+      "y": 257.85,
+      "alpha": 0
+    }
+  ]
+}

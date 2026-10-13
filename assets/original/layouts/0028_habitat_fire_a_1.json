@@ -1,0 +1,43 @@
+{
+  "group": [
+    "buildings/0028_habitat_fire_a_1_g"
+  ],
+  "width": 405,
+  "height": 272,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0028_habitat_fire_a_1_g_bg.png",
+      "x": -1.2,
+      "y": 150.65
+    },
+    {
+      "name": "zuobiao1",
+      "type": "node",
+      "x": -102.95,
+      "y": 140
+    },
+    {
+      "name": "zuobiao2",
+      "type": "node",
+      "x": -23.95,
+      "y": 99
+    },
+    {
+      "name": "zuobiao3",
+      "type": "node",
+      "x": 115,
+      "y": 143
+    },
+    {
+      "name": "eff",
+      "type": "eff",
+      "eff": "0028_habitat_fire_a_1_eff",
+      "x": -0.2,
+      "y": -0.1,
+      "width": 54.55,
+      "height": 30.55
+    }
+  ]
+}

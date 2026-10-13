@@ -1,0 +1,68 @@
+{
+  "group": {},
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768,
+      "alpha": 0
+    },
+    {
+      "name": "diban",
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -388.5,
+      "y": -9.5,
+      "width": 762,
+      "height": 560,
+      "maxw": 762,
+      "maxh": 560
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "x": -6.15,
+      "y": -17.45,
+      "width": 685,
+      "height": 430
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -393.9,
+      "y": 248.6,
+      "width": 749,
+      "height": 55,
+      "maxw": 749,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "奖品预览",
+      "align": "center",
+      "size": 25,
+      "color": 4294967295,
+      "x": -324.9,
+      "y": 250,
+      "width": 632,
+      "height": 31.7
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 353.9,
+      "y": 251,
+      "width": 80,
+      "height": 86
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "group": [
+    "ui_world"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768,
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_world_zhuangshi.png",
+      "x": 380,
+      "y": -102.5,
+      "width": 206,
+      "height": 437
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -296.45,
+      "y": -21,
+      "width": 593,
+      "height": 627,
+      "maxw": 593,
+      "maxh": 627
+    },
+    {
+      "name": "title_panel",
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -294.95,
+      "y": 278.6,
+      "width": 590,
+      "height": 55,
+      "maxw": 590,
+      "maxh": 55
+    },
+    {
+      "name": "title",
+      "type": "label",
+      "text": "成就奖励",
+      "align": "center",
+      "size": 25,
+      "color": 4294967295,
+      "x": -140.95,
+      "y": 279.35,
+      "width": 289.95,
+      "height": 32.1
+    },
+    {
+      "name": "miaoshu",
+      "type": "label",
+      "text": "单日历史最高：",
+      "align": "right",
+      "size": 24,
+      "color": 1092488703,
+      "x": -91.8,
+      "y": 226.88,
+      "width": 235,
+      "height": 33.25
+    },
+    {
+      "name": "damage",
+      "type": "label",
+      "text": "",
+      "align": "left",
+      "size": 24,
+      "color": 3293911807,
+      "x": 143,
+      "y": 226.53,
+      "width": 124,
+      "height": 33.25
+    },
+    {
+      "name": "miaoshu2",
+      "type": "label",
+      "text": "BOSS：",
+      "align": "left",
+      "size": 24,
+      "color": 1092488703,
+      "x": -261.8,
+      "y": 226.88,
+      "width": 103,
+      "height": 33.25
+    },
+    {
+      "name": "boss_name",
+      "type": "node",
+      "x": -118.2,
+      "y": 226.15,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_world_dage.png",
+      "scale9": 1,
+      "x": -256.6,
+      "y": -43.32,
+      "width": 516,
+      "height": 485.95,
+      "maxw": 516,
+      "maxh": 485.95
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "x": 1.4,
+      "y": -43.3,
+      "width": 499,
+      "height": 479
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 267.6,
+      "y": 282.7,
+      "width": 80,
+      "height": 86
+    }
+  ]
+}

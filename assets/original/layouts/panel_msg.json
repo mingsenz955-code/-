@@ -1,0 +1,109 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -190.3,
+      "y": 2.15,
+      "width": 426,
+      "height": 227,
+      "maxw": 426,
+      "maxh": 227
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -191.9,
+      "y": 103.35,
+      "width": 430,
+      "height": 55,
+      "maxw": 430,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "提示",
+      "size": 25,
+      "align": "center",
+      "color": 4294967295,
+      "x": -133.4,
+      "y": 105.9,
+      "width": 300,
+      "height": 32.1
+    },
+    {
+      "name": "btn_QueDing",
+      "type": "node",
+      "x": 15.6,
+      "y": -104.5,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "确定",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_pao.png",
+      "x": 46.6,
+      "y": 8,
+      "width": 300,
+      "height": 130
+    },
+    {
+      "name": "txt",
+      "type": "label",
+      "text": "啊是客户的困了就睡的空间啊圣诞节卡上的黄金卡说的话空间啊是的",
+      "size": 25,
+      "align": "left",
+      "color": 1092488703,
+      "x": -71.15,
+      "y": 7,
+      "width": 263.15,
+      "height": 126
+    },
+    {
+      "name": "btn_close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 219.05,
+      "y": 104
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_long.png",
+      "x": -179,
+      "y": -7,
+      "width": 160,
+      "height": 160
+    }
+  ]
+}

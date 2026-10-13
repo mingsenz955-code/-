@@ -1,0 +1,90 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "alpha": 0
+    },
+    {
+      "name": "diban",
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -419,
+      "y": 2.5,
+      "width": 827,
+      "height": 630,
+      "maxw": 827,
+      "maxh": 630
+    },
+    {
+      "name": "icon",
+      "type": "node",
+      "x": -6.2,
+      "y": 13.3,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "btn_qianwang",
+      "type": "node",
+      "x": -13.6,
+      "y": -297.55,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "去竞技场",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -79,
+          "y": 4.4,
+          "width": 156,
+          "height": 46.2
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -424.4,
+      "y": 295.6,
+      "width": 833,
+      "height": 55,
+      "maxw": 833,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "竞技场开启",
+      "size": 25,
+      "align": "center",
+      "color": 4294967295,
+      "x": -375.4,
+      "y": 297,
+      "width": 765,
+      "height": 31.7
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 384.4,
+      "y": 297
+    }
+  ]
+}

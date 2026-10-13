@@ -1,0 +1,219 @@
+{
+  "group": [
+    "ui_activitytrained",
+    "ui_daojukuang"
+  ],
+  "width": 801,
+  "height": 175,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_activitytrained_bg3.png",
+      "width": 801,
+      "height": 175
+    },
+    {
+      "name": "hint_icon",
+      "type": "node",
+      "x": -315,
+      "y": -18.45,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_activitytrained_biaoji2.png",
+      "x": -241.15,
+      "y": -35.1,
+      "width": 37,
+      "height": 40
+    },
+    {
+      "name": "rank",
+      "type": "label",
+      "text": "",
+      "align": "right",
+      "font": "yellow_70.fnt",
+      "bmp": 1,
+      "x": -390,
+      "y": -36.73,
+      "width": 128,
+      "height": 82.75
+    },
+    {
+      "name": "ranknum6_10",
+      "type": "sprite",
+      "img": "#ui_activitytrained_ranknum6.png",
+      "x": -320.95,
+      "y": -29.5,
+      "width": 124,
+      "height": 55
+    },
+    {
+      "name": "ranknum11_20",
+      "type": "sprite",
+      "img": "#ui_activitytrained_ranknum11.png",
+      "x": -323.45,
+      "y": -31.5,
+      "width": 131,
+      "height": 53
+    },
+    {
+      "name": "item1",
+      "type": "node",
+      "x": -140.05,
+      "y": -21.45,
+      "width": 110,
+      "height": 110,
+      "children": [
+        {
+          "name": "add",
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "width": 110,
+          "height": 110
+        },
+        {
+          "name": "xiangkuang",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "x": -0.85,
+          "y": 2.8,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -37.1,
+          "y": -25.6,
+          "width": 77,
+          "height": 26.5
+        },
+        {
+          "name": "biaoji_pinzhi",
+          "type": "node",
+          "x": -36.35,
+          "y": 38.55,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "item2",
+      "type": "node",
+      "x": -18.05,
+      "y": -21.45,
+      "width": 110,
+      "height": 110,
+      "children": [
+        {
+          "name": "add",
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "width": 110,
+          "height": 110
+        },
+        {
+          "name": "xiangkuang",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "x": -0.85,
+          "y": 2.8,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -37.1,
+          "y": -25.6,
+          "width": 77,
+          "height": 26.5
+        },
+        {
+          "name": "biaoji_pinzhi",
+          "type": "node",
+          "x": -36.35,
+          "y": 38.55,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "btn_lingqu",
+      "type": "node",
+      "x": 288.9,
+      "y": -18.35,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png",
+          "img_disable": "#ui_common_btn_2c.png",
+          "width": 144,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "领取",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "name": "rank_num",
+      "type": "label",
+      "text": " ",
+      "align": "left",
+      "size": 23,
+      "color": 1092488703,
+      "outlineColor": 0,
+      "x": -387.95,
+      "y": 63.73,
+      "width": 214,
+      "height": 29.85
+    },
+    {
+      "name": "yilingqu",
+      "type": "sprite",
+      "img": "#ui_activitytrained_yilingqu.png",
+      "x": 288.5,
+      "y": -13.95,
+      "width": 145,
+      "height": 84
+    }
+  ]
+}

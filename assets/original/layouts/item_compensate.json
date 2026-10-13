@@ -1,0 +1,91 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -162.5,
+      "y": 7.1,
+      "width": 325.6,
+      "height": 437.4,
+      "maxw": 325.6,
+      "maxh": 437.4
+    },
+    {
+      "name": "lingqu",
+      "type": "node",
+      "x": 4,
+      "y": -193.1,
+      "width": 170,
+      "height": 85,
+      "children": [
+        {
+          "name": "get_btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_3_2.png"
+        },
+        {
+          "name": "get_txt",
+          "type": "label",
+          "text": "receive",
+          "size": 30,
+          "align": "center",
+          "color": 4294967295,
+          "x": -85.5,
+          "y": 4.93,
+          "width": 170,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_WuPinKuan.png",
+      "x": 1.5,
+      "y": 15.95,
+      "width": 202,
+      "height": 202
+    },
+    {
+      "name": "con_img",
+      "type": "node",
+      "x": 1.5,
+      "y": 15.8,
+      "width": 0,
+      "height": 0,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#thumbs_store_box006.png",
+          "width": 110,
+          "height": 110
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -162.5,
+      "y": 202.5,
+      "width": 325,
+      "height": 55,
+      "maxw": 325,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "Compensate Gift",
+      "size": 22,
+      "align": "center",
+      "color": 4294967295,
+      "x": -137.95,
+      "y": 202.85,
+      "width": 275.45,
+      "height": 640
+    }
+  ]
+}

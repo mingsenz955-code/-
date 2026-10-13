@@ -1,0 +1,104 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -210.3,
+      "y": -14.35,
+      "width": 593,
+      "height": 500,
+      "maxw": 593,
+      "maxh": 500
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -211.9,
+      "y": 223.35,
+      "width": 600,
+      "height": 55,
+      "maxw": 600,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "提示",
+      "size": 25,
+      "align": "center",
+      "color": 4294967295,
+      "x": -146.4,
+      "y": 225.9,
+      "width": 450,
+      "height": 32.1
+    },
+    {
+      "name": "gold_bg",
+      "type": "sprite",
+      "img": "#ui_common_tip1.png",
+      "scale9": 1,
+      "x": -165,
+      "y": 126.5,
+      "width": 492,
+      "height": 127,
+      "maxw": 492,
+      "maxh": 127
+    },
+    {
+      "name": "shuoming",
+      "type": "label",
+      "text": "魔晶可用于孵化加速，占卜抽龙，购买各种道具等，让你变得更强力！",
+      "size": 22,
+      "align": "left",
+      "color": 1092488703,
+      "x": -137,
+      "y": 127.25,
+      "width": 430,
+      "height": 81
+    },
+    {
+      "name": "btn_close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 371.3,
+      "y": 224.15
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_haoyoulan2.png",
+      "scale9": 1,
+      "x": -186.4,
+      "y": -92.1,
+      "width": 548,
+      "height": 265,
+      "maxw": 548,
+      "maxh": 265
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "x": 88.7,
+      "y": -91.8,
+      "width": 535,
+      "height": 251
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_carnival_mm.png",
+      "x": -297.1,
+      "y": -40.1,
+      "width": 256,
+      "height": 415
+    }
+  ]
+}

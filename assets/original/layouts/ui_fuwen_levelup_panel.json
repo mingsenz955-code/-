@@ -1,0 +1,278 @@
+{
+  "group": [
+    "ui_fuwen"
+  ],
+  "width": 414,
+  "height": 679,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "grid": {
+        "x": 55,
+        "y": 111,
+        "width": 169,
+        "height": 27
+      },
+      "x": -207,
+      "y": -15,
+      "width": 404,
+      "height": 605,
+      "maxw": 404,
+      "maxh": 605
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "grid": {
+        "x": 25,
+        "y": 20,
+        "width": 10,
+        "height": 10
+      },
+      "x": -206,
+      "y": 277,
+      "width": 404,
+      "height": 55,
+      "maxw": 404,
+      "maxh": 55
+    },
+    {
+      "name": "node_btn_shengji",
+      "type": "node",
+      "x": -4,
+      "y": -297,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png",
+          "img_disable": "#ui_common_btn_2c.png",
+          "width": 144,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "升级",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -51,
+          "y": 5,
+          "width": 103,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "xxx",
+      "align": "left",
+      "size": 22,
+      "color": 1783772159,
+      "x": -55,
+      "y": 195,
+      "width": 141,
+      "height": 29
+    },
+    {
+      "name": "txt_lv",
+      "type": "label",
+      "text": "xxx",
+      "align": "left",
+      "size": 22,
+      "color": 1783772159,
+      "x": -55,
+      "y": 161,
+      "width": 82,
+      "height": 29
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "x": -4,
+      "y": -95,
+      "width": 359,
+      "height": 294
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_fuwen_fenge.png",
+      "x": -2,
+      "y": -248,
+      "width": 348,
+      "height": 9
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_fuwen_fenge.png",
+      "x": -4,
+      "y": 52,
+      "width": 348,
+      "height": 9
+    },
+    {
+      "name": "node_progress",
+      "type": "node",
+      "x": -3,
+      "y": 117,
+      "width": 302,
+      "height": 28,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_fuwen_xp1.png",
+          "width": 302,
+          "height": 28
+        },
+        {
+          "name": "node_progress_container",
+          "type": "node",
+          "x": 0,
+          "y": -1,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_percent",
+          "type": "label",
+          "text": "xxx",
+          "align": "center",
+          "size": 18,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -142,
+          "y": 0,
+          "width": 282,
+          "height": 24
+        }
+      ]
+    },
+    {
+      "name": "ckb_all",
+      "type": "ckb",
+      "img_on": "#ui_fuwen_x2.png",
+      "img_off": "#ui_fuwen_x2.png",
+      "x": 141,
+      "y": 77
+    },
+    {
+      "name": "txt_addinfo",
+      "type": "label",
+      "text": "请选择要融合的符文:",
+      "align": "left",
+      "size": 20,
+      "color": 1783772159,
+      "x": -175,
+      "y": 76,
+      "width": 207,
+      "height": 29
+    },
+    {
+      "name": "txt_1",
+      "type": "label",
+      "text": "全选",
+      "align": "right",
+      "size": 20,
+      "color": 1783772159,
+      "x": 60,
+      "y": 77,
+      "width": 59,
+      "height": 26
+    },
+    {
+      "name": "node_showitem",
+      "type": "node",
+      "x": -117,
+      "y": 193,
+      "width": 102,
+      "height": 102,
+      "children": [
+        {
+          "name": "image_off",
+          "type": "sprite",
+          "img": "#ui_fuwen_fuk0.png",
+          "x": 3,
+          "y": -1,
+          "width": 102,
+          "height": 102
+        },
+        {
+          "name": "image_on",
+          "type": "sprite",
+          "img": "#ui_fuwen_fuk1.png",
+          "x": 3,
+          "y": -1,
+          "width": 102,
+          "height": 102
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "x": 4,
+          "y": -4,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "image",
+          "type": "node",
+          "x": 3,
+          "y": -1,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "eff",
+          "type": "node",
+          "x": 3,
+          "y": -2,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -33,
+          "y": -30,
+          "width": 77,
+          "height": 27
+        }
+      ]
+    },
+    {
+      "name": "btn_close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 167,
+      "y": 297,
+      "width": 80,
+      "height": 86
+    },
+    {
+      "name": "txt_title",
+      "type": "label",
+      "text": "符文升级",
+      "align": "center",
+      "size": 24,
+      "color": 4294967295,
+      "x": -108,
+      "y": 280,
+      "width": 210,
+      "height": 31
+    }
+  ]
+}

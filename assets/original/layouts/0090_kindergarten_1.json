@@ -1,0 +1,53 @@
+{
+  "group": [
+    "buildings/0090_kindergarten_1_g"
+  ],
+  "width": 500,
+  "height": 439,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0090_kindergarten_1_g_bg.png",
+      "x": -0.95,
+      "y": 231.5
+    },
+    {
+      "name": "zuobiao1",
+      "type": "node",
+      "x": -102,
+      "y": 169
+    },
+    {
+      "name": "zuobiao2",
+      "type": "node",
+      "x": -49,
+      "y": 104
+    },
+    {
+      "name": "zuobiao3",
+      "type": "node",
+      "x": 80,
+      "y": 88
+    },
+    {
+      "name": "zuobiao4",
+      "type": "node",
+      "x": 156,
+      "y": 197
+    },
+    {
+      "name": "zuobiao5",
+      "type": "node",
+      "x": 125,
+      "y": 170
+    },
+    {
+      "name": "eff",
+      "type": "eff",
+      "eff": "0090_kindergarten_1_eff",
+      "width": 65,
+      "height": 166
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "group": [
+    "ui_Start",
+    "ui_login"
+  ],
+  "width": 953,
+  "height": 650,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#ui_start_start.png",
+      "x": 0,
+      "y": 0,
+      "width": 409,
+      "height": 401
+    },
+    {
+      "name": "left",
+      "type": "node",
+      "x": -328.45,
+      "y": -6,
+      "width": 273,
+      "height": 612,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_login_9gbg.png",
+          "scale9": 2,
+          "grid": {
+            "x": 18,
+            "y": 17.5,
+            "width": 36,
+            "height": 35
+          },
+          "x": -136.5,
+          "width": 273,
+          "height": 612,
+          "maxw": 273,
+          "maxh": 612
+        },
+        {
+          "name": "recommend",
+          "type": "node",
+          "x": 0.75,
+          "y": 233.45,
+          "width": 244,
+          "height": 67,
+          "children": [
+            {
+              "name": "btn",
+              "type": "ckb",
+              "img_on": "#ui_login_btn_fuwuqi3.png",
+              "img_off": "#ui_login_btn_fuwuqi1.png"
+            },
+            {
+              "name": "miaoshu",
+              "type": "label",
+              "text": "推荐服务器",
+              "align": "center",
+              "size": 28,
+              "color": 4294967295,
+              "outlineColor": 4135427,
+              "x": -118,
+              "y": 0.1,
+              "width": 235,
+              "height": 35.5
+            }
+          ]
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_login_zhuangshi.png",
+          "x": -0.25,
+          "y": 167.95,
+          "width": 246,
+          "height": 12
+        }
+      ]
+    },
+    {
+      "name": "huadong_left",
+      "type": "list",
+      "x": -328.3,
+      "y": -78.75,
+      "width": 244,
+      "height": 437
+    },
+    {
+      "name": "right",
+      "type": "node",
+      "x": 142.05,
+      "y": -6,
+      "width": 648,
+      "height": 612,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_login_9gbg.png",
+          "scale9": 2,
+          "grid": {
+            "x": 18,
+            "y": 17.5,
+            "width": 36,
+            "height": 35
+          },
+          "x": -324,
+          "width": 648,
+          "height": 612,
+          "maxw": 648,
+          "maxh": 612
+        }
+      ]
+    },
+    {
+      "name": "huadong_right",
+      "type": "list",
+      "x": 143.25,
+      "y": -27.05,
+      "width": 623,
+      "height": 540
+    },
+    {
+      "name": "fanhui",
+      "type": "btn",
+      "img_normal": "#ui_login_close1.png",
+      "img_down": "#ui_login_close2.png",
+      "x": 445.45,
+      "y": 295.45,
+      "width": 85,
+      "height": 85
+    },
+    {
+      "name": "ver",
+      "type": "label",
+      "text": "",
+      "align": "left",
+      "size": 18,
+      "color": 1697913343,
+      "width": 151,
+      "height": 24,
+      "left": 0,
+      "bottom": 0
+    }
+  ]
+}

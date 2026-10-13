@@ -1,0 +1,37 @@
+{
+  "group": {},
+  "children": [
+    {
+      "name": "diban",
+      "type": "sprite",
+      "img": "#ui_common_DaoJuKuang0.png",
+      "width": 85,
+      "height": 85
+    },
+    {
+      "name": "quality",
+      "type": "node",
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "icon",
+      "type": "node",
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "num",
+      "type": "label",
+      "text": "",
+      "size": 22,
+      "align": "right",
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -36,
+      "y": -20.93,
+      "width": 73,
+      "height": 28.75
+    }
+  ]
+}

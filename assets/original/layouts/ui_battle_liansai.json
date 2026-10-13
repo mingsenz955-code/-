@@ -1,0 +1,512 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png"
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_GuanBi1.png",
+      "img_down": "#ui_common_btn_GuanBi2.png",
+      "x": 468.1,
+      "y": 338.9,
+      "right": 43.9
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_battle_jd1.png",
+      "y": 330.5,
+      "width": 510,
+      "height": 60
+    },
+    {
+      "name": "con_tianchong",
+      "type": "node",
+      "y": 330.5,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "联赛",
+      "size": 27,
+      "align": "center",
+      "color": 4294967295,
+      "x": -216.9,
+      "y": 332.93,
+      "width": 431.85,
+      "height": 34.15
+    },
+    {
+      "name": "shijian",
+      "type": "sprite",
+      "img": "#ui_common_d3.png",
+      "scale9": 1,
+      "x": -498.3,
+      "y": 267.85,
+      "width": 240,
+      "height": 33.4,
+      "maxw": 240,
+      "maxh": 33.4
+    },
+    {
+      "name": "tx_time",
+      "type": "label",
+      "text": "距恢复还有08:00:00",
+      "size": 23,
+      "align": "left",
+      "color": 4294967295,
+      "x": -483,
+      "y": 267.02,
+      "width": 215.5,
+      "height": 29.85
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_battle_t2.png",
+      "x": -316,
+      "y": 323,
+      "width": 56,
+      "height": 51
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_battle_t2.png",
+      "x": -382,
+      "y": 323,
+      "width": 56,
+      "height": 51
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_battle_t2.png",
+      "x": -450,
+      "y": 323,
+      "width": 56,
+      "height": 51
+    },
+    {
+      "name": "X1",
+      "type": "sprite",
+      "img": "#ui_battle_t1.png",
+      "x": -450,
+      "y": 323,
+      "width": 56,
+      "height": 51
+    },
+    {
+      "name": "X2",
+      "type": "sprite",
+      "img": "#ui_battle_t1.png",
+      "x": -382,
+      "y": 323,
+      "width": 56,
+      "height": 51
+    },
+    {
+      "name": "X3",
+      "type": "sprite",
+      "img": "#ui_battle_t1.png",
+      "x": -316,
+      "y": 323,
+      "width": 56,
+      "height": 51
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_d3.png",
+      "scale9": 1,
+      "x": -171.85,
+      "y": 267.85,
+      "width": 283,
+      "height": 33.4,
+      "maxw": 283,
+      "maxh": 33.4
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_HuoBi0002.png",
+      "x": 88.4,
+      "y": 271.15,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "name": "tx_jiangli",
+      "type": "label",
+      "text": "完成联赛简历：9999",
+      "size": 23,
+      "align": "left",
+      "color": 4294967295,
+      "x": -159.55,
+      "y": 265.77,
+      "width": 228,
+      "height": 29.85
+    },
+    {
+      "name": "shuaxin",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_shuaxin1.png",
+      "img_down": "#ui_common_btn_shuaxin2.png",
+      "x": 328.65,
+      "y": 338.9,
+      "right": 183.35
+    },
+    {
+      "name": "buzhen",
+      "type": "node",
+      "x": 418.5,
+      "y": -308,
+      "width": 101,
+      "height": 111,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_main_Z_ico-bg0003.png",
+          "img_down": "#ui_main_Z_ico-bg0004.png",
+          "width": 101,
+          "height": 111
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_Z_ico-BuZhen.png",
+          "x": -0.5,
+          "y": 7,
+          "width": 94,
+          "height": 79
+        },
+        {
+          "name": "con_name",
+          "type": "node",
+          "y": -52.5,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "tansuo",
+      "type": "node",
+      "x": 293.5,
+      "y": -308,
+      "width": 103,
+      "height": 111,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_main_Z_ico-bg0003.png",
+          "img_down": "#ui_main_Z_ico-bg0004.png",
+          "x": -1,
+          "width": 101,
+          "height": 111
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_Z_ico-TanSuo.png",
+          "y": 4.5,
+          "width": 103,
+          "height": 80
+        },
+        {
+          "name": "con_name",
+          "type": "node",
+          "x": -1,
+          "y": -52.5,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "long3",
+      "type": "node",
+      "x": -193.43,
+      "y": -316.82,
+      "width": 93.15,
+      "height": 93.65,
+      "children": [
+        {
+          "name": "add",
+          "type": "btn",
+          "img_normal": "#ui_common_kong.png",
+          "img_down": "#ui_common_kong.png",
+          "x": -4.08,
+          "y": -4.32
+        },
+        {
+          "name": "xiangkuang",
+          "type": "node",
+          "x": -4.08,
+          "y": -4.32,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "x": -4.08,
+          "y": -4.32,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "dengji_diban",
+          "type": "sprite",
+          "img": "#ui_battle_v2.png",
+          "x": 30.57,
+          "y": 30.83,
+          "width": 32,
+          "height": 32
+        },
+        {
+          "name": "tx_lv",
+          "type": "label",
+          "text": "99",
+          "size": 17,
+          "align": "center",
+          "color": 255,
+          "x": 17.92,
+          "y": 30.68,
+          "width": 23,
+          "height": 23.1
+        },
+        {
+          "name": "biaoji",
+          "type": "node",
+          "x": -29.08,
+          "y": 17.83,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "long2",
+      "type": "node",
+      "x": -313.43,
+      "y": -316.82,
+      "width": 93.15,
+      "height": 93.65,
+      "children": [
+        {
+          "name": "add",
+          "type": "btn",
+          "img_normal": "#ui_common_kong.png",
+          "img_down": "#ui_common_kong.png",
+          "x": -4.08,
+          "y": -4.32
+        },
+        {
+          "name": "xiangkuang",
+          "type": "node",
+          "x": -4.08,
+          "y": -4.32,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "x": -4.08,
+          "y": -4.32,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "dengji_diban",
+          "type": "sprite",
+          "img": "#ui_battle_v2.png",
+          "x": 30.57,
+          "y": 30.83,
+          "width": 32,
+          "height": 32
+        },
+        {
+          "name": "tx_lv",
+          "type": "label",
+          "text": "99",
+          "size": 17,
+          "align": "center",
+          "color": 255,
+          "x": 17.92,
+          "y": 30.68,
+          "width": 23,
+          "height": 23.1
+        },
+        {
+          "name": "biaoji",
+          "type": "node",
+          "x": -29.08,
+          "y": 17.83,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "long1",
+      "type": "node",
+      "x": -428.43,
+      "y": -316.82,
+      "width": 93.15,
+      "height": 93.65,
+      "children": [
+        {
+          "name": "add",
+          "type": "btn",
+          "img_normal": "#ui_common_kong.png",
+          "img_down": "#ui_common_kong.png",
+          "x": -4.08,
+          "y": -4.32
+        },
+        {
+          "name": "xiangkuang",
+          "type": "node",
+          "x": -4.08,
+          "y": -4.32,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "x": -4.08,
+          "y": -4.32,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "dengji_diban",
+          "type": "sprite",
+          "img": "#ui_battle_v2.png",
+          "x": 30.57,
+          "y": 30.83,
+          "width": 32,
+          "height": 32
+        },
+        {
+          "name": "tx_lv",
+          "type": "label",
+          "text": "99",
+          "size": 17,
+          "align": "center",
+          "color": 255,
+          "x": 17.92,
+          "y": 30.68,
+          "width": 23,
+          "height": 23.1
+        },
+        {
+          "name": "biaoji",
+          "type": "node",
+          "x": -29.08,
+          "y": 17.83,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "txt_teimdoc",
+      "type": "label",
+      "text": "出战的龙:",
+      "size": 25,
+      "align": "justify",
+      "color": 4294967295,
+      "x": -475,
+      "y": -240.63,
+      "width": 316.05,
+      "height": 40.35
+    }
+  ]
+}

@@ -1,0 +1,1049 @@
+{
+  "group": [
+    "thumbs_equip"
+  ],
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -329.3,
+      "y": -16.2,
+      "width": 644,
+      "height": 610,
+      "maxw": 644,
+      "maxh": 610
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -335.6,
+      "y": 276.45,
+      "width": 651,
+      "height": 55,
+      "maxw": 651,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "兑换",
+      "size": 25,
+      "align": "center",
+      "color": 4294967295,
+      "x": -313.1,
+      "y": 279,
+      "width": 607,
+      "height": 32.1
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_haoyoulan2.png",
+      "scale9": 1,
+      "x": -295.5,
+      "y": -51.05,
+      "width": 573,
+      "height": 481,
+      "maxw": 573,
+      "maxh": 481
+    },
+    {
+      "name": "mubiao1",
+      "type": "node",
+      "x": -191.6,
+      "y": 64.48,
+      "width": 160,
+      "height": 218.35,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_hggl.png",
+          "y": 6.67,
+          "width": 160,
+          "height": 205
+        },
+        {
+          "name": "tx_name",
+          "type": "label",
+          "text": "道具名称",
+          "align": "center",
+          "size": 20,
+          "color": 1092488703,
+          "x": -90,
+          "y": 75.82,
+          "width": 180,
+          "height": 26.5
+        },
+        {
+          "name": "jiangpin",
+          "type": "node",
+          "x": 41.85,
+          "y": -24.67,
+          "width": 85,
+          "height": 85,
+          "children": [
+            {
+              "name": "diban",
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "x": -42.5,
+              "y": 42.5,
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "x": -42.5,
+              "y": 42.5,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": " ",
+              "size": 22,
+              "align": "right",
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -78.5,
+              "y": 21.58,
+              "width": 73,
+              "height": 28.75
+            }
+          ]
+        },
+        {
+          "name": "gold_bg",
+          "type": "sprite",
+          "img": "#ui_common_ShuZiKuang.png",
+          "scale9": 1,
+          "x": -31.7,
+          "y": -44.98,
+          "width": 91,
+          "height": 31,
+          "maxw": 91,
+          "maxh": 31
+        },
+        {
+          "name": "shuzi",
+          "type": "label",
+          "text": "999999",
+          "size": 20,
+          "align": "justify",
+          "color": 255,
+          "x": -23.9,
+          "y": -44.67,
+          "width": 73,
+          "height": 26.5
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_arena_xunzhang_s.png",
+          "x": -46.65,
+          "y": -44.17,
+          "width": 31,
+          "height": 35
+        },
+        {
+          "name": "con_cost",
+          "type": "node",
+          "x": -46.65,
+          "y": -44.17,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "duihuan",
+          "type": "node",
+          "x": -0.65,
+          "y": -86.17,
+          "width": 92,
+          "height": 46,
+          "children": [
+            {
+              "name": "btn",
+              "type": "ckb",
+              "img_on": "#ui_common_btndh2.png",
+              "img_off": "#ui_common_btndh1.png",
+              "img_disable": "#ui_common_btndh3.png"
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "兑换",
+              "size": 30,
+              "align": "center",
+              "color": 992815615,
+              "outlineColor": 13941402,
+              "x": -44,
+              "y": -0.13,
+              "width": 85,
+              "height": 37.75
+            }
+          ]
+        },
+        {
+          "name": "biaoqian",
+          "type": "sprite",
+          "img": "#ui_arena_ydh.png",
+          "x": 15.5,
+          "y": -6.78,
+          "width": 92,
+          "height": 61
+        }
+      ]
+    },
+    {
+      "name": "mubiao2",
+      "type": "node",
+      "x": -11.6,
+      "y": 64.48,
+      "width": 160,
+      "height": 218.35,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_hggl.png",
+          "y": 6.67,
+          "width": 160,
+          "height": 205
+        },
+        {
+          "name": "tx_name",
+          "type": "label",
+          "text": "道具名称",
+          "align": "center",
+          "size": 20,
+          "color": 1092488703,
+          "x": -90,
+          "y": 75.82,
+          "width": 180,
+          "height": 26.5
+        },
+        {
+          "name": "jiangpin",
+          "type": "node",
+          "x": 41.85,
+          "y": -24.67,
+          "width": 85,
+          "height": 85,
+          "children": [
+            {
+              "name": "diban",
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "x": -42.5,
+              "y": 42.5,
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "x": -42.5,
+              "y": 42.5,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": " ",
+              "size": 22,
+              "align": "right",
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -78.5,
+              "y": 21.58,
+              "width": 73,
+              "height": 28.75
+            }
+          ]
+        },
+        {
+          "name": "gold_bg",
+          "type": "sprite",
+          "img": "#ui_common_ShuZiKuang.png",
+          "scale9": 1,
+          "x": -31.7,
+          "y": -44.98,
+          "width": 91,
+          "height": 31,
+          "maxw": 91,
+          "maxh": 31
+        },
+        {
+          "name": "shuzi",
+          "type": "label",
+          "text": "999999",
+          "size": 20,
+          "align": "justify",
+          "color": 255,
+          "x": -23.9,
+          "y": -44.67,
+          "width": 73,
+          "height": 26.5
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_arena_xunzhang_s.png",
+          "x": -46.65,
+          "y": -44.17,
+          "width": 31,
+          "height": 35
+        },
+        {
+          "name": "con_cost",
+          "type": "node",
+          "x": -46.65,
+          "y": -44.17,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "duihuan",
+          "type": "node",
+          "x": -0.65,
+          "y": -86.17,
+          "width": 92,
+          "height": 46,
+          "children": [
+            {
+              "name": "btn",
+              "type": "ckb",
+              "img_on": "#ui_common_btndh2.png",
+              "img_off": "#ui_common_btndh1.png",
+              "img_disable": "#ui_common_btndh3.png"
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "兑换",
+              "size": 30,
+              "align": "center",
+              "color": 992815615,
+              "outlineColor": 13941402,
+              "x": -44,
+              "y": -0.13,
+              "width": 85,
+              "height": 37.75
+            }
+          ]
+        },
+        {
+          "name": "biaoqian",
+          "type": "sprite",
+          "img": "#ui_arena_ydh.png",
+          "x": 15.5,
+          "y": -6.78,
+          "width": 92,
+          "height": 61
+        }
+      ]
+    },
+    {
+      "name": "mubiao3",
+      "type": "node",
+      "x": 168.4,
+      "y": 64.48,
+      "width": 160,
+      "height": 218.35,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_hggl.png",
+          "y": 6.67,
+          "width": 160,
+          "height": 205
+        },
+        {
+          "name": "tx_name",
+          "type": "label",
+          "text": "道具名称",
+          "align": "center",
+          "size": 20,
+          "color": 1092488703,
+          "x": -90,
+          "y": 75.82,
+          "width": 180,
+          "height": 26.5
+        },
+        {
+          "name": "jiangpin",
+          "type": "node",
+          "x": 41.85,
+          "y": -24.67,
+          "width": 85,
+          "height": 85,
+          "children": [
+            {
+              "name": "diban",
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "x": -42.5,
+              "y": 42.5,
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "x": -42.5,
+              "y": 42.5,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": " ",
+              "size": 22,
+              "align": "right",
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -78.5,
+              "y": 21.58,
+              "width": 73,
+              "height": 28.75
+            }
+          ]
+        },
+        {
+          "name": "gold_bg",
+          "type": "sprite",
+          "img": "#ui_common_ShuZiKuang.png",
+          "scale9": 1,
+          "x": -31.7,
+          "y": -44.98,
+          "width": 91,
+          "height": 31,
+          "maxw": 91,
+          "maxh": 31
+        },
+        {
+          "name": "shuzi",
+          "type": "label",
+          "text": "999999",
+          "size": 20,
+          "align": "justify",
+          "color": 255,
+          "x": -23.9,
+          "y": -44.67,
+          "width": 73,
+          "height": 26.5
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_arena_xunzhang_s.png",
+          "x": -46.65,
+          "y": -44.17,
+          "width": 31,
+          "height": 35
+        },
+        {
+          "name": "con_cost",
+          "type": "node",
+          "x": -46.65,
+          "y": -44.17,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "duihuan",
+          "type": "node",
+          "x": -0.65,
+          "y": -86.17,
+          "width": 92,
+          "height": 46,
+          "children": [
+            {
+              "name": "btn",
+              "type": "ckb",
+              "img_on": "#ui_common_btndh2.png",
+              "img_off": "#ui_common_btndh1.png",
+              "img_disable": "#ui_common_btndh3.png"
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "兑换",
+              "size": 30,
+              "align": "center",
+              "color": 992815615,
+              "outlineColor": 13941402,
+              "x": -44,
+              "y": -0.13,
+              "width": 85,
+              "height": 37.75
+            }
+          ]
+        },
+        {
+          "name": "biaoqian",
+          "type": "sprite",
+          "img": "#ui_arena_ydh.png",
+          "x": 15.5,
+          "y": -6.78,
+          "width": 92,
+          "height": 61
+        }
+      ]
+    },
+    {
+      "name": "mubiao4",
+      "type": "node",
+      "x": -191.6,
+      "y": -165.53,
+      "width": 160,
+      "height": 218.35,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_hggl.png",
+          "y": 6.67,
+          "width": 160,
+          "height": 205
+        },
+        {
+          "name": "tx_name",
+          "type": "label",
+          "text": "道具名称",
+          "align": "center",
+          "size": 20,
+          "color": 1092488703,
+          "x": -90,
+          "y": 75.82,
+          "width": 180,
+          "height": 26.5
+        },
+        {
+          "name": "jiangpin",
+          "type": "node",
+          "x": 41.85,
+          "y": -24.67,
+          "width": 85,
+          "height": 85,
+          "children": [
+            {
+              "name": "diban",
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "x": -42.5,
+              "y": 42.5,
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "x": -42.5,
+              "y": 42.5,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": " ",
+              "size": 22,
+              "align": "right",
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -78.5,
+              "y": 21.58,
+              "width": 73,
+              "height": 28.75
+            }
+          ]
+        },
+        {
+          "name": "gold_bg",
+          "type": "sprite",
+          "img": "#ui_common_ShuZiKuang.png",
+          "scale9": 1,
+          "x": -31.7,
+          "y": -44.98,
+          "width": 91,
+          "height": 31,
+          "maxw": 91,
+          "maxh": 31
+        },
+        {
+          "name": "shuzi",
+          "type": "label",
+          "text": "999999",
+          "size": 20,
+          "align": "justify",
+          "color": 255,
+          "x": -23.9,
+          "y": -44.67,
+          "width": 73,
+          "height": 26.5
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_arena_xunzhang_s.png",
+          "x": -46.65,
+          "y": -44.17,
+          "width": 31,
+          "height": 35
+        },
+        {
+          "name": "con_cost",
+          "type": "node",
+          "x": -46.65,
+          "y": -44.17,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "duihuan",
+          "type": "node",
+          "x": -0.65,
+          "y": -86.17,
+          "width": 92,
+          "height": 46,
+          "children": [
+            {
+              "name": "btn",
+              "type": "ckb",
+              "img_on": "#ui_common_btndh2.png",
+              "img_off": "#ui_common_btndh1.png",
+              "img_disable": "#ui_common_btndh3.png"
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "兑换",
+              "size": 30,
+              "align": "center",
+              "color": 992815615,
+              "outlineColor": 13941402,
+              "x": -44,
+              "y": -0.13,
+              "width": 85,
+              "height": 37.75
+            }
+          ]
+        },
+        {
+          "name": "biaoqian",
+          "type": "sprite",
+          "img": "#ui_arena_ydh.png",
+          "x": 15.5,
+          "y": -6.78,
+          "width": 92,
+          "height": 61
+        }
+      ]
+    },
+    {
+      "name": "mubiao5",
+      "type": "node",
+      "x": -11.6,
+      "y": -165.53,
+      "width": 160,
+      "height": 218.35,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_hggl.png",
+          "y": 6.67,
+          "width": 160,
+          "height": 205
+        },
+        {
+          "name": "tx_name",
+          "type": "label",
+          "text": "道具名称",
+          "align": "center",
+          "size": 20,
+          "color": 1092488703,
+          "x": -90,
+          "y": 75.82,
+          "width": 180,
+          "height": 26.5
+        },
+        {
+          "name": "jiangpin",
+          "type": "node",
+          "x": 41.85,
+          "y": -24.67,
+          "width": 85,
+          "height": 85,
+          "children": [
+            {
+              "name": "diban",
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "x": -42.5,
+              "y": 42.5,
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "x": -42.5,
+              "y": 42.5,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": " ",
+              "size": 22,
+              "align": "right",
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -78.5,
+              "y": 21.58,
+              "width": 73,
+              "height": 28.75
+            }
+          ]
+        },
+        {
+          "name": "gold_bg",
+          "type": "sprite",
+          "img": "#ui_common_ShuZiKuang.png",
+          "scale9": 1,
+          "x": -31.7,
+          "y": -44.98,
+          "width": 91,
+          "height": 31,
+          "maxw": 91,
+          "maxh": 31
+        },
+        {
+          "name": "shuzi",
+          "type": "label",
+          "text": "999999",
+          "size": 20,
+          "align": "justify",
+          "color": 255,
+          "x": -23.9,
+          "y": -44.67,
+          "width": 73,
+          "height": 26.5
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_arena_xunzhang_s.png",
+          "x": -46.65,
+          "y": -44.17,
+          "width": 31,
+          "height": 35
+        },
+        {
+          "name": "con_cost",
+          "type": "node",
+          "x": -46.65,
+          "y": -44.17,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "duihuan",
+          "type": "node",
+          "x": -0.65,
+          "y": -86.17,
+          "width": 92,
+          "height": 46,
+          "children": [
+            {
+              "name": "btn",
+              "type": "ckb",
+              "img_on": "#ui_common_btndh2.png",
+              "img_off": "#ui_common_btndh1.png",
+              "img_disable": "#ui_common_btndh3.png"
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "兑换",
+              "size": 30,
+              "align": "center",
+              "color": 992815615,
+              "outlineColor": 13941402,
+              "x": -44,
+              "y": -0.13,
+              "width": 85,
+              "height": 37.75
+            }
+          ]
+        },
+        {
+          "name": "biaoqian",
+          "type": "sprite",
+          "img": "#ui_arena_ydh.png",
+          "x": 15.5,
+          "y": -6.78,
+          "width": 92,
+          "height": 61
+        }
+      ]
+    },
+    {
+      "name": "mubiao6",
+      "type": "node",
+      "x": 168.4,
+      "y": -165.53,
+      "width": 160,
+      "height": 218.35,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_hggl.png",
+          "y": 6.67,
+          "width": 160,
+          "height": 205
+        },
+        {
+          "name": "tx_name",
+          "type": "label",
+          "text": "道具名称",
+          "align": "center",
+          "size": 20,
+          "color": 1092488703,
+          "x": -90,
+          "y": 75.82,
+          "width": 180,
+          "height": 26.5
+        },
+        {
+          "name": "jiangpin",
+          "type": "node",
+          "x": 41.85,
+          "y": -24.67,
+          "width": 85,
+          "height": 85,
+          "children": [
+            {
+              "name": "diban",
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "x": -42.5,
+              "y": 42.5,
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "x": -42.5,
+              "y": 42.5,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": " ",
+              "size": 22,
+              "align": "right",
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -78.5,
+              "y": 21.58,
+              "width": 73,
+              "height": 28.75
+            }
+          ]
+        },
+        {
+          "name": "gold_bg",
+          "type": "sprite",
+          "img": "#ui_common_ShuZiKuang.png",
+          "scale9": 1,
+          "x": -31.7,
+          "y": -44.98,
+          "width": 91,
+          "height": 31,
+          "maxw": 91,
+          "maxh": 31
+        },
+        {
+          "name": "shuzi",
+          "type": "label",
+          "text": "999999",
+          "size": 20,
+          "align": "justify",
+          "color": 255,
+          "x": -23.9,
+          "y": -44.67,
+          "width": 73,
+          "height": 26.5
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_arena_xunzhang_s.png",
+          "x": -46.65,
+          "y": -44.17,
+          "width": 31,
+          "height": 35
+        },
+        {
+          "name": "con_cost",
+          "type": "node",
+          "x": -46.65,
+          "y": -44.17,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "duihuan",
+          "type": "node",
+          "x": -0.65,
+          "y": -86.17,
+          "width": 92,
+          "height": 46,
+          "children": [
+            {
+              "name": "btn",
+              "type": "ckb",
+              "img_on": "#ui_common_btndh2.png",
+              "img_off": "#ui_common_btndh1.png",
+              "img_disable": "#ui_common_btndh3.png"
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "兑换",
+              "size": 30,
+              "align": "center",
+              "color": 992815615,
+              "outlineColor": 13941402,
+              "x": -44,
+              "y": -0.13,
+              "width": 85,
+              "height": 37.75
+            }
+          ]
+        },
+        {
+          "name": "biaoqian",
+          "type": "sprite",
+          "img": "#ui_arena_ydh.png",
+          "x": 15.5,
+          "y": -6.78,
+          "width": 92,
+          "height": 61
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_d1.png",
+      "scale9": 1,
+      "x": -102.8,
+      "y": 220.5,
+      "width": 304,
+      "height": 35,
+      "maxw": 304,
+      "maxh": 35
+    },
+    {
+      "name": "tx_time",
+      "type": "label",
+      "text": "00:00:00",
+      "size": 21,
+      "align": "left",
+      "color": 1092488703,
+      "x": 23.5,
+      "y": 221.2,
+      "width": 93,
+      "height": 27.6
+    },
+    {
+      "name": "tx_miaoshu",
+      "type": "label",
+      "text": "刷新倒计时：",
+      "size": 21,
+      "align": "left",
+      "color": 1092488703,
+      "x": -96.5,
+      "y": 221.2,
+      "width": 270,
+      "height": 27.6
+    },
+    {
+      "name": "shuaxin",
+      "type": "node",
+      "x": 201.45,
+      "y": 220,
+      "width": 92,
+      "height": 46,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btndh1.png",
+          "img_down": "#ui_common_btndh2.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "刷新",
+          "size": 26,
+          "align": "center",
+          "color": 992815615,
+          "outlineColor": 13941402,
+          "x": -42,
+          "y": -1.88,
+          "width": 85,
+          "height": 33.25
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_main_pbar_bg2.png",
+      "scale9": 1,
+      "x": -265.4,
+      "y": 222,
+      "width": 152,
+      "height": 46,
+      "maxw": 152,
+      "maxh": 46
+    },
+    {
+      "name": "xunzhang_num",
+      "type": "label",
+      "text": "0000",
+      "size": 24,
+      "align": "left",
+      "color": 1092488703,
+      "x": -251.9,
+      "y": 222,
+      "width": 125,
+      "height": 31
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_arena_xunzhang_m.png",
+      "x": -269.4,
+      "y": 221,
+      "width": 42,
+      "height": 48
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 295.6,
+      "y": 278.2
+    }
+  ]
+}

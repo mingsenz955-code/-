@@ -1,0 +1,309 @@
+{
+  "group": [
+    "ui_star",
+    "ui_FramesAlpha"
+  ],
+  "children": [
+    {
+      "name": "diban_you",
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -245.5,
+      "y": 14.47,
+      "width": 491,
+      "height": 591.95,
+      "maxw": 491,
+      "maxh": 591.95
+    },
+    {
+      "name": "tx_shuoming",
+      "type": "label",
+      "text": "。",
+      "align": "left",
+      "size": 22,
+      "color": 1411781375,
+      "x": -207.75,
+      "y": -91.55,
+      "width": 353,
+      "height": 170.9
+    },
+    {
+      "name": "tx_hongzi",
+      "type": "label",
+      "text": "",
+      "size": 22,
+      "align": "left",
+      "color": 4278190335,
+      "x": -94.25,
+      "y": -18.48,
+      "width": 120.5,
+      "height": 28.75
+    },
+    {
+      "name": "tx_star",
+      "type": "label",
+      "text": "星级：",
+      "size": 22,
+      "align": "left",
+      "color": 1411781375,
+      "x": -196.25,
+      "y": 234.3,
+      "width": 184.9,
+      "height": 32.1
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_starup_line6.png",
+      "x": 2.35,
+      "y": 137.35,
+      "width": 416,
+      "height": 6
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_starup_line6.png",
+      "x": 2.35,
+      "y": -221.65,
+      "width": 416,
+      "height": 6
+    },
+    {
+      "name": "tx_exp",
+      "type": "label",
+      "text": "经验：",
+      "size": 22,
+      "align": "left",
+      "color": 1411781375,
+      "x": -196.25,
+      "y": 199.9,
+      "width": 184.9,
+      "height": 32.1
+    },
+    {
+      "name": "xuanze_miaoshu",
+      "type": "label",
+      "text": "选择要融合的龙：",
+      "size": 22,
+      "align": "justify",
+      "color": 1411781375,
+      "x": -204,
+      "y": 156.72,
+      "width": 254,
+      "height": 28.75
+    },
+    {
+      "name": "huadong_xiao",
+      "type": "list",
+      "x": 2,
+      "y": -41.2,
+      "width": 408,
+      "height": 353
+    },
+    {
+      "name": "mask_btn",
+      "type": "maskBtn",
+      "img_normal": "#ui_common_btn_1.png",
+      "x": 0,
+      "y": 210,
+      "width": 440,
+      "height": 150,
+      "alpha": 0
+    },
+    {
+      "name": "quanxuan",
+      "type": "node",
+      "x": 101.25,
+      "y": 156.5,
+      "width": 98,
+      "height": 30,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_starup_x2.png",
+          "x": -34,
+          "width": 30,
+          "height": 30
+        },
+        {
+          "name": "biaoji",
+          "type": "node",
+          "x": -34,
+          "width": 30,
+          "height": 30,
+          "children": [
+            {
+              "name": "quding_biaoji",
+              "type": "sprite",
+              "img": "#ui_starup_x1.png",
+              "width": 30,
+              "height": 30
+            }
+          ]
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "全选",
+          "size": 22,
+          "align": "justify",
+          "color": 1411781375,
+          "x": -18,
+          "y": -0.38,
+          "width": 67,
+          "height": 28.75
+        }
+      ]
+    },
+    {
+      "name": "jindu",
+      "type": "node",
+      "x": 22.35,
+      "y": 200.82,
+      "width": 302,
+      "height": 28.25,
+      "children": [
+        {
+          "name": "diban",
+          "type": "sprite",
+          "img": "#ui_starup_xp1.png",
+          "y": 0.13,
+          "width": 302,
+          "height": 28
+        },
+        {
+          "name": "tianchong",
+          "type": "node",
+          "y": 0.13,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_shuzi",
+          "type": "label",
+          "text": "",
+          "size": 20,
+          "align": "center",
+          "color": 4294967295,
+          "x": -140,
+          "y": -0.88,
+          "width": 277,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "btn_shengji",
+      "type": "node",
+      "x": 3,
+      "y": -268,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png",
+          "img_disable": "#ui_common_btn_2c.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "升星",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "name": "star1",
+      "type": "node",
+      "x": -112.7,
+      "y": 234.65,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "star2",
+      "type": "node",
+      "x": -79.55,
+      "y": 234.65,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "star3",
+      "type": "node",
+      "x": -46.4,
+      "y": 234.65,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "star4",
+      "type": "node",
+      "x": -13.25,
+      "y": 234.65,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "star5",
+      "type": "node",
+      "x": 19.9,
+      "y": 234.65,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "switch_page_node",
+      "type": "node",
+      "x": 197,
+      "y": 242,
+      "children": [
+        {
+          "name": "switch_page",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png"
+        },
+        {
+          "name": "switch_en_spt",
+          "type": "sprite",
+          "img": "#ui_common_btn_2c.png",
+          "width": 144,
+          "height": 85
+        },
+        {
+          "type": "label",
+          "text": "去培养",
+          "size": 30,
+          "color": 4294967295,
+          "align": "center",
+          "width": 100,
+          "height": 50,
+          "x": -50,
+          "y": 3
+        },
+        {
+          "name": "switch_en_txt",
+          "type": "label",
+          "text": "15级开启",
+          "size": 20,
+          "color": 4278190335,
+          "align": "center",
+          "width": 200,
+          "height": 32,
+          "x": -100,
+          "y": -22
+        }
+      ]
+    }
+  ]
+}

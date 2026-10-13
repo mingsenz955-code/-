@@ -1,0 +1,16 @@
+{
+  "group": [
+    "buildings/0083_caocong_g"
+  ],
+  "width": 100,
+  "height": 80,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0083_caocong_g_bg.png",
+      "x": 2.85,
+      "y": 65.15
+    }
+  ]
+}

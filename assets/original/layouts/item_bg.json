@@ -1,0 +1,12 @@
+{
+  "group": {},
+  "children": [
+    {
+      "name": "bg",
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "alpha": 0
+    }
+  ]
+}

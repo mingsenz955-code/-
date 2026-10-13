@@ -1,0 +1,219 @@
+{
+  "group": [
+    "ui_welfaregift",
+    "ui_daojukuang"
+  ],
+  "width": 161,
+  "height": 470,
+  "children": [
+    {
+      "name": "gift_en_panel",
+      "type": "sprite",
+      "img": "#ui_welfaregift_tiao1.png",
+      "width": 161,
+      "height": 470
+    },
+    {
+      "name": "gift_di_panel",
+      "type": "sprite",
+      "img": "#ui_welfaregift_tiao2.png",
+      "width": 161,
+      "height": 470
+    },
+    {
+      "name": "gift_count",
+      "type": "label",
+      "text": "累计FFFF元",
+      "align": "center",
+      "size": 22,
+      "color": 4294967295,
+      "outlineColor": 4267533,
+      "x": -67,
+      "y": 208.38,
+      "width": 134,
+      "height": 28.75
+    },
+    {
+      "name": "gift_di_1",
+      "type": "sprite",
+      "img": "#ui_daojukuang_DaoJuKuang1.png",
+      "x": 1,
+      "y": 118.55,
+      "width": 110,
+      "height": 110
+    },
+    {
+      "name": "gift_dikuang_1",
+      "type": "node",
+      "x": 1,
+      "y": 118.55,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "gift_icon_1",
+      "type": "node",
+      "x": 1,
+      "y": 118.55,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "gift_icon_dianji_1",
+      "type": "node",
+      "x": 1,
+      "y": 118.55,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "gift_di_2",
+      "type": "sprite",
+      "img": "#ui_daojukuang_DaoJuKuang1.png",
+      "x": 1,
+      "y": 7.55,
+      "width": 110,
+      "height": 110
+    },
+    {
+      "name": "gift_dikuang_2",
+      "type": "node",
+      "x": 1,
+      "y": 7.55,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "gift_icon_2",
+      "type": "node",
+      "x": 1,
+      "y": 7.55,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "gift_icon_dianji_2",
+      "type": "node",
+      "x": 1,
+      "y": 7.55,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "gift_di_3",
+      "type": "sprite",
+      "img": "#ui_daojukuang_DaoJuKuang1.png",
+      "x": 1,
+      "y": -103.45,
+      "width": 110,
+      "height": 110
+    },
+    {
+      "name": "gift_dikuang_3",
+      "type": "node",
+      "x": 1,
+      "y": -103.45,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "gift_icon_3",
+      "type": "node",
+      "x": 1,
+      "y": -103.45,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "gift_icon_dianji_3",
+      "type": "node",
+      "x": 1,
+      "y": -103.45,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "gift_icon_1_txt",
+      "type": "label",
+      "text": "9999",
+      "align": "right",
+      "size": 24,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -40,
+      "y": 91.45,
+      "width": 80,
+      "height": 31
+    },
+    {
+      "name": "gift_icon_2_txt",
+      "type": "label",
+      "text": "9999",
+      "align": "right",
+      "size": 24,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -40,
+      "y": -19.55,
+      "width": 80,
+      "height": 31
+    },
+    {
+      "name": "gift_icon_3_txt",
+      "type": "label",
+      "text": "9999",
+      "align": "right",
+      "size": 24,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -40,
+      "y": -130.55,
+      "width": 80,
+      "height": 31
+    },
+    {
+      "name": "gift_yilingqu",
+      "type": "label",
+      "text": "已领取",
+      "align": "center",
+      "size": 24,
+      "color": 3422552319,
+      "x": -48,
+      "y": -193.95,
+      "width": 92,
+      "height": 31
+    },
+    {
+      "name": "gift_get_node",
+      "type": "node",
+      "x": -0.65,
+      "y": -193.35,
+      "width": 92,
+      "height": 46,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btndh1.png",
+          "img_down": "#ui_common_btndh2.png",
+          "img_disable": "#ui_common_btndh3.png",
+          "width": 92,
+          "height": 46
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "领取",
+          "align": "center",
+          "size": 24,
+          "color": 992815615,
+          "outlineColor": 13941402,
+          "x": -37,
+          "y": -0.75,
+          "width": 73,
+          "height": 31
+        }
+      ]
+    }
+  ]
+}

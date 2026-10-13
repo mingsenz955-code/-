@@ -1,0 +1,150 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_jiasu_bg.png",
+      "x": 3,
+      "y": -27.5,
+      "width": 586,
+      "height": 445
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -294.9,
+      "y": 159.5,
+      "width": 588.8,
+      "height": 55,
+      "maxw": 588.8,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "加速",
+      "size": 25,
+      "align": "center",
+      "color": 4294967295,
+      "x": -215.9,
+      "y": 160.9,
+      "width": 429.85,
+      "height": 31.7
+    },
+    {
+      "name": "btn_PeiYu",
+      "type": "node",
+      "x": 1.2,
+      "y": -213.05,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "立即完成",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -79,
+          "y": 4.4,
+          "width": 156,
+          "height": 46.2
+        }
+      ]
+    },
+    {
+      "name": "btn_GuanBiXiao",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 275.9,
+      "y": 161
+    },
+    {
+      "name": "con",
+      "type": "node",
+      "x": 2,
+      "y": 3,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "huafei_t",
+      "type": "label",
+      "text": "立即完成需要",
+      "size": 25,
+      "align": "right",
+      "color": 255,
+      "x": -163.95,
+      "y": -136.5,
+      "width": 206.85,
+      "height": 32.1
+    },
+    {
+      "name": "huafei",
+      "type": "label",
+      "text": "999",
+      "size": 25,
+      "align": "center",
+      "color": 255,
+      "x": 45.05,
+      "y": -136.5,
+      "width": 46.95,
+      "height": 32.1
+    },
+    {
+      "name": "txt_tishi",
+      "type": "label",
+      "text": "",
+      "size": 25,
+      "align": "center",
+      "color": 255,
+      "x": -225.95,
+      "y": 121.5,
+      "width": 453.95,
+      "height": 32.1
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_HuoBi0002.png",
+      "x": 113.35,
+      "y": -137.35,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_jiasumingzi_bg.png",
+      "x": 2.35,
+      "y": -76.35,
+      "width": 202,
+      "height": 44
+    },
+    {
+      "name": "txt_duixiang",
+      "type": "label",
+      "text": "",
+      "size": 18,
+      "align": "center",
+      "color": 4294967295,
+      "x": -86,
+      "y": -74.67,
+      "width": 175,
+      "height": 24.25
+    }
+  ]
+}

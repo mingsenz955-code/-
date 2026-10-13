@@ -39,7 +39,7 @@ def unpack(base,folder):
 for name in ['ui_FunctionIcons1','ui_FunctionIcons2','ui_FramesNormal','ui_FramesAlpha','ui_ButtonNormal','ui_activitybutton','ui_Book','ui_Breed','thumbs_dragon','thumbs_egg','thumbs_equip','ui_AttributeIcon','ui_Map','ui_mapland','ui_mapshadow','ui_Plant','ui_egg','ui_world','ui_entrance','ui_mail']:
  base='assets/res/ui/'+name
  if base+'.plist' in names:unpack(base,'ui')
-for name in ['islandbg','islandtop_g','islandbottom_g','islandleft_g','islandright_g','0001_incubator_g','0016_farm_1_g','0019_breeding_cave_a_g','0024_habitat_plant_1_g','0028_habitat_fire_a_1_g','0030_habitat_water_a_1_g']:
+for name in ['islandbg','islandtop_g','islandbottom_g','islandleft_g','islandright_g','0001_incubator_g','0016_farm_1_g','0017_farm_2_g','0019_breeding_cave_a_g','0024_habitat_plant_1_g','0028_habitat_fire_a_1_g','0030_habitat_water_a_1_g']:
  unpack('assets/res/buildings/'+name,'world')
 translation=json.loads(z.read('assets/res/config/textnew_cn.json'))['translation']
 (OUT/'skeletons').mkdir(exist_ok=True)

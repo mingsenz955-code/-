@@ -1,0 +1,16 @@
+{
+  "group": [
+    "buildings/0049_xiaoxianhua_g"
+  ],
+  "width": 87,
+  "height": 85,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0049_xiaoxianhua_g_bg.png",
+      "x": 13.5,
+      "y": 51.5
+    }
+  ]
+}

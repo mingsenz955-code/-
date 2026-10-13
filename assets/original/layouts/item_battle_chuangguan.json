@@ -1,0 +1,213 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -152,
+      "width": 304,
+      "height": 468,
+      "maxw": 304,
+      "maxh": 468
+    },
+    {
+      "name": "con_img",
+      "type": "node",
+      "x": -2,
+      "y": 34,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_battle_tttt.png",
+      "x": -1.15,
+      "y": 177.85,
+      "width": 250,
+      "height": 23
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_battle_k2.png",
+      "x": -1,
+      "y": 31.7,
+      "width": 213,
+      "height": 213
+    },
+    {
+      "name": "perfect",
+      "type": "sprite",
+      "img": "#ui_battle_k1.png",
+      "x": -1,
+      "y": 24.2,
+      "width": 241,
+      "height": 228
+    },
+    {
+      "name": "lock",
+      "type": "sprite",
+      "img": "#ui_battle_k3.png",
+      "x": -1,
+      "y": 31.7,
+      "width": 213,
+      "height": 213
+    },
+    {
+      "name": "mingcheng",
+      "type": "label",
+      "text": "神秘背影",
+      "size": 26,
+      "align": "center",
+      "color": 1092488703,
+      "x": -125.45,
+      "y": 176.53,
+      "width": 248.9,
+      "height": 33.25
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_d1.png",
+      "scale9": 1,
+      "x": -125.5,
+      "y": -179.15,
+      "width": 149,
+      "height": 55,
+      "maxw": 149,
+      "maxh": 55
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_d1.png",
+      "scale9": 1,
+      "x": -125.5,
+      "y": -118.3,
+      "width": 149,
+      "height": 55,
+      "maxw": 149,
+      "maxh": 55
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_d1.png",
+      "scale9": 1,
+      "x": 31.35,
+      "y": -150.3,
+      "width": 95,
+      "height": 119,
+      "maxw": 95,
+      "maxh": 119
+    },
+    {
+      "name": "tx_jindu",
+      "type": "label",
+      "text": "20/20",
+      "size": 20,
+      "align": "left",
+      "color": 1092488703,
+      "x": -55,
+      "y": -119.3,
+      "width": 73,
+      "height": 27
+    },
+    {
+      "name": "tx_jindu_t",
+      "type": "label",
+      "text": "进度:",
+      "size": 20,
+      "align": "left",
+      "color": 1092488703,
+      "x": -119.55,
+      "y": -119.05,
+      "width": 67.05,
+      "height": 26.5
+    },
+    {
+      "name": "tx_xingxing",
+      "type": "label",
+      "text": "20/20",
+      "size": 20,
+      "align": "left",
+      "color": 1092488703,
+      "x": -55,
+      "y": -178.25,
+      "width": 73,
+      "height": 27
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_battle_s4.png",
+      "x": -86.4,
+      "y": -178.85,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "name": "tx_jiangli_t",
+      "type": "label",
+      "text": "奖励:",
+      "size": 20,
+      "align": "left",
+      "color": 1092488703,
+      "x": 46.45,
+      "y": -108.4,
+      "width": 67.05,
+      "height": 26.5
+    },
+    {
+      "name": "jiangli",
+      "type": "node",
+      "x": 121.35,
+      "y": -206.65,
+      "width": 85,
+      "height": 85,
+      "children": [
+        {
+          "name": "diban",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "",
+          "size": 22,
+          "align": "right",
+          "color": 4294967295,
+          "x": -78.5,
+          "y": 21.58,
+          "width": 73,
+          "height": 28.75
+        }
+      ]
+    },
+    {
+      "name": "clear",
+      "type": "node",
+      "x": -76.5,
+      "y": 218.2,
+      "width": 0,
+      "height": 0
+    }
+  ]
+}

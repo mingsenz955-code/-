@@ -1,0 +1,26 @@
+{
+  "group": [
+    "ui_activitybutton"
+  ],
+  "width": 91,
+  "height": 92,
+  "children": [
+    {
+      "name": "btn",
+      "type": "btn",
+      "img_normal": "#ui_activitybutton_huodong_qiyu01.png",
+      "img_down": "#ui_activitybutton_huodong_qiyu02.png",
+      "width": 90,
+      "height": 90
+    },
+    {
+      "name": "hint",
+      "type": "sprite",
+      "img": "#ui_activitybutton_huodong_hint.png",
+      "x": 30,
+      "y": 27.55,
+      "width": 32,
+      "height": 38
+    }
+  ]
+}

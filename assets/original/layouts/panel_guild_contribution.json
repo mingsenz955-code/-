@@ -1,0 +1,1282 @@
+{
+  "group": [
+    "ui_guild",
+    "ui_bgpuzzle"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768,
+      "alpha": 0
+    },
+    {
+      "name": "diban",
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -384,
+      "y": -9,
+      "width": 791,
+      "height": 639,
+      "maxw": 791,
+      "maxh": 639
+    },
+    {
+      "name": "hint_level",
+      "type": "label",
+      "text": "公会等级：",
+      "align": "left",
+      "size": 27,
+      "color": 1092488703,
+      "x": -352.2,
+      "y": 229.92,
+      "width": 146,
+      "height": 34.35
+    },
+    {
+      "name": "level",
+      "type": "label",
+      "text": "Lv.29",
+      "align": "left",
+      "size": 27,
+      "color": 1092488703,
+      "x": -206.2,
+      "y": 229.92,
+      "width": 95,
+      "height": 34.35
+    },
+    {
+      "name": "exp_diban",
+      "type": "sprite",
+      "img": "#ui_guild_jindu1.png",
+      "x": 124.6,
+      "y": 230,
+      "width": 498,
+      "height": 26
+    },
+    {
+      "name": "pbar_exp",
+      "type": "sprite",
+      "img": "#ui_guild_jindu2.png",
+      "x": 125,
+      "y": 231,
+      "width": 488,
+      "height": 16
+    },
+    {
+      "name": "txt_exp",
+      "type": "label",
+      "text": "5/5",
+      "align": "center",
+      "size": 18,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -114,
+      "y": 229.32,
+      "width": 477,
+      "height": 24.25
+    },
+    {
+      "name": "btn_material",
+      "type": "node",
+      "x": -265.6,
+      "y": 177,
+      "width": 148,
+      "height": 54,
+      "children": [
+        {
+          "name": "btn",
+          "type": "ckb",
+          "img_on": "#ui_guild_bq02.png",
+          "img_off": "#ui_guild_bq01.png"
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "物资捐献",
+          "align": "center",
+          "size": 27,
+          "color": 1092488703,
+          "x": -65,
+          "y": 0.07,
+          "width": 130,
+          "height": 34.35
+        }
+      ]
+    },
+    {
+      "name": "btn_gold",
+      "type": "node",
+      "x": -116.6,
+      "y": 177,
+      "width": 148,
+      "height": 54,
+      "children": [
+        {
+          "name": "btn",
+          "type": "ckb",
+          "img_on": "#ui_guild_bq02.png",
+          "img_off": "#ui_guild_bq01.png"
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "金钱捐献",
+          "align": "center",
+          "size": 27,
+          "color": 1092488703,
+          "x": -65,
+          "y": 0.07,
+          "width": 130,
+          "height": 34.35
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_bgpuzzle_dage.png",
+      "scale9": 1,
+      "x": -357,
+      "y": -62.95,
+      "width": 733,
+      "height": 432,
+      "maxw": 733,
+      "maxh": 432
+    },
+    {
+      "name": "item_gold",
+      "type": "node",
+      "x": 10,
+      "y": -61.95,
+      "width": 720,
+      "height": 416,
+      "children": [
+        {
+          "name": "bg1",
+          "type": "sprite",
+          "img": "#ui_guild_bg2.png",
+          "scale9": 1,
+          "x": -360,
+          "y": 186,
+          "width": 720,
+          "height": 44,
+          "maxw": 720,
+          "maxh": 44
+        },
+        {
+          "name": "bg2",
+          "type": "sprite",
+          "img": "#ui_guild_bg2.png",
+          "scale9": 1,
+          "x": -360,
+          "y": -23,
+          "width": 477,
+          "height": 370,
+          "maxw": 477,
+          "maxh": 370
+        },
+        {
+          "name": "bg3",
+          "type": "sprite",
+          "img": "#ui_guild_bg2.png",
+          "scale9": 1,
+          "x": 120,
+          "y": -23,
+          "width": 239,
+          "height": 370,
+          "maxw": 239,
+          "maxh": 370
+        },
+        {
+          "name": "hint_guild",
+          "type": "label",
+          "text": "公会金钱：",
+          "align": "left",
+          "size": 20,
+          "color": 4294967295,
+          "x": -346.9,
+          "y": 186.35,
+          "width": 108,
+          "height": 26.5
+        },
+        {
+          "name": "hint_guild_num",
+          "type": "label",
+          "text": "5",
+          "align": "left",
+          "size": 20,
+          "color": 4291559679,
+          "x": -240.9,
+          "y": 186.35,
+          "width": 123,
+          "height": 26.5
+        },
+        {
+          "name": "hint_today",
+          "type": "label",
+          "text": "今日总捐献：",
+          "align": "left",
+          "size": 20,
+          "color": 4294967295,
+          "x": -117.9,
+          "y": 186.35,
+          "width": 124,
+          "height": 26.5
+        },
+        {
+          "name": "hint_today_num",
+          "type": "label",
+          "text": "5",
+          "align": "left",
+          "size": 22,
+          "color": 4291559679,
+          "x": 4.1,
+          "y": 185.1,
+          "width": 122,
+          "height": 29
+        },
+        {
+          "name": "hint_personal",
+          "type": "label",
+          "text": "个人累计捐献：",
+          "align": "left",
+          "size": 20,
+          "color": 4294967295,
+          "x": 122.1,
+          "y": 186.35,
+          "width": 144,
+          "height": 26.5
+        },
+        {
+          "name": "hint_personal_num",
+          "type": "label",
+          "text": "5",
+          "align": "left",
+          "size": 22,
+          "color": 4291559679,
+          "x": 264.1,
+          "y": 185.1,
+          "width": 95,
+          "height": 29
+        },
+        {
+          "name": "box",
+          "type": "sprite",
+          "img": "#ui_guild_jinzi.png",
+          "x": -123.4,
+          "y": 55.9,
+          "width": 176,
+          "height": 180
+        },
+        {
+          "name": "btn_add",
+          "type": "node",
+          "x": 91,
+          "y": -111.75,
+          "width": 46,
+          "height": 46,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_main_05.png",
+              "img_down": "#ui_main_05-2.png",
+              "width": 46,
+              "height": 46
+            }
+          ]
+        },
+        {
+          "name": "btn_reduce",
+          "type": "node",
+          "x": -333.65,
+          "y": -111.75,
+          "width": 46,
+          "height": 46,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_main_jian1.png",
+              "img_down": "#ui_main_jian2.png",
+              "width": 46,
+              "height": 46
+            }
+          ]
+        },
+        {
+          "name": "gold_bg",
+          "type": "node",
+          "x": -120.65,
+          "y": -137.25,
+          "width": 375.8,
+          "height": 95.2,
+          "children": [
+            {
+              "name": "jindudi",
+              "type": "sprite",
+              "img": "#ui_guild_jindu3.png",
+              "x": -0.9,
+              "y": 25.1,
+              "width": 374,
+              "height": 45
+            },
+            {
+              "name": "gold_tianchong",
+              "type": "sprite",
+              "img": "#ui_guild_jindu4.png",
+              "x": 0.1,
+              "y": 38.1,
+              "width": 347,
+              "height": 19
+            },
+            {
+              "name": "gold_btn",
+              "type": "sprite",
+              "img": "#ui_guild_jindu_niu.png",
+              "x": 167.4,
+              "y": 22.3,
+              "width": 41,
+              "height": 41
+            },
+            {
+              "name": "gold_num",
+              "type": "node",
+              "x": 43.7,
+              "y": 69.5,
+              "width": 95,
+              "height": 55,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_guild_jindu_shu.png",
+                  "width": 95,
+                  "height": 55
+                },
+                {
+                  "name": "num",
+                  "type": "label",
+                  "text": "9999",
+                  "align": "center",
+                  "size": 22,
+                  "color": 4294967295,
+                  "x": -40.5,
+                  "y": 5.88,
+                  "width": 76,
+                  "height": 28.75
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "donate",
+          "type": "node",
+          "x": -121.55,
+          "y": -171.95,
+          "width": 154,
+          "height": 46,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btn_pppp1.png",
+              "img_down": "#ui_common_btn_pppp2.png",
+              "img_disable": "#ui_common_btn_pppp3.png",
+              "width": 154,
+              "height": 46
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "捐献",
+              "align": "center",
+              "size": 26,
+              "color": 992815615,
+              "outlineColor": 13941402,
+              "x": -73,
+              "y": -0.88,
+              "width": 144,
+              "height": 33.25
+            }
+          ]
+        },
+        {
+          "name": "bg4",
+          "type": "sprite",
+          "img": "#ui_guild_hongtiao.png",
+          "x": 239.1,
+          "y": 139.9,
+          "width": 234,
+          "height": 43
+        },
+        {
+          "name": "bg5",
+          "type": "sprite",
+          "img": "#ui_guild_zi1.png",
+          "x": 239.1,
+          "y": 139.9,
+          "width": 123,
+          "height": 28
+        },
+        {
+          "name": "bg6",
+          "type": "sprite",
+          "img": "#ui_guild_hongtiao.png",
+          "x": 239.1,
+          "y": -111.1,
+          "width": 234,
+          "height": 43
+        },
+        {
+          "name": "bg7",
+          "type": "sprite",
+          "img": "#ui_guild_zi2.png",
+          "x": 239.1,
+          "y": -111.1,
+          "width": 99,
+          "height": 28
+        },
+        {
+          "name": "rank1",
+          "type": "node",
+          "x": 239.1,
+          "y": 81.9,
+          "width": 229,
+          "height": 67,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_guild_zongtiao.png",
+              "width": 229,
+              "height": 67
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_guild_rank1.png",
+              "x": -79.5,
+              "y": -1.95,
+              "width": 66,
+              "height": 56
+            },
+            {
+              "name": "user_name",
+              "type": "label",
+              "text": "玩家名字",
+              "align": "left",
+              "size": 22,
+              "color": 4294967295,
+              "x": -45.5,
+              "y": 11.82,
+              "width": 159,
+              "height": 28.75
+            },
+            {
+              "name": "txt_donate",
+              "type": "label",
+              "text": "累计捐献",
+              "align": "left",
+              "size": 18,
+              "color": 4294967295,
+              "x": -45,
+              "y": -18.08,
+              "width": 80,
+              "height": 24.25
+            },
+            {
+              "name": "num_donate",
+              "type": "label",
+              "text": "5",
+              "align": "left",
+              "size": 18,
+              "color": 4291559679,
+              "x": 35,
+              "y": -18.08,
+              "width": 79,
+              "height": 24.25
+            }
+          ]
+        },
+        {
+          "name": "rank2",
+          "type": "node",
+          "x": 239.1,
+          "y": 13.9,
+          "width": 229,
+          "height": 67,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_guild_zongtiao.png",
+              "width": 229,
+              "height": 67
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_guild_rank2.png",
+              "x": -79.5,
+              "y": -1.45,
+              "width": 66,
+              "height": 55
+            },
+            {
+              "name": "user_name",
+              "type": "label",
+              "text": "玩家名字",
+              "align": "left",
+              "size": 22,
+              "color": 4294967295,
+              "x": -45.5,
+              "y": 11.82,
+              "width": 159,
+              "height": 28.75
+            },
+            {
+              "name": "txt_donate",
+              "type": "label",
+              "text": "累计捐献",
+              "align": "left",
+              "size": 18,
+              "color": 4294967295,
+              "x": -45,
+              "y": -18.08,
+              "width": 80,
+              "height": 24.25
+            },
+            {
+              "name": "num_donate",
+              "type": "label",
+              "text": "5",
+              "align": "left",
+              "size": 18,
+              "color": 4291559679,
+              "x": 35,
+              "y": -18.08,
+              "width": 79,
+              "height": 24.25
+            }
+          ]
+        },
+        {
+          "name": "rank3",
+          "type": "node",
+          "x": 239.1,
+          "y": -54.1,
+          "width": 229,
+          "height": 67,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_guild_zongtiao.png",
+              "width": 229,
+              "height": 67
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_guild_rank3.png",
+              "x": -79.5,
+              "y": -1.95,
+              "width": 66,
+              "height": 56
+            },
+            {
+              "name": "user_name",
+              "type": "label",
+              "text": "玩家名字",
+              "align": "left",
+              "size": 22,
+              "color": 4294967295,
+              "x": -45.5,
+              "y": 11.82,
+              "width": 159,
+              "height": 28.75
+            },
+            {
+              "name": "txt_donate",
+              "type": "label",
+              "text": "累计捐献",
+              "align": "left",
+              "size": 18,
+              "color": 4294967295,
+              "x": -45,
+              "y": -18.08,
+              "width": 80,
+              "height": 24.25
+            },
+            {
+              "name": "num_donate",
+              "type": "label",
+              "text": "5",
+              "align": "left",
+              "size": 18,
+              "color": 4291559679,
+              "x": 35,
+              "y": -18.08,
+              "width": 79,
+              "height": 24.25
+            }
+          ]
+        },
+        {
+          "name": "rank4",
+          "type": "node",
+          "x": 239.1,
+          "y": -170.83,
+          "width": 229,
+          "height": 70.45,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_guild_zongtiao.png",
+              "y": 1.73,
+              "width": 229,
+              "height": 67
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_guild_rank4.png",
+              "x": -76,
+              "y": -1.72,
+              "width": 55,
+              "height": 67
+            },
+            {
+              "name": "user_name",
+              "type": "label",
+              "text": "玩家名字",
+              "align": "left",
+              "size": 22,
+              "color": 4294967295,
+              "x": -45.5,
+              "y": 13.55,
+              "width": 159,
+              "height": 28.75
+            },
+            {
+              "name": "txt_donate",
+              "type": "label",
+              "text": "累计捐献",
+              "align": "left",
+              "size": 18,
+              "color": 4294967295,
+              "x": -45,
+              "y": -16.35,
+              "width": 80,
+              "height": 24.25
+            },
+            {
+              "name": "num_donate",
+              "type": "label",
+              "text": "5",
+              "align": "left",
+              "size": 18,
+              "color": 4291559679,
+              "x": 35,
+              "y": -16.35,
+              "width": 79,
+              "height": 24.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "item_material",
+      "type": "node",
+      "x": 8.5,
+      "y": -65.7,
+      "width": 705,
+      "height": 411.5,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_guild_hhtt.png",
+          "x": -1.6,
+          "y": -186.25,
+          "width": 297,
+          "height": 39
+        },
+        {
+          "name": "hint_limit",
+          "type": "label",
+          "text": "今日可捐献次数：",
+          "align": "right",
+          "size": 22,
+          "color": 4294967295,
+          "x": -137.1,
+          "y": -188.45,
+          "width": 200,
+          "height": 29
+        },
+        {
+          "name": "hint_limit_num",
+          "type": "label",
+          "text": "5",
+          "align": "left",
+          "size": 22,
+          "color": 4291559679,
+          "x": 62.9,
+          "y": -188.45,
+          "width": 68,
+          "height": 29
+        },
+        {
+          "name": "contribution1",
+          "type": "node",
+          "x": -240,
+          "y": 20.75,
+          "width": 225,
+          "height": 370,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_guild_bggongxian.png",
+              "width": 225,
+              "height": 370
+            },
+            {
+              "name": "hint_name",
+              "type": "label",
+              "text": "初级捐献",
+              "align": "center",
+              "size": 26,
+              "color": 1092488703,
+              "x": -110,
+              "y": 144.07,
+              "width": 220,
+              "height": 34.35
+            },
+            {
+              "name": "icon",
+              "type": "sprite",
+              "img": "#ui_guild_juan1.png",
+              "x": 0.5,
+              "y": 75.05,
+              "width": 111,
+              "height": 119
+            },
+            {
+              "name": "hint_exp",
+              "type": "label",
+              "text": "公会经验：",
+              "align": "left",
+              "size": 20,
+              "color": 1092488703,
+              "x": -100,
+              "y": -1.05,
+              "width": 104,
+              "height": 26.5
+            },
+            {
+              "name": "exp",
+              "type": "label",
+              "text": "",
+              "align": "left",
+              "size": 20,
+              "color": 1092488703,
+              "x": 4,
+              "y": -1.05,
+              "width": 103,
+              "height": 26.5
+            },
+            {
+              "name": "hint_wuzi",
+              "type": "label",
+              "text": "公会物资：",
+              "align": "left",
+              "size": 20,
+              "color": 1092488703,
+              "x": -100,
+              "y": -31.05,
+              "width": 104,
+              "height": 26.5
+            },
+            {
+              "name": "wuzi",
+              "type": "label",
+              "text": "",
+              "align": "left",
+              "size": 20,
+              "color": 1092488703,
+              "x": 4,
+              "y": -31.05,
+              "width": 103,
+              "height": 26.5
+            },
+            {
+              "name": "hint_personal",
+              "type": "label",
+              "text": "个人贡献：",
+              "align": "left",
+              "size": 20,
+              "color": 1092488703,
+              "x": -100,
+              "y": -61.05,
+              "width": 104,
+              "height": 26.5
+            },
+            {
+              "name": "personal",
+              "type": "label",
+              "text": "",
+              "align": "left",
+              "size": 20,
+              "color": 1092488703,
+              "x": 4,
+              "y": -61.05,
+              "width": 103,
+              "height": 26.5
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_guild_tuoyuantiao.png",
+              "scale9": 1,
+              "x": -97.15,
+              "y": -99.35,
+              "width": 199,
+              "height": 40,
+              "maxw": 199,
+              "maxh": 40
+            },
+            {
+              "name": "huobi",
+              "type": "sprite",
+              "img": "#ui_guild_jinbi1.png",
+              "x": -24.5,
+              "y": -101.8,
+              "width": 41,
+              "height": 41
+            },
+            {
+              "name": "price",
+              "type": "label",
+              "text": "3万",
+              "align": "left",
+              "size": 26,
+              "color": 1092488703,
+              "x": -5,
+              "y": -101.93,
+              "width": 88,
+              "height": 33.25
+            },
+            {
+              "name": "levelup",
+              "type": "node",
+              "x": -0.65,
+              "y": -145.3,
+              "width": 154,
+              "height": 46,
+              "children": [
+                {
+                  "name": "btn",
+                  "type": "btn",
+                  "img_normal": "#ui_common_btn_pppp1.png",
+                  "img_down": "#ui_common_btn_pppp2.png",
+                  "img_disable": "#ui_common_btn_pppp3.png",
+                  "width": 154,
+                  "height": 46
+                },
+                {
+                  "name": "txt_name",
+                  "type": "label",
+                  "text": "捐献",
+                  "align": "center",
+                  "size": 26,
+                  "color": 992815615,
+                  "outlineColor": 13941402,
+                  "x": -73,
+                  "y": -0.88,
+                  "width": 144,
+                  "height": 33.25
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "contribution2",
+          "type": "node",
+          "y": 20.75,
+          "width": 225,
+          "height": 370,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_guild_bggongxian.png",
+              "width": 225,
+              "height": 370
+            },
+            {
+              "name": "icon",
+              "type": "sprite",
+              "img": "#ui_guild_juan2.png",
+              "x": 0.5,
+              "y": 77.05,
+              "width": 111,
+              "height": 123
+            },
+            {
+              "name": "hint_name",
+              "type": "label",
+              "text": "中级捐献",
+              "align": "center",
+              "size": 26,
+              "color": 1092488703,
+              "x": -110,
+              "y": 144.07,
+              "width": 220,
+              "height": 34.35
+            },
+            {
+              "name": "hint_exp",
+              "type": "label",
+              "text": "公会经验：",
+              "align": "left",
+              "size": 20,
+              "color": 1092488703,
+              "x": -100,
+              "y": -1.05,
+              "width": 104,
+              "height": 26.5
+            },
+            {
+              "name": "exp",
+              "type": "label",
+              "text": "",
+              "align": "left",
+              "size": 20,
+              "color": 1092488703,
+              "x": 4,
+              "y": -1.05,
+              "width": 103,
+              "height": 26.5
+            },
+            {
+              "name": "hint_wuzi",
+              "type": "label",
+              "text": "公会物资：",
+              "align": "left",
+              "size": 20,
+              "color": 1092488703,
+              "x": -100,
+              "y": -31.05,
+              "width": 104,
+              "height": 26.5
+            },
+            {
+              "name": "wuzi",
+              "type": "label",
+              "text": "",
+              "align": "left",
+              "size": 20,
+              "color": 1092488703,
+              "x": 4,
+              "y": -31.05,
+              "width": 103,
+              "height": 26.5
+            },
+            {
+              "name": "hint_personal",
+              "type": "label",
+              "text": "个人贡献：",
+              "align": "left",
+              "size": 20,
+              "color": 1092488703,
+              "x": -100,
+              "y": -61.05,
+              "width": 104,
+              "height": 26.5
+            },
+            {
+              "name": "personal",
+              "type": "label",
+              "text": "",
+              "align": "left",
+              "size": 20,
+              "color": 1092488703,
+              "x": 4,
+              "y": -61.05,
+              "width": 103,
+              "height": 26.5
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_guild_tuoyuantiao.png",
+              "scale9": 1,
+              "x": -97.15,
+              "y": -99.35,
+              "width": 199,
+              "height": 40,
+              "maxw": 199,
+              "maxh": 40
+            },
+            {
+              "name": "huobi",
+              "type": "sprite",
+              "img": "#ui_guild_mj2.png",
+              "x": -23.5,
+              "y": -101.3,
+              "width": 32,
+              "height": 44
+            },
+            {
+              "name": "price",
+              "type": "label",
+              "text": "20",
+              "align": "left",
+              "size": 26,
+              "color": 1092488703,
+              "x": -5,
+              "y": -101.93,
+              "width": 88,
+              "height": 33.25
+            },
+            {
+              "name": "levelup",
+              "type": "node",
+              "x": -0.65,
+              "y": -145.3,
+              "width": 154,
+              "height": 46,
+              "children": [
+                {
+                  "name": "btn",
+                  "type": "btn",
+                  "img_normal": "#ui_common_btn_pppp1.png",
+                  "img_down": "#ui_common_btn_pppp2.png",
+                  "img_disable": "#ui_common_btn_pppp3.png",
+                  "width": 154,
+                  "height": 46
+                },
+                {
+                  "name": "txt_name",
+                  "type": "label",
+                  "text": "捐献",
+                  "align": "center",
+                  "size": 26,
+                  "color": 992815615,
+                  "outlineColor": 13941402,
+                  "x": -73,
+                  "y": -0.88,
+                  "width": 144,
+                  "height": 33.25
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "contribution3",
+          "type": "node",
+          "x": 240,
+          "y": 20.75,
+          "width": 225,
+          "height": 370,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_guild_bggongxian.png",
+              "width": 225,
+              "height": 370
+            },
+            {
+              "name": "icon",
+              "type": "sprite",
+              "img": "#ui_guild_juan3.png",
+              "x": -1,
+              "y": 73.55,
+              "width": 126,
+              "height": 126
+            },
+            {
+              "name": "hint_name",
+              "type": "label",
+              "text": "高级捐献",
+              "align": "center",
+              "size": 26,
+              "color": 1092488703,
+              "x": -110,
+              "y": 144.07,
+              "width": 220,
+              "height": 34.35
+            },
+            {
+              "name": "hint_exp",
+              "type": "label",
+              "text": "公会经验：",
+              "align": "left",
+              "size": 20,
+              "color": 1092488703,
+              "x": -100,
+              "y": -1.05,
+              "width": 104,
+              "height": 26.5
+            },
+            {
+              "name": "exp",
+              "type": "label",
+              "text": "",
+              "align": "left",
+              "size": 20,
+              "color": 1092488703,
+              "x": 4,
+              "y": -1.05,
+              "width": 103,
+              "height": 26.5
+            },
+            {
+              "name": "hint_wuzi",
+              "type": "label",
+              "text": "公会物资：",
+              "align": "left",
+              "size": 20,
+              "color": 1092488703,
+              "x": -100,
+              "y": -31.05,
+              "width": 104,
+              "height": 26.5
+            },
+            {
+              "name": "wuzi",
+              "type": "label",
+              "text": "",
+              "align": "left",
+              "size": 20,
+              "color": 1092488703,
+              "x": 4,
+              "y": -31.05,
+              "width": 103,
+              "height": 26.5
+            },
+            {
+              "name": "hint_personal",
+              "type": "label",
+              "text": "个人贡献：",
+              "align": "left",
+              "size": 20,
+              "color": 1092488703,
+              "x": -100,
+              "y": -61.05,
+              "width": 104,
+              "height": 26.5
+            },
+            {
+              "name": "personal",
+              "type": "label",
+              "text": "",
+              "align": "left",
+              "size": 20,
+              "color": 1092488703,
+              "x": 4,
+              "y": -61.05,
+              "width": 103,
+              "height": 26.5
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_guild_tuoyuantiao.png",
+              "scale9": 1,
+              "x": -97.15,
+              "y": -99.35,
+              "width": 199,
+              "height": 40,
+              "maxw": 199,
+              "maxh": 40
+            },
+            {
+              "name": "huobi",
+              "type": "sprite",
+              "img": "#ui_guild_mj2.png",
+              "x": -23.5,
+              "y": -101.3,
+              "width": 32,
+              "height": 44
+            },
+            {
+              "name": "price",
+              "type": "label",
+              "text": "100",
+              "align": "left",
+              "size": 26,
+              "color": 1092488703,
+              "x": -5,
+              "y": -101.93,
+              "width": 88,
+              "height": 33.25
+            },
+            {
+              "name": "levelup",
+              "type": "node",
+              "x": -0.65,
+              "y": -145.3,
+              "width": 154,
+              "height": 46,
+              "children": [
+                {
+                  "name": "btn",
+                  "type": "btn",
+                  "img_normal": "#ui_common_btn_pppp1.png",
+                  "img_down": "#ui_common_btn_pppp2.png",
+                  "img_disable": "#ui_common_btn_pppp3.png",
+                  "width": 154,
+                  "height": 46
+                },
+                {
+                  "name": "txt_name",
+                  "type": "label",
+                  "text": "捐献",
+                  "align": "center",
+                  "size": 26,
+                  "color": 992815615,
+                  "outlineColor": 13941402,
+                  "x": -73,
+                  "y": -0.88,
+                  "width": 144,
+                  "height": 33.25
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -389.4,
+      "y": 288.6,
+      "width": 797,
+      "height": 55,
+      "maxw": 797,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "公会捐献",
+      "align": "center",
+      "size": 25,
+      "color": 4294967295,
+      "x": -340.4,
+      "y": 289.8,
+      "width": 704,
+      "height": 32.1
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 387,
+      "y": 298,
+      "width": 80,
+      "height": 86
+    }
+  ]
+}

@@ -1,0 +1,1974 @@
+{
+  "group": [
+    "ui_common",
+    "ui_longmibao",
+    "ui_daojukuang"
+  ],
+  "width": 869,
+  "height": 654,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 2,
+      "grid": {
+        "x": 107.95,
+        "y": 111,
+        "width": 45.999999999999986,
+        "height": 27
+      },
+      "x": -458.4,
+      "y": -1.75,
+      "width": 868.95,
+      "height": 611,
+      "maxw": 868.95,
+      "maxh": 611
+    },
+    {
+      "name": "top_bar",
+      "type": "node",
+      "x": -40.95,
+      "y": 240.05,
+      "width": 739,
+      "height": 43,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_longmibao_yigetiao3.png",
+          "width": 739,
+          "height": 43
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_longmibao_jinbi.png",
+          "x": -346.5,
+          "width": 36,
+          "height": 35
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_longmibao_hun1.png",
+          "x": -163,
+          "width": 36,
+          "height": 35
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_longmibao_hun2.png",
+          "x": 20.5,
+          "width": 36,
+          "height": 35
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_longmibao_hun3.png",
+          "x": 204,
+          "width": 36,
+          "height": 35
+        },
+        {
+          "name": "txt_gold",
+          "type": "label",
+          "text": "?",
+          "align": "left",
+          "size": 20,
+          "color": 4294967295,
+          "x": -327.5,
+          "y": -0.13,
+          "width": 139.95,
+          "height": 26.35
+        },
+        {
+          "name": "txt_hun1",
+          "type": "label",
+          "text": "?",
+          "align": "left",
+          "size": 20,
+          "color": 4294967295,
+          "x": -144.45,
+          "y": -0.13,
+          "width": 139.95,
+          "height": 26.35
+        },
+        {
+          "name": "txt_hun2",
+          "type": "label",
+          "text": "?",
+          "align": "left",
+          "size": 20,
+          "color": 4294967295,
+          "x": 39.55,
+          "y": -0.13,
+          "width": 139.95,
+          "height": 26.35
+        },
+        {
+          "name": "txt_hun3",
+          "type": "label",
+          "text": "?",
+          "align": "left",
+          "size": 20,
+          "color": 4294967295,
+          "x": 222,
+          "y": -0.13,
+          "width": 139.95,
+          "height": 26.35
+        }
+      ]
+    },
+    {
+      "name": "btn_help",
+      "type": "btn",
+      "img_normal": "#ui_longmibao_btn_xiangqing1.png",
+      "img_down": "#ui_longmibao_btn_xiangqing2.png",
+      "x": 360.05,
+      "y": 241.55,
+      "width": 46,
+      "height": 46
+    },
+    {
+      "name": "node_tabbar",
+      "type": "node",
+      "x": -169.55,
+      "y": 182.05,
+      "width": 450,
+      "height": 55,
+      "children": [
+        {
+          "name": "node_ckb_tab1",
+          "type": "node",
+          "x": -151.05,
+          "y": 0.5,
+          "width": 150,
+          "height": 55,
+          "children": [
+            {
+              "name": "btn",
+              "type": "ckb",
+              "img_on": "#ui_longmibao_bq2.png",
+              "img_off": "#ui_longmibao_bq1.png"
+            },
+            {
+              "name": "txt",
+              "type": "label",
+              "text": "激活星座",
+              "align": "center",
+              "size": 26,
+              "color": 1411781375,
+              "x": -61,
+              "y": -1.82,
+              "width": 121,
+              "height": 33.05
+            }
+          ]
+        },
+        {
+          "name": "node_ckb_tab2",
+          "type": "node",
+          "x": -1.05,
+          "y": 0.5,
+          "width": 150,
+          "height": 55,
+          "children": [
+            {
+              "name": "btn",
+              "type": "ckb",
+              "img_on": "#ui_longmibao_bq2.png",
+              "img_off": "#ui_longmibao_bq1.png"
+            },
+            {
+              "name": "txt",
+              "type": "label",
+              "text": "获得龙魂",
+              "align": "center",
+              "size": 26,
+              "color": 1411781375,
+              "x": -61,
+              "y": -1.82,
+              "width": 121,
+              "height": 33.05
+            }
+          ]
+        },
+        {
+          "name": "node_ckb_tab3",
+          "type": "node",
+          "x": 148.95,
+          "y": 0.5,
+          "width": 150,
+          "height": 55,
+          "children": [
+            {
+              "name": "btn",
+              "type": "ckb",
+              "img_on": "#ui_longmibao_bq2.png",
+              "img_off": "#ui_longmibao_bq1.png"
+            },
+            {
+              "name": "txt",
+              "type": "label",
+              "text": "合成龙魂",
+              "align": "center",
+              "size": 26,
+              "color": 1411781375,
+              "x": -61,
+              "y": -1.82,
+              "width": 121,
+              "height": 33.05
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_longmibao_bg.png",
+      "x": -22.95,
+      "y": -51.45,
+      "width": 796,
+      "height": 417
+    },
+    {
+      "name": "node_pad3",
+      "type": "node",
+      "x": -22.95,
+      "y": -50.15,
+      "width": 781,
+      "height": 403,
+      "children": [
+        {
+          "name": "node_item1",
+          "type": "node",
+          "x": -194.5,
+          "y": -1,
+          "width": 392,
+          "height": 403,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_longmibao_bg2.png",
+              "width": 392,
+              "height": 403
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_longmibao_yigetiao.png",
+              "x": -0.05,
+              "y": 155.5,
+              "width": 340,
+              "height": 41
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_longmibao_yigetiao2.png",
+              "x": -0.05,
+              "y": -110.45,
+              "width": 330,
+              "height": 45
+            },
+            {
+              "name": "goldIcon",
+              "type": "sprite",
+              "img": "#ui_longmibao_jinbi.png",
+              "x": -134,
+              "y": -109.45,
+              "width": 36,
+              "height": 35
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_longmibao_shuliangkuang.png",
+              "x": -2.55,
+              "y": -19.5,
+              "width": 93,
+              "height": 40
+            },
+            {
+              "name": "txt_1",
+              "type": "label",
+              "text": "本次消耗",
+              "align": "center",
+              "size": 24,
+              "color": 1411781375,
+              "x": -62,
+              "y": -66.67,
+              "width": 121,
+              "height": 30.85
+            },
+            {
+              "name": "txt_mergenum",
+              "type": "label",
+              "text": "?",
+              "align": "center",
+              "size": 18,
+              "color": 1411781375,
+              "x": -58,
+              "y": -19.15,
+              "width": 111,
+              "height": 24.1
+            },
+            {
+              "name": "node_btn_merge",
+              "type": "node",
+              "x": -0.8,
+              "y": -164.95,
+              "width": 162,
+              "height": 56,
+              "children": [
+                {
+                  "name": "btn",
+                  "type": "btn",
+                  "img_normal": "#ui_longmibao_btn1.png",
+                  "img_down": "#ui_longmibao_btn2.png",
+                  "img_disable": "#ui_longmibao_btn3.png",
+                  "width": 162,
+                  "height": 56
+                },
+                {
+                  "name": "miaoshu",
+                  "type": "label",
+                  "text": "合成",
+                  "align": "center",
+                  "size": 30,
+                  "color": 4294967295,
+                  "outlineColor": 11882262,
+                  "x": -65.5,
+                  "y": 4.98,
+                  "width": 131.05,
+                  "height": 37.75
+                }
+              ]
+            },
+            {
+              "name": "node_hun_show",
+              "type": "node",
+              "x": 24.95,
+              "y": -110.45,
+              "width": 36,
+              "height": 35,
+              "children": [
+                {
+                  "name": "image_1",
+                  "type": "sprite",
+                  "img": "#ui_longmibao_hun1.png",
+                  "width": 36,
+                  "height": 35
+                },
+                {
+                  "name": "image_2",
+                  "type": "sprite",
+                  "img": "#ui_longmibao_hun2.png",
+                  "width": 36,
+                  "height": 35
+                },
+                {
+                  "name": "image_3",
+                  "type": "sprite",
+                  "img": "#ui_longmibao_hun3.png",
+                  "width": 36,
+                  "height": 35
+                }
+              ]
+            },
+            {
+              "name": "txt_gold",
+              "type": "label",
+              "text": "?",
+              "align": "left",
+              "size": 22,
+              "color": 1411781375,
+              "x": -114,
+              "y": -109.67,
+              "width": 105.95,
+              "height": 28.55
+            },
+            {
+              "name": "node_itemshow",
+              "type": "node",
+              "x": 51.95,
+              "y": -18.5,
+              "width": 110,
+              "height": 110,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_daojukuang_DaoJuKuang1.png",
+                  "x": -55,
+                  "y": 84.05,
+                  "width": 110,
+                  "height": 110
+                },
+                {
+                  "name": "quality",
+                  "type": "node",
+                  "x": -55,
+                  "y": 84.05,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "icon",
+                  "type": "node",
+                  "x": -55.15,
+                  "y": 84.9,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "star",
+                  "type": "node",
+                  "x": -58.15,
+                  "y": 119.9,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "txt_num",
+                  "type": "label",
+                  "text": " ",
+                  "align": "right",
+                  "size": 28,
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -96,
+                  "y": 56.25,
+                  "width": 80,
+                  "height": 35.5
+                },
+                {
+                  "name": "hint",
+                  "type": "node",
+                  "x": -16.9,
+                  "y": 123.45,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "biaoji_pinzhi",
+                  "type": "node",
+                  "x": -90.1,
+                  "y": 121.85,
+                  "width": 0,
+                  "height": 0
+                }
+              ]
+            },
+            {
+              "type": "label",
+              "text": "",
+              "align": "center",
+              "size": 24,
+              "color": 1411781375,
+              "x": -136,
+              "y": 156.47,
+              "width": 270.95,
+              "height": 30.85
+            },
+            {
+              "name": "txt_hun",
+              "type": "label",
+              "text": "?",
+              "align": "left",
+              "size": 22,
+              "color": 1411781375,
+              "x": 42.95,
+              "y": -109.67,
+              "width": 105.95,
+              "height": 28.55
+            },
+            {
+              "name": "node_btn_add",
+              "type": "btn",
+              "img_normal": "#ui_longmibao_btn_jia1.png",
+              "img_down": "#ui_longmibao_btn_jia2.png",
+              "x": 78,
+              "y": -16.5,
+              "width": 46,
+              "height": 46
+            },
+            {
+              "name": "node_btn_addmax",
+              "type": "btn",
+              "img_normal": "#ui_longmibao_btn_max1.png",
+              "img_down": "#ui_longmibao_btn_max2.png",
+              "x": 144.95,
+              "y": -16.5,
+              "width": 72,
+              "height": 46
+            },
+            {
+              "name": "node_btn_sbu",
+              "type": "btn",
+              "img_normal": "#ui_longmibao_btn_jian1.png",
+              "img_down": "#ui_longmibao_btn_jian2.png",
+              "x": -79,
+              "y": -16.5,
+              "width": 46,
+              "height": 46
+            },
+            {
+              "name": "node_btn_sbumax",
+              "type": "btn",
+              "img_normal": "#ui_longmibao_btn_min1.png",
+              "img_down": "#ui_longmibao_btn_min2.png",
+              "x": -144,
+              "y": -16.5,
+              "width": 72,
+              "height": 46
+            }
+          ]
+        },
+        {
+          "name": "node_item2",
+          "type": "node",
+          "x": 194.5,
+          "y": -1,
+          "width": 392,
+          "height": 403,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_longmibao_bg2.png",
+              "width": 392,
+              "height": 403
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_longmibao_yigetiao.png",
+              "x": -0.05,
+              "y": 155.5,
+              "width": 340,
+              "height": 41
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_longmibao_yigetiao2.png",
+              "x": -0.05,
+              "y": -110.45,
+              "width": 330,
+              "height": 45
+            },
+            {
+              "name": "goldIcon",
+              "type": "sprite",
+              "img": "#ui_longmibao_jinbi.png",
+              "x": -134,
+              "y": -109.45,
+              "width": 36,
+              "height": 35
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_longmibao_shuliangkuang.png",
+              "x": -2.55,
+              "y": -19.5,
+              "width": 93,
+              "height": 40
+            },
+            {
+              "name": "txt_1",
+              "type": "label",
+              "text": "本次消耗",
+              "align": "center",
+              "size": 24,
+              "color": 1411781375,
+              "x": -62,
+              "y": -66.67,
+              "width": 121,
+              "height": 30.85
+            },
+            {
+              "name": "txt_mergenum",
+              "type": "label",
+              "text": "?",
+              "align": "center",
+              "size": 18,
+              "color": 1411781375,
+              "x": -58,
+              "y": -19.15,
+              "width": 111,
+              "height": 24.1
+            },
+            {
+              "name": "node_btn_merge",
+              "type": "node",
+              "x": -0.8,
+              "y": -164.95,
+              "width": 162,
+              "height": 56,
+              "children": [
+                {
+                  "name": "btn",
+                  "type": "btn",
+                  "img_normal": "#ui_longmibao_btn1.png",
+                  "img_down": "#ui_longmibao_btn2.png",
+                  "img_disable": "#ui_longmibao_btn3.png",
+                  "width": 162,
+                  "height": 56
+                },
+                {
+                  "name": "miaoshu",
+                  "type": "label",
+                  "text": "合成",
+                  "align": "center",
+                  "size": 30,
+                  "color": 4294967295,
+                  "outlineColor": 11882262,
+                  "x": -65.5,
+                  "y": 4.98,
+                  "width": 131.05,
+                  "height": 37.75
+                }
+              ]
+            },
+            {
+              "name": "node_hun_show",
+              "type": "node",
+              "x": 24.95,
+              "y": -110.45,
+              "width": 36,
+              "height": 35,
+              "children": [
+                {
+                  "name": "image_1",
+                  "type": "sprite",
+                  "img": "#ui_longmibao_hun1.png",
+                  "width": 36,
+                  "height": 35
+                },
+                {
+                  "name": "image_2",
+                  "type": "sprite",
+                  "img": "#ui_longmibao_hun2.png",
+                  "width": 36,
+                  "height": 35
+                },
+                {
+                  "name": "image_3",
+                  "type": "sprite",
+                  "img": "#ui_longmibao_hun3.png",
+                  "width": 36,
+                  "height": 35
+                }
+              ]
+            },
+            {
+              "name": "txt_gold",
+              "type": "label",
+              "text": "?",
+              "align": "left",
+              "size": 22,
+              "color": 1411781375,
+              "x": -114,
+              "y": -109.67,
+              "width": 105.95,
+              "height": 28.55
+            },
+            {
+              "name": "node_itemshow",
+              "type": "node",
+              "x": 51.95,
+              "y": -18.5,
+              "width": 110,
+              "height": 110,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_daojukuang_DaoJuKuang1.png",
+                  "x": -55,
+                  "y": 84.05,
+                  "width": 110,
+                  "height": 110
+                },
+                {
+                  "name": "quality",
+                  "type": "node",
+                  "x": -55,
+                  "y": 84.05,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "icon",
+                  "type": "node",
+                  "x": -55.15,
+                  "y": 84.9,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "star",
+                  "type": "node",
+                  "x": -58.15,
+                  "y": 119.9,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "txt_num",
+                  "type": "label",
+                  "text": " ",
+                  "align": "right",
+                  "size": 28,
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -96,
+                  "y": 56.25,
+                  "width": 80,
+                  "height": 35.5
+                },
+                {
+                  "name": "hint",
+                  "type": "node",
+                  "x": -16.9,
+                  "y": 123.45,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "biaoji_pinzhi",
+                  "type": "node",
+                  "x": -90.1,
+                  "y": 121.85,
+                  "width": 0,
+                  "height": 0
+                }
+              ]
+            },
+            {
+              "type": "label",
+              "text": "",
+              "align": "center",
+              "size": 24,
+              "color": 1411781375,
+              "x": -136,
+              "y": 156.47,
+              "width": 270.95,
+              "height": 30.85
+            },
+            {
+              "name": "txt_hun",
+              "type": "label",
+              "text": "?",
+              "align": "left",
+              "size": 22,
+              "color": 1411781375,
+              "x": 42.95,
+              "y": -109.67,
+              "width": 105.95,
+              "height": 28.55
+            },
+            {
+              "name": "node_btn_add",
+              "type": "btn",
+              "img_normal": "#ui_longmibao_btn_jia1.png",
+              "img_down": "#ui_longmibao_btn_jia2.png",
+              "x": 78,
+              "y": -16.5,
+              "width": 46,
+              "height": 46
+            },
+            {
+              "name": "node_btn_addmax",
+              "type": "btn",
+              "img_normal": "#ui_longmibao_btn_max1.png",
+              "img_down": "#ui_longmibao_btn_max2.png",
+              "x": 144.95,
+              "y": -16.5,
+              "width": 72,
+              "height": 46
+            },
+            {
+              "name": "node_btn_sbu",
+              "type": "btn",
+              "img_normal": "#ui_longmibao_btn_jian1.png",
+              "img_down": "#ui_longmibao_btn_jian2.png",
+              "x": -79,
+              "y": -16.5,
+              "width": 46,
+              "height": 46
+            },
+            {
+              "name": "node_btn_sbumax",
+              "type": "btn",
+              "img_normal": "#ui_longmibao_btn_min1.png",
+              "img_down": "#ui_longmibao_btn_min2.png",
+              "x": -144,
+              "y": -16.5,
+              "width": 72,
+              "height": 46
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "node_pad2",
+      "type": "node",
+      "x": -30.5,
+      "y": -106.2,
+      "width": 765,
+      "height": 490.4,
+      "children": [
+        {
+          "name": "huadong",
+          "type": "list",
+          "x": -2,
+          "y": 55.7,
+          "width": 765,
+          "height": 383
+        },
+        {
+          "name": "node_btn_gethun",
+          "type": "node",
+          "x": 149.45,
+          "y": -200.7,
+          "width": 200,
+          "height": 85,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btn_3_2.png",
+              "img_down": "#ui_common_btn_4.png",
+              "img_disable": "#ui_common_btn_4c.png",
+              "width": 200,
+              "height": 85
+            },
+            {
+              "name": "txt",
+              "type": "label",
+              "text": "获得龙魂",
+              "align": "center",
+              "size": 35,
+              "color": 4294967295,
+              "x": -85,
+              "y": 4.55,
+              "width": 170,
+              "height": 43.1
+            }
+          ]
+        },
+        {
+          "name": "node_btn_quickselect",
+          "type": "node",
+          "x": -173.55,
+          "y": -200.7,
+          "width": 200,
+          "height": 85,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btn_3.png",
+              "img_down": "#ui_common_btn_4.png",
+              "img_disable": "#ui_common_btn_4c.png",
+              "width": 200,
+              "height": 85
+            },
+            {
+              "name": "txt",
+              "type": "label",
+              "text": "快速选择",
+              "align": "center",
+              "size": 35,
+              "color": 4294967295,
+              "x": -85,
+              "y": 4.55,
+              "width": 170,
+              "height": 43.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "node_pad1",
+      "type": "node",
+      "x": 58.93,
+      "y": -112.47,
+      "width": 714.95,
+      "height": 498.95,
+      "children": [
+        {
+          "name": "node_btn_go",
+          "type": "node",
+          "x": -101.53,
+          "y": -195.58,
+          "width": 200,
+          "height": 85,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btn_3_2.png",
+              "img_down": "#ui_common_btn_4.png",
+              "img_disable": "#ui_common_btn_4c.png",
+              "width": 200,
+              "height": 85
+            },
+            {
+              "name": "txt",
+              "type": "label",
+              "text": "激活星座",
+              "align": "center",
+              "size": 35,
+              "color": 4294967295,
+              "x": -85,
+              "y": 4.55,
+              "width": 170,
+              "height": 43.1
+            }
+          ]
+        },
+        {
+          "name": "node_xingzhu_show",
+          "type": "node",
+          "x": -239.18,
+          "y": 135.07,
+          "width": 502.2,
+          "height": 318,
+          "children": [
+            {
+              "name": "node_item1",
+              "type": "node",
+              "x": 213,
+              "y": -49.5,
+              "width": 502.2,
+              "height": 267,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_longmibao_1_0_bg.png",
+                  "x": -66.1,
+                  "width": 370,
+                  "height": 267
+                },
+                {
+                  "name": "node_line",
+                  "type": "node",
+                  "x": -59.4,
+                  "y": 9.13,
+                  "width": 371.1,
+                  "height": 140.45,
+                  "children": [
+                    {
+                      "name": "node_item1",
+                      "type": "node",
+                      "x": -147.55,
+                      "y": 18.22,
+                      "width": 76,
+                      "height": 104,
+                      "children": [
+                        {
+                          "name": "close",
+                          "type": "sprite",
+                          "img": "#ui_longmibao_1_1_1.png",
+                          "width": 76,
+                          "height": 104
+                        },
+                        {
+                          "name": "open",
+                          "type": "sprite",
+                          "img": "#ui_longmibao_1_1_2.png",
+                          "width": 76,
+                          "height": 104
+                        }
+                      ]
+                    },
+                    {
+                      "name": "node_item2",
+                      "type": "node",
+                      "x": -122.45,
+                      "y": -48.23,
+                      "width": 108,
+                      "height": 44,
+                      "children": [
+                        {
+                          "name": "close",
+                          "type": "sprite",
+                          "img": "#ui_longmibao_1_2_1.png",
+                          "width": 108,
+                          "height": 44
+                        },
+                        {
+                          "name": "open",
+                          "type": "sprite",
+                          "img": "#ui_longmibao_1_2_2.png",
+                          "width": 108,
+                          "height": 44
+                        }
+                      ]
+                    },
+                    {
+                      "name": "node_item3",
+                      "type": "node",
+                      "x": -22.45,
+                      "y": -26.73,
+                      "width": 92,
+                      "height": 87,
+                      "children": [
+                        {
+                          "name": "close",
+                          "type": "sprite",
+                          "img": "#ui_longmibao_1_3_1.png",
+                          "width": 92,
+                          "height": 87
+                        },
+                        {
+                          "name": "open",
+                          "type": "sprite",
+                          "img": "#ui_longmibao_1_3_2.png",
+                          "width": 92,
+                          "height": 87
+                        }
+                      ]
+                    },
+                    {
+                      "name": "node_item4",
+                      "type": "node",
+                      "x": 104.55,
+                      "y": -10.73,
+                      "width": 162,
+                      "height": 55,
+                      "children": [
+                        {
+                          "name": "close",
+                          "type": "sprite",
+                          "img": "#ui_longmibao_1_4_1.png",
+                          "width": 162,
+                          "height": 55
+                        },
+                        {
+                          "name": "open",
+                          "type": "sprite",
+                          "img": "#ui_longmibao_1_4_2.png",
+                          "width": 162,
+                          "height": 55
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "node_point",
+                  "type": "node",
+                  "x": -0.4,
+                  "y": 8.72,
+                  "width": 380.8,
+                  "height": 157.05,
+                  "children": [
+                    {
+                      "name": "node_item1",
+                      "type": "node",
+                      "x": -163.4,
+                      "y": 50.53,
+                      "width": 27,
+                      "height": 28,
+                      "children": [
+                        {
+                          "name": "close",
+                          "type": "sprite",
+                          "img": "#ui_longmibao_dian.png",
+                          "x": -13.5,
+                          "y": 14,
+                          "width": 27,
+                          "height": 28
+                        },
+                        {
+                          "name": "open",
+                          "type": "node",
+                          "x": -13.5,
+                          "y": 14,
+                          "width": 0,
+                          "height": 0
+                        }
+                      ]
+                    },
+                    {
+                      "name": "node_item2",
+                      "type": "node",
+                      "x": -222.85,
+                      "y": -42.27,
+                      "width": 27,
+                      "height": 28,
+                      "children": [
+                        {
+                          "name": "close",
+                          "type": "sprite",
+                          "img": "#ui_longmibao_dian.png",
+                          "x": -13.5,
+                          "y": 14,
+                          "width": 27,
+                          "height": 28
+                        },
+                        {
+                          "name": "open",
+                          "type": "node",
+                          "x": -13.5,
+                          "y": 14,
+                          "width": 0,
+                          "height": 0
+                        }
+                      ]
+                    },
+                    {
+                      "name": "node_item3",
+                      "type": "node",
+                      "x": -112.65,
+                      "y": -78.53,
+                      "width": 27,
+                      "height": 28,
+                      "children": [
+                        {
+                          "name": "close",
+                          "type": "sprite",
+                          "img": "#ui_longmibao_dian.png",
+                          "x": -13.5,
+                          "y": 14,
+                          "width": 27,
+                          "height": 28
+                        },
+                        {
+                          "name": "open",
+                          "type": "node",
+                          "x": -13.5,
+                          "y": 14,
+                          "width": 0,
+                          "height": 0
+                        }
+                      ]
+                    },
+                    {
+                      "name": "node_item4",
+                      "type": "node",
+                      "x": -22.75,
+                      "y": -6.02,
+                      "width": 27,
+                      "height": 28,
+                      "children": [
+                        {
+                          "name": "close",
+                          "type": "sprite",
+                          "img": "#ui_longmibao_dian.png",
+                          "x": -13.5,
+                          "y": 14,
+                          "width": 27,
+                          "height": 28
+                        },
+                        {
+                          "name": "open",
+                          "type": "node",
+                          "x": -13.5,
+                          "y": 14,
+                          "width": 0,
+                          "height": 0
+                        }
+                      ]
+                    },
+                    {
+                      "name": "node_item5",
+                      "type": "node",
+                      "x": 130.95,
+                      "y": -45.17,
+                      "width": 27,
+                      "height": 28,
+                      "children": [
+                        {
+                          "name": "close",
+                          "type": "sprite",
+                          "img": "#ui_longmibao_dian.png",
+                          "x": -13.5,
+                          "y": 14,
+                          "width": 27,
+                          "height": 28
+                        },
+                        {
+                          "name": "open",
+                          "type": "node",
+                          "x": -13.5,
+                          "y": 14,
+                          "width": 0,
+                          "height": 0
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "node_title",
+                  "type": "node",
+                  "x": -80.2,
+                  "y": 34.6,
+                  "width": 502.2,
+                  "height": 156.5,
+                  "children": [
+                    {
+                      "name": "txt_1",
+                      "type": "label",
+                      "text": "Lv.1",
+                      "align": "center",
+                      "size": 22,
+                      "color": 4294967295,
+                      "x": -147.1,
+                      "y": 63.98,
+                      "width": 104,
+                      "height": 28.55
+                    },
+                    {
+                      "name": "txt_2",
+                      "type": "label",
+                      "text": "Lv.2",
+                      "align": "center",
+                      "size": 22,
+                      "color": 4294967295,
+                      "x": -251.1,
+                      "y": -42.77,
+                      "width": 104,
+                      "height": 28.55
+                    },
+                    {
+                      "name": "txt_3",
+                      "type": "label",
+                      "text": "Lv.3",
+                      "align": "center",
+                      "size": 22,
+                      "color": 4294967295,
+                      "x": -104.35,
+                      "y": -63.98,
+                      "width": 104,
+                      "height": 28.55
+                    },
+                    {
+                      "name": "txt_4",
+                      "type": "label",
+                      "text": "Lv.4",
+                      "align": "center",
+                      "size": 22,
+                      "color": 4294967295,
+                      "x": -0.35,
+                      "y": 7.43,
+                      "width": 104,
+                      "height": 28.55
+                    },
+                    {
+                      "name": "txt_5",
+                      "type": "label",
+                      "text": "Lv.5",
+                      "align": "center",
+                      "size": 22,
+                      "color": 4294967295,
+                      "x": 147.1,
+                      "y": -29.82,
+                      "width": 104,
+                      "height": 28.55
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "node_item2",
+              "type": "node",
+              "x": 148.35,
+              "y": -46.6,
+              "width": 453,
+              "height": 318,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_longmibao_2_0_bg.png",
+                  "width": 453,
+                  "height": 318
+                },
+                {
+                  "name": "node_line",
+                  "type": "node",
+                  "x": -23.97,
+                  "y": -6.15,
+                  "width": 347.25,
+                  "height": 166,
+                  "children": [
+                    {
+                      "name": "node_item1",
+                      "type": "node",
+                      "x": -127.13,
+                      "y": 24.75,
+                      "width": 93,
+                      "height": 71,
+                      "children": [
+                        {
+                          "name": "close",
+                          "type": "sprite",
+                          "img": "#ui_longmibao_2_1_1.png",
+                          "width": 93,
+                          "height": 71
+                        },
+                        {
+                          "name": "open",
+                          "type": "sprite",
+                          "img": "#ui_longmibao_2_1_2.png",
+                          "width": 93,
+                          "height": 71
+                        }
+                      ]
+                    },
+                    {
+                      "name": "node_item2",
+                      "type": "node",
+                      "x": -92.22,
+                      "y": -15,
+                      "width": 31,
+                      "height": 136,
+                      "children": [
+                        {
+                          "name": "close",
+                          "type": "sprite",
+                          "img": "#ui_longmibao_2_2_1.png",
+                          "width": 31,
+                          "height": 136
+                        },
+                        {
+                          "name": "open",
+                          "type": "sprite",
+                          "img": "#ui_longmibao_2_2_2.png",
+                          "width": 31,
+                          "height": 136
+                        }
+                      ]
+                    },
+                    {
+                      "name": "node_item3",
+                      "type": "node",
+                      "x": -31.08,
+                      "y": -46,
+                      "width": 131,
+                      "height": 74,
+                      "children": [
+                        {
+                          "name": "close",
+                          "type": "sprite",
+                          "img": "#ui_longmibao_2_3_1.png",
+                          "width": 131,
+                          "height": 74
+                        },
+                        {
+                          "name": "open",
+                          "type": "sprite",
+                          "img": "#ui_longmibao_2_3_2.png",
+                          "width": 131,
+                          "height": 74
+                        }
+                      ]
+                    },
+                    {
+                      "name": "node_item4",
+                      "type": "node",
+                      "x": 60.72,
+                      "y": 29.6,
+                      "width": 70,
+                      "height": 101,
+                      "children": [
+                        {
+                          "name": "close",
+                          "type": "sprite",
+                          "img": "#ui_longmibao_2_4_1.png",
+                          "width": 70,
+                          "height": 101
+                        },
+                        {
+                          "name": "open",
+                          "type": "sprite",
+                          "img": "#ui_longmibao_2_4_2.png",
+                          "width": 70,
+                          "height": 101
+                        }
+                      ]
+                    },
+                    {
+                      "name": "node_item5",
+                      "type": "node",
+                      "x": 129.63,
+                      "y": 23.5,
+                      "width": 88,
+                      "height": 119,
+                      "children": [
+                        {
+                          "name": "close",
+                          "type": "sprite",
+                          "img": "#ui_longmibao_2_5_1.png",
+                          "width": 88,
+                          "height": 119
+                        },
+                        {
+                          "name": "open",
+                          "type": "sprite",
+                          "img": "#ui_longmibao_2_5_2.png",
+                          "width": 88,
+                          "height": 119
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "node_point",
+                  "type": "node",
+                  "x": -22.25,
+                  "y": -82.95,
+                  "width": 363.5,
+                  "height": 174,
+                  "children": [
+                    {
+                      "name": "node_item1",
+                      "type": "node",
+                      "x": -154.75,
+                      "y": 59,
+                      "width": 27,
+                      "height": 28,
+                      "children": [
+                        {
+                          "name": "close",
+                          "type": "sprite",
+                          "img": "#ui_longmibao_dian.png",
+                          "x": -13.5,
+                          "y": 14,
+                          "width": 27,
+                          "height": 28
+                        },
+                        {
+                          "name": "open",
+                          "type": "node",
+                          "x": -13.5,
+                          "y": 14,
+                          "width": 0,
+                          "height": 0
+                        }
+                      ]
+                    },
+                    {
+                      "name": "node_item2",
+                      "type": "node",
+                      "x": -74.75,
+                      "y": 109,
+                      "width": 27,
+                      "height": 28,
+                      "children": [
+                        {
+                          "name": "close",
+                          "type": "sprite",
+                          "img": "#ui_longmibao_dian.png",
+                          "x": -13.5,
+                          "y": 14,
+                          "width": 27,
+                          "height": 28
+                        },
+                        {
+                          "name": "open",
+                          "type": "node",
+                          "x": -13.5,
+                          "y": 14,
+                          "width": 0,
+                          "height": 0
+                        }
+                      ]
+                    },
+                    {
+                      "name": "node_item3",
+                      "type": "node",
+                      "x": -84.75,
+                      "y": -11,
+                      "width": 27,
+                      "height": 28,
+                      "children": [
+                        {
+                          "name": "close",
+                          "type": "sprite",
+                          "img": "#ui_longmibao_dian.png",
+                          "x": -13.5,
+                          "y": 14,
+                          "width": 27,
+                          "height": 28
+                        },
+                        {
+                          "name": "open",
+                          "type": "node",
+                          "x": -13.5,
+                          "y": 14,
+                          "width": 0,
+                          "height": 0
+                        }
+                      ]
+                    },
+                    {
+                      "name": "node_item4",
+                      "type": "node",
+                      "x": 45.25,
+                      "y": 49,
+                      "width": 27,
+                      "height": 28,
+                      "children": [
+                        {
+                          "name": "close",
+                          "type": "sprite",
+                          "img": "#ui_longmibao_dian.png",
+                          "x": -13.5,
+                          "y": 14,
+                          "width": 27,
+                          "height": 28
+                        },
+                        {
+                          "name": "open",
+                          "type": "node",
+                          "x": -13.5,
+                          "y": 14,
+                          "width": 0,
+                          "height": 0
+                        }
+                      ]
+                    },
+                    {
+                      "name": "node_item5",
+                      "type": "node",
+                      "x": 102.25,
+                      "y": 135,
+                      "width": 27,
+                      "height": 28,
+                      "children": [
+                        {
+                          "name": "close",
+                          "type": "sprite",
+                          "img": "#ui_longmibao_dian.png",
+                          "x": -13.5,
+                          "y": 14,
+                          "width": 27,
+                          "height": 28
+                        },
+                        {
+                          "name": "open",
+                          "type": "node",
+                          "x": -13.5,
+                          "y": 14,
+                          "width": 0,
+                          "height": 0
+                        }
+                      ]
+                    },
+                    {
+                      "name": "node_item6",
+                      "type": "node",
+                      "x": 181.75,
+                      "y": 34.05,
+                      "width": 27,
+                      "height": 28,
+                      "children": [
+                        {
+                          "name": "close",
+                          "type": "sprite",
+                          "img": "#ui_longmibao_dian.png",
+                          "x": -13.5,
+                          "y": 14,
+                          "width": 27,
+                          "height": 28
+                        },
+                        {
+                          "name": "open",
+                          "type": "node",
+                          "x": -13.5,
+                          "y": 14,
+                          "width": 0,
+                          "height": 0
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "node_title",
+                  "type": "node",
+                  "x": -11.42,
+                  "y": -70.7,
+                  "width": 412.05,
+                  "height": 199.5,
+                  "children": [
+                    {
+                      "name": "txt_1",
+                      "type": "label",
+                      "text": "Lv.1",
+                      "align": "center",
+                      "size": 22,
+                      "color": 4294967295,
+                      "x": -213.03,
+                      "y": 90.47,
+                      "width": 44.1,
+                      "height": 28.55
+                    },
+                    {
+                      "name": "txt_2",
+                      "type": "label",
+                      "text": "Lv.2",
+                      "align": "center",
+                      "size": 22,
+                      "color": 4294967295,
+                      "x": -81.08,
+                      "y": 109.77,
+                      "width": 44.1,
+                      "height": 28.55
+                    },
+                    {
+                      "name": "txt_3",
+                      "type": "label",
+                      "text": "Lv.3",
+                      "align": "center",
+                      "size": 22,
+                      "color": 4294967295,
+                      "x": -171.07,
+                      "y": -11.18,
+                      "width": 44.1,
+                      "height": 28.55
+                    },
+                    {
+                      "name": "txt_4",
+                      "type": "label",
+                      "text": "Lv.4",
+                      "align": "center",
+                      "size": 22,
+                      "color": 4294967295,
+                      "x": 18.92,
+                      "y": 23.83,
+                      "width": 44.1,
+                      "height": 28.55
+                    },
+                    {
+                      "name": "txt_5",
+                      "type": "label",
+                      "text": "Lv.5",
+                      "align": "center",
+                      "size": 22,
+                      "color": 4294967295,
+                      "x": 52.92,
+                      "y": 159.78,
+                      "width": 44.1,
+                      "height": 28.55
+                    },
+                    {
+                      "name": "txt_6",
+                      "type": "label",
+                      "text": "Lv.6",
+                      "align": "center",
+                      "size": 22,
+                      "color": 4294967295,
+                      "x": 154.92,
+                      "y": 15.38,
+                      "width": 44.1,
+                      "height": 28.55
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "node_xingzhu_info",
+          "type": "node",
+          "x": -88.05,
+          "y": -209.95,
+          "width": 714.95,
+          "height": 389.95,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_longmibao_tiaoptiao.png",
+              "x": -16.48,
+              "y": 158.47,
+              "width": 682,
+              "height": 73
+            },
+            {
+              "name": "node_under",
+              "type": "node",
+              "x": -13.5,
+              "y": 98.38,
+              "width": 714.95,
+              "height": 35,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_longmibao_jinbi.png",
+                  "x": -232.53,
+                  "width": 36,
+                  "height": 35
+                },
+                {
+                  "name": "txt_1",
+                  "type": "label",
+                  "text": "本次消耗:",
+                  "align": "right",
+                  "size": 22,
+                  "color": 4294967295,
+                  "x": -357.48,
+                  "y": 0.22,
+                  "width": 105.95,
+                  "height": 28.55
+                },
+                {
+                  "name": "txt_2",
+                  "type": "label",
+                  "text": "成功率:",
+                  "align": "right",
+                  "size": 22,
+                  "color": 4294967295,
+                  "x": 173.48,
+                  "y": 0.22,
+                  "width": 92,
+                  "height": 28.55
+                },
+                {
+                  "name": "node_huncost_show",
+                  "type": "node",
+                  "x": -88.53,
+                  "width": 36,
+                  "height": 35,
+                  "children": [
+                    {
+                      "name": "image_1",
+                      "type": "sprite",
+                      "img": "#ui_longmibao_hun1.png",
+                      "width": 36,
+                      "height": 35
+                    },
+                    {
+                      "name": "image_2",
+                      "type": "sprite",
+                      "img": "#ui_longmibao_hun2.png",
+                      "width": 36,
+                      "height": 35
+                    },
+                    {
+                      "name": "image_3",
+                      "type": "sprite",
+                      "img": "#ui_longmibao_hun3.png",
+                      "width": 36,
+                      "height": 35
+                    }
+                  ]
+                },
+                {
+                  "name": "txt_successpercent",
+                  "type": "label",
+                  "text": "?%",
+                  "align": "left",
+                  "size": 22,
+                  "color": 4291559679,
+                  "x": 265.48,
+                  "y": 0.22,
+                  "width": 92,
+                  "height": 28.55
+                },
+                {
+                  "name": "txt_huncost",
+                  "type": "label",
+                  "text": "?",
+                  "align": "left",
+                  "size": 22,
+                  "color": 4278190335,
+                  "x": -68.53,
+                  "y": 0.22,
+                  "width": 89,
+                  "height": 28.55
+                },
+                {
+                  "name": "txt_goldcost",
+                  "type": "label",
+                  "text": "?",
+                  "align": "left",
+                  "size": 22,
+                  "color": 4294967295,
+                  "x": -214.53,
+                  "y": 0.22,
+                  "width": 89,
+                  "height": 28.55
+                }
+              ]
+            },
+            {
+              "name": "node_max",
+              "type": "node",
+              "x": -73.5,
+              "y": 145.35,
+              "width": 567.95,
+              "height": 28.55,
+              "children": [
+                {
+                  "name": "txt_1",
+                  "type": "label",
+                  "text": "已经达到最高级别",
+                  "align": "center",
+                  "size": 22,
+                  "color": 4278190335,
+                  "x": -242.98,
+                  "y": -5.1,
+                  "width": 567.95,
+                  "height": 28.55
+                }
+              ]
+            },
+            {
+              "name": "node_now",
+              "type": "node",
+              "x": -61.5,
+              "y": 180.7,
+              "width": 591.95,
+              "height": 28.55,
+              "children": [
+                {
+                  "name": "txt_1",
+                  "type": "label",
+                  "text": "当前星座效果:基础属性提升",
+                  "align": "left",
+                  "size": 22,
+                  "color": 4294967295,
+                  "x": -254.98,
+                  "y": -5.1,
+                  "width": 286.95,
+                  "height": 28.55
+                },
+                {
+                  "name": "txt_2",
+                  "type": "label",
+                  "text": "%",
+                  "align": "left",
+                  "size": 22,
+                  "color": 4294967295,
+                  "x": 43.22,
+                  "y": -5.1,
+                  "width": 23.55,
+                  "height": 28.55
+                },
+                {
+                  "name": "txt_3",
+                  "type": "label",
+                  "text": "战斗力:",
+                  "align": "left",
+                  "size": 22,
+                  "color": 4294967295,
+                  "x": 136.02,
+                  "y": -5.1,
+                  "width": 94.95,
+                  "height": 28.55
+                },
+                {
+                  "name": "txt_nextuppercent_num",
+                  "type": "label",
+                  "text": "?",
+                  "align": "center",
+                  "size": 22,
+                  "color": 4291559679,
+                  "x": 11.97,
+                  "y": -5.1,
+                  "width": 39,
+                  "height": 28.55
+                },
+                {
+                  "name": "txt_nextpower_num",
+                  "type": "label",
+                  "text": "?",
+                  "align": "left",
+                  "size": 22,
+                  "color": 4284875007,
+                  "x": 210.47,
+                  "y": -5.1,
+                  "width": 126.5,
+                  "height": 28.55
+                }
+              ]
+            },
+            {
+              "name": "node_next",
+              "type": "node",
+              "x": -61.5,
+              "y": 145.35,
+              "width": 591.95,
+              "height": 28.55,
+              "children": [
+                {
+                  "name": "txt_1",
+                  "type": "label",
+                  "text": "下级星座效果:基础属性提升",
+                  "align": "left",
+                  "size": 22,
+                  "color": 4294967295,
+                  "x": -254.98,
+                  "y": -5.1,
+                  "width": 286.95,
+                  "height": 28.55
+                },
+                {
+                  "name": "txt_2",
+                  "type": "label",
+                  "text": "%",
+                  "align": "left",
+                  "size": 22,
+                  "color": 4294967295,
+                  "x": 43.22,
+                  "y": -5.1,
+                  "width": 23.55,
+                  "height": 28.55
+                },
+                {
+                  "name": "txt_3",
+                  "type": "label",
+                  "text": "战斗力:",
+                  "align": "left",
+                  "size": 22,
+                  "color": 4294967295,
+                  "x": 136.02,
+                  "y": -5.1,
+                  "width": 94.95,
+                  "height": 28.55
+                },
+                {
+                  "name": "txt_nextuppercent_num",
+                  "type": "label",
+                  "text": "?",
+                  "align": "center",
+                  "size": 22,
+                  "color": 4291559679,
+                  "x": 11.97,
+                  "y": -5.1,
+                  "width": 39,
+                  "height": 28.55
+                },
+                {
+                  "name": "txt_nextpower_num",
+                  "type": "label",
+                  "text": "?",
+                  "align": "left",
+                  "size": 22,
+                  "color": 4284875007,
+                  "x": 210.47,
+                  "y": -5.1,
+                  "width": 126.5,
+                  "height": 28.55
+                }
+              ]
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "?",
+              "align": "center",
+              "size": 25,
+              "color": 4291559679,
+              "x": -135.53,
+              "y": 454.85,
+              "width": 238,
+              "height": 31.95
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

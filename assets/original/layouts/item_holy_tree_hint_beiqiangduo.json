@@ -1,0 +1,25 @@
+{
+  "group": [
+    "ui_FunctionIcons1"
+  ],
+  "width": 91,
+  "height": 90,
+  "children": [
+    {
+      "name": "btn",
+      "type": "btn",
+      "img_normal": "#ui_main_icon_beiqiangduo.png",
+      "img_down": "#ui_main_icon_beiqiangduo2.png",
+      "y": -0.02,
+      "width": 90.5,
+      "height": 90.45
+    },
+    {
+      "name": "con_name",
+      "type": "node",
+      "y": -29,
+      "width": 0,
+      "height": 0
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "group": [
+    "ui_guild"
+  ],
+  "width": 903,
+  "height": 94,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_haoyoulan2.png",
+      "scale9": 1,
+      "x": -451.5,
+      "width": 903,
+      "height": 94,
+      "maxw": 903,
+      "maxh": 94
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_sekuai1.png",
+      "scale9": 1,
+      "x": -351.4,
+      "y": -0.4,
+      "width": 158,
+      "height": 86,
+      "maxw": 158,
+      "maxh": 86
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_sekuai1.png",
+      "scale9": 1,
+      "x": -83.4,
+      "y": -0.4,
+      "width": 204,
+      "height": 86,
+      "maxw": 204,
+      "maxh": 86
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_sekuai1.png",
+      "scale9": 1,
+      "x": 305.6,
+      "y": -0.4,
+      "width": 141,
+      "height": 86,
+      "maxw": 141,
+      "maxh": 86
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_guild_touxiang1.png",
+      "x": -399.5,
+      "y": 0.05,
+      "width": 62,
+      "height": 62
+    },
+    {
+      "name": "touxiang_moren",
+      "type": "sprite",
+      "img": "#ui_guild_meiren.png",
+      "x": -399.5,
+      "y": 1.05,
+      "width": 50,
+      "height": 50
+    },
+    {
+      "name": "touxiang_icon",
+      "type": "node",
+      "x": -399.5,
+      "y": 1.05,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "player_name",
+      "type": "label",
+      "text": "萨达萨达.",
+      "align": "left",
+      "size": 20,
+      "color": 1092488703,
+      "x": -346.5,
+      "y": 9.1,
+      "width": 149,
+      "height": 26.5
+    },
+    {
+      "name": "hint",
+      "type": "label",
+      "text": "等级：",
+      "align": "left",
+      "size": 20,
+      "color": 1092488703,
+      "x": -346.5,
+      "y": -16.9,
+      "width": 64,
+      "height": 26.5
+    },
+    {
+      "name": "player_level",
+      "type": "label",
+      "text": "25",
+      "align": "left",
+      "size": 20,
+      "color": 1092488703,
+      "x": -282.5,
+      "y": -16.9,
+      "width": 87,
+      "height": 26.5
+    },
+    {
+      "name": "zhiwei_fuhuizhang",
+      "type": "sprite",
+      "img": "#ui_guild_zhiweifushuizhang.png",
+      "x": -139.5,
+      "y": 1.35,
+      "width": 94,
+      "height": 42
+    },
+    {
+      "name": "zhiwei_huizhang",
+      "type": "sprite",
+      "img": "#ui_guild_zhiweishuizhang.png",
+      "x": -139.5,
+      "y": 1.85,
+      "width": 67,
+      "height": 41
+    },
+    {
+      "name": "zhiwei_huiyuan",
+      "type": "label",
+      "text": "会员",
+      "align": "center",
+      "size": 20,
+      "color": 1092488703,
+      "x": -182.5,
+      "y": -0.95,
+      "width": 86,
+      "height": 26.5
+    },
+    {
+      "name": "power_txt",
+      "type": "label",
+      "text": "战斗力：",
+      "align": "right",
+      "size": 20,
+      "color": 1092488703,
+      "x": -80.55,
+      "y": -0.95,
+      "width": 86,
+      "height": 26.5
+    },
+    {
+      "name": "power_num",
+      "type": "label",
+      "text": "",
+      "align": "left",
+      "size": 20,
+      "color": 2566914303,
+      "x": 6.45,
+      "y": -0.95,
+      "width": 112,
+      "height": 26.5
+    },
+    {
+      "name": "gongxian_txt",
+      "type": "label",
+      "text": "贡献：",
+      "align": "right",
+      "size": 20,
+      "color": 1092488703,
+      "x": 119.45,
+      "y": -0.95,
+      "width": 80.05,
+      "height": 26.5
+    },
+    {
+      "name": "gongxian_num",
+      "type": "label",
+      "text": "",
+      "align": "left",
+      "size": 20,
+      "color": 1092488703,
+      "x": 200.45,
+      "y": -0.95,
+      "width": 102.95,
+      "height": 26.5
+    },
+    {
+      "name": "denglu",
+      "type": "label",
+      "text": "",
+      "align": "left",
+      "size": 20,
+      "color": 1092488703,
+      "x": 308.45,
+      "y": -0.95,
+      "width": 136,
+      "height": 26.5
+    }
+  ]
+}

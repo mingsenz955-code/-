@@ -1,0 +1,98 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "mask",
+      "maskRGBA": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0
+      },
+      "maskAnchor": {
+        "x": 1,
+        "y": 1
+      },
+      "scale9mask": true
+    },
+    {
+      "type": "sprite",
+      "img": "#UI_RW_L_icon_5.png",
+      "x": -335.45,
+      "width": 205,
+      "height": 244
+    },
+    {
+      "type": "sprite",
+      "img": "#hint_bg.png",
+      "scale9": 1,
+      "x": -230,
+      "y": -2.5,
+      "width": 474,
+      "height": 200,
+      "maxw": 474,
+      "maxh": 200
+    },
+    {
+      "type": "sprite",
+      "img": "#hint_bg_t.png",
+      "x": -245.5,
+      "y": 18,
+      "width": 49,
+      "height": 36
+    },
+    {
+      "name": "biaoti",
+      "type": "label",
+      "text": "镶嵌宝石",
+      "size": 30,
+      "align": "center",
+      "color": 3429236991,
+      "x": -211.3,
+      "y": 49.05,
+      "width": 438,
+      "height": 34
+    },
+    {
+      "name": "miaoshu",
+      "type": "label",
+      "text": "你已经通过探索获得了宝石，但是宝石只有镶嵌在祭坛里之后才能生效，接下来就开始镶嵌宝石吧。",
+      "size": 25,
+      "align": "center",
+      "color": 1714618623,
+      "x": -215.3,
+      "y": -27.7,
+      "width": 445,
+      "height": 120
+    },
+    {
+      "name": "close",
+      "type": "node",
+      "x": 0,
+      "y": -150,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_2.png",
+          "img_down": "#ui_common_btn_1.png",
+          "img_disable": "#ui_common_btn_1.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "好的",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    }
+  ]
+}

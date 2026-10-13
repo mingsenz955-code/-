@@ -1,0 +1,589 @@
+{
+  "group": [
+    "ui_fudai",
+    "ui_welfare",
+    "ui_Goal"
+  ],
+  "width": 756,
+  "height": 566,
+  "children": [
+    {
+      "name": "cardlv1",
+      "type": "node",
+      "x": -248,
+      "width": 252,
+      "height": 533,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_fudai_bgtiao.png",
+          "width": 252,
+          "height": 533
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_fudai_fudai_1.png",
+          "x": 4,
+          "y": 132,
+          "width": 149,
+          "height": 174
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_fudai_liji1.png",
+          "x": -10,
+          "y": 228,
+          "width": 149,
+          "height": 33
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_welfare_mojing.png",
+          "x": 80,
+          "y": 230,
+          "width": 31,
+          "height": 42
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_fudai_hd1.png",
+          "x": 27,
+          "y": -130,
+          "width": 81,
+          "height": 29
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_fudai_jiazhi1.png",
+          "x": 61,
+          "y": 168,
+          "width": 110,
+          "height": 82
+        },
+        {
+          "name": "txt1",
+          "type": "label",
+          "text": "每天可使用一次",
+          "align": "center",
+          "size": 24,
+          "color": 1092488703,
+          "x": -118,
+          "y": -93,
+          "width": 234,
+          "height": 33
+        },
+        {
+          "name": "txt2",
+          "type": "label",
+          "text": "可获得",
+          "align": "right",
+          "size": 24,
+          "color": 1092488703,
+          "x": -106,
+          "y": -129,
+          "width": 92,
+          "height": 31
+        },
+        {
+          "name": "txt3",
+          "type": "label",
+          "text": "剩余数量：",
+          "align": "left",
+          "size": 24,
+          "color": 1092488703,
+          "x": -94,
+          "y": -242,
+          "width": 125,
+          "height": 31
+        },
+        {
+          "name": "txt_leftnum",
+          "type": "label",
+          "text": "",
+          "align": "left",
+          "size": 24,
+          "color": 2566927359,
+          "x": 32,
+          "y": -242,
+          "width": 81,
+          "height": 31
+        },
+        {
+          "name": "txt_rewardinfo",
+          "type": "label",
+          "text": "送?个?",
+          "align": "center",
+          "size": 24,
+          "color": 1092488703,
+          "x": -98,
+          "y": 25,
+          "width": 198,
+          "height": 31
+        },
+        {
+          "name": "image_isused",
+          "type": "sprite",
+          "img": "#ui_fudai_yigoumai.png",
+          "x": -62,
+          "y": 153,
+          "width": 82,
+          "height": 84
+        },
+        {
+          "name": "node_btn_buy",
+          "type": "node",
+          "x": 3,
+          "y": -39,
+          "width": 144,
+          "height": 85,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_goal_rbtn3.png",
+              "img_down": "#ui_goal_rbtn4.png",
+              "img_disable": "#ui_common_btn_2c.png",
+              "width": 144,
+              "height": 85
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "购买",
+              "align": "center",
+              "size": 35,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -51,
+              "y": 5,
+              "width": 103,
+              "height": 45
+            }
+          ]
+        },
+        {
+          "name": "node_btn_use",
+          "type": "node",
+          "x": 1,
+          "y": -187,
+          "width": 144,
+          "height": 85,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btn_1.png",
+              "img_down": "#ui_common_btn_2.png",
+              "img_disable": "#ui_common_btn_2c.png",
+              "width": 144,
+              "height": 85
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "使用",
+              "align": "center",
+              "size": 35,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -51,
+              "y": 5,
+              "width": 103,
+              "height": 45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "cardlv2",
+      "type": "node",
+      "x": 4,
+      "width": 252,
+      "height": 533,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_fudai_bgtiao.png",
+          "width": 252,
+          "height": 533
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_fudai_fudai_2.png",
+          "x": 2,
+          "y": 136,
+          "width": 149,
+          "height": 174
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_fudai_jiazhi2.png",
+          "x": 54,
+          "y": 166,
+          "width": 110,
+          "height": 82
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_fudai_liji2.png",
+          "x": -9,
+          "y": 230,
+          "width": 165,
+          "height": 33
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_welfare_mojing.png",
+          "x": 88,
+          "y": 232,
+          "width": 31,
+          "height": 42
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_fudai_hd2.png",
+          "x": 29,
+          "y": -130,
+          "width": 81,
+          "height": 29
+        },
+        {
+          "name": "txt1",
+          "type": "label",
+          "text": "每天可使用一次",
+          "align": "center",
+          "size": 24,
+          "color": 1092488703,
+          "x": -118,
+          "y": -93,
+          "width": 234,
+          "height": 33
+        },
+        {
+          "name": "txt2",
+          "type": "label",
+          "text": "可获得",
+          "align": "right",
+          "size": 24,
+          "color": 1092488703,
+          "x": -106,
+          "y": -129,
+          "width": 92,
+          "height": 31
+        },
+        {
+          "name": "txt3",
+          "type": "label",
+          "text": "剩余数量：",
+          "align": "left",
+          "size": 24,
+          "color": 1092488703,
+          "x": -94,
+          "y": -242,
+          "width": 125,
+          "height": 31
+        },
+        {
+          "name": "txt_leftnum",
+          "type": "label",
+          "text": "",
+          "align": "left",
+          "size": 24,
+          "color": 2566927359,
+          "x": 32,
+          "y": -242,
+          "width": 81,
+          "height": 31
+        },
+        {
+          "name": "txt_rewardinfo",
+          "type": "label",
+          "text": "送?个?",
+          "align": "center",
+          "size": 24,
+          "color": 1092488703,
+          "x": -98,
+          "y": 25,
+          "width": 198,
+          "height": 31
+        },
+        {
+          "name": "image_isused",
+          "type": "sprite",
+          "img": "#ui_fudai_yigoumai.png",
+          "x": -62,
+          "y": 153,
+          "width": 82,
+          "height": 84
+        },
+        {
+          "name": "node_btn_buy",
+          "type": "node",
+          "x": 3,
+          "y": -39,
+          "width": 144,
+          "height": 85,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_goal_rbtn3.png",
+              "img_down": "#ui_goal_rbtn4.png",
+              "img_disable": "#ui_common_btn_2c.png",
+              "width": 144,
+              "height": 85
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "购买",
+              "align": "center",
+              "size": 35,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -51,
+              "y": 5,
+              "width": 103,
+              "height": 45
+            }
+          ]
+        },
+        {
+          "name": "node_btn_use",
+          "type": "node",
+          "x": 1,
+          "y": -187,
+          "width": 144,
+          "height": 85,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btn_1.png",
+              "img_down": "#ui_common_btn_2.png",
+              "img_disable": "#ui_common_btn_2c.png",
+              "width": 144,
+              "height": 85
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "使用",
+              "align": "center",
+              "size": 35,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -51,
+              "y": 5,
+              "width": 103,
+              "height": 45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "cardlv3",
+      "type": "node",
+      "x": 256,
+      "y": -2,
+      "width": 252,
+      "height": 533,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_fudai_bgtiao.png",
+          "width": 252,
+          "height": 533
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_fudai_fudai_3.png",
+          "x": 0,
+          "y": 136,
+          "width": 151,
+          "height": 175
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_fudai_hd3.png",
+          "x": 35,
+          "y": -129,
+          "width": 94,
+          "height": 29
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_fudai_liji3.png",
+          "x": -18,
+          "y": 230,
+          "width": 165,
+          "height": 33
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_welfare_mojing.png",
+          "x": 80,
+          "y": 232,
+          "width": 31,
+          "height": 42
+        },
+        {
+          "name": "txt1",
+          "type": "label",
+          "text": "每天可使用一次",
+          "align": "center",
+          "size": 24,
+          "color": 1092488703,
+          "x": -118,
+          "y": -93,
+          "width": 234,
+          "height": 33
+        },
+        {
+          "name": "txt2",
+          "type": "label",
+          "text": "可获得",
+          "align": "right",
+          "size": 24,
+          "color": 1092488703,
+          "x": -106,
+          "y": -129,
+          "width": 92,
+          "height": 31
+        },
+        {
+          "name": "txt3",
+          "type": "label",
+          "text": "剩余数量：",
+          "align": "left",
+          "size": 24,
+          "color": 1092488703,
+          "x": -94,
+          "y": -242,
+          "width": 125,
+          "height": 31
+        },
+        {
+          "name": "txt3",
+          "type": "sprite",
+          "img": "#ui_fudai_jiazhi3.png",
+          "x": 58,
+          "y": 161,
+          "width": 110,
+          "height": 82
+        },
+        {
+          "name": "txt_leftnum",
+          "type": "label",
+          "text": "",
+          "align": "left",
+          "size": 24,
+          "color": 2566927359,
+          "x": 32,
+          "y": -242,
+          "width": 81,
+          "height": 31
+        },
+        {
+          "name": "txt_rewardinfo",
+          "type": "label",
+          "text": "送?个?",
+          "align": "center",
+          "size": 24,
+          "color": 1092488703,
+          "x": -98,
+          "y": 25,
+          "width": 198,
+          "height": 31
+        },
+        {
+          "name": "image_isused",
+          "type": "sprite",
+          "img": "#ui_fudai_yigoumai.png",
+          "x": -62,
+          "y": 153,
+          "width": 82,
+          "height": 84
+        },
+        {
+          "name": "node_btn_buy",
+          "type": "node",
+          "x": 3,
+          "y": -39,
+          "width": 144,
+          "height": 85,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_goal_rbtn3.png",
+              "img_down": "#ui_goal_rbtn4.png",
+              "img_disable": "#ui_common_btn_2c.png",
+              "width": 144,
+              "height": 85
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "购买",
+              "align": "center",
+              "size": 35,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -51,
+              "y": 5,
+              "width": 103,
+              "height": 45
+            }
+          ]
+        },
+        {
+          "name": "node_btn_use",
+          "type": "node",
+          "x": 1,
+          "y": -187,
+          "width": 144,
+          "height": 85,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btn_1.png",
+              "img_down": "#ui_common_btn_2.png",
+              "img_disable": "#ui_common_btn_2c.png",
+              "width": 144,
+              "height": 85
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "使用",
+              "align": "center",
+              "size": 35,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -51,
+              "y": 5,
+              "width": 103,
+              "height": 45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "hint",
+      "type": "label",
+      "text": "购买后获得相应VIP经验",
+      "align": "center",
+      "size": 24,
+      "color": 1092488703,
+      "x": -358,
+      "y": -284,
+      "width": 725,
+      "height": 31
+    }
+  ]
+}

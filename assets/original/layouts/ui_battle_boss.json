@@ -1,0 +1,867 @@
+{
+  "group": [
+    "ui_Batlle",
+    "ui_FunctionIcons1"
+  ],
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png"
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_GuanBi1.png",
+      "img_down": "#ui_common_btn_GuanBi2.png",
+      "x": 468.1,
+      "y": 338.9,
+      "right": 43.9
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_battle_jd1.png",
+      "y": 330.5,
+      "width": 510,
+      "height": 60
+    },
+    {
+      "name": "con_tianchong",
+      "type": "node",
+      "y": 330.5,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "联赛",
+      "size": 27,
+      "align": "center",
+      "color": 4294967295,
+      "x": -216.9,
+      "y": 332.93,
+      "width": 431.85,
+      "height": 34.15
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_d3.png",
+      "scale9": 1,
+      "x": -105.85,
+      "y": 276,
+      "width": 225,
+      "height": 40,
+      "maxw": 225,
+      "maxh": 40
+    },
+    {
+      "name": "tx_time",
+      "type": "label",
+      "text": "今日挑战次数：5",
+      "size": 21,
+      "align": "left",
+      "color": 4294967295,
+      "x": -99.55,
+      "y": 276.2,
+      "width": 168,
+      "height": 27.6
+    },
+    {
+      "name": "tianjia",
+      "type": "btn",
+      "img_normal": "#ui_main_05.png",
+      "img_down": "#ui_main_05-2.png",
+      "x": 100.4,
+      "y": 275
+    },
+    {
+      "name": "chongzhi",
+      "type": "node",
+      "x": -278.55,
+      "y": 275.9,
+      "width": 218,
+      "height": 40,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_d3.png",
+          "scale9": 1,
+          "x": -109,
+          "width": 218,
+          "height": 40,
+          "maxw": 218,
+          "maxh": 40
+        },
+        {
+          "name": "tx_time_zhongzhi",
+          "type": "label",
+          "text": "重置时间08:00:00",
+          "size": 21,
+          "align": "left",
+          "color": 4294967295,
+          "x": -99.55,
+          "y": 0.25,
+          "width": 200,
+          "height": 27.6
+        }
+      ]
+    },
+    {
+      "name": "easy",
+      "type": "node",
+      "x": -180.03,
+      "y": -234.22,
+      "width": 322.45,
+      "height": 483.25,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_DiBan_YangBiZhi.png",
+          "scale9": 1,
+          "x": -320.98,
+          "y": 251.13,
+          "width": 321,
+          "height": 447,
+          "maxw": 321,
+          "maxh": 447
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_nandu1.png",
+          "x": -160.48,
+          "y": 278.77,
+          "width": 254,
+          "height": 280
+        },
+        {
+          "name": "con_img",
+          "type": "node",
+          "x": -161.22,
+          "y": 207.88,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "btn_tiaozhan",
+          "type": "node",
+          "x": -161.47,
+          "y": 42.47,
+          "width": 144,
+          "height": 85,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btn_1.png",
+              "img_down": "#ui_common_btn_2.png"
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "挑战",
+              "size": 35,
+              "align": "center",
+              "color": 4294967295,
+              "x": -51.5,
+              "y": 4.93,
+              "width": 103,
+              "height": 45.15
+            }
+          ]
+        },
+        {
+          "name": "power",
+          "type": "label",
+          "text": " ",
+          "size": 20,
+          "align": "center",
+          "color": 4294967295,
+          "x": -261.98,
+          "y": 172.38,
+          "width": 202,
+          "height": 26.5
+        },
+        {
+          "name": "type1",
+          "type": "node",
+          "x": -162.22,
+          "y": 382.63,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "type2",
+          "type": "node",
+          "x": -114.22,
+          "y": 382.63,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "type3",
+          "type": "node",
+          "x": -66.22,
+          "y": 382.63,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "expense_txt",
+          "type": "label",
+          "text": "可获得：",
+          "align": "right",
+          "size": 22,
+          "color": 1092488703,
+          "x": -289.32,
+          "y": 109.3,
+          "width": 94.1,
+          "height": 28.75
+        },
+        {
+          "name": "item1",
+          "type": "node",
+          "x": -170.52,
+          "y": 112.63,
+          "width": 50,
+          "height": 50,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_d1.png",
+              "scale9": 1,
+              "x": -25,
+              "width": 50,
+              "height": 50,
+              "maxw": 50,
+              "maxh": 50
+            },
+            {
+              "type": "sprite",
+              "img": "#shangcheng_huobi_qhs.png",
+              "x": -1,
+              "width": 40,
+              "height": 40
+            }
+          ]
+        },
+        {
+          "name": "item2",
+          "type": "node",
+          "x": -115.53,
+          "y": 112.63,
+          "width": 50,
+          "height": 50,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_d1.png",
+              "scale9": 1,
+              "x": -25,
+              "width": 50,
+              "height": 50,
+              "maxw": 50,
+              "maxh": 50
+            },
+            {
+              "type": "sprite",
+              "img": "#icon40_zd0001.png",
+              "width": 40,
+              "height": 36
+            }
+          ]
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_BiaoTi_Bg_s.png",
+          "scale9": 1,
+          "x": -322.42,
+          "y": 455.73,
+          "width": 322,
+          "height": 55,
+          "maxw": 322,
+          "maxh": 55
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_zdk.png",
+          "x": -115.47,
+          "y": 457.82,
+          "width": 200,
+          "height": 26
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": " ",
+          "size": 18,
+          "align": "right",
+          "color": 4294967295,
+          "x": -181.22,
+          "y": 456.95,
+          "width": 155,
+          "height": 24.25
+        },
+        {
+          "name": "level",
+          "type": "sprite",
+          "img": "#ui_battle_nd1.png",
+          "x": -257.48,
+          "y": 459.63,
+          "width": 84,
+          "height": 36
+        }
+      ]
+    },
+    {
+      "name": "normal",
+      "type": "node",
+      "x": 159.97,
+      "y": -234.42,
+      "width": 322.45,
+      "height": 483.65,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_DiBan_YangBiZhi.png",
+          "scale9": 1,
+          "x": -320.98,
+          "y": 251.32,
+          "width": 321,
+          "height": 447,
+          "maxw": 321,
+          "maxh": 447
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_nandu2.png",
+          "x": -160.48,
+          "y": 278.98,
+          "width": 254,
+          "height": 280
+        },
+        {
+          "name": "con_img",
+          "type": "node",
+          "x": -161.22,
+          "y": 208.07,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "btn_tiaozhan",
+          "type": "node",
+          "x": -161.47,
+          "y": 42.67,
+          "width": 144,
+          "height": 85,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btn_1.png",
+              "img_down": "#ui_common_btn_2.png"
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "挑战",
+              "size": 35,
+              "align": "center",
+              "color": 4294967295,
+              "x": -51.5,
+              "y": 4.93,
+              "width": 103,
+              "height": 45.15
+            }
+          ]
+        },
+        {
+          "name": "power",
+          "type": "label",
+          "text": " ",
+          "size": 20,
+          "align": "center",
+          "color": 4294967295,
+          "x": -261.98,
+          "y": 172.57,
+          "width": 202,
+          "height": 26.5
+        },
+        {
+          "name": "type1",
+          "type": "node",
+          "x": -162.22,
+          "y": 382.82,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "type2",
+          "type": "node",
+          "x": -114.22,
+          "y": 382.82,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "type3",
+          "type": "node",
+          "x": -66.22,
+          "y": 382.82,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "expense_txt",
+          "type": "label",
+          "text": "可获得：",
+          "align": "right",
+          "size": 22,
+          "color": 1092488703,
+          "x": -289.32,
+          "y": 109.5,
+          "width": 94.1,
+          "height": 28.75
+        },
+        {
+          "name": "item1",
+          "type": "node",
+          "x": -170.52,
+          "y": 112.82,
+          "width": 50,
+          "height": 50,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_d1.png",
+              "scale9": 1,
+              "x": -25,
+              "width": 50,
+              "height": 50,
+              "maxw": 50,
+              "maxh": 50
+            },
+            {
+              "type": "sprite",
+              "img": "#shangcheng_huobi_qhs.png",
+              "x": -1,
+              "width": 40,
+              "height": 40
+            }
+          ]
+        },
+        {
+          "name": "item2",
+          "type": "node",
+          "x": -115.53,
+          "y": 112.82,
+          "width": 50,
+          "height": 50,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_d1.png",
+              "scale9": 1,
+              "x": -25,
+              "width": 50,
+              "height": 50,
+              "maxw": 50,
+              "maxh": 50
+            },
+            {
+              "type": "sprite",
+              "img": "#icon40_zd0003.png",
+              "width": 40,
+              "height": 36
+            }
+          ]
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_BiaoTi_Bg_s.png",
+          "scale9": 1,
+          "x": -322.42,
+          "y": 455.92,
+          "width": 322,
+          "height": 55,
+          "maxw": 322,
+          "maxh": 55
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_zdk.png",
+          "x": -115.47,
+          "y": 458.02,
+          "width": 200,
+          "height": 26
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": " ",
+          "size": 18,
+          "align": "right",
+          "color": 4294967295,
+          "x": -181.22,
+          "y": 457.15,
+          "width": 155,
+          "height": 24.25
+        },
+        {
+          "name": "level",
+          "type": "sprite",
+          "img": "#ui_battle_nd2.png",
+          "x": -257.48,
+          "y": 465.82,
+          "width": 84,
+          "height": 36
+        }
+      ]
+    },
+    {
+      "name": "hard",
+      "type": "node",
+      "x": 499.98,
+      "y": -234.22,
+      "width": 322.45,
+      "height": 483.25,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_DiBan_YangBiZhi.png",
+          "scale9": 1,
+          "x": -320.98,
+          "y": 251.13,
+          "width": 321,
+          "height": 447,
+          "maxw": 321,
+          "maxh": 447
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_nandu3.png",
+          "x": -160.48,
+          "y": 278.77,
+          "width": 254,
+          "height": 280
+        },
+        {
+          "name": "con_img",
+          "type": "node",
+          "x": -161.22,
+          "y": 207.88,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "btn_tiaozhan",
+          "type": "node",
+          "x": -161.47,
+          "y": 42.47,
+          "width": 144,
+          "height": 85,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btn_1.png",
+              "img_down": "#ui_common_btn_2.png"
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "挑战",
+              "size": 35,
+              "align": "center",
+              "color": 4294967295,
+              "x": -51.5,
+              "y": 4.93,
+              "width": 103,
+              "height": 45.15
+            }
+          ]
+        },
+        {
+          "name": "power",
+          "type": "label",
+          "text": " ",
+          "size": 20,
+          "align": "center",
+          "color": 4294967295,
+          "x": -261.98,
+          "y": 172.38,
+          "width": 202,
+          "height": 26.5
+        },
+        {
+          "name": "type1",
+          "type": "node",
+          "x": -162.22,
+          "y": 382.63,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "type2",
+          "type": "node",
+          "x": -114.22,
+          "y": 382.63,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "type3",
+          "type": "node",
+          "x": -66.22,
+          "y": 382.63,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "expense_txt",
+          "type": "label",
+          "text": "可获得：",
+          "align": "right",
+          "size": 22,
+          "color": 1092488703,
+          "x": -289.32,
+          "y": 109.3,
+          "width": 94.1,
+          "height": 28.75
+        },
+        {
+          "name": "item1",
+          "type": "node",
+          "x": -170.52,
+          "y": 112.63,
+          "width": 50,
+          "height": 50,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_d1.png",
+              "scale9": 1,
+              "x": -25,
+              "width": 50,
+              "height": 50,
+              "maxw": 50,
+              "maxh": 50
+            },
+            {
+              "type": "sprite",
+              "img": "#shangcheng_huobi_qhs.png",
+              "x": -1,
+              "width": 40,
+              "height": 40
+            }
+          ]
+        },
+        {
+          "name": "item2",
+          "type": "node",
+          "x": -115.53,
+          "y": 112.63,
+          "width": 50,
+          "height": 50,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_d1.png",
+              "scale9": 1,
+              "x": -25,
+              "width": 50,
+              "height": 50,
+              "maxw": 50,
+              "maxh": 50
+            },
+            {
+              "type": "sprite",
+              "img": "#icon40_zd0002.png",
+              "width": 26,
+              "height": 35
+            }
+          ]
+        },
+        {
+          "name": "item3",
+          "type": "node",
+          "x": -60.52,
+          "y": 112.63,
+          "width": 50,
+          "height": 50,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_d1.png",
+              "scale9": 1,
+              "x": -25,
+              "width": 50,
+              "height": 50,
+              "maxw": 50,
+              "maxh": 50
+            },
+            {
+              "type": "sprite",
+              "img": "#icon40_zd0004.png",
+              "width": 29,
+              "height": 36
+            }
+          ]
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_BiaoTi_Bg_s.png",
+          "scale9": 1,
+          "x": -322.42,
+          "y": 455.73,
+          "width": 322,
+          "height": 55,
+          "maxw": 322,
+          "maxh": 55
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_zdk.png",
+          "x": -115.47,
+          "y": 457.82,
+          "width": 200,
+          "height": 26
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": " ",
+          "size": 18,
+          "align": "right",
+          "color": 4294967295,
+          "x": -181.22,
+          "y": 456.95,
+          "width": 155,
+          "height": 24.25
+        },
+        {
+          "name": "level",
+          "type": "sprite",
+          "img": "#ui_battle_nd3.png",
+          "x": -257.48,
+          "y": 464.63,
+          "width": 84,
+          "height": 36
+        }
+      ]
+    },
+    {
+      "name": "back",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_FanHui1.png",
+      "img_down": "#ui_common_btn_FanHui2.png",
+      "x": -468.3,
+      "y": 338.9,
+      "left": 43.7
+    },
+    {
+      "name": "buzhen",
+      "type": "node",
+      "x": 418.5,
+      "y": -298,
+      "width": 101,
+      "height": 111,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_main_Z_ico-bg0003.png",
+          "img_down": "#ui_main_Z_ico-bg0004.png",
+          "width": 101,
+          "height": 111
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_Z_ico-BuZhen.png",
+          "x": -0.5,
+          "y": 7,
+          "width": 94,
+          "height": 79
+        },
+        {
+          "name": "con_name",
+          "type": "node",
+          "y": -52.5,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "zhuangbei",
+      "type": "node",
+      "x": 290.5,
+      "y": -298,
+      "width": 101,
+      "height": 111,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_main_Z_ico-bg0003.png",
+          "img_down": "#ui_main_Z_ico-bg0004.png",
+          "width": 101,
+          "height": 111
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_Z_ico-ZhuangBei.png",
+          "x": -0.5,
+          "y": 13.5,
+          "width": 88,
+          "height": 84
+        },
+        {
+          "name": "con_name",
+          "type": "node",
+          "y": -52.5,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "new",
+          "type": "node",
+          "x": 27.5,
+          "y": 39.5,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "power_bg",
+      "type": "node",
+      "x": -340.8,
+      "y": -344.95,
+      "width": 340,
+      "height": 60,
+      "left": 1.2,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_zhandouli.png",
+          "width": 340,
+          "height": 60
+        },
+        {
+          "name": "tx_power_num",
+          "type": "label",
+          "text": "",
+          "size": 20,
+          "align": "left",
+          "color": 4294967295,
+          "x": -161,
+          "y": -1.3,
+          "width": 273,
+          "height": 26.5
+        }
+      ]
+    }
+  ]
+}

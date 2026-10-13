@@ -1,0 +1,282 @@
+{
+  "group": [
+    "ui_common",
+    "ui_chat"
+  ],
+  "width": 948,
+  "height": 783,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "grid": {
+        "x": 108,
+        "y": 111,
+        "width": 46,
+        "height": 27
+      },
+      "x": -448,
+      "y": -4,
+      "width": 904,
+      "height": 783,
+      "maxw": 904,
+      "maxh": 783
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_chat_kkk-(2).png",
+      "scale9": 1,
+      "grid": {
+        "x": 10,
+        "y": 10,
+        "width": 20,
+        "height": 20
+      },
+      "x": -404,
+      "y": 3,
+      "width": 818,
+      "height": 600,
+      "maxw": 818,
+      "maxh": 600
+    },
+    {
+      "name": "node_msgbar",
+      "type": "node",
+      "x": 1,
+      "y": -332,
+      "width": 832,
+      "height": 63,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_haoyoulan2.png",
+          "scale9": 1,
+          "grid": {
+            "x": 28,
+            "y": 29,
+            "width": 38,
+            "height": 36
+          },
+          "x": -416,
+          "width": 832,
+          "height": 63,
+          "maxw": 832,
+          "maxh": 63
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_chat_xtt.png",
+          "x": -339,
+          "y": -2,
+          "width": 141,
+          "height": 41
+        },
+        {
+          "name": "node_input",
+          "type": "node",
+          "x": -11,
+          "y": -2,
+          "width": 500,
+          "height": 47,
+          "children": [
+            {
+              "name": "image_input",
+              "type": "sprite",
+              "img": "#ui_chat_shuruk.png",
+              "width": 500,
+              "height": 47
+            }
+          ]
+        },
+        {
+          "name": "txt_cnt",
+          "type": "label",
+          "text": "剩余:?",
+          "align": "center",
+          "size": 28,
+          "color": 1092488703,
+          "x": -410,
+          "y": -1,
+          "width": 142,
+          "height": 35
+        },
+        {
+          "name": "btn_send",
+          "type": "node",
+          "x": 324,
+          "y": 0,
+          "width": 154,
+          "height": 46,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btn_pppp1.png",
+              "img_down": "#ui_common_btn_pppp2.png",
+              "img_disable": "#ui_common_btn_pppp3.png",
+              "width": 154,
+              "height": 46
+            },
+            {
+              "name": "txt_1",
+              "type": "label",
+              "text": "发送",
+              "align": "center",
+              "size": 28,
+              "color": 992815615,
+              "x": -75,
+              "y": -1,
+              "width": 148,
+              "height": 35
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_chat_btn_shouqi1.png",
+      "img_down": "#ui_chat_btn_shouqi1.png",
+      "x": 470,
+      "y": -13,
+      "width": 59,
+      "height": 149
+    },
+    {
+      "name": "huadong1",
+      "type": "list",
+      "x": -3,
+      "y": 9,
+      "width": 818,
+      "height": 586
+    },
+    {
+      "name": "huadong2",
+      "type": "list",
+      "x": -3,
+      "y": 9,
+      "width": 818,
+      "height": 586
+    },
+    {
+      "name": "node_tabbar",
+      "type": "node",
+      "x": -97,
+      "y": 333,
+      "width": 630,
+      "height": 56,
+      "children": [
+        {
+          "name": "tab_1",
+          "type": "node",
+          "x": -238,
+          "width": 154,
+          "height": 56,
+          "children": [
+            {
+              "name": "ckb",
+              "type": "ckb",
+              "img_on": "#ui_chat_bq_on.png",
+              "img_off": "#ui_chat_bq_off.png"
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "xxx",
+              "align": "center",
+              "size": 32,
+              "color": 992815615,
+              "x": -55,
+              "y": -6,
+              "width": 104,
+              "height": 40
+            }
+          ]
+        },
+        {
+          "name": "tab_2",
+          "type": "node",
+          "x": -79,
+          "width": 154,
+          "height": 56,
+          "children": [
+            {
+              "name": "ckb",
+              "type": "ckb",
+              "img_on": "#ui_chat_bq_on.png",
+              "img_off": "#ui_chat_bq_off.png"
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "xxx",
+              "align": "center",
+              "size": 32,
+              "color": 992815615,
+              "x": -55,
+              "y": -6,
+              "width": 104,
+              "height": 40
+            }
+          ]
+        },
+        {
+          "name": "tab_3",
+          "type": "node",
+          "x": 79,
+          "width": 154,
+          "height": 56,
+          "children": [
+            {
+              "name": "ckb",
+              "type": "ckb",
+              "img_on": "#ui_chat_bq_on.png",
+              "img_off": "#ui_chat_bq_off.png"
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "xxx",
+              "align": "center",
+              "size": 32,
+              "color": 992815615,
+              "x": -55,
+              "y": -6,
+              "width": 104,
+              "height": 40
+            }
+          ]
+        },
+        {
+          "name": "tab_4",
+          "type": "node",
+          "x": 238,
+          "width": 154,
+          "height": 56,
+          "children": [
+            {
+              "name": "ckb",
+              "type": "ckb",
+              "img_on": "#ui_chat_bq_on.png",
+              "img_off": "#ui_chat_bq_off.png"
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "xxx",
+              "align": "center",
+              "size": 32,
+              "color": 992815615,
+              "x": -55,
+              "y": -6,
+              "width": 104,
+              "height": 40
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

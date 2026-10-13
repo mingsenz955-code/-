@@ -1,0 +1,130 @@
+{
+  "group": [
+    "ui_lottery"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "name": "bg",
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768,
+      "alpha": 0
+    },
+    {
+      "name": "quit",
+      "type": "node",
+      "x": -91.3,
+      "y": -232.35,
+      "width": 647,
+      "height": 85,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_d2.png",
+          "scale9": 1,
+          "x": -323.5,
+          "y": 2.05,
+          "width": 174,
+          "height": 57,
+          "maxw": 174,
+          "maxh": 57
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "123456",
+          "align": "left",
+          "size": 30,
+          "color": 4294967295,
+          "x": -272.35,
+          "y": 3.48,
+          "width": 110,
+          "height": 37.75
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -296.2,
+          "y": 2.5,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "btn_too",
+          "type": "node",
+          "x": -27.5,
+          "width": 200,
+          "height": 85,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btn_3.png",
+              "img_down": "#ui_common_btn_4.png",
+              "img_disable": "#ui_common_btn_4c.png",
+              "width": 200,
+              "height": 85
+            },
+            {
+              "name": "miaoshu",
+              "type": "label",
+              "text": "再来一次",
+              "align": "center",
+              "size": 30,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -86,
+              "y": 3.63,
+              "width": 170,
+              "height": 37.75
+            }
+          ]
+        },
+        {
+          "name": "btn_yes",
+          "type": "node",
+          "x": 223.5,
+          "width": 200,
+          "height": 85,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btn_3.png",
+              "img_down": "#ui_common_btn_4.png",
+              "img_disable": "#ui_common_btn_4c.png",
+              "width": 200,
+              "height": 85
+            },
+            {
+              "name": "miaoshu",
+              "type": "label",
+              "text": "确    定",
+              "align": "center",
+              "size": 30,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -85.9,
+              "y": 3.63,
+              "width": 170,
+              "height": 37.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "title",
+      "type": "sprite",
+      "img": "#ui_lottery_huode.png",
+      "x": 28,
+      "y": 255,
+      "width": 494,
+      "height": 58
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "group": [
+    "buildings/islandtop_g"
+  ],
+  "width": 1656,
+  "height": 1219,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#islandtop_g_bg.png"
+    },
+    {
+      "name": "entry",
+      "type": "sprite",
+      "img": "#islandtop_g_entry.png",
+      "x": -85.5,
+      "y": 441
+    },
+    {
+      "name": "lock",
+      "type": "node",
+      "x": 339.1,
+      "y": 5.15,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#islandtop_g_lock1.png",
+          "x": -372.25,
+          "y": 336.7
+        },
+        {
+          "type": "sprite",
+          "img": "#islandtop_g_lock2.png",
+          "x": 46.8,
+          "y": 230.85
+        },
+        {
+          "type": "sprite",
+          "img": "#islandtop_g_lock3.png",
+          "x": -188.8,
+          "y": 257.2
+        },
+        {
+          "type": "sprite",
+          "img": "#islandtop_g_lock4.png",
+          "x": -266.9,
+          "y": 443.6
+        },
+        {
+          "type": "sprite",
+          "img": "#islandtop_g_lock5.png",
+          "x": -388.25,
+          "y": 494.7
+        },
+        {
+          "type": "sprite",
+          "img": "#islandtop_g_lock6.png",
+          "x": -563.7,
+          "y": 431.2
+        },
+        {
+          "type": "sprite",
+          "img": "#islandtop_g_lock7.png",
+          "x": -528.7,
+          "y": -158.2
+        },
+        {
+          "type": "sprite",
+          "img": "#islandtop_g_lock8.png",
+          "x": -751.7,
+          "y": 2.75
+        },
+        {
+          "type": "sprite",
+          "img": "#islandtop_g_lock9.png",
+          "x": -188.75,
+          "y": -48.2
+        }
+      ]
+    },
+    {
+      "name": "btn",
+      "type": "btn",
+      "img_normal": "#islandtop_g_top_btn.png",
+      "img_down": "#islandtop_g_top_btn.png",
+      "x": -27.75,
+      "y": 374.1,
+      "alpha": 0
+    }
+  ]
+}

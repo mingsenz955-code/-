@@ -1,0 +1,184 @@
+{
+  "group": [
+    "ui_ranknew"
+  ],
+  "width": 485,
+  "height": 93,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_haoyoulan2.png",
+      "scale9": 1,
+      "x": -242.5,
+      "y": 6,
+      "width": 485,
+      "height": 93,
+      "maxw": 485,
+      "maxh": 93
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_sekuai1.png",
+      "scale9": 1,
+      "x": -165.95,
+      "y": 6,
+      "width": 224,
+      "height": 81,
+      "maxw": 224,
+      "maxh": 81
+    },
+    {
+      "name": "target",
+      "type": "node",
+      "x": -129.95,
+      "y": 4.65,
+      "width": 62,
+      "height": 62,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_ranknew_touxiang1.png",
+          "width": 62,
+          "height": 62
+        },
+        {
+          "name": "default",
+          "type": "sprite",
+          "img": "#ui_ranknew_meiren.png",
+          "width": 50,
+          "height": 50
+        },
+        {
+          "name": "touxiang",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "level",
+          "type": "label",
+          "text": "lv25",
+          "align": "right",
+          "size": 18,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -27,
+          "y": -15.48,
+          "width": 53,
+          "height": 24.25
+        }
+      ]
+    },
+    {
+      "name": "biaoji",
+      "type": "node",
+      "x": -197.4,
+      "y": 7.55,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "rank_num",
+      "type": "label",
+      "text": "",
+      "align": "center",
+      "font": "orange_45.fnt",
+      "bmp": 1,
+      "x": -237.4,
+      "y": -0.02,
+      "width": 86,
+      "height": 54.65
+    },
+    {
+      "name": "target_name",
+      "type": "label",
+      "text": "",
+      "align": "left",
+      "size": 21,
+      "color": 1092488703,
+      "x": -97.55,
+      "y": 4.15,
+      "width": 158,
+      "height": 27.6
+    },
+    {
+      "name": "target_data1",
+      "type": "node",
+      "x": 149.95,
+      "y": 4.15,
+      "width": 181,
+      "height": 27.6,
+      "children": [
+        {
+          "name": "power",
+          "type": "label",
+          "text": "战斗力：",
+          "align": "left",
+          "size": 21,
+          "color": 1092488703,
+          "x": -90.5,
+          "width": 95,
+          "height": 27.6
+        },
+        {
+          "name": "power_num",
+          "type": "label",
+          "text": "0000000",
+          "align": "left",
+          "size": 19,
+          "color": 3422552319,
+          "x": -5.5,
+          "y": -0.03,
+          "width": 96,
+          "height": 25.35
+        }
+      ]
+    },
+    {
+      "name": "target_data2",
+      "type": "node",
+      "x": 149.95,
+      "y": 5.75,
+      "width": 181,
+      "height": 58.4,
+      "children": [
+        {
+          "name": "dragong_name",
+          "type": "label",
+          "text": "",
+          "align": "left",
+          "size": 21,
+          "color": 1092488703,
+          "x": -90.5,
+          "y": 15.4,
+          "width": 164,
+          "height": 27.6
+        },
+        {
+          "name": "power",
+          "type": "label",
+          "text": "战斗力：",
+          "align": "left",
+          "size": 21,
+          "color": 1092488703,
+          "x": -90.5,
+          "y": -15.4,
+          "width": 95,
+          "height": 27.6
+        },
+        {
+          "name": "power_num",
+          "type": "label",
+          "text": "0000000",
+          "align": "left",
+          "size": 19,
+          "color": 3422552319,
+          "x": -5.5,
+          "y": -15.43,
+          "width": 96,
+          "height": 25.35
+        }
+      ]
+    }
+  ]
+}

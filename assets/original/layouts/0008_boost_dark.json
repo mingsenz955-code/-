@@ -1,0 +1,23 @@
+{
+  "group": [
+    "buildings/0008_boost_dark_g"
+  ],
+  "width": 248,
+  "height": 200,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0008_boost_dark_g_bg.png",
+      "x": 11,
+      "y": 112.5
+    },
+    {
+      "name": "eff",
+      "type": "eff",
+      "eff": "0008_boost_dark_eff",
+      "width": 201,
+      "height": 176.15
+    }
+  ]
+}

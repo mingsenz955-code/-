@@ -1,0 +1,171 @@
+{
+  "group": [
+    "ui_ButtonNormal",
+    "ui_guild"
+  ],
+  "width": 916,
+  "height": 145,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#ui_common_haoyoulan2.png",
+      "scale9": 1,
+      "x": -458,
+      "width": 916,
+      "height": 145,
+      "maxw": 916,
+      "maxh": 145
+    },
+    {
+      "name": "flag_icon",
+      "type": "node",
+      "x": -382,
+      "y": -0.45,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_guild_xiaoheitiao.png",
+      "x": -384.05,
+      "y": -48.45,
+      "width": 65,
+      "height": 24
+    },
+    {
+      "name": "level",
+      "type": "label",
+      "text": "LV.25",
+      "align": "center",
+      "size": 20,
+      "color": 4294967295,
+      "x": -414,
+      "y": -50.4,
+      "width": 61,
+      "height": 26.5
+    },
+    {
+      "name": "guild_name",
+      "type": "label",
+      "text": "进击的巨人的（ID：154444）",
+      "align": "left",
+      "size": 28,
+      "color": 1092488703,
+      "x": -308,
+      "y": 32.05,
+      "width": 393,
+      "height": 35.5
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_guild_fenge.png",
+      "x": 60.95,
+      "y": 9.5,
+      "width": 767,
+      "height": 2
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_guild_tuoyuantiao.png",
+      "scale9": 1,
+      "x": -318,
+      "y": -30.45,
+      "width": 522,
+      "height": 40,
+      "maxw": 522,
+      "maxh": 40
+    },
+    {
+      "name": "guild_slogan",
+      "type": "label",
+      "text": "",
+      "align": "left",
+      "size": 21,
+      "color": 1092488703,
+      "x": -308,
+      "y": -32,
+      "width": 501,
+      "height": 27.6
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_guild_zdl.png",
+      "x": 363.3,
+      "y": 31.6,
+      "width": 27,
+      "height": 24
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_guild_tiaojian.png",
+      "x": 299.3,
+      "y": 31.1,
+      "width": 103,
+      "height": 23
+    },
+    {
+      "name": "guild_requirements",
+      "type": "label",
+      "text": "44万",
+      "align": "left",
+      "size": 26,
+      "color": 1092488703,
+      "x": 376.6,
+      "y": 30.27,
+      "width": 76,
+      "height": 33.25
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_guild_renshu.png",
+      "x": 119.7,
+      "y": 31.65,
+      "width": 27,
+      "height": 28
+    },
+    {
+      "name": "guild_num",
+      "type": "label",
+      "text": "100/100",
+      "align": "left",
+      "size": 26,
+      "color": 1092488703,
+      "x": 134.6,
+      "y": 30.27,
+      "width": 121,
+      "height": 33.25
+    },
+    {
+      "name": "btn_apply",
+      "type": "node",
+      "x": 366.3,
+      "y": -30.85,
+      "width": 154,
+      "height": 46,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_pppp1.png",
+          "img_down": "#ui_common_btn_pppp2.png",
+          "width": 154,
+          "height": 46
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "申请加入",
+          "align": "center",
+          "size": 26,
+          "color": 992815615,
+          "outlineColor": 13941402,
+          "x": -73,
+          "y": -0.88,
+          "width": 144,
+          "height": 33.25
+        }
+      ]
+    }
+  ]
+}

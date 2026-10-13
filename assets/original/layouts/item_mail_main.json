@@ -1,0 +1,157 @@
+{
+  "group": [
+    "ui_mail"
+  ],
+  "width": 514,
+  "height": 138,
+  "children": [
+    {
+      "name": "node_state_bg",
+      "type": "node",
+      "width": 514,
+      "height": 138,
+      "children": [
+        {
+          "name": "node_read",
+          "type": "node",
+          "width": 514,
+          "height": 138,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_mail_diban1.png",
+              "width": 514,
+              "height": 138
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_mail_chuo.png",
+              "x": 186.45,
+              "y": -0.45,
+              "width": 120,
+              "height": 95
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_mail_xin2.png",
+              "x": -176.95,
+              "y": 1,
+              "width": 122,
+              "height": 111
+            }
+          ]
+        },
+        {
+          "name": "node_unread",
+          "type": "node",
+          "width": 514,
+          "height": 138,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_mail_diban2.png",
+              "width": 514,
+              "height": 138
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_mail_xin1.png",
+              "x": -179,
+              "y": 0.5,
+              "width": 122,
+              "height": 98
+            },
+            {
+              "name": "node_attachment",
+              "type": "node",
+              "x": 32.45,
+              "y": -35.73,
+              "width": 404,
+              "height": 92.45,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_mail_fujian.png",
+                  "x": -186.5,
+                  "y": 21.73,
+                  "width": 31,
+                  "height": 49
+                },
+                {
+                  "name": "txt_attachment",
+                  "type": "label",
+                  "text": "[附件]",
+                  "align": "center",
+                  "size": 25,
+                  "color": 1033371903,
+                  "x": 129,
+                  "y": 73.58,
+                  "width": 73,
+                  "height": 32.2
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "node_info",
+      "type": "node",
+      "x": 48,
+      "y": -9.85,
+      "width": 336,
+      "height": 113,
+      "children": [
+        {
+          "name": "txt_1",
+          "type": "label",
+          "text": "发件人:",
+          "align": "left",
+          "size": 24,
+          "color": 1092488703,
+          "x": -168,
+          "y": 7,
+          "width": 89,
+          "height": 31.1
+        },
+        {
+          "name": "txt_time",
+          "type": "label",
+          "text": "--",
+          "align": "left",
+          "size": 24,
+          "color": 4288217343,
+          "x": -168,
+          "y": -32.95,
+          "width": 246,
+          "height": 31.1
+        },
+        {
+          "name": "txt_title",
+          "type": "label",
+          "text": "--",
+          "align": "left",
+          "size": 28,
+          "color": 1092488703,
+          "x": -168,
+          "y": 46.7,
+          "width": 248,
+          "height": 35.6
+        },
+        {
+          "name": "txt_from",
+          "type": "label",
+          "text": "--",
+          "align": "left",
+          "size": 24,
+          "color": 3422552319,
+          "x": -87,
+          "y": 7,
+          "width": 255,
+          "height": 31.1
+        }
+      ]
+    }
+  ]
+}

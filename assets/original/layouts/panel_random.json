@@ -1,0 +1,81 @@
+{
+  "group": [
+    "ui_random"
+  ],
+  "width": 1017,
+  "height": 766,
+  "children": [
+    {
+      "name": "event",
+      "type": "node",
+      "x": -1.2,
+      "y": 31.1,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "title_bg",
+      "type": "sprite",
+      "img": "#ui_random_biaotidiban.png",
+      "x": -1.65,
+      "y": 281.7,
+      "width": 1009,
+      "height": 105
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_random_biaotizhuangshi.png",
+      "x": -162.95,
+      "y": 300.5,
+      "width": 102,
+      "height": 87
+    },
+    {
+      "name": "title",
+      "type": "sprite",
+      "img": "#ui_random_biaoti.png",
+      "x": 3.5,
+      "y": 301.5,
+      "width": 203,
+      "height": 59
+    },
+    {
+      "name": "shelf",
+      "type": "sprite",
+      "img": "#ui_random_dizuo.png",
+      "y": -340.5,
+      "width": 760,
+      "height": 85,
+      "bottom": 0
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "x": -3,
+      "y": -302.35,
+      "width": 642,
+      "height": 109
+    },
+    {
+      "name": "help",
+      "type": "btn",
+      "img_normal": "#ui_random_help.png",
+      "img_down": "#ui_random_help.png",
+      "x": 371.95,
+      "y": 199.05,
+      "width": 64,
+      "height": 64
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_GuanBi1.png",
+      "img_down": "#ui_common_btn_GuanBi2.png",
+      "x": 468.3,
+      "y": 338,
+      "width": 85,
+      "height": 90,
+      "right": 43.7
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "group": [
+    "ui_adventure"
+  ],
+  "width": 436,
+  "height": 269,
+  "children": [
+    {
+      "name": "blood",
+      "type": "label",
+      "text": "对方剩余血量:?%",
+      "align": "center",
+      "size": 22,
+      "color": 4294967295,
+      "x": -113.85,
+      "y": 9.62,
+      "width": 238.35,
+      "height": 28.55
+    },
+    {
+      "name": "start",
+      "type": "node",
+      "x": -121.5,
+      "y": -101.35,
+      "width": 193,
+      "height": 67,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_adventure_btn4.png",
+          "img_down": "#ui_adventure_btn5.png",
+          "width": 193,
+          "height": 67
+        },
+        {
+          "name": "txt_1",
+          "type": "label",
+          "text": "派遣二队",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -90.5,
+          "y": 5.6,
+          "width": 177,
+          "height": 43.1
+        }
+      ]
+    },
+    {
+      "name": "cancel",
+      "type": "node",
+      "x": 124.5,
+      "y": -101.35,
+      "width": 199,
+      "height": 67,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_adventure_btn7.png",
+          "img_down": "#ui_adventure_btn8.png",
+          "x": -3,
+          "width": 193,
+          "height": 67
+        },
+        {
+          "name": "txt_1",
+          "type": "label",
+          "text": "放弃挑战",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -105.5,
+          "y": 4.85,
+          "width": 199,
+          "height": 43.1
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_adventure_zi6.png",
+      "x": 3.5,
+      "y": 99,
+      "width": 268,
+      "height": 70
+    }
+  ]
+}

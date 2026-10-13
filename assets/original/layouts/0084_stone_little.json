@@ -1,0 +1,16 @@
+{
+  "group": [
+    "buildings/0084_stone_little_g"
+  ],
+  "width": 69,
+  "height": 54,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0084_stone_little_g_bg.png",
+      "x": -1.5,
+      "y": 31
+    }
+  ]
+}

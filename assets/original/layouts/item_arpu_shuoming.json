@@ -1,0 +1,29 @@
+{
+  "group": {},
+  "children": [
+    {
+      "name": "shuoming",
+      "type": "label",
+      "text": " ",
+      "size": 18,
+      "align": "center",
+      "color": 4294967295,
+      "x": -347,
+      "y": -12.53,
+      "width": 694,
+      "height": 24.25
+    },
+    {
+      "name": "shijian",
+      "type": "label",
+      "text": " ",
+      "size": 18,
+      "align": "center",
+      "color": 4294967295,
+      "x": -347,
+      "y": 12.48,
+      "width": 694,
+      "height": 24.25
+    }
+  ]
+}

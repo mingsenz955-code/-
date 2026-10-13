@@ -1,0 +1,104 @@
+{
+  "group": [
+    "ui_gonghuifuben",
+    "ui_ranknew"
+  ],
+  "width": 572,
+  "height": 91,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_gonghuifuben_line2.png",
+      "x": 0.1,
+      "y": -33.65,
+      "width": 538,
+      "height": 3
+    },
+    {
+      "name": "img_select",
+      "type": "sprite",
+      "img": "#ui_gonghuifuben_xuanzhong.png",
+      "y": -0.5,
+      "width": 572,
+      "height": 91
+    },
+    {
+      "name": "node_head",
+      "type": "node",
+      "x": -231.95,
+      "y": -0.15,
+      "width": 62,
+      "height": 62,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_ranknew_touxiang1.png",
+          "width": 62,
+          "height": 62
+        },
+        {
+          "name": "default",
+          "type": "sprite",
+          "img": "#ui_ranknew_meiren.png",
+          "width": 50,
+          "height": 50
+        },
+        {
+          "name": "touxiang",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "level",
+          "type": "label",
+          "text": "lv25",
+          "align": "right",
+          "size": 18,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -27,
+          "y": -15.48,
+          "width": 53,
+          "height": 24.25
+        }
+      ]
+    },
+    {
+      "name": "txt_user_name",
+      "type": "label",
+      "text": "--",
+      "align": "center",
+      "size": 20,
+      "color": 1092488703,
+      "x": -197.65,
+      "y": -2.13,
+      "width": 183.65,
+      "height": 26.75
+    },
+    {
+      "name": "txt_hurt_num",
+      "type": "label",
+      "text": "--",
+      "align": "center",
+      "size": 20,
+      "color": 1092488703,
+      "x": -6.8,
+      "y": -2.13,
+      "width": 161.8,
+      "height": 26.75
+    },
+    {
+      "name": "txt_fight_num",
+      "type": "label",
+      "text": "--",
+      "align": "center",
+      "size": 20,
+      "color": 1092488703,
+      "x": 167,
+      "y": -2.13,
+      "width": 91,
+      "height": 26.75
+    }
+  ]
+}

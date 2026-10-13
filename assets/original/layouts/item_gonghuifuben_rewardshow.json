@@ -1,0 +1,51 @@
+{
+  "group": [
+    "ui_daojukuang"
+  ],
+  "width": 110,
+  "height": 110,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#ui_daojukuang_DaoJuKuang1.png",
+      "width": 110,
+      "height": 110
+    },
+    {
+      "name": "quality",
+      "type": "node",
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "image",
+      "type": "node",
+      "x": -0.85,
+      "y": 2.8,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "eff",
+      "type": "node",
+      "x": -0.85,
+      "y": 1.8,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "txt_num",
+      "type": "label",
+      "text": " ",
+      "align": "right",
+      "size": 20,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -37.1,
+      "y": -25.6,
+      "width": 77,
+      "height": 26.5
+    }
+  ]
+}

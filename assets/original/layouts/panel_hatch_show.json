@@ -1,0 +1,590 @@
+{
+  "group": [
+    "ui_dragontype",
+    "ui_daojukuang"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768,
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -439.75,
+      "y": -6,
+      "width": 854.05,
+      "height": 416,
+      "maxw": 854.05,
+      "maxh": 416
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -438.75,
+      "y": 169.5,
+      "width": 837,
+      "height": 55,
+      "maxw": 837,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "龙的名字",
+      "align": "center",
+      "size": 25,
+      "color": 4294967295,
+      "x": -241.05,
+      "y": 172.05,
+      "width": 483,
+      "height": 32.1
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_dragontype_DaoJuKuang1.png",
+      "x": -288.65,
+      "y": -5.15,
+      "width": 210,
+      "height": 210
+    },
+    {
+      "name": "xiangkuang",
+      "type": "node",
+      "x": -288.65,
+      "y": -5.15,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "con_img",
+      "type": "node",
+      "x": -290.65,
+      "y": -2.15,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_dragontype_bg.png",
+      "x": -312,
+      "y": -78.5,
+      "width": 135,
+      "height": 38
+    },
+    {
+      "name": "type_sky",
+      "type": "sprite",
+      "img": "#ui_dragontype_sky.png",
+      "x": -365.6,
+      "y": -79.15,
+      "width": 52,
+      "height": 52
+    },
+    {
+      "name": "type_land",
+      "type": "sprite",
+      "img": "#ui_dragontype_land.png",
+      "x": -365.6,
+      "y": -79.15,
+      "width": 52,
+      "height": 52
+    },
+    {
+      "name": "type_text",
+      "type": "label",
+      "text": "飞行",
+      "align": "left",
+      "size": 24,
+      "color": 4294967295,
+      "x": -339.45,
+      "y": -80.35,
+      "width": 103,
+      "height": 31
+    },
+    {
+      "name": "pinzhi",
+      "type": "node",
+      "x": -360.5,
+      "y": 68.5,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan2.png",
+      "scale9": 1,
+      "x": -169.75,
+      "y": 47.5,
+      "width": 165,
+      "height": 95,
+      "maxw": 165,
+      "maxh": 95
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan2b.png",
+      "scale9": 1,
+      "x": -169.75,
+      "y": 74.25,
+      "width": 165,
+      "height": 34,
+      "maxw": 165,
+      "maxh": 34
+    },
+    {
+      "name": "tx_rate",
+      "type": "label",
+      "text": "999/小时",
+      "align": "justify",
+      "size": 27,
+      "color": 255,
+      "x": -123.75,
+      "y": 32.35,
+      "width": 114.95,
+      "height": 36.7
+    },
+    {
+      "name": "chanliang",
+      "type": "label",
+      "text": "产量",
+      "align": "center",
+      "size": 26,
+      "color": 255,
+      "x": -149.75,
+      "y": 74.63,
+      "width": 126,
+      "height": 33.25
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_HuoBi0001.png",
+      "x": -144.3,
+      "y": 33.3,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan2.png",
+      "scale9": 1,
+      "x": 9.95,
+      "y": 47.5,
+      "width": 174,
+      "height": 95,
+      "maxw": 174,
+      "maxh": 95
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan2b.png",
+      "scale9": 1,
+      "x": 9.95,
+      "y": 74.25,
+      "width": 175,
+      "height": 34,
+      "maxw": 175,
+      "maxh": 34
+    },
+    {
+      "name": "img_type1",
+      "type": "node",
+      "x": 141.35,
+      "y": 35,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "img_type2",
+      "type": "node",
+      "x": 96.15,
+      "y": 35,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "img_type3",
+      "type": "node",
+      "x": 50.95,
+      "y": 35,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "shuxing",
+      "type": "label",
+      "text": "属性",
+      "align": "center",
+      "size": 26,
+      "color": 255,
+      "x": 37.2,
+      "y": 74.38,
+      "width": 121.95,
+      "height": 33.25
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan2.png",
+      "scale9": 1,
+      "x": 199.95,
+      "y": 47.5,
+      "width": 174,
+      "height": 95,
+      "maxw": 174,
+      "maxh": 95
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan2b.png",
+      "scale9": 1,
+      "x": 199.95,
+      "y": 74.25,
+      "width": 175,
+      "height": 34,
+      "maxw": 175,
+      "maxh": 34
+    },
+    {
+      "name": "power_miaoshu",
+      "type": "label",
+      "text": "战斗力评定",
+      "align": "center",
+      "size": 26,
+      "color": 255,
+      "x": 210.55,
+      "y": 74.38,
+      "width": 153,
+      "height": 33.25
+    },
+    {
+      "name": "power",
+      "type": "label",
+      "text": "",
+      "align": "left",
+      "size": 22,
+      "color": 992815615,
+      "x": 233.55,
+      "y": 33.33,
+      "width": 110,
+      "height": 28.75
+    },
+    {
+      "name": "txt_jineng",
+      "type": "label",
+      "text": "技能",
+      "align": "left",
+      "size": 26,
+      "color": 255,
+      "x": -166.8,
+      "y": -59.63,
+      "width": 92,
+      "height": 33.25
+    },
+    {
+      "name": "skill1",
+      "type": "node",
+      "x": -38.5,
+      "y": -72.68,
+      "width": 110,
+      "height": 135.05,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "y": 12.53,
+          "width": 110,
+          "height": 110
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "y": 12.53,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "y": 12.53,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "",
+          "align": "center",
+          "size": 24,
+          "color": 1092488703,
+          "x": -55,
+          "y": -52.02,
+          "width": 110,
+          "height": 31
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 28,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -41,
+          "y": -15.27,
+          "width": 80,
+          "height": 35.5
+        },
+        {
+          "name": "hint",
+          "type": "node",
+          "x": 38.1,
+          "y": 51.93,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "biaoji_pinzhi",
+          "type": "node",
+          "x": -35.1,
+          "y": 50.33,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "skill2",
+      "type": "node",
+      "x": 81.5,
+      "y": -72.68,
+      "width": 110,
+      "height": 135.05,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "y": 12.53,
+          "width": 110,
+          "height": 110
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "y": 12.53,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "y": 12.53,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "",
+          "align": "center",
+          "size": 24,
+          "color": 1092488703,
+          "x": -55,
+          "y": -52.02,
+          "width": 110,
+          "height": 31
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 28,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -41,
+          "y": -15.27,
+          "width": 80,
+          "height": 35.5
+        },
+        {
+          "name": "hint",
+          "type": "node",
+          "x": 38.1,
+          "y": 51.93,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "biaoji_pinzhi",
+          "type": "node",
+          "x": -35.1,
+          "y": 50.33,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "skill3",
+      "type": "node",
+      "x": 201.5,
+      "y": -72.68,
+      "width": 110,
+      "height": 135.05,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "y": 12.53,
+          "width": 110,
+          "height": 110
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "y": 12.53,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "y": 12.53,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "",
+          "align": "center",
+          "size": 24,
+          "color": 1092488703,
+          "x": -55,
+          "y": -52.02,
+          "width": 110,
+          "height": 31
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 28,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -41,
+          "y": -15.27,
+          "width": 80,
+          "height": 35.5
+        },
+        {
+          "name": "hint",
+          "type": "node",
+          "x": 38.1,
+          "y": 51.93,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "biaoji_pinzhi",
+          "type": "node",
+          "x": -35.1,
+          "y": 50.33,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "skill4",
+      "type": "node",
+      "x": 321.5,
+      "y": -72.68,
+      "width": 110,
+      "height": 135.05,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "y": 12.53,
+          "width": 110,
+          "height": 110
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "y": 12.53,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "y": 12.53,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "",
+          "align": "center",
+          "size": 24,
+          "color": 1092488703,
+          "x": -55,
+          "y": -52.02,
+          "width": 110,
+          "height": 31
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 28,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -41,
+          "y": -15.27,
+          "width": 80,
+          "height": 35.5
+        },
+        {
+          "name": "hint",
+          "type": "node",
+          "x": 38.1,
+          "y": 51.93,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "biaoji_pinzhi",
+          "type": "node",
+          "x": -35.1,
+          "y": 50.33,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "btn_GuanBiXiao",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 399.75,
+      "y": 171,
+      "width": 80,
+      "height": 86
+    }
+  ]
+}

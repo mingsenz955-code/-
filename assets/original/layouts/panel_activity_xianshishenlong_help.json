@@ -1,0 +1,983 @@
+{
+  "group": [
+    "ui_bgpuzzle",
+    "ui_activityxianshi"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768,
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -343.3,
+      "y": -16.7,
+      "width": 676,
+      "height": 473,
+      "maxw": 676,
+      "maxh": 473
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -349.6,
+      "y": 207.45,
+      "width": 686,
+      "height": 55,
+      "maxw": 686,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "规则说明",
+      "align": "center",
+      "size": 25,
+      "color": 4294967295,
+      "x": -327.1,
+      "y": 210,
+      "width": 649.05,
+      "height": 32.1
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_bgpuzzle_dage.png",
+      "scale9": 1,
+      "x": -301.6,
+      "y": -19.35,
+      "width": 597,
+      "height": 411,
+      "maxw": 597,
+      "maxh": 411
+    },
+    {
+      "name": "paiming",
+      "type": "label",
+      "text": "活动积分排名前十的玩家可以获得以下奖励：",
+      "align": "left",
+      "size": 24,
+      "color": 4294967295,
+      "x": -283.65,
+      "y": 161.35,
+      "width": 538,
+      "height": 31
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_haoyoulan2.png",
+      "scale9": 1,
+      "x": -287.5,
+      "y": -30.55,
+      "width": 569,
+      "height": 354,
+      "maxw": 569,
+      "maxh": 354
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_sekuai1.png",
+      "scale9": 1,
+      "x": -140.5,
+      "y": -50.6,
+      "width": 134,
+      "height": 301,
+      "maxw": 134,
+      "maxh": 301
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_sekuai1.png",
+      "scale9": 1,
+      "x": 141.5,
+      "y": -50.6,
+      "width": 134,
+      "height": 301,
+      "maxw": 134,
+      "maxh": 301
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_di2.png",
+      "scale9": 1,
+      "x": -283.5,
+      "y": 116.4,
+      "width": 556,
+      "height": 41,
+      "maxw": 556,
+      "maxh": 41
+    },
+    {
+      "name": "tx_paiming",
+      "type": "label",
+      "text": "排名",
+      "align": "center",
+      "size": 22,
+      "color": 1092488703,
+      "x": -257.4,
+      "y": 117.82,
+      "width": 87,
+      "height": 28.75
+    },
+    {
+      "name": "tx_wanjiaxinxi",
+      "type": "label",
+      "text": "可获奖励",
+      "align": "center",
+      "size": 22,
+      "color": 1092488703,
+      "x": -34.4,
+      "y": 117.53,
+      "width": 197.95,
+      "height": 28.75
+    },
+    {
+      "name": "rank1",
+      "type": "node",
+      "x": 0.5,
+      "y": 60.32,
+      "width": 548.9,
+      "height": 56.45,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_activityxianshi_dtdt.png",
+          "x": -213.45,
+          "y": 8.23,
+          "width": 122,
+          "height": 40
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_activityxianshi_paiming1.png",
+          "x": -214.45,
+          "y": 8.23,
+          "width": 11,
+          "height": 26
+        },
+        {
+          "name": "item1",
+          "type": "node",
+          "x": -71.53,
+          "y": 8.73,
+          "width": 125.95,
+          "height": 52,
+          "children": [
+            {
+              "name": "daojukuang",
+              "type": "sprite",
+              "img": "#ui_activityxianshi_txk50_1.png",
+              "x": -36.98,
+              "width": 52,
+              "height": 52
+            },
+            {
+              "name": "dojukuang_icon",
+              "type": "node",
+              "x": -36.98,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "item_icon",
+              "type": "node",
+              "x": -36.98,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "item_num",
+              "type": "label",
+              "text": "",
+              "align": "left",
+              "size": 20,
+              "color": 1092488703,
+              "x": -5.98,
+              "y": -3.5,
+              "width": 68.95,
+              "height": 26.5
+            }
+          ]
+        },
+        {
+          "name": "item2",
+          "type": "node",
+          "x": 68.47,
+          "y": 8.73,
+          "width": 125.95,
+          "height": 52,
+          "children": [
+            {
+              "name": "daojukuang",
+              "type": "sprite",
+              "img": "#ui_activityxianshi_txk50_1.png",
+              "x": -36.98,
+              "width": 52,
+              "height": 52
+            },
+            {
+              "name": "dojukuang_icon",
+              "type": "node",
+              "x": -36.98,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "item_icon",
+              "type": "node",
+              "x": -36.98,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "item_num",
+              "type": "label",
+              "text": "",
+              "align": "left",
+              "size": 20,
+              "color": 1092488703,
+              "x": -5.98,
+              "y": -3.5,
+              "width": 68.95,
+              "height": 26.5
+            }
+          ]
+        },
+        {
+          "name": "item3",
+          "type": "node",
+          "x": 208.47,
+          "y": 8.73,
+          "width": 125.95,
+          "height": 52,
+          "children": [
+            {
+              "name": "daojukuang",
+              "type": "sprite",
+              "img": "#ui_activityxianshi_txk50_1.png",
+              "x": -36.98,
+              "width": 52,
+              "height": 52
+            },
+            {
+              "name": "dojukuang_icon",
+              "type": "node",
+              "x": -36.98,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "item_icon",
+              "type": "node",
+              "x": -36.98,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "item_num",
+              "type": "label",
+              "text": "",
+              "align": "left",
+              "size": 20,
+              "color": 1092488703,
+              "x": -5.98,
+              "y": -3.5,
+              "width": 68.95,
+              "height": 26.5
+            }
+          ]
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_activityxianshi_fenge.png",
+          "x": -3.45,
+          "y": -20.73,
+          "width": 548,
+          "height": 2
+        }
+      ]
+    },
+    {
+      "name": "rank2",
+      "type": "node",
+      "x": 0.5,
+      "y": 1.07,
+      "width": 548.9,
+      "height": 56.45,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_activityxianshi_dtdt.png",
+          "x": -213.45,
+          "y": 8.23,
+          "width": 122,
+          "height": 40
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_activityxianshi_paiming2.png",
+          "x": -213.45,
+          "y": 8.23,
+          "width": 16,
+          "height": 26
+        },
+        {
+          "name": "item1",
+          "type": "node",
+          "x": -71.53,
+          "y": 8.73,
+          "width": 125.95,
+          "height": 52,
+          "children": [
+            {
+              "name": "daojukuang",
+              "type": "sprite",
+              "img": "#ui_activityxianshi_txk50_1.png",
+              "x": -36.98,
+              "width": 52,
+              "height": 52
+            },
+            {
+              "name": "dojukuang_icon",
+              "type": "node",
+              "x": -36.98,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "item_icon",
+              "type": "node",
+              "x": -36.98,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "item_num",
+              "type": "label",
+              "text": "",
+              "align": "left",
+              "size": 20,
+              "color": 1092488703,
+              "x": -5.98,
+              "y": -3.5,
+              "width": 68.95,
+              "height": 26.5
+            }
+          ]
+        },
+        {
+          "name": "item2",
+          "type": "node",
+          "x": 68.47,
+          "y": 8.73,
+          "width": 125.95,
+          "height": 52,
+          "children": [
+            {
+              "name": "daojukuang",
+              "type": "sprite",
+              "img": "#ui_activityxianshi_txk50_1.png",
+              "x": -36.98,
+              "width": 52,
+              "height": 52
+            },
+            {
+              "name": "dojukuang_icon",
+              "type": "node",
+              "x": -36.98,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "item_icon",
+              "type": "node",
+              "x": -36.98,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "item_num",
+              "type": "label",
+              "text": "",
+              "align": "left",
+              "size": 20,
+              "color": 1092488703,
+              "x": -5.98,
+              "y": -3.5,
+              "width": 68.95,
+              "height": 26.5
+            }
+          ]
+        },
+        {
+          "name": "item3",
+          "type": "node",
+          "x": 208.47,
+          "y": 8.73,
+          "width": 125.95,
+          "height": 52,
+          "children": [
+            {
+              "name": "daojukuang",
+              "type": "sprite",
+              "img": "#ui_activityxianshi_txk50_1.png",
+              "x": -36.98,
+              "width": 52,
+              "height": 52
+            },
+            {
+              "name": "dojukuang_icon",
+              "type": "node",
+              "x": -36.98,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "item_icon",
+              "type": "node",
+              "x": -36.98,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "item_num",
+              "type": "label",
+              "text": "",
+              "align": "left",
+              "size": 20,
+              "color": 1092488703,
+              "x": -5.98,
+              "y": -3.5,
+              "width": 68.95,
+              "height": 26.5
+            }
+          ]
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_activityxianshi_fenge.png",
+          "x": -3.45,
+          "y": -20.73,
+          "width": 548,
+          "height": 2
+        }
+      ]
+    },
+    {
+      "name": "rank3",
+      "type": "node",
+      "x": 0.5,
+      "y": -58.17,
+      "width": 548.9,
+      "height": 56.45,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_activityxianshi_dtdt.png",
+          "x": -213.45,
+          "y": 8.23,
+          "width": 122,
+          "height": 40
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_activityxianshi_paiming3.png",
+          "x": -213.45,
+          "y": 7.23,
+          "width": 38,
+          "height": 26
+        },
+        {
+          "name": "item1",
+          "type": "node",
+          "x": -71.53,
+          "y": 8.73,
+          "width": 125.95,
+          "height": 52,
+          "children": [
+            {
+              "name": "daojukuang",
+              "type": "sprite",
+              "img": "#ui_activityxianshi_txk50_1.png",
+              "x": -36.98,
+              "width": 52,
+              "height": 52
+            },
+            {
+              "name": "dojukuang_icon",
+              "type": "node",
+              "x": -36.98,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "item_icon",
+              "type": "node",
+              "x": -36.98,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "item_num",
+              "type": "label",
+              "text": "",
+              "align": "left",
+              "size": 20,
+              "color": 1092488703,
+              "x": -5.98,
+              "y": -3.5,
+              "width": 68.95,
+              "height": 26.5
+            }
+          ]
+        },
+        {
+          "name": "item2",
+          "type": "node",
+          "x": 68.47,
+          "y": 8.73,
+          "width": 125.95,
+          "height": 52,
+          "children": [
+            {
+              "name": "daojukuang",
+              "type": "sprite",
+              "img": "#ui_activityxianshi_txk50_1.png",
+              "x": -36.98,
+              "width": 52,
+              "height": 52
+            },
+            {
+              "name": "dojukuang_icon",
+              "type": "node",
+              "x": -36.98,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "item_icon",
+              "type": "node",
+              "x": -36.98,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "item_num",
+              "type": "label",
+              "text": "",
+              "align": "left",
+              "size": 20,
+              "color": 1092488703,
+              "x": -5.98,
+              "y": -3.5,
+              "width": 68.95,
+              "height": 26.5
+            }
+          ]
+        },
+        {
+          "name": "item3",
+          "type": "node",
+          "x": 208.47,
+          "y": 8.73,
+          "width": 125.95,
+          "height": 52,
+          "children": [
+            {
+              "name": "daojukuang",
+              "type": "sprite",
+              "img": "#ui_activityxianshi_txk50_1.png",
+              "x": -36.98,
+              "width": 52,
+              "height": 52
+            },
+            {
+              "name": "dojukuang_icon",
+              "type": "node",
+              "x": -36.98,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "item_icon",
+              "type": "node",
+              "x": -36.98,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "item_num",
+              "type": "label",
+              "text": "",
+              "align": "left",
+              "size": 20,
+              "color": 1092488703,
+              "x": -5.98,
+              "y": -3.5,
+              "width": 68.95,
+              "height": 26.5
+            }
+          ]
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_activityxianshi_fenge.png",
+          "x": -3.45,
+          "y": -20.73,
+          "width": 548,
+          "height": 2
+        }
+      ]
+    },
+    {
+      "name": "rank4",
+      "type": "node",
+      "x": 0.5,
+      "y": -117.43,
+      "width": 548.9,
+      "height": 56.45,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_activityxianshi_dtdt.png",
+          "x": -213.45,
+          "y": 8.23,
+          "width": 122,
+          "height": 40
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_activityxianshi_paiming4.png",
+          "x": -213.45,
+          "y": 8.23,
+          "width": 50,
+          "height": 26
+        },
+        {
+          "name": "item1",
+          "type": "node",
+          "x": -71.53,
+          "y": 8.73,
+          "width": 125.95,
+          "height": 52,
+          "children": [
+            {
+              "name": "daojukuang",
+              "type": "sprite",
+              "img": "#ui_activityxianshi_txk50_1.png",
+              "x": -36.98,
+              "width": 52,
+              "height": 52
+            },
+            {
+              "name": "dojukuang_icon",
+              "type": "node",
+              "x": -36.98,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "item_icon",
+              "type": "node",
+              "x": -36.98,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "item_num",
+              "type": "label",
+              "text": "",
+              "align": "left",
+              "size": 20,
+              "color": 1092488703,
+              "x": -5.98,
+              "y": -3.5,
+              "width": 68.95,
+              "height": 26.5
+            }
+          ]
+        },
+        {
+          "name": "item2",
+          "type": "node",
+          "x": 68.47,
+          "y": 8.73,
+          "width": 125.95,
+          "height": 52,
+          "children": [
+            {
+              "name": "daojukuang",
+              "type": "sprite",
+              "img": "#ui_activityxianshi_txk50_1.png",
+              "x": -36.98,
+              "width": 52,
+              "height": 52
+            },
+            {
+              "name": "dojukuang_icon",
+              "type": "node",
+              "x": -36.98,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "item_icon",
+              "type": "node",
+              "x": -36.98,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "item_num",
+              "type": "label",
+              "text": "",
+              "align": "left",
+              "size": 20,
+              "color": 1092488703,
+              "x": -5.98,
+              "y": -3.5,
+              "width": 68.95,
+              "height": 26.5
+            }
+          ]
+        },
+        {
+          "name": "item3",
+          "type": "node",
+          "x": 208.47,
+          "y": 8.73,
+          "width": 125.95,
+          "height": 52,
+          "children": [
+            {
+              "name": "daojukuang",
+              "type": "sprite",
+              "img": "#ui_activityxianshi_txk50_1.png",
+              "x": -36.98,
+              "width": 52,
+              "height": 52
+            },
+            {
+              "name": "dojukuang_icon",
+              "type": "node",
+              "x": -36.98,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "item_icon",
+              "type": "node",
+              "x": -36.98,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "item_num",
+              "type": "label",
+              "text": "",
+              "align": "left",
+              "size": 20,
+              "color": 1092488703,
+              "x": -5.98,
+              "y": -3.5,
+              "width": 68.95,
+              "height": 26.5
+            }
+          ]
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_activityxianshi_fenge.png",
+          "x": -3.45,
+          "y": -20.73,
+          "width": 548,
+          "height": 2
+        }
+      ]
+    },
+    {
+      "name": "rank5",
+      "type": "node",
+      "x": 0.5,
+      "y": -176.67,
+      "width": 548.9,
+      "height": 56.45,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_activityxianshi_dtdt.png",
+          "x": -213.45,
+          "y": 8.23,
+          "width": 122,
+          "height": 40
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_activityxianshi_paiming5.png",
+          "x": -213.45,
+          "y": 7.23,
+          "width": 86,
+          "height": 22
+        },
+        {
+          "name": "item1",
+          "type": "node",
+          "x": -71.53,
+          "y": 8.73,
+          "width": 125.95,
+          "height": 52,
+          "children": [
+            {
+              "name": "daojukuang",
+              "type": "sprite",
+              "img": "#ui_activityxianshi_txk50_1.png",
+              "x": -36.98,
+              "width": 52,
+              "height": 52
+            },
+            {
+              "name": "dojukuang_icon",
+              "type": "node",
+              "x": -36.98,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "item_icon",
+              "type": "node",
+              "x": -36.98,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "item_num",
+              "type": "label",
+              "text": "",
+              "align": "left",
+              "size": 20,
+              "color": 1092488703,
+              "x": -5.98,
+              "y": -3.5,
+              "width": 68.95,
+              "height": 26.5
+            }
+          ]
+        },
+        {
+          "name": "item2",
+          "type": "node",
+          "x": 68.47,
+          "y": 8.73,
+          "width": 125.95,
+          "height": 52,
+          "children": [
+            {
+              "name": "daojukuang",
+              "type": "sprite",
+              "img": "#ui_activityxianshi_txk50_1.png",
+              "x": -36.98,
+              "width": 52,
+              "height": 52
+            },
+            {
+              "name": "dojukuang_icon",
+              "type": "node",
+              "x": -36.98,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "item_icon",
+              "type": "node",
+              "x": -36.98,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "item_num",
+              "type": "label",
+              "text": "",
+              "align": "left",
+              "size": 20,
+              "color": 1092488703,
+              "x": -5.98,
+              "y": -3.5,
+              "width": 68.95,
+              "height": 26.5
+            }
+          ]
+        },
+        {
+          "name": "item3",
+          "type": "node",
+          "x": 208.47,
+          "y": 8.73,
+          "width": 125.95,
+          "height": 52,
+          "children": [
+            {
+              "name": "daojukuang",
+              "type": "sprite",
+              "img": "#ui_activityxianshi_txk50_1.png",
+              "x": -36.98,
+              "width": 52,
+              "height": 52
+            },
+            {
+              "name": "dojukuang_icon",
+              "type": "node",
+              "x": -36.98,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "item_icon",
+              "type": "node",
+              "x": -36.98,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "item_num",
+              "type": "label",
+              "text": "",
+              "align": "left",
+              "size": 20,
+              "color": 1092488703,
+              "x": -5.98,
+              "y": -3.5,
+              "width": 68.95,
+              "height": 26.5
+            }
+          ]
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_activityxianshi_fenge.png",
+          "x": -3.45,
+          "y": -20.73,
+          "width": 548,
+          "height": 2
+        }
+      ]
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 309.6,
+      "y": 210.2,
+      "width": 80,
+      "height": 86
+    }
+  ]
+}

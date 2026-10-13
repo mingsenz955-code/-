@@ -1,0 +1,97 @@
+{
+  "group": [
+    "ui_equipformation"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768,
+      "alpha": 0
+    },
+    {
+      "name": "fanhui",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_FanHui1.png",
+      "img_down": "#ui_common_btn_FanHui2.png",
+      "x": -469.5,
+      "y": 339,
+      "width": 85,
+      "height": 90,
+      "left": 42.5,
+      "top": 45
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "y": 4.6,
+      "width": 1024,
+      "height": 515.6,
+      "left": 0,
+      "right": 0
+    },
+    {
+      "name": "more",
+      "type": "node",
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "btn_up",
+      "type": "node",
+      "y": -316.45,
+      "width": 269,
+      "height": 110,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "x": 3.8,
+          "y": 0.2,
+          "width": 200,
+          "height": 110,
+          "alpha": 0
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_equipformation_jiantoushang.png",
+          "x": 3.8,
+          "y": 26.65,
+          "width": 89,
+          "height": 55
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "获得更多装备",
+          "align": "center",
+          "size": 34,
+          "color": 4291559679,
+          "outlineColor": 0,
+          "x": -134.5,
+          "y": -32.58,
+          "width": 269,
+          "height": 42.25
+        }
+      ]
+    },
+    {
+      "name": "hint",
+      "type": "label",
+      "text": "该类型目前没有装备",
+      "align": "center",
+      "size": 40,
+      "color": 4291559679,
+      "x": -312.5,
+      "width": 625,
+      "height": 49
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "group": [
+    "buildings/0081_dadiaoxiang_g"
+  ],
+  "width": 224,
+  "height": 215,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0081_dadiaoxiang_g_bg.png",
+      "x": 30,
+      "y": 140.5
+    }
+  ]
+}

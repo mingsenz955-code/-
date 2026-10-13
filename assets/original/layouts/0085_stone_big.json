@@ -1,0 +1,16 @@
+{
+  "group": [
+    "buildings/0085_stone_big_g"
+  ],
+  "width": 140,
+  "height": 105,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0085_stone_big_g_bg.png",
+      "x": 3.35,
+      "y": 65.75
+    }
+  ]
+}

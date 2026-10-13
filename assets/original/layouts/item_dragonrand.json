@@ -1,0 +1,19 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_dragonrand_taizi.png",
+      "y": 10,
+      "width": 150,
+      "height": 80
+    },
+    {
+      "name": "icon",
+      "type": "node",
+      "y": 27.2,
+      "width": 0,
+      "height": 0
+    }
+  ]
+}

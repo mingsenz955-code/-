@@ -1,0 +1,89 @@
+{
+  "group": {},
+  "children": [
+    {
+      "name": "diban_you",
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -253,
+      "y": 15.72,
+      "width": 381,
+      "height": 591.95,
+      "maxw": 381,
+      "maxh": 591.95
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_starup_line2.png",
+      "x": -63.25,
+      "y": 229.6,
+      "width": 320,
+      "height": 6
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_starup_line2.png",
+      "x": -50.25,
+      "y": -223.45,
+      "width": 320,
+      "height": 6
+    },
+    {
+      "name": "huadong_xiao",
+      "type": "list",
+      "x": -62.95,
+      "y": 3.05,
+      "width": 318,
+      "height": 445
+    },
+    {
+      "name": "xuanze_miaoshu",
+      "type": "label",
+      "text": "点击神火进行操作",
+      "size": 22,
+      "align": "justify",
+      "color": 1411781375,
+      "x": -219.85,
+      "y": 247.77,
+      "width": 254,
+      "height": 28.75
+    },
+    {
+      "name": "guanbi",
+      "type": "node",
+      "x": -63.25,
+      "y": -269.2,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3_2.png",
+          "img_down": "#ui_common_btn_4.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "获取神火",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -79,
+          "y": 4.4,
+          "width": 156,
+          "height": 46.2
+        }
+      ]
+    },
+    {
+      "name": "btn_close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 100,
+      "y": 280
+    }
+  ]
+}

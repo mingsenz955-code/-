@@ -1,0 +1,36 @@
+{
+  "group": {},
+  "children": [
+    {
+      "name": "bangzhu_biaoti",
+      "type": "node",
+      "x": 0,
+      "y": 0,
+      "width": 760,
+      "height": 80,
+      "children": [
+        {
+          "name": "diban",
+          "type": "sprite",
+          "scale9": 1,
+          "x": 0,
+          "width": 760,
+          "height": 80,
+          "img": "#ui_common_BiaoTi_Bg_s.png"
+        },
+        {
+          "name": "title",
+          "type": "label",
+          "text": "购买",
+          "size": 30,
+          "align": "left",
+          "color": 4294967295,
+          "x": 40,
+          "y": 0,
+          "width": 620,
+          "height": 45.15
+        }
+      ]
+    }
+  ]
+}

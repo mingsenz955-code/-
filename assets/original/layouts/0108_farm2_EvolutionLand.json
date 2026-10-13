@@ -1,0 +1,30 @@
+{
+  "group": [
+    "buildings/0108_farm2_EvolutionLand_g"
+  ],
+  "width": 342,
+  "height": 282,
+  "children": [
+    {
+      "name": "s1",
+      "type": "sprite",
+      "img": "#0108_farm2_EvolutionLand_g_s1.png",
+      "x": 9.85,
+      "y": 146.75
+    },
+    {
+      "name": "s2",
+      "type": "sprite",
+      "img": "#0108_farm2_EvolutionLand_g_s2.png",
+      "x": 9.35,
+      "y": 148.65
+    },
+    {
+      "name": "s3",
+      "type": "sprite",
+      "img": "#0108_farm2_EvolutionLand_g_s3.png",
+      "x": 8.25,
+      "y": 149.5
+    }
+  ]
+}

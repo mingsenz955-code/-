@@ -1,0 +1,115 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_rank_t1.png",
+      "width": 404,
+      "height": 78
+    },
+    {
+      "name": "biaoji",
+      "type": "node",
+      "x": -146.4,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "paimingshuzi",
+      "type": "node",
+      "x": -127.35,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "touxiang",
+      "type": "node",
+      "x": -83.4,
+      "y": -1,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "wanjia",
+      "type": "label",
+      "text": "玩家名称六个",
+      "size": 16,
+      "align": "left",
+      "color": 1142888703,
+      "x": -41.35,
+      "y": 12.37,
+      "width": 149.95,
+      "height": 22.05
+    },
+    {
+      "name": "paiming_miaoshu",
+      "type": "label",
+      "text": "lv25",
+      "size": 16,
+      "align": "left",
+      "color": 1142888703,
+      "x": -41.35,
+      "y": -10.63,
+      "width": 149.95,
+      "height": 22.05
+    },
+    {
+      "name": "btn_lipao",
+      "type": "node",
+      "x": 154.6,
+      "y": -0.05,
+      "width": 75,
+      "height": 75,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_rank_libao01.png",
+          "img_down": "#ui_rank_libao02.png",
+          "x": 6
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "礼包",
+          "size": 16,
+          "align": "center",
+          "color": 4294967295,
+          "x": -31.5,
+          "y": -24.02,
+          "width": 75,
+          "height": 22.05
+        }
+      ]
+    },
+    {
+      "name": "btn_tujian",
+      "type": "node",
+      "x": 154.6,
+      "y": -0.05,
+      "width": 75,
+      "height": 75,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_rank_tujian01.png",
+          "img_down": "#ui_rank_tujian02.png",
+          "x": 6
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "查看图鉴",
+          "size": 16,
+          "align": "center",
+          "color": 4294967295,
+          "x": -31.5,
+          "y": -24.02,
+          "width": 75,
+          "height": 22.05
+        }
+      ]
+    }
+  ]
+}

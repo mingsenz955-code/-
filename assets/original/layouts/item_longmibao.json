@@ -1,0 +1,80 @@
+{
+  "group": [
+    "ui_daojukuang",
+    "ui_longmibao"
+  ],
+  "width": 111,
+  "height": 113,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_daojukuang_DaoJuKuang1.png",
+      "x": 0.5,
+      "y": -1,
+      "width": 110,
+      "height": 110
+    },
+    {
+      "name": "quality",
+      "type": "node",
+      "x": 0.5,
+      "y": -1,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "icon",
+      "type": "node",
+      "x": 0.35,
+      "y": -0.15,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "star",
+      "type": "node",
+      "x": -2.65,
+      "y": 34.85,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "txt_num",
+      "type": "label",
+      "text": " ",
+      "align": "right",
+      "size": 28,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -40.5,
+      "y": -28.8,
+      "width": 80,
+      "height": 35.5
+    },
+    {
+      "name": "hint",
+      "type": "node",
+      "x": 38.6,
+      "y": 38.4,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "biaoji_pinzhi",
+      "type": "node",
+      "x": -34.6,
+      "y": 36.8,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "img_bright",
+      "type": "sprite",
+      "img": "#ui_longmibao_xuanzhong.png",
+      "x": -0.5,
+      "y": 2,
+      "width": 110,
+      "height": 110
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "group": [
+    "ui_guild"
+  ],
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_haoyoulan2.png",
+      "scale9": 1,
+      "x": -327.1,
+      "y": -20.65,
+      "width": 629,
+      "height": 510,
+      "maxw": 629,
+      "maxh": 510
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "x": 0,
+      "y": -23.38,
+      "width": 599.05,
+      "height": 491.25
+    },
+    {
+      "name": "node_refuse",
+      "type": "node",
+      "x": 0,
+      "y": -300,
+      "width": 92,
+      "height": 46,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btndh1.png",
+          "img_down": "#ui_common_btndh2.png",
+          "img_disable": "#ui_common_btndh3.png",
+          "width": 92,
+          "height": 46
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "关闭",
+          "align": "center",
+          "size": 24,
+          "color": 992815615,
+          "outlineColor": 13941402,
+          "x": -44,
+          "y": -1,
+          "width": 85,
+          "height": 33
+        }
+      ]
+    }
+  ]
+}

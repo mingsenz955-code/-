@@ -1,0 +1,307 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "mask",
+      "maskRGBA": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0
+      },
+      "maskAnchor": {
+        "x": 1,
+        "y": 1
+      },
+      "scale9mask": true
+    },
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -183.5,
+      "y": -19.4,
+      "width": 339.15,
+      "height": 317,
+      "maxw": 339.15,
+      "maxh": 317
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -184.2,
+      "y": 136.1,
+      "width": 340,
+      "height": 55,
+      "maxw": 340,
+      "maxh": 55
+    },
+    {
+      "name": "quality",
+      "type": "node",
+      "x": -113.45,
+      "y": 63.1,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "icon",
+      "type": "node",
+      "x": -113.45,
+      "y": 63.1,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "tx_name",
+      "type": "label",
+      "text": "名字",
+      "size": 21,
+      "align": "left",
+      "color": 1411781375,
+      "x": -69.5,
+      "y": 66.58,
+      "width": 184.9,
+      "height": 29.85
+    },
+    {
+      "name": "tx_level",
+      "type": "label",
+      "text": "等级：",
+      "size": 21,
+      "align": "left",
+      "color": 1411781375,
+      "x": -69.5,
+      "y": 33.08,
+      "width": 184.5,
+      "height": 29.85
+    },
+    {
+      "name": "shuxing2",
+      "type": "node",
+      "x": -22.38,
+      "y": -70.72,
+      "width": 252.95,
+      "height": 29.85,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "生命：",
+          "size": 21,
+          "align": "justify",
+          "color": 1411781375,
+          "x": -126.47,
+          "width": 81.95,
+          "height": 29.85
+        },
+        {
+          "name": "shuzi",
+          "type": "label",
+          "text": "+99999",
+          "size": 21,
+          "align": "justify",
+          "color": 6684927,
+          "x": -43.92,
+          "width": 170.4,
+          "height": 29.85
+        }
+      ]
+    },
+    {
+      "name": "shuxing1",
+      "type": "node",
+      "x": -22.38,
+      "y": -38.53,
+      "width": 252.95,
+      "height": 29.85,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "生命：",
+          "size": 21,
+          "align": "justify",
+          "color": 1411781375,
+          "x": -126.47,
+          "width": 81.95,
+          "height": 29.85
+        },
+        {
+          "name": "shuzi",
+          "type": "label",
+          "text": "+99999",
+          "size": 21,
+          "align": "justify",
+          "color": 6684927,
+          "x": -43.92,
+          "width": 170.4,
+          "height": 29.85
+        }
+      ]
+    },
+    {
+      "name": "pingding",
+      "type": "node",
+      "x": -6.97,
+      "y": -102.95,
+      "width": 283.75,
+      "height": 27.6,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "装备评定：",
+          "size": 21,
+          "align": "justify",
+          "color": 1411781375,
+          "x": -141.88,
+          "width": 114.95,
+          "height": 27.6
+        },
+        {
+          "name": "shuzi",
+          "type": "label",
+          "text": "99999999",
+          "size": 21,
+          "align": "justify",
+          "color": 2566914303,
+          "x": -27.92,
+          "width": 169.8,
+          "height": 27.6
+        }
+      ]
+    },
+    {
+      "name": "jindu",
+      "type": "node",
+      "x": -12.9,
+      "y": -3.28,
+      "width": 302,
+      "height": 28.25,
+      "children": [
+        {
+          "name": "diban",
+          "type": "sprite",
+          "img": "#ui_starup_xp1.png",
+          "y": 0.13,
+          "width": 302,
+          "height": 28
+        },
+        {
+          "name": "tianchong",
+          "type": "node",
+          "y": 0.13,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_shuzi",
+          "type": "label",
+          "text": "",
+          "size": 20,
+          "align": "center",
+          "color": 4294967295,
+          "x": -140,
+          "y": -0.88,
+          "width": 277,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 144.2,
+      "y": 138.65
+    },
+    {
+      "name": "btn_zhuangbei",
+      "type": "node",
+      "x": -90.5,
+      "y": -168.2,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "装备",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "name": "btn_fenjie",
+      "type": "node",
+      "x": 64,
+      "y": -168.2,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "分解",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "name": "btn_xiexia",
+      "type": "node",
+      "x": -13.95,
+      "y": -168.2,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "卸下",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    }
+  ]
+}

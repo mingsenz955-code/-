@@ -1,0 +1,140 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#UI_RW_L_icon_5.png",
+      "x": -310.45,
+      "y": -200,
+      "width": 205,
+      "height": 244
+    },
+    {
+      "type": "sprite",
+      "img": "#hint_bg.png",
+      "scale9": 1,
+      "x": -205,
+      "y": -200,
+      "width": 474,
+      "height": 167,
+      "maxw": 474,
+      "maxh": 167
+    },
+    {
+      "type": "sprite",
+      "img": "#hint_bg_t.png",
+      "x": -220.5,
+      "y": -200,
+      "width": 49,
+      "height": 36
+    },
+    {
+      "name": "miaoshu",
+      "type": "label",
+      "text": "",
+      "align": "center",
+      "size": 25,
+      "color": 1714618623,
+      "x": -200,
+      "y": -210.5,
+      "width": 445,
+      "height": 99
+    },
+    {
+      "name": "anniu_1",
+      "type": "node",
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 85,
+      "alpha": 1,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png",
+          "alpha": 1
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "FINISH",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -79,
+          "y": 4.4,
+          "width": 156,
+          "height": 46.2
+        }
+      ]
+    },
+    {
+      "name": "anniu_2",
+      "type": "node",
+      "x": 0,
+      "y": -40,
+      "width": 200,
+      "height": 85,
+      "alpha": 1,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png",
+          "alpha": 1
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "FINISH",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -79,
+          "y": 4.4,
+          "width": 156,
+          "height": 46.2
+        }
+      ]
+    },
+    {
+      "name": "anniu_3",
+      "type": "node",
+      "x": 0,
+      "y": -80,
+      "width": 200,
+      "height": 85,
+      "alpha": 1,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png",
+          "alpha": 1
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "FINISH",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -79,
+          "y": 4.4,
+          "width": 156,
+          "height": 46.2
+        }
+      ]
+    }
+  ]
+}

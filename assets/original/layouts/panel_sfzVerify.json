@@ -1,0 +1,278 @@
+{
+  "group": [
+    "ui_common",
+    "ui_entrance",
+    "ui_FramesNormal",
+    "ui_bgpuzzle",
+    "ui_ButtonNormal"
+  ],
+  "width": 720,
+  "height": 618,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 2,
+      "grid": {
+        "x": 107.95,
+        "y": 111,
+        "width": 45.999999999999986,
+        "height": 27
+      },
+      "x": -355.05,
+      "y": -18.13,
+      "width": 686,
+      "height": 581.95,
+      "maxw": 686,
+      "maxh": 581.95
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 2,
+      "grid": {
+        "x": 24.5,
+        "y": 20,
+        "width": 9.5,
+        "height": 9.5
+      },
+      "x": -360.05,
+      "y": 262.6,
+      "width": 693,
+      "height": 55,
+      "maxw": 693,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "更新公告",
+      "align": "center",
+      "size": 25,
+      "color": 4294967295,
+      "x": -282.85,
+      "y": 264.15,
+      "width": 532,
+      "height": 32.1
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_d1.png",
+      "scale9": 2,
+      "grid": {
+        "x": 9.5,
+        "y": 11.5,
+        "width": 10.5,
+        "height": 7.5
+      },
+      "x": -302.85,
+      "y": -166.35,
+      "width": 570,
+      "height": 40,
+      "maxw": 570,
+      "maxh": 40
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_entrance_mingchengshuru.png",
+      "x": 68.65,
+      "y": -41.45,
+      "width": 397,
+      "height": 55
+    },
+    {
+      "name": "username_input",
+      "type": "node",
+      "x": -102.8,
+      "y": -41.75,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_entrance_mingchengshuru.png",
+      "x": 68.65,
+      "y": -102.45,
+      "width": 397,
+      "height": 55
+    },
+    {
+      "name": "usersfz_input",
+      "type": "node",
+      "x": -102.8,
+      "y": -102.75,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "username",
+      "type": "label",
+      "text": "",
+      "align": "left",
+      "size": 26,
+      "color": 1092488703,
+      "x": -275.95,
+      "y": -39.23,
+      "width": 139.05,
+      "height": 33.25
+    },
+    {
+      "name": "quanxuan",
+      "type": "node",
+      "x": 20.03,
+      "y": -166.6,
+      "width": 395.95,
+      "height": 30,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_starup_x2.png",
+          "x": -182.97,
+          "width": 30,
+          "height": 30
+        },
+        {
+          "name": "biaoji",
+          "type": "node",
+          "x": -182.97,
+          "width": 30,
+          "height": 30,
+          "children": [
+            {
+              "name": "quding_biaoji",
+              "type": "sprite",
+              "img": "#ui_starup_x1.png",
+              "width": 30,
+              "height": 30
+            }
+          ]
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "全选",
+          "align": "justify",
+          "size": 22,
+          "color": 1411781375,
+          "x": -166.97,
+          "y": -0.38,
+          "width": 364.95,
+          "height": 28.75
+        }
+      ]
+    },
+    {
+      "name": "usersfz",
+      "type": "label",
+      "text": "您的ID:",
+      "align": "left",
+      "size": 26,
+      "color": 1092488703,
+      "x": -273.95,
+      "y": -102.13,
+      "width": 137.05,
+      "height": 33.25
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_bgpuzzle_bg9.png",
+      "scale9": 2,
+      "grid": {
+        "x": 33,
+        "y": 33,
+        "width": 42,
+        "height": 35
+      },
+      "x": -312.05,
+      "y": 115.1,
+      "width": 600,
+      "height": 240,
+      "maxw": 600,
+      "maxh": 240
+    },
+    {
+      "name": "agree",
+      "type": "label",
+      "text": "",
+      "align": "left",
+      "size": 26,
+      "color": 1092488703,
+      "x": -264.9,
+      "y": 118,
+      "width": 524.9,
+      "height": 210.2
+    },
+    {
+      "name": "btn_set",
+      "type": "node",
+      "x": 138.05,
+      "y": -237.7,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "width": 200,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "设置",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -79.5,
+          "y": 4.93,
+          "width": 159,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "name": "btn_sfz",
+      "type": "node",
+      "x": -154.6,
+      "y": -237.7,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "width": 200,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "设置",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -79.5,
+          "y": 4.93,
+          "width": 159,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "name": "btn_close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 320.05,
+      "y": 266.1,
+      "width": 80,
+      "height": 86
+    }
+  ]
+}

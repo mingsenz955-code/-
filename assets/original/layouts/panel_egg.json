@@ -1,0 +1,282 @@
+{
+  "group": [
+    "ui_egg"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -366.25,
+      "y": -1.03,
+      "width": 731.4,
+      "height": 501.05,
+      "maxw": 731.4,
+      "maxh": 501.05
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -365.25,
+      "y": 217,
+      "width": 728,
+      "height": 55,
+      "maxw": 728,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "孵化",
+      "align": "center",
+      "size": 25,
+      "color": 4294967295,
+      "x": -167.55,
+      "y": 219.55,
+      "width": 333.35,
+      "height": 32.1
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_WuPinKuan.png",
+      "x": -217.15,
+      "y": 43.35,
+      "width": 202,
+      "height": 202
+    },
+    {
+      "name": "con_img",
+      "type": "node",
+      "x": -217.15,
+      "y": 43.35,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan2.png",
+      "scale9": 1,
+      "x": -96.25,
+      "y": 95,
+      "width": 165,
+      "height": 95,
+      "maxw": 165,
+      "maxh": 95
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan2b.png",
+      "scale9": 1,
+      "x": -96.25,
+      "y": 121.75,
+      "width": 165,
+      "height": 34,
+      "maxw": 165,
+      "maxh": 34
+    },
+    {
+      "name": "tx_rate",
+      "type": "label",
+      "text": "999/小时",
+      "align": "justify",
+      "size": 27,
+      "color": 255,
+      "x": -50.25,
+      "y": 79.85,
+      "width": 114.95,
+      "height": 36.7
+    },
+    {
+      "name": "chanliang",
+      "type": "label",
+      "text": "产量",
+      "align": "center",
+      "size": 26,
+      "color": 255,
+      "x": -76.25,
+      "y": 122.13,
+      "width": 126,
+      "height": 33.25
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_HuoBi0001.png",
+      "x": -70.8,
+      "y": 80.8,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan2.png",
+      "scale9": 1,
+      "x": 83.45,
+      "y": 95,
+      "width": 235,
+      "height": 95,
+      "maxw": 235,
+      "maxh": 95
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan2b.png",
+      "scale9": 1,
+      "x": 83.45,
+      "y": 121.75,
+      "width": 235,
+      "height": 34,
+      "maxw": 235,
+      "maxh": 34
+    },
+    {
+      "name": "img_type3",
+      "type": "node",
+      "x": 274.9,
+      "y": 79,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "img_type2",
+      "type": "node",
+      "x": 210.9,
+      "y": 79,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "img_type1",
+      "type": "node",
+      "x": 141.95,
+      "y": 79,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "shuxing",
+      "type": "label",
+      "text": "属性",
+      "align": "center",
+      "size": 26,
+      "color": 255,
+      "x": 110.7,
+      "y": 121.88,
+      "width": 177.5,
+      "height": 33.25
+    },
+    {
+      "name": "shuoming",
+      "type": "label",
+      "text": "你要如何处置这条龙呢？",
+      "align": "justify",
+      "size": 30,
+      "color": 255,
+      "x": -94.25,
+      "y": -19.82,
+      "width": 405.05,
+      "height": 45.25
+    },
+    {
+      "name": "new",
+      "type": "sprite",
+      "img": "#ui_egg_new.png",
+      "x": -261.6,
+      "y": 94.35,
+      "width": 112,
+      "height": 96
+    },
+    {
+      "name": "btn_fuhua",
+      "type": "node",
+      "x": -218.6,
+      "y": -135.35,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "孵化",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -79.5,
+          "y": 4.93,
+          "width": 159,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "name": "btn_ChuShou",
+      "type": "node",
+      "x": 217.8,
+      "y": -135.35,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "出售",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -79.5,
+          "y": 4.93,
+          "width": 158.05,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "name": "btn_fangru",
+      "type": "node",
+      "x": -0.4,
+      "y": -135.35,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "放入仓库",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -79,
+          "y": 4.4,
+          "width": 156,
+          "height": 46.2
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "group": [
+    "ui_login_ios"
+  ],
+  "width": 424,
+  "height": 529,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_login_ios_ditu.png",
+      "width": 424,
+      "height": 529
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_login_ios_gongsilogo.png",
+      "x": 4.35,
+      "y": 139,
+      "width": 321,
+      "height": 174
+    },
+    {
+      "name": "node_regist",
+      "type": "node",
+      "x": 1.35,
+      "y": -93.3,
+      "width": 359,
+      "height": 56,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_login_ios_btn5.png",
+          "img_down": "#ui_login_ios_btn6.png",
+          "img_disable": "#ui_login_ios_btn0.png",
+          "width": 359,
+          "height": 56
+        },
+        {
+          "name": "txt",
+          "type": "label",
+          "text": "注册",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -135.55,
+          "y": 2.9,
+          "width": 273,
+          "height": 43.4
+        }
+      ]
+    },
+    {
+      "name": "node_login",
+      "type": "node",
+      "x": 1.35,
+      "y": -2.35,
+      "width": 359,
+      "height": 56,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_login_ios_btn3.png",
+          "img_down": "#ui_login_ios_btn4.png",
+          "width": 359,
+          "height": 56
+        },
+        {
+          "name": "txt",
+          "type": "label",
+          "text": "登录",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -135.55,
+          "y": 2.03,
+          "width": 273,
+          "height": 45.15
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1175 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_bgbaoxiang.png",
+      "scale9": 1,
+      "x": -440,
+      "y": 0,
+      "width": 880,
+      "height": 551,
+      "maxw": 880,
+      "maxh": 551
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_festival_title.png",
+      "x": 0,
+      "y": 256,
+      "width": 372,
+      "height": 60
+    },
+    {
+      "name": "gift_3_panel",
+      "type": "node",
+      "x": -123,
+      "y": -226,
+      "width": 120,
+      "height": 400,
+      "children": [
+        {
+          "name": "gift_3_en_panel",
+          "type": "sprite",
+          "img": "#ui_festival_can_get_panel.png",
+          "scale9": 2,
+          "width": 120,
+          "height": 380,
+          "x": 0,
+          "y": 190,
+          "cix": 13,
+          "ciy": 13,
+          "ciwidth": 131,
+          "ciheight": 416
+        },
+        {
+          "name": "gift_3_di_panel",
+          "type": "sprite",
+          "img": "#ui_festival_cant_get_panel.png",
+          "scale9": 2,
+          "width": 120,
+          "height": 380,
+          "x": 0,
+          "y": 190,
+          "cix": 13,
+          "ciy": 13,
+          "ciwidth": 131,
+          "ciheight": 416
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_festival_subtitle_panel.png",
+          "width": 114,
+          "height": 30,
+          "x": 60,
+          "y": 361
+        },
+        {
+          "name": "gift_3_count",
+          "type": "label",
+          "text": "累计FFFF元",
+          "size": 20,
+          "align": "center",
+          "color": 4292356607,
+          "outlineColor": 4267533,
+          "x": -20,
+          "y": 360,
+          "width": 160,
+          "height": 40
+        },
+        {
+          "name": "gift_3_icon_1",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": 60,
+          "y": 300,
+          "width": 68,
+          "height": 68
+        },
+        {
+          "name": "gift_3_icon_2",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": 60,
+          "y": 220,
+          "width": 68,
+          "height": 68
+        },
+        {
+          "name": "gift_3_icon_3",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": 60,
+          "y": 140,
+          "width": 68,
+          "height": 68
+        },
+        {
+          "name": "gift_3_icon_1_txt",
+          "type": "label",
+          "size": 17,
+          "text": "9999",
+          "align": "right",
+          "x": 23,
+          "y": 274,
+          "width": 68,
+          "height": 68,
+          "color": 4294967295
+        },
+        {
+          "name": "gift_3_icon_2_txt",
+          "type": "label",
+          "size": 17,
+          "text": "9999",
+          "align": "right",
+          "x": 23,
+          "y": 194,
+          "width": 68,
+          "height": 68,
+          "color": 4294967295
+        },
+        {
+          "name": "gift_3_icon_3_txt",
+          "type": "label",
+          "size": 17,
+          "text": "9999",
+          "align": "right",
+          "x": 23,
+          "y": 114,
+          "width": 68,
+          "height": 68,
+          "color": 4294967295
+        },
+        {
+          "name": "gift_3_get_node",
+          "type": "node",
+          "x": 60,
+          "y": 40,
+          "width": 1,
+          "height": 1,
+          "children": [
+            {
+              "name": "gift_3_get_btn",
+              "type": "maskBtn",
+              "img_normal": "#ui_common_btn_2.png",
+              "width": 100.8,
+              "height": 59.49999999999999
+            },
+            {
+              "name": "gift_3_get_txt",
+              "type": "label",
+              "text": "领取",
+              "size": 30,
+              "align": "center",
+              "color": 4294967295,
+              "x": -103,
+              "y": 0,
+              "width": 206,
+              "height": 45.15
+            }
+          ]
+        },
+        {
+          "name": "gift_3_disable_node",
+          "type": "node",
+          "x": 60,
+          "y": 40,
+          "width": 1,
+          "height": 1,
+          "children": [
+            {
+              "name": "gift_3_dis_btn",
+              "type": "sprite",
+              "img": "#ui_common_btn_2c.png",
+              "x": 0,
+              "y": 0,
+              "width": 100.8,
+              "height": 59.49999999999999
+            },
+            {
+              "name": "gift_3_dis_txt",
+              "type": "label",
+              "text": "未解锁",
+              "size": 30,
+              "align": "center",
+              "color": 3435973887,
+              "x": -103,
+              "y": 0,
+              "width": 206,
+              "height": 45.15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "gift_4_panel",
+      "type": "node",
+      "x": 6,
+      "y": -226,
+      "width": 120,
+      "height": 400,
+      "children": [
+        {
+          "name": "gift_4_en_panel",
+          "type": "sprite",
+          "img": "#ui_festival_can_get_panel.png",
+          "scale9": 2,
+          "width": 120,
+          "height": 380,
+          "x": 0,
+          "y": 190,
+          "cix": 13,
+          "ciy": 13,
+          "ciwidth": 131,
+          "ciheight": 416
+        },
+        {
+          "name": "gift_4_di_panel",
+          "type": "sprite",
+          "img": "#ui_festival_cant_get_panel.png",
+          "scale9": 2,
+          "width": 120,
+          "height": 380,
+          "x": 0,
+          "y": 190,
+          "cix": 13,
+          "ciy": 13,
+          "ciwidth": 131,
+          "ciheight": 416
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_festival_subtitle_panel.png",
+          "width": 114,
+          "height": 30,
+          "x": 60,
+          "y": 361
+        },
+        {
+          "name": "gift_4_count",
+          "type": "label",
+          "text": "累计FFFF元",
+          "size": 20,
+          "align": "center",
+          "color": 4292356607,
+          "outlineColor": 4267533,
+          "x": -20,
+          "y": 360,
+          "width": 160,
+          "height": 40
+        },
+        {
+          "name": "gift_4_icon_1",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": 60,
+          "y": 300,
+          "width": 68,
+          "height": 68
+        },
+        {
+          "name": "gift_4_icon_2",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": 60,
+          "y": 220,
+          "width": 68,
+          "height": 68
+        },
+        {
+          "name": "gift_4_icon_3",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": 60,
+          "y": 140,
+          "width": 68,
+          "height": 68
+        },
+        {
+          "name": "gift_4_icon_1_txt",
+          "type": "label",
+          "size": 17,
+          "text": "9999",
+          "align": "right",
+          "x": 23,
+          "y": 274,
+          "width": 68,
+          "height": 68,
+          "color": 4294967295
+        },
+        {
+          "name": "gift_4_icon_2_txt",
+          "type": "label",
+          "size": 17,
+          "text": "9999",
+          "align": "right",
+          "x": 23,
+          "y": 194,
+          "width": 68,
+          "height": 68,
+          "color": 4294967295
+        },
+        {
+          "name": "gift_4_icon_3_txt",
+          "type": "label",
+          "size": 17,
+          "text": "9999",
+          "align": "right",
+          "x": 23,
+          "y": 114,
+          "width": 68,
+          "height": 68,
+          "color": 4294967295
+        },
+        {
+          "name": "gift_4_get_node",
+          "type": "node",
+          "x": 60,
+          "y": 40,
+          "width": 1,
+          "height": 1,
+          "children": [
+            {
+              "name": "gift_4_get_btn",
+              "type": "maskBtn",
+              "img_normal": "#ui_common_btn_2.png",
+              "width": 100.8,
+              "height": 59.49999999999999
+            },
+            {
+              "name": "gift_4_get_txt",
+              "type": "label",
+              "text": "领取",
+              "size": 30,
+              "align": "center",
+              "color": 4294967295,
+              "x": -103,
+              "y": 0,
+              "width": 206,
+              "height": 45.15
+            }
+          ]
+        },
+        {
+          "name": "gift_4_disable_node",
+          "type": "node",
+          "x": 60,
+          "y": 40,
+          "width": 1,
+          "height": 1,
+          "children": [
+            {
+              "name": "gift_4_dis_btn",
+              "type": "sprite",
+              "img": "#ui_common_btn_2c.png",
+              "x": 0,
+              "y": 0,
+              "width": 100.8,
+              "height": 59.49999999999999
+            },
+            {
+              "name": "gift_4_dis_txt",
+              "type": "label",
+              "text": "未解锁",
+              "size": 30,
+              "align": "center",
+              "color": 3435973887,
+              "x": -103,
+              "y": 0,
+              "width": 206,
+              "height": 45.15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "gift_5_panel",
+      "type": "node",
+      "x": 136,
+      "y": -226,
+      "width": 120,
+      "height": 400,
+      "children": [
+        {
+          "name": "gift_5_en_panel",
+          "type": "sprite",
+          "img": "#ui_festival_can_get_panel.png",
+          "scale9": 2,
+          "width": 120,
+          "height": 380,
+          "x": 0,
+          "y": 190,
+          "cix": 13,
+          "ciy": 13,
+          "ciwidth": 131,
+          "ciheight": 416
+        },
+        {
+          "name": "gift_5_di_panel",
+          "type": "sprite",
+          "img": "#ui_festival_cant_get_panel.png",
+          "scale9": 2,
+          "width": 120,
+          "height": 380,
+          "x": 0,
+          "y": 190,
+          "cix": 13,
+          "ciy": 13,
+          "ciwidth": 131,
+          "ciheight": 416
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_festival_subtitle_panel.png",
+          "width": 114,
+          "height": 30,
+          "x": 60,
+          "y": 361
+        },
+        {
+          "name": "gift_5_count",
+          "type": "label",
+          "text": "累计FFFF元",
+          "size": 20,
+          "align": "center",
+          "color": 4292356607,
+          "outlineColor": 4267533,
+          "x": -20,
+          "y": 360,
+          "width": 160,
+          "height": 40
+        },
+        {
+          "name": "gift_5_icon_1",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": 60,
+          "y": 300,
+          "width": 68,
+          "height": 68
+        },
+        {
+          "name": "gift_5_icon_2",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": 60,
+          "y": 220,
+          "width": 68,
+          "height": 68
+        },
+        {
+          "name": "gift_5_icon_3",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": 60,
+          "y": 140,
+          "width": 68,
+          "height": 68
+        },
+        {
+          "name": "gift_5_icon_1_txt",
+          "type": "label",
+          "size": 17,
+          "text": "9999",
+          "align": "right",
+          "x": 23,
+          "y": 274,
+          "width": 68,
+          "height": 68,
+          "color": 4294967295
+        },
+        {
+          "name": "gift_5_icon_2_txt",
+          "type": "label",
+          "size": 17,
+          "text": "9999",
+          "align": "right",
+          "x": 23,
+          "y": 194,
+          "width": 68,
+          "height": 68,
+          "color": 4294967295
+        },
+        {
+          "name": "gift_5_icon_3_txt",
+          "type": "label",
+          "size": 17,
+          "text": "9999",
+          "align": "right",
+          "x": 23,
+          "y": 114,
+          "width": 68,
+          "height": 68,
+          "color": 4294967295
+        },
+        {
+          "name": "gift_5_get_node",
+          "type": "node",
+          "x": 60,
+          "y": 40,
+          "width": 1,
+          "height": 1,
+          "children": [
+            {
+              "name": "gift_5_get_btn",
+              "type": "maskBtn",
+              "img_normal": "#ui_common_btn_2.png",
+              "width": 100.8,
+              "height": 59.49999999999999
+            },
+            {
+              "name": "gift_5_get_txt",
+              "type": "label",
+              "text": "领取",
+              "size": 30,
+              "align": "center",
+              "color": 4294967295,
+              "x": -103,
+              "y": 0,
+              "width": 206,
+              "height": 45.15
+            }
+          ]
+        },
+        {
+          "name": "gift_5_disable_node",
+          "type": "node",
+          "x": 60,
+          "y": 40,
+          "width": 1,
+          "height": 1,
+          "children": [
+            {
+              "name": "gift_5_dis_btn",
+              "type": "sprite",
+              "img": "#ui_common_btn_2c.png",
+              "x": 0,
+              "y": 0,
+              "width": 100.8,
+              "height": 59.49999999999999
+            },
+            {
+              "name": "gift_5_dis_txt",
+              "type": "label",
+              "text": "未解锁",
+              "size": 30,
+              "align": "center",
+              "color": 3435973887,
+              "x": -103,
+              "y": 0,
+              "width": 206,
+              "height": 45.15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "gift_6_panel",
+      "type": "node",
+      "x": 266,
+      "y": -226,
+      "width": 120,
+      "height": 400,
+      "children": [
+        {
+          "name": "gift_6_en_panel",
+          "type": "sprite",
+          "img": "#ui_festival_can_get_panel.png",
+          "scale9": 2,
+          "width": 120,
+          "height": 380,
+          "x": 0,
+          "y": 190,
+          "cix": 13,
+          "ciy": 13,
+          "ciwidth": 131,
+          "ciheight": 416
+        },
+        {
+          "name": "gift_6_di_panel",
+          "type": "sprite",
+          "img": "#ui_festival_cant_get_panel.png",
+          "scale9": 2,
+          "width": 120,
+          "height": 380,
+          "x": 0,
+          "y": 190,
+          "cix": 13,
+          "ciy": 13,
+          "ciwidth": 131,
+          "ciheight": 416
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_festival_subtitle_panel.png",
+          "width": 114,
+          "height": 30,
+          "x": 60,
+          "y": 361
+        },
+        {
+          "name": "gift_6_count",
+          "type": "label",
+          "text": "累计FFFF元",
+          "size": 20,
+          "align": "center",
+          "color": 4292356607,
+          "outlineColor": 4267533,
+          "x": -20,
+          "y": 360,
+          "width": 160,
+          "height": 40
+        },
+        {
+          "name": "gift_6_icon_1",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": 60,
+          "y": 300,
+          "width": 68,
+          "height": 68
+        },
+        {
+          "name": "gift_6_icon_2",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": 60,
+          "y": 220,
+          "width": 68,
+          "height": 68
+        },
+        {
+          "name": "gift_6_icon_3",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": 60,
+          "y": 140,
+          "width": 68,
+          "height": 68
+        },
+        {
+          "name": "gift_6_icon_1_txt",
+          "type": "label",
+          "size": 17,
+          "text": "9999",
+          "align": "right",
+          "x": 23,
+          "y": 274,
+          "width": 68,
+          "height": 68,
+          "color": 4294967295
+        },
+        {
+          "name": "gift_6_icon_2_txt",
+          "type": "label",
+          "size": 17,
+          "text": "9999",
+          "align": "right",
+          "x": 23,
+          "y": 194,
+          "width": 68,
+          "height": 68,
+          "color": 4294967295
+        },
+        {
+          "name": "gift_6_icon_3_txt",
+          "type": "label",
+          "size": 17,
+          "text": "9999",
+          "align": "right",
+          "x": 23,
+          "y": 114,
+          "width": 68,
+          "height": 68,
+          "color": 4294967295
+        },
+        {
+          "name": "gift_6_get_node",
+          "type": "node",
+          "x": 60,
+          "y": 40,
+          "width": 1,
+          "height": 1,
+          "children": [
+            {
+              "name": "gift_6_get_btn",
+              "type": "maskBtn",
+              "img_normal": "#ui_common_btn_2.png",
+              "width": 100.8,
+              "height": 59.49999999999999
+            },
+            {
+              "name": "gift_6_get_txt",
+              "type": "label",
+              "text": "领取",
+              "size": 30,
+              "align": "center",
+              "color": 4294967295,
+              "x": -103,
+              "y": 0,
+              "width": 206,
+              "height": 45.15
+            }
+          ]
+        },
+        {
+          "name": "gift_6_disable_node",
+          "type": "node",
+          "x": 60,
+          "y": 40,
+          "width": 1,
+          "height": 1,
+          "children": [
+            {
+              "name": "gift_6_dis_btn",
+              "type": "sprite",
+              "img": "#ui_common_btn_2c.png",
+              "x": 0,
+              "y": 0,
+              "width": 100.8,
+              "height": 59.49999999999999
+            },
+            {
+              "name": "gift_6_dis_txt",
+              "type": "label",
+              "text": "未解锁",
+              "size": 30,
+              "align": "center",
+              "color": 3435973887,
+              "x": -103,
+              "y": 0,
+              "width": 206,
+              "height": 45.15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "gift_2_panel",
+      "type": "node",
+      "x": -253,
+      "y": -226,
+      "width": 120,
+      "height": 400,
+      "children": [
+        {
+          "name": "gift_2_en_panel",
+          "type": "sprite",
+          "img": "#ui_festival_can_get_panel.png",
+          "scale9": 2,
+          "width": 120,
+          "height": 380,
+          "x": 0,
+          "y": 190,
+          "cix": 13,
+          "ciy": 13,
+          "ciwidth": 131,
+          "ciheight": 416
+        },
+        {
+          "name": "gift_2_di_panel",
+          "type": "sprite",
+          "img": "#ui_festival_cant_get_panel.png",
+          "scale9": 2,
+          "width": 120,
+          "height": 380,
+          "x": 0,
+          "y": 190,
+          "cix": 13,
+          "ciy": 13,
+          "ciwidth": 131,
+          "ciheight": 416
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_festival_subtitle_panel.png",
+          "width": 114,
+          "height": 30,
+          "x": 60,
+          "y": 361
+        },
+        {
+          "name": "gift_2_count",
+          "type": "label",
+          "text": "累计FFFF元",
+          "size": 20,
+          "align": "center",
+          "color": 4292356607,
+          "outlineColor": 4267533,
+          "x": -20,
+          "y": 360,
+          "width": 160,
+          "height": 40
+        },
+        {
+          "name": "gift_2_icon_1",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": 60,
+          "y": 300,
+          "width": 68,
+          "height": 68
+        },
+        {
+          "name": "gift_2_icon_2",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": 60,
+          "y": 220,
+          "width": 68,
+          "height": 68
+        },
+        {
+          "name": "gift_2_icon_3",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": 60,
+          "y": 140,
+          "width": 68,
+          "height": 68
+        },
+        {
+          "name": "gift_2_icon_1_txt",
+          "type": "label",
+          "size": 17,
+          "text": "9999",
+          "align": "right",
+          "x": 23,
+          "y": 274,
+          "width": 68,
+          "height": 68,
+          "color": 4294967295
+        },
+        {
+          "name": "gift_2_icon_2_txt",
+          "type": "label",
+          "size": 17,
+          "text": "9999",
+          "align": "right",
+          "x": 23,
+          "y": 194,
+          "width": 68,
+          "height": 68,
+          "color": 4294967295
+        },
+        {
+          "name": "gift_2_icon_3_txt",
+          "type": "label",
+          "size": 17,
+          "text": "9999",
+          "align": "right",
+          "x": 23,
+          "y": 114,
+          "width": 68,
+          "height": 68,
+          "color": 4294967295
+        },
+        {
+          "name": "gift_2_get_node",
+          "type": "node",
+          "x": 60,
+          "y": 40,
+          "width": 1,
+          "height": 1,
+          "children": [
+            {
+              "name": "gift_2_get_btn",
+              "type": "maskBtn",
+              "img_normal": "#ui_common_btn_2.png",
+              "width": 100.8,
+              "height": 59.49999999999999
+            },
+            {
+              "name": "gift_2_get_txt",
+              "type": "label",
+              "text": "领取",
+              "size": 30,
+              "align": "center",
+              "color": 4294967295,
+              "x": -103,
+              "y": 0,
+              "width": 206,
+              "height": 45.15
+            }
+          ]
+        },
+        {
+          "name": "gift_2_disable_node",
+          "type": "node",
+          "x": 60,
+          "y": 40,
+          "width": 1,
+          "height": 1,
+          "children": [
+            {
+              "name": "gift_2_dis_btn",
+              "type": "sprite",
+              "img": "#ui_common_btn_2c.png",
+              "x": 0,
+              "y": 0,
+              "width": 100.8,
+              "height": 59.49999999999999
+            },
+            {
+              "name": "gift_2_dis_txt",
+              "type": "label",
+              "text": "未解锁",
+              "size": 30,
+              "align": "center",
+              "color": 3435973887,
+              "x": -103,
+              "y": 0,
+              "width": 206,
+              "height": 45.15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "gift_1_panel",
+      "type": "node",
+      "x": -383,
+      "y": -226,
+      "width": 120,
+      "height": 400,
+      "children": [
+        {
+          "name": "gift_1_en_panel",
+          "type": "sprite",
+          "img": "#ui_festival_can_get_panel.png",
+          "scale9": 2,
+          "width": 120,
+          "height": 380,
+          "x": 0,
+          "y": 190,
+          "cix": 13,
+          "ciy": 13,
+          "ciwidth": 131,
+          "ciheight": 416
+        },
+        {
+          "name": "gift_1_di_panel",
+          "type": "sprite",
+          "img": "#ui_festival_cant_get_panel.png",
+          "scale9": 2,
+          "width": 120,
+          "height": 380,
+          "x": 0,
+          "y": 190,
+          "cix": 13,
+          "ciy": 13,
+          "ciwidth": 131,
+          "ciheight": 416
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_festival_subtitle_panel.png",
+          "width": 114,
+          "height": 30,
+          "x": 60,
+          "y": 361
+        },
+        {
+          "name": "gift_1_count",
+          "type": "label",
+          "text": "累计FFFF元",
+          "size": 20,
+          "align": "center",
+          "color": 4292356607,
+          "outlineColor": 4267533,
+          "x": -20,
+          "y": 360,
+          "width": 160,
+          "height": 40
+        },
+        {
+          "name": "gift_1_icon_1",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": 60,
+          "y": 300,
+          "width": 68,
+          "height": 68
+        },
+        {
+          "name": "gift_1_icon_2",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": 60,
+          "y": 220,
+          "width": 68,
+          "height": 68
+        },
+        {
+          "name": "gift_1_icon_3",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": 60,
+          "y": 140,
+          "width": 68,
+          "height": 68
+        },
+        {
+          "name": "gift_1_icon_1_txt",
+          "type": "label",
+          "size": 17,
+          "text": "9999",
+          "align": "right",
+          "x": 23,
+          "y": 274,
+          "width": 68,
+          "height": 68,
+          "color": 4294967295
+        },
+        {
+          "name": "gift_1_icon_2_txt",
+          "type": "label",
+          "size": 17,
+          "text": "9999",
+          "align": "right",
+          "x": 23,
+          "y": 194,
+          "width": 68,
+          "height": 68,
+          "color": 4294967295
+        },
+        {
+          "name": "gift_1_icon_3_txt",
+          "type": "label",
+          "size": 17,
+          "text": "9999",
+          "align": "right",
+          "x": 23,
+          "y": 114,
+          "width": 68,
+          "height": 68,
+          "color": 4294967295
+        },
+        {
+          "name": "gift_1_get_node",
+          "type": "node",
+          "x": 60,
+          "y": 40,
+          "width": 1,
+          "height": 1,
+          "children": [
+            {
+              "name": "gift_1_get_btn",
+              "type": "maskBtn",
+              "img_normal": "#ui_common_btn_2.png",
+              "width": 100.8,
+              "height": 59.49999999999999
+            },
+            {
+              "name": "gift_1_get_txt",
+              "type": "label",
+              "text": "领取",
+              "size": 30,
+              "align": "center",
+              "color": 4294967295,
+              "x": -103,
+              "y": 0,
+              "width": 206,
+              "height": 45.15
+            }
+          ]
+        },
+        {
+          "name": "gift_1_disable_node",
+          "type": "node",
+          "x": 60,
+          "y": 40,
+          "width": 1,
+          "height": 1,
+          "children": [
+            {
+              "name": "gift_1_dis_btn",
+              "type": "sprite",
+              "img": "#ui_common_btn_2c.png",
+              "x": 0,
+              "y": 0,
+              "width": 100.8,
+              "height": 59.49999999999999
+            },
+            {
+              "name": "gift_1_dis_txt",
+              "type": "label",
+              "text": "未解锁",
+              "size": 30,
+              "align": "center",
+              "color": 3435973887,
+              "x": -103,
+              "y": 0,
+              "width": 206,
+              "height": 45.15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "dress_l",
+      "type": "sprite",
+      "img": "#ui_dragon_zl.png",
+      "width": 57,
+      "height": 26,
+      "x": -160,
+      "y": 178
+    },
+    {
+      "name": "dress_r",
+      "type": "sprite",
+      "img": "#ui_dragon_zl.png",
+      "width": -57,
+      "height": 26,
+      "x": 160,
+      "y": 178
+    },
+    {
+      "name": "recharge_count_node",
+      "type": "label",
+      "text": "当前已充值：XXXXXXXXX",
+      "size": 20,
+      "x": -150,
+      "y": 178,
+      "width": 300,
+      "height": 40,
+      "align": "center",
+      "color": 1815877375
+    },
+    {
+      "name": "recharge_node",
+      "type": "node",
+      "x": 0,
+      "y": -270,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "go_btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3_2.png",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "go_txt",
+          "type": "label",
+          "text": "马上获取",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -103,
+          "y": 0,
+          "width": 206,
+          "height": 45.15
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "group": [
+    "ui_rune"
+  ],
+  "width": 402,
+  "height": 668,
+  "children": [
+    {
+      "name": "diban_you",
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -201,
+      "y": 17.22,
+      "width": 402,
+      "height": 633.95,
+      "maxw": 402,
+      "maxh": 633.95
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_rune_line2.png",
+      "x": -21.5,
+      "y": 256.5,
+      "width": 320,
+      "height": 6
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_rune_line2.png",
+      "x": -4.5,
+      "y": -233.5,
+      "width": 320,
+      "height": 6
+    },
+    {
+      "name": "huadong_xiao",
+      "type": "list",
+      "x": 1.05,
+      "y": 12.55,
+      "width": 350,
+      "height": 484
+    },
+    {
+      "name": "xuanze_miaoshu",
+      "type": "label",
+      "text": "点击宝石进行操作",
+      "align": "justify",
+      "size": 22,
+      "color": 1411781375,
+      "x": -167.85,
+      "y": 287.27,
+      "width": 254,
+      "height": 28.75
+    },
+    {
+      "name": "shuliang",
+      "type": "label",
+      "text": "150/150",
+      "align": "right",
+      "size": 22,
+      "color": 1411781375,
+      "x": 52.15,
+      "y": 287.27,
+      "width": 94,
+      "height": 28.75
+    },
+    {
+      "name": "guanbi",
+      "type": "node",
+      "y": -291.7,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3_2.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "width": 200,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "获取宝石",
+          "align": "center",
+          "size": 30,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -79,
+          "y": 4.93,
+          "width": 156,
+          "height": 37.75
+        }
+      ]
+    }
+  ]
+}

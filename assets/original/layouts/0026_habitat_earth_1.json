@@ -1,0 +1,42 @@
+{
+  "group": [
+    "buildings/0026_habitat_earth_1_g"
+  ],
+  "width": 404,
+  "height": 274,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0026_habitat_earth_1_g_bg.png",
+      "x": -2.5,
+      "y": 144.5
+    },
+    {
+      "name": "zuobiao1",
+      "type": "node",
+      "x": -62,
+      "y": 130
+    },
+    {
+      "name": "zuobiao2",
+      "type": "node",
+      "x": 31,
+      "y": 45
+    },
+    {
+      "name": "zuobiao3",
+      "type": "node",
+      "x": 110,
+      "y": 99
+    },
+    {
+      "name": "eff_bottom",
+      "type": "eff",
+      "eff": "0026_habitat_earth_1_eff",
+      "frame": "normal",
+      "width": 0,
+      "height": 0
+    }
+  ]
+}

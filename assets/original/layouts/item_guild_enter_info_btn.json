@@ -1,0 +1,27 @@
+{
+  "group": {},
+  "width": 200,
+  "height": 85,
+  "children": [
+    {
+      "name": "btn",
+      "type": "sprite",
+      "img": "#ui_common_btn_3.png",
+      "width": 200,
+      "height": 85
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "确定",
+      "align": "center",
+      "size": 35,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -79.5,
+      "y": 4.93,
+      "width": 160,
+      "height": 45.15
+    }
+  ]
+}

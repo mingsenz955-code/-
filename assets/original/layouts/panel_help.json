@@ -1,0 +1,67 @@
+{
+  "group": {},
+  "children": [
+    {
+      "name": "bangzhu_neirong",
+      "type": "node",
+      "x": 0,
+      "y": 0,
+      "width": 760,
+      "height": 80,
+      "children": [
+        {
+          "name": "title_node",
+          "type": "node",
+          "children": [
+            {
+              "name": "diban",
+              "type": "sprite",
+              "scale9": 1,
+              "x": -380,
+              "width": 760,
+              "height": 80,
+              "img": "#ui_common_BiaoTi_Bg_s.png"
+            },
+            {
+              "name": "back_icon",
+              "type": "sprite",
+              "x": -310,
+              "width": 60,
+              "height": 55,
+              "img": "#ui_common_ico_back.png"
+            },
+            {
+              "name": "title",
+              "type": "label",
+              "text": "购买",
+              "size": 30,
+              "align": "left",
+              "color": 4294967295,
+              "x": -300,
+              "y": 0,
+              "width": 620,
+              "height": 45.15
+            },
+            {
+              "name": "btn",
+              "type": "maskBtn",
+              "img_normal": "#ui_common_BiaoTi_Bg_s.png",
+              "img_down": "#ui_common_BiaoTi_Bg_s.png",
+              "x": 0,
+              "width": 760,
+              "height": 80,
+              "alpha": 0
+            }
+          ]
+        },
+        {
+          "name": "huadong",
+          "type": "list",
+          "x": 0,
+          "width": 720,
+          "height": 400
+        }
+      ]
+    }
+  ]
+}

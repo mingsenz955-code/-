@@ -1,0 +1,282 @@
+{
+  "group": [
+    "ui_common",
+    "ui_battle",
+    "ui_adventure",
+    "ui_main",
+    "ui_gonghuifuben"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768,
+      "left": 0,
+      "right": 0
+    },
+    {
+      "name": "bgNode",
+      "type": "node",
+      "x": -263,
+      "y": 348,
+      "width": 510,
+      "height": 60,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_battle_jd1.png",
+          "x": 257,
+          "y": -23.5,
+          "width": 510,
+          "height": 60
+        },
+        {
+          "name": "txt_title",
+          "type": "label",
+          "text": "龙岛冒险",
+          "align": "center",
+          "size": 27,
+          "color": 4294967295,
+          "x": 40.1,
+          "y": -21.07,
+          "width": 431.85,
+          "height": 34.15
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_adventure_bg.png",
+      "x": -4,
+      "y": -9,
+      "width": 834,
+      "height": 488
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_adventure_bg2.png",
+      "x": -4,
+      "y": 143,
+      "width": 834,
+      "height": 185
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_adventure_map.png",
+      "x": -5,
+      "y": -34.95,
+      "width": 955,
+      "height": 633
+    },
+    {
+      "name": "container",
+      "type": "node",
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "node_bar",
+      "type": "node",
+      "x": 238.9,
+      "y": -317.8,
+      "width": 471.1,
+      "height": 119.2,
+      "right": 0,
+      "children": [
+        {
+          "name": "node_formate",
+          "type": "node",
+          "x": 185.05,
+          "y": 0.38,
+          "width": 101,
+          "height": 118.45,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_main_Z_ico-bg0003.png",
+              "img_down": "#ui_main_Z_ico-bg0004.png",
+              "y": 3.73,
+              "width": 101,
+              "height": 111
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_main_Z_ico-BuZhen.png",
+              "x": -0.5,
+              "y": 10.73,
+              "width": 94,
+              "height": 79
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_adventure_zi5.png",
+              "x": 1.5,
+              "y": -41.73,
+              "width": 65,
+              "height": 35
+            }
+          ]
+        },
+        {
+          "name": "node_rank",
+          "type": "node",
+          "x": 83.5,
+          "y": -1.1,
+          "width": 134,
+          "height": 119,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_main_Z_ico-bg0003.png",
+              "img_down": "#ui_main_Z_ico-bg0004.png",
+              "x": -17.5,
+              "y": 5,
+              "width": 101,
+              "height": 111
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_main_ico_phb.png",
+              "x": -21.75,
+              "y": 12.5,
+              "width": 105,
+              "height": 86
+            },
+            {
+              "name": "con_name",
+              "type": "sprite",
+              "img": "#ui_adventure_paihangbang.png",
+              "x": 0.75,
+              "y": -39.5,
+              "width": 118,
+              "height": 38
+            }
+          ]
+        },
+        {
+          "name": "node_autofight",
+          "type": "node",
+          "x": -49.35,
+          "y": -4.1,
+          "width": 117,
+          "height": 115,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_main_Z_ico-bg0003.png",
+              "img_down": "#ui_main_Z_ico-bg0004.png",
+              "x": -9,
+              "y": 3,
+              "width": 101,
+              "height": 111
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_adventure_maoxian.png",
+              "x": -3.25,
+              "y": 13.75,
+              "width": 102,
+              "height": 92
+            },
+            {
+              "name": "con_name",
+              "type": "sprite",
+              "img": "#ui_adventure_zi4.png",
+              "x": -10.75,
+              "y": -37.75,
+              "width": 117,
+              "height": 35
+            }
+          ]
+        },
+        {
+          "name": "node_yulan",
+          "type": "node",
+          "x": -169.3,
+          "y": 0.65,
+          "width": 116,
+          "height": 117.9,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_main_Z_ico-bg0003.png",
+              "img_down": "#ui_main_Z_ico-bg0004.png",
+              "x": -7.5,
+              "y": 3.45,
+              "width": 101,
+              "height": 111
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuifuben_ico_cjjl.png",
+              "x": -10.85,
+              "y": 10.2,
+              "width": 97,
+              "height": 93
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuifuben_zi1.png",
+              "x": -8.25,
+              "y": -41.45,
+              "width": 116,
+              "height": 35
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "txt_leftcnt",
+      "type": "label",
+      "text": "今日挑战次数:5",
+      "align": "left",
+      "size": 25,
+      "color": 1092488703,
+      "x": -385.95,
+      "y": -285.73,
+      "width": 217,
+      "height": 31.95
+    },
+    {
+      "name": "btn_reset",
+      "type": "btn",
+      "img_normal": "#ui_adventure_shuaxin1.png",
+      "img_down": "#ui_adventure_shuaxin2.png",
+      "x": -181.95,
+      "y": -286,
+      "width": 47,
+      "height": 46
+    },
+    {
+      "name": "help",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_tishi1.png",
+      "img_down": "#ui_common_btn_tishi2.png",
+      "x": 372,
+      "y": 333.3,
+      "width": 85,
+      "height": 90,
+      "right": 142.5
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_GuanBi1.png",
+      "img_down": "#ui_common_btn_GuanBi2.png",
+      "x": 468.1,
+      "y": 334.9,
+      "width": 85,
+      "height": 90,
+      "right": 42.5
+    }
+  ]
+}

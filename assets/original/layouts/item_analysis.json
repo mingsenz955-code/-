@@ -1,0 +1,178 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_chongzhitiao.png",
+      "scale9": 1,
+      "x": -266.5,
+      "width": 533,
+      "height": 102,
+      "maxw": 533,
+      "maxh": 102
+    },
+    {
+      "name": "tx_neirong",
+      "type": "label",
+      "text": "",
+      "size": 20,
+      "align": "justify",
+      "color": 1092488703,
+      "x": -158.35,
+      "y": -18.55,
+      "width": 231,
+      "height": 26.5
+    },
+    {
+      "name": "tx_pingjia",
+      "type": "label",
+      "text": "你的此项评价为：",
+      "size": 20,
+      "align": "center",
+      "color": 1092488703,
+      "x": 80.65,
+      "y": 18.45,
+      "width": 168,
+      "height": 26.5
+    },
+    {
+      "name": "tx_mubiao",
+      "type": "label",
+      "text": "",
+      "size": 24,
+      "align": "justify",
+      "color": 1092488703,
+      "x": -158.35,
+      "y": 14.5,
+      "width": 126,
+      "height": 31
+    },
+    {
+      "name": "tubiao",
+      "type": "node",
+      "x": -210.35,
+      "y": -0.5,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "biaoqian",
+      "type": "sprite",
+      "img": "#ui_analysis_tuijian.png",
+      "x": 41.05,
+      "y": 13.5,
+      "width": 92,
+      "height": 62
+    },
+    {
+      "name": "star1",
+      "type": "node",
+      "x": 103.75,
+      "y": -16.5,
+      "width": 29,
+      "height": 29,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_dragon_x0001.png",
+          "width": 29,
+          "height": 29
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "star2",
+      "type": "node",
+      "x": 133.75,
+      "y": -16.5,
+      "width": 29,
+      "height": 29,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_dragon_x0001.png",
+          "width": 29,
+          "height": 29
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "star3",
+      "type": "node",
+      "x": 163.75,
+      "y": -16.5,
+      "width": 29,
+      "height": 29,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_dragon_x0001.png",
+          "width": 29,
+          "height": 29
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "star4",
+      "type": "node",
+      "x": 193.75,
+      "y": -16.5,
+      "width": 29,
+      "height": 29,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_dragon_x0001.png",
+          "width": 29,
+          "height": 29
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "star5",
+      "type": "node",
+      "x": 223.75,
+      "y": -16.5,
+      "width": 29,
+      "height": 29,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_dragon_x0001.png",
+          "width": 29,
+          "height": 29
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        }
+      ]
+    }
+  ]
+}

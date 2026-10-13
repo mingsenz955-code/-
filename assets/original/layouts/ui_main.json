@@ -1,0 +1,1506 @@
+{
+  "group": [
+    "ui_main",
+    "ui_entrance",
+    "ui_mail",
+    "ui_holytree",
+    "ui_analysis"
+  ],
+  "width": 1022,
+  "height": 749,
+  "children": [
+    {
+      "name": "btn_RenWU",
+      "type": "node",
+      "x": -368,
+      "y": 153,
+      "width": 267,
+      "height": 152,
+      "left": 10,
+      "top": 155,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_main_ico_RenWu0001.png",
+          "img_down": "#ui_main_ico_RenWu0002.png",
+          "x": -91,
+          "y": 28,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "con_name",
+          "type": "node",
+          "x": -86,
+          "y": -10,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "bubble",
+          "type": "node",
+          "x": -71,
+          "y": 58,
+          "width": 35,
+          "height": 35,
+          "children": [
+            {
+              "name": "shuziban",
+              "type": "sprite",
+              "img": "#ui_main_shu.png",
+              "width": 35,
+              "height": 35
+            },
+            {
+              "name": "txt_shuzi",
+              "type": "label",
+              "text": "",
+              "align": "center",
+              "size": 20,
+              "color": 4294967295,
+              "x": -14,
+              "y": 0,
+              "width": 28,
+              "height": 27
+            }
+          ]
+        },
+        {
+          "name": "label",
+          "type": "sprite",
+          "img": "#ui_main_new.png",
+          "x": 14,
+          "y": 32,
+          "width": 135,
+          "height": 50
+        },
+        {
+          "name": "label_good",
+          "type": "sprite",
+          "img": "#ui_main_goodx.png",
+          "x": 14,
+          "y": 32,
+          "width": 135,
+          "height": 50
+        },
+        {
+          "name": "go1",
+          "type": "node",
+          "x": -25,
+          "y": -53,
+          "width": 191,
+          "height": 45,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_main_go1.png",
+              "img_down": "#ui_main_go1.png",
+              "width": 191,
+              "height": 45
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "",
+              "align": "left",
+              "size": 20,
+              "color": 4294967295,
+              "x": -76,
+              "y": 2,
+              "width": 150,
+              "height": 26
+            }
+          ]
+        },
+        {
+          "name": "go2",
+          "type": "btn",
+          "img_normal": "#ui_main_go2.png",
+          "img_down": "#ui_main_go3.png",
+          "x": 96,
+          "y": -53,
+          "width": 75,
+          "height": 45
+        }
+      ]
+    },
+    {
+      "name": "btn_TuJian",
+      "type": "node",
+      "x": -45,
+      "y": -209,
+      "width": 102,
+      "height": 111,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_main_Z_ico-bg0003.png",
+          "img_down": "#ui_main_Z_ico-bg0004.png",
+          "x": 0,
+          "y": 1,
+          "width": 101,
+          "height": 111
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_ico-0003.png",
+          "x": 1,
+          "y": 7,
+          "width": 101,
+          "height": 96
+        },
+        {
+          "name": "bubble",
+          "type": "node",
+          "x": 8,
+          "y": 38,
+          "width": 35,
+          "height": 35,
+          "children": [
+            {
+              "name": "shuziban",
+              "type": "sprite",
+              "img": "#ui_main_shu.png",
+              "width": 35,
+              "height": 35
+            },
+            {
+              "name": "txt_shuzi",
+              "type": "label",
+              "text": "",
+              "align": "center",
+              "size": 20,
+              "color": 4294967295,
+              "x": -14,
+              "y": 0,
+              "width": 28,
+              "height": 27
+            }
+          ]
+        },
+        {
+          "name": "con_name",
+          "type": "node",
+          "x": -2,
+          "y": -39,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "btn_NiuDanJi",
+      "type": "node",
+      "x": 53,
+      "y": -204,
+      "width": 101,
+      "height": 111,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_main_Z_ico-bg0003.png",
+          "img_down": "#ui_main_Z_ico-bg0004.png",
+          "y": 1,
+          "width": 101,
+          "height": 111
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_entrance_egg1.png",
+          "x": -3,
+          "y": 6,
+          "width": 77,
+          "height": 101
+        },
+        {
+          "name": "bubble",
+          "type": "node",
+          "x": 27,
+          "y": 34,
+          "width": 35,
+          "height": 35,
+          "children": [
+            {
+              "name": "shuziban",
+              "type": "sprite",
+              "img": "#ui_main_shu.png",
+              "width": 35,
+              "height": 35
+            }
+          ]
+        },
+        {
+          "name": "con_name",
+          "type": "node",
+          "x": -2,
+          "y": -38,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "btn_YouJian",
+      "type": "node",
+      "x": -453,
+      "y": 61,
+      "width": 90,
+      "height": 93,
+      "left": 14,
+      "top": 276,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_mail_ico_mail.png",
+          "img_down": "#ui_mail_ico_mail.png",
+          "y": -4,
+          "width": 90,
+          "height": 85
+        },
+        {
+          "name": "bubble",
+          "type": "node",
+          "x": 22,
+          "y": 29,
+          "width": 35,
+          "height": 35,
+          "children": [
+            {
+              "name": "shuziban",
+              "type": "sprite",
+              "img": "#ui_main_shu.png",
+              "width": 35,
+              "height": 35
+            },
+            {
+              "name": "txt_shuzi",
+              "type": "label",
+              "text": "",
+              "align": "center",
+              "size": 20,
+              "color": 4294967295,
+              "x": -14,
+              "y": 0,
+              "width": 28,
+              "height": 27
+            }
+          ]
+        },
+        {
+          "name": "con_name",
+          "type": "node",
+          "x": -8,
+          "y": -31,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "btn_pickAll",
+      "type": "node",
+      "x": -453,
+      "y": -43,
+      "width": 90,
+      "height": 78,
+      "left": 14,
+      "top": 388,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_main_ico-pickall.png",
+          "img_down": "#ui_main_ico-pickall.png",
+          "y": -7,
+          "width": 90,
+          "height": 78
+        },
+        {
+          "name": "con_name",
+          "type": "node",
+          "x": -5,
+          "y": -38,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "btn_chat",
+      "type": "node",
+      "x": -458,
+      "y": -143,
+      "width": 80,
+      "height": 72,
+      "left": 14,
+      "top": 491,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_main_chaticon.png",
+          "img_down": "#ui_main_chaticon.png",
+          "y": -7,
+          "width": 80,
+          "height": 72
+        },
+        {
+          "name": "con_name",
+          "type": "node",
+          "x": 0,
+          "y": -41,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "btn_HuiJia",
+      "type": "node",
+      "x": 407,
+      "y": -286,
+      "width": 165,
+      "height": 157,
+      "right": 0,
+      "bottom": 0,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_main_Z_ico_You-bg0001.png",
+          "img_down": "#ui_main_Z_ico_You-bg0002.png",
+          "width": 165,
+          "height": 157
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_holytree_ico_fanhui1.png",
+          "x": 1,
+          "y": 1,
+          "width": 100,
+          "height": 106
+        },
+        {
+          "name": "con_name",
+          "type": "node",
+          "x": 12,
+          "y": -50,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "btn_GengDuo",
+      "type": "node",
+      "x": 407,
+      "y": -286,
+      "width": 165,
+      "height": 157,
+      "right": 0,
+      "bottom": 0,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_main_Z_ico_You-bg0001.png",
+          "img_down": "#ui_main_Z_ico_You-bg0002.png",
+          "width": 165,
+          "height": 157
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_Z_ico_You-GengDuo.png",
+          "x": 4,
+          "y": -1,
+          "width": 106,
+          "height": 105
+        },
+        {
+          "name": "new",
+          "type": "node",
+          "x": 56,
+          "y": 43,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "con_name",
+          "type": "node",
+          "x": 3,
+          "y": -50,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "btn_ZhanDou",
+      "type": "node",
+      "x": -430,
+      "y": -285,
+      "width": 165,
+      "height": 157,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_main_Z_ico_Zuo-bg0001.png",
+          "img_down": "#ui_main_Z_ico_Zuo-bg0002.png",
+          "width": 165,
+          "height": 157
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_Z_ico_Zuo-ZhanDou.png",
+          "x": -5,
+          "y": 3,
+          "width": 114,
+          "height": 108
+        },
+        {
+          "name": "con_name",
+          "type": "node",
+          "x": -2,
+          "y": -50,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "new",
+          "type": "node",
+          "x": 50,
+          "y": 22,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "btn_SheZhi",
+      "type": "node",
+      "x": 439,
+      "y": 106,
+      "width": 94,
+      "height": 94,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_main_ico-0001.png",
+          "img_down": "#ui_main_ico-0002.png",
+          "width": 94,
+          "height": 94
+        },
+        {
+          "name": "con_name",
+          "type": "node",
+          "x": 1,
+          "y": -30,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "btn_ZhuangBei",
+      "type": "node",
+      "x": 47,
+      "y": -312,
+      "width": 101,
+      "height": 111,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_main_Z_ico-bg0003.png",
+          "img_down": "#ui_main_Z_ico-bg0004.png",
+          "width": 101,
+          "height": 111
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_Z_ico-ZhuangBei.png",
+          "x": 0,
+          "y": 14,
+          "width": 88,
+          "height": 84
+        },
+        {
+          "name": "con_name",
+          "type": "node",
+          "x": -3,
+          "y": -39,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "new",
+          "type": "node",
+          "x": 28,
+          "y": 40,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "btn_FuWen",
+      "type": "node",
+      "x": -158,
+      "y": -204,
+      "width": 101,
+      "height": 111,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_main_Z_ico-bg0003.png",
+          "img_down": "#ui_main_Z_ico-bg0004.png",
+          "width": 101,
+          "height": 111
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_analysis_ico_fuwen.png",
+          "x": -1,
+          "y": 7,
+          "width": 90,
+          "height": 90
+        },
+        {
+          "name": "con_name",
+          "type": "node",
+          "x": -3,
+          "y": -39,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "new",
+          "type": "node",
+          "x": 28,
+          "y": 40,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "btn_YuLong",
+      "type": "node",
+      "x": -58,
+      "y": -312,
+      "width": 101,
+      "height": 111,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_main_Z_ico-bg0003.png",
+          "img_down": "#ui_main_Z_ico-bg0004.png",
+          "width": 101,
+          "height": 111
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_Z_ico-YangCeng.png",
+          "x": -2,
+          "y": 13,
+          "width": 96,
+          "height": 86
+        },
+        {
+          "name": "con_name",
+          "type": "node",
+          "x": -3,
+          "y": -40,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "btn_CangKu",
+      "type": "node",
+      "x": 155,
+      "y": -312,
+      "width": 101,
+      "height": 111,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_main_Z_ico-bg0003.png",
+          "img_down": "#ui_main_Z_ico-bg0004.png",
+          "width": 101,
+          "height": 111
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_Z_ico-CangKu.png",
+          "y": 12,
+          "width": 87,
+          "height": 88
+        },
+        {
+          "name": "con_name",
+          "type": "node",
+          "x": -3,
+          "y": -39,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "btn_ShangDian",
+      "type": "node",
+      "x": 262,
+      "y": -312,
+      "width": 101,
+      "height": 111,
+      "right": 199,
+      "bottom": 17,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_main_Z_ico-bg0003.png",
+          "img_down": "#ui_main_Z_ico-bg0004.png",
+          "width": 101,
+          "height": 111
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_Z_ico-ShangDian.png",
+          "x": -3,
+          "y": 6,
+          "width": 94,
+          "height": 99
+        },
+        {
+          "name": "con_name",
+          "type": "node",
+          "x": -3,
+          "y": -40,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "btn_Rank",
+      "type": "node",
+      "x": 261,
+      "y": -205,
+      "width": 106,
+      "height": 111,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_main_Z_ico-bg0003.png",
+          "img_down": "#ui_main_Z_ico-bg0004.png",
+          "x": -3,
+          "y": 1,
+          "width": 101,
+          "height": 111
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_ico_phb.png",
+          "x": -6,
+          "y": 9,
+          "width": 105,
+          "height": 86
+        },
+        {
+          "name": "con_name",
+          "type": "node",
+          "x": -4,
+          "y": -38,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "longhun",
+      "type": "node",
+      "x": 417,
+      "y": 323,
+      "width": 184,
+      "height": 60,
+      "left": 837,
+      "top": 31,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_main_pbar_bg2.png",
+          "scale9": 1,
+          "grid": {
+            "x": 14,
+            "y": 19,
+            "width": 10,
+            "height": 13
+          },
+          "x": -72,
+          "y": 2,
+          "width": 129,
+          "height": 46,
+          "maxw": 129,
+          "maxh": 46
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_09.png",
+          "x": -62,
+          "width": 60,
+          "height": 60
+        },
+        {
+          "name": "txt_LongHun",
+          "type": "label",
+          "text": "999999",
+          "align": "right",
+          "size": 24,
+          "color": 858993663,
+          "x": -60,
+          "y": -1,
+          "width": 103,
+          "height": 33
+        },
+        {
+          "name": "btn_LongHun",
+          "type": "btn",
+          "img_normal": "#ui_main_05.png",
+          "img_down": "#ui_main_05-2.png",
+          "x": 69,
+          "y": 1,
+          "width": 46,
+          "height": 46
+        }
+      ]
+    },
+    {
+      "name": "gem",
+      "type": "node",
+      "x": 248,
+      "y": 350,
+      "width": 178,
+      "height": 60,
+      "left": 671,
+      "top": 4,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_main_pbar_bg2.png",
+          "scale9": 1,
+          "grid": {
+            "x": 14,
+            "y": 19,
+            "width": 10,
+            "height": 13
+          },
+          "x": -57,
+          "y": -1,
+          "width": 114,
+          "height": 46,
+          "maxw": 114,
+          "maxh": 46
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_08.png",
+          "x": -59,
+          "width": 60,
+          "height": 60
+        },
+        {
+          "name": "txt_MoJing",
+          "type": "label",
+          "text": "999999",
+          "align": "right",
+          "size": 24,
+          "color": 858993663,
+          "x": -62,
+          "y": -1,
+          "width": 103,
+          "height": 33
+        },
+        {
+          "name": "btn_MoJing",
+          "type": "btn",
+          "img_normal": "#ui_main_05.png",
+          "img_down": "#ui_main_05-2.png",
+          "x": 66,
+          "y": -2,
+          "width": 46,
+          "height": 46
+        }
+      ]
+    },
+    {
+      "name": "food",
+      "type": "node",
+      "x": 71,
+      "y": 349,
+      "width": 185,
+      "height": 60,
+      "left": 491,
+      "top": 6,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_main_pbar_bg2.png",
+          "scale9": 1,
+          "grid": {
+            "x": 14,
+            "y": 19,
+            "width": 10,
+            "height": 13
+          },
+          "x": -59,
+          "y": 1,
+          "width": 114,
+          "height": 46,
+          "maxw": 114,
+          "maxh": 46
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_07.png",
+          "x": -69,
+          "y": 3,
+          "width": 60,
+          "height": 60
+        },
+        {
+          "name": "txt_ShiWu",
+          "type": "label",
+          "text": "999999",
+          "align": "right",
+          "size": 24,
+          "color": 858993663,
+          "x": -65,
+          "y": -1,
+          "width": 103,
+          "height": 33
+        },
+        {
+          "name": "btn_ShiWu",
+          "type": "btn",
+          "img_normal": "#ui_main_05.png",
+          "img_down": "#ui_main_05-2.png",
+          "x": 62,
+          "y": 0,
+          "width": 46,
+          "height": 46
+        }
+      ]
+    },
+    {
+      "name": "gold",
+      "type": "node",
+      "x": -127,
+      "y": 350,
+      "width": 184,
+      "height": 60,
+      "left": 293,
+      "top": 5,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_main_pbar_bg2.png",
+          "scale9": 1,
+          "grid": {
+            "x": 14,
+            "y": 19,
+            "width": 10,
+            "height": 13
+          },
+          "x": -56,
+          "y": 0,
+          "width": 114,
+          "height": 46,
+          "maxw": 114,
+          "maxh": 46
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_06.png",
+          "x": -62,
+          "width": 60,
+          "height": 60
+        },
+        {
+          "name": "txt_JinBi",
+          "type": "label",
+          "text": "999999",
+          "align": "right",
+          "size": 24,
+          "color": 858993663,
+          "x": -59,
+          "y": -1,
+          "width": 103,
+          "height": 33
+        },
+        {
+          "name": "btn_JinBi",
+          "type": "btn",
+          "img_normal": "#ui_main_05.png",
+          "img_down": "#ui_main_05-2.png",
+          "x": 69,
+          "y": -1,
+          "width": 46,
+          "height": 46
+        }
+      ]
+    },
+    {
+      "name": "level",
+      "type": "node",
+      "x": -356,
+      "y": 320,
+      "width": 297,
+      "height": 123,
+      "left": 7,
+      "top": 3,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_entrance_g_01.png",
+          "y": -2,
+          "width": 297,
+          "height": 114
+        },
+        {
+          "name": "pbar_exp",
+          "type": "sprite",
+          "img": "#ui_entrance_jindutiao.png",
+          "x": 67,
+          "y": 31,
+          "width": 139,
+          "height": 38
+        },
+        {
+          "name": "txt_exp",
+          "type": "label",
+          "text": "99999999",
+          "align": "center",
+          "size": 25,
+          "color": 1092488703,
+          "x": 1,
+          "y": 29,
+          "width": 136,
+          "height": 32
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_01.png",
+          "x": -29,
+          "y": 32,
+          "width": 60,
+          "height": 60
+        },
+        {
+          "name": "txt_level",
+          "type": "label",
+          "text": "55",
+          "align": "center",
+          "size": 25,
+          "color": 1092488703,
+          "x": -54,
+          "y": 28,
+          "width": 46,
+          "height": 32
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -95,
+          "y": 2,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "vip",
+          "type": "node",
+          "x": -95,
+          "y": -47,
+          "width": 66,
+          "height": 29,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_entrance_g_03.png",
+              "y": 0,
+              "width": 66,
+              "height": 28
+            },
+            {
+              "name": "vip_num",
+              "type": "label",
+              "text": "",
+              "align": "center",
+              "font": "orange_22.fnt",
+              "bmp": 1,
+              "x": -33,
+              "width": 64,
+              "height": 29
+            }
+          ]
+        },
+        {
+          "name": "player_name",
+          "type": "label",
+          "text": " ",
+          "align": "left",
+          "size": 22,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -39,
+          "y": -10,
+          "width": 184,
+          "height": 29
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_entrance_zhandoulibiaoji.png",
+          "x": -10,
+          "y": -41,
+          "width": 78,
+          "height": 25
+        },
+        {
+          "name": "power",
+          "type": "label",
+          "text": "",
+          "align": "left",
+          "font": "yellow_22.fnt",
+          "bmp": 1,
+          "x": 30,
+          "y": -42,
+          "width": 113,
+          "height": 29
+        }
+      ]
+    },
+    {
+      "name": "music",
+      "type": "ckb",
+      "img_on": "#ui_main_music_on.png",
+      "img_off": "#ui_main_music_off.png",
+      "x": 447,
+      "y": 327,
+      "top": 57,
+      "right": 65
+    },
+    {
+      "name": "btn_mydragon",
+      "type": "btn",
+      "img_normal": "#ui_entrance_md2.png",
+      "img_down": "#ui_entrance_md2.png",
+      "x": 441,
+      "y": 230,
+      "width": 98,
+      "height": 113
+    },
+    {
+      "name": "btn_BaoShi",
+      "type": "node",
+      "x": -270,
+      "y": -312,
+      "width": 101,
+      "height": 111,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_main_Z_ico-bg0003.png",
+          "img_down": "#ui_main_Z_ico-bg0004.png",
+          "width": 101,
+          "height": 111
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_Z_ico-BaoShi.png",
+          "x": -2,
+          "y": 14,
+          "width": 97,
+          "height": 84
+        },
+        {
+          "name": "new",
+          "type": "node",
+          "x": 28,
+          "y": 40,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "con_name",
+          "type": "node",
+          "x": -2,
+          "y": -38,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "btn_BuZhen",
+      "type": "node",
+      "x": -164,
+      "y": -312,
+      "width": 101,
+      "height": 111,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_main_Z_ico-bg0003.png",
+          "img_down": "#ui_main_Z_ico-bg0004.png",
+          "width": 101,
+          "height": 111
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_Z_ico-BuZhen.png",
+          "x": 0,
+          "y": 7,
+          "width": 94,
+          "height": 79
+        },
+        {
+          "name": "con_name",
+          "type": "node",
+          "x": -2,
+          "y": -39,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "announce",
+      "type": "node",
+      "x": 31,
+      "y": 259,
+      "width": 722,
+      "height": 38,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_entrance_bg.png",
+          "width": 722,
+          "height": 38
+        },
+        {
+          "name": "huadong",
+          "type": "list",
+          "width": 576,
+          "height": 32
+        },
+        {
+          "name": "txt",
+          "type": "node",
+          "x": -286,
+          "y": 12,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "btn_recharge",
+      "type": "node",
+      "x": 423,
+      "y": 333,
+      "width": 153,
+      "height": 73,
+      "top": 15,
+      "right": 0,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_entrance_recharge1.png",
+          "img_down": "#ui_entrance_recharge2.png",
+          "width": 153,
+          "height": 73
+        },
+        {
+          "name": "eff",
+          "type": "node",
+          "x": 1,
+          "y": 1,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "btn_random",
+      "type": "node",
+      "x": -160,
+      "y": 271,
+      "width": 90,
+      "height": 90,
+      "left": 307,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_main_qiyu01.png",
+          "img_down": "#ui_main_qiyu02.png",
+          "width": 90,
+          "height": 90
+        }
+      ]
+    },
+    {
+      "name": "activitybutton",
+      "type": "node",
+      "x": 22,
+      "y": 272,
+      "width": 0,
+      "height": 0,
+      "left": 534
+    },
+    {
+      "name": "btn_Guild",
+      "type": "node",
+      "x": 154,
+      "y": -205,
+      "width": 102,
+      "height": 111,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_main_Z_ico-bg0003.png",
+          "img_down": "#ui_main_Z_ico-bg0004.png",
+          "x": 0,
+          "y": 1,
+          "width": 101,
+          "height": 111
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_Z_ico-gonghui.png",
+          "x": -1,
+          "y": 6,
+          "width": 102,
+          "height": 100
+        },
+        {
+          "name": "con_name",
+          "type": "node",
+          "x": 0,
+          "y": -36,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "act_btn",
+      "type": "node",
+      "x": 408,
+      "y": 106,
+      "width": 184,
+      "height": 365,
+      "right": 13,
+      "children": [
+        {
+          "name": "btn_firstrecharge",
+          "type": "node",
+          "x": -46,
+          "y": 138,
+          "width": 93,
+          "height": 90,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_main_icon_shouchong1.png",
+              "img_down": "#ui_main_icon_shouchong2.png",
+              "x": -1,
+              "width": 90,
+              "height": 90
+            },
+            {
+              "name": "bubble",
+              "type": "node",
+              "x": 30,
+              "y": 24,
+              "width": 32,
+              "height": 38,
+              "children": [
+                {
+                  "name": "shuziban",
+                  "type": "sprite",
+                  "img": "#ui_entrance_hint02.png",
+                  "width": 32,
+                  "height": 38
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "btn_xinshou",
+          "type": "node",
+          "x": -46,
+          "y": 45,
+          "width": 90,
+          "height": 90,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_main_icon_huodong_xinshou1.png",
+              "img_down": "#ui_main_icon_huodong_xinshou2.png",
+              "width": 90,
+              "height": 90
+            }
+          ]
+        },
+        {
+          "name": "btn_zhuanyi",
+          "type": "node",
+          "x": 44,
+          "y": -138,
+          "width": 90,
+          "height": 90,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_main_icon_bangding.png",
+              "img_down": "#ui_main_icon_bangding.png",
+              "width": 90,
+              "height": 90
+            }
+          ]
+        },
+        {
+          "name": "btn_dafuweng",
+          "type": "node",
+          "x": 43,
+          "y": -45,
+          "width": 90,
+          "height": 90,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_main_icon_dafuweng1.png",
+              "img_down": "#ui_main_icon_dafuweng2.png",
+              "width": 90,
+              "height": 90
+            }
+          ]
+        },
+        {
+          "name": "btn_welfare",
+          "type": "node",
+          "x": 43,
+          "y": 138,
+          "width": 90,
+          "height": 90,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_main_huodong_fulizhongxin01.png",
+              "img_down": "#ui_main_huodong_fulizhongxin02.png",
+              "width": 90,
+              "height": 90
+            },
+            {
+              "name": "bubble",
+              "type": "node",
+              "x": 29,
+              "y": 22,
+              "width": 32,
+              "height": 38,
+              "children": [
+                {
+                  "name": "shuziban",
+                  "type": "sprite",
+                  "img": "#ui_entrance_hint02.png",
+                  "width": 32,
+                  "height": 38
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "btn_Huodongzhongxin",
+          "type": "node",
+          "x": 44,
+          "y": 43,
+          "width": 96,
+          "height": 94,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_main_ico_huodong01.png",
+              "img_down": "#ui_main_ico_huodong02.png",
+              "x": -1,
+              "width": 94,
+              "height": 94,
+              "alpha": 0
+            },
+            {
+              "name": "eff",
+              "type": "node",
+              "x": -1,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "bubble",
+              "type": "node",
+              "x": 30,
+              "y": 27,
+              "width": 35,
+              "height": 35,
+              "children": [
+                {
+                  "name": "shuziban",
+                  "type": "sprite",
+                  "img": "#ui_main_shu.png",
+                  "width": 35,
+                  "height": 35
+                },
+                {
+                  "name": "txt_shuzi",
+                  "type": "label",
+                  "text": "",
+                  "align": "center",
+                  "size": 20,
+                  "color": 4294967295,
+                  "x": -14,
+                  "y": 0,
+                  "width": 28,
+                  "height": 27
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

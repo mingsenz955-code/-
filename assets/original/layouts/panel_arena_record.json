@@ -1,0 +1,80 @@
+{
+  "group": [
+    "ui_arenanew"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768,
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -253.3,
+      "y": -22.7,
+      "width": 488.05,
+      "height": 484,
+      "maxw": 488.05,
+      "maxh": 484
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -259.6,
+      "y": 206.95,
+      "width": 496,
+      "height": 55,
+      "maxw": 496,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "对战记录",
+      "align": "center",
+      "size": 25,
+      "color": 4294967295,
+      "x": -237.1,
+      "y": 209.5,
+      "width": 458,
+      "height": 32.1
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_arenanew_dage.png",
+      "scale9": 1,
+      "x": -219.95,
+      "y": -26.55,
+      "width": 425,
+      "height": 398,
+      "maxw": 425,
+      "maxh": 398
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "x": -6.4,
+      "y": -26.55,
+      "width": 406,
+      "height": 390
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 219.6,
+      "y": 212.7,
+      "width": 80,
+      "height": 86
+    }
+  ]
+}

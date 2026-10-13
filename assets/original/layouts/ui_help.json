@@ -1,0 +1,89 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png"
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -460.5,
+      "y": -6.98,
+      "width": 920.75,
+      "height": 616.25,
+      "maxw": 920.75,
+      "maxh": 616.25
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_d.png",
+      "x": -1.15,
+      "y": 341,
+      "width": 573,
+      "height": 83
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "帮助",
+      "size": 28,
+      "align": "center",
+      "color": 3638089983,
+      "x": -216.9,
+      "y": 332.25,
+      "width": 431.85,
+      "height": 35.5
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_goal_zhuangshi.png",
+      "x": -433.95,
+      "y": 287.85,
+      "width": 25,
+      "height": 40
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_goal_zhuangshi.png",
+      "x": 436.35,
+      "y": -278.05,
+      "width": 25,
+      "height": 40
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_goal_zhuangshi.png",
+      "x": -437.65,
+      "y": -280.05,
+      "width": 25,
+      "height": 40
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_goal_zhuangshi.png",
+      "x": 434.05,
+      "y": 287.85,
+      "width": 25,
+      "height": 40
+    },
+    {
+      "name": "list_clip",
+      "type": "list",
+      "x": 0,
+      "width": 775,
+      "height": 525
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_GuanBi1.png",
+      "img_down": "#ui_common_btn_GuanBi2.png",
+      "x": 468.1,
+      "y": 338.9,
+      "right": 43.9
+    }
+  ]
+}

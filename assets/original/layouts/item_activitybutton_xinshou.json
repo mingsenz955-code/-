@@ -1,0 +1,17 @@
+{
+  "group": [
+    "ui_activityxinshou"
+  ],
+  "width": 90,
+  "height": 90,
+  "children": [
+    {
+      "name": "btn",
+      "type": "btn",
+      "img_normal": "#ui_activityxinshou_huodong_xinshou1.png",
+      "img_down": "#ui_activityxinshou_huodong_xinshou2.png",
+      "width": 90,
+      "height": 90
+    }
+  ]
+}

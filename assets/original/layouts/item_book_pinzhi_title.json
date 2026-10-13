@@ -1,0 +1,60 @@
+{
+  "group": [
+    "ui_booknew"
+  ],
+  "width": 978,
+  "height": 59,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_booknew_pinzhi1.png",
+      "width": 978,
+      "height": 59
+    },
+    {
+      "name": "bg",
+      "type": "node",
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "pinzhi",
+      "type": "node",
+      "x": -387,
+      "y": 2,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "exp_bg",
+      "type": "sprite",
+      "img": "#ui_booknew_small_exp_diban.png",
+      "x": 361,
+      "y": 1.5,
+      "width": 226,
+      "height": 27
+    },
+    {
+      "name": "exp",
+      "type": "sprite",
+      "img": "#ui_booknew_small_exp_tianchong.png",
+      "x": 361,
+      "y": 1.65,
+      "width": 224,
+      "height": 25
+    },
+    {
+      "name": "exp_num",
+      "type": "label",
+      "text": "100",
+      "align": "center",
+      "size": 20,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": 248.05,
+      "y": 0.85,
+      "width": 224,
+      "height": 26.5
+    }
+  ]
+}

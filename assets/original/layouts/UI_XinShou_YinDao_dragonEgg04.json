@@ -1,0 +1,52 @@
+{
+  "group": {},
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "mask",
+      "maskRGBA": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0
+      },
+      "maskAnchor": {
+        "x": 1,
+        "y": 1
+      },
+      "scale9mask": true
+    },
+    {
+      "name": "highBtn",
+      "type": "node",
+      "x": -54.35,
+      "y": -187.02,
+      "width": 82,
+      "height": 82,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_lotterydragon_btn_1.png",
+          "img_down": "#ui_lotterydragon_btn_2.png",
+          "width": 82,
+          "height": 82
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "抽1次",
+          "align": "center",
+          "size": 21,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -34,
+          "y": -7.35,
+          "width": 69,
+          "height": 31
+        }
+      ]
+    }
+  ]
+}

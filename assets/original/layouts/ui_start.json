@@ -1,0 +1,54 @@
+{
+  "group": [
+    "ui_Start"
+  ],
+  "children": [
+    {
+      "name": "bg",
+      "type": "node",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "name": "diban",
+      "type": "sprite",
+      "img": "#ui_start_jundukong.png",
+      "x": 0.25,
+      "y": -295,
+      "width": 636,
+      "height": 30
+    },
+    {
+      "name": "tianchong",
+      "type": "node",
+      "x": -0.5,
+      "y": -295,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "produce_info",
+      "type": "label",
+      "text": "著作权人:北京华清飞扬网络股份有限公司  出版单位:华东师范大学电子音像出版社有限公司 批准文号:新广出审[2017]753号 出版物号:ISBN 978-7-7979-4372-7",
+      "align": "center",
+      "size": 18,
+      "color": 255,
+      "x": -662,
+      "y": 365.73,
+      "width": 1324,
+      "height": 24.25
+    },
+    {
+      "name": "txt_shuzi",
+      "type": "label",
+      "text": "100%",
+      "size": 20,
+      "align": "center",
+      "color": 1714618623,
+      "x": -200,
+      "y": -260,
+      "width": 400,
+      "height": 26.5
+    }
+  ]
+}

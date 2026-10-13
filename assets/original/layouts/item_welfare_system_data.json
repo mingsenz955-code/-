@@ -1,0 +1,206 @@
+{
+  "group": [
+    "ui_welfaresystem",
+    "ui_daojukuang",
+    "ui_welfare"
+  ],
+  "width": 747,
+  "height": 218,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#system_bg.png"
+    },
+    {
+      "name": "title_reward",
+      "type": "sprite",
+      "img": "#system_title1.png",
+      "y": 86
+    },
+    {
+      "name": "title_compensate",
+      "type": "sprite",
+      "img": "#system_title2.png",
+      "y": 86
+    },
+    {
+      "name": "item1",
+      "type": "node",
+      "x": -300.65,
+      "y": -3.35,
+      "children": [
+        {
+          "name": "add",
+          "type": "sprite",
+          "img": "#ang_DaoJuKuang1.png"
+        },
+        {
+          "name": "xiangkuang",
+          "type": "node"
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "x": -0.85,
+          "y": 2.8
+        },
+        {
+          "name": "txt_num",
+          "type": "sprite",
+          "img": "undefined",
+          "x": 17.9,
+          "y": -25.6
+        },
+        {
+          "name": "biaoji_pinzhi",
+          "type": "node",
+          "x": -36.35,
+          "y": 38.55
+        }
+      ]
+    },
+    {
+      "name": "item2",
+      "type": "node",
+      "x": -180.65,
+      "y": -3.35,
+      "children": [
+        {
+          "name": "add",
+          "type": "sprite",
+          "img": "#ang_DaoJuKuang1.png"
+        },
+        {
+          "name": "xiangkuang",
+          "type": "node"
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "x": -0.85,
+          "y": 2.8
+        },
+        {
+          "name": "txt_num",
+          "type": "sprite",
+          "img": "undefined",
+          "x": 17.9,
+          "y": -25.6
+        },
+        {
+          "name": "biaoji_pinzhi",
+          "type": "node",
+          "x": -36.35,
+          "y": 38.55
+        }
+      ]
+    },
+    {
+      "name": "item3",
+      "type": "node",
+      "x": -60.65,
+      "y": -3.35,
+      "children": [
+        {
+          "name": "add",
+          "type": "sprite",
+          "img": "#ang_DaoJuKuang1.png"
+        },
+        {
+          "name": "xiangkuang",
+          "type": "node"
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "x": -0.85,
+          "y": 2.8
+        },
+        {
+          "name": "txt_num",
+          "type": "sprite",
+          "img": "undefined",
+          "x": 17.9,
+          "y": -25.6
+        },
+        {
+          "name": "biaoji_pinzhi",
+          "type": "node",
+          "x": -36.35,
+          "y": 38.55
+        }
+      ]
+    },
+    {
+      "name": "item4",
+      "type": "node",
+      "x": 59.35,
+      "y": -3.35,
+      "children": [
+        {
+          "name": "add",
+          "type": "sprite",
+          "img": "#ang_DaoJuKuang1.png"
+        },
+        {
+          "name": "xiangkuang",
+          "type": "node"
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "x": -0.85,
+          "y": 2.8
+        },
+        {
+          "name": "txt_num",
+          "type": "sprite",
+          "img": "undefined",
+          "x": 17.9,
+          "y": -25.6
+        },
+        {
+          "name": "biaoji_pinzhi",
+          "type": "node",
+          "x": -36.35,
+          "y": 38.55
+        }
+      ]
+    },
+    {
+      "name": "btn_lingqu",
+      "type": "node",
+      "x": 270.95,
+      "y": -5.35,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#btn_1.png",
+          "img_down": "#btn_2.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "sprite",
+          "img": "undefined",
+          "x": 20.5,
+          "y": 4.93
+        }
+      ]
+    },
+    {
+      "name": "yilingqu",
+      "type": "sprite",
+      "img": "#_yilingqu.png",
+      "x": 270.3,
+      "y": -2.85
+    },
+    {
+      "name": "hint",
+      "type": "sprite",
+      "img": "undefined",
+      "x": -1.02,
+      "y": -85.02
+    }
+  ]
+}

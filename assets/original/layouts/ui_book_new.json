@@ -1,0 +1,491 @@
+{
+  "group": [
+    "ui_booknew",
+    "ui_bgpuzzle",
+    "ui_ButtonProp"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -512,
+      "y": -17.92,
+      "width": 1024,
+      "height": 641.05,
+      "maxw": 1024,
+      "maxh": 641.05
+    },
+    {
+      "name": "btn_dragon",
+      "type": "node",
+      "x": -384.35,
+      "y": 239.75,
+      "width": 172,
+      "height": 66,
+      "children": [
+        {
+          "name": "btn",
+          "type": "ckb",
+          "img_on": "#ui_booknew_ckb1.png",
+          "img_off": "#ui_booknew_ckb2.png"
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_booknew_txt_btn.png",
+          "width": 33,
+          "height": 35
+        }
+      ]
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_GuanBi1.png",
+      "img_down": "#ui_common_btn_GuanBi2.png",
+      "x": 468.1,
+      "y": 338.9,
+      "width": 85,
+      "height": 90,
+      "right": 43.9
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_d.png",
+      "x": -1.15,
+      "y": 341,
+      "width": 573,
+      "height": 83
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "图鉴",
+      "align": "center",
+      "size": 28,
+      "color": 4294967295,
+      "x": -216.9,
+      "y": 332.25,
+      "width": 431.85,
+      "height": 35.5
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_bgpuzzle_bg9.png",
+      "scale9": 1,
+      "x": -486,
+      "y": -66.9,
+      "width": 978,
+      "height": 431,
+      "maxw": 978,
+      "maxh": 431
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "x": 3,
+      "y": -66.35,
+      "width": 978,
+      "height": 422
+    },
+    {
+      "name": "book_ability",
+      "type": "node",
+      "x": 3,
+      "y": 176.45,
+      "width": 978,
+      "height": 65,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_booknew_bg2.png",
+          "width": 978,
+          "height": 65
+        },
+        {
+          "name": "miaoshu1",
+          "type": "label",
+          "text": "龙图鉴激活属性",
+          "align": "left",
+          "size": 25,
+          "color": 4294967295,
+          "x": -471,
+          "y": 13.6,
+          "width": 278,
+          "height": 32.1
+        },
+        {
+          "name": "miaoshu2",
+          "type": "label",
+          "text": "激活属性对所有龙生效",
+          "align": "left",
+          "size": 21,
+          "color": 4292739327,
+          "x": -471,
+          "y": -16.15,
+          "width": 278,
+          "height": 27.6
+        },
+        {
+          "name": "life",
+          "type": "node",
+          "x": -110,
+          "y": 14.27,
+          "width": 166,
+          "height": 28.75,
+          "children": [
+            {
+              "name": "miaoshu",
+              "type": "label",
+              "text": "生命：",
+              "align": "left",
+              "size": 22,
+              "color": 4294967295,
+              "x": -83,
+              "width": 70,
+              "height": 28.75
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": "+999999",
+              "align": "left",
+              "size": 22,
+              "color": 1675362815,
+              "x": -13,
+              "width": 96,
+              "height": 28.75
+            }
+          ]
+        },
+        {
+          "name": "atk",
+          "type": "node",
+          "x": 56,
+          "y": 14.27,
+          "width": 166,
+          "height": 28.75,
+          "children": [
+            {
+              "name": "miaoshu",
+              "type": "label",
+              "text": "攻击：",
+              "align": "left",
+              "size": 22,
+              "color": 4294967295,
+              "x": -83,
+              "width": 70,
+              "height": 28.75
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": "+999999",
+              "align": "left",
+              "size": 22,
+              "color": 1675362815,
+              "x": -13,
+              "width": 96,
+              "height": 28.75
+            }
+          ]
+        },
+        {
+          "name": "def",
+          "type": "node",
+          "x": 222,
+          "y": 14.27,
+          "width": 166,
+          "height": 28.75,
+          "children": [
+            {
+              "name": "miaoshu",
+              "type": "label",
+              "text": "防御：",
+              "align": "left",
+              "size": 22,
+              "color": 4294967295,
+              "x": -83,
+              "width": 70,
+              "height": 28.75
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": "+999999",
+              "align": "left",
+              "size": 22,
+              "color": 1675362815,
+              "x": -13,
+              "width": 96,
+              "height": 28.75
+            }
+          ]
+        },
+        {
+          "name": "resilience",
+          "type": "node",
+          "x": 388,
+          "y": 14.27,
+          "width": 166,
+          "height": 28.75,
+          "children": [
+            {
+              "name": "miaoshu",
+              "type": "label",
+              "text": "免暴：",
+              "align": "left",
+              "size": 22,
+              "color": 4294967295,
+              "x": -83,
+              "width": 70,
+              "height": 28.75
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": "+999999",
+              "align": "left",
+              "size": 22,
+              "color": 1675362815,
+              "x": -13,
+              "width": 96,
+              "height": 28.75
+            }
+          ]
+        },
+        {
+          "name": "critical",
+          "type": "node",
+          "x": -110,
+          "y": -16.73,
+          "width": 166,
+          "height": 28.75,
+          "children": [
+            {
+              "name": "miaoshu",
+              "type": "label",
+              "text": "暴击：",
+              "align": "left",
+              "size": 22,
+              "color": 4294967295,
+              "x": -83,
+              "width": 70,
+              "height": 28.75
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": "+999999",
+              "align": "left",
+              "size": 22,
+              "color": 1675362815,
+              "x": -13,
+              "width": 96,
+              "height": 28.75
+            }
+          ]
+        },
+        {
+          "name": "dodge",
+          "type": "node",
+          "x": 56,
+          "y": -16.73,
+          "width": 166,
+          "height": 28.75,
+          "children": [
+            {
+              "name": "miaoshu",
+              "type": "label",
+              "text": "闪避：",
+              "align": "left",
+              "size": 22,
+              "color": 4294967295,
+              "x": -83,
+              "width": 70,
+              "height": 28.75
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": "+999999",
+              "align": "left",
+              "size": 22,
+              "color": 1675362815,
+              "x": -13,
+              "width": 96,
+              "height": 28.75
+            }
+          ]
+        },
+        {
+          "name": "hit",
+          "type": "node",
+          "x": 222,
+          "y": -16.73,
+          "width": 166,
+          "height": 28.75,
+          "children": [
+            {
+              "name": "miaoshu",
+              "type": "label",
+              "text": "命中：",
+              "align": "left",
+              "size": 22,
+              "color": 4294967295,
+              "x": -83,
+              "width": 70,
+              "height": 28.75
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": "+999999",
+              "align": "left",
+              "size": 22,
+              "color": 1675362815,
+              "x": -13,
+              "width": 96,
+              "height": 28.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "help",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_tishi1.png",
+      "img_down": "#ui_common_btn_tishi2.png",
+      "x": 371.1,
+      "y": 338.5,
+      "width": 85,
+      "height": 90,
+      "right": 140.9
+    },
+    {
+      "name": "longzuleixing",
+      "type": "node",
+      "x": 1.7,
+      "y": -332.9,
+      "width": 873,
+      "height": 100,
+      "children": [
+        {
+          "name": "all",
+          "type": "ckb",
+          "img_on": "#ui_shop_c0010.png",
+          "img_off": "#ui_shop_a0010.png",
+          "x": -400
+        },
+        {
+          "name": "el",
+          "type": "ckb",
+          "img_on": "#ui_shop_c0001.png",
+          "img_off": "#ui_shop_a0001.png",
+          "x": 100
+        },
+        {
+          "name": "e",
+          "type": "ckb",
+          "img_on": "#ui_shop_c0003.png",
+          "img_off": "#ui_shop_a0003.png",
+          "x": -300
+        },
+        {
+          "name": "d",
+          "type": "ckb",
+          "img_on": "#ui_shop_c0004.png",
+          "img_off": "#ui_shop_a0004.png",
+          "x": 400
+        },
+        {
+          "name": "m",
+          "type": "ckb",
+          "img_on": "#ui_shop_c0005.png",
+          "img_off": "#ui_shop_a0005.png",
+          "x": 300
+        },
+        {
+          "name": "w",
+          "type": "ckb",
+          "img_on": "#ui_shop_c0006.png",
+          "img_off": "#ui_shop_a0006.png",
+          "x": -100
+        },
+        {
+          "name": "f",
+          "type": "ckb",
+          "img_on": "#ui_shop_c0007.png",
+          "img_off": "#ui_shop_a0007.png",
+          "x": -200
+        },
+        {
+          "name": "p",
+          "type": "ckb",
+          "img_on": "#ui_shop_c0008.png",
+          "img_off": "#ui_shop_a0008.png"
+        },
+        {
+          "name": "i",
+          "type": "ckb",
+          "img_on": "#ui_shop_c0009.png",
+          "img_off": "#ui_shop_a0009.png",
+          "x": 200
+        }
+      ]
+    },
+    {
+      "name": "exp_bg",
+      "type": "sprite",
+      "img": "#ui_booknew_exp_diban.png",
+      "x": 358,
+      "y": 227.5,
+      "width": 256,
+      "height": 27
+    },
+    {
+      "name": "exp",
+      "type": "sprite",
+      "img": "#ui_booknew_exp_tianchong.png",
+      "x": 358,
+      "y": 227.65,
+      "width": 254,
+      "height": 25
+    },
+    {
+      "name": "exp_num",
+      "type": "label",
+      "text": "100",
+      "align": "center",
+      "size": 22,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": 247,
+      "y": 227.18,
+      "width": 224,
+      "height": 28.75
+    },
+    {
+      "name": "exp_progress",
+      "type": "label",
+      "text": "龙图鉴解锁进度",
+      "align": "right",
+      "size": 22,
+      "color": 1092488703,
+      "x": 247,
+      "y": 259.18,
+      "width": 224,
+      "height": 28.75
+    }
+  ]
+}

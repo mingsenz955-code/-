@@ -1,0 +1,16 @@
+{
+  "group": [
+    "buildings/0077_lanhuacong_g"
+  ],
+  "width": 115,
+  "height": 94,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0077_lanhuacong_g_bg.png",
+      "x": 9.5,
+      "y": 46
+    }
+  ]
+}

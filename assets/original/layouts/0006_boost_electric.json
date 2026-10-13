@@ -1,0 +1,23 @@
+{
+  "group": [
+    "buildings/0006_boost_electric_g"
+  ],
+  "width": 259,
+  "height": 251,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0006_boost_electric_g_bg.png",
+      "x": 15.5,
+      "y": 136
+    },
+    {
+      "name": "eff",
+      "type": "eff",
+      "eff": "0006_boost_electric_eff",
+      "width": 92,
+      "height": 176
+    }
+  ]
+}

@@ -1,0 +1,435 @@
+{
+  "group": [
+    "ui_breednew"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_GuanBi1.png",
+      "img_down": "#ui_common_btn_GuanBi2.png",
+      "x": 468.1,
+      "y": 338.9,
+      "width": 85,
+      "height": 90,
+      "right": 43.9
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -512,
+      "y": -40.35,
+      "width": 748,
+      "height": 591,
+      "maxw": 748,
+      "maxh": 591
+    },
+    {
+      "name": "btn_peiyushan",
+      "type": "node",
+      "x": -370.8,
+      "y": 262.95,
+      "width": 210,
+      "height": 57,
+      "children": [
+        {
+          "name": "btn",
+          "type": "ckb",
+          "img_on": "#ui_breednew_bq2.png",
+          "img_off": "#ui_breednew_bq1.png"
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "培育山",
+          "align": "center",
+          "size": 24,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -97,
+          "y": 2.55,
+          "width": 192,
+          "height": 31
+        },
+        {
+          "name": "hint",
+          "type": "sprite",
+          "img": "#ui_breednew_clock.png",
+          "x": 72.5,
+          "y": 2.05,
+          "width": 43,
+          "height": 42
+        }
+      ]
+    },
+    {
+      "name": "btn_shengmingshan",
+      "type": "node",
+      "x": -160.8,
+      "y": 262.95,
+      "width": 210,
+      "height": 57,
+      "children": [
+        {
+          "name": "btn",
+          "type": "ckb",
+          "img_on": "#ui_breednew_bq2.png",
+          "img_off": "#ui_breednew_bq1.png"
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "生命之山",
+          "align": "center",
+          "size": 24,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -97,
+          "y": 2.55,
+          "width": 192,
+          "height": 31
+        },
+        {
+          "name": "hint",
+          "type": "sprite",
+          "img": "#ui_breednew_clock.png",
+          "x": 72.5,
+          "y": 2.05,
+          "width": 43,
+          "height": 42
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_d.png",
+      "x": -1.15,
+      "y": 341,
+      "width": 573,
+      "height": 83
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "培育",
+      "align": "center",
+      "size": 28,
+      "color": 4294967295,
+      "x": -216.9,
+      "y": 332.25,
+      "width": 431.85,
+      "height": 35.5
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_breednew_dage.png",
+      "scale9": 1,
+      "x": -488.95,
+      "y": -56,
+      "width": 343,
+      "height": 474,
+      "maxw": 343,
+      "maxh": 474
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_breednew_tiao1.png",
+      "x": -316.45,
+      "y": 207.45,
+      "width": 341,
+      "height": 41
+    },
+    {
+      "name": "txt",
+      "type": "label",
+      "text": "选择一条龙",
+      "align": "center",
+      "size": 24,
+      "color": 1092488703,
+      "x": -475.8,
+      "y": 208.45,
+      "width": 320,
+      "height": 31
+    },
+    {
+      "name": "huadong_left",
+      "type": "list",
+      "x": -317.45,
+      "y": -55,
+      "width": 340,
+      "height": 464
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_breednew_dage.png",
+      "scale9": 1,
+      "x": -136.95,
+      "y": -56,
+      "width": 343,
+      "height": 474,
+      "maxw": 343,
+      "maxh": 474
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_breednew_tiao1.png",
+      "x": 33.55,
+      "y": 207.45,
+      "width": 341,
+      "height": 41
+    },
+    {
+      "name": "txt",
+      "type": "label",
+      "text": "选择一条龙",
+      "align": "center",
+      "size": 24,
+      "color": 1092488703,
+      "x": -126,
+      "y": 208.45,
+      "width": 320,
+      "height": 31
+    },
+    {
+      "name": "huadong_right",
+      "type": "list",
+      "x": 34.55,
+      "y": -55,
+      "width": 340,
+      "height": 464
+    },
+    {
+      "name": "btn_peiyu",
+      "type": "node",
+      "x": -145.65,
+      "y": -337.35,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3_2.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "width": 200,
+          "height": 85
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "x10",
+          "align": "left",
+          "size": 26,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -38,
+          "y": 4.88,
+          "width": 69,
+          "height": 33.25
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "培育",
+          "align": "right",
+          "size": 26,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": 21,
+          "y": 4.88,
+          "width": 59,
+          "height": 33.25
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_breednew_pyd52.png",
+          "x": -62,
+          "y": 7.3,
+          "width": 53,
+          "height": 52
+        }
+      ]
+    },
+    {
+      "name": "btn_peiyu_free",
+      "type": "node",
+      "x": -145.65,
+      "y": -337.35,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3_2.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "width": 200,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "培育",
+          "align": "center",
+          "size": 28,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -78,
+          "y": 3.75,
+          "width": 156,
+          "height": 35.5
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_main_pbar_bg2.png",
+      "scale9": 1,
+      "x": 29.65,
+      "y": 271.25,
+      "width": 129.2,
+      "height": 46,
+      "maxw": 129.2,
+      "maxh": 46
+    },
+    {
+      "name": "txt_peiyudan",
+      "type": "label",
+      "text": "999999",
+      "align": "right",
+      "size": 24,
+      "color": 858993663,
+      "x": 45.05,
+      "y": 270.57,
+      "width": 102.95,
+      "height": 33.25
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_breednew_pyd52.png",
+      "x": 24.35,
+      "y": 275.6,
+      "width": 53,
+      "height": 52
+    },
+    {
+      "name": "btn_peiyudan",
+      "type": "btn",
+      "img_normal": "#ui_main_05.png",
+      "img_down": "#ui_main_05-2.png",
+      "x": 172.1,
+      "y": 270.6,
+      "width": 46,
+      "height": 46
+    },
+    {
+      "name": "tishi",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_tishi1.png",
+      "img_down": "#ui_common_btn_tishi2.png",
+      "x": 376.35,
+      "y": 338.9,
+      "width": 85,
+      "height": 90,
+      "right": 135.65
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_breednew_dage1.png",
+      "scale9": 1,
+      "x": 232,
+      "y": -41.9,
+      "width": 268,
+      "height": 563,
+      "maxw": 268,
+      "maxh": 563
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_breednew_tiao2.png",
+      "x": 366,
+      "y": 209.95,
+      "width": 272,
+      "height": 46
+    },
+    {
+      "name": "preview",
+      "type": "label",
+      "text": "可能的结果",
+      "align": "center",
+      "size": 26,
+      "color": 4294967295,
+      "x": 238,
+      "y": 210.53,
+      "width": 253,
+      "height": 33.25
+    },
+    {
+      "name": "huadong_preview",
+      "type": "list",
+      "x": 365.5,
+      "y": -66.5,
+      "width": 239,
+      "height": 503
+    },
+    {
+      "name": "hint2",
+      "type": "label",
+      "text": "紫色、蓝色龙蛋的产出概率×2",
+      "align": "center",
+      "size": 20,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": 221,
+      "y": -344.5,
+      "width": 290,
+      "height": 26.5
+    },
+    {
+      "name": "hint3",
+      "type": "node",
+      "x": 365.1,
+      "y": 35.38,
+      "width": 228,
+      "height": 164.75,
+      "children": [
+        {
+          "name": "shuoming1",
+          "type": "label",
+          "text": "这两条龙，不能产出紫色、蓝色的小龙哦",
+          "align": "center",
+          "size": 20,
+          "color": 4294967295,
+          "x": -114,
+          "y": 41.5,
+          "width": 228,
+          "height": 81.75
+        },
+        {
+          "name": "shuoming2",
+          "type": "label",
+          "text": "请在培育山中培育",
+          "align": "center",
+          "size": 20,
+          "color": 4294967295,
+          "x": -114,
+          "y": -41.5,
+          "width": 228,
+          "height": 81.75
+        }
+      ]
+    }
+  ]
+}

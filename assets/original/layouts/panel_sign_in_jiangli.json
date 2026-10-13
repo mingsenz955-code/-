@@ -1,0 +1,127 @@
+{
+  "group": {},
+  "children": [
+    {
+      "name": "bg",
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "y": 2,
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_battle_panding.png",
+      "width": 613,
+      "height": 432
+    },
+    {
+      "name": "miaoshu",
+      "type": "label",
+      "text": "获得道具：",
+      "size": 22,
+      "align": "left",
+      "color": 1092488703,
+      "x": -135.95,
+      "y": 52.03,
+      "width": 276,
+      "height": 28.75
+    },
+    {
+      "name": "btn_cangku",
+      "type": "node",
+      "x": 2.35,
+      "y": -163.3,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "放入仓库",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -79,
+          "y": 4.4,
+          "width": 156,
+          "height": 46.2
+        }
+      ]
+    },
+    {
+      "name": "jiangli",
+      "type": "node",
+      "x": 66.82,
+      "y": -83.97,
+      "width": 132.95,
+      "height": 109.25,
+      "children": [
+        {
+          "name": "diban",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": -66.47,
+          "y": 54.63,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "x": -66.47,
+          "y": 54.63,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -66.47,
+          "y": 54.63,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "",
+          "size": 19,
+          "align": "right",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -101.47,
+          "y": 35.4,
+          "width": 69,
+          "height": 25.35
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "没有物品",
+          "size": 18,
+          "align": "center",
+          "color": 1092488703,
+          "x": -131.47,
+          "width": 132.95,
+          "height": 24.25
+        }
+      ]
+    },
+    {
+      "name": "qiandao",
+      "type": "sprite",
+      "img": "#ui_signin_qiandaochenggong.png",
+      "x": 1.35,
+      "y": 175.5,
+      "width": 282,
+      "height": 97
+    }
+  ]
+}

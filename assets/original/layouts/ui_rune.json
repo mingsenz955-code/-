@@ -1,0 +1,45 @@
+{
+  "group": {},
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_GuanBi1.png",
+      "img_down": "#ui_common_btn_GuanBi2.png",
+      "x": 468.1,
+      "y": 338.9,
+      "width": 85,
+      "height": 90,
+      "right": 43.9
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_d.png",
+      "x": -1.15,
+      "y": 341,
+      "width": 573,
+      "height": 83
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "祭坛镶嵌",
+      "align": "center",
+      "size": 28,
+      "color": 4294967295,
+      "x": -216.9,
+      "y": 332.07,
+      "width": 431.85,
+      "height": 35.85
+    }
+  ]
+}

@@ -1,0 +1,552 @@
+{
+  "group": [
+    "ui_hd69",
+    "ui_activityequip",
+    "ui_daojukuang",
+    "ui_hd67"
+  ],
+  "width": 955,
+  "height": 685,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_hd69_bg.png",
+      "width": 955,
+      "height": 569
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_hd69_hengfu.png",
+      "x": 17,
+      "y": 298,
+      "width": 777,
+      "height": 204
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_hd69_title.png",
+      "x": 15,
+      "y": 272.95,
+      "width": 328,
+      "height": 59
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_activityequip_bg_time.png",
+      "x": 20.65,
+      "y": 190.55,
+      "width": 422,
+      "height": 41
+    },
+    {
+      "name": "txt_startendtime",
+      "type": "label",
+      "text": "活动时间",
+      "align": "center",
+      "size": 22,
+      "color": 4294967295,
+      "x": -188.35,
+      "y": 191.63,
+      "width": 416.55,
+      "height": 28.85
+    },
+    {
+      "name": "txt_1",
+      "type": "label",
+      "text": "今日充值10000魔晶，即可购买以下超值礼包，每种礼包只可购买一次。每日购买的礼包数量及充值魔晶数在零点重置（注：月卡及额外赠送的魔晶不计入当日充值的魔晶数中）",
+      "align": "left",
+      "size": 22,
+      "color": 255,
+      "x": -455.05,
+      "y": 139.95,
+      "width": 913.4,
+      "height": 65.9
+    },
+    {
+      "name": "txt_4",
+      "type": "label",
+      "text": "您今日已充xxx魔晶",
+      "align": "right",
+      "size": 22,
+      "color": 255,
+      "x": 146,
+      "y": 99.73,
+      "width": 310,
+      "height": 28.85
+    },
+    {
+      "name": "node_item1",
+      "type": "node",
+      "x": 162.5,
+      "y": -5,
+      "width": 591,
+      "height": 175,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_hd69_zhanshipad.png",
+          "width": 591,
+          "height": 175
+        },
+        {
+          "name": "txt_title",
+          "type": "label",
+          "text": "xxxx",
+          "align": "left",
+          "size": 24,
+          "color": 16580607,
+          "outlineColor": 0,
+          "x": -280.5,
+          "y": 65.85,
+          "width": 560,
+          "height": 31.1
+        },
+        {
+          "name": "node_item1",
+          "type": "node",
+          "x": -225.5,
+          "y": -20.95,
+          "width": 110,
+          "height": 110,
+          "children": [
+            {
+              "name": "bg",
+              "type": "sprite",
+              "img": "#ui_daojukuang_DaoJuKuang1.png",
+              "width": 110,
+              "height": 110
+            },
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "image",
+              "type": "node",
+              "x": -0.85,
+              "y": 2.8,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "eff",
+              "type": "node",
+              "x": -0.85,
+              "y": 1.8,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_num",
+              "type": "label",
+              "text": " ",
+              "align": "right",
+              "size": 20,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -37.1,
+              "y": -25.65,
+              "width": 77,
+              "height": 26.6
+            }
+          ]
+        },
+        {
+          "name": "node_item2",
+          "type": "node",
+          "x": -78,
+          "y": -20.95,
+          "width": 110,
+          "height": 110,
+          "children": [
+            {
+              "name": "bg",
+              "type": "sprite",
+              "img": "#ui_daojukuang_DaoJuKuang1.png",
+              "width": 110,
+              "height": 110
+            },
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "image",
+              "type": "node",
+              "x": -0.85,
+              "y": 2.8,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "eff",
+              "type": "node",
+              "x": -0.85,
+              "y": 1.8,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_num",
+              "type": "label",
+              "text": " ",
+              "align": "right",
+              "size": 20,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -37.1,
+              "y": -25.65,
+              "width": 77,
+              "height": 26.6
+            }
+          ]
+        },
+        {
+          "name": "node_item3",
+          "type": "node",
+          "x": 69.5,
+          "y": -20.95,
+          "width": 110,
+          "height": 110,
+          "children": [
+            {
+              "name": "bg",
+              "type": "sprite",
+              "img": "#ui_daojukuang_DaoJuKuang1.png",
+              "width": 110,
+              "height": 110
+            },
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "image",
+              "type": "node",
+              "x": -0.85,
+              "y": 2.8,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "eff",
+              "type": "node",
+              "x": -0.85,
+              "y": 1.8,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_num",
+              "type": "label",
+              "text": " ",
+              "align": "right",
+              "size": 20,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -37.1,
+              "y": -25.65,
+              "width": 77,
+              "height": 26.6
+            }
+          ]
+        },
+        {
+          "name": "node_btn_buy",
+          "type": "node",
+          "x": 213.5,
+          "y": -41.95,
+          "width": 92,
+          "height": 46,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_hd67_btnred1.png",
+              "img_down": "#ui_hd67_btnred2.png",
+              "img_disable": "#ui_hd67_btnred3.png",
+              "width": 92,
+              "height": 46
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "购买",
+              "align": "center",
+              "size": 26,
+              "color": 992815615,
+              "outlineColor": 13941402,
+              "x": -40,
+              "y": -0.93,
+              "width": 78.95,
+              "height": 33.35
+            }
+          ]
+        },
+        {
+          "name": "txt_gem",
+          "type": "label",
+          "text": "xxx",
+          "align": "center",
+          "size": 26,
+          "color": 992815615,
+          "x": 138.5,
+          "y": 10.37,
+          "width": 104,
+          "height": 33.35
+        },
+        {
+          "name": "node_icon",
+          "type": "node",
+          "x": 245.5,
+          "y": 16.5,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "node_item2",
+      "type": "node",
+      "x": 162.5,
+      "y": -179,
+      "width": 591,
+      "height": 175,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_hd69_zhanshipad.png",
+          "width": 591,
+          "height": 175
+        },
+        {
+          "name": "txt_title",
+          "type": "label",
+          "text": "xxxx",
+          "align": "left",
+          "size": 24,
+          "color": 16580607,
+          "outlineColor": 0,
+          "x": -280.5,
+          "y": 65.85,
+          "width": 560,
+          "height": 31.1
+        },
+        {
+          "name": "node_item1",
+          "type": "node",
+          "x": -225.5,
+          "y": -20.95,
+          "width": 110,
+          "height": 110,
+          "children": [
+            {
+              "name": "bg",
+              "type": "sprite",
+              "img": "#ui_daojukuang_DaoJuKuang1.png",
+              "width": 110,
+              "height": 110
+            },
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "image",
+              "type": "node",
+              "x": -0.85,
+              "y": 2.8,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "eff",
+              "type": "node",
+              "x": -0.85,
+              "y": 1.8,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_num",
+              "type": "label",
+              "text": " ",
+              "align": "right",
+              "size": 20,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -37.1,
+              "y": -25.65,
+              "width": 77,
+              "height": 26.6
+            }
+          ]
+        },
+        {
+          "name": "node_item2",
+          "type": "node",
+          "x": -78,
+          "y": -20.95,
+          "width": 110,
+          "height": 110,
+          "children": [
+            {
+              "name": "bg",
+              "type": "sprite",
+              "img": "#ui_daojukuang_DaoJuKuang1.png",
+              "width": 110,
+              "height": 110
+            },
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "image",
+              "type": "node",
+              "x": -0.85,
+              "y": 2.8,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "eff",
+              "type": "node",
+              "x": -0.85,
+              "y": 1.8,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_num",
+              "type": "label",
+              "text": " ",
+              "align": "right",
+              "size": 20,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -37.1,
+              "y": -25.65,
+              "width": 77,
+              "height": 26.6
+            }
+          ]
+        },
+        {
+          "name": "node_item3",
+          "type": "node",
+          "x": 69.5,
+          "y": -20.95,
+          "width": 110,
+          "height": 110,
+          "children": [
+            {
+              "name": "bg",
+              "type": "sprite",
+              "img": "#ui_daojukuang_DaoJuKuang1.png",
+              "width": 110,
+              "height": 110
+            },
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "image",
+              "type": "node",
+              "x": -0.85,
+              "y": 2.8,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "eff",
+              "type": "node",
+              "x": -0.85,
+              "y": 1.8,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_num",
+              "type": "label",
+              "text": " ",
+              "align": "right",
+              "size": 20,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -37.1,
+              "y": -25.65,
+              "width": 77,
+              "height": 26.6
+            }
+          ]
+        },
+        {
+          "name": "node_btn_buy",
+          "type": "node",
+          "x": 213.5,
+          "y": -41.95,
+          "width": 92,
+          "height": 46,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_hd67_btnred1.png",
+              "img_down": "#ui_hd67_btnred2.png",
+              "img_disable": "#ui_hd67_btnred3.png",
+              "width": 92,
+              "height": 46
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "购买",
+              "align": "center",
+              "size": 26,
+              "color": 992815615,
+              "outlineColor": 13941402,
+              "x": -40,
+              "y": -0.93,
+              "width": 78.95,
+              "height": 33.35
+            }
+          ]
+        },
+        {
+          "name": "txt_gem",
+          "type": "label",
+          "text": "xxx",
+          "align": "center",
+          "size": 26,
+          "color": 992815615,
+          "x": 138.5,
+          "y": 10.37,
+          "width": 104,
+          "height": 33.35
+        },
+        {
+          "name": "node_icon",
+          "type": "node",
+          "x": 245.5,
+          "y": 16.5,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    }
+  ]
+}

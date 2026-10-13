@@ -1,0 +1,863 @@
+{
+  "group": [
+    "ui_lottery"
+  ],
+  "width": 1008,
+  "height": 683,
+  "children": [
+    {
+      "name": "chuji",
+      "type": "node",
+      "x": -330.47,
+      "y": 39.9,
+      "width": 346.85,
+      "height": 603,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_DiBan_YangBiZhi.png",
+          "scale9": 1,
+          "x": -173.43,
+          "width": 343,
+          "height": 603,
+          "maxw": 343,
+          "maxh": 603
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_lottery_duandai01.png",
+          "x": 0.42,
+          "y": 262.25,
+          "width": 346,
+          "height": 73
+        },
+        {
+          "name": "title_text",
+          "type": "label",
+          "text": "初级探索",
+          "align": "center",
+          "size": 30,
+          "color": 4294967295,
+          "x": -116.08,
+          "y": 265.82,
+          "width": 224,
+          "height": 37.75
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_lottery_renwu1.png",
+          "x": 0.52,
+          "y": 107.9,
+          "width": 245,
+          "height": 257
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_lottery_zhuangshi1.png",
+          "x": -3.73,
+          "y": -9.6,
+          "width": 314,
+          "height": 103
+        },
+        {
+          "name": "hint_time",
+          "type": "node",
+          "x": 2.07,
+          "y": -71.22,
+          "width": 223,
+          "height": 32.55,
+          "children": [
+            {
+              "name": "miaoshu",
+              "type": "label",
+              "text": "后免费",
+              "align": "left",
+              "size": 24,
+              "color": 1714618623,
+              "x": 3.5,
+              "width": 108,
+              "height": 32.55
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": "00:00:00",
+              "align": "left",
+              "size": 24,
+              "color": 4278190335,
+              "x": -111.5,
+              "width": 113,
+              "height": 32.55
+            }
+          ]
+        },
+        {
+          "name": "hint_free",
+          "type": "node",
+          "x": 2.07,
+          "y": -71.22,
+          "width": 223,
+          "height": 32.55,
+          "children": [
+            {
+              "name": "miaoshu",
+              "type": "label",
+              "text": "免费次数:",
+              "align": "left",
+              "size": 24,
+              "color": 1714618623,
+              "x": -111.5,
+              "width": 113,
+              "height": 32.55
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": "2/5",
+              "align": "left",
+              "size": 24,
+              "color": 1714618623,
+              "x": 3.5,
+              "width": 108,
+              "height": 32.55
+            }
+          ]
+        },
+        {
+          "name": "hint_finish",
+          "type": "label",
+          "text": "今日免费次数已完",
+          "align": "center",
+          "size": 24,
+          "color": 1714618623,
+          "x": -129.43,
+          "y": -71.22,
+          "width": 263,
+          "height": 32.55
+        },
+        {
+          "name": "one",
+          "type": "node",
+          "x": -2.68,
+          "y": -130.1,
+          "width": 312.1,
+          "height": 68,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_lottery_diban1.png",
+              "x": -1.05,
+              "y": 6.5,
+              "width": 310,
+              "height": 55
+            },
+            {
+              "name": "btn_one",
+              "type": "node",
+              "x": 75.55,
+              "y": 5.15,
+              "width": 161,
+              "height": 68,
+              "children": [
+                {
+                  "name": "btn",
+                  "type": "btn",
+                  "img_normal": "#ui_lottery_btn1.png",
+                  "img_down": "#ui_lottery_btn2.png",
+                  "width": 161,
+                  "height": 68
+                },
+                {
+                  "name": "miaoshu",
+                  "type": "label",
+                  "text": "探索一次",
+                  "align": "center",
+                  "size": 30,
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -70.5,
+                  "y": 2.07,
+                  "width": 140,
+                  "height": 37.75
+                }
+              ]
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_lottery_46.png",
+              "x": -122.05,
+              "y": 5.55,
+              "width": 48,
+              "height": 49
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": "2515",
+              "align": "left",
+              "size": 28,
+              "color": 1714618623,
+              "x": -97.05,
+              "y": 7.3,
+              "width": 91,
+              "height": 35.5
+            }
+          ]
+        },
+        {
+          "name": "ten",
+          "type": "node",
+          "x": -2.68,
+          "y": -240.1,
+          "width": 312.1,
+          "height": 68,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_lottery_diban1.png",
+              "x": -1.05,
+              "y": 6.5,
+              "width": 310,
+              "height": 55
+            },
+            {
+              "name": "btn_ten",
+              "type": "node",
+              "x": 75.55,
+              "y": 5.15,
+              "width": 161,
+              "height": 68,
+              "children": [
+                {
+                  "name": "btn",
+                  "type": "btn",
+                  "img_normal": "#ui_lottery_btn1.png",
+                  "img_down": "#ui_lottery_btn2.png",
+                  "width": 161,
+                  "height": 68
+                },
+                {
+                  "name": "miaoshu",
+                  "type": "label",
+                  "text": "探索十次",
+                  "align": "center",
+                  "size": 30,
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -70.5,
+                  "y": 2.07,
+                  "width": 140,
+                  "height": 37.75
+                }
+              ]
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_lottery_46.png",
+              "x": -122.05,
+              "y": 5.55,
+              "width": 48,
+              "height": 49
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": "2515",
+              "align": "left",
+              "size": 28,
+              "color": 1714618623,
+              "x": -97.05,
+              "y": 5.3,
+              "width": 91,
+              "height": 35.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "zhongji",
+      "type": "node",
+      "x": -0.47,
+      "y": 39.9,
+      "width": 346.85,
+      "height": 603,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_DiBan_YangBiZhi.png",
+          "scale9": 1,
+          "x": -173.43,
+          "width": 343,
+          "height": 603,
+          "maxw": 343,
+          "maxh": 603
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_lottery_duandai02.png",
+          "x": 0.42,
+          "y": 262.25,
+          "width": 346,
+          "height": 73
+        },
+        {
+          "name": "title_text",
+          "type": "label",
+          "text": "中级探索",
+          "align": "center",
+          "size": 30,
+          "color": 4294967295,
+          "x": -116.08,
+          "y": 265.82,
+          "width": 224,
+          "height": 37.75
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_lottery_renwu2.png",
+          "x": -1.48,
+          "y": 106.4,
+          "width": 251,
+          "height": 260
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_lottery_zhuangshi2.png",
+          "x": -3.73,
+          "y": -9.6,
+          "width": 314,
+          "height": 103
+        },
+        {
+          "name": "hint_text2",
+          "type": "node",
+          "x": 2.07,
+          "y": -180.22,
+          "width": 243,
+          "height": 32.55,
+          "children": [
+            {
+              "name": "miaoshu",
+              "type": "label",
+              "text": "十连抽必得",
+              "align": "left",
+              "size": 24,
+              "color": 1714618623,
+              "x": -121.5,
+              "width": 135,
+              "height": 32.55
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": "紫色宝石",
+              "align": "left",
+              "size": 24,
+              "color": 1711341567,
+              "x": 13.5,
+              "width": 108,
+              "height": 32.55
+            }
+          ]
+        },
+        {
+          "name": "hint_text",
+          "type": "label",
+          "text": "免费抽取",
+          "align": "center",
+          "size": 24,
+          "color": 1714618623,
+          "x": -98.43,
+          "y": -71.22,
+          "width": 201,
+          "height": 32.55
+        },
+        {
+          "name": "hint_time",
+          "type": "node",
+          "x": 2.07,
+          "y": -71.22,
+          "width": 223,
+          "height": 32.55,
+          "children": [
+            {
+              "name": "miaoshu",
+              "type": "label",
+              "text": "后免费",
+              "align": "left",
+              "size": 24,
+              "color": 1714618623,
+              "x": 3.5,
+              "width": 108,
+              "height": 32.55
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": "00:00:00",
+              "align": "left",
+              "size": 24,
+              "color": 4278190335,
+              "x": -111.5,
+              "width": 113,
+              "height": 32.55
+            }
+          ]
+        },
+        {
+          "name": "one",
+          "type": "node",
+          "x": -2.68,
+          "y": -130.1,
+          "width": 312.1,
+          "height": 68,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_lottery_diban1.png",
+              "x": -1.05,
+              "y": 6.5,
+              "width": 310,
+              "height": 55
+            },
+            {
+              "name": "btn_one",
+              "type": "node",
+              "x": 75.55,
+              "y": 5.15,
+              "width": 161,
+              "height": 68,
+              "children": [
+                {
+                  "name": "btn",
+                  "type": "btn",
+                  "img_normal": "#ui_lottery_btn1.png",
+                  "img_down": "#ui_lottery_btn2.png",
+                  "width": 161,
+                  "height": 68
+                },
+                {
+                  "name": "miaoshu",
+                  "type": "label",
+                  "text": "探索一次",
+                  "align": "center",
+                  "size": 30,
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -70.5,
+                  "y": 2.07,
+                  "width": 140,
+                  "height": 37.75
+                }
+              ]
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "x": -125.7,
+              "y": 7,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": "2515",
+              "align": "left",
+              "size": 28,
+              "color": 1714618623,
+              "x": -97.05,
+              "y": 6.3,
+              "width": 91,
+              "height": 35.5
+            }
+          ]
+        },
+        {
+          "name": "ten",
+          "type": "node",
+          "x": -2.68,
+          "y": -240.1,
+          "width": 312.1,
+          "height": 68,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_lottery_diban1.png",
+              "x": -1.05,
+              "y": 6.5,
+              "width": 310,
+              "height": 55
+            },
+            {
+              "name": "btn_ten",
+              "type": "node",
+              "x": 75.55,
+              "y": 5.15,
+              "width": 161,
+              "height": 68,
+              "children": [
+                {
+                  "name": "btn",
+                  "type": "btn",
+                  "img_normal": "#ui_lottery_btn1.png",
+                  "img_down": "#ui_lottery_btn2.png",
+                  "width": 161,
+                  "height": 68
+                },
+                {
+                  "name": "miaoshu",
+                  "type": "label",
+                  "text": "探索十次",
+                  "align": "center",
+                  "size": 30,
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -70.5,
+                  "y": 2.07,
+                  "width": 140,
+                  "height": 37.75
+                }
+              ]
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "x": -125.7,
+              "y": 7,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": "2515",
+              "align": "left",
+              "size": 28,
+              "color": 1714618623,
+              "x": -97.05,
+              "y": 6.3,
+              "width": 91,
+              "height": 35.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "gaoji",
+      "type": "node",
+      "x": 330.52,
+      "y": 39.9,
+      "width": 346.85,
+      "height": 603,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_DiBan_YangBiZhi.png",
+          "scale9": 1,
+          "x": -173.43,
+          "width": 343,
+          "height": 603,
+          "maxw": 343,
+          "maxh": 603
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_lottery_duandai03.png",
+          "x": 0.42,
+          "y": 262.25,
+          "width": 346,
+          "height": 73
+        },
+        {
+          "name": "title_text",
+          "type": "label",
+          "text": "高级探索",
+          "align": "center",
+          "size": 30,
+          "color": 4294967295,
+          "x": -116.08,
+          "y": 265.82,
+          "width": 224,
+          "height": 37.75
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_lottery_renwu3.png",
+          "x": 1.02,
+          "y": 110.9,
+          "width": 268,
+          "height": 257
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_lottery_zhuangshi3.png",
+          "x": -3.73,
+          "y": -9.6,
+          "width": 314,
+          "height": 103
+        },
+        {
+          "name": "hint_text2",
+          "type": "node",
+          "x": 2.07,
+          "y": -180.22,
+          "width": 243,
+          "height": 32.55,
+          "children": [
+            {
+              "name": "miaoshu",
+              "type": "label",
+              "text": "十连抽必得",
+              "align": "left",
+              "size": 24,
+              "color": 1714618623,
+              "x": -121.5,
+              "width": 135,
+              "height": 32.55
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": "橙色宝石",
+              "align": "left",
+              "size": 24,
+              "color": 4281532671,
+              "x": 13.5,
+              "width": 108,
+              "height": 32.55
+            }
+          ]
+        },
+        {
+          "name": "hint_text",
+          "type": "label",
+          "text": "免费抽取",
+          "align": "center",
+          "size": 24,
+          "color": 1714618623,
+          "x": -98.43,
+          "y": -71.22,
+          "width": 201,
+          "height": 32.55
+        },
+        {
+          "name": "hint_time",
+          "type": "node",
+          "x": 2.07,
+          "y": -71.22,
+          "width": 223,
+          "height": 32.55,
+          "children": [
+            {
+              "name": "miaoshu",
+              "type": "label",
+              "text": "后免费",
+              "align": "left",
+              "size": 24,
+              "color": 1714618623,
+              "x": 3.5,
+              "width": 108,
+              "height": 32.55
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": "00:00:00",
+              "align": "left",
+              "size": 24,
+              "color": 4278190335,
+              "x": -111.5,
+              "width": 113,
+              "height": 32.55
+            }
+          ]
+        },
+        {
+          "name": "one",
+          "type": "node",
+          "x": -2.68,
+          "y": -130.1,
+          "width": 312.1,
+          "height": 68,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_lottery_diban1.png",
+              "x": -1.05,
+              "y": 6.5,
+              "width": 310,
+              "height": 55
+            },
+            {
+              "name": "btn_one",
+              "type": "node",
+              "x": 75.55,
+              "y": 5.15,
+              "width": 161,
+              "height": 68,
+              "children": [
+                {
+                  "name": "btn",
+                  "type": "btn",
+                  "img_normal": "#ui_lottery_btn1.png",
+                  "img_down": "#ui_lottery_btn2.png",
+                  "width": 161,
+                  "height": 68
+                },
+                {
+                  "name": "miaoshu",
+                  "type": "label",
+                  "text": "探索一次",
+                  "align": "center",
+                  "size": 30,
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -70.5,
+                  "y": 2.07,
+                  "width": 140,
+                  "height": 37.75
+                }
+              ]
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "x": -125.7,
+              "y": 7,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": "2515",
+              "align": "left",
+              "size": 28,
+              "color": 1714618623,
+              "x": -97.05,
+              "y": 6.3,
+              "width": 91,
+              "height": 35.5
+            }
+          ]
+        },
+        {
+          "name": "ten",
+          "type": "node",
+          "x": -2.68,
+          "y": -240.1,
+          "width": 312.1,
+          "height": 68,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_lottery_diban1.png",
+              "x": -1.05,
+              "y": 6.5,
+              "width": 310,
+              "height": 55
+            },
+            {
+              "name": "btn_ten",
+              "type": "node",
+              "x": 75.55,
+              "y": 5.15,
+              "width": 161,
+              "height": 68,
+              "children": [
+                {
+                  "name": "btn",
+                  "type": "btn",
+                  "img_normal": "#ui_lottery_btn1.png",
+                  "img_down": "#ui_lottery_btn2.png",
+                  "width": 161,
+                  "height": 68
+                },
+                {
+                  "name": "miaoshu",
+                  "type": "label",
+                  "text": "探索十次",
+                  "align": "center",
+                  "size": 30,
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -70.5,
+                  "y": 2.07,
+                  "width": 140,
+                  "height": 37.75
+                }
+              ]
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "x": -125.7,
+              "y": 7,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": "2515",
+              "align": "left",
+              "size": 28,
+              "color": 1714618623,
+              "x": -97.05,
+              "y": 6.3,
+              "width": 91,
+              "height": 35.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "xiangqian",
+      "type": "node",
+      "x": 390,
+      "y": -298.9,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3_2.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "width": 200,
+          "height": 85
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "镶嵌宝石",
+          "align": "center",
+          "size": 30,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -88,
+          "y": 3.57,
+          "width": 178,
+          "height": 37.75
+        }
+      ]
+    },
+    {
+      "name": "txt1",
+      "type": "label",
+      "text": "应用内抽奖活动与苹果公司无关，最终解释权归华清飞扬网络股份有限公司所有",
+      "align": "center",
+      "size": 12,
+      "color": 4294967295,
+      "x": -313,
+      "y": 346,
+      "width": 568,
+      "height": 17
+    }
+  ]
+}

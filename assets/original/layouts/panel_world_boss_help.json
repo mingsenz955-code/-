@@ -1,0 +1,80 @@
+{
+  "group": [
+    "ui_world"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768,
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -406.3,
+      "y": -18.68,
+      "width": 822,
+      "height": 663.95,
+      "maxw": 822,
+      "maxh": 663.95
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_world_dage.png",
+      "scale9": 1,
+      "x": -377.6,
+      "y": -22.35,
+      "width": 761,
+      "height": 600,
+      "maxw": 761,
+      "maxh": 600
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "x": 2.9,
+      "y": -22.35,
+      "width": 742,
+      "height": 594
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -412.6,
+      "y": 300.95,
+      "width": 829,
+      "height": 55,
+      "maxw": 829,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "规则说明",
+      "align": "center",
+      "size": 25,
+      "color": 4294967295,
+      "x": -390.1,
+      "y": 301.5,
+      "width": 790,
+      "height": 32.1
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 388.85,
+      "y": 305.75,
+      "width": 80,
+      "height": 86
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "group": {},
+  "children": [
+    {
+      "name": "ckb",
+      "type": "ckb",
+      "img_on": "#ui_starup_bb2.png",
+      "img_off": "#ui_starup_bb1.png",
+      "img_disable": "#ui_starup_bb3.png",
+      "x": 44.65,
+      "y": -3.9,
+      "sizeX": 239,
+      "sizeY": 95
+    },
+    {
+      "name": "tx_miaoshu",
+      "type": "label",
+      "text": "战力：",
+      "size": 20,
+      "align": "center",
+      "color": 255,
+      "x": -23.5,
+      "y": 17.48,
+      "width": 67.5,
+      "height": 28.95
+    },
+    {
+      "name": "tx_shuzi",
+      "type": "label",
+      "text": "999999",
+      "size": 20,
+      "align": "center",
+      "color": 2566914303,
+      "x": 36,
+      "y": 17.98,
+      "width": 78.5,
+      "height": 27.95
+    },
+    {
+      "name": "img_type1",
+      "type": "node",
+      "x": 84.5,
+      "y": -23.4,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "img_type2",
+      "type": "node",
+      "x": 44.5,
+      "y": -23.4,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "img_type3",
+      "type": "node",
+      "x": 4.5,
+      "y": -23.4,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DaoJuKuang1.png",
+      "x": -76.1,
+      "y": -3.65,
+      "width": 85,
+      "height": 85
+    },
+    {
+      "name": "quality",
+      "type": "node",
+      "x": -76.1,
+      "y": -3.65,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "icon",
+      "type": "node",
+      "x": -76.1,
+      "y": -3.65,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "biaoji",
+      "type": "node",
+      "x": -101,
+      "y": 18.5,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_main_ico_LongDengJi.png",
+      "x": -49.9,
+      "y": 26.9,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "name": "tx_lv",
+      "type": "label",
+      "text": "99",
+      "size": 23,
+      "align": "center",
+      "color": 255,
+      "x": -63.8,
+      "y": 26.03,
+      "width": 29.8,
+      "height": 29.85
+    }
+  ]
+}

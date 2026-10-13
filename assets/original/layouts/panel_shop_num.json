@@ -1,0 +1,262 @@
+{
+  "group": [
+    "ui_bgpuzzle"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768,
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -315.45,
+      "y": -6.1,
+      "width": 615,
+      "height": 399,
+      "maxw": 615,
+      "maxh": 399
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_bgpuzzle_bg9.png",
+      "scale9": 1,
+      "x": -264.95,
+      "y": -7.85,
+      "width": 517,
+      "height": 189,
+      "maxw": 517,
+      "maxh": 189
+    },
+    {
+      "name": "btn_ten_del",
+      "type": "node",
+      "x": -199.95,
+      "y": -7.5,
+      "width": 66,
+      "height": 64,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_shuliang_1.png",
+          "img_down": "#ui_common_shuliang_2.png",
+          "width": 66,
+          "height": 64
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "-10",
+          "align": "center",
+          "size": 26,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -31,
+          "y": -0.6,
+          "width": 61,
+          "height": 35.5
+        }
+      ]
+    },
+    {
+      "name": "btn_one_del",
+      "type": "node",
+      "x": -124.95,
+      "y": -7.5,
+      "width": 66,
+      "height": 64,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_shuliang_1.png",
+          "img_down": "#ui_common_shuliang_2.png",
+          "width": 66,
+          "height": 64
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "-1",
+          "align": "center",
+          "size": 26,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -31,
+          "y": -0.6,
+          "width": 61,
+          "height": 35.5
+        }
+      ]
+    },
+    {
+      "name": "btn_ten_add",
+      "type": "node",
+      "x": 176.05,
+      "y": -7.5,
+      "width": 66,
+      "height": 64,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_shuliang_1.png",
+          "img_down": "#ui_common_shuliang_2.png",
+          "width": 66,
+          "height": 64
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "+10",
+          "align": "center",
+          "size": 26,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -31,
+          "y": -0.6,
+          "width": 61,
+          "height": 35.5
+        }
+      ]
+    },
+    {
+      "name": "btn_one_add",
+      "type": "node",
+      "x": 101.05,
+      "y": -7.5,
+      "width": 66,
+      "height": 64,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_shuliang_1.png",
+          "img_down": "#ui_common_shuliang_2.png",
+          "width": 66,
+          "height": 64
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "+1",
+          "align": "center",
+          "size": 26,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -31,
+          "y": -0.6,
+          "width": 61,
+          "height": 35.5
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -317.05,
+      "y": 181.1,
+      "width": 615.95,
+      "height": 55,
+      "maxw": 615.95,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "提示",
+      "align": "center",
+      "size": 25,
+      "color": 4294967295,
+      "x": -268.95,
+      "y": 183.65,
+      "width": 524.4,
+      "height": 32.1
+    },
+    {
+      "name": "btn_QueDing",
+      "type": "node",
+      "x": -6.55,
+      "y": -186.7,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png",
+          "img_disable": "#ui_common_btn_2c.png",
+          "width": 144,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "确定",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "name": "hint",
+      "type": "label",
+      "text": "请选择您要购买的数量",
+      "align": "center",
+      "size": 26,
+      "color": 1092488703,
+      "x": -224.95,
+      "y": 118.72,
+      "width": 432.95,
+      "height": 33.25
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_main_pbar_bg2.png",
+      "scale9": 1,
+      "x": -82.25,
+      "y": -6.35,
+      "width": 135,
+      "height": 52,
+      "maxw": 135,
+      "maxh": 52
+    },
+    {
+      "name": "num",
+      "type": "label",
+      "text": "999999",
+      "align": "center",
+      "size": 28,
+      "color": 858993663,
+      "x": -73.2,
+      "y": -7.7,
+      "width": 120,
+      "height": 35.5
+    },
+    {
+      "name": "btn_close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 280.9,
+      "y": 181.15,
+      "width": 80,
+      "height": 86
+    }
+  ]
+}

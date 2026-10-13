@@ -1,0 +1,16 @@
+{
+  "group": [
+    "buildings/0075_zhonglvshu_1_g"
+  ],
+  "width": 297,
+  "height": 277,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0075_zhonglvshu_1_g_bg.png",
+      "x": 27.5,
+      "y": 125.5
+    }
+  ]
+}

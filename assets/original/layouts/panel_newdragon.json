@@ -1,0 +1,90 @@
+{
+  "group": {},
+  "children": [
+    {
+      "name": "bg",
+      "type": "node",
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_newdragon_jsbg.png",
+          "x": -0.35,
+          "y": 11.4,
+          "width": 332,
+          "height": 339
+        },
+        {
+          "name": "guangxiao",
+          "type": "sprite",
+          "img": "#ui_newdragon_fg.png",
+          "y": -10.95,
+          "width": 340,
+          "height": 340
+        },
+        {
+          "name": "txt_mingcheng",
+          "type": "label",
+          "text": "六个字的名字",
+          "size": 24,
+          "align": "center",
+          "color": 1109331711,
+          "x": -103.85,
+          "y": -124.1,
+          "width": 207,
+          "height": 31
+        }
+      ]
+    },
+    {
+      "name": "touxiang",
+      "type": "node",
+      "x": 2,
+      "y": -10.95,
+      "width": 85,
+      "height": 85,
+      "children": [
+        {
+          "name": "xiangkuang",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "xiangkuang_g",
+          "type": "sprite",
+          "img": "#ui_book_toux_g.png",
+          "width": 130,
+          "height": 130
+        },
+        {
+          "name": "xiangkuang_s",
+          "type": "sprite",
+          "img": "#ui_book_toux_s.png",
+          "width": 130,
+          "height": 130
+        }
+      ]
+    }
+  ]
+}

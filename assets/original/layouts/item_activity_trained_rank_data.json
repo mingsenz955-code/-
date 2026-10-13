@@ -1,0 +1,132 @@
+{
+  "group": [
+    "ui_activitytrained",
+    "ui_daojukuang"
+  ],
+  "width": 800,
+  "height": 155,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_activitytrained_bg2.png",
+      "width": 800,
+      "height": 155
+    },
+    {
+      "name": "hint_icon",
+      "type": "node",
+      "x": -315,
+      "y": -0.45,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_activitytrained_biaoji2.png",
+      "x": -241.15,
+      "y": -17.1,
+      "width": 37,
+      "height": 40
+    },
+    {
+      "name": "touxiang",
+      "type": "node",
+      "x": -140.05,
+      "y": -1.45,
+      "width": 110,
+      "height": 110,
+      "children": [
+        {
+          "name": "add",
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "width": 110,
+          "height": 110
+        },
+        {
+          "name": "xiangkuang",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "x": -0.85,
+          "y": 2.8,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -37.1,
+          "y": -25.6,
+          "width": 77,
+          "height": 26.5
+        },
+        {
+          "name": "biaoji_pinzhi",
+          "type": "node",
+          "x": -36.35,
+          "y": 38.55,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "level",
+      "type": "label",
+      "text": "LV12",
+      "align": "left",
+      "size": 28,
+      "color": 4278190335,
+      "x": -62.55,
+      "y": 22.45,
+      "width": 100,
+      "height": 35.5
+    },
+    {
+      "name": "player_name",
+      "type": "label",
+      "text": "玩家名称几字",
+      "align": "left",
+      "size": 28,
+      "color": 1092488703,
+      "x": 24.45,
+      "y": 22.45,
+      "width": 319,
+      "height": 35.5
+    },
+    {
+      "name": "side_name",
+      "type": "label",
+      "text": "",
+      "align": "left",
+      "size": 28,
+      "color": 1092488703,
+      "x": -62.55,
+      "y": -21.55,
+      "width": 319,
+      "height": 35.5
+    },
+    {
+      "name": "rank",
+      "type": "label",
+      "text": "",
+      "align": "right",
+      "font": "yellow_70.fnt",
+      "bmp": 1,
+      "x": -390,
+      "y": -18.73,
+      "width": 128,
+      "height": 82.75
+    }
+  ]
+}

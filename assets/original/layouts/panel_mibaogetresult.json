@@ -1,0 +1,111 @@
+{
+  "group": [
+    "ui_longmibao",
+    "ui_common"
+  ],
+  "width": 458,
+  "height": 337,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_longmibao_zi.png",
+      "y": 156,
+      "width": 440,
+      "height": 56
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_longmibao_2020012.png",
+      "x": -1.8,
+      "y": 40,
+      "width": 84,
+      "height": 84
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_longmibao_2020013.png",
+      "x": 156.5,
+      "y": 40,
+      "width": 84,
+      "height": 84
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_longmibao_2020011.png",
+      "x": -160.05,
+      "y": 40,
+      "width": 84,
+      "height": 84
+    },
+    {
+      "name": "txt_hun1",
+      "type": "label",
+      "text": "?",
+      "align": "center",
+      "size": 24,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -235.45,
+      "y": 11.13,
+      "width": 139.95,
+      "height": 30.85
+    },
+    {
+      "name": "txt_hun2",
+      "type": "label",
+      "text": "?",
+      "align": "center",
+      "size": 24,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -77.45,
+      "y": 11.13,
+      "width": 139.95,
+      "height": 30.85
+    },
+    {
+      "name": "txt_hun3",
+      "type": "label",
+      "text": "?",
+      "align": "center",
+      "size": 24,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": 83,
+      "y": 11.13,
+      "width": 139.95,
+      "height": 30.85
+    },
+    {
+      "name": "node_btn_ok",
+      "type": "node",
+      "x": -3.5,
+      "y": -110.95,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "width": 200,
+          "height": 85
+        },
+        {
+          "name": "txt",
+          "type": "label",
+          "text": "确定",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -85,
+          "y": 4.55,
+          "width": 170,
+          "height": 43.1
+        }
+      ]
+    }
+  ]
+}

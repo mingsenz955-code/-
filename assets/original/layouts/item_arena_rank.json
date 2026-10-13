@@ -1,0 +1,92 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_arena_line_jjc2.png",
+      "x": 1.45,
+      "y": -31.55,
+      "width": 401,
+      "height": 4
+    },
+    {
+      "name": "paiming",
+      "type": "label",
+      "text": "999999",
+      "size": 20,
+      "align": "center",
+      "color": 1092488703,
+      "x": -207,
+      "y": 2.25,
+      "width": 87,
+      "height": 26.5
+    },
+    {
+      "name": "xiangkuang",
+      "type": "node",
+      "x": -83.55,
+      "y": 3.5,
+      "width": 60,
+      "height": 60,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_touxiang2.png",
+          "width": 60,
+          "height": 60
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "level",
+          "type": "label",
+          "text": "lv25",
+          "size": 20,
+          "align": "right",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -26,
+          "y": -15.25,
+          "width": 53,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "wanjia",
+      "type": "label",
+      "text": "圣马圣马龙哈",
+      "size": 20,
+      "align": "left",
+      "color": 1092488703,
+      "x": -50,
+      "y": 2.25,
+      "width": 141,
+      "height": 26.5
+    },
+    {
+      "name": "zhandouli",
+      "type": "label",
+      "text": "1234567",
+      "size": 20,
+      "align": "center",
+      "color": 4278190335,
+      "x": 96,
+      "y": 2.25,
+      "width": 111,
+      "height": 26.5
+    },
+    {
+      "name": "icon",
+      "type": "node",
+      "x": -160.65,
+      "y": 2.15,
+      "width": 0,
+      "height": 0
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "group": [
+    "ui_carnival_banner_fanli",
+    "ui_Active"
+  ],
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -350,
+      "y": 1.05,
+      "width": 770,
+      "height": 505,
+      "maxw": 770,
+      "maxh": 505
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_carnival_banner_fanli.png",
+      "x": 32.5,
+      "y": 9.95,
+      "width": 685,
+      "height": 325
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_carnival_title_fanli.png",
+      "x": 44.15,
+      "y": 236.45,
+      "width": 313,
+      "height": 70
+    },
+    {
+      "name": "shuoming",
+      "type": "label",
+      "text": "",
+      "align": "center",
+      "size": 19,
+      "color": 1092488703,
+      "x": -280,
+      "y": -207.68,
+      "width": 624,
+      "height": 25.35
+    },
+    {
+      "name": "tishi_hongse",
+      "type": "label",
+      "text": "",
+      "align": "center",
+      "size": 19,
+      "color": 4278190335,
+      "x": -280,
+      "y": -176.68,
+      "width": 624,
+      "height": 25.35
+    },
+    {
+      "name": "goumai",
+      "type": "node",
+      "x": 248.35,
+      "y": -115.1,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "ckb",
+          "type": "ckb",
+          "img_on": "#ui_common_btn_4.png",
+          "img_off": "#ui_common_btn_3_2.png",
+          "img_disable": "#ui_common_btn_4c.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "立即购买",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -79,
+          "y": 4.4,
+          "width": 156,
+          "height": 46.2
+        }
+      ]
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 395.5,
+      "y": 233.5
+    }
+  ]
+}

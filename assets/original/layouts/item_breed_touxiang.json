@@ -1,0 +1,62 @@
+{
+  "group": [
+    "ui_daojukuang",
+    "ui_breednew"
+  ],
+  "width": 112,
+  "height": 113,
+  "children": [
+    {
+      "name": "diban",
+      "type": "sprite",
+      "img": "#ui_daojukuang_DaoJuKuang1.png",
+      "width": 110,
+      "height": 110
+    },
+    {
+      "name": "weizhi",
+      "type": "sprite",
+      "img": "#ui_breednew_weizhi.png",
+      "x": -1,
+      "y": 3,
+      "width": 74,
+      "height": 74
+    },
+    {
+      "name": "quality",
+      "type": "node",
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "icon",
+      "type": "node",
+      "x": -1.6,
+      "y": 4.1,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "txt_odds",
+      "type": "label",
+      "text": " ",
+      "align": "right",
+      "size": 22,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -27.35,
+      "y": -27.23,
+      "width": 73,
+      "height": 28.75
+    },
+    {
+      "name": "hint",
+      "type": "sprite",
+      "img": "#ui_breednew_by.png",
+      "x": -25.5,
+      "y": 26.65,
+      "width": 63,
+      "height": 63
+    }
+  ]
+}

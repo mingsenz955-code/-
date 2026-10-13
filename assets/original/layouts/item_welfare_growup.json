@@ -1,0 +1,108 @@
+{
+  "group": [
+    "ui_welfare",
+    "ui_welfaregrowup"
+  ],
+  "width": 764,
+  "height": 536,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_welfare_bgyou.png",
+      "scale9": 1,
+      "x": -382,
+      "width": 764,
+      "height": 536,
+      "maxw": 764,
+      "maxh": 536
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "x": -3.65,
+      "y": -99.3,
+      "width": 742,
+      "height": 321
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_welfaregrowup_banner.png",
+      "x": -4,
+      "y": 159,
+      "width": 742,
+      "height": 196
+    },
+    {
+      "name": "btn_chongzhi",
+      "type": "node",
+      "x": -60,
+      "y": 103.7,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png",
+          "img_disable": "#ui_common_btn_2c.png",
+          "width": 144,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "充值",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "name": "btn_goumai",
+      "type": "node",
+      "x": 97,
+      "y": 103.7,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_goal_rbtn3.png",
+          "img_down": "#ui_goal_rbtn4.png",
+          "img_disable": "#ui_common_btn_2c.png",
+          "width": 144,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "购买",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -64.5,
+          "y": 4.93,
+          "width": 130,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_welfaregrowup_huafei.png",
+      "x": 99.5,
+      "y": 139.9,
+      "width": 141,
+      "height": 56
+    }
+  ]
+}

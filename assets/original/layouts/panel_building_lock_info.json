@@ -1,0 +1,169 @@
+{
+  "group": [
+    "ui_bgpuzzle",
+    "ui_buildinglock"
+  ],
+  "width": 635,
+  "height": 443,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -301.7,
+      "y": -26.45,
+      "width": 621,
+      "height": 401,
+      "maxw": 621,
+      "maxh": 401
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -298.9,
+      "y": 166.5,
+      "width": 619,
+      "height": 55,
+      "maxw": 619,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "",
+      "align": "center",
+      "size": 25,
+      "color": 4294967295,
+      "x": -215.9,
+      "y": 167.9,
+      "width": 429.85,
+      "height": 31.7
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_bgpuzzle_bg9.png",
+      "scale9": 1,
+      "x": -48.95,
+      "y": -29.35,
+      "width": 328,
+      "height": 202,
+      "maxw": 328,
+      "maxh": 202
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_haoyoulan2.png",
+      "scale9": 1,
+      "x": -273.6,
+      "y": -1,
+      "width": 567,
+      "height": 286,
+      "maxw": 567,
+      "maxh": 286
+    },
+    {
+      "name": "islandleft",
+      "type": "sprite",
+      "img": "#ui_buildinglock_01.png",
+      "x": -160,
+      "y": 2.5,
+      "width": 210,
+      "height": 265
+    },
+    {
+      "name": "islandtop",
+      "type": "sprite",
+      "img": "#ui_buildinglock_02.png",
+      "x": -160,
+      "y": 2.5,
+      "width": 210,
+      "height": 265
+    },
+    {
+      "name": "islandbottom",
+      "type": "sprite",
+      "img": "#ui_buildinglock_03.png",
+      "x": -160,
+      "y": 2.5,
+      "width": 210,
+      "height": 265
+    },
+    {
+      "name": "islandright",
+      "type": "sprite",
+      "img": "#ui_buildinglock_04.png",
+      "x": -160,
+      "y": 2.5,
+      "width": 210,
+      "height": 265
+    },
+    {
+      "name": "bossdao",
+      "type": "sprite",
+      "img": "#ui_buildinglock_05.png",
+      "x": -160,
+      "y": 2.5,
+      "width": 210,
+      "height": 265
+    },
+    {
+      "name": "hint",
+      "type": "label",
+      "text": "开启等级：",
+      "align": "left",
+      "size": 25,
+      "color": 1092488703,
+      "x": -46,
+      "y": 103.7,
+      "width": 139,
+      "height": 32.1
+    },
+    {
+      "name": "level",
+      "type": "label",
+      "text": "",
+      "align": "left",
+      "size": 25,
+      "color": 1092488703,
+      "x": 93,
+      "y": 103.7,
+      "width": 129,
+      "height": 32.1
+    },
+    {
+      "name": "miaoshu",
+      "type": "label",
+      "text": "",
+      "align": "left",
+      "size": 24,
+      "color": 1092488703,
+      "x": -34,
+      "y": -35.25,
+      "width": 296,
+      "height": 174
+    },
+    {
+      "name": "help",
+      "type": "label",
+      "text": "您可以通过种植作物、完成任务、建造建筑获得升级经验。",
+      "align": "center",
+      "size": 20,
+      "color": 2566914303,
+      "x": -272,
+      "y": -171.3,
+      "width": 562,
+      "height": 32.1
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 292.9,
+      "y": 173,
+      "width": 80,
+      "height": 86
+    }
+  ]
+}

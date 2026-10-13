@@ -1,0 +1,161 @@
+{
+  "group": [
+    "ui_hd56bxdh",
+    "ui_daojukuang",
+    "ui_ertong"
+  ],
+  "width": 624,
+  "height": 148,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_hd56bxdh_changkuang.png",
+      "width": 624,
+      "height": 148
+    },
+    {
+      "name": "node_itemshow",
+      "type": "node",
+      "x": -230,
+      "y": -1,
+      "width": 110,
+      "height": 110,
+      "children": [
+        {
+          "name": "bg",
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "width": 110,
+          "height": 110
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "image",
+          "type": "node",
+          "x": -1,
+          "y": 3,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "eff",
+          "type": "node",
+          "x": -1,
+          "y": 2,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -37,
+          "y": -26,
+          "width": 77,
+          "height": 27
+        }
+      ]
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "?",
+      "align": "center",
+      "size": 26,
+      "color": 2237154047,
+      "x": -179,
+      "y": 39,
+      "width": 231,
+      "height": 33
+    },
+    {
+      "name": "txt_2",
+      "type": "label",
+      "text": "兑换次数:",
+      "align": "right",
+      "size": 20,
+      "color": 2237154047,
+      "x": -181,
+      "y": -33,
+      "width": 103,
+      "height": 26
+    },
+    {
+      "name": "txt_1",
+      "type": "label",
+      "text": "所需积分:",
+      "align": "right",
+      "size": 20,
+      "color": 2237154047,
+      "x": -182,
+      "y": 1,
+      "width": 103,
+      "height": 26
+    },
+    {
+      "name": "txt_costpoint",
+      "type": "label",
+      "text": "?",
+      "align": "left",
+      "size": 20,
+      "color": 4294967295,
+      "x": -73,
+      "y": 0,
+      "width": 129,
+      "height": 26
+    },
+    {
+      "name": "txt_chancenum",
+      "type": "label",
+      "text": "?",
+      "align": "left",
+      "size": 20,
+      "color": 4294967295,
+      "x": -73,
+      "y": -35,
+      "width": 129,
+      "height": 26
+    },
+    {
+      "name": "node_btn_exchange",
+      "type": "node",
+      "x": 196,
+      "y": -4,
+      "width": 133,
+      "height": 56,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_ertong_zdbtn1.png",
+          "img_down": "#ui_ertong_zdbtn2.png",
+          "img_disable": "#ui_ertong_zdbtn5.png",
+          "width": 133,
+          "height": 56
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "兑换",
+          "align": "center",
+          "size": 26,
+          "color": 4294967295,
+          "outlineColor": 11882262,
+          "x": -65,
+          "y": 3,
+          "width": 129,
+          "height": 33
+        }
+      ]
+    }
+  ]
+}

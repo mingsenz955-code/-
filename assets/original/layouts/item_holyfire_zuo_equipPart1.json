@@ -1,0 +1,95 @@
+{
+  "group": [
+    "ui_Godfire"
+  ],
+  "children": [
+    {
+      "name": "diban_zuo",
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 2,
+      "x": -58,
+      "width": 110,
+      "height": 585,
+      "maxw": 110,
+      "maxh": 585,
+      "cix": 50,
+      "ciy": 50,
+      "ciwidth": 167,
+      "ciheight": 143
+    },
+    {
+      "name": "biaoqian",
+      "type": "sprite",
+      "img": "#ui_holyfire_btn_xuanzhong.png",
+      "x": 7,
+      "y": 223.55,
+      "width": 102,
+      "height": 79
+    },
+    {
+      "name": "shuxing_e",
+      "type": "node",
+      "x": -3,
+      "y": 224,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "shuxing_f",
+      "type": "node",
+      "x": -3,
+      "y": 160.1,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "shuxing_w",
+      "type": "node",
+      "x": -3,
+      "y": 96.2,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "shuxing_p",
+      "type": "node",
+      "x": -3,
+      "y": 32.3,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "shuxing_m",
+      "type": "node",
+      "x": -3,
+      "y": -31.6,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "shuxing_i",
+      "type": "node",
+      "x": -3,
+      "y": -95.5,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "shuxing_el",
+      "type": "node",
+      "x": -3,
+      "y": -159.4,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "shuxing_d",
+      "type": "node",
+      "x": -3,
+      "y": -223.3,
+      "width": 0,
+      "height": 0
+    }
+  ]
+}

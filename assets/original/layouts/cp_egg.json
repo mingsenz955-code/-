@@ -1,0 +1,29 @@
+{
+  "group": {},
+  "children": [
+    {
+      "name": "btn",
+      "type": "btn",
+      "img_normal": "#ui_main_ico_Long_DiBan0001.png",
+      "img_down": "#ui_main_ico_Long_DiBan0002.png"
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_main_ico_LongDan.png",
+      "width": 94,
+      "height": 100
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "信息",
+      "size": 21,
+      "align": "center",
+      "color": 4294967269,
+      "x": -42.5,
+      "y": -34.4,
+      "width": 84,
+      "height": 27.6
+    }
+  ]
+}

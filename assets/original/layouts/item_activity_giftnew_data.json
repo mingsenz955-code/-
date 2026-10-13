@@ -1,0 +1,207 @@
+{
+  "group": [
+    "ui_daojukuang"
+  ],
+  "width": 120,
+  "height": 380,
+  "children": [
+    {
+      "name": "gift_en_panel",
+      "type": "sprite",
+      "img": "#ui_festival_can_get_panel.png",
+      "width": 120,
+      "height": 380
+    },
+    {
+      "name": "gift_di_panel",
+      "type": "sprite",
+      "img": "#ui_festival_cant_get_panel.png",
+      "width": 120,
+      "height": 380
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_festival_subtitle_panel.png",
+      "y": 171.55,
+      "width": 114,
+      "height": 30
+    },
+    {
+      "name": "gift_count",
+      "type": "label",
+      "text": "累计FFFF元",
+      "align": "left",
+      "size": 20,
+      "color": 4294967295,
+      "outlineColor": 4267533,
+      "x": -60,
+      "y": 172.5,
+      "width": 120,
+      "height": 26.5
+    },
+    {
+      "name": "gift_di_1",
+      "type": "sprite",
+      "img": "#ui_daojukuang_DaoJuKuang1_small.png",
+      "y": 109.55,
+      "width": 84,
+      "height": 84
+    },
+    {
+      "name": "gift_dikuang_1",
+      "type": "node",
+      "y": 109.55,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "gift_icon_1",
+      "type": "node",
+      "y": 109.55,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "gift_di_2",
+      "type": "sprite",
+      "img": "#ui_daojukuang_DaoJuKuang1_small.png",
+      "y": 16.55,
+      "width": 84,
+      "height": 84
+    },
+    {
+      "name": "gift_dikuang_2",
+      "type": "node",
+      "y": 16.55,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "gift_icon_2",
+      "type": "node",
+      "y": 16.55,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "gift_di_3",
+      "type": "sprite",
+      "img": "#ui_daojukuang_DaoJuKuang1_small.png",
+      "y": -76.45,
+      "width": 84,
+      "height": 84
+    },
+    {
+      "name": "gift_dikuang_3",
+      "type": "node",
+      "y": -76.45,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "gift_icon_3",
+      "type": "node",
+      "y": -76.45,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "gift_icon_1_txt",
+      "type": "label",
+      "text": "9999",
+      "align": "right",
+      "size": 17,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -34,
+      "y": 87.4,
+      "width": 68,
+      "height": 23.1
+    },
+    {
+      "name": "gift_icon_2_txt",
+      "type": "label",
+      "text": "9999",
+      "align": "right",
+      "size": 17,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -34,
+      "y": -5.6,
+      "width": 68,
+      "height": 23.1
+    },
+    {
+      "name": "gift_icon_3_txt",
+      "type": "label",
+      "text": "9999",
+      "align": "right",
+      "size": 17,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -34,
+      "y": -98.6,
+      "width": 68,
+      "height": 23.1
+    },
+    {
+      "name": "gift_get_node",
+      "type": "node",
+      "x": 0.4,
+      "y": -152.32,
+      "width": 100.8,
+      "height": 59.45,
+      "children": [
+        {
+          "name": "btn",
+          "type": "maskBtn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png",
+          "width": 100.8,
+          "height": 59.45
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "领取",
+          "align": "center",
+          "size": 28,
+          "color": 4294967295,
+          "x": -43.9,
+          "y": 0.85,
+          "width": 88,
+          "height": 37.75
+        }
+      ]
+    },
+    {
+      "name": "gift_disable_node",
+      "type": "node",
+      "x": 0.4,
+      "y": -152.32,
+      "width": 100.8,
+      "height": 59.45,
+      "children": [
+        {
+          "name": "btn",
+          "type": "sprite",
+          "img": "#ui_common_btn_2c.png",
+          "width": 100.8,
+          "height": 59.45
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "未解锁",
+          "align": "center",
+          "size": 28,
+          "color": 4294967295,
+          "x": -50.4,
+          "y": 1.98,
+          "width": 100,
+          "height": 35.5
+        }
+      ]
+    }
+  ]
+}

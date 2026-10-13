@@ -1,0 +1,80 @@
+{
+  "group": {},
+  "children": [
+    {
+      "name": "chibang",
+      "type": "node",
+      "x": -24,
+      "y": 2,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "bg_faguang",
+      "type": "sprite",
+      "img": "#ui_rank_t3.png",
+      "x": -22,
+      "y": -51,
+      "width": 360,
+      "height": 180
+    },
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#ui_rank_t2.png",
+      "x": -22,
+      "y": -51,
+      "width": 360,
+      "height": 180
+    },
+    {
+      "name": "biaoji",
+      "type": "sprite",
+      "img": "#ui_rank_pm04.png",
+      "x": -23,
+      "y": 2,
+      "width": 78,
+      "height": 78
+    },
+    {
+      "name": "paimingshuzi",
+      "type": "node",
+      "x": -23,
+      "y": 2,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "touxiang",
+      "type": "node",
+      "x": -120.4,
+      "y": -50.65,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "wanjia",
+      "type": "label",
+      "text": "玩家名称六个",
+      "size": 16,
+      "align": "left",
+      "color": 1142888703,
+      "x": -81.35,
+      "y": -39.63,
+      "width": 149.95,
+      "height": 22.05
+    },
+    {
+      "name": "paiming_miaoshu",
+      "type": "label",
+      "text": "lv25",
+      "size": 16,
+      "align": "left",
+      "color": 1142888703,
+      "x": -81.35,
+      "y": -62.63,
+      "width": 149.95,
+      "height": 22.05
+    }
+  ]
+}

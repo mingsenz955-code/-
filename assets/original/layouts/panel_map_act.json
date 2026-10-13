@@ -1,0 +1,136 @@
+{
+  "group": {},
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768,
+      "alpha": 0
+    },
+    {
+      "name": "act",
+      "type": "node",
+      "y": 40,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "yes",
+      "type": "node",
+      "y": -235.35,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "width": 200,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "确定",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -79.5,
+          "y": 4.93,
+          "width": 160,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "name": "yes_and_explore",
+      "type": "node",
+      "y": -235.35,
+      "width": 550,
+      "height": 85,
+      "children": [
+        {
+          "name": "yes",
+          "type": "node",
+          "x": 175,
+          "width": 200,
+          "height": 85,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btn_3.png",
+              "img_down": "#ui_common_btn_4.png",
+              "img_disable": "#ui_common_btn_4c.png",
+              "width": 200,
+              "height": 85
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "确定",
+              "align": "center",
+              "size": 35,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -79.5,
+              "y": 4.93,
+              "width": 160,
+              "height": 45.15
+            }
+          ]
+        },
+        {
+          "name": "explore",
+          "type": "node",
+          "x": -175,
+          "width": 200,
+          "height": 85,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btn_3.png",
+              "img_down": "#ui_common_btn_4.png",
+              "img_disable": "#ui_common_btn_4c.png",
+              "width": 200,
+              "height": 85
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "宝石探索",
+              "align": "center",
+              "size": 35,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -85.5,
+              "y": 4.93,
+              "width": 170.5,
+              "height": 45.15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "hint",
+      "type": "label",
+      "text": "恭喜获得",
+      "align": "center",
+      "font": "green_42.fnt",
+      "bmp": 1,
+      "x": -344.5,
+      "y": 249.22,
+      "width": 688.95,
+      "height": 57.55
+    }
+  ]
+}

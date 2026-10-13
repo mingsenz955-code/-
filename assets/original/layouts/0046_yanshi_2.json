@@ -1,0 +1,16 @@
+{
+  "group": [
+    "buildings/0046_yanshi_2_g"
+  ],
+  "width": 170,
+  "height": 132,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0046_yanshi_2_g_bg.png",
+      "x": 4,
+      "y": 72
+    }
+  ]
+}

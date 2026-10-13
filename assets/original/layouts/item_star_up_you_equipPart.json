@@ -1,0 +1,128 @@
+{
+  "group": [
+    "ui_PowerUp"
+  ],
+  "children": [
+    {
+      "name": "diban_you",
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -253,
+      "y": -0.03,
+      "width": 506,
+      "height": 591.95,
+      "maxw": 506,
+      "maxh": 591.95
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_starup_line6.png",
+      "x": -2.25,
+      "y": 213.85,
+      "width": 416,
+      "height": 6
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_starup_line6.png",
+      "x": -2.25,
+      "y": -257.2,
+      "width": 416,
+      "height": 6
+    },
+    {
+      "name": "huadong_xiao",
+      "type": "list",
+      "x": -3.85,
+      "y": -20.7,
+      "width": 408,
+      "height": 464
+    },
+    {
+      "name": "btn_zhuangbei",
+      "type": "node",
+      "x": -131.9,
+      "y": 242,
+      "width": 148,
+      "height": 54,
+      "children": [
+        {
+          "name": "btn",
+          "type": "ckb",
+          "img_on": "#ui_starup_bq02.png",
+          "img_off": "#ui_starup_bq01.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "",
+          "size": 24,
+          "align": "center",
+          "color": 1092488703,
+          "x": -64,
+          "y": -0.18,
+          "width": 126,
+          "height": 33.25
+        }
+      ]
+    },
+    {
+      "name": "btn_suipian",
+      "type": "node",
+      "x": 21.1,
+      "y": 242,
+      "width": 148,
+      "height": 54,
+      "children": [
+        {
+          "name": "btn",
+          "type": "ckb",
+          "img_on": "#ui_starup_bq02.png",
+          "img_off": "#ui_starup_bq01.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "",
+          "size": 24,
+          "align": "center",
+          "color": 1092488703,
+          "x": -64,
+          "y": -0.18,
+          "width": 126,
+          "height": 33.25
+        }
+      ]
+    },
+    {
+      "name": "help",
+      "type": "btn",
+      "img_normal": "#ui_common_wenhao1holy_tree.png",
+      "img_down": "#ui_common_wenhao2holy_tree.png",
+      "x": 174.1,
+      "y": 240.65
+    },
+    {
+      "name": "tx_shuoming",
+      "type": "label",
+      "text": "",
+      "size": 22,
+      "align": "left",
+      "color": 1411781375,
+      "x": -174.75,
+      "y": 12.77,
+      "width": 353,
+      "height": 82.25
+    },
+    {
+      "name": "exclamation",
+      "type": "sprite",
+      "img": "#ui_starup_exclamation.png",
+      "x": 83.1,
+      "y": 253.6,
+      "width": 24,
+      "height": 38
+    }
+  ]
+}

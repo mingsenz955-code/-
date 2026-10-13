@@ -1,0 +1,61 @@
+{
+  "group": {},
+  "width": 800,
+  "height": 443,
+  "children": [
+    {
+      "name": "hint",
+      "type": "node",
+      "x": -0.6,
+      "y": 206.42,
+      "width": 795.1,
+      "height": 29.85,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "您的排名：",
+          "align": "left",
+          "size": 23,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -397.55,
+          "width": 126,
+          "height": 29.85
+        },
+        {
+          "name": "rank",
+          "type": "label",
+          "text": " ",
+          "align": "left",
+          "size": 23,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -270.45,
+          "width": 215,
+          "height": 29.85
+        },
+        {
+          "name": "hint",
+          "type": "label",
+          "text": "（达人奖励只能在活动结束后的2天内领取）",
+          "align": "right",
+          "size": 23,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -99.65,
+          "width": 497.2,
+          "height": 29.85
+        }
+      ]
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "x": 0.2,
+      "y": -16.9,
+      "width": 800,
+      "height": 409
+    }
+  ]
+}

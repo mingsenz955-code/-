@@ -1,0 +1,110 @@
+{
+  "group": {},
+  "children": [
+    {
+      "name": "btn",
+      "type": "maskBtn",
+      "img_normal": "#ui_starup_bb1.png",
+      "img_down": "#ui_starup_bb2.png",
+      "x": 46.15,
+      "width": 239,
+      "height": 95
+    },
+    {
+      "name": "tx_name",
+      "type": "label",
+      "text": "XXXX龙",
+      "size": 20,
+      "align": "justify",
+      "color": 1092488703,
+      "x": -67.15,
+      "y": -13.58,
+      "width": 94.45,
+      "height": 29.85
+    },
+    {
+      "name": "tx_type",
+      "type": "label",
+      "text": "撒上大声说道",
+      "size": 18,
+      "align": "left",
+      "color": 1092488703,
+      "x": -70,
+      "y": 25.23,
+      "width": 114,
+      "height": 24.25
+    },
+    {
+      "name": "tx_power",
+      "type": "label",
+      "text": "战力：999999",
+      "size": 18,
+      "align": "right",
+      "color": 1092488703,
+      "x": -22,
+      "y": 25.23,
+      "width": 183,
+      "height": 24.25
+    },
+    {
+      "name": "img_type1",
+      "type": "node",
+      "x": 140,
+      "y": -20,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "img_type2",
+      "type": "node",
+      "x": 100,
+      "y": -20,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "img_type3",
+      "type": "node",
+      "x": 60,
+      "y": -20,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "quality",
+      "type": "node",
+      "x": -123.6,
+      "y": -3.25,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "icon",
+      "type": "node",
+      "x": -123.6,
+      "y": -3.25,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_main_ico_LongDengJi.png",
+      "x": -97.4,
+      "y": 27.3,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "name": "tx_lv",
+      "type": "label",
+      "text": "99",
+      "size": 23,
+      "align": "center",
+      "color": 255,
+      "x": -111.3,
+      "y": 26.43,
+      "width": 29.8,
+      "height": 29.85
+    }
+  ]
+}

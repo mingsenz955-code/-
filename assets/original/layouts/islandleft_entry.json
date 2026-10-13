@@ -1,0 +1,16 @@
+{
+  "group": {},
+  "width": 370,
+  "height": 495,
+  "children": [
+    {
+      "name": "eff",
+      "type": "eff",
+      "eff": "shengshu_eff",
+      "x": 0.6,
+      "y": -0.35,
+      "width": 369.8,
+      "height": 495.35
+    }
+  ]
+}

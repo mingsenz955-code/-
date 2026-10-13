@@ -1,0 +1,17 @@
+{
+  "group": [
+    "ui_activitybutton"
+  ],
+  "width": 90,
+  "height": 90,
+  "children": [
+    {
+      "name": "btn",
+      "type": "btn",
+      "img_normal": "#ui_activitybutton_huodong_dalunpan1.png",
+      "img_down": "#ui_activitybutton_huodong_dalunpan2.png",
+      "width": 90,
+      "height": 90
+    }
+  ]
+}

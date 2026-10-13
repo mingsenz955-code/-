@@ -1,0 +1,96 @@
+{
+  "group": [
+    "ui_gonghuifuben",
+    "ui_ranknew"
+  ],
+  "width": 420,
+  "height": 67,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_gonghuifuben_line1.png",
+      "x": 1,
+      "y": -31.5,
+      "width": 401,
+      "height": 3
+    },
+    {
+      "name": "node_head",
+      "type": "node",
+      "x": -97,
+      "y": 3,
+      "width": 62,
+      "height": 62,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_ranknew_touxiang1.png",
+          "width": 62,
+          "height": 62
+        },
+        {
+          "name": "default",
+          "type": "sprite",
+          "img": "#ui_ranknew_meiren.png",
+          "width": 50,
+          "height": 50
+        },
+        {
+          "name": "touxiang",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "level",
+          "type": "label",
+          "text": "lv25",
+          "align": "right",
+          "size": 18,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -27,
+          "y": -15.48,
+          "width": 53,
+          "height": 24.25
+        }
+      ]
+    },
+    {
+      "name": "txt_index",
+      "type": "label",
+      "text": "--",
+      "align": "center",
+      "size": 20,
+      "color": 1092488703,
+      "x": -210,
+      "y": 1.03,
+      "width": 74,
+      "height": 26.75
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "--",
+      "align": "center",
+      "size": 20,
+      "color": 1092488703,
+      "x": -63.85,
+      "y": 1.03,
+      "width": 173.8,
+      "height": 26.75
+    },
+    {
+      "name": "txt_hurt_num",
+      "type": "label",
+      "text": "--",
+      "align": "center",
+      "size": 20,
+      "color": 1092488703,
+      "x": 116.95,
+      "y": 1.03,
+      "width": 93,
+      "height": 26.75
+    }
+  ]
+}

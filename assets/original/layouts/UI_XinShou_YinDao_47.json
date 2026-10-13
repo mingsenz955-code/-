@@ -1,0 +1,90 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#UI_RW_L_icon_5.png",
+      "x": -310.45,
+      "y": 20,
+      "width": 205,
+      "height": 244
+    },
+    {
+      "type": "sprite",
+      "img": "#hint_bg.png",
+      "scale9": 1,
+      "x": -205,
+      "y": 17.5,
+      "width": 474,
+      "height": 167,
+      "maxw": 474,
+      "maxh": 167
+    },
+    {
+      "type": "sprite",
+      "img": "#hint_bg_t.png",
+      "x": -220.5,
+      "y": 38,
+      "width": 49,
+      "height": 36
+    },
+    {
+      "name": "biaoti",
+      "type": "label",
+      "text": "说明标题",
+      "size": 30,
+      "align": "center",
+      "color": 3429236991,
+      "x": -188.3,
+      "y": 71.8,
+      "width": 438,
+      "height": 34
+    },
+    {
+      "name": "miaoshu",
+      "type": "label",
+      "text": "恭喜你，你已经成为一名合格的驯龙师，接下来你可以根据左侧的任务指引，继续你的驯龙之旅吧！",
+      "size": 25,
+      "align": "center",
+      "color": 1714618623,
+      "x": -191.05,
+      "y": -8.7,
+      "width": 445,
+      "height": 99
+    },
+    {
+      "name": "anniu",
+      "type": "node",
+      "x": 28.2,
+      "y": -126.2,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "FINISH",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -79,
+          "y": 4.4,
+          "width": 156,
+          "height": 46.2
+        }
+      ]
+    }
+  ]
+}

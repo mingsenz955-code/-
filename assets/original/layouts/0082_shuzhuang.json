@@ -1,0 +1,16 @@
+{
+  "group": [
+    "buildings/0082_shuzhuang_g"
+  ],
+  "width": 66,
+  "height": 49,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0082_shuzhuang_g_bg.png",
+      "x": 3,
+      "y": 31.5
+    }
+  ]
+}

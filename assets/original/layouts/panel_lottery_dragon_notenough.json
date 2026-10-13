@@ -1,0 +1,176 @@
+{
+  "group": [
+    "ui_bgpuzzle",
+    "ui_lotterydragon"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768,
+      "alpha": 0
+    },
+    {
+      "name": "diban",
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -324.5,
+      "y": -19.5,
+      "width": 663,
+      "height": 414,
+      "maxw": 663,
+      "maxh": 414
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -327.9,
+      "y": 176.6,
+      "width": 665.05,
+      "height": 55,
+      "maxw": 665.05,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "提示",
+      "align": "center",
+      "size": 25,
+      "color": 4294967295,
+      "x": -274.9,
+      "y": 177.8,
+      "width": 541,
+      "height": 32.1
+    },
+    {
+      "name": "txt_miaoshu",
+      "type": "label",
+      "text": "您的抽奖卡不足10个，本次扭蛋将消耗您",
+      "align": "center",
+      "size": 30,
+      "color": 1092488703,
+      "x": -302.95,
+      "y": 77.5,
+      "width": 623,
+      "height": 79
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_bgpuzzle_bg9.png",
+      "scale9": 1,
+      "grid": {
+        "x": 33,
+        "y": 33,
+        "width": 42,
+        "height": 35
+      },
+      "x": -251.95,
+      "y": -51.85,
+      "width": 515,
+      "height": 125,
+      "maxw": 515,
+      "maxh": 125
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_lotterydragon_mojing.png",
+      "x": -65,
+      "y": -47,
+      "width": 36,
+      "height": 48
+    },
+    {
+      "name": "mojing_num",
+      "type": "label",
+      "text": " ",
+      "align": "left",
+      "size": 30,
+      "color": 4278255615,
+      "x": -23,
+      "y": -51.92,
+      "width": 125,
+      "height": 37.75
+    },
+    {
+      "name": "btn_QueDing",
+      "type": "node",
+      "x": -154.6,
+      "y": -214.35,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "width": 200,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "确定抽奖",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -79.5,
+          "y": 4.93,
+          "width": 160,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "name": "btn_quxiao",
+      "type": "node",
+      "x": 169,
+      "y": -214.35,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "width": 200,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "取消",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -79.5,
+          "y": 4.93,
+          "width": 160,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "name": "btn_close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 310.1,
+      "y": 177.8,
+      "width": 80,
+      "height": 86
+    }
+  ]
+}

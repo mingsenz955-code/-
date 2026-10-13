@@ -1,0 +1,205 @@
+{
+  "group": [
+    "ui_RandDragon",
+    "ui_dragonrand_bg1"
+  ],
+  "children": [
+    {
+      "name": "bg",
+      "type": "btn",
+      "img_normal": "#ui_dragonrand_bg1.png",
+      "img_down": "#ui_dragonrand_bg1.png"
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_d.png",
+      "x": -1.15,
+      "y": 341,
+      "width": 573,
+      "height": 83
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "占卜",
+      "size": 28,
+      "align": "center",
+      "color": 4294967295,
+      "x": -216.9,
+      "y": 332.25,
+      "width": 431.85,
+      "height": 35.5
+    },
+    {
+      "name": "pro",
+      "type": "node",
+      "x": 239,
+      "y": -1.48,
+      "width": 450,
+      "height": 606.75,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_dragonrand_bg3.png",
+          "y": 3.38,
+          "width": 450,
+          "height": 600
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_dragonrand_taizi.png",
+          "x": -0.05,
+          "y": -114.82,
+          "width": 150,
+          "height": 80
+        },
+        {
+          "name": "eff",
+          "type": "node",
+          "x": -1,
+          "y": -14.63,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -1.05,
+          "y": -97.63,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "btn",
+          "type": "node",
+          "x": -4.55,
+          "y": -260.88,
+          "width": 200,
+          "height": 85,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_dragonrand_btn01.png",
+              "img_down": "#ui_dragonrand_btn02.png"
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "占卜",
+              "size": 35,
+              "align": "center",
+              "color": 4294967295,
+              "x": -79,
+              "y": 4.4,
+              "width": 156,
+              "height": 46.2
+            }
+          ]
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "可获得传奇龙",
+          "size": 26,
+          "align": "center",
+          "color": 1411781375,
+          "x": -134.9,
+          "y": 248.1,
+          "width": 269.9,
+          "height": 33.25
+        }
+      ]
+    },
+    {
+      "name": "normal",
+      "type": "node",
+      "x": -245,
+      "y": -1.48,
+      "width": 450,
+      "height": 606.75,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_dragonrand_bg3.png",
+          "y": 3.38,
+          "width": 450,
+          "height": 600
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_dragonrand_taizi.png",
+          "x": -0.05,
+          "y": -114.82,
+          "width": 150,
+          "height": 80
+        },
+        {
+          "name": "eff",
+          "type": "node",
+          "x": -1,
+          "y": -14.63,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -1.05,
+          "y": -97.63,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "btn",
+          "type": "node",
+          "x": -4.55,
+          "y": -260.88,
+          "width": 200,
+          "height": 85,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_dragonrand_btn01.png",
+              "img_down": "#ui_dragonrand_btn02.png"
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "占卜",
+              "size": 35,
+              "align": "center",
+              "color": 4294967295,
+              "x": -79,
+              "y": 4.4,
+              "width": 156,
+              "height": 46.2
+            }
+          ]
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "可获得传奇龙",
+          "size": 26,
+          "align": "center",
+          "color": 1411781375,
+          "x": -134.9,
+          "y": 248.1,
+          "width": 269.9,
+          "height": 33.25
+        }
+      ]
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_GuanBi1.png",
+      "img_down": "#ui_common_btn_GuanBi2.png",
+      "x": 468.1,
+      "y": 338.9,
+      "right": 43.9
+    }
+  ]
+}

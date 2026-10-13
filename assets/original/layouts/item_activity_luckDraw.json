@@ -1,0 +1,646 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -375,
+      "y": -10,
+      "width": 750,
+      "height": 540,
+      "maxw": 750,
+      "maxh": 540
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_kgez.png",
+      "scale9": 1,
+      "x": -45,
+      "y": -10,
+      "width": 400,
+      "height": 500,
+      "maxw": 400,
+      "maxh": 500
+    },
+    {
+      "name": "des_panel",
+      "type": "node",
+      "x": -498,
+      "y": -165,
+      "width": 300,
+      "height": 400,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_DiBan2.png",
+          "scale9": 1,
+          "x": 150,
+          "y": 190,
+          "width": 290,
+          "height": 390,
+          "maxw": 290,
+          "maxh": 390
+        },
+        {
+          "type": "label",
+          "size": 17,
+          "text": "活动时间：",
+          "align": "left",
+          "x": 160,
+          "y": 350,
+          "width": 270,
+          "height": 20,
+          "color": 255
+        },
+        {
+          "name": "active_time",
+          "type": "label",
+          "size": 20,
+          "text": "",
+          "align": "left",
+          "x": 180,
+          "y": 330,
+          "width": 270,
+          "height": 22,
+          "color": 4278190335
+        },
+        {
+          "type": "label",
+          "size": 17,
+          "text": "活动说明：",
+          "align": "left",
+          "x": 160,
+          "y": 300,
+          "width": 270,
+          "height": 20,
+          "color": 255
+        },
+        {
+          "name": "exchange_node",
+          "type": "node",
+          "x": 227,
+          "y": 5,
+          "children": [
+            {
+              "name": "exchange_btn",
+              "type": "maskBtn",
+              "img_normal": "#ui_common_btn_1.png",
+              "img_down": "#ui_common_btn_2.png",
+              "width": 136.79999999999998,
+              "height": 68.0
+            },
+            {
+              "type": "label",
+              "size": 21,
+              "text": "立即兑换",
+              "align": "center",
+              "x": -75.0,
+              "width": 150,
+              "height": 30,
+              "color": 255
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_invite_input_panel.png",
+              "x": 143,
+              "y": 5,
+              "width": 130,
+              "height": 40,
+              "maxw": 130,
+              "maxh": 40
+            },
+            {
+              "name": "exchange_label",
+              "type": "label",
+              "size": 17,
+              "text": "0",
+              "align": "left",
+              "x": 83,
+              "y": 3,
+              "width": 150,
+              "height": 40,
+              "color": 255
+            },
+            {
+              "type": "sprite",
+              "img": "#shangcheng_huobi_k2.png",
+              "x": 193,
+              "y": 5,
+              "width": 60,
+              "height": 60
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "gem_panel",
+      "type": "node",
+      "x": -498,
+      "y": -275,
+      "width": 300,
+      "height": 100,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_tip1.png",
+          "scale9": 1,
+          "x": 150,
+          "y": 50,
+          "width": 290,
+          "height": 70,
+          "maxw": 290,
+          "maxh": 70
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_d3.png",
+          "scale9": 1,
+          "x": 160,
+          "y": 48,
+          "width": 270,
+          "height": 40,
+          "maxw": 270,
+          "maxh": 40
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_08.png",
+          "x": 420,
+          "y": 50,
+          "width": 60,
+          "height": 60
+        },
+        {
+          "type": "label",
+          "text": "拥有魔晶:",
+          "size": 20,
+          "align": "center",
+          "color": 4294967295,
+          "x": 163,
+          "y": 47,
+          "width": 100,
+          "height": 27
+        },
+        {
+          "name": "gem_label",
+          "type": "label",
+          "text": "123654",
+          "size": 20,
+          "align": "left",
+          "color": 4294967295,
+          "x": 270,
+          "y": 47,
+          "width": 150,
+          "height": 27
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_festival_draw_title.png",
+      "x": 0,
+      "y": 256,
+      "width": 380,
+      "height": 45
+    },
+    {
+      "name": "pool_panel",
+      "type": "node",
+      "x": -36,
+      "y": -155,
+      "width": 380,
+      "height": 380,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_haoyoulan2.png",
+          "scale9": 1,
+          "x": 0,
+          "y": 190,
+          "width": 380,
+          "height": 380,
+          "maxw": 380,
+          "maxh": 380
+        },
+        {
+          "name": "item_draw_1",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": 52,
+          "y": 326,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "item_draw_1_num",
+          "type": "label",
+          "size": 17,
+          "text": "9999",
+          "align": "right",
+          "x": 20,
+          "y": 296,
+          "width": 68,
+          "height": 68,
+          "color": 4294967295
+        },
+        {
+          "name": "item_draw_2",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": 144,
+          "y": 326,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "item_draw_2_num",
+          "type": "label",
+          "size": 17,
+          "text": "9999",
+          "align": "right",
+          "x": 112,
+          "y": 296,
+          "width": 68,
+          "height": 68,
+          "color": 4294967295
+        },
+        {
+          "name": "item_draw_3",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": 235,
+          "y": 326,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "item_draw_3_num",
+          "type": "label",
+          "size": 17,
+          "text": "9999",
+          "align": "right",
+          "x": 203,
+          "y": 296,
+          "width": 68,
+          "height": 68,
+          "color": 4294967295
+        },
+        {
+          "name": "item_draw_4",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": 326,
+          "y": 326,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "item_draw_4_num",
+          "type": "label",
+          "size": 17,
+          "text": "9999",
+          "align": "right",
+          "x": 294,
+          "y": 296,
+          "width": 68,
+          "height": 68,
+          "color": 4294967295
+        },
+        {
+          "name": "item_draw_5",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": 326,
+          "y": 235,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "item_draw_5_num",
+          "type": "label",
+          "size": 17,
+          "text": "9999",
+          "align": "right",
+          "x": 294,
+          "y": 205,
+          "width": 68,
+          "height": 68,
+          "color": 4294967295
+        },
+        {
+          "name": "item_draw_6",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": 326,
+          "y": 144,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "item_draw_6_num",
+          "type": "label",
+          "size": 17,
+          "text": "9999",
+          "align": "right",
+          "x": 294,
+          "y": 114,
+          "width": 68,
+          "height": 68,
+          "color": 4294967295
+        },
+        {
+          "name": "item_draw_7",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": 326,
+          "y": 52,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "item_draw_7_num",
+          "type": "label",
+          "size": 17,
+          "text": "9999",
+          "align": "right",
+          "x": 294,
+          "y": 22,
+          "width": 68,
+          "height": 68,
+          "color": 4294967295
+        },
+        {
+          "name": "item_draw_8",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": 235,
+          "y": 52,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "item_draw_8_num",
+          "type": "label",
+          "size": 17,
+          "text": "9999",
+          "align": "right",
+          "x": 203,
+          "y": 22,
+          "width": 68,
+          "height": 68,
+          "color": 4294967295
+        },
+        {
+          "name": "item_draw_9",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": 144,
+          "y": 52,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "item_draw_9_num",
+          "type": "label",
+          "size": 17,
+          "text": "9999",
+          "align": "right",
+          "x": 112,
+          "y": 22,
+          "width": 68,
+          "height": 68,
+          "color": 4294967295
+        },
+        {
+          "name": "item_draw_10",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": 52,
+          "y": 52,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "item_draw_10_num",
+          "type": "label",
+          "size": 17,
+          "text": "9999",
+          "align": "right",
+          "x": 20,
+          "y": 22,
+          "width": 68,
+          "height": 68,
+          "color": 4294967295
+        },
+        {
+          "name": "item_draw_11",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": 52,
+          "y": 144,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "item_draw_11_num",
+          "type": "label",
+          "size": 17,
+          "text": "9999",
+          "align": "right",
+          "x": 20,
+          "y": 114,
+          "width": 68,
+          "height": 68,
+          "color": 4294967295
+        },
+        {
+          "name": "item_draw_12",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": 52,
+          "y": 235,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "item_draw_12_num",
+          "type": "label",
+          "size": 17,
+          "text": "9999",
+          "align": "right",
+          "x": 20,
+          "y": 205,
+          "width": 68,
+          "height": 68,
+          "color": 4294967295
+        },
+        {
+          "name": "dragon_bg",
+          "type": "node",
+          "width": 170,
+          "height": 170,
+          "children": [
+            {
+              "name": "node_clickbg",
+              "type": "node",
+              "width": 170,
+              "height": 170,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_common_kgez.png",
+                  "scale9": 1,
+                  "x": 105,
+                  "y": 190,
+                  "width": 170,
+                  "height": 170,
+                  "maxw": 170,
+                  "maxh": 170
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "btn_panel",
+      "type": "node",
+      "x": -36,
+      "y": -265,
+      "width": 380,
+      "height": 95,
+      "children": [
+        {
+          "name": "draw_1",
+          "type": "maskBtn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png",
+          "x": 57,
+          "y": 53,
+          "width": 136.79999999999998,
+          "height": 68.0
+        },
+        {
+          "name": "draw_2",
+          "type": "maskBtn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png",
+          "x": 190,
+          "y": 53,
+          "width": 136.79999999999998,
+          "height": 68.0
+        },
+        {
+          "name": "draw_3",
+          "type": "maskBtn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png",
+          "x": 323,
+          "y": 53,
+          "width": 136.79999999999998,
+          "height": 68.0
+        },
+        {
+          "name": "draw_1_label",
+          "type": "label",
+          "text": "免费抽取",
+          "size": 23,
+          "align": "center",
+          "color": 255,
+          "x": -3,
+          "y": 54,
+          "width": 120,
+          "height": 27
+        },
+        {
+          "name": "draw_2_label",
+          "type": "label",
+          "text": "抽取10次",
+          "size": 23,
+          "align": "center",
+          "color": 255,
+          "x": 130,
+          "y": 54,
+          "width": 120,
+          "height": 27
+        },
+        {
+          "name": "draw_3_label",
+          "type": "label",
+          "text": "抽取50次",
+          "size": 23,
+          "align": "center",
+          "color": 255,
+          "x": 263,
+          "y": 54,
+          "width": 120,
+          "height": 27
+        },
+        {
+          "name": "draw_1_tipLabel",
+          "type": "label",
+          "text": "花费xx魔晶",
+          "size": 19,
+          "align": "center",
+          "color": 4294967295,
+          "x": -13,
+          "y": 16,
+          "width": 140,
+          "height": 27
+        },
+        {
+          "name": "draw_2_tipLabel",
+          "type": "label",
+          "text": "花费xx魔晶",
+          "size": 19,
+          "align": "center",
+          "color": 4294967295,
+          "x": 120,
+          "y": 16,
+          "width": 140,
+          "height": 27
+        },
+        {
+          "name": "draw_3_tipLabel",
+          "type": "label",
+          "text": "花费xx魔晶",
+          "size": 19,
+          "align": "center",
+          "color": 4294967295,
+          "x": 253,
+          "y": 16,
+          "width": 140,
+          "height": 27
+        },
+        {
+          "name": "tip_label",
+          "type": "label",
+          "text": "",
+          "size": 16,
+          "align": "center",
+          "color": 4106318591,
+          "outlineColor": 0,
+          "x": 265,
+          "y": 85,
+          "width": 120,
+          "height": 80
+        }
+      ]
+    },
+    {
+      "name": "txt1",
+      "type": "label",
+      "text": "应用内抽奖活动与苹果公司无关，最终解释权归华清飞扬网络股份有限公司所有",
+      "align": "center",
+      "size": 12,
+      "color": 255,
+      "x": -327,
+      "y": -149,
+      "width": 226,
+      "height": 31
+    }
+  ]
+}

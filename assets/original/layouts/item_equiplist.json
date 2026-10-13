@@ -1,0 +1,135 @@
+{
+  "group": [
+    "ui_equip"
+  ],
+  "width": 1024,
+  "height": 628,
+  "children": [
+    {
+      "name": "huadong",
+      "type": "list",
+      "y": 15,
+      "width": 1024,
+      "height": 461,
+      "left": 0,
+      "right": 0
+    },
+    {
+      "name": "btn_equip",
+      "type": "node",
+      "x": -135,
+      "y": 282,
+      "width": 233,
+      "height": 64,
+      "children": [
+        {
+          "name": "btn",
+          "type": "ckb",
+          "img_on": "#ui_equip_btn_on.png",
+          "img_off": "#ui_equip_btn_off.png"
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "装备",
+          "align": "center",
+          "size": 30,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -116,
+          "y": -2,
+          "width": 233,
+          "height": 42
+        }
+      ]
+    },
+    {
+      "name": "btn_patch",
+      "type": "node",
+      "x": 125,
+      "y": 282,
+      "width": 233,
+      "height": 64,
+      "children": [
+        {
+          "name": "btn",
+          "type": "ckb",
+          "img_on": "#ui_equip_btn_on.png",
+          "img_off": "#ui_equip_btn_off.png"
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "碎片",
+          "align": "center",
+          "size": 30,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -116,
+          "y": -2,
+          "width": 233,
+          "height": 42
+        }
+      ]
+    },
+    {
+      "name": "lexing",
+      "type": "node",
+      "x": -15,
+      "y": -264,
+      "width": 590,
+      "height": 100,
+      "children": [
+        {
+          "name": "all",
+          "type": "ckb",
+          "img_on": "#ui_equip_c0010.png",
+          "img_off": "#ui_equip_a0010.png",
+          "x": -259
+        },
+        {
+          "name": "longzhao",
+          "type": "ckb",
+          "img_on": "#ui_equip_c0011.png",
+          "img_off": "#ui_equip_a0011.png",
+          "x": -172
+        },
+        {
+          "name": "longgu",
+          "type": "ckb",
+          "img_on": "#ui_equip_c0012.png",
+          "img_off": "#ui_equip_a0012.png",
+          "x": 2
+        },
+        {
+          "name": "longlin",
+          "type": "ckb",
+          "img_on": "#ui_equip_c0013.png",
+          "img_off": "#ui_equip_a0013.png",
+          "x": -85
+        },
+        {
+          "name": "longjiao",
+          "type": "ckb",
+          "img_on": "#ui_equip_c0014.png",
+          "img_off": "#ui_equip_a0014.png",
+          "x": 89
+        },
+        {
+          "name": "huangguan",
+          "type": "ckb",
+          "img_on": "#ui_equip_guan1.png",
+          "img_off": "#ui_equip_guan2.png",
+          "x": 173
+        },
+        {
+          "name": "longyi",
+          "type": "ckb",
+          "img_on": "#ui_equip_yi1.png",
+          "img_off": "#ui_equip_yi2.png",
+          "x": 259
+        }
+      ]
+    }
+  ]
+}

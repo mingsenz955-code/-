@@ -1,0 +1,60 @@
+{
+  "group": [
+    "ui_Start",
+    "ui_login"
+  ],
+  "width": 2045,
+  "height": 1152,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#ui_start_start.png",
+      "width": 2045,
+      "height": 1152
+    },
+    {
+      "name": "start",
+      "type": "node",
+      "x": 0.35,
+      "y": -311.35,
+      "width": 244,
+      "height": 67,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_login_btn_fuwuqi1.png",
+          "img_down": "#ui_login_btn_fuwuqi4.png",
+          "width": 244,
+          "height": 67
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "登录游戏",
+          "align": "center",
+          "size": 28,
+          "color": 4294967295,
+          "outlineColor": 4135427,
+          "x": -118,
+          "y": 0.1,
+          "width": 235,
+          "height": 35.5
+        }
+      ]
+    },
+    {
+      "name": "ver",
+      "type": "label",
+      "text": "v201606071738",
+      "align": "left",
+      "size": 18,
+      "color": 1697913343,
+      "width": 151,
+      "height": 24,
+      "left": 0,
+      "bottom": 0
+    }
+  ]
+}

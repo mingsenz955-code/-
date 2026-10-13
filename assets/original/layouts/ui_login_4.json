@@ -1,0 +1,29 @@
+{
+  "group": [
+    "ui_Start",
+    "ui_login"
+  ],
+  "width": 2045,
+  "height": 1152,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#ui_start_start.png",
+      "width": 2045,
+      "height": 1152
+    },
+    {
+      "name": "ver",
+      "type": "label",
+      "text": "",
+      "align": "left",
+      "size": 18,
+      "color": 1697913343,
+      "width": 151,
+      "height": 24,
+      "left": 0,
+      "bottom": 0
+    }
+  ]
+}

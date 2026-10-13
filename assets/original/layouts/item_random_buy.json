@@ -1,0 +1,185 @@
+{
+  "group": [
+    "ui_randompackage",
+    "ui_random",
+    "ui_daojukuang"
+  ],
+  "width": 928,
+  "height": 508,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_randompackage_bg.png",
+      "width": 928,
+      "height": 508
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_random_diban.png",
+      "scale9": 1,
+      "x": -208,
+      "y": 36,
+      "width": 425,
+      "height": 229,
+      "maxw": 425,
+      "maxh": 229
+    },
+    {
+      "name": "miaoshu",
+      "type": "label",
+      "text": "剩余时间：",
+      "align": "right",
+      "size": 26,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -133,
+      "y": 191.67,
+      "width": 154.95,
+      "height": 37.35
+    },
+    {
+      "name": "time",
+      "type": "label",
+      "text": " ",
+      "align": "left",
+      "size": 26,
+      "color": 16724991,
+      "outlineColor": 0,
+      "x": 21,
+      "y": 191.67,
+      "width": 154.95,
+      "height": 37.35
+    },
+    {
+      "name": "item_name",
+      "type": "label",
+      "text": "道具名称",
+      "align": "center",
+      "size": 26,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -125,
+      "y": 103.67,
+      "width": 261,
+      "height": 37.35
+    },
+    {
+      "name": "item",
+      "type": "node",
+      "x": 5.3,
+      "y": 27.65,
+      "width": 110,
+      "height": 110,
+      "children": [
+        {
+          "name": "add",
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "width": 110,
+          "height": 110
+        },
+        {
+          "name": "xiangkuang",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "x": -0.85,
+          "y": 2.8,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -37.1,
+          "y": -25.6,
+          "width": 77,
+          "height": 26.5
+        },
+        {
+          "name": "biaoji_pinzhi",
+          "type": "node",
+          "x": -36.35,
+          "y": 38.55,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "hint",
+      "type": "label",
+      "text": " ",
+      "align": "center",
+      "size": 26,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -445,
+      "y": -119.33,
+      "width": 893,
+      "height": 37.35
+    },
+    {
+      "name": "buy",
+      "type": "node",
+      "x": 6.35,
+      "y": -188.35,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "width": 200,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "购买",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -79.5,
+          "y": 4.93,
+          "width": 160,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_random_mojing.png",
+      "x": -20.05,
+      "y": -43.95,
+      "width": 31,
+      "height": 42
+    },
+    {
+      "name": "price",
+      "type": "label",
+      "text": "0000",
+      "align": "left",
+      "size": 26,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -1,
+      "y": -47.27,
+      "width": 91,
+      "height": 33.25
+    }
+  ]
+}

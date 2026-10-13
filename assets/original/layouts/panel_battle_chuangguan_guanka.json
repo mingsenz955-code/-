@@ -1,0 +1,164 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -268.25,
+      "y": 49.48,
+      "width": 359,
+      "height": 512.05,
+      "maxw": 359,
+      "maxh": 512.05
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -267.75,
+      "y": 273,
+      "width": 357.3,
+      "height": 55,
+      "maxw": 357.3,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "兑换",
+      "size": 25,
+      "align": "center",
+      "color": 4294967295,
+      "x": -242.95,
+      "y": 274.4,
+      "width": 313.95,
+      "height": 32.1
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_battle_duihbg.png",
+      "x": -88.65,
+      "y": 35.65,
+      "width": 271,
+      "height": 358
+    },
+    {
+      "name": "dragon",
+      "type": "node",
+      "x": -89,
+      "y": -37,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "duihuan",
+      "type": "node",
+      "x": -89,
+      "y": -187.3,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png",
+          "img_disable": "#ui_common_btn_2c.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "兑换",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_d3.png",
+      "scale9": 1,
+      "x": -196.85,
+      "y": -99,
+      "width": 220,
+      "height": 40,
+      "maxw": 220,
+      "maxh": 40
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_battle_hsldsp.png",
+      "x": -163.5,
+      "y": -94.8,
+      "width": 60,
+      "height": 60
+    },
+    {
+      "name": "tx_have_num",
+      "type": "label",
+      "text": "999",
+      "size": 21,
+      "align": "right",
+      "color": 4294967295,
+      "x": -136.6,
+      "y": -98.8,
+      "width": 39,
+      "height": 27.6
+    },
+    {
+      "name": "tx_have_num_red",
+      "type": "label",
+      "text": "999",
+      "size": 21,
+      "align": "right",
+      "color": 4278190335,
+      "x": -136.6,
+      "y": -98.8,
+      "width": 39,
+      "height": 27.6
+    },
+    {
+      "name": "tx_need_num",
+      "type": "label",
+      "text": "_999",
+      "size": 21,
+      "align": "left",
+      "color": 4294967295,
+      "x": -96.55,
+      "y": -98.8,
+      "width": 96,
+      "height": 27.6
+    },
+    {
+      "name": "btn_GuanBiXiao",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 81.25,
+      "y": 274.5
+    },
+    {
+      "type": "label",
+      "text": "黃狮龙",
+      "size": 30,
+      "align": "center",
+      "color": 1092488703,
+      "x": -205.95,
+      "y": 218.63,
+      "width": 231.95,
+      "height": 37.75
+    }
+  ]
+}

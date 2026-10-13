@@ -1,0 +1,85 @@
+{
+  "group": [
+    "ui_huodongindex"
+  ],
+  "width": 960,
+  "height": 602,
+  "children": [
+    {
+      "name": "huadong",
+      "type": "list",
+      "x": -10,
+      "y": 11,
+      "width": 772,
+      "height": 517
+    },
+    {
+      "name": "node_container",
+      "type": "node",
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_3_2.png",
+      "img_down": "#ui_common_btn_4.png",
+      "img_disable": "#ui_common_btn_4c.png",
+      "x": 4,
+      "y": -290,
+      "width": 200,
+      "height": 85
+    },
+    {
+      "type": "label",
+      "text": "朕知道了",
+      "align": "center",
+      "size": 35,
+      "color": 4294967295,
+      "x": -82,
+      "y": -287,
+      "width": 170,
+      "height": 46
+    },
+    {
+      "name": "node_huadongbg",
+      "type": "sprite",
+      "img": "#ui_huodongindex_htt.png",
+      "scale9": 1,
+      "grid": {
+        "x": 13,
+        "y": 7,
+        "width": 27,
+        "height": 14
+      },
+      "x": -12,
+      "y": -177,
+      "width": 53,
+      "height": 27,
+      "maxw": 53,
+      "maxh": 27
+    },
+    {
+      "name": "btn_right",
+      "type": "btn",
+      "img_normal": "#ui_huodongindex_nr.png",
+      "img_down": "#ui_huodongindex_nr.png",
+      "img_disable": "#ui_huodongindex_nr.png",
+      "x": 434,
+      "y": -29,
+      "width": 66,
+      "height": 122
+    },
+    {
+      "name": "btn_left",
+      "type": "btn",
+      "img_normal": "#ui_huodongindex_nl.png",
+      "img_down": "#ui_huodongindex_nl.png",
+      "img_disable": "#ui_huodongindex_nl.png",
+      "x": -460,
+      "y": -29,
+      "width": 66,
+      "height": 122
+    }
+  ]
+}

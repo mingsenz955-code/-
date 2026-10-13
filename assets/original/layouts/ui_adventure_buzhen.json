@@ -1,0 +1,1430 @@
+{
+  "group": [
+    "ui_common",
+    "ui_adventure",
+    "ui_spy",
+    "ui_daojukuang",
+    "ui_pinzhi"
+  ],
+  "width": 865,
+  "height": 712,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 2,
+      "grid": {
+        "x": 107.95,
+        "y": 111,
+        "width": 45.999999999999986,
+        "height": 27
+      },
+      "x": -432.5,
+      "y": 8.48,
+      "width": 865,
+      "height": 665.05,
+      "maxw": 865,
+      "maxh": 665.05
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_haoyoulan2.png",
+      "scale9": 2,
+      "grid": {
+        "x": 28.25,
+        "y": 29,
+        "width": 37.75,
+        "height": 36
+      },
+      "x": -390.5,
+      "y": 114.5,
+      "width": 785,
+      "height": 373,
+      "maxw": 785,
+      "maxh": 373
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 2,
+      "grid": {
+        "x": 24.5,
+        "y": 20,
+        "width": 9.5,
+        "height": 9.5
+      },
+      "x": -430.55,
+      "y": 328.5,
+      "width": 862,
+      "height": 55,
+      "maxw": 862,
+      "maxh": 55
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_adventure_dikuang.png",
+      "x": -0.95,
+      "y": -170,
+      "width": 816,
+      "height": 186
+    },
+    {
+      "name": "node_team1",
+      "type": "node",
+      "x": 4.55,
+      "y": 196.55,
+      "width": 753,
+      "height": 171,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_adventure_duiwu.png",
+          "x": -5.5,
+          "y": 5,
+          "width": 742,
+          "height": 161
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_spy_zdl.png",
+          "x": -266.5,
+          "y": 65.5,
+          "width": 27,
+          "height": 24
+        },
+        {
+          "name": "txt_power",
+          "type": "label",
+          "text": "?",
+          "align": "left",
+          "size": 25,
+          "color": 1092488703,
+          "x": -249.05,
+          "y": 65.55,
+          "width": 140,
+          "height": 32.1
+        },
+        {
+          "name": "node_item6",
+          "type": "node",
+          "x": 301.3,
+          "y": -17.5,
+          "width": 110,
+          "height": 110,
+          "children": [
+            {
+              "name": "node_close",
+              "type": "node",
+              "x": -0.5,
+              "y": 4,
+              "width": 103,
+              "height": 102,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_adventure_lock.png",
+                  "width": 103,
+                  "height": 102
+                }
+              ]
+            },
+            {
+              "name": "node_open",
+              "type": "node",
+              "width": 110,
+              "height": 110,
+              "children": [
+                {
+                  "name": "add",
+                  "type": "sprite",
+                  "img": "#ui_daojukuang_DaoJuKuang1.png",
+                  "width": 110,
+                  "height": 110
+                },
+                {
+                  "name": "xiangkuang",
+                  "type": "node",
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "icon_long",
+                  "type": "node",
+                  "x": -0.85,
+                  "y": 2.8,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "lvbg",
+                  "type": "sprite",
+                  "img": "#ui_pinzhi_lv.png",
+                  "x": 17,
+                  "y": -29.55,
+                  "width": 56,
+                  "height": 25
+                },
+                {
+                  "name": "tx_lv",
+                  "type": "label",
+                  "text": " ",
+                  "align": "right",
+                  "size": 20,
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -31.85,
+                  "y": -33.9,
+                  "width": 77,
+                  "height": 26.5
+                },
+                {
+                  "name": "biaoji_pinzhi",
+                  "type": "node",
+                  "x": -36.35,
+                  "y": 38.55,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "node_star",
+                  "type": "node",
+                  "x": 44,
+                  "y": 37,
+                  "width": 0,
+                  "height": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "node_item5",
+          "type": "node",
+          "x": 178.95,
+          "y": -17.5,
+          "width": 110,
+          "height": 110,
+          "children": [
+            {
+              "name": "node_close",
+              "type": "node",
+              "x": -0.5,
+              "y": 4,
+              "width": 103,
+              "height": 102,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_adventure_lock.png",
+                  "width": 103,
+                  "height": 102
+                }
+              ]
+            },
+            {
+              "name": "node_open",
+              "type": "node",
+              "width": 110,
+              "height": 110,
+              "children": [
+                {
+                  "name": "add",
+                  "type": "sprite",
+                  "img": "#ui_daojukuang_DaoJuKuang1.png",
+                  "width": 110,
+                  "height": 110
+                },
+                {
+                  "name": "xiangkuang",
+                  "type": "node",
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "icon_long",
+                  "type": "node",
+                  "x": -0.85,
+                  "y": 2.8,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "lvbg",
+                  "type": "sprite",
+                  "img": "#ui_pinzhi_lv.png",
+                  "x": 17,
+                  "y": -29.55,
+                  "width": 56,
+                  "height": 25
+                },
+                {
+                  "name": "tx_lv",
+                  "type": "label",
+                  "text": " ",
+                  "align": "right",
+                  "size": 20,
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -31.85,
+                  "y": -33.9,
+                  "width": 77,
+                  "height": 26.5
+                },
+                {
+                  "name": "biaoji_pinzhi",
+                  "type": "node",
+                  "x": -36.35,
+                  "y": 38.55,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "node_star",
+                  "type": "node",
+                  "x": 44,
+                  "y": 37,
+                  "width": 0,
+                  "height": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "node_item4",
+          "type": "node",
+          "x": 56.6,
+          "y": -17.5,
+          "width": 110,
+          "height": 110,
+          "children": [
+            {
+              "name": "node_close",
+              "type": "node",
+              "x": -0.5,
+              "y": 4,
+              "width": 103,
+              "height": 102,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_adventure_lock.png",
+                  "width": 103,
+                  "height": 102
+                }
+              ]
+            },
+            {
+              "name": "node_open",
+              "type": "node",
+              "width": 110,
+              "height": 110,
+              "children": [
+                {
+                  "name": "add",
+                  "type": "sprite",
+                  "img": "#ui_daojukuang_DaoJuKuang1.png",
+                  "width": 110,
+                  "height": 110
+                },
+                {
+                  "name": "xiangkuang",
+                  "type": "node",
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "icon_long",
+                  "type": "node",
+                  "x": -0.85,
+                  "y": 2.8,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "lvbg",
+                  "type": "sprite",
+                  "img": "#ui_pinzhi_lv.png",
+                  "x": 17,
+                  "y": -29.55,
+                  "width": 56,
+                  "height": 25
+                },
+                {
+                  "name": "tx_lv",
+                  "type": "label",
+                  "text": " ",
+                  "align": "right",
+                  "size": 20,
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -31.85,
+                  "y": -33.9,
+                  "width": 77,
+                  "height": 26.5
+                },
+                {
+                  "name": "biaoji_pinzhi",
+                  "type": "node",
+                  "x": -36.35,
+                  "y": 38.55,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "node_star",
+                  "type": "node",
+                  "x": 44,
+                  "y": 37,
+                  "width": 0,
+                  "height": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "node_item3",
+          "type": "node",
+          "x": -65.75,
+          "y": -17.5,
+          "width": 110,
+          "height": 110,
+          "children": [
+            {
+              "name": "node_close",
+              "type": "node",
+              "x": -0.5,
+              "y": 4,
+              "width": 103,
+              "height": 102,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_adventure_lock.png",
+                  "width": 103,
+                  "height": 102
+                }
+              ]
+            },
+            {
+              "name": "node_open",
+              "type": "node",
+              "width": 110,
+              "height": 110,
+              "children": [
+                {
+                  "name": "add",
+                  "type": "sprite",
+                  "img": "#ui_daojukuang_DaoJuKuang1.png",
+                  "width": 110,
+                  "height": 110
+                },
+                {
+                  "name": "xiangkuang",
+                  "type": "node",
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "icon_long",
+                  "type": "node",
+                  "x": -0.85,
+                  "y": 2.8,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "lvbg",
+                  "type": "sprite",
+                  "img": "#ui_pinzhi_lv.png",
+                  "x": 17,
+                  "y": -29.55,
+                  "width": 56,
+                  "height": 25
+                },
+                {
+                  "name": "tx_lv",
+                  "type": "label",
+                  "text": " ",
+                  "align": "right",
+                  "size": 20,
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -31.85,
+                  "y": -33.9,
+                  "width": 77,
+                  "height": 26.5
+                },
+                {
+                  "name": "biaoji_pinzhi",
+                  "type": "node",
+                  "x": -36.35,
+                  "y": 38.55,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "node_star",
+                  "type": "node",
+                  "x": 44,
+                  "y": 37,
+                  "width": 0,
+                  "height": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "node_item2",
+          "type": "node",
+          "x": -188.1,
+          "y": -17.5,
+          "width": 110,
+          "height": 110,
+          "children": [
+            {
+              "name": "node_close",
+              "type": "node",
+              "x": -0.5,
+              "y": 4,
+              "width": 103,
+              "height": 102,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_adventure_lock.png",
+                  "width": 103,
+                  "height": 102
+                }
+              ]
+            },
+            {
+              "name": "node_open",
+              "type": "node",
+              "width": 110,
+              "height": 110,
+              "children": [
+                {
+                  "name": "add",
+                  "type": "sprite",
+                  "img": "#ui_daojukuang_DaoJuKuang1.png",
+                  "width": 110,
+                  "height": 110
+                },
+                {
+                  "name": "xiangkuang",
+                  "type": "node",
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "icon_long",
+                  "type": "node",
+                  "x": -0.85,
+                  "y": 2.8,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "lvbg",
+                  "type": "sprite",
+                  "img": "#ui_pinzhi_lv.png",
+                  "x": 17,
+                  "y": -29.55,
+                  "width": 56,
+                  "height": 25
+                },
+                {
+                  "name": "tx_lv",
+                  "type": "label",
+                  "text": " ",
+                  "align": "right",
+                  "size": 20,
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -31.85,
+                  "y": -33.9,
+                  "width": 77,
+                  "height": 26.5
+                },
+                {
+                  "name": "biaoji_pinzhi",
+                  "type": "node",
+                  "x": -36.35,
+                  "y": 38.55,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "node_star",
+                  "type": "node",
+                  "x": 44,
+                  "y": 37,
+                  "width": 0,
+                  "height": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "node_item1",
+          "type": "node",
+          "x": -310.45,
+          "y": -17.5,
+          "width": 110,
+          "height": 110,
+          "children": [
+            {
+              "name": "node_close",
+              "type": "node",
+              "x": -0.5,
+              "y": 4,
+              "width": 103,
+              "height": 102,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_adventure_lock.png",
+                  "width": 103,
+                  "height": 102
+                }
+              ]
+            },
+            {
+              "name": "node_open",
+              "type": "node",
+              "width": 110,
+              "height": 110,
+              "children": [
+                {
+                  "name": "add",
+                  "type": "sprite",
+                  "img": "#ui_daojukuang_DaoJuKuang1.png",
+                  "width": 110,
+                  "height": 110
+                },
+                {
+                  "name": "xiangkuang",
+                  "type": "node",
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "icon_long",
+                  "type": "node",
+                  "x": -0.85,
+                  "y": 2.8,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "lvbg",
+                  "type": "sprite",
+                  "img": "#ui_pinzhi_lv.png",
+                  "x": 17,
+                  "y": -29.55,
+                  "width": 56,
+                  "height": 25
+                },
+                {
+                  "name": "tx_lv",
+                  "type": "label",
+                  "text": " ",
+                  "align": "right",
+                  "size": 20,
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -31.85,
+                  "y": -33.9,
+                  "width": 77,
+                  "height": 26.5
+                },
+                {
+                  "name": "biaoji_pinzhi",
+                  "type": "node",
+                  "x": -36.35,
+                  "y": 38.55,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "node_star",
+                  "type": "node",
+                  "x": 44,
+                  "y": 37,
+                  "width": 0,
+                  "height": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "txt_team",
+          "type": "label",
+          "text": "?",
+          "align": "center",
+          "size": 25,
+          "color": 1092488703,
+          "x": -359.5,
+          "y": 65.55,
+          "width": 62,
+          "height": 32.1
+        },
+        {
+          "name": "node_btn_info",
+          "type": "node",
+          "x": 330.5,
+          "y": 72.5,
+          "width": 92,
+          "height": 46,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_adventure_btnred1.png",
+              "img_down": "#ui_adventure_btnred2.png",
+              "width": 92,
+              "height": 46
+            },
+            {
+              "name": "txt_1",
+              "type": "label",
+              "text": "详情",
+              "align": "center",
+              "size": 30,
+              "color": 1092488703,
+              "x": -40,
+              "y": -1.8,
+              "width": 78,
+              "height": 37.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "node_team2",
+      "type": "node",
+      "x": 4.55,
+      "y": 19.6,
+      "width": 753,
+      "height": 171,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_adventure_duiwu.png",
+          "x": -5.5,
+          "y": 5,
+          "width": 742,
+          "height": 161
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_spy_zdl.png",
+          "x": -266.5,
+          "y": 65.5,
+          "width": 27,
+          "height": 24
+        },
+        {
+          "name": "txt_power",
+          "type": "label",
+          "text": "?",
+          "align": "left",
+          "size": 25,
+          "color": 1092488703,
+          "x": -249.05,
+          "y": 65.55,
+          "width": 140,
+          "height": 32.1
+        },
+        {
+          "name": "node_item6",
+          "type": "node",
+          "x": 301.3,
+          "y": -17.5,
+          "width": 110,
+          "height": 110,
+          "children": [
+            {
+              "name": "node_close",
+              "type": "node",
+              "x": -0.5,
+              "y": 4,
+              "width": 103,
+              "height": 102,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_adventure_lock.png",
+                  "width": 103,
+                  "height": 102
+                }
+              ]
+            },
+            {
+              "name": "node_open",
+              "type": "node",
+              "width": 110,
+              "height": 110,
+              "children": [
+                {
+                  "name": "add",
+                  "type": "sprite",
+                  "img": "#ui_daojukuang_DaoJuKuang1.png",
+                  "width": 110,
+                  "height": 110
+                },
+                {
+                  "name": "xiangkuang",
+                  "type": "node",
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "icon_long",
+                  "type": "node",
+                  "x": -0.85,
+                  "y": 2.8,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "lvbg",
+                  "type": "sprite",
+                  "img": "#ui_pinzhi_lv.png",
+                  "x": 17,
+                  "y": -29.55,
+                  "width": 56,
+                  "height": 25
+                },
+                {
+                  "name": "tx_lv",
+                  "type": "label",
+                  "text": " ",
+                  "align": "right",
+                  "size": 20,
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -31.85,
+                  "y": -33.9,
+                  "width": 77,
+                  "height": 26.5
+                },
+                {
+                  "name": "biaoji_pinzhi",
+                  "type": "node",
+                  "x": -36.35,
+                  "y": 38.55,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "node_star",
+                  "type": "node",
+                  "x": 44,
+                  "y": 37,
+                  "width": 0,
+                  "height": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "node_item5",
+          "type": "node",
+          "x": 178.95,
+          "y": -17.5,
+          "width": 110,
+          "height": 110,
+          "children": [
+            {
+              "name": "node_close",
+              "type": "node",
+              "x": -0.5,
+              "y": 4,
+              "width": 103,
+              "height": 102,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_adventure_lock.png",
+                  "width": 103,
+                  "height": 102
+                }
+              ]
+            },
+            {
+              "name": "node_open",
+              "type": "node",
+              "width": 110,
+              "height": 110,
+              "children": [
+                {
+                  "name": "add",
+                  "type": "sprite",
+                  "img": "#ui_daojukuang_DaoJuKuang1.png",
+                  "width": 110,
+                  "height": 110
+                },
+                {
+                  "name": "xiangkuang",
+                  "type": "node",
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "icon_long",
+                  "type": "node",
+                  "x": -0.85,
+                  "y": 2.8,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "lvbg",
+                  "type": "sprite",
+                  "img": "#ui_pinzhi_lv.png",
+                  "x": 17,
+                  "y": -29.55,
+                  "width": 56,
+                  "height": 25
+                },
+                {
+                  "name": "tx_lv",
+                  "type": "label",
+                  "text": " ",
+                  "align": "right",
+                  "size": 20,
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -31.85,
+                  "y": -33.9,
+                  "width": 77,
+                  "height": 26.5
+                },
+                {
+                  "name": "biaoji_pinzhi",
+                  "type": "node",
+                  "x": -36.35,
+                  "y": 38.55,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "node_star",
+                  "type": "node",
+                  "x": 44,
+                  "y": 37,
+                  "width": 0,
+                  "height": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "node_item4",
+          "type": "node",
+          "x": 56.6,
+          "y": -17.5,
+          "width": 110,
+          "height": 110,
+          "children": [
+            {
+              "name": "node_close",
+              "type": "node",
+              "x": -0.5,
+              "y": 4,
+              "width": 103,
+              "height": 102,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_adventure_lock.png",
+                  "width": 103,
+                  "height": 102
+                }
+              ]
+            },
+            {
+              "name": "node_open",
+              "type": "node",
+              "width": 110,
+              "height": 110,
+              "children": [
+                {
+                  "name": "add",
+                  "type": "sprite",
+                  "img": "#ui_daojukuang_DaoJuKuang1.png",
+                  "width": 110,
+                  "height": 110
+                },
+                {
+                  "name": "xiangkuang",
+                  "type": "node",
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "icon_long",
+                  "type": "node",
+                  "x": -0.85,
+                  "y": 2.8,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "lvbg",
+                  "type": "sprite",
+                  "img": "#ui_pinzhi_lv.png",
+                  "x": 17,
+                  "y": -29.55,
+                  "width": 56,
+                  "height": 25
+                },
+                {
+                  "name": "tx_lv",
+                  "type": "label",
+                  "text": " ",
+                  "align": "right",
+                  "size": 20,
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -31.85,
+                  "y": -33.9,
+                  "width": 77,
+                  "height": 26.5
+                },
+                {
+                  "name": "biaoji_pinzhi",
+                  "type": "node",
+                  "x": -36.35,
+                  "y": 38.55,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "node_star",
+                  "type": "node",
+                  "x": 44,
+                  "y": 37,
+                  "width": 0,
+                  "height": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "node_item3",
+          "type": "node",
+          "x": -65.75,
+          "y": -17.5,
+          "width": 110,
+          "height": 110,
+          "children": [
+            {
+              "name": "node_close",
+              "type": "node",
+              "x": -0.5,
+              "y": 4,
+              "width": 103,
+              "height": 102,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_adventure_lock.png",
+                  "width": 103,
+                  "height": 102
+                }
+              ]
+            },
+            {
+              "name": "node_open",
+              "type": "node",
+              "width": 110,
+              "height": 110,
+              "children": [
+                {
+                  "name": "add",
+                  "type": "sprite",
+                  "img": "#ui_daojukuang_DaoJuKuang1.png",
+                  "width": 110,
+                  "height": 110
+                },
+                {
+                  "name": "xiangkuang",
+                  "type": "node",
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "icon_long",
+                  "type": "node",
+                  "x": -0.85,
+                  "y": 2.8,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "lvbg",
+                  "type": "sprite",
+                  "img": "#ui_pinzhi_lv.png",
+                  "x": 17,
+                  "y": -29.55,
+                  "width": 56,
+                  "height": 25
+                },
+                {
+                  "name": "tx_lv",
+                  "type": "label",
+                  "text": " ",
+                  "align": "right",
+                  "size": 20,
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -31.85,
+                  "y": -33.9,
+                  "width": 77,
+                  "height": 26.5
+                },
+                {
+                  "name": "biaoji_pinzhi",
+                  "type": "node",
+                  "x": -36.35,
+                  "y": 38.55,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "node_star",
+                  "type": "node",
+                  "x": 44,
+                  "y": 37,
+                  "width": 0,
+                  "height": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "node_item2",
+          "type": "node",
+          "x": -188.1,
+          "y": -17.5,
+          "width": 110,
+          "height": 110,
+          "children": [
+            {
+              "name": "node_close",
+              "type": "node",
+              "x": -0.5,
+              "y": 4,
+              "width": 103,
+              "height": 102,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_adventure_lock.png",
+                  "width": 103,
+                  "height": 102
+                }
+              ]
+            },
+            {
+              "name": "node_open",
+              "type": "node",
+              "width": 110,
+              "height": 110,
+              "children": [
+                {
+                  "name": "add",
+                  "type": "sprite",
+                  "img": "#ui_daojukuang_DaoJuKuang1.png",
+                  "width": 110,
+                  "height": 110
+                },
+                {
+                  "name": "xiangkuang",
+                  "type": "node",
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "icon_long",
+                  "type": "node",
+                  "x": -0.85,
+                  "y": 2.8,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "lvbg",
+                  "type": "sprite",
+                  "img": "#ui_pinzhi_lv.png",
+                  "x": 17,
+                  "y": -29.55,
+                  "width": 56,
+                  "height": 25
+                },
+                {
+                  "name": "tx_lv",
+                  "type": "label",
+                  "text": " ",
+                  "align": "right",
+                  "size": 20,
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -31.85,
+                  "y": -33.9,
+                  "width": 77,
+                  "height": 26.5
+                },
+                {
+                  "name": "biaoji_pinzhi",
+                  "type": "node",
+                  "x": -36.35,
+                  "y": 38.55,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "node_star",
+                  "type": "node",
+                  "x": 44,
+                  "y": 37,
+                  "width": 0,
+                  "height": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "node_item1",
+          "type": "node",
+          "x": -310.45,
+          "y": -17.5,
+          "width": 110,
+          "height": 110,
+          "children": [
+            {
+              "name": "node_close",
+              "type": "node",
+              "x": -0.5,
+              "y": 4,
+              "width": 103,
+              "height": 102,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_adventure_lock.png",
+                  "width": 103,
+                  "height": 102
+                }
+              ]
+            },
+            {
+              "name": "node_open",
+              "type": "node",
+              "width": 110,
+              "height": 110,
+              "children": [
+                {
+                  "name": "add",
+                  "type": "sprite",
+                  "img": "#ui_daojukuang_DaoJuKuang1.png",
+                  "width": 110,
+                  "height": 110
+                },
+                {
+                  "name": "xiangkuang",
+                  "type": "node",
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "icon_long",
+                  "type": "node",
+                  "x": -0.85,
+                  "y": 2.8,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "lvbg",
+                  "type": "sprite",
+                  "img": "#ui_pinzhi_lv.png",
+                  "x": 17,
+                  "y": -29.55,
+                  "width": 56,
+                  "height": 25
+                },
+                {
+                  "name": "tx_lv",
+                  "type": "label",
+                  "text": " ",
+                  "align": "right",
+                  "size": 20,
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -31.85,
+                  "y": -33.9,
+                  "width": 77,
+                  "height": 26.5
+                },
+                {
+                  "name": "biaoji_pinzhi",
+                  "type": "node",
+                  "x": -36.35,
+                  "y": 38.55,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "node_star",
+                  "type": "node",
+                  "x": 44,
+                  "y": 37,
+                  "width": 0,
+                  "height": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "txt_team",
+          "type": "label",
+          "text": "?",
+          "align": "center",
+          "size": 25,
+          "color": 1092488703,
+          "x": -359.5,
+          "y": 65.55,
+          "width": 62,
+          "height": 32.1
+        },
+        {
+          "name": "node_btn_info",
+          "type": "node",
+          "x": 330.5,
+          "y": 72.5,
+          "width": 92,
+          "height": 46,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_adventure_btnred1.png",
+              "img_down": "#ui_adventure_btnred2.png",
+              "width": 92,
+              "height": 46
+            },
+            {
+              "name": "txt_1",
+              "type": "label",
+              "text": "详情",
+              "align": "center",
+              "size": 30,
+              "color": 1092488703,
+              "x": -40,
+              "y": -1.8,
+              "width": 78,
+              "height": 37.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "onekey",
+      "type": "node",
+      "x": -135.9,
+      "y": -313.5,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "width": 200,
+          "height": 85
+        },
+        {
+          "name": "txt",
+          "type": "label",
+          "text": "一键布阵",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -85,
+          "y": 4.55,
+          "width": 170,
+          "height": 43.1
+        }
+      ]
+    },
+    {
+      "name": "sure",
+      "type": "node",
+      "x": 130,
+      "y": -313.5,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "width": 200,
+          "height": 85
+        },
+        {
+          "name": "txt",
+          "type": "label",
+          "text": "确定",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -85,
+          "y": 4.55,
+          "width": 170,
+          "height": 43.1
+        }
+      ]
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "x": -2,
+      "y": -170.45,
+      "width": 789,
+      "height": 158
+    },
+    {
+      "name": "txt_1",
+      "type": "label",
+      "text": "布阵",
+      "align": "center",
+      "size": 25,
+      "color": 4294967295,
+      "x": -285.05,
+      "y": 331.05,
+      "width": 566,
+      "height": 32.1
+    }
+  ]
+}

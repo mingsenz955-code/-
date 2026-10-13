@@ -1,0 +1,281 @@
+{
+  "group": [
+    "ui_common",
+    "ui_usercenter_ios"
+  ],
+  "width": 598,
+  "height": 589,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768,
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "grid": {
+        "x": 107.95,
+        "y": 111,
+        "width": 45.999999999999986,
+        "height": 27
+      },
+      "x": -281.5,
+      "y": -47.08,
+      "width": 580,
+      "height": 532.95,
+      "maxw": 580,
+      "maxh": 532.95
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "grid": {
+        "x": 24.5,
+        "y": 20,
+        "width": 9.5,
+        "height": 9.5
+      },
+      "x": -284.45,
+      "y": 219.4,
+      "width": 582.95,
+      "height": 55,
+      "maxw": 582.95,
+      "maxh": 55
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_haoyoulan2.png",
+      "scale9": 1,
+      "grid": {
+        "x": 28.25,
+        "y": 29,
+        "width": 37.75,
+        "height": 36
+      },
+      "x": -238.2,
+      "y": -3.1,
+      "width": 498.1,
+      "height": 285,
+      "maxw": 498.1,
+      "maxh": 285
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_usercenter_ios_shurukuang.png",
+      "x": 71.5,
+      "y": -98.35,
+      "width": 345,
+      "height": 46
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_usercenter_ios_shurukuang.png",
+      "x": 71.5,
+      "y": -33.35,
+      "width": 345,
+      "height": 46
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_usercenter_ios_shurukuang.png",
+      "x": 71.5,
+      "y": 30.65,
+      "width": 345,
+      "height": 46
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_usercenter_ios_shurukuang.png",
+      "x": 71.5,
+      "y": 94.65,
+      "width": 345,
+      "height": 46
+    },
+    {
+      "name": "txt_title",
+      "type": "label",
+      "text": "绑定帐号",
+      "align": "center",
+      "size": 21,
+      "color": 4294967295,
+      "x": -234.55,
+      "y": 218.57,
+      "width": 469,
+      "height": 29.85
+    },
+    {
+      "name": "node_btn_ok",
+      "type": "node",
+      "x": 4.35,
+      "y": -283.3,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "width": 200,
+          "height": 85
+        },
+        {
+          "name": "txt",
+          "type": "label",
+          "text": "绑定帐号",
+          "align": "center",
+          "size": 38,
+          "color": 4294967295,
+          "x": -81.25,
+          "y": 4.82,
+          "width": 162.55,
+          "height": 46.75
+        }
+      ]
+    },
+    {
+      "name": "txt_6",
+      "type": "label",
+      "text": "邮箱绑定后将不可更改请谨慎操作。\n邮箱用于密码找回等功能,绑定可获取奖励",
+      "align": "center",
+      "size": 23,
+      "color": 1092488703,
+      "x": -221.55,
+      "y": -186.95,
+      "width": 448.95,
+      "height": 60
+    },
+    {
+      "name": "txt_5",
+      "type": "label",
+      "text": "未绑定账户无法进行充值,请先绑定帐号!",
+      "align": "left",
+      "size": 23,
+      "color": 1092488703,
+      "x": -213.95,
+      "y": 174,
+      "width": 424.95,
+      "height": 30
+    },
+    {
+      "name": "txt_4",
+      "type": "label",
+      "text": "绑定邮箱",
+      "align": "left",
+      "size": 25,
+      "color": 1092488703,
+      "x": -219.95,
+      "y": -98.05,
+      "width": 109.95,
+      "height": 32.1
+    },
+    {
+      "name": "txt_3",
+      "type": "label",
+      "text": "确认密码",
+      "align": "left",
+      "size": 25,
+      "color": 1092488703,
+      "x": -219.95,
+      "y": -34.05,
+      "width": 111.95,
+      "height": 32.1
+    },
+    {
+      "name": "txt_2",
+      "type": "label",
+      "text": "密       码",
+      "align": "left",
+      "size": 25,
+      "color": 1092488703,
+      "x": -219.95,
+      "y": 29.95,
+      "width": 111.95,
+      "height": 32.1
+    },
+    {
+      "name": "txt_1",
+      "type": "label",
+      "text": "帐       号",
+      "align": "left",
+      "size": 25,
+      "color": 1092488703,
+      "x": -219.95,
+      "y": 93.95,
+      "width": 110.95,
+      "height": 32.1
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 273.35,
+      "y": 219.7,
+      "width": 80,
+      "height": 86
+    },
+    {
+      "name": "mail",
+      "type": "input",
+      "img": "#ui_usercenter_ios_shurukuang.png",
+      "fontSize": 25,
+      "color": 0,
+      "holder": "请填写邮箱",
+      "holderColor": 9668977,
+      "x": 71.5,
+      "y": -98.35,
+      "width": 345,
+      "height": 46
+    },
+    {
+      "name": "checkpwd",
+      "type": "input",
+      "img": "#ui_usercenter_ios_shurukuang.png",
+      "fontSize": 25,
+      "color": 0,
+      "holder": "请再次填写密码",
+      "holderColor": 9668977,
+      "maxLength": 16,
+      "x": 71.5,
+      "y": -33.35,
+      "width": 345,
+      "height": 46
+    },
+    {
+      "name": "pwd",
+      "type": "input",
+      "img": "#ui_usercenter_ios_shurukuang.png",
+      "fontSize": 25,
+      "color": 0,
+      "holder": "6-16位文字或字母",
+      "holderColor": 9668977,
+      "maxLength": 16,
+      "x": 71.5,
+      "y": 30.65,
+      "width": 345,
+      "height": 46
+    },
+    {
+      "name": "name",
+      "type": "input",
+      "img": "#ui_usercenter_ios_shurukuang.png",
+      "fontSize": 25,
+      "color": 0,
+      "holder": "请填写6~16位数字或字母",
+      "holderColor": 9668977,
+      "maxLength": 16,
+      "x": 71.5,
+      "y": 94.65,
+      "width": 345,
+      "height": 46
+    }
+  ]
+}

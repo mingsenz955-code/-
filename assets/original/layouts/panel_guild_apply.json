@@ -1,0 +1,81 @@
+{
+  "group": [
+    "ui_bgpuzzle"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768,
+      "alpha": 0
+    },
+    {
+      "name": "diban",
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -400,
+      "y": -17,
+      "width": 813,
+      "height": 565,
+      "maxw": 813,
+      "maxh": 565
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_bgpuzzle_dage.png",
+      "scale9": 1,
+      "x": -364.6,
+      "y": -27.35,
+      "width": 748,
+      "height": 462,
+      "maxw": 748,
+      "maxh": 462
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "x": 9.45,
+      "y": -27.35,
+      "width": 743,
+      "height": 456
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -405.4,
+      "y": 243.6,
+      "width": 818,
+      "height": 55,
+      "maxw": 818,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "入会申请",
+      "align": "center",
+      "size": 25,
+      "color": 4294967295,
+      "x": -356.4,
+      "y": 244.8,
+      "width": 714,
+      "height": 32.1
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 389.4,
+      "y": 249,
+      "width": 80,
+      "height": 86
+    }
+  ]
+}

@@ -1,0 +1,331 @@
+{
+  "group": [
+    "ui_RandDragon",
+    "ui_dragonrand_bg1"
+  ],
+  "children": [
+    {
+      "name": "bg",
+      "type": "btn",
+      "img_normal": "#ui_dragonrand_bg1.png",
+      "img_down": "#ui_dragonrand_bg1.png"
+    },
+    {
+      "name": "bg2",
+      "type": "sprite",
+      "img": "#ui_dragonrand_bg2.png",
+      "width": 1024,
+      "height": 768,
+      "left": 0,
+      "right": 0
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "y": -268.35,
+      "width": 1024,
+      "height": 105,
+      "left": 0,
+      "right": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_dragonrand_jiejie1.png",
+      "y": -22.4,
+      "width": 910,
+      "height": 320
+    },
+    {
+      "name": "fazhen",
+      "type": "sprite",
+      "img": "#ui_dragonrand_jiejie2.png",
+      "y": -22.4,
+      "width": 910,
+      "height": 320
+    },
+    {
+      "name": "con_oval",
+      "type": "node",
+      "y": -20,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "btn_one",
+      "type": "node",
+      "x": -383.6,
+      "y": -165.35,
+      "width": 200,
+      "height": 85,
+      "left": 28.4,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_dragonrand_btn01.png",
+          "img_down": "#ui_dragonrand_btn02.png"
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_HuoBi0002.png",
+          "x": 23,
+          "y": -14.45,
+          "width": 40,
+          "height": 40
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": "X1",
+          "size": 24,
+          "align": "right",
+          "color": 4294928127,
+          "outlineColor": 0,
+          "x": -79,
+          "y": -13,
+          "width": 86,
+          "height": 31
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "普通占卜1次",
+          "size": 24,
+          "align": "center",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -79,
+          "y": 18,
+          "width": 156,
+          "height": 31
+        }
+      ]
+    },
+    {
+      "name": "btn_ten",
+      "type": "node",
+      "x": 374.4,
+      "y": -165.35,
+      "width": 200,
+      "height": 85,
+      "right": 37.6,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_dragonrand_btn01.png",
+          "img_down": "#ui_dragonrand_btn02.png"
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_HuoBi0002.png",
+          "x": 23,
+          "y": -14.45,
+          "width": 40,
+          "height": 40
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": "X1",
+          "size": 24,
+          "align": "right",
+          "color": 4294928127,
+          "outlineColor": 0,
+          "x": -79,
+          "y": -13,
+          "width": 86,
+          "height": 31
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "普通占卜1次",
+          "size": 24,
+          "align": "center",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -79,
+          "y": 18,
+          "width": 156,
+          "height": 31
+        }
+      ]
+    },
+    {
+      "name": "lingqu",
+      "type": "node",
+      "x": 390,
+      "y": -350,
+      "width": 210,
+      "height": 60,
+      "right": 17,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_dragonrand_btn03.png",
+          "img_down": "#ui_dragonrand_btn04.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "领取所有物品",
+          "size": 25,
+          "align": "center",
+          "color": 4294967295,
+          "x": -92,
+          "y": 0.95,
+          "width": 183,
+          "height": 32.1
+        }
+      ]
+    },
+    {
+      "name": "star_up",
+      "type": "node",
+      "x": 160,
+      "y": -350,
+      "width": 210,
+      "height": 60,
+      "right": 247,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_dragonrand_btn03.png",
+          "img_down": "#ui_dragonrand_btn04.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "战龙升星",
+          "size": 25,
+          "align": "center",
+          "color": 4294967295,
+          "x": -92,
+          "y": 0.95,
+          "width": 183,
+          "height": 32.1
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_main_pbar_bg2.png",
+      "scale9": 1,
+      "x": -188.6,
+      "y": 270.5,
+      "width": 114,
+      "height": 46,
+      "maxw": 114,
+      "maxh": 46
+    },
+    {
+      "name": "txt_MoJing",
+      "type": "label",
+      "text": "999999",
+      "size": 24,
+      "align": "right",
+      "color": 858993663,
+      "x": -188.45,
+      "y": 269.52,
+      "width": 102.95,
+      "height": 33.25
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_main_08.png",
+      "x": -189.85,
+      "y": 269.5,
+      "width": 60,
+      "height": 60
+    },
+    {
+      "name": "btn_MoJing",
+      "type": "btn",
+      "img_normal": "#ui_main_05.png",
+      "img_down": "#ui_main_05-2.png",
+      "x": -61.05,
+      "y": 269.95
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_main_pbar_bg2.png",
+      "scale9": 1,
+      "x": 51.4,
+      "y": 270.5,
+      "width": 114,
+      "height": 46,
+      "maxw": 114,
+      "maxh": 46
+    },
+    {
+      "name": "txt_Card",
+      "type": "label",
+      "text": "999999",
+      "size": 24,
+      "align": "right",
+      "color": 858993663,
+      "x": 51.55,
+      "y": 269.52,
+      "width": 102.95,
+      "height": 33.25
+    },
+    {
+      "name": "card_icon",
+      "type": "node",
+      "x": 37.15,
+      "y": 273.5,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_d.png",
+      "x": -1.15,
+      "y": 341,
+      "width": 573,
+      "height": 83
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "占卜",
+      "size": 28,
+      "align": "center",
+      "color": 4294967295,
+      "x": -216.9,
+      "y": 332.25,
+      "width": 431.85,
+      "height": 35.5
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_GuanBi1.png",
+      "img_down": "#ui_common_btn_GuanBi2.png",
+      "x": 468.1,
+      "y": 338.9,
+      "right": 43.9
+    },
+    {
+      "name": "fanhui",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_FanHui1.png",
+      "img_down": "#ui_common_btn_FanHui2.png",
+      "x": -469.5,
+      "y": 339,
+      "left": 42.5
+    },
+    {
+      "name": "tishi",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_tishi1.png",
+      "img_down": "#ui_common_btn_tishi2.png",
+      "x": 361.35,
+      "y": 338.9,
+      "right": 150.65
+    }
+  ]
+}

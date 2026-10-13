@@ -1,0 +1,16 @@
+{
+  "group": [
+    "buildings/0061_xianrenzhang_little_g"
+  ],
+  "width": 88,
+  "height": 88,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0061_xianrenzhang_little_g_bg.png",
+      "x": 14,
+      "y": 48
+    }
+  ]
+}

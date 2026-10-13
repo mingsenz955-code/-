@@ -9465,6 +9465,30 @@
       "width": 63,
       "height": 35,
       "sha256": "3a9e4c88f0dce1d75e8dc49afc65ca0f3e248873690034907c022356caa657e6"
+    },
+    "world/0017_farm_2_g_s1.png": {
+      "archive": "assets/res/buildings/0017_farm_2_g.plist",
+      "frame": "0017_farm_2_g_s1.png",
+      "texture": "assets/res/buildings/0017_farm_2_g.png",
+      "width": 339,
+      "height": 230,
+      "sha256": "4a2c526156888a16903d32c7c558c47d0b80d6d2791c2fb99da01775da3d34b2"
+    },
+    "world/0017_farm_2_g_s2.png": {
+      "archive": "assets/res/buildings/0017_farm_2_g.plist",
+      "frame": "0017_farm_2_g_s2.png",
+      "texture": "assets/res/buildings/0017_farm_2_g.png",
+      "width": 339,
+      "height": 229,
+      "sha256": "163b94c2b55921ca92c834779b584730b02dcb4519e66d98b2abcf3822c810fd"
+    },
+    "world/0017_farm_2_g_s3.png": {
+      "archive": "assets/res/buildings/0017_farm_2_g.plist",
+      "frame": "0017_farm_2_g_s3.png",
+      "texture": "assets/res/buildings/0017_farm_2_g.png",
+      "width": 344,
+      "height": 227,
+      "sha256": "9591afda144c10e74fe09449668d31893a3dc5c2a0444a76a83450a2e17da791"
     }
   }
 }

@@ -1,0 +1,226 @@
+{
+  "group": [
+    "ui_guild",
+    "ui_daojukuang"
+  ],
+  "width": 225,
+  "height": 400,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_guild_bgkeji.png",
+      "width": 225,
+      "height": 400
+    },
+    {
+      "name": "hint_name",
+      "type": "label",
+      "text": "科技名字",
+      "align": "center",
+      "size": 26,
+      "color": 1092488703,
+      "x": -110,
+      "y": 160.07,
+      "width": 220,
+      "height": 34.35
+    },
+    {
+      "name": "icon",
+      "type": "node",
+      "x": -0.65,
+      "y": 81.65,
+      "width": 110,
+      "height": 110,
+      "children": [
+        {
+          "name": "add",
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "width": 110,
+          "height": 110
+        },
+        {
+          "name": "xiangkuang",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "x": -0.85,
+          "y": 2.8,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -37.1,
+          "y": -25.6,
+          "width": 77,
+          "height": 26.5
+        },
+        {
+          "name": "biaoji_pinzhi",
+          "type": "node",
+          "x": -36.35,
+          "y": 38.55,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "hint_level",
+      "type": "label",
+      "text": "等级：",
+      "align": "left",
+      "size": 20,
+      "color": 1092488703,
+      "x": -100,
+      "y": 2.95,
+      "width": 65,
+      "height": 26.5
+    },
+    {
+      "name": "level",
+      "type": "label",
+      "text": "",
+      "align": "left",
+      "size": 20,
+      "color": 1092488703,
+      "x": -35,
+      "y": 2.95,
+      "width": 111,
+      "height": 26.5
+    },
+    {
+      "name": "effect",
+      "type": "node",
+      "x": -100,
+      "y": -12.8,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "next_level",
+      "type": "node",
+      "x": 5,
+      "y": -82.95,
+      "width": 210,
+      "height": 84.3,
+      "children": [
+        {
+          "name": "next",
+          "type": "label",
+          "text": "下一级所需",
+          "align": "left",
+          "size": 20,
+          "color": 1092488703,
+          "x": -105,
+          "y": 28.9,
+          "width": 210,
+          "height": 26.5
+        },
+        {
+          "name": "hint_price",
+          "type": "label",
+          "text": "物资：",
+          "align": "left",
+          "size": 20,
+          "color": 1092488703,
+          "x": -105,
+          "y": 0.1,
+          "width": 65,
+          "height": 26.5
+        },
+        {
+          "name": "price",
+          "type": "label",
+          "text": "",
+          "align": "left",
+          "size": 20,
+          "color": 1092488703,
+          "x": -41,
+          "y": 0.1,
+          "width": 142,
+          "height": 26.5
+        },
+        {
+          "name": "hint_price_gold",
+          "type": "label",
+          "text": "金币：",
+          "align": "left",
+          "size": 20,
+          "color": 1092488703,
+          "x": -105,
+          "y": -28.9,
+          "width": 65,
+          "height": 26.5
+        },
+        {
+          "name": "price_gold",
+          "type": "label",
+          "text": "",
+          "align": "left",
+          "size": 20,
+          "color": 1092488703,
+          "x": -41,
+          "y": -28.9,
+          "width": 142,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "hint_limit",
+      "type": "label",
+      "text": "已升至最高等级",
+      "align": "center",
+      "size": 20,
+      "color": 3422552319,
+      "x": -110.05,
+      "y": -96.05,
+      "width": 219,
+      "height": 26.5
+    },
+    {
+      "name": "levelup",
+      "type": "node",
+      "x": -0.65,
+      "y": -157.3,
+      "width": 154,
+      "height": 46,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_pppp1.png",
+          "img_down": "#ui_common_btn_pppp2.png",
+          "img_disable": "#ui_common_btn_pppp3.png",
+          "width": 154,
+          "height": 46
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "升级",
+          "align": "center",
+          "size": 26,
+          "color": 992815615,
+          "outlineColor": 13941402,
+          "x": -73,
+          "y": -0.88,
+          "width": 144,
+          "height": 33.25
+        }
+      ]
+    }
+  ]
+}

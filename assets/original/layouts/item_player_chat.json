@@ -1,0 +1,117 @@
+{
+  "group": [
+    "ui_chat",
+    "ui_daojukuang",
+    "ui_entrance"
+  ],
+  "width": 812,
+  "height": 132,
+  "children": [
+    {
+      "name": "node_chatinfo",
+      "type": "node",
+      "x": 812,
+      "y": -66,
+      "width": 812,
+      "height": 132,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_chat_mingzit.png",
+          "x": -406,
+          "y": 45,
+          "width": 812,
+          "height": 38
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "x": -751,
+          "y": 11,
+          "width": 110,
+          "height": 110
+        },
+        {
+          "name": "node_headicon",
+          "type": "node",
+          "x": -791,
+          "y": 55,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "node_viplv",
+          "type": "node",
+          "x": -609,
+          "y": 46,
+          "width": 66,
+          "height": 29,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_entrance_g_03.png",
+              "y": 0,
+              "width": 66,
+              "height": 28
+            },
+            {
+              "name": "vip_num",
+              "type": "label",
+              "text": "",
+              "align": "center",
+              "font": "orange_22.fnt",
+              "bmp": 1,
+              "x": -33,
+              "width": 64,
+              "height": 29
+            }
+          ]
+        },
+        {
+          "name": "txt_playername",
+          "type": "label",
+          "text": "xxx",
+          "align": "left",
+          "size": 30,
+          "color": 4291559679,
+          "x": -697,
+          "y": 45,
+          "width": 350,
+          "height": 38
+        },
+        {
+          "name": "txt_playerjob",
+          "type": "label",
+          "text": "[xxx]",
+          "align": "center",
+          "size": 20,
+          "color": 1459604479,
+          "x": -791,
+          "y": -53,
+          "width": 76,
+          "height": 26
+        },
+        {
+          "name": "txt_time",
+          "type": "label",
+          "text": "[??:??]",
+          "align": "right",
+          "size": 30,
+          "color": 4294967295,
+          "x": -237,
+          "y": 46,
+          "width": 234,
+          "height": 38
+        }
+      ]
+    },
+    {
+      "name": "node_chatcontainer",
+      "type": "node",
+      "x": 122,
+      "y": -47,
+      "width": 0,
+      "height": 0
+    }
+  ]
+}

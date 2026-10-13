@@ -1,0 +1,646 @@
+{
+  "group": [
+    "ui_welfaregiftmonth",
+    "ui_welfare"
+  ],
+  "width": 749,
+  "height": 566,
+  "children": [
+    {
+      "name": "cardlv1",
+      "type": "node",
+      "x": -248.5,
+      "width": 252,
+      "height": 533,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_welfaregiftmonth_yukabg.png",
+          "width": 252,
+          "height": 533
+        },
+        {
+          "name": "zhuangshi",
+          "type": "sprite",
+          "img": "#ui_welfaregiftmonth_lv1.png",
+          "x": 2,
+          "y": 164.05,
+          "width": 145,
+          "height": 176
+        },
+        {
+          "name": "yigoumai",
+          "type": "sprite",
+          "img": "#ui_welfaregiftmonth_yigou.png",
+          "x": -70,
+          "y": 215.05,
+          "width": 82,
+          "height": 84
+        },
+        {
+          "name": "miaoshu",
+          "type": "sprite",
+          "img": "#ui_welfaregiftmonth_miaoshu1.png",
+          "x": -1.05,
+          "y": 66.05,
+          "width": 181,
+          "height": 29
+        },
+        {
+          "name": "buy_txt",
+          "type": "label",
+          "text": "立即获得：",
+          "align": "left",
+          "size": 24,
+          "color": 1092488703,
+          "x": -104,
+          "y": 24.63,
+          "width": 127,
+          "height": 33.25
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_welfare_mojing.png",
+          "x": 36.95,
+          "y": 26.05,
+          "width": 31,
+          "height": 42
+        },
+        {
+          "name": "buy_num",
+          "type": "label",
+          "text": "50",
+          "align": "left",
+          "size": 24,
+          "color": 1092488703,
+          "x": 52,
+          "y": 24.63,
+          "width": 67,
+          "height": 33.25
+        },
+        {
+          "name": "btn_buy",
+          "type": "node",
+          "x": 2.95,
+          "y": -38.85,
+          "width": 144,
+          "height": 85,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_goal_rbtn3.png",
+              "img_down": "#ui_goal_rbtn4.png",
+              "img_disable": "#ui_common_btn_2c.png",
+              "width": 144,
+              "height": 85
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "购买",
+              "align": "center",
+              "size": 35,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -51.5,
+              "y": 4.93,
+              "width": 103,
+              "height": 45.15
+            }
+          ]
+        },
+        {
+          "name": "hint1",
+          "type": "label",
+          "text": "同时可连续30天每天",
+          "align": "center",
+          "size": 24,
+          "color": 1092488703,
+          "x": -118,
+          "y": -93.38,
+          "width": 234,
+          "height": 33.25
+        },
+        {
+          "name": "hint2",
+          "type": "label",
+          "text": "领取",
+          "align": "right",
+          "size": 24,
+          "color": 1092488703,
+          "x": -103,
+          "y": -129.63,
+          "width": 90,
+          "height": 33.25
+        },
+        {
+          "name": "hint_mojing",
+          "type": "label",
+          "text": "20魔晶",
+          "align": "left",
+          "size": 24,
+          "color": 3997826047,
+          "outlineColor": 0,
+          "x": -13,
+          "y": -129.63,
+          "width": 119,
+          "height": 33.25
+        },
+        {
+          "name": "btn_lingqu",
+          "type": "node",
+          "x": 1,
+          "y": -186.85,
+          "width": 144,
+          "height": 85,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btn_1.png",
+              "img_down": "#ui_common_btn_2.png",
+              "img_disable": "#ui_common_btn_2c.png",
+              "width": 144,
+              "height": 85
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "领取",
+              "align": "center",
+              "size": 35,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -51.5,
+              "y": 4.93,
+              "width": 103,
+              "height": 45.15
+            }
+          ]
+        },
+        {
+          "name": "day_txt",
+          "type": "label",
+          "text": "剩余天数：",
+          "align": "left",
+          "size": 24,
+          "color": 1092488703,
+          "x": -93.95,
+          "y": -242.25,
+          "width": 124.95,
+          "height": 31
+        },
+        {
+          "name": "day_num",
+          "type": "label",
+          "text": "",
+          "align": "left",
+          "size": 24,
+          "color": 2566927359,
+          "x": 32.05,
+          "y": -242.25,
+          "width": 81,
+          "height": 31
+        },
+        {
+          "name": "yilingqu",
+          "type": "sprite",
+          "img": "#ui_welfare_yilingqu.png",
+          "x": 1.5,
+          "y": -181.35,
+          "width": 145,
+          "height": 84
+        }
+      ]
+    },
+    {
+      "name": "cardlv2",
+      "type": "node",
+      "x": -0.5,
+      "width": 252,
+      "height": 533,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_welfaregiftmonth_yukabg.png",
+          "width": 252,
+          "height": 533
+        },
+        {
+          "name": "zhuangshi",
+          "type": "sprite",
+          "img": "#ui_welfaregiftmonth_lv2.png",
+          "x": 2,
+          "y": 164.05,
+          "width": 145,
+          "height": 176
+        },
+        {
+          "name": "yigoumai",
+          "type": "sprite",
+          "img": "#ui_welfaregiftmonth_yigou.png",
+          "x": -70,
+          "y": 215.05,
+          "width": 82,
+          "height": 84
+        },
+        {
+          "name": "miaoshu",
+          "type": "sprite",
+          "img": "#ui_welfaregiftmonth_miaoshu2.png",
+          "x": -3.05,
+          "y": 66.05,
+          "width": 195,
+          "height": 29
+        },
+        {
+          "name": "buy_txt",
+          "type": "label",
+          "text": "立即获得：",
+          "align": "left",
+          "size": 24,
+          "color": 1092488703,
+          "x": -104,
+          "y": 24.63,
+          "width": 127,
+          "height": 33.25
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_welfare_mojing.png",
+          "x": 36.95,
+          "y": 26.05,
+          "width": 31,
+          "height": 42
+        },
+        {
+          "name": "buy_num",
+          "type": "label",
+          "text": "150",
+          "align": "left",
+          "size": 24,
+          "color": 1092488703,
+          "x": 52,
+          "y": 24.63,
+          "width": 67,
+          "height": 33.25
+        },
+        {
+          "name": "btn_buy",
+          "type": "node",
+          "x": 2.95,
+          "y": -38.85,
+          "width": 144,
+          "height": 85,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_goal_rbtn3.png",
+              "img_down": "#ui_goal_rbtn4.png",
+              "img_disable": "#ui_common_btn_2c.png",
+              "width": 144,
+              "height": 85
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "购买",
+              "align": "center",
+              "size": 35,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -51.5,
+              "y": 4.93,
+              "width": 103,
+              "height": 45.15
+            }
+          ]
+        },
+        {
+          "name": "hint1",
+          "type": "label",
+          "text": "同时可连续30天每天",
+          "align": "center",
+          "size": 24,
+          "color": 1092488703,
+          "x": -118,
+          "y": -93.38,
+          "width": 234,
+          "height": 33.25
+        },
+        {
+          "name": "hint2",
+          "type": "label",
+          "text": "领取",
+          "align": "right",
+          "size": 24,
+          "color": 1092488703,
+          "x": -103,
+          "y": -129.63,
+          "width": 90,
+          "height": 33.25
+        },
+        {
+          "name": "hint_mojing",
+          "type": "label",
+          "text": "80魔晶",
+          "align": "left",
+          "size": 24,
+          "color": 3997826047,
+          "outlineColor": 0,
+          "x": -13,
+          "y": -129.63,
+          "width": 119,
+          "height": 33.25
+        },
+        {
+          "name": "btn_lingqu",
+          "type": "node",
+          "x": 1,
+          "y": -186.85,
+          "width": 144,
+          "height": 85,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btn_1.png",
+              "img_down": "#ui_common_btn_2.png",
+              "img_disable": "#ui_common_btn_2c.png",
+              "width": 144,
+              "height": 85
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "领取",
+              "align": "center",
+              "size": 35,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -51.5,
+              "y": 4.93,
+              "width": 103,
+              "height": 45.15
+            }
+          ]
+        },
+        {
+          "name": "day_txt",
+          "type": "label",
+          "text": "剩余天数：",
+          "align": "left",
+          "size": 24,
+          "color": 1092488703,
+          "x": -93.95,
+          "y": -242.25,
+          "width": 124.95,
+          "height": 31
+        },
+        {
+          "name": "day_num",
+          "type": "label",
+          "text": "",
+          "align": "left",
+          "size": 24,
+          "color": 2566927359,
+          "x": 32.05,
+          "y": -242.25,
+          "width": 81,
+          "height": 31
+        },
+        {
+          "name": "yilingqu",
+          "type": "sprite",
+          "img": "#ui_welfare_yilingqu.png",
+          "x": 1.5,
+          "y": -181.35,
+          "width": 145,
+          "height": 84
+        }
+      ]
+    },
+    {
+      "name": "cardlv3",
+      "type": "node",
+      "x": 248.5,
+      "width": 252,
+      "height": 533,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_welfaregiftmonth_yukabg.png",
+          "width": 252,
+          "height": 533
+        },
+        {
+          "name": "zhuangshi",
+          "type": "sprite",
+          "img": "#ui_welfaregiftmonth_lv3.png",
+          "x": 2.5,
+          "y": 163.55,
+          "width": 146,
+          "height": 177
+        },
+        {
+          "name": "yigoumai",
+          "type": "sprite",
+          "img": "#ui_welfaregiftmonth_yigou.png",
+          "x": -70,
+          "y": 215.05,
+          "width": 82,
+          "height": 84
+        },
+        {
+          "name": "miaoshu",
+          "type": "sprite",
+          "img": "#ui_welfaregiftmonth_miaoshu3.png",
+          "x": -3.05,
+          "y": 66.05,
+          "width": 195,
+          "height": 29
+        },
+        {
+          "name": "buy_txt",
+          "type": "label",
+          "text": "立即获得：",
+          "align": "left",
+          "size": 24,
+          "color": 1092488703,
+          "x": -104,
+          "y": 24.63,
+          "width": 127,
+          "height": 33.25
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_welfare_mojing.png",
+          "x": 36.95,
+          "y": 26.05,
+          "width": 31,
+          "height": 42
+        },
+        {
+          "name": "buy_num",
+          "type": "label",
+          "text": "300",
+          "align": "left",
+          "size": 24,
+          "color": 1092488703,
+          "x": 52,
+          "y": 24.63,
+          "width": 67,
+          "height": 33.25
+        },
+        {
+          "name": "btn_buy",
+          "type": "node",
+          "x": 2.95,
+          "y": -38.85,
+          "width": 144,
+          "height": 85,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_goal_rbtn3.png",
+              "img_down": "#ui_goal_rbtn4.png",
+              "img_disable": "#ui_common_btn_2c.png",
+              "width": 144,
+              "height": 85
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "购买",
+              "align": "center",
+              "size": 35,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -51.5,
+              "y": 4.93,
+              "width": 103,
+              "height": 45.15
+            }
+          ]
+        },
+        {
+          "name": "hint1",
+          "type": "label",
+          "text": "同时可连续90天每天",
+          "align": "center",
+          "size": 24,
+          "color": 1092488703,
+          "x": -118,
+          "y": -93.38,
+          "width": 234,
+          "height": 33.25
+        },
+        {
+          "name": "hint2",
+          "type": "label",
+          "text": "领取",
+          "align": "right",
+          "size": 24,
+          "color": 1092488703,
+          "x": -103,
+          "y": -129.63,
+          "width": 90,
+          "height": 33.25
+        },
+        {
+          "name": "hint_mojing",
+          "type": "label",
+          "text": "130魔晶",
+          "align": "left",
+          "size": 24,
+          "color": 3997826047,
+          "outlineColor": 0,
+          "x": -13,
+          "y": -129.63,
+          "width": 119,
+          "height": 33.25
+        },
+        {
+          "name": "btn_lingqu",
+          "type": "node",
+          "x": 1,
+          "y": -186.85,
+          "width": 144,
+          "height": 85,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btn_1.png",
+              "img_down": "#ui_common_btn_2.png",
+              "img_disable": "#ui_common_btn_2c.png",
+              "width": 144,
+              "height": 85
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "领取",
+              "align": "center",
+              "size": 35,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -51.5,
+              "y": 4.93,
+              "width": 103,
+              "height": 45.15
+            }
+          ]
+        },
+        {
+          "name": "day_txt",
+          "type": "label",
+          "text": "剩余天数：",
+          "align": "left",
+          "size": 24,
+          "color": 1092488703,
+          "x": -93.95,
+          "y": -242.25,
+          "width": 124.95,
+          "height": 31
+        },
+        {
+          "name": "day_num",
+          "type": "label",
+          "text": "",
+          "align": "left",
+          "size": 24,
+          "color": 2566927359,
+          "x": 32.05,
+          "y": -242.25,
+          "width": 81,
+          "height": 31
+        },
+        {
+          "name": "yilingqu",
+          "type": "sprite",
+          "img": "#ui_welfare_yilingqu.png",
+          "x": 1.5,
+          "y": -181.35,
+          "width": 145,
+          "height": 84
+        }
+      ]
+    },
+    {
+      "name": "hint",
+      "type": "label",
+      "text": "购买月/季卡可获得相应VIP经验。购买后请每日登陆本页面领取魔晶，过时不候哦！",
+      "align": "center",
+      "size": 20,
+      "color": 1092488703,
+      "x": -375.05,
+      "y": -281.68,
+      "width": 750.05,
+      "height": 26.35
+    }
+  ]
+}

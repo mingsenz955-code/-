@@ -1,0 +1,192 @@
+{
+  "group": [
+    "ui_login_ios"
+  ],
+  "width": 424,
+  "height": 501,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_login_ios_ditu2.png",
+      "y": 8.2,
+      "width": 424,
+      "height": 439
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_login_ios_title.png",
+      "x": 2,
+      "y": 177.5,
+      "width": 320,
+      "height": 55
+    },
+    {
+      "name": "txt_title",
+      "type": "label",
+      "text": "登录",
+      "align": "center",
+      "size": 28,
+      "color": 4294967295,
+      "x": -120.05,
+      "y": 178.85,
+      "width": 239.05,
+      "height": 35.5
+    },
+    {
+      "name": "node_regist",
+      "type": "node",
+      "x": 1,
+      "y": -144,
+      "width": 359,
+      "height": 56,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_login_ios_btn5.png",
+          "img_down": "#ui_login_ios_btn6.png",
+          "img_disable": "#ui_login_ios_btn0.png",
+          "width": 359,
+          "height": 56
+        },
+        {
+          "name": "txt",
+          "type": "label",
+          "text": "注册",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -135.55,
+          "y": 2.9,
+          "width": 273,
+          "height": 43.4
+        }
+      ]
+    },
+    {
+      "name": "node_bind",
+      "type": "node",
+      "x": 1,
+      "y": -74,
+      "width": 359,
+      "height": 56,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_login_ios_btn5.png",
+          "img_down": "#ui_login_ios_btn6.png",
+          "img_disable": "#ui_login_ios_btn0.png",
+          "width": 359,
+          "height": 56
+        },
+        {
+          "name": "txt",
+          "type": "label",
+          "text": "绑定(注册为正式用户)",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -175.5,
+          "y": 3.9,
+          "width": 350,
+          "height": 43.4
+        }
+      ]
+    },
+    {
+      "name": "node_login",
+      "type": "node",
+      "x": 1,
+      "y": -4,
+      "width": 359,
+      "height": 56,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_login_ios_btn3.png",
+          "img_down": "#ui_login_ios_btn4.png",
+          "width": 359,
+          "height": 56
+        },
+        {
+          "name": "txt",
+          "type": "label",
+          "text": "登录",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -135.55,
+          "y": 2.03,
+          "width": 273,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "name": "node_names",
+      "type": "node",
+      "x": 1,
+      "y": -78.58,
+      "width": 388.5,
+      "height": 388.75,
+      "children": [
+        {
+          "name": "bg",
+          "type": "sprite",
+          "img": "#ui_login_ios_xialadiban.png",
+          "scale9": 1,
+          "grid": {
+            "x": 31.5,
+            "y": 28.5,
+            "width": 40.5,
+            "height": 44.25
+          },
+          "x": -194.25,
+          "y": -23.88,
+          "width": 388.5,
+          "height": 341,
+          "maxw": 388.5,
+          "maxh": 341
+        },
+        {
+          "name": "huadong",
+          "type": "list",
+          "x": 0.5,
+          "y": -23.82,
+          "width": 363.5,
+          "height": 315.2
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_login_ios_shurukuang2.png",
+          "x": 0.75,
+          "y": 166.88,
+          "width": 371,
+          "height": 55
+        },
+        {
+          "name": "ckb_dropdown",
+          "type": "ckb",
+          "img_on": "#ui_login_ios_btnxiala1.png",
+          "img_off": "#ui_login_ios_btnxiala2.png",
+          "x": 158.4,
+          "y": 167.22
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "快速登录",
+          "align": "left",
+          "size": 28,
+          "color": 4294967295,
+          "x": -175.75,
+          "y": 167.18,
+          "width": 308.15,
+          "height": 35.5
+        }
+      ]
+    }
+  ]
+}

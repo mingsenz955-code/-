@@ -1,0 +1,57 @@
+{
+  "group": {},
+  "children": [
+    {
+      "name": "btn",
+      "type": "btn",
+      "img_normal": "#ui_main_ico_Long_DiBan0001.png",
+      "img_down": "#ui_main_ico_Long_DiBan0002.png"
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_main_ico_ChanChu.png",
+      "width": 94,
+      "height": 100
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "信息",
+      "size": 21,
+      "align": "center",
+      "color": 4294967269,
+      "x": -42.5,
+      "y": -34.4,
+      "width": 84,
+      "height": 27.6
+    },
+    {
+      "name": "shuzidiban",
+      "type": "sprite",
+      "img": "#ui_common_shuzikuangcp.png",
+      "y": 65,
+      "width": 94,
+      "height": 30
+    },
+    {
+      "name": "txt_cost",
+      "type": "label",
+      "text": " ",
+      "size": 18,
+      "align": "right",
+      "color": 229,
+      "x": -57,
+      "y": 64.6,
+      "width": 82,
+      "height": 26.5
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_main_06.png",
+      "x": 42.7,
+      "y": 64.25,
+      "width": 31.8,
+      "height": 31.8
+    }
+  ]
+}

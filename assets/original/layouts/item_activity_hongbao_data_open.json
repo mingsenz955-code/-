@@ -1,0 +1,113 @@
+{
+  "group": [
+    "ui_activityhongbao"
+  ],
+  "width": 211,
+  "height": 377,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_activityhongbao_diban2.png",
+      "y": 31.4,
+      "width": 211,
+      "height": 326
+    },
+    {
+      "name": "hint",
+      "type": "label",
+      "text": " ",
+      "align": "center",
+      "size": 20,
+      "color": 4294967295,
+      "outlineColor": 8000778,
+      "x": -89.5,
+      "y": 28.07,
+      "width": 179,
+      "height": 30.15
+    },
+    {
+      "name": "hint_num",
+      "type": "label",
+      "text": " ",
+      "align": "left",
+      "size": 20,
+      "color": 4294967295,
+      "outlineColor": 8000778,
+      "x": -26.5,
+      "y": -19.1,
+      "width": 94,
+      "height": 26.5
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_activityhongbao_mojing.png",
+      "x": -49.65,
+      "y": -15,
+      "width": 31,
+      "height": 42
+    },
+    {
+      "name": "hint2",
+      "type": "label",
+      "text": "",
+      "align": "center",
+      "size": 20,
+      "color": 1092488703,
+      "x": -89.5,
+      "y": 158.9,
+      "width": 179,
+      "height": 26.5
+    },
+    {
+      "name": "hint2_num",
+      "type": "label",
+      "text": "",
+      "align": "left",
+      "size": 20,
+      "color": 1092488703,
+      "x": -15.5,
+      "y": 122.9,
+      "width": 94,
+      "height": 26.5
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_activityhongbao_mojing.png",
+      "x": -42.65,
+      "y": 125,
+      "width": 31,
+      "height": 42
+    },
+    {
+      "name": "btn_lingqu",
+      "type": "node",
+      "y": -139.95,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png",
+          "img_disable": "#ui_common_btn_2c.png",
+          "width": 144,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "领取",
+          "align": "center",
+          "size": 28,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -51.5,
+          "y": 4.75,
+          "width": 103,
+          "height": 35.5
+        }
+      ]
+    }
+  ]
+}

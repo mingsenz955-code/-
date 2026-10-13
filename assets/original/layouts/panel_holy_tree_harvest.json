@@ -1,0 +1,166 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -299,
+      "y": 9.03,
+      "width": 596,
+      "height": 471.95,
+      "maxw": 596,
+      "maxh": 471.95
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -298,
+      "y": 212.5,
+      "width": 596,
+      "height": 55,
+      "maxw": 596,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "宝箱",
+      "size": 25,
+      "align": "center",
+      "color": 4294967295,
+      "x": -267.85,
+      "y": 215.05,
+      "width": 517,
+      "height": 32.1
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_haoyoulan2",
+      "scale9": 1,
+      "x": -262.75,
+      "y": 73.67,
+      "width": 520,
+      "height": 128.65,
+      "maxw": 520,
+      "maxh": 128.65
+    },
+    {
+      "name": "huadong_shouhuo",
+      "type": "list",
+      "x": -3,
+      "y": 73.55,
+      "width": 492,
+      "height": 106
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_goal_di2.png",
+      "scale9": 1,
+      "x": -269.75,
+      "y": 156,
+      "width": 530,
+      "height": 43,
+      "maxw": 530,
+      "maxh": 43
+    },
+    {
+      "name": "shouhuo",
+      "type": "label",
+      "text": "收获",
+      "size": 26,
+      "align": "center",
+      "color": 1092488703,
+      "x": -196.75,
+      "y": 158.88,
+      "width": 376,
+      "height": 33.25
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_haoyoulan2",
+      "scale9": 1,
+      "x": -262.75,
+      "y": -104.47,
+      "width": 520,
+      "height": 128.65,
+      "maxw": 520,
+      "maxh": 128.65
+    },
+    {
+      "name": "huadong_zhanlipin",
+      "type": "list",
+      "x": -3,
+      "y": -104.45,
+      "width": 492,
+      "height": 106
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_goal_di2.png",
+      "scale9": 1,
+      "x": -269.75,
+      "y": -23.25,
+      "width": 530.05,
+      "height": 43,
+      "maxw": 530.05,
+      "maxh": 43
+    },
+    {
+      "name": "zhanlipin",
+      "type": "label",
+      "text": "战利品",
+      "size": 26,
+      "align": "center",
+      "color": 1092488703,
+      "x": -196.75,
+      "y": -21.13,
+      "width": 376,
+      "height": 33.25
+    },
+    {
+      "name": "btn_GuanBiXiao",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 282.5,
+      "y": 215
+    },
+    {
+      "name": "lingqu",
+      "type": "node",
+      "x": -6.75,
+      "y": -216.85,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png",
+          "img_disable": "#ui_common_btn_2c.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "领取",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    }
+  ]
+}

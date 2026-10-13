@@ -1,0 +1,61 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -403.8,
+      "y": -0.53,
+      "width": 801.5,
+      "height": 651.05,
+      "maxw": 801.5,
+      "maxh": 651.05
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -402.8,
+      "y": 297.5,
+      "width": 800,
+      "height": 55,
+      "maxw": 800,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "种植",
+      "size": 25,
+      "align": "center",
+      "color": 4294967295,
+      "x": -334.65,
+      "y": 300.05,
+      "width": 666.75,
+      "height": 32.1
+    },
+    {
+      "name": "btn_GuanBiXiao",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 386.8,
+      "y": 300
+    },
+    {
+      "name": "hadong",
+      "type": "list",
+      "x": -2.8,
+      "y": -15.15,
+      "width": 747.7,
+      "height": 547.5
+    }
+  ]
+}

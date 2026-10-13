@@ -1,0 +1,136 @@
+{
+  "group": [
+    "ui_arenanew"
+  ],
+  "width": 400,
+  "height": 105,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_haoyoulan2.png",
+      "scale9": 1,
+      "x": -200,
+      "width": 400,
+      "height": 105,
+      "maxw": 400,
+      "maxh": 105
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_sekuai1.png",
+      "scale9": 1,
+      "x": -111.45,
+      "y": 1,
+      "width": 110,
+      "height": 97,
+      "maxw": 110,
+      "maxh": 97
+    },
+    {
+      "name": "win",
+      "type": "node",
+      "x": -155.45,
+      "y": -0.15,
+      "width": 57,
+      "height": 57,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_arenanew_jg1.png",
+          "width": 57,
+          "height": 57
+        }
+      ]
+    },
+    {
+      "name": "lose",
+      "type": "node",
+      "x": -155.45,
+      "y": -0.15,
+      "width": 57,
+      "height": 57,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_arenanew_jg2.png",
+          "width": 57,
+          "height": 57
+        }
+      ]
+    },
+    {
+      "name": "target",
+      "type": "node",
+      "x": -56.45,
+      "y": -1.35,
+      "width": 62,
+      "height": 62,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_arenanew_touxiang1.png",
+          "width": 62,
+          "height": 62
+        },
+        {
+          "name": "default",
+          "type": "sprite",
+          "img": "#ui_arenanew_meiren.png",
+          "width": 50,
+          "height": 50
+        },
+        {
+          "name": "touxiang",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "level",
+          "type": "label",
+          "text": "lv25",
+          "align": "left",
+          "size": 18,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -26,
+          "y": -17.48,
+          "width": 53,
+          "height": 24.25
+        }
+      ]
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "神马神马",
+      "align": "left",
+      "size": 21,
+      "color": 1092488703,
+      "x": 9.95,
+      "y": 15.15,
+      "width": 164,
+      "height": 27.6
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_arenanew_fenge.png",
+      "x": 92.3,
+      "y": -1.85,
+      "width": 164,
+      "height": 2
+    },
+    {
+      "name": "txt_time",
+      "type": "label",
+      "text": "2分钟前",
+      "align": "left",
+      "size": 21,
+      "color": 1092488703,
+      "x": 9.95,
+      "y": -15.85,
+      "width": 164,
+      "height": 27.6
+    }
+  ]
+}

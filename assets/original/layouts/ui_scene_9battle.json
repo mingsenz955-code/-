@@ -1,0 +1,1075 @@
+{
+  "group": [
+    "ui_battle_battle_bg"
+  ],
+  "children": [
+    {
+      "name": "bg",
+      "type": "btn",
+      "img_normal": "#ui_battle_battle_bg.png",
+      "img_down": "#ui_battle_battle_bg.png"
+    },
+    {
+      "name": "dragon_right_1",
+      "type": "node",
+      "x": 182.05,
+      "y": -73.95,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "dragon_left_1",
+      "type": "node",
+      "x": -182.05,
+      "y": -73.95,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "effect_right_1",
+      "type": "node",
+      "x": 182.05,
+      "y": -73.95,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "effect_left_1",
+      "type": "node",
+      "x": -182.05,
+      "y": -73.95,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "dragon_right_2",
+      "type": "node",
+      "x": 222.05,
+      "y": -157.95,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "dragon_left_2",
+      "type": "node",
+      "x": -222.05,
+      "y": -157.95,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "effect_right_2",
+      "type": "node",
+      "x": 222.05,
+      "y": -157.95,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "effect_left_2",
+      "type": "node",
+      "x": -222.05,
+      "y": -157.95,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "dragon_right_3",
+      "type": "node",
+      "x": 268.05,
+      "y": -245.95,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "dragon_left_3",
+      "type": "node",
+      "x": -268.05,
+      "y": -245.95,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "effect_right_3",
+      "type": "node",
+      "x": 268.05,
+      "y": -245.95,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "effect_left_3",
+      "type": "node",
+      "x": -268.05,
+      "y": -245.95,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "btn_skip",
+      "type": "node",
+      "y": -322.5,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "跳过",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_battle_title_vs.png",
+      "y": 324,
+      "width": 510,
+      "height": 120
+    },
+    {
+      "name": "player_left",
+      "type": "node",
+      "x": -134.1,
+      "y": 344.2,
+      "width": 142,
+      "height": 73.6,
+      "children": [
+        {
+          "name": "tx_power",
+          "type": "label",
+          "text": " ",
+          "size": 18,
+          "align": "center",
+          "color": 4294967295,
+          "x": -50,
+          "y": -35.23,
+          "width": 126,
+          "height": 25.95
+        },
+        {
+          "name": "n1",
+          "type": "node",
+          "x": 25.5,
+          "y": 20.17,
+          "width": 33,
+          "height": 33.25,
+          "children": [
+            {
+              "name": "con_flag",
+              "type": "node",
+              "x": 4.5,
+              "y": -13.38,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "paiming",
+              "type": "label",
+              "text": " ",
+              "size": 26,
+              "align": "center",
+              "color": 4294967295,
+              "outlineColor": 10027008,
+              "x": -11.5,
+              "y": -11.4,
+              "width": 33,
+              "height": 33.25
+            }
+          ]
+        },
+        {
+          "name": "n2",
+          "type": "node",
+          "x": -14.5,
+          "y": 20.17,
+          "width": 33,
+          "height": 33.25,
+          "children": [
+            {
+              "name": "con_flag",
+              "type": "node",
+              "x": 4.5,
+              "y": -13.38,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "paiming",
+              "type": "label",
+              "text": " ",
+              "size": 26,
+              "align": "center",
+              "color": 4294967295,
+              "outlineColor": 10027008,
+              "x": -11.5,
+              "y": -11.4,
+              "width": 33,
+              "height": 33.25
+            }
+          ]
+        },
+        {
+          "name": "n3",
+          "type": "node",
+          "x": -54.5,
+          "y": 20.17,
+          "width": 33,
+          "height": 33.25,
+          "children": [
+            {
+              "name": "con_flag",
+              "type": "node",
+              "x": 4.5,
+              "y": -13.38,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "paiming",
+              "type": "label",
+              "text": " ",
+              "size": 26,
+              "align": "center",
+              "color": 4294967295,
+              "outlineColor": 10027008,
+              "x": -11.5,
+              "y": -11.4,
+              "width": 33,
+              "height": 33.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "player_right",
+      "type": "node",
+      "x": 156.4,
+      "y": 344.2,
+      "width": 145,
+      "height": 73.6,
+      "children": [
+        {
+          "name": "tx_power",
+          "type": "label",
+          "text": " ",
+          "size": 18,
+          "align": "center",
+          "color": 4294967295,
+          "x": -99.5,
+          "y": -35.23,
+          "width": 126,
+          "height": 25.95
+        },
+        {
+          "name": "n3",
+          "type": "node",
+          "x": 24,
+          "y": 20.17,
+          "width": 33,
+          "height": 33.25,
+          "children": [
+            {
+              "name": "con_flag",
+              "type": "node",
+              "x": 4.5,
+              "y": -13.38,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "paiming",
+              "type": "label",
+              "text": " ",
+              "size": 26,
+              "align": "center",
+              "color": 4294967295,
+              "outlineColor": 10027008,
+              "x": -11.5,
+              "y": -11.4,
+              "width": 33,
+              "height": 33.25
+            }
+          ]
+        },
+        {
+          "name": "n2",
+          "type": "node",
+          "x": -16,
+          "y": 20.17,
+          "width": 33,
+          "height": 33.25,
+          "children": [
+            {
+              "name": "con_flag",
+              "type": "node",
+              "x": 4.5,
+              "y": -13.38,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "paiming",
+              "type": "label",
+              "text": " ",
+              "size": 26,
+              "align": "center",
+              "color": 4294967295,
+              "outlineColor": 10027008,
+              "x": -11.5,
+              "y": -11.4,
+              "width": 33,
+              "height": 33.25
+            }
+          ]
+        },
+        {
+          "name": "n1",
+          "type": "node",
+          "x": -56,
+          "y": 20.17,
+          "width": 33,
+          "height": 33.25,
+          "children": [
+            {
+              "name": "con_flag",
+              "type": "node",
+              "x": 4.5,
+              "y": -13.38,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "paiming",
+              "type": "label",
+              "text": " ",
+              "size": 26,
+              "align": "center",
+              "color": 4294967295,
+              "outlineColor": 10027008,
+              "x": -11.5,
+              "y": -11.4,
+              "width": 33,
+              "height": 33.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "state_left1",
+      "type": "node",
+      "x": -366.55,
+      "y": 207.13,
+      "width": 231.2,
+      "height": 56.35,
+      "left": 29.85,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_battle_sfdg.png",
+          "x": 8.65,
+          "y": 13.68,
+          "width": 126,
+          "height": 27
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "x": -86.35,
+          "y": -1.07,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -86.35,
+          "y": -1.07,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "",
+          "size": 17,
+          "align": "left",
+          "color": 4294967295,
+          "x": -48.2,
+          "y": 14.88,
+          "width": 116,
+          "height": 23.1
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_c1.png",
+          "scale9": 1,
+          "x": -53.25,
+          "y": -6.77,
+          "width": 125,
+          "height": 14,
+          "maxw": 125,
+          "maxh": 14
+        },
+        {
+          "name": "hp",
+          "type": "sprite",
+          "img": "#ui_battle_c2.png",
+          "scale9": 1,
+          "x": -53.25,
+          "y": -6.77,
+          "width": 125,
+          "height": 14,
+          "maxw": 125,
+          "maxh": 14
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_c1.png",
+          "scale9": 1,
+          "x": -53.25,
+          "y": -22.18,
+          "width": 125,
+          "height": 14,
+          "maxw": 125,
+          "maxh": 14
+        },
+        {
+          "name": "mp",
+          "type": "sprite",
+          "img": "#ui_battle_c3.png",
+          "scale9": 1,
+          "x": -53.25,
+          "y": -22.18,
+          "width": 125,
+          "height": 14,
+          "maxw": 125,
+          "maxh": 14
+        },
+        {
+          "name": "buff1",
+          "type": "node",
+          "x": 88.35,
+          "y": -12.82,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "buff2",
+          "type": "node",
+          "x": 116.6,
+          "y": -12.82,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "buff3",
+          "type": "node",
+          "x": 144.85,
+          "y": -12.82,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "state_left2",
+      "type": "node",
+      "x": -366.55,
+      "y": 142.13,
+      "width": 231.2,
+      "height": 56.35,
+      "left": 29.85,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_battle_sfdg.png",
+          "x": 8.65,
+          "y": 13.68,
+          "width": 126,
+          "height": 27
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "x": -86.35,
+          "y": -1.07,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -86.35,
+          "y": -1.07,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "",
+          "size": 17,
+          "align": "left",
+          "color": 4294967295,
+          "x": -48.2,
+          "y": 14.88,
+          "width": 116,
+          "height": 23.1
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_c1.png",
+          "scale9": 1,
+          "x": -53.25,
+          "y": -6.77,
+          "width": 125,
+          "height": 14,
+          "maxw": 125,
+          "maxh": 14
+        },
+        {
+          "name": "hp",
+          "type": "sprite",
+          "img": "#ui_battle_c2.png",
+          "scale9": 1,
+          "x": -53.25,
+          "y": -6.77,
+          "width": 125,
+          "height": 14,
+          "maxw": 125,
+          "maxh": 14
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_c1.png",
+          "scale9": 1,
+          "x": -53.25,
+          "y": -22.18,
+          "width": 125,
+          "height": 14,
+          "maxw": 125,
+          "maxh": 14
+        },
+        {
+          "name": "mp",
+          "type": "sprite",
+          "img": "#ui_battle_c3.png",
+          "scale9": 1,
+          "x": -53.25,
+          "y": -22.18,
+          "width": 125,
+          "height": 14,
+          "maxw": 125,
+          "maxh": 14
+        },
+        {
+          "name": "buff1",
+          "type": "node",
+          "x": 88.35,
+          "y": -12.82,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "buff2",
+          "type": "node",
+          "x": 116.6,
+          "y": -12.82,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "buff3",
+          "type": "node",
+          "x": 144.85,
+          "y": -12.82,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "state_left3",
+      "type": "node",
+      "x": -366.55,
+      "y": 77.13,
+      "width": 231.2,
+      "height": 56.35,
+      "left": 29.85,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_battle_sfdg.png",
+          "x": 8.65,
+          "y": 13.68,
+          "width": 126,
+          "height": 27
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "x": -86.35,
+          "y": -1.07,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -86.35,
+          "y": -1.07,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "",
+          "size": 17,
+          "align": "left",
+          "color": 4294967295,
+          "x": -48.2,
+          "y": 14.88,
+          "width": 116,
+          "height": 23.1
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_c1.png",
+          "scale9": 1,
+          "x": -53.25,
+          "y": -6.77,
+          "width": 125,
+          "height": 14,
+          "maxw": 125,
+          "maxh": 14
+        },
+        {
+          "name": "hp",
+          "type": "sprite",
+          "img": "#ui_battle_c2.png",
+          "scale9": 1,
+          "x": -53.25,
+          "y": -6.77,
+          "width": 125,
+          "height": 14,
+          "maxw": 125,
+          "maxh": 14
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_c1.png",
+          "scale9": 1,
+          "x": -53.25,
+          "y": -22.18,
+          "width": 125,
+          "height": 14,
+          "maxw": 125,
+          "maxh": 14
+        },
+        {
+          "name": "mp",
+          "type": "sprite",
+          "img": "#ui_battle_c3.png",
+          "scale9": 1,
+          "x": -53.25,
+          "y": -22.18,
+          "width": 125,
+          "height": 14,
+          "maxw": 125,
+          "maxh": 14
+        },
+        {
+          "name": "buff1",
+          "type": "node",
+          "x": 88.35,
+          "y": -12.82,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "buff2",
+          "type": "node",
+          "x": 116.6,
+          "y": -12.82,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "buff3",
+          "type": "node",
+          "x": 144.85,
+          "y": -12.82,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "state_right1",
+      "type": "node",
+      "x": 359.5,
+      "y": 207.13,
+      "width": 231.5,
+      "height": 56.35,
+      "right": 36.75,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_battle_sfdg.png",
+          "x": 13.55,
+          "y": 13.68,
+          "width": 126,
+          "height": 27
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "x": 109.55,
+          "y": -1.07,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": 109.55,
+          "y": -1.07,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "",
+          "size": 17,
+          "align": "right",
+          "color": 4294967295,
+          "x": -45.3,
+          "y": 14.38,
+          "width": 116,
+          "height": 23.1
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_c1.png",
+          "scale9": 1,
+          "x": -49.35,
+          "y": -6.77,
+          "width": 125,
+          "height": 14,
+          "maxw": 125,
+          "maxh": 14
+        },
+        {
+          "name": "hp",
+          "type": "sprite",
+          "img": "#ui_battle_c2.png",
+          "scale9": 1,
+          "x": -49.35,
+          "y": -6.77,
+          "width": 125,
+          "height": 14,
+          "maxw": 125,
+          "maxh": 14
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_c1.png",
+          "scale9": 1,
+          "x": -49.35,
+          "y": -22.18,
+          "width": 125,
+          "height": 14,
+          "maxw": 125,
+          "maxh": 14
+        },
+        {
+          "name": "mp",
+          "type": "sprite",
+          "img": "#ui_battle_c3.png",
+          "scale9": 1,
+          "x": -49.35,
+          "y": -22.18,
+          "width": 125,
+          "height": 14,
+          "maxw": 125,
+          "maxh": 14
+        },
+        {
+          "name": "buff3",
+          "type": "node",
+          "x": -121.95,
+          "y": -12.82,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "buff2",
+          "type": "node",
+          "x": -93.7,
+          "y": -12.82,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "buff1",
+          "type": "node",
+          "x": -65.45,
+          "y": -12.82,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "state_right2",
+      "type": "node",
+      "x": 359.5,
+      "y": 142.13,
+      "width": 231.5,
+      "height": 56.35,
+      "right": 36.75,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_battle_sfdg.png",
+          "x": 13.55,
+          "y": 13.68,
+          "width": 126,
+          "height": 27
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "x": 109.55,
+          "y": -1.07,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": 109.55,
+          "y": -1.07,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "",
+          "size": 17,
+          "align": "right",
+          "color": 4294967295,
+          "x": -45.3,
+          "y": 14.38,
+          "width": 116,
+          "height": 23.1
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_c1.png",
+          "scale9": 1,
+          "x": -49.35,
+          "y": -6.77,
+          "width": 125,
+          "height": 14,
+          "maxw": 125,
+          "maxh": 14
+        },
+        {
+          "name": "hp",
+          "type": "sprite",
+          "img": "#ui_battle_c2.png",
+          "scale9": 1,
+          "x": -49.35,
+          "y": -6.77,
+          "width": 125,
+          "height": 14,
+          "maxw": 125,
+          "maxh": 14
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_c1.png",
+          "scale9": 1,
+          "x": -49.35,
+          "y": -22.18,
+          "width": 125,
+          "height": 14,
+          "maxw": 125,
+          "maxh": 14
+        },
+        {
+          "name": "mp",
+          "type": "sprite",
+          "img": "#ui_battle_c3.png",
+          "scale9": 1,
+          "x": -49.35,
+          "y": -22.18,
+          "width": 125,
+          "height": 14,
+          "maxw": 125,
+          "maxh": 14
+        },
+        {
+          "name": "buff3",
+          "type": "node",
+          "x": -121.95,
+          "y": -12.82,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "buff2",
+          "type": "node",
+          "x": -93.7,
+          "y": -12.82,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "buff1",
+          "type": "node",
+          "x": -65.45,
+          "y": -12.82,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "state_right3",
+      "type": "node",
+      "x": 359.5,
+      "y": 77.13,
+      "width": 231.5,
+      "height": 56.35,
+      "right": 36.75,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_battle_sfdg.png",
+          "x": 13.55,
+          "y": 13.68,
+          "width": 126,
+          "height": 27
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "x": 109.55,
+          "y": -1.07,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": 109.55,
+          "y": -1.07,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "",
+          "size": 17,
+          "align": "right",
+          "color": 4294967295,
+          "x": -45.3,
+          "y": 14.38,
+          "width": 116,
+          "height": 23.1
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_c1.png",
+          "scale9": 1,
+          "x": -49.35,
+          "y": -6.77,
+          "width": 125,
+          "height": 14,
+          "maxw": 125,
+          "maxh": 14
+        },
+        {
+          "name": "hp",
+          "type": "sprite",
+          "img": "#ui_battle_c2.png",
+          "scale9": 1,
+          "x": -49.35,
+          "y": -6.77,
+          "width": 125,
+          "height": 14,
+          "maxw": 125,
+          "maxh": 14
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_c1.png",
+          "scale9": 1,
+          "x": -49.35,
+          "y": -22.18,
+          "width": 125,
+          "height": 14,
+          "maxw": 125,
+          "maxh": 14
+        },
+        {
+          "name": "mp",
+          "type": "sprite",
+          "img": "#ui_battle_c3.png",
+          "scale9": 1,
+          "x": -49.35,
+          "y": -22.18,
+          "width": 125,
+          "height": 14,
+          "maxw": 125,
+          "maxh": 14
+        },
+        {
+          "name": "buff3",
+          "type": "node",
+          "x": -121.95,
+          "y": -12.82,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "buff2",
+          "type": "node",
+          "x": -93.7,
+          "y": -12.82,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "buff1",
+          "type": "node",
+          "x": -65.45,
+          "y": -12.82,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    }
+  ]
+}

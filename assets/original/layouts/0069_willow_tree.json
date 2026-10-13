@@ -1,0 +1,16 @@
+{
+  "group": [
+    "buildings/0069_willow_tree_g"
+  ],
+  "width": 252,
+  "height": 218,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0069_willow_tree_g_bg.png",
+      "x": 22,
+      "y": 148
+    }
+  ]
+}

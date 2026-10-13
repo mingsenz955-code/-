@@ -1,0 +1,43 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_starup_1.png",
+      "width": 670,
+      "height": 123
+    },
+    {
+      "name": "long",
+      "type": "sprite",
+      "img": "#ui_starup_3.png",
+      "x": -5,
+      "y": -18.5,
+      "width": 390,
+      "height": 57
+    },
+    {
+      "name": "short",
+      "type": "sprite",
+      "img": "#ui_starup_2.png",
+      "x": -5,
+      "y": -18.5,
+      "width": 390,
+      "height": 57
+    },
+    {
+      "name": "slotnumber",
+      "type": "node",
+      "y": -18,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "slottext",
+      "type": "node",
+      "y": 32,
+      "width": 0,
+      "height": 0
+    }
+  ]
+}

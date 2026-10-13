@@ -1,0 +1,80 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_battle_bg0.png",
+      "y": -4,
+      "width": 200,
+      "height": 480
+    },
+    {
+      "name": "con_leixing",
+      "type": "node",
+      "y": -16,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "txt_jiangli",
+      "type": "label",
+      "text": "可获得魔晶",
+      "size": 20,
+      "align": "center",
+      "color": 4294967295,
+      "x": -63.5,
+      "y": -83.63,
+      "width": 122,
+      "height": 26.15
+    },
+    {
+      "name": "txt_daojishi",
+      "type": "label",
+      "text": "倒计时： 00:00:00",
+      "size": 15,
+      "align": "center",
+      "color": 4294967295,
+      "x": -74,
+      "y": -59.45,
+      "width": 146,
+      "height": 20.9
+    },
+    {
+      "name": "btn_jinru",
+      "type": "node",
+      "x": -2,
+      "y": -140.15,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png",
+          "img_disable": "#ui_common_btn_2c.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "进入",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "name": "lock",
+      "type": "sprite",
+      "img": "#ui_battle_suolian.png",
+      "y": 34.65,
+      "width": 210,
+      "height": 56
+    }
+  ]
+}

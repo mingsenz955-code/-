@@ -1,0 +1,593 @@
+{
+  "group": [
+    "ui_activitycat"
+  ],
+  "width": 1032,
+  "height": 635,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -518,
+      "y": -54,
+      "width": 1032,
+      "height": 629,
+      "maxw": 1032,
+      "maxh": 629
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_activitycat_catbg.png",
+      "x": -6.5,
+      "y": -0.05,
+      "width": 965,
+      "height": 534
+    },
+    {
+      "name": "hint",
+      "type": "label",
+      "text": "每次招财收益的魔晶量100%大于花费",
+      "align": "center",
+      "size": 24,
+      "color": 1092488703,
+      "x": -258.95,
+      "y": -179.85,
+      "width": 513,
+      "height": 32.1
+    },
+    {
+      "name": "hint_lock1",
+      "type": "label",
+      "text": "第4次招财后解锁",
+      "align": "left",
+      "size": 25,
+      "color": 1092488703,
+      "x": -434.95,
+      "y": -288.85,
+      "width": 365,
+      "height": 32.1
+    },
+    {
+      "name": "hint_lock1_num",
+      "type": "label",
+      "text": "第4档位",
+      "align": "left",
+      "size": 25,
+      "color": 2566914303,
+      "x": -239.95,
+      "y": -288.85,
+      "width": 365,
+      "height": 32.1
+    },
+    {
+      "name": "hint_lock2",
+      "type": "label",
+      "text": "第8次招财后解锁",
+      "align": "left",
+      "size": 25,
+      "color": 1092488703,
+      "x": -434.95,
+      "y": -321.85,
+      "width": 365,
+      "height": 32.1
+    },
+    {
+      "name": "hint_lock2_num",
+      "type": "label",
+      "text": "第5档位",
+      "align": "left",
+      "size": 25,
+      "color": 2566914303,
+      "x": -239.95,
+      "y": -321.85,
+      "width": 365,
+      "height": 32.1
+    },
+    {
+      "name": "hint_day",
+      "type": "label",
+      "text": "活动时间",
+      "align": "left",
+      "size": 22,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -200.95,
+      "y": 108.83,
+      "width": 409,
+      "height": 28.75
+    },
+    {
+      "name": "hint_time",
+      "type": "label",
+      "text": " ",
+      "align": "right",
+      "size": 22,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": 99.05,
+      "y": 108.83,
+      "width": 106,
+      "height": 28.75
+    },
+    {
+      "name": "hint_lottery",
+      "type": "label",
+      "text": "可招财次数：",
+      "align": "left",
+      "size": 22,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -379.95,
+      "y": -212.18,
+      "width": 140,
+      "height": 28.75
+    },
+    {
+      "name": "hint_lottery_num",
+      "type": "label",
+      "text": " ",
+      "align": "left",
+      "size": 24,
+      "color": 872349951,
+      "outlineColor": 0,
+      "x": -239.95,
+      "y": -212.3,
+      "width": 60,
+      "height": 31
+    },
+    {
+      "name": "hint_diamond",
+      "type": "label",
+      "text": "魔晶总数：",
+      "align": "left",
+      "size": 22,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -118.95,
+      "y": -212.18,
+      "width": 130,
+      "height": 28.75
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_activitycat_mojing.png",
+      "x": -1.5,
+      "y": -211.95,
+      "width": 31,
+      "height": 42
+    },
+    {
+      "name": "hint_diamond_num",
+      "type": "label",
+      "text": " ",
+      "align": "left",
+      "size": 22,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": 12.05,
+      "y": -212.18,
+      "width": 113,
+      "height": 28.75
+    },
+    {
+      "name": "hint_price",
+      "type": "label",
+      "text": "本次招财花费：",
+      "align": "left",
+      "size": 22,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": 145.05,
+      "y": -212.18,
+      "width": 170,
+      "height": 28.75
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_activitycat_mojing.png",
+      "x": 319.5,
+      "y": -211.95,
+      "width": 31,
+      "height": 42
+    },
+    {
+      "name": "hint_price_num",
+      "type": "label",
+      "text": " ",
+      "align": "left",
+      "size": 22,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": 335.05,
+      "y": -212.18,
+      "width": 76,
+      "height": 28.75
+    },
+    {
+      "name": "btn_charge",
+      "type": "node",
+      "x": 79.35,
+      "y": -308.3,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "width": 200,
+          "height": 85
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "前往充值",
+          "align": "center",
+          "size": 30,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -85.9,
+          "y": 3.63,
+          "width": 170,
+          "height": 37.75
+        }
+      ]
+    },
+    {
+      "name": "btn_start",
+      "type": "node",
+      "x": 329.35,
+      "y": -308.3,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "width": 200,
+          "height": 85
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "招财",
+          "align": "center",
+          "size": 30,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -85.9,
+          "y": 3.63,
+          "width": 170,
+          "height": 37.75
+        }
+      ]
+    },
+    {
+      "name": "huadong5",
+      "type": "list",
+      "x": -328.6,
+      "y": -39.35,
+      "width": 104,
+      "height": 220
+    },
+    {
+      "name": "huadong4",
+      "type": "list",
+      "x": -165.6,
+      "y": -39.35,
+      "width": 104,
+      "height": 220
+    },
+    {
+      "name": "huadong3",
+      "type": "list",
+      "x": -1.6,
+      "y": -39.35,
+      "width": 104,
+      "height": 220
+    },
+    {
+      "name": "huadong2",
+      "type": "list",
+      "x": 162.4,
+      "y": -39.35,
+      "width": 104,
+      "height": 220
+    },
+    {
+      "name": "huadong1",
+      "type": "list",
+      "x": 326.4,
+      "y": -39.35,
+      "width": 104,
+      "height": 220
+    },
+    {
+      "name": "hint_vip",
+      "type": "label",
+      "text": "需达到VIP4级",
+      "align": "center",
+      "size": 24,
+      "color": 4294902015,
+      "outlineColor": 0,
+      "x": 232.85,
+      "y": -336.8,
+      "width": 191,
+      "height": 31
+    },
+    {
+      "name": "lock4",
+      "type": "sprite",
+      "img": "#ui_activitycat_lock.png",
+      "x": -165.45,
+      "y": -39.3,
+      "width": 159,
+      "height": 249
+    },
+    {
+      "name": "lock5",
+      "type": "sprite",
+      "img": "#ui_activitycat_lock.png",
+      "x": -328.45,
+      "y": -39.3,
+      "width": 159,
+      "height": 249
+    },
+    {
+      "name": "btn_help",
+      "type": "node",
+      "x": 350.6,
+      "y": 109.15,
+      "width": 71,
+      "height": 34,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_activitycat_btn_help.png",
+          "img_down": "#ui_activitycat_btn_help.png",
+          "width": 71,
+          "height": 34
+        }
+      ]
+    },
+    {
+      "name": "light1",
+      "type": "node",
+      "x": 97.5,
+      "y": 172.5,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "light2",
+      "type": "node",
+      "x": 165.5,
+      "y": 172.5,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "light3",
+      "type": "node",
+      "x": 229.5,
+      "y": 172.5,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "light4",
+      "type": "node",
+      "x": 298.5,
+      "y": 172.5,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "light5",
+      "type": "node",
+      "x": 364.5,
+      "y": 172.5,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "light6",
+      "type": "node",
+      "x": 433.5,
+      "y": 172.5,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "light7",
+      "type": "node",
+      "x": 449.5,
+      "y": 99.5,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "light8",
+      "type": "node",
+      "x": 454.5,
+      "y": 30.5,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "light9",
+      "type": "node",
+      "x": 455.5,
+      "y": -47.5,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "light10",
+      "type": "node",
+      "x": 455.5,
+      "y": -118.5,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "light11",
+      "type": "node",
+      "x": 448.5,
+      "y": -183.5,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "light12",
+      "type": "node",
+      "x": 425.5,
+      "y": -245.5,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "light13",
+      "type": "node",
+      "x": 358.5,
+      "y": -245.5,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "light14",
+      "type": "node",
+      "x": 296.5,
+      "y": -245.5,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "light15",
+      "type": "node",
+      "x": 233.5,
+      "y": -245.5,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "light16",
+      "type": "node",
+      "x": 164.5,
+      "y": -245.5,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "light17",
+      "type": "node",
+      "x": 99.5,
+      "y": -245.5,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "light18",
+      "type": "node",
+      "x": 38.5,
+      "y": -245.5,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "light19",
+      "type": "node",
+      "x": -25.5,
+      "y": -245.5,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "light20",
+      "type": "node",
+      "x": -88.5,
+      "y": -245.5,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "light21",
+      "type": "node",
+      "x": -153.5,
+      "y": -245.5,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "light22",
+      "type": "node",
+      "x": -220.5,
+      "y": -245.5,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "light23",
+      "type": "node",
+      "x": -285.5,
+      "y": -245.5,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "light24",
+      "type": "node",
+      "x": -347.5,
+      "y": -245.5,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "light25",
+      "type": "node",
+      "x": -412.5,
+      "y": -245.5,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "light26",
+      "type": "node",
+      "x": -444.5,
+      "y": -182.5,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "light27",
+      "type": "node",
+      "x": -450.5,
+      "y": -117.5,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "light28",
+      "type": "node",
+      "x": -451.5,
+      "y": -46.5,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "light29",
+      "type": "node",
+      "x": -449.5,
+      "y": 29.5,
+      "width": 0,
+      "height": 0
+    }
+  ]
+}

@@ -1,0 +1,885 @@
+{
+  "group": [
+    "ui_pve"
+  ],
+  "width": 730,
+  "height": 479,
+  "children": [
+    {
+      "name": "basenode",
+      "type": "node",
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "check1",
+      "type": "node",
+      "x": -344.05,
+      "y": -161.97,
+      "width": 97,
+      "height": 126.25,
+      "children": [
+        {
+          "name": "diban",
+          "type": "fsprite",
+          "img": "#ui_pve_401.png",
+          "x": 1.5,
+          "y": 11.13,
+          "width": 89,
+          "height": 104
+        },
+        {
+          "name": "star",
+          "type": "node",
+          "x": 3.6,
+          "y": -61.13,
+          "width": 97,
+          "height": 46,
+          "children": [
+            {
+              "name": "level3",
+              "type": "sprite",
+              "img": "#ui_pve_s3.png",
+              "x": 26.4,
+              "y": 26,
+              "width": 37,
+              "height": 36
+            },
+            {
+              "name": "level2",
+              "type": "sprite",
+              "img": "#ui_pve_s3.png",
+              "x": -3.6,
+              "y": 16,
+              "width": 37,
+              "height": 36
+            },
+            {
+              "name": "level1",
+              "type": "sprite",
+              "img": "#ui_pve_s3.png",
+              "x": -33.6,
+              "y": 26,
+              "width": 37,
+              "height": 36
+            }
+          ]
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "y": 63.13,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "check2",
+      "type": "node",
+      "x": -232.1,
+      "y": -135.35,
+      "width": 77,
+      "height": 71,
+      "children": [
+        {
+          "name": "point3",
+          "type": "sprite",
+          "img": "#ui_pve_fbd0.png",
+          "x": -1.5,
+          "y": -9,
+          "width": 58,
+          "height": 49
+        },
+        {
+          "name": "point2",
+          "type": "sprite",
+          "img": "#ui_pve_fbd1.png",
+          "width": 77,
+          "height": 71
+        },
+        {
+          "name": "point1",
+          "type": "sprite",
+          "img": "#ui_pve_fbd2.png",
+          "x": -1.5,
+          "y": -7,
+          "width": 58,
+          "height": 55
+        }
+      ]
+    },
+    {
+      "name": "check3",
+      "type": "node",
+      "x": -122.15,
+      "y": -101.6,
+      "width": 77,
+      "height": 71,
+      "children": [
+        {
+          "name": "point3",
+          "type": "sprite",
+          "img": "#ui_pve_fbd0.png",
+          "x": -1.5,
+          "y": -9,
+          "width": 58,
+          "height": 49
+        },
+        {
+          "name": "point2",
+          "type": "sprite",
+          "img": "#ui_pve_fbd1.png",
+          "width": 77,
+          "height": 71
+        },
+        {
+          "name": "point1",
+          "type": "sprite",
+          "img": "#ui_pve_fbd2.png",
+          "x": -1.5,
+          "y": -7,
+          "width": 58,
+          "height": 55
+        }
+      ]
+    },
+    {
+      "name": "check4",
+      "type": "node",
+      "x": -40.15,
+      "y": -42.6,
+      "width": 77,
+      "height": 71,
+      "children": [
+        {
+          "name": "point3",
+          "type": "sprite",
+          "img": "#ui_pve_fbd0.png",
+          "x": -1.5,
+          "y": -9,
+          "width": 58,
+          "height": 49
+        },
+        {
+          "name": "point2",
+          "type": "sprite",
+          "img": "#ui_pve_fbd1.png",
+          "width": 77,
+          "height": 71
+        },
+        {
+          "name": "point1",
+          "type": "sprite",
+          "img": "#ui_pve_fbd2.png",
+          "x": -1.5,
+          "y": -7,
+          "width": 58,
+          "height": 55
+        }
+      ]
+    },
+    {
+      "name": "check5",
+      "type": "node",
+      "x": 68.5,
+      "y": -71.63,
+      "width": 97,
+      "height": 125.25,
+      "children": [
+        {
+          "name": "diban",
+          "type": "fsprite",
+          "img": "#ui_pve_209.png",
+          "x": -0.5,
+          "y": 11.63,
+          "width": 89,
+          "height": 102
+        },
+        {
+          "name": "star",
+          "type": "node",
+          "x": 3.6,
+          "y": -60.63,
+          "width": 97,
+          "height": 46,
+          "children": [
+            {
+              "name": "level3",
+              "type": "sprite",
+              "img": "#ui_pve_s3.png",
+              "x": 26.4,
+              "y": 26,
+              "width": 37,
+              "height": 36
+            },
+            {
+              "name": "level2",
+              "type": "sprite",
+              "img": "#ui_pve_s3.png",
+              "x": -3.6,
+              "y": 16,
+              "width": 37,
+              "height": 36
+            },
+            {
+              "name": "level1",
+              "type": "sprite",
+              "img": "#ui_pve_s3.png",
+              "x": -33.6,
+              "y": 26,
+              "width": 37,
+              "height": 36
+            }
+          ]
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "y": 62.63,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "check6",
+      "type": "node",
+      "x": 161.85,
+      "y": -32.6,
+      "width": 77,
+      "height": 71,
+      "children": [
+        {
+          "name": "point3",
+          "type": "sprite",
+          "img": "#ui_pve_fbd0.png",
+          "x": -1.5,
+          "y": -9,
+          "width": 58,
+          "height": 49
+        },
+        {
+          "name": "point2",
+          "type": "sprite",
+          "img": "#ui_pve_fbd1.png",
+          "width": 77,
+          "height": 71
+        },
+        {
+          "name": "point1",
+          "type": "sprite",
+          "img": "#ui_pve_fbd2.png",
+          "x": -1.5,
+          "y": -7,
+          "width": 58,
+          "height": 55
+        }
+      ]
+    },
+    {
+      "name": "check7",
+      "type": "node",
+      "x": 102.85,
+      "y": 39.4,
+      "width": 77,
+      "height": 71,
+      "children": [
+        {
+          "name": "point3",
+          "type": "sprite",
+          "img": "#ui_pve_fbd0.png",
+          "x": -1.5,
+          "y": -9,
+          "width": 58,
+          "height": 49
+        },
+        {
+          "name": "point2",
+          "type": "sprite",
+          "img": "#ui_pve_fbd1.png",
+          "width": 77,
+          "height": 71
+        },
+        {
+          "name": "point1",
+          "type": "sprite",
+          "img": "#ui_pve_fbd2.png",
+          "x": -1.5,
+          "y": -7,
+          "width": 58,
+          "height": 55
+        }
+      ]
+    },
+    {
+      "name": "check8",
+      "type": "node",
+      "x": 15.85,
+      "y": 61.4,
+      "width": 77,
+      "height": 71,
+      "children": [
+        {
+          "name": "point3",
+          "type": "sprite",
+          "img": "#ui_pve_fbd0.png",
+          "x": -1.5,
+          "y": -9,
+          "width": 58,
+          "height": 49
+        },
+        {
+          "name": "point2",
+          "type": "sprite",
+          "img": "#ui_pve_fbd1.png",
+          "width": 77,
+          "height": 71
+        },
+        {
+          "name": "point1",
+          "type": "sprite",
+          "img": "#ui_pve_fbd2.png",
+          "x": -1.5,
+          "y": -7,
+          "width": 58,
+          "height": 55
+        }
+      ]
+    },
+    {
+      "name": "check9",
+      "type": "node",
+      "x": -67.65,
+      "y": 51.03,
+      "width": 120,
+      "height": 143.25,
+      "children": [
+        {
+          "name": "diban",
+          "type": "fsprite",
+          "img": "#ui_pve_map_part.png",
+          "y": 11.63,
+          "width": 120,
+          "height": 120
+        },
+        {
+          "name": "star",
+          "type": "node",
+          "x": 2.6,
+          "y": -69.63,
+          "width": 97,
+          "height": 46,
+          "children": [
+            {
+              "name": "level3",
+              "type": "sprite",
+              "img": "#ui_pve_s3.png",
+              "x": 26.4,
+              "y": 26,
+              "width": 37,
+              "height": 36
+            },
+            {
+              "name": "level2",
+              "type": "sprite",
+              "img": "#ui_pve_s3.png",
+              "x": -3.6,
+              "y": 16,
+              "width": 37,
+              "height": 36
+            },
+            {
+              "name": "level1",
+              "type": "sprite",
+              "img": "#ui_pve_s3.png",
+              "x": -33.6,
+              "y": 26,
+              "width": 37,
+              "height": 36
+            }
+          ]
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -1,
+          "y": 53.63,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "check10",
+      "type": "node",
+      "x": -161.1,
+      "y": 21.4,
+      "width": 77,
+      "height": 71,
+      "children": [
+        {
+          "name": "point3",
+          "type": "sprite",
+          "img": "#ui_pve_fbd0.png",
+          "x": -1.5,
+          "y": -9,
+          "width": 58,
+          "height": 49
+        },
+        {
+          "name": "point2",
+          "type": "sprite",
+          "img": "#ui_pve_fbd1.png",
+          "width": 77,
+          "height": 71
+        },
+        {
+          "name": "point1",
+          "type": "sprite",
+          "img": "#ui_pve_fbd2.png",
+          "x": -1.5,
+          "y": -7,
+          "width": 58,
+          "height": 55
+        }
+      ]
+    },
+    {
+      "name": "check11",
+      "type": "node",
+      "x": -235.35,
+      "y": 67.4,
+      "width": 77,
+      "height": 71,
+      "children": [
+        {
+          "name": "point3",
+          "type": "sprite",
+          "img": "#ui_pve_fbd0.png",
+          "x": -1.5,
+          "y": -9,
+          "width": 58,
+          "height": 49
+        },
+        {
+          "name": "point2",
+          "type": "sprite",
+          "img": "#ui_pve_fbd1.png",
+          "width": 77,
+          "height": 71
+        },
+        {
+          "name": "point1",
+          "type": "sprite",
+          "img": "#ui_pve_fbd2.png",
+          "x": -1.5,
+          "y": -7,
+          "width": 58,
+          "height": 55
+        }
+      ]
+    },
+    {
+      "name": "check12",
+      "type": "node",
+      "x": -156.1,
+      "y": 111.4,
+      "width": 77,
+      "height": 71,
+      "children": [
+        {
+          "name": "point3",
+          "type": "sprite",
+          "img": "#ui_pve_fbd0.png",
+          "x": -1.5,
+          "y": -9,
+          "width": 58,
+          "height": 49
+        },
+        {
+          "name": "point2",
+          "type": "sprite",
+          "img": "#ui_pve_fbd1.png",
+          "width": 77,
+          "height": 71
+        },
+        {
+          "name": "point1",
+          "type": "sprite",
+          "img": "#ui_pve_fbd2.png",
+          "x": -1.5,
+          "y": -7,
+          "width": 58,
+          "height": 55
+        }
+      ]
+    },
+    {
+      "name": "check13",
+      "type": "node",
+      "x": -65.15,
+      "y": 147.65,
+      "width": 77,
+      "height": 71,
+      "children": [
+        {
+          "name": "point3",
+          "type": "sprite",
+          "img": "#ui_pve_fbd0.png",
+          "x": -1.5,
+          "y": -9,
+          "width": 58,
+          "height": 49
+        },
+        {
+          "name": "point2",
+          "type": "sprite",
+          "img": "#ui_pve_fbd1.png",
+          "width": 77,
+          "height": 71
+        },
+        {
+          "name": "point1",
+          "type": "sprite",
+          "img": "#ui_pve_fbd2.png",
+          "x": -1.5,
+          "y": -7,
+          "width": 58,
+          "height": 55
+        }
+      ]
+    },
+    {
+      "name": "check14",
+      "type": "node",
+      "x": 21.25,
+      "y": 191.03,
+      "width": 98.5,
+      "height": 126.25,
+      "children": [
+        {
+          "name": "diban",
+          "type": "fsprite",
+          "img": "#ui_pve_207.png",
+          "x": 2.75,
+          "y": 11.13,
+          "width": 97,
+          "height": 104
+        },
+        {
+          "name": "star",
+          "type": "node",
+          "x": 7.85,
+          "y": -61.13,
+          "width": 97,
+          "height": 46,
+          "children": [
+            {
+              "name": "level3",
+              "type": "sprite",
+              "img": "#ui_pve_s3.png",
+              "x": 26.4,
+              "y": 26,
+              "width": 37,
+              "height": 36
+            },
+            {
+              "name": "level2",
+              "type": "sprite",
+              "img": "#ui_pve_s3.png",
+              "x": -3.6,
+              "y": 16,
+              "width": 37,
+              "height": 36
+            },
+            {
+              "name": "level1",
+              "type": "sprite",
+              "img": "#ui_pve_s3.png",
+              "x": -33.6,
+              "y": 26,
+              "width": 37,
+              "height": 36
+            }
+          ]
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": 4.25,
+          "y": 63.13,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "check15",
+      "type": "node",
+      "x": 117.6,
+      "y": 187.9,
+      "width": 77,
+      "height": 71,
+      "children": [
+        {
+          "name": "point3",
+          "type": "sprite",
+          "img": "#ui_pve_fbd0.png",
+          "x": -1.5,
+          "y": -9,
+          "width": 58,
+          "height": 49
+        },
+        {
+          "name": "point2",
+          "type": "sprite",
+          "img": "#ui_pve_fbd1.png",
+          "width": 77,
+          "height": 71
+        },
+        {
+          "name": "point1",
+          "type": "sprite",
+          "img": "#ui_pve_fbd2.png",
+          "x": -1.5,
+          "y": -7,
+          "width": 58,
+          "height": 55
+        }
+      ]
+    },
+    {
+      "name": "check16",
+      "type": "node",
+      "x": 211.25,
+      "y": 185.03,
+      "width": 97,
+      "height": 116.25,
+      "children": [
+        {
+          "name": "diban",
+          "type": "fsprite",
+          "img": "#ui_pve_113.png",
+          "x": -0.5,
+          "y": 10.63,
+          "width": 89,
+          "height": 95
+        },
+        {
+          "name": "star",
+          "type": "node",
+          "x": 3.6,
+          "y": -56.13,
+          "width": 97,
+          "height": 46,
+          "children": [
+            {
+              "name": "level3",
+              "type": "sprite",
+              "img": "#ui_pve_s3.png",
+              "x": 26.4,
+              "y": 26,
+              "width": 37,
+              "height": 36
+            },
+            {
+              "name": "level2",
+              "type": "sprite",
+              "img": "#ui_pve_s3.png",
+              "x": -3.6,
+              "y": 16,
+              "width": 37,
+              "height": 36
+            },
+            {
+              "name": "level1",
+              "type": "sprite",
+              "img": "#ui_pve_s3.png",
+              "x": -33.6,
+              "y": 26,
+              "width": 37,
+              "height": 36
+            }
+          ]
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "y": 58.13,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "check17",
+      "type": "node",
+      "x": 206.6,
+      "y": 97.9,
+      "width": 77,
+      "height": 71,
+      "children": [
+        {
+          "name": "point3",
+          "type": "sprite",
+          "img": "#ui_pve_fbd0.png",
+          "x": -1.5,
+          "y": -9,
+          "width": 58,
+          "height": 49
+        },
+        {
+          "name": "point2",
+          "type": "sprite",
+          "img": "#ui_pve_fbd1.png",
+          "width": 77,
+          "height": 71
+        },
+        {
+          "name": "point1",
+          "type": "sprite",
+          "img": "#ui_pve_fbd2.png",
+          "x": -1.5,
+          "y": -7,
+          "width": 58,
+          "height": 55
+        }
+      ]
+    },
+    {
+      "name": "check18",
+      "type": "node",
+      "x": 235.6,
+      "y": 21.9,
+      "width": 77,
+      "height": 71,
+      "children": [
+        {
+          "name": "point3",
+          "type": "sprite",
+          "img": "#ui_pve_fbd0.png",
+          "x": -1.5,
+          "y": -9,
+          "width": 58,
+          "height": 49
+        },
+        {
+          "name": "point2",
+          "type": "sprite",
+          "img": "#ui_pve_fbd1.png",
+          "width": 77,
+          "height": 71
+        },
+        {
+          "name": "point1",
+          "type": "sprite",
+          "img": "#ui_pve_fbd2.png",
+          "x": -1.5,
+          "y": -7,
+          "width": 58,
+          "height": 55
+        }
+      ]
+    },
+    {
+      "name": "check19",
+      "type": "node",
+      "x": 288.25,
+      "y": -51.48,
+      "width": 99,
+      "height": 131.25,
+      "children": [
+        {
+          "name": "diban",
+          "type": "fsprite",
+          "img": "#ui_pve_map_rune.png",
+          "x": 2,
+          "y": 11.13,
+          "width": 95,
+          "height": 109
+        },
+        {
+          "name": "star",
+          "type": "node",
+          "x": 2.6,
+          "y": -63.63,
+          "width": 97,
+          "height": 46,
+          "children": [
+            {
+              "name": "level3",
+              "type": "sprite",
+              "img": "#ui_pve_s3.png",
+              "x": 26.4,
+              "y": 26,
+              "width": 37,
+              "height": 36
+            },
+            {
+              "name": "level2",
+              "type": "sprite",
+              "img": "#ui_pve_s3.png",
+              "x": -3.6,
+              "y": 16,
+              "width": 37,
+              "height": 36
+            },
+            {
+              "name": "level1",
+              "type": "sprite",
+              "img": "#ui_pve_s3.png",
+              "x": -33.6,
+              "y": 26,
+              "width": 37,
+              "height": 36
+            }
+          ]
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": 2,
+          "y": 65.63,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "check20",
+      "type": "node",
+      "x": 222.6,
+      "y": -127.1,
+      "width": 77,
+      "height": 71,
+      "children": [
+        {
+          "name": "point3",
+          "type": "sprite",
+          "img": "#ui_pve_fbd0.png",
+          "x": -1.5,
+          "y": -9,
+          "width": 58,
+          "height": 49
+        },
+        {
+          "name": "point2",
+          "type": "sprite",
+          "img": "#ui_pve_fbd1.png",
+          "width": 77,
+          "height": 71
+        },
+        {
+          "name": "point1",
+          "type": "sprite",
+          "img": "#ui_pve_fbd2.png",
+          "x": -1.5,
+          "y": -7,
+          "width": 58,
+          "height": 55
+        }
+      ]
+    }
+  ]
+}

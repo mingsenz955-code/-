@@ -1,0 +1,69 @@
+{
+  "group": {},
+  "width": 617,
+  "height": 459,
+  "children": [
+    {
+      "name": "eff_1",
+      "type": "eff",
+      "eff": "bossdao_shitou",
+      "frame": "top",
+      "x": 6.25,
+      "y": 174.25,
+      "width": 66.5,
+      "height": 110
+    },
+    {
+      "name": "eff_2",
+      "type": "eff",
+      "eff": "bossdao_dao",
+      "frame": "without",
+      "x": -1.2,
+      "y": 25.9,
+      "width": 460,
+      "height": 393
+    },
+    {
+      "name": "p1",
+      "type": "node",
+      "x": 3,
+      "y": 45
+    },
+    {
+      "name": "p2",
+      "type": "node",
+      "x": 3,
+      "y": 130
+    },
+    {
+      "name": "eff_3",
+      "type": "eff",
+      "eff": "bossdao_shitou",
+      "frame": "left",
+      "x": -273.5,
+      "y": 14.25,
+      "width": 66.5,
+      "height": 110
+    },
+    {
+      "name": "eff_4",
+      "type": "eff",
+      "eff": "bossdao_shitou",
+      "frame": "right",
+      "x": 276.5,
+      "y": 14.25,
+      "width": 66.5,
+      "height": 110
+    },
+    {
+      "name": "eff_5",
+      "type": "eff",
+      "eff": "bossdao_shitou",
+      "frame": "bottom",
+      "x": -3.5,
+      "y": -145.75,
+      "width": 66.5,
+      "height": 110
+    }
+  ]
+}

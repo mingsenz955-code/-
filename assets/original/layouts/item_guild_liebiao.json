@@ -1,0 +1,95 @@
+{
+  "group": [
+    "ui_bgpuzzle",
+    "ui_guild",
+    "ui_ButtonNormal"
+  ],
+  "width": 929,
+  "height": 573,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#ui_bgpuzzle_dage.png",
+      "scale9": 1,
+      "x": -464.5,
+      "y": 36.7,
+      "width": 929,
+      "height": 500,
+      "maxw": 929,
+      "maxh": 500
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "y": 36.7,
+      "width": 920,
+      "height": 490
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_guild_hahaha.png",
+      "x": -175.65,
+      "y": -262.7,
+      "width": 577,
+      "height": 44
+    },
+    {
+      "name": "guild_name",
+      "type": "node",
+      "x": -448.5,
+      "y": -263.75,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "btn_retrieval",
+      "type": "node",
+      "x": 106.95,
+      "y": -261.7,
+      "width": 47,
+      "height": 46,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_guild_shousuo1.png",
+          "img_down": "#ui_guild_shousuo2.png",
+          "width": 47,
+          "height": 46
+        }
+      ]
+    },
+    {
+      "name": "btn_apply",
+      "type": "node",
+      "x": 366.8,
+      "y": -263.7,
+      "width": 154,
+      "height": 46,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_pppp1.png",
+          "img_down": "#ui_common_btn_pppp2.png",
+          "width": 154,
+          "height": 46
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "换一批",
+          "align": "center",
+          "size": 26,
+          "color": 992815615,
+          "outlineColor": 13941402,
+          "x": -73,
+          "y": -0.88,
+          "width": 144,
+          "height": 33.25
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,251 @@
+{
+  "group": {},
+  "width": 326,
+  "height": 468,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "grid": {
+        "x": 108,
+        "y": 111,
+        "width": 46,
+        "height": 27
+      },
+      "x": -162,
+      "y": 7,
+      "width": 326,
+      "height": 437,
+      "maxw": 326,
+      "maxh": 437
+    },
+    {
+      "name": "goumai_shuzi",
+      "type": "node",
+      "x": 4,
+      "y": -193,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png",
+          "img_disable": "#ui_common_btn_2c.png",
+          "width": 144,
+          "height": 85
+        },
+        {
+          "name": "buy_txt",
+          "type": "label",
+          "text": "购买",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -51,
+          "y": 5,
+          "width": 103,
+          "height": 45
+        }
+      ]
+    },
+    {
+      "name": "shuxing1",
+      "type": "node",
+      "x": 120,
+      "y": 154,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "shuxing2",
+      "type": "node",
+      "x": 86,
+      "y": 154,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "shuxing3",
+      "type": "node",
+      "x": 53,
+      "y": 153,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_WuPinKuan.png",
+      "x": 2,
+      "y": 16,
+      "width": 202,
+      "height": 202
+    },
+    {
+      "name": "con_img",
+      "type": "node",
+      "x": 2,
+      "y": 16,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "pinzhi",
+      "type": "node",
+      "x": -71,
+      "y": 88,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_ShuZiKuang.png",
+      "scale9": 1,
+      "grid": {
+        "x": 21,
+        "y": 12,
+        "width": 7,
+        "height": 7
+      },
+      "x": -40,
+      "y": -118,
+      "width": 140,
+      "height": 31,
+      "maxw": 140,
+      "maxh": 31
+    },
+    {
+      "name": "con_cost",
+      "type": "node",
+      "x": -68,
+      "y": -118,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "con_zhekou",
+      "type": "node",
+      "x": -68,
+      "y": -118,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "txt_shuliang",
+      "type": "label",
+      "text": "1234",
+      "align": "left",
+      "size": 20,
+      "color": 255,
+      "x": -27,
+      "y": -119,
+      "width": 116,
+      "height": 27
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "grid": {
+        "x": 25,
+        "y": 20,
+        "width": 10,
+        "height": 10
+      },
+      "x": -162,
+      "y": 203,
+      "width": 325,
+      "height": 55,
+      "maxw": 325,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "火龙",
+      "align": "center",
+      "size": 22,
+      "color": 4294967295,
+      "x": -138,
+      "y": 203,
+      "width": 275,
+      "height": 30
+    },
+    {
+      "name": "huangzuan",
+      "type": "sprite",
+      "img": "#ui_shop_hz.png",
+      "x": -89,
+      "y": 198,
+      "width": 141,
+      "height": 70
+    },
+    {
+      "name": "weijiesuo",
+      "type": "node",
+      "x": 3,
+      "y": -188,
+      "width": 186,
+      "height": 84,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_shop_js.png",
+          "width": 186,
+          "height": 84
+        },
+        {
+          "name": "weijiesuo_shuzi",
+          "type": "label",
+          "text": "30级解锁",
+          "align": "center",
+          "size": 27,
+          "color": 4076863743,
+          "x": -40,
+          "y": 0,
+          "width": 118,
+          "height": 34
+        }
+      ]
+    },
+    {
+      "name": "shuoming",
+      "type": "label",
+      "text": "asdhasldjklasjdalkszjkajsldkajskdasdas",
+      "align": "center",
+      "size": 20,
+      "color": 255,
+      "x": -121,
+      "y": 154,
+      "width": 249,
+      "height": 51
+    },
+    {
+      "name": "tx_name",
+      "type": "label",
+      "text": "",
+      "align": "right",
+      "font": "white_35.fnt",
+      "bmp": 1,
+      "x": -76,
+      "y": -54,
+      "width": 169,
+      "height": 43
+    },
+    {
+      "name": "tx_power",
+      "type": "label",
+      "text": "",
+      "align": "right",
+      "size": 25,
+      "color": 4294967295,
+      "outlineColor": 4267533,
+      "x": -76,
+      "y": -66,
+      "width": 169,
+      "height": 32
+    }
+  ]
+}

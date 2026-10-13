@@ -1,0 +1,28 @@
+{
+  "group": [
+    "ui_login"
+  ],
+  "width": 623,
+  "height": 49,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_login_wenzi1.png",
+      "x": -183.5,
+      "y": 7,
+      "width": 214,
+      "height": 35
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_login_zhuangshi.png",
+      "scale9": 1,
+      "x": -311.5,
+      "y": -18.55,
+      "width": 623,
+      "height": 12,
+      "maxw": 623,
+      "maxh": 12
+    }
+  ]
+}

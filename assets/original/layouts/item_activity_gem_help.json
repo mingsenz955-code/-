@@ -1,0 +1,27 @@
+{
+  "group": [
+    "ui_activitygem"
+  ],
+  "width": 380,
+  "height": 373,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_activitygem_dage2.png",
+      "scale9": 1,
+      "x": -190,
+      "width": 380,
+      "height": 373,
+      "maxw": 380,
+      "maxh": 373
+    },
+    {
+      "name": "shuoming",
+      "type": "node",
+      "x": -175,
+      "y": 168.4,
+      "width": 0,
+      "height": 0
+    }
+  ]
+}

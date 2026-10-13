@@ -1,0 +1,383 @@
+{
+  "group": [
+    "ui_activitypackage"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768,
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -500.45,
+      "y": -47.5,
+      "width": 1000,
+      "height": 564,
+      "maxw": 1000,
+      "maxh": 564
+    },
+    {
+      "name": "title_panel",
+      "type": "node",
+      "x": 0.5,
+      "y": 219.9,
+      "width": 996,
+      "height": 55,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_BiaoTi_Bg_s.png",
+          "scale9": 1,
+          "x": -498,
+          "width": 996,
+          "height": 55,
+          "maxw": 996,
+          "maxh": 55
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_activitypackage_bg.png",
+      "x": 1,
+      "y": -62,
+      "width": 898,
+      "height": 492
+    },
+    {
+      "name": "time",
+      "type": "node",
+      "x": 3,
+      "y": 177.5,
+      "width": 422,
+      "height": 41,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_activitypackage_bg_time.png",
+          "width": 422,
+          "height": 41
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "活动时间:",
+          "align": "left",
+          "size": 22,
+          "color": 4294967295,
+          "outlineColor": 4267533,
+          "x": -189,
+          "y": 0.88,
+          "width": 100.95,
+          "height": 28.75
+        },
+        {
+          "name": "time",
+          "type": "label",
+          "text": " ",
+          "align": "left",
+          "size": 22,
+          "color": 4294967295,
+          "outlineColor": 4267533,
+          "x": -88.05,
+          "y": 0.88,
+          "width": 284.05,
+          "height": 28.75
+        }
+      ]
+    },
+    {
+      "name": "title",
+      "type": "sprite",
+      "img": "#ui_activitypackage_title.png",
+      "x": 8.75,
+      "y": 235.75,
+      "width": 303,
+      "height": 60
+    },
+    {
+      "name": "item_left",
+      "type": "node",
+      "x": -178.02,
+      "y": -173.93,
+      "width": 201.85,
+      "height": 243.85,
+      "children": [
+        {
+          "name": "left_icon",
+          "type": "node",
+          "x": -16.92,
+          "y": 121.92,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "left_item_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 22,
+          "color": 4294967295,
+          "outlineColor": 4267533,
+          "x": -63.92,
+          "y": 91.5,
+          "width": 91,
+          "height": 28.75
+        },
+        {
+          "name": "left_yuanjia",
+          "type": "label",
+          "text": "原价",
+          "align": "left",
+          "size": 22,
+          "color": 4294967295,
+          "outlineColor": 4267533,
+          "x": -100.92,
+          "y": 45.5,
+          "width": 91,
+          "height": 28.75
+        },
+        {
+          "name": "left_yuanjia_num",
+          "type": "label",
+          "text": " ",
+          "align": "left",
+          "size": 22,
+          "color": 4294967295,
+          "outlineColor": 4267533,
+          "x": -10.92,
+          "y": 45.5,
+          "width": 91,
+          "height": 28.75
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_activitypackage_mijing.png",
+          "x": 72.42,
+          "y": 43.92,
+          "width": 31,
+          "height": 42
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_activitypackage_biaoji.png",
+          "x": 26.43,
+          "y": 42.92,
+          "width": 149,
+          "height": 18
+        },
+        {
+          "name": "left_xianjia",
+          "type": "label",
+          "text": "抢购价",
+          "align": "left",
+          "size": 22,
+          "color": 4294967295,
+          "outlineColor": 4267533,
+          "x": -100.92,
+          "y": -11.5,
+          "width": 91,
+          "height": 28.75
+        },
+        {
+          "name": "left_xianjia_num",
+          "type": "label",
+          "text": " ",
+          "align": "left",
+          "size": 22,
+          "color": 4294967295,
+          "outlineColor": 4267533,
+          "x": -10.92,
+          "y": -11.5,
+          "width": 91,
+          "height": 28.75
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_activitypackage_mijing.png",
+          "x": 72.42,
+          "y": -13.08,
+          "width": 31,
+          "height": 42
+        },
+        {
+          "name": "left_buy",
+          "type": "node",
+          "x": -15.92,
+          "y": -79.42,
+          "width": 144,
+          "height": 85,
+          "children": [
+            {
+              "name": "buy_btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btn_1.png",
+              "img_down": "#ui_common_btn_2.png",
+              "img_disable": "#ui_common_btn_2c.png",
+              "width": 144,
+              "height": 85
+            },
+            {
+              "name": "buy_txt",
+              "type": "label",
+              "text": "购买",
+              "align": "center",
+              "size": 35,
+              "color": 4294967295,
+              "x": -51.5,
+              "y": 4.93,
+              "width": 103,
+              "height": 45.15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "item_right",
+      "type": "node",
+      "x": 218.97,
+      "y": -173.93,
+      "width": 201.85,
+      "height": 243.85,
+      "children": [
+        {
+          "name": "right_icon",
+          "type": "node",
+          "x": -16.92,
+          "y": 121.92,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "right_item_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 22,
+          "color": 4294967295,
+          "outlineColor": 4267533,
+          "x": -63.92,
+          "y": 91.5,
+          "width": 91,
+          "height": 28.75
+        },
+        {
+          "name": "right_yuanjia",
+          "type": "label",
+          "text": "原价",
+          "align": "left",
+          "size": 22,
+          "color": 4294967295,
+          "outlineColor": 4267533,
+          "x": -100.92,
+          "y": 45.5,
+          "width": 91,
+          "height": 28.75
+        },
+        {
+          "name": "right_yuanjia_num",
+          "type": "label",
+          "text": " ",
+          "align": "left",
+          "size": 22,
+          "color": 4294967295,
+          "outlineColor": 4267533,
+          "x": -10.92,
+          "y": 45.5,
+          "width": 91,
+          "height": 28.75
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_activitypackage_mijing.png",
+          "x": 72.42,
+          "y": 43.92,
+          "width": 31,
+          "height": 42
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_activitypackage_biaoji.png",
+          "x": 26.43,
+          "y": 42.92,
+          "width": 149,
+          "height": 18
+        },
+        {
+          "name": "right_xianjia",
+          "type": "label",
+          "text": "抢购价",
+          "align": "left",
+          "size": 22,
+          "color": 4294967295,
+          "outlineColor": 4267533,
+          "x": -100.92,
+          "y": -11.5,
+          "width": 91,
+          "height": 28.75
+        },
+        {
+          "name": "right_xianjia_num",
+          "type": "label",
+          "text": " ",
+          "align": "left",
+          "size": 22,
+          "color": 4294967295,
+          "outlineColor": 4267533,
+          "x": -10.92,
+          "y": -11.5,
+          "width": 91,
+          "height": 28.75
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_activitypackage_mijing.png",
+          "x": 72.42,
+          "y": -13.08,
+          "width": 31,
+          "height": 42
+        },
+        {
+          "name": "right_buy",
+          "type": "node",
+          "x": -15.92,
+          "y": -79.42,
+          "width": 144,
+          "height": 85,
+          "children": [
+            {
+              "name": "buy_btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btn_1.png",
+              "img_down": "#ui_common_btn_2.png",
+              "img_disable": "#ui_common_btn_2c.png",
+              "width": 144,
+              "height": 85
+            },
+            {
+              "name": "buy_txt",
+              "type": "label",
+              "text": "购买",
+              "align": "center",
+              "size": 35,
+              "color": 4294967295,
+              "x": -51.5,
+              "y": 4.93,
+              "width": 103,
+              "height": 45.15
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

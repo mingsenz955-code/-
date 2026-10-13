@@ -1,0 +1,168 @@
+{
+  "group": [
+    "ui_welfaregrowup",
+    "ui_daojukuang"
+  ],
+  "width": 741,
+  "height": 175,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_welfaregrowup_tiao1.png",
+      "width": 741,
+      "height": 175
+    },
+    {
+      "name": "miaoshu",
+      "type": "label",
+      "text": " ",
+      "align": "left",
+      "size": 24,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -351.5,
+      "y": 64.55,
+      "width": 493,
+      "height": 31
+    },
+    {
+      "name": "hint1",
+      "type": "label",
+      "text": "达到",
+      "align": "left",
+      "size": 24,
+      "color": 1092488703,
+      "x": -228.95,
+      "y": 1.45,
+      "width": 59,
+      "height": 31
+    },
+    {
+      "name": "level",
+      "type": "label",
+      "text": "",
+      "align": "left",
+      "size": 24,
+      "color": 4278190335,
+      "x": -167.15,
+      "y": 1.4,
+      "width": 204,
+      "height": 31
+    },
+    {
+      "name": "hint2",
+      "type": "label",
+      "text": "可领取",
+      "align": "left",
+      "size": 24,
+      "color": 1092488703,
+      "x": -228.95,
+      "y": -38.55,
+      "width": 85,
+      "height": 31
+    },
+    {
+      "name": "data",
+      "type": "label",
+      "text": "",
+      "align": "left",
+      "size": 24,
+      "color": 4278190335,
+      "x": -141.15,
+      "y": -38.6,
+      "width": 204,
+      "height": 31
+    },
+    {
+      "name": "gift1",
+      "type": "node",
+      "x": -299.5,
+      "y": -19.5,
+      "width": 110,
+      "height": 110,
+      "children": [
+        {
+          "name": "add",
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "width": 110,
+          "height": 110
+        },
+        {
+          "name": "xiangkuang",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "x": -0.85,
+          "y": 2.8,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -37.1,
+          "y": -25.6,
+          "width": 77,
+          "height": 26.5
+        },
+        {
+          "name": "biaoji_pinzhi",
+          "type": "node",
+          "x": -36.35,
+          "y": 38.55,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "btn_lingqu",
+      "type": "node",
+      "x": 275.5,
+      "y": -16.35,
+      "width": 154,
+      "height": 46,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_pppp2.png",
+          "img_down": "#ui_common_btn_pppp1.png",
+          "img_disable": "#ui_common_btn_pppp3.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "领取奖励",
+          "align": "center",
+          "size": 26,
+          "color": 992815615,
+          "outlineColor": 13941402,
+          "x": -73,
+          "y": -0.88,
+          "width": 144,
+          "height": 33.25
+        }
+      ]
+    },
+    {
+      "name": "yilingqu",
+      "type": "sprite",
+      "img": "#ui_welfaregrowup_yilingqu.png",
+      "x": 275.6,
+      "y": -16,
+      "width": 145,
+      "height": 84
+    }
+  ]
+}

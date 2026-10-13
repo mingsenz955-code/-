@@ -1,0 +1,38 @@
+{
+  "group": [
+    "ui_common"
+  ],
+  "width": 627,
+  "height": 41,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_di2.png",
+      "scale9": 2,
+      "grid": {
+        "x": 16,
+        "y": 10.75,
+        "width": 24,
+        "height": 16.25
+      },
+      "x": -325.65,
+      "y": 0.32,
+      "width": 627.1,
+      "height": 41.35,
+      "maxw": 627.1,
+      "maxh": 41.35
+    },
+    {
+      "name": "txt_1",
+      "type": "label",
+      "text": "伤害排名奖励",
+      "align": "left",
+      "size": 20,
+      "color": 1092488703,
+      "x": -293.85,
+      "y": 1.43,
+      "width": 590.95,
+      "height": 26.75
+    }
+  ]
+}

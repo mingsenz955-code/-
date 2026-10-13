@@ -1,0 +1,162 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -162.5,
+      "y": 7.1,
+      "width": 325.6,
+      "height": 437.4,
+      "maxw": 325.6,
+      "maxh": 437.4
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_WuPinKuan.png",
+      "x": 1.5,
+      "y": 27,
+      "width": 202,
+      "height": 202
+    },
+    {
+      "name": "con_img",
+      "type": "node",
+      "x": 5,
+      "y": 23,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "pinzhi",
+      "type": "node",
+      "x": -71.15,
+      "y": 87.65,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "btn_ChuShou",
+      "type": "node",
+      "x": 85.55,
+      "y": -187.6,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "出售",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_ShuZiKuang.png",
+      "scale9": 1,
+      "x": -35,
+      "y": -73.6,
+      "width": 140,
+      "height": 31,
+      "maxw": 140,
+      "maxh": 31
+    },
+    {
+      "name": "txt_ShuLiang",
+      "type": "label",
+      "text": "1234",
+      "size": 20,
+      "align": "left",
+      "color": 255,
+      "x": -22.15,
+      "y": -72.85,
+      "width": 116.15,
+      "height": 26.5
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_KuCun.png",
+      "x": -59.85,
+      "y": -74.15,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "name": "btn_ShiYong",
+      "type": "node",
+      "x": -82.65,
+      "y": -187.6,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "使用",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -162.5,
+      "y": 202.5,
+      "width": 325,
+      "height": 55,
+      "maxw": 325,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "火龙",
+      "size": 22,
+      "align": "center",
+      "color": 4294967295,
+      "x": -137.95,
+      "y": 202.85,
+      "width": 275.45,
+      "height": 30.1
+    },
+    {
+      "name": "shuoming",
+      "type": "label",
+      "text": "asdhasldjklasjdalkszjkajsldkajskdasdas",
+      "size": 20,
+      "align": "center",
+      "color": 255,
+      "x": -120.95,
+      "y": 154.45,
+      "width": 248.9,
+      "height": 51
+    }
+  ]
+}

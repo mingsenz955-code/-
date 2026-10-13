@@ -1,0 +1,149 @@
+{
+  "group": [
+    "ui_mydragon",
+    "ui_shop"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png"
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_mydragon_bg.png",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_d.png",
+      "x": -1.15,
+      "y": 341,
+      "width": 573,
+      "height": 83
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "我的龙",
+      "align": "center",
+      "size": 28,
+      "color": 4294967295,
+      "x": -216.9,
+      "y": 332.07,
+      "width": 431.85,
+      "height": 35.85
+    },
+    {
+      "name": "longzuleixing",
+      "type": "node",
+      "x": 1.7,
+      "y": -332.9,
+      "width": 973,
+      "height": 100,
+      "children": [
+        {
+          "name": "all",
+          "type": "ckb",
+          "img_on": "#ui_shop_c0010.png",
+          "img_off": "#ui_shop_a0010.png",
+          "x": -450
+        },
+        {
+          "name": "el",
+          "type": "ckb",
+          "img_on": "#ui_shop_c0001.png",
+          "img_off": "#ui_shop_a0001.png",
+          "x": 50
+        },
+        {
+          "name": "l",
+          "type": "ckb",
+          "img_on": "#ui_shop_c0002.png",
+          "img_off": "#ui_shop_a0002.png",
+          "x": 450
+        },
+        {
+          "name": "e",
+          "type": "ckb",
+          "img_on": "#ui_shop_c0003.png",
+          "img_off": "#ui_shop_a0003.png",
+          "x": -350
+        },
+        {
+          "name": "d",
+          "type": "ckb",
+          "img_on": "#ui_shop_c0004.png",
+          "img_off": "#ui_shop_a0004.png",
+          "x": 350
+        },
+        {
+          "name": "m",
+          "type": "ckb",
+          "img_on": "#ui_shop_c0005.png",
+          "img_off": "#ui_shop_a0005.png",
+          "x": 250
+        },
+        {
+          "name": "w",
+          "type": "ckb",
+          "img_on": "#ui_shop_c0006.png",
+          "img_off": "#ui_shop_a0006.png",
+          "x": -150
+        },
+        {
+          "name": "f",
+          "type": "ckb",
+          "img_on": "#ui_shop_c0007.png",
+          "img_off": "#ui_shop_a0007.png",
+          "x": -250
+        },
+        {
+          "name": "p",
+          "type": "ckb",
+          "img_on": "#ui_shop_c0008.png",
+          "img_off": "#ui_shop_a0008.png",
+          "x": -50
+        },
+        {
+          "name": "i",
+          "type": "ckb",
+          "img_on": "#ui_shop_c0009.png",
+          "img_off": "#ui_shop_a0009.png",
+          "x": 150
+        }
+      ]
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "y": 4.6,
+      "width": 1024,
+      "height": 515.6,
+      "left": 0,
+      "right": 0
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_GuanBi1.png",
+      "img_down": "#ui_common_btn_GuanBi2.png",
+      "x": 468.1,
+      "y": 338.9,
+      "right": 43.9
+    },
+    {
+      "name": "fanhui",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_FanHui1.png",
+      "img_down": "#ui_common_btn_FanHui2.png",
+      "x": -469.5,
+      "y": 339,
+      "left": 42.5,
+      "top": 45
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "group": [
+    "buildings/0035_habitat_electric_b_2_g"
+  ],
+  "width": 440,
+  "height": 333,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0035_habitat_electric_b_2_g_bg.png",
+      "x": 17,
+      "y": 181.5
+    },
+    {
+      "name": "zuobiao1",
+      "type": "node",
+      "x": -148,
+      "y": 148
+    },
+    {
+      "name": "zuobiao2",
+      "type": "node",
+      "x": 53,
+      "y": 89
+    },
+    {
+      "name": "zuobiao3",
+      "type": "node",
+      "x": 150,
+      "y": 117
+    },
+    {
+      "name": "eff",
+      "type": "eff",
+      "eff": "0035_habitat_electric_b_2_eff",
+      "x": 0.6,
+      "y": -0.05,
+      "width": 23.8,
+      "height": 30.8
+    }
+  ]
+}

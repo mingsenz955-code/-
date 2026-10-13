@@ -1,0 +1,307 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_goal_wancheng.png",
+      "x": 124.25,
+      "y": 1.5,
+      "width": 509,
+      "height": 397
+    },
+    {
+      "name": "tx_renwu_miaoshu",
+      "type": "label",
+      "text": "啊就看谁的卡就是大家啊开始打扫打扫打扫打扫的",
+      "size": 20,
+      "align": "justify",
+      "color": 1092488703,
+      "x": -44.3,
+      "y": 60.85,
+      "width": 376.95,
+      "height": 104.4
+    },
+    {
+      "name": "tx_biaoti",
+      "type": "label",
+      "text": "任务完成！",
+      "size": 25,
+      "align": "center",
+      "color": 1092488703,
+      "x": -45,
+      "y": 134.45,
+      "width": 378,
+      "height": 32.1
+    },
+    {
+      "name": "icon_renwu",
+      "type": "node",
+      "x": -251.35,
+      "y": 49.65,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan2.png",
+      "scale9": 1,
+      "x": -47.6,
+      "y": -68,
+      "width": 378.95,
+      "height": 140,
+      "maxw": 378.95,
+      "maxh": 140
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan2b.png",
+      "scale9": 1,
+      "x": -45.15,
+      "y": -20.35,
+      "width": 375,
+      "height": 34,
+      "maxw": 375,
+      "maxh": 34
+    },
+    {
+      "name": "tx_biaoti2",
+      "type": "label",
+      "text": "领取奖励",
+      "size": 25,
+      "align": "center",
+      "color": 1092488703,
+      "x": 36.65,
+      "y": -20.4,
+      "width": 215.45,
+      "height": 32.1
+    },
+    {
+      "name": "jiangli",
+      "type": "node",
+      "x": 184.85,
+      "y": -127.85,
+      "width": 355,
+      "height": 85,
+      "children": [
+        {
+          "name": "jiangli1",
+          "type": "node",
+          "x": -135,
+          "width": 85,
+          "height": 85,
+          "children": [
+            {
+              "name": "diban",
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "x": -42.5,
+              "y": 42.5,
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "quality",
+              "type": "node",
+              "x": -42.5,
+              "y": 42.5,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "x": -42.5,
+              "y": 42.5,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": "",
+              "size": 22,
+              "align": "right",
+              "color": 4294967295,
+              "x": -78.5,
+              "y": 21.58,
+              "width": 73,
+              "height": 28.75
+            }
+          ]
+        },
+        {
+          "name": "jiangli2",
+          "type": "node",
+          "x": -45,
+          "width": 85,
+          "height": 85,
+          "children": [
+            {
+              "name": "diban",
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "x": -42.5,
+              "y": 42.5,
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "quality",
+              "type": "node",
+              "x": -42.5,
+              "y": 42.5,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "x": -42.5,
+              "y": 42.5,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": "",
+              "size": 22,
+              "align": "right",
+              "color": 4294967295,
+              "x": -78.5,
+              "y": 21.58,
+              "width": 73,
+              "height": 28.75
+            }
+          ]
+        },
+        {
+          "name": "jiangli3",
+          "type": "node",
+          "x": 45,
+          "width": 85,
+          "height": 85,
+          "children": [
+            {
+              "name": "diban",
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "x": -42.5,
+              "y": 42.5,
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "quality",
+              "type": "node",
+              "x": -42.5,
+              "y": 42.5,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "x": -42.5,
+              "y": 42.5,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": "",
+              "size": 22,
+              "align": "right",
+              "color": 4294967295,
+              "x": -78.5,
+              "y": 21.58,
+              "width": 73,
+              "height": 28.75
+            }
+          ]
+        },
+        {
+          "name": "jiangli4",
+          "type": "node",
+          "x": 135,
+          "width": 85,
+          "height": 85,
+          "children": [
+            {
+              "name": "diban",
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "x": -42.5,
+              "y": 42.5,
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "quality",
+              "type": "node",
+              "x": -42.5,
+              "y": 42.5,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "x": -42.5,
+              "y": 42.5,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": "",
+              "size": 22,
+              "align": "right",
+              "color": 4294967295,
+              "x": -78.5,
+              "y": 21.58,
+              "width": 73,
+              "height": 28.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "lingqu",
+      "type": "node",
+      "x": 144.75,
+      "y": -183.45,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "立即领取",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -79,
+          "y": 4.4,
+          "width": 156,
+          "height": 46.2
+        }
+      ]
+    }
+  ]
+}

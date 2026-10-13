@@ -1,4 +1,19 @@
 {
+  "LibActcatInfo": {
+    "source": "dragon/pconfig/librarys/actcat/LibActcatInfo.lua",
+    "columns": {
+      "id": 1,
+      "costType": 2,
+      "costID": 3,
+      "costNum": 4,
+      "getType": 5,
+      "getID": 6,
+      "getNumMin": 7,
+      "getNumMax": 8,
+      "vip": 9
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
   "LibAdventureBoxInfo": {
     "source": "dragon/pconfig/librarys/adventure/LibAdventureBoxInfo.lua",
     "columns": {
@@ -61,6 +76,63 @@
       "previewQuality_4": 22
     }
   },
+  "LibArenaAwardInfo": {
+    "source": "dragon/pconfig/librarys/arena/LibArenaAwardInfo.lua",
+    "columns": {
+      "id": 1,
+      "pvpLevel": 2,
+      "maxRank": 3,
+      "minRank": 4,
+      "maxRandom": 5,
+      "minRandom": 6,
+      "awardForRank": 7,
+      "awardNumForRank": 8,
+      "goldForRank": 9,
+      "awardNumWin": 10,
+      "goldWin": 11,
+      "awardNumLost": 12,
+      "goldLost": 13
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "LibArenaExchangeInfo": {
+    "source": "dragon/pconfig/librarys/arena/LibArenaExchangeInfo.lua",
+    "columns": {
+      "id": 1,
+      "exchangeType": 2,
+      "exNeedNum": 3,
+      "itemType": 4,
+      "itemID": 5,
+      "itemNum": 6
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "LibArpuInfo": {
+    "source": "dragon/pconfig/librarys/arpu/LibArpuInfo.lua",
+    "columns": {
+      "id": 1,
+      "conditionType": 2,
+      "conditionID": 3,
+      "conditionNum": 4,
+      "awardType_1": 5,
+      "awardID_1": 6,
+      "awardNum_1": 7,
+      "awardType_2": 8,
+      "awardID_2": 9,
+      "awardNum_2": 10,
+      "awardPos": 11
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "LibBattleRobotInfo": {
+    "source": "dragon/pconfig/librarys/battle/LibBattleRobotInfo.lua",
+    "columns": {
+      "id": 1,
+      "packId": 2,
+      "level": 3
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
   "LibbigrewardInfo": {
     "source": "dragon/pconfig/librarys/bigreward/LibbigrewardInfo.lua",
     "columns": {
@@ -80,6 +152,96 @@
       "pin3": 14,
       "rewardlist": 14
     }
+  },
+  "LibBookInfo": {
+    "source": "dragon/pconfig/librarys/book/LibBookInfo.lua",
+    "columns": {
+      "id": 1,
+      "dragon_1": 3,
+      "dragon_2": 4,
+      "dragon_3": 5,
+      "dragon_4": 6,
+      "dragon_5": 7,
+      "awardNum": 9
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "BXDHInfo": {
+    "source": "dragon/pconfig/librarys/bxdh/BXDHInfo.lua",
+    "columns": {
+      "id": 1,
+      "itemType": 2,
+      "itemID": 3,
+      "itemNum": 4,
+      "quality": 5,
+      "exchangePoint": 6,
+      "exchangeNum": 7
+    }
+  },
+  "LibcdkInfo": {
+    "source": "dragon/pconfig/librarys/cdk/LibcdkInfo.lua",
+    "columns": {
+      "id": 1,
+      "type": 3,
+      "typeID": 4,
+      "typenum": 5,
+      "typename": 6
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "ChongZhiJiFenInfo": {
+    "source": "dragon/pconfig/librarys/chongzhijifen/ChongZhiJiFenInfo.lua",
+    "columns": {
+      "id": 1,
+      "score": 2,
+      "itemType": 3,
+      "itemId": 4,
+      "itemNum": 5,
+      "exchangeLimit": 6,
+      "itemQuality": 7
+    }
+  },
+  "ChongZhiXianGouInfo": {
+    "source": "dragon/pconfig/librarys/chongzhixiangou/ChongZhiXianGouInfo.lua",
+    "columns": {
+      "id": 1,
+      "day": 2,
+      "gem": 3,
+      "itemType1": 4,
+      "itemId1": 5,
+      "itemNum1": 6,
+      "itemQuality1": 7,
+      "itemType2": 8,
+      "itemId2": 9,
+      "itemNum2": 10,
+      "itemQuality2": 11,
+      "itemType3": 12,
+      "itemId3": 13,
+      "itemNum3": 14,
+      "itemQuality3": 15,
+      "sell": 16,
+      "title": 17
+    }
+  },
+  "LibCostInfo": {
+    "source": "dragon/pconfig/librarys/CostPayback/LibCostInfo.lua",
+    "columns": {
+      "id": 1,
+      "cost": 2,
+      "type1": 3,
+      "typeID1": 4,
+      "typenum1": 5,
+      "pin1": 6,
+      "type2": 7,
+      "typeID2": 8,
+      "typenum2": 9,
+      "pin2": 10,
+      "type3": 11,
+      "typeID3": 12,
+      "typenum3": 13,
+      "pin3": 14
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
   },
   "LibDanbichongzhiInfo": {
     "source": "dragon/pconfig/librarys/danbichongzhi/LibDanbichongzhiInfo.lua",
@@ -102,6 +264,71 @@
       "costYuan": 16,
       "costIOS": 17
     }
+  },
+  "DeliveryNoteInfo": {
+    "source": "dragon/pconfig/librarys/deliveryNote/DeliveryNoteInfo.lua",
+    "columns": {
+      "id": 1,
+      "funcID": 2,
+      "eventID": 3,
+      "context": 4,
+      "args": 5,
+      "priority": 6,
+      "inWorld": 7,
+      "inFunc": 8
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "DragonRandPreviewInfo": {
+    "source": "dragon/pconfig/librarys/dragon/DragonRandPreviewInfo.lua",
+    "columns": {
+      "index": 1,
+      "Id": 2,
+      "quality": 3
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "LibDragonAtksInfo": {
+    "source": "dragon/pconfig/librarys/dragon/LibDragonAtksInfo.lua",
+    "columns": {
+      "index": 1,
+      "dragonId": 2,
+      "quality": 3,
+      "baseAttack": 4,
+      "baseDefence": 5,
+      "baseLife": 6,
+      "resistance": 7,
+      "spellPenetration": 8,
+      "attackQuality": 9,
+      "defenceQuality": 10,
+      "lifeQuality": 11,
+      "element_1": 12,
+      "element_2": 13,
+      "anger": 14,
+      "hit": 15,
+      "dodge": 16,
+      "critical": 17,
+      "resilience": 18,
+      "defaultSkill_1": 19,
+      "defaultSkill_2": 20,
+      "defaultSkill_3": 21,
+      "defaultSkill_4": 22,
+      "xp": 23,
+      "perxp": 24,
+      "attack_animation": 25,
+      "attack_sound": 26
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "LibDragonCoitionInfo": {
+    "source": "dragon/pconfig/librarys/dragon/LibDragonCoitionInfo.lua",
+    "columns": {
+      "id": 1,
+      "dragonId1": 2,
+      "dragonId2": 3,
+      "canBreed": 4
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
   },
   "LibDragonExtendInfo": {
     "source": "dragon/pconfig/librarys/dragonExtend/LibDragonExtendInfo.lua",
@@ -142,6 +369,277 @@
       "maxStar": 35
     }
   },
+  "LibDragonRandInfo": {
+    "source": "dragon/pconfig/librarys/dragonrand/LibDragonRandInfo.lua",
+    "columns": {
+      "id": 1,
+      "randid": 2,
+      "type": 3,
+      "itemid": 4,
+      "nummin": 5,
+      "nummax": 5,
+      "weight": 6
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "LibSecretResolveInfo": {
+    "source": "dragon/pconfig/librarys/dragonsecret/LibSecretResolveInfo.lua",
+    "columns": {
+      "id": 1,
+      "dragontype": 2,
+      "soulratelv1": 3,
+      "soulminlv1": 4,
+      "soulmaxlv1": 5,
+      "soulratelv2": 6,
+      "soulminlv2": 7,
+      "soulmaxlv2": 8,
+      "soulratelv3": 9,
+      "soulminlv3": 10,
+      "soulmaxlv3": 11
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "LibDragonTrainInfo": {
+    "source": "dragon/pconfig/librarys/dragonTrain/LibDragonTrainInfo.lua",
+    "columns": {
+      "id": 1,
+      "nextlevel": 2,
+      "rate": 3,
+      "cost": 4,
+      "costfood": 5,
+      "maxatk": 9,
+      "maxdef": 10,
+      "maxhp": 11,
+      "exatk": 12,
+      "exdef": 13,
+      "exhp": 14
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "LibDuiHuanInfo": {
+    "source": "dragon/pconfig/librarys/duihuan/LibDuiHuanInfo.lua",
+    "columns": {
+      "id": 1,
+      "prop_type": 2,
+      "prop_id": 3,
+      "prop_cost": 4,
+      "item_type": 5,
+      "item_id": 6,
+      "item_num": 7
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "EggRewardInfo": {
+    "source": "dragon/pconfig/librarys/eggpeiyang/EggRewardInfo.lua",
+    "columns": {
+      "id": 1,
+      "order": 2,
+      "rewardDes": 3,
+      "rewardType": 4,
+      "getRewardPoint": 5,
+      "dragonList": 5,
+      "maxGetReawrdCnt": 9,
+      "rewardList": 9,
+      "groupID": 20
+    }
+  },
+  "EggShouJiInfo": {
+    "source": "dragon/pconfig/librarys/eggpeiyang/EggShouJiInfo.lua",
+    "columns": {
+      "id": 1,
+      "resultEggID": 3
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "EggShouJiPointInfo": {
+    "source": "dragon/pconfig/librarys/eggpeiyang/EggShouJiPointInfo.lua",
+    "columns": {
+      "id": 2,
+      "quality": 3,
+      "point": 4
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "EnhancedStoneInfo": {
+    "source": "dragon/pconfig/librarys/equip/EnhancedStoneInfo.lua",
+    "columns": {
+      "id": 1,
+      "nextLevelID": 17,
+      "composeCost": 22,
+      "icon": 23,
+      "doc": 24,
+      "name": 25
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "EquipFragInfo": {
+    "source": "dragon/pconfig/librarys/equip/EquipFragInfo.lua",
+    "columns": {
+      "index": 1,
+      "id": 2,
+      "equipType": 3,
+      "mergeCost": 4,
+      "quality": 5,
+      "name": 6,
+      "icon": 7,
+      "price": 8,
+      "part": 9,
+      "equipID": 10
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "EquipInfo": {
+    "source": "dragon/pconfig/librarys/equip/EquipInfo.lua",
+    "columns": {
+      "index": 1,
+      "id": 2,
+      "quality": 3,
+      "part": 4,
+      "property": 5,
+      "atk": 6,
+      "def": 7,
+      "hp": 8,
+      "resist": 9,
+      "antResist": 10,
+      "grade": 11,
+      "nextGradeID": 12,
+      "upgradeExpCost": 13,
+      "exp": 14,
+      "extType": 15,
+      "extSubType": 16,
+      "extAtom": 17,
+      "extValue": 18,
+      "randNum": 19,
+      "randID": 20,
+      "excDragonID": 21,
+      "name": 22,
+      "icon": 23,
+      "price": 24,
+      "evaluate": 25,
+      "prevGradeID": 26,
+      "enhancedCost": 27,
+      "decomposePkgID": 28,
+      "safeSigilID": 29,
+      "decomposeCost": 30,
+      "transCost": 31,
+      "prevView": 32,
+      "dropFrom": 33
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "SafeSigilInfo": {
+    "source": "dragon/pconfig/librarys/equip/SafeSigilInfo.lua",
+    "columns": {
+      "id": 1,
+      "icon": 2,
+      "doc": 3,
+      "name": 4
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "EquipGiftInfo": {
+    "source": "dragon/pconfig/librarys/equipgift/EquipGiftInfo.lua",
+    "columns": {
+      "id": 1,
+      "equipid": 2,
+      "neednum": 3,
+      "type": 4,
+      "giftID": 5,
+      "num": 6
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "EquipSellInfo": {
+    "source": "dragon/pconfig/librarys/equipsell/EquipSellInfo.lua",
+    "columns": {
+      "id": 1,
+      "type": 2,
+      "times": 3,
+      "itemType": 4,
+      "itemId": 5,
+      "itemNum": 6,
+      "price": 7,
+      "discount": 8,
+      "quality": 9
+    }
+  },
+  "ErTongInfo": {
+    "source": "dragon/pconfig/librarys/ertong/ErTongInfo.lua",
+    "columns": {
+      "id": 1,
+      "costID": 2,
+      "buyCostPrice": 3,
+      "maxBlood": 6,
+      "rewardlist": 6,
+      "title": 29
+    }
+  },
+  "LibEvolutionInfo": {
+    "source": "dragon/pconfig/librarys/evolution/LibEvolutionInfo.lua",
+    "columns": {
+      "id": 1,
+      "evotype": 2,
+      "evorank": 3,
+      "gcost": 7,
+      "fcost": 8,
+      "ecost": 9,
+      "lcost": 10
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "LibextendInfo": {
+    "source": "dragon/pconfig/librarys/extend/LibextendInfo.lua",
+    "columns": {
+      "dragonId": 1,
+      "baseId": 2,
+      "stage": 3,
+      "starEp": 4,
+      "quality": 5,
+      "collect": 6,
+      "isLegend": 7,
+      "starLimit": 8,
+      "isShow": 9,
+      "rank": 10,
+      "collectReward": 11,
+      "collectNumber": 12,
+      "colourDragon1": 13,
+      "colourDragon2": 14,
+      "colourDragon3": 15,
+      "colourDragon4": 16,
+      "colourDragon5": 17,
+      "fantastic1": 18,
+      "fantastic2": 19,
+      "fantastic3": 20,
+      "expendStar1": 21,
+      "expendStar2": 22,
+      "expendStar3": 23,
+      "dragonColor": 25
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "LibFestivalActivityInfo": {
+    "source": "dragon/pconfig/librarys/festivalactivity/LibFestivalActivityInfo.lua",
+    "columns": {
+      "id": 1,
+      "itemtype": 2,
+      "itemid": 3,
+      "itemcount": 4,
+      "itemgoal": 5,
+      "itemquality": 7
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "LibfirstRechageInfo": {
+    "source": "dragon/pconfig/librarys/firstRechage/LibfirstRechageInfo.lua",
+    "columns": {
+      "id": 1,
+      "type": 2,
+      "itemid": 3,
+      "pinzhi": 4,
+      "num": 5
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
   "LibFiveInfo": {
     "source": "dragon/pconfig/librarys/five/LibFiveInfo.lua",
     "columns": {
@@ -150,6 +648,17 @@
       "rewardList": 2,
       "cost": 15
     }
+  },
+  "LibFormationInfo": {
+    "source": "dragon/pconfig/librarys/formation/LibFormationInfo.lua",
+    "columns": {
+      "id": 1,
+      "count": 2,
+      "atk": 3,
+      "def": 4,
+      "life": 5
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
   },
   "LibfuncswitchInfo": {
     "source": "dragon/pconfig/librarys/funcswitch/LibfuncswitchInfo.lua",
@@ -202,6 +711,450 @@
       "awardNum": 7
     }
   },
+  "LibGemfacorableInfo": {
+    "source": "dragon/pconfig/librarys/Gemfacorable/LibGemfacorableInfo.lua",
+    "columns": {
+      "id": 1,
+      "type": 2,
+      "typeID": 3,
+      "typenum": 4,
+      "costNow": 5,
+      "costYet": 6
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "GeneInfo": {
+    "source": "dragon/pconfig/librarys/gene/GeneInfo.lua",
+    "columns": {
+      "id": 1,
+      "dragonColor": 2,
+      "itemType_1": 3,
+      "itemID_1": 4,
+      "itemNum_1": 5,
+      "itemType_2": 6,
+      "itemID_2": 7,
+      "itemNum_2": 8
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "GeneStoreInfo": {
+    "source": "dragon/pconfig/librarys/gene/GeneStoreInfo.lua",
+    "columns": {
+      "id": 1,
+      "itemQuality": 2,
+      "itemType": 3,
+      "itemID": 4,
+      "itemNum": 5,
+      "costType": 6,
+      "costID": 7,
+      "costNum": 8
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "LibGoalsRewardInfo": {
+    "source": "dragon/pconfig/librarys/goals/LibGoalsRewardInfo.lua",
+    "columns": {
+      "id": 1,
+      "value_1": 3,
+      "value_2": 5,
+      "have_reward": 6,
+      "reward_type": 7,
+      "reward_id": 8,
+      "reward_num": 9
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "LibGrowInfo": {
+    "source": "dragon/pconfig/librarys/grow/LibGrowInfo.lua",
+    "columns": {
+      "id": 1,
+      "level": 2,
+      "type1": 3,
+      "typeID1": 4,
+      "typenum1": 5,
+      "pin1": 6
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "FubenAwardInfo": {
+    "source": "dragon/pconfig/librarys/guild/FubenAwardInfo.lua",
+    "columns": {
+      "id": 1,
+      "belong": 2,
+      "awardType": 3,
+      "awardID": 4,
+      "awardQuality": 5,
+      "awardNum": 6
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "FubenBossInfo": {
+    "source": "dragon/pconfig/librarys/guild/FubenBossInfo.lua",
+    "columns": {
+      "id": 1,
+      "belong": 2,
+      "inID": 3,
+      "inNum": 4,
+      "prevBossID": 5,
+      "nextBossID": 6,
+      "monsterID": 7,
+      "monsterName": 8,
+      "pvePoints": 9,
+      "awardType": 10,
+      "awardID": 11,
+      "awardQuality": 12,
+      "awardNum": 13
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "FubenChapterInfo": {
+    "source": "dragon/pconfig/librarys/guild/FubenChapterInfo.lua",
+    "columns": {
+      "id": 1,
+      "name": 2,
+      "layoutName": 3,
+      "prevChapter": 4,
+      "bossNum": 5,
+      "firstBossPoint": 6,
+      "cost": 7,
+      "dropID_1": 8,
+      "awardNumMin_1": 9,
+      "awardNumMax_1": 10,
+      "dropID_2": 11,
+      "awardNumMin_2": 12,
+      "awardNumMax_2": 13,
+      "needPve": 14
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "FubenJiangliGerenInfo": {
+    "source": "dragon/pconfig/librarys/guild/FubenJiangliGerenInfo.lua",
+    "columns": {
+      "id": 1,
+      "belong": 2,
+      "maxRank": 3,
+      "minRank": 4,
+      "awardType": 5,
+      "awardID": 6,
+      "awardQuality": 7,
+      "awardNum": 8
+    }
+  },
+  "GuildDonateInfo": {
+    "source": "dragon/pconfig/librarys/guild/GuildDonateInfo.lua",
+    "columns": {
+      "id": 1,
+      "donateType": 2,
+      "donateNum": 3,
+      "getRes": 4,
+      "getContribution": 5,
+      "getExp": 6,
+      "getActive": 7
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "GuildExpInfo": {
+    "source": "dragon/pconfig/librarys/guild/GuildExpInfo.lua",
+    "columns": {
+      "id": 1,
+      "level": 2,
+      "needExp": 3
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "GuildShopInfo": {
+    "source": "dragon/pconfig/librarys/guild/GuildShopInfo.lua",
+    "columns": {
+      "id": 1,
+      "position": 2,
+      "itemType": 3,
+      "itemID": 4,
+      "itemNum": 5,
+      "minGuildLevel": 6,
+      "costContribution": 7,
+      "costType": 8,
+      "belong": 9
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "GuildTechInfo": {
+    "source": "dragon/pconfig/librarys/guild/GuildTechInfo.lua",
+    "columns": {
+      "id": 1,
+      "techType": 2,
+      "techValue": 3,
+      "needGuildlvl": 4,
+      "costDevote": 5,
+      "icon": 6,
+      "name": 7,
+      "costGold": 8,
+      "desc": 9
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "LibHolyInfo": {
+    "source": "dragon/pconfig/librarys/holy/LibHolyInfo.lua",
+    "columns": {
+      "id": 1,
+      "minLvl": 2,
+      "maxLvl": 3,
+      "minScore": 4,
+      "maxScore": 5,
+      "plunderNum1": 13,
+      "plunderNum2": 14,
+      "plunderNum3": 15
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "LibHolyFireInfo": {
+    "source": "dragon/pconfig/librarys/holyfire/LibHolyFireInfo.lua",
+    "columns": {
+      "quality": 2,
+      "type": 3,
+      "attack": 4,
+      "defend": 5,
+      "blood": 6,
+      "crit": 7,
+      "uncrit": 8,
+      "anti": 9,
+      "unanti": 10,
+      "eatexp": 11,
+      "levelupexp": 12,
+      "nextlevel": 13,
+      "exChangeNeednum": 15,
+      "level": 19
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "LibHolyFireLevelInfo": {
+    "source": "dragon/pconfig/librarys/holyfire/LibHolyFireLevelInfo.lua",
+    "columns": {
+      "id": 1,
+      "level": 2,
+      "donateNum": 3
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "LibHolyGodInfo": {
+    "source": "dragon/pconfig/librarys/holyfire/LibHolyGodInfo.lua",
+    "columns": {
+      "id": 1,
+      "level": 2,
+      "mainType": 3,
+      "mainAppendPercent": 4,
+      "assistantType": 5,
+      "assistantAppendPercent": 6,
+      "levelupExp": 7,
+      "nextlevelID": 8,
+      "fireNum": 9
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "LibHolyRandInfo": {
+    "source": "dragon/pconfig/librarys/holyfire/LibHolyRandInfo.lua",
+    "columns": {
+      "id": 1,
+      "costmj": 2,
+      "dropID": 3,
+      "nextNpcID": 4,
+      "nextNpc": 5,
+      "defaultState": 6,
+      "npcName": 8,
+      "npcIcon": 9
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "LibInvitationInfo": {
+    "source": "dragon/pconfig/librarys/invitation/LibInvitationInfo.lua",
+    "columns": {
+      "id": 1,
+      "itemtype": 2,
+      "itemid": 3,
+      "itemcount": 4,
+      "itemgoal": 5
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "LibItemsInfo": {
+    "source": "dragon/pconfig/librarys/items/LibItemsInfo.lua",
+    "columns": {
+      "id": 1,
+      "cost": 2,
+      "type1": 3,
+      "typeID1": 4,
+      "typenum1": 5,
+      "type2": 6,
+      "typeID2": 7,
+      "typenum2": 8,
+      "type3": 9,
+      "typeID3": 10,
+      "typenum3": 11
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "LibJuexJingyanInfo": {
+    "source": "dragon/pconfig/librarys/juexing/LibJuexJingyanInfo.lua",
+    "columns": {
+      "dragonID": 1,
+      "suipianID": 2,
+      "suipianExp": 3,
+      "star0Exp": 4,
+      "star1Exp": 5,
+      "star2Exp": 6,
+      "star3Exp": 7,
+      "star4Exp": 8,
+      "star5Exp": 9,
+      "star6Exp": 10,
+      "star7Exp": 11,
+      "star8Exp": 12,
+      "star9Exp": 13,
+      "star10Exp": 14
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "LibJuexShengxingInfo": {
+    "source": "dragon/pconfig/librarys/juexing/LibJuexShengxingInfo.lua",
+    "columns": {
+      "id": 1,
+      "dragonID": 2,
+      "star": 3,
+      "nextDesc": 4,
+      "exp": 5,
+      "costType_1": 6,
+      "costID_1": 7,
+      "costNum_1": 8,
+      "costQuality_1": 9,
+      "costType_2": 10,
+      "costID_2": 11,
+      "costNum_2": 12,
+      "costQuality_2": 13,
+      "costType_3": 14,
+      "costID_3": 15,
+      "costNum_3": 16,
+      "costQuality_3": 17,
+      "costType_4": 18,
+      "costID_4": 19,
+      "costNum_4": 20,
+      "costQuality_4": 21
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "LibJuexShuxingInfo": {
+    "source": "dragon/pconfig/librarys/juexing/LibJuexShuxingInfo.lua",
+    "columns": {
+      "id": 1,
+      "dragonID": 2,
+      "star": 3,
+      "status": 4,
+      "desc": 5,
+      "attack": 6,
+      "defend": 7,
+      "blood": 8,
+      "crit": 9,
+      "uncrit": 10,
+      "attactTotal": 11,
+      "defendTotal": 12,
+      "bloodTotal": 13,
+      "critTotal": 14,
+      "uncritTotal": 15
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "KaiBaoXiangInfo": {
+    "source": "dragon/pconfig/librarys/kaixiangtexiao/KaiBaoXiangInfo.lua",
+    "columns": {
+      "id": 1,
+      "boxid": 1,
+      "effectid": 1
+    }
+  },
+  "LibLightActivityInfo": {
+    "source": "dragon/pconfig/librarys/lightTheFire/LibLightActivityInfo.lua",
+    "columns": {
+      "id": 1,
+      "itemtype": 2,
+      "itemid": 3,
+      "itemcount": 4,
+      "itemrate": 5
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "LimitedDragonInfo": {
+    "source": "dragon/pconfig/librarys/limiteddragon/LimitedDragonInfo.lua",
+    "columns": {
+      "id": 1,
+      "reward_type_1": 2,
+      "reward_id_1": 3,
+      "reward_count_1": 4,
+      "reward_quality_1": 5,
+      "reward_type_2": 6,
+      "reward_id_2": 7,
+      "reward_count_2": 8,
+      "reward_quality_2": 9,
+      "reward_type_3": 10,
+      "reward_id_3": 11,
+      "reward_count_3": 12,
+      "reward_quality_3": 13
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "LibLoserInfo": {
+    "source": "dragon/pconfig/librarys/loser/LibLoserInfo.lua",
+    "columns": {
+      "id": 1,
+      "type": 2,
+      "star": 3,
+      "value": 4,
+      "desc": 5
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "LibLuckDrawInfo": {
+    "source": "dragon/pconfig/librarys/luckDraw/LibLuckDrawInfo.lua",
+    "columns": {
+      "id": 1,
+      "drawid": 2,
+      "itemtype": 3,
+      "itemid": 4,
+      "itemcount": 5,
+      "effect": 9,
+      "quality": 10
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "LibLuckyZPInfo": {
+    "source": "dragon/pconfig/librarys/luckzp/LibLuckyZPInfo.lua",
+    "columns": {
+      "id": 1,
+      "zpID": 2,
+      "rewardType": 3,
+      "reardID": 4,
+      "rewardNum": 5,
+      "eff": 8
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "LibMagicZoneInfo": {
+    "source": "dragon/pconfig/librarys/magiczone/LibMagicZoneInfo.lua",
+    "columns": {
+      "id": 1,
+      "earth": 2,
+      "fire": 3,
+      "water": 4,
+      "plant": 5,
+      "metal": 6,
+      "ice": 7,
+      "electricity": 8,
+      "dark": 9,
+      "buff_1": 10,
+      "buff_2": 11,
+      "buff_3": 12,
+      "name": 13,
+      "des": 14,
+      "power": 15
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
   "LibMonsterInfo": {
     "source": "dragon/pconfig/librarys/monster/LibMonsterInfo.lua",
     "columns": {
@@ -209,6 +1162,396 @@
       "ai": 21,
       "isGround": 23
     }
+  },
+  "MonsterPackNineInfo": {
+    "source": "dragon/pconfig/librarys/monster/MonsterPackNineInfo.lua",
+    "columns": {
+      "id": 1,
+      "monsterId_1": 2,
+      "monsterId_2": 3,
+      "monsterId_3": 4,
+      "monsterId_4": 5,
+      "monsterId_5": 6,
+      "monsterId_6": 7,
+      "monsterId_7": 8,
+      "monsterId_8": 9,
+      "monsterId_9": 10,
+      "name": 11,
+      "level": 12,
+      "head": 13
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "LibDivinationInfo": {
+    "source": "dragon/pconfig/librarys/newdivination/LibDivinationInfo.lua",
+    "columns": {
+      "id": 1,
+      "randid": 2,
+      "itemtype": 3,
+      "itemid": 4,
+      "itemnum": 5
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "LibnewPlayerInfo": {
+    "source": "dragon/pconfig/librarys/newPlayer/LibnewPlayerInfo.lua",
+    "columns": {
+      "id": 1,
+      "itemid": 3,
+      "num": 4,
+      "pinzhi": 5
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "NewyearCostInfo": {
+    "source": "dragon/pconfig/librarys/newyear/NewyearCostInfo.lua",
+    "columns": {
+      "id": 1,
+      "type": 1,
+      "drawCount": 1,
+      "costCount": 1
+    }
+  },
+  "NewyearTaskInfo": {
+    "source": "dragon/pconfig/librarys/newyear/NewyearTaskInfo.lua",
+    "columns": {
+      "id": 1,
+      "param": 1,
+      "finishPerDay": 1,
+      "redPackage": 1,
+      "desc": 5
+    }
+  },
+  "LibPokedexInfo": {
+    "source": "dragon/pconfig/librarys/pokedex/LibPokedexInfo.lua",
+    "columns": {
+      "id": 1,
+      "dragon_id": 2,
+      "active_1_type": 3,
+      "active_1_value": 4,
+      "active_2_type": 5,
+      "active_2_value": 6,
+      "source_breed": 7,
+      "source_shop": 8,
+      "source_lottery": 9,
+      "source_pve": 10,
+      "source_activiy": 11,
+      "source_daily": 12,
+      "source_event": 13,
+      "source_worldboss": 14,
+      "source_pvpstore": 15,
+      "source_guildstore": 16,
+      "source_copycenter": 17
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "LibPurpleEquipInfo": {
+    "source": "dragon/pconfig/librarys/purpleEquip/LibPurpleEquipInfo.lua",
+    "columns": {
+      "id": 1,
+      "needNum": 3,
+      "rewardPattern": 4,
+      "rewardId": 5,
+      "rewardNum": 6
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "PveLevelInfo": {
+    "source": "dragon/pconfig/librarys/pve/PveLevelInfo.lua",
+    "columns": {
+      "id": 1,
+      "belongTo": 2,
+      "mapType": 3,
+      "spDropType": 4,
+      "spDropID": 5,
+      "spDrop": 6,
+      "requireID": 7,
+      "afterID": 8,
+      "limitLevel": 9,
+      "enemys": 10,
+      "drops": 11,
+      "maxAtkCnt": 12,
+      "hasFirstKill": 13,
+      "firstKillType": 14,
+      "firstKillID": 15,
+      "firstKillNum": 16,
+      "powerCostWin": 17,
+      "playerExpWin": 18,
+      "dragonExpWin": 19,
+      "name": 20,
+      "desc": 22,
+      "storyBeforeFight": 23,
+      "storyAfterFight": 24,
+      "levelBG": 25,
+      "firstTimeTip": 26
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "PveMapInfo": {
+    "source": "dragon/pconfig/librarys/pve/PveMapInfo.lua",
+    "columns": {
+      "id": 1,
+      "limitLevel": 2,
+      "totalStar": 6
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "PveMapsInfo": {
+    "source": "dragon/pconfig/librarys/pve/PveMapsInfo.lua",
+    "columns": {
+      "id": 1,
+      "fullStarAwardType": 2,
+      "fullStarAwardID": 3,
+      "fullStarAwardNum": 4
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "LibQiandaoInfo": {
+    "source": "dragon/pconfig/librarys/qiandao/LibQiandaoInfo.lua",
+    "columns": {
+      "id": 1,
+      "month": 3,
+      "day": 4,
+      "signnum": 5,
+      "itemtype": 6,
+      "itemid": 7,
+      "itemnum": 8,
+      "showid": 9
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "QiXi2016Info": {
+    "source": "dragon/pconfig/librarys/qixi2016/QiXi2016Info.lua",
+    "columns": {
+      "id": 1,
+      "itemID": 2,
+      "showTIP": 3,
+      "itemNum": 4,
+      "exchangeType": 5,
+      "exchangeID": 6,
+      "exchangeNum": 7,
+      "needID": 8
+    }
+  },
+  "RandEvInfo": {
+    "source": "dragon/pconfig/librarys/randev/RandEvInfo.lua",
+    "columns": {
+      "id": 1,
+      "evId": 2,
+      "evType": 3,
+      "weight": 4,
+      "timeLeft": 5,
+      "awardType": 6,
+      "itemId": 7,
+      "itemNum": 8,
+      "price": 9,
+      "monster": 10,
+      "itemName": 11,
+      "evDoc": 12
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "RandnameInfo": {
+    "source": "dragon/pconfig/librarys/randname/RandnameInfo.lua",
+    "columns": {
+      "id": 1,
+      "firstName": 2,
+      "lastName": 3
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "LibSecKillInfo": {
+    "source": "dragon/pconfig/librarys/secKill/LibSecKillInfo.lua",
+    "columns": {
+      "id": 1,
+      "typeid": 2
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "SecretActiveInfo": {
+    "source": "dragon/pconfig/librarys/secret/SecretActiveInfo.lua",
+    "columns": {
+      "id": 1,
+      "dragonQuality": 2,
+      "secretlevel": 3,
+      "atlastTimes": 4,
+      "costGold": 5,
+      "costSoulJunior": 6,
+      "costSoulMiddle": 7,
+      "costSoulSenior": 8,
+      "successPercent": 9,
+      "needStar": 10
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "SecretAddInfo": {
+    "source": "dragon/pconfig/librarys/secret/SecretAddInfo.lua",
+    "columns": {
+      "id": 1,
+      "percent": 2
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "SecretComposeInfo": {
+    "source": "dragon/pconfig/librarys/secret/SecretComposeInfo.lua",
+    "columns": {
+      "id": 1,
+      "composeType": 2,
+      "composeID": 3,
+      "costType_1": 4,
+      "costID_1": 5,
+      "costNum_1": 6,
+      "costType_2": 7,
+      "costID_2": 8,
+      "costNum_2": 9
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "SecretDeomposeInfo": {
+    "source": "dragon/pconfig/librarys/secret/SecretDeomposeInfo.lua",
+    "columns": {
+      "id": 1,
+      "dragonQuality": 2,
+      "SoulJuniorPercent": 3,
+      "SoulJuniorMin": 4,
+      "SoulJuniorMax": 5,
+      "SoulMiddlePercent": 6,
+      "SoulMiddleMin": 7,
+      "SoulMiddleMax": 8,
+      "SoulSeniorPercent": 9,
+      "SoulSeniorMin": 10,
+      "SoulSeniorMax": 11
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "LibSevenInfo": {
+    "source": "dragon/pconfig/librarys/seven/LibSevenInfo.lua",
+    "columns": {
+      "id": 1,
+      "cost": 2,
+      "type1": 3,
+      "typeID1": 4,
+      "typenum1": 5,
+      "pin1": 6,
+      "type2": 7,
+      "typeID2": 8,
+      "typenum2": 9,
+      "pin2": 10,
+      "chongzhi": 11
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "BuffNewInfo": {
+    "source": "dragon/pconfig/librarys/skill/BuffNewInfo.lua",
+    "columns": {
+      "id": 1,
+      "groupID": 2,
+      "roundsNum": 3,
+      "activeTargetType": 4,
+      "type": 5,
+      "arg1": 6,
+      "arg2": 7
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "RuneColourInfo": {
+    "source": "dragon/pconfig/librarys/skill/RuneColourInfo.lua",
+    "columns": {
+      "id": 1,
+      "rune_": 2
+    }
+  },
+  "RuneLevelInfo": {
+    "source": "dragon/pconfig/librarys/skill/RuneLevelInfo.lua",
+    "columns": {
+      "id": 1,
+      "rune_": 2
+    }
+  },
+  "SkillDesInfo": {
+    "source": "dragon/pconfig/librarys/skill/SkillDesInfo.lua",
+    "columns": {
+      "id": 1,
+      "type": 2,
+      "des": 3
+    }
+  },
+  "SkillNewCommonInfo": {
+    "source": "dragon/pconfig/librarys/skill/SkillNewCommonInfo.lua",
+    "columns": {
+      "id": 1,
+      "name": 2,
+      "type": 3,
+      "icon": 4,
+      "fireEff": 5,
+      "hitEff": 6,
+      "groundEff": 7,
+      "fireSoundID": 8,
+      "hitSoundID": 9,
+      "buff1Eff": 10,
+      "buff1HookType": 11,
+      "buff2Eff": 12,
+      "buff2HookType": 13,
+      "desID": 14,
+      "nameImg": 15
+    }
+  },
+  "SkillNewInfo": {
+    "source": "dragon/pconfig/librarys/skill/SkillNewInfo.lua",
+    "columns": {
+      "id": 2,
+      "type": 3,
+      "activeProb": 4,
+      "activeTargetType": 5,
+      "damageVector": 6,
+      "damageValue": 7,
+      "suckBloodPercent": 8,
+      "buff1ID": 9,
+      "buff1ActiveProb": 10,
+      "buff2ID": 11,
+      "buff2ActiveProb": 12,
+      "addPower": 13,
+      "runeColour": 14,
+      "runeLevel": 15
+    }
+  },
+  "LibTournamentInfo": {
+    "source": "dragon/pconfig/librarys/tournament/LibTournamentInfo.lua",
+    "columns": {
+      "id": 1,
+      "nextId": 2,
+      "monsterId": 3,
+      "gold": 4,
+      "cash": 5,
+      "awardType": 7,
+      "awardID": 8,
+      "awardNum": 9
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "LibTrainGetInfo": {
+    "source": "dragon/pconfig/librarys/TrainGet/LibTrainGetInfo.lua",
+    "columns": {
+      "id": 1,
+      "type": 2,
+      "typeID": 3,
+      "typenum": 4,
+      "jifen": 5
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "LibTrainScoreInfo": {
+    "source": "dragon/pconfig/librarys/TrainScore/LibTrainScoreInfo.lua",
+    "columns": {
+      "id": 1,
+      "type": 2,
+      "typeID": 3,
+      "typenum": 4,
+      "rank1": 5,
+      "rank2": 6,
+      "pinzhi": 7
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
   },
   "LibTreasureInfo": {
     "source": "dragon/pconfig/librarys/treasure/LibTreasureInfo.lua",
@@ -356,6 +1699,64 @@
       "zhekouIcon": 21
     }
   },
+  "LibtweleveInfo": {
+    "source": "dragon/pconfig/librarys/tweleve/LibtweleveInfo.lua",
+    "columns": {
+      "id": 1,
+      "type": 2,
+      "typeID": 3,
+      "pinzhi": 4,
+      "typenum": 5,
+      "cishu": 6
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "VipInfo": {
+    "source": "dragon/pconfig/librarys/vip/VipInfo.lua",
+    "columns": {
+      "id": 1,
+      "needExp": 2,
+      "expExtro": 3,
+      "goldExtro": 4,
+      "foodExtro": 5,
+      "onekeyTrain": 7,
+      "oneHavest": 8,
+      "pvePower": 9,
+      "pveBuyPowerTime": 10,
+      "bossNoCD": 11,
+      "bossBuyTime": 12,
+      "pvpNoCD": 13,
+      "pvpBuyTime": 14,
+      "bloodTime": 15,
+      "godTreeNumPlunde": 16,
+      "godTreeNumFruit": 17,
+      "worldBossFreeTime": 18,
+      "buyVipPack": 19,
+      "trainOdds": 20,
+      "vipPackPrice": 21,
+      "packType1": 22,
+      "packID1": 23,
+      "packNum1": 24,
+      "packType2": 25,
+      "packID2": 26,
+      "packNum2": 27,
+      "packType3": 28,
+      "packID3": 29,
+      "packNum3": 30,
+      "desc": 31,
+      "descTitle": 32,
+      "packEffect1": 34,
+      "packEffect2": 35,
+      "packEffect3": 36,
+      "packQuality1": 37,
+      "packQuality2": 38,
+      "packQuality3": 39,
+      "reducebreed": 40,
+      "reducehatch": 41,
+      "reducebuilding": 42
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
   "LibWelfareInfo": {
     "source": "dragon/pconfig/librarys/welfare/LibWelfareInfo.lua",
     "columns": {
@@ -369,6 +1770,49 @@
       "double": 8,
       "vip": 9
     }
+  },
+  "LibWorldBossAchievementInfo": {
+    "source": "dragon/pconfig/librarys/worldboss/LibWorldBossAchievementInfo.lua",
+    "columns": {
+      "id": 1,
+      "dragonid": 2,
+      "value": 3,
+      "reward_type_1": 4,
+      "reward_id_1": 5,
+      "reward_quality_1": 6,
+      "reward_count_1": 7,
+      "reward_type_2": 8,
+      "reward_id_2": 9,
+      "reward_quality_2": 10,
+      "reward_count_2": 11
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "LibWorldBossRewardInfo": {
+    "source": "dragon/pconfig/librarys/worldboss/LibWorldBossRewardInfo.lua",
+    "columns": {
+      "id": 1,
+      "bosstype": 2,
+      "top": 3,
+      "bottom": 4,
+      "reward_type_1": 5,
+      "reward_id_1": 6,
+      "reward_quality_1": 7,
+      "reward_count_1": 8,
+      "reward_type_2": 9,
+      "reward_id_2": 10,
+      "reward_quality_2": 11,
+      "reward_count_2": 12,
+      "reward_type_3": 13,
+      "reward_id_3": 14,
+      "reward_quality_3": 15,
+      "reward_count_3": 16,
+      "reward_type_4": 17,
+      "reward_id_4": 18,
+      "reward_quality_4": 19,
+      "reward_count_4": 20
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
   },
   "LibXianshixiaofeiInfo": {
     "source": "dragon/pconfig/librarys/xianshixiaofei/LibXianshixiaofeiInfo.lua",
@@ -390,6 +1834,34 @@
       "awardQuality_3": 15
     }
   },
+  "ZangHuaInfo": {
+    "source": "dragon/pconfig/librarys/zang/ZangHuaInfo.lua",
+    "columns": {
+      "id": 1,
+      "value": 2
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "LibBloodWarInfo": {
+    "source": "dragon/pconfig/librarys/battle/blood/LibBloodWarInfo.lua",
+    "columns": {
+      "id": 1,
+      "actId": 2,
+      "nextMissionId": 3,
+      "monster_1_id": 5,
+      "monster_1_drop": 6,
+      "monster_1_star": 7,
+      "monster_2_id": 8,
+      "monster_2_drop": 9,
+      "monster_2_star": 10,
+      "monster_3_id": 11,
+      "monster_3_drop": 12,
+      "monster_3_star": 13,
+      "prevMissionId": 14,
+      "nextActId": 15
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
   "LibBloodWarLevelInfo": {
     "source": "dragon/pconfig/librarys/battle/blood/LibBloodWarLevelInfo.lua",
     "columns": {
@@ -405,5 +1877,151 @@
       "costMojing": 15,
       "getScore": 16
     }
+  },
+  "FwDataInfo": {
+    "source": "dragon/pconfig/librarys/fwlib/fw/FwDataInfo.lua",
+    "columns": {
+      "id": 2,
+      "quality": 3,
+      "seat": 4,
+      "attack": 5,
+      "defense": 6,
+      "blood": 7,
+      "addNum": 8,
+      "name": 9,
+      "url": 10,
+      "levelupexp": 11,
+      "nextlevelID": 12,
+      "eatExp": 13,
+      "level": 14,
+      "crit": 15,
+      "uncrit": 16
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "FwInfo": {
+    "source": "dragon/pconfig/librarys/fwlib/search/FwInfo.lua",
+    "columns": {
+      "id": 1,
+      "searchtype": 2,
+      "type": 3,
+      "param": 4
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "LibBossInfo": {
+    "source": "dragon/pconfig/librarys/monster/boss/LibBossInfo.lua",
+    "columns": {
+      "id": 1,
+      "packId": 2,
+      "star": 3,
+      "minLevel": 4,
+      "maxLevel": 5,
+      "dragonSoulNum": 6,
+      "dropType": 9,
+      "dropId": 10,
+      "dropNum": 11,
+      "mission": 12
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "PeiYangRewardInfo": {
+    "source": "dragon/pconfig/librarys/peiyanghuodong/reward/PeiYangRewardInfo.lua",
+    "columns": {
+      "id": 1,
+      "point": 2,
+      "doCnt": 3,
+      "rewardlist": 3
+    }
+  },
+  "PeiYangTaskInfo": {
+    "source": "dragon/pconfig/librarys/peiyanghuodong/task/PeiYangTaskInfo.lua",
+    "columns": {
+      "id": 1,
+      "num": 2,
+      "point": 3,
+      "doCnt": 4,
+      "des": 5
+    }
+  },
+  "ChaptersInfo": {
+    "source": "dragon/pconfig/librarys/pve/chapters/ChaptersInfo.lua",
+    "columns": {
+      "id": 1,
+      "fullRewardType": 2,
+      "rewardID": 3,
+      "rewardNum": 4,
+      "title": 5,
+      "image": 6,
+      "rewardType": 8,
+      "rewardDragonId": 9
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "TollgateInfo": {
+    "source": "dragon/pconfig/librarys/pve/tollgate/TollgateInfo.lua",
+    "columns": {
+      "id": 1,
+      "chaptersID": 2,
+      "monsterID": 3,
+      "dropID": 4,
+      "lastID": 5,
+      "nextID": 6,
+      "fightMaxNum": 7,
+      "name": 8,
+      "beginFilm": 9,
+      "endFilm": 10,
+      "level": 11,
+      "quality": 12,
+      "image": 13,
+      "type": 14,
+      "haveFirstTime": 15,
+      "rewardType": 16,
+      "rewardID": 17,
+      "rewardNum": 18
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "TollgateRewardInfo": {
+    "source": "dragon/pconfig/librarys/pve/tollgatereward/TollgateRewardInfo.lua",
+    "columns": {
+      "id": 1
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "SevenLoginRewardInfo": {
+    "source": "dragon/pconfig/librarys/sevenreward/loginreward/SevenLoginRewardInfo.lua",
+    "columns": {
+      "id": 1
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "SevenRewardShopInfo": {
+    "source": "dragon/pconfig/librarys/sevenreward/shop/SevenRewardShopInfo.lua",
+    "columns": {
+      "id": 1,
+      "itemType": 2,
+      "itemID": 3,
+      "itemNum": 4,
+      "oldPrice": 5,
+      "nowPrice": 6,
+      "buyCount": 7,
+      "VipRule": 8,
+      "quality": 9
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
+  },
+  "SevenTaskRewardInfo": {
+    "source": "dragon/pconfig/librarys/sevenreward/taskreward/SevenTaskRewardInfo.lua",
+    "columns": {
+      "id": 1,
+      "args": 2,
+      "rewardType": 3,
+      "rewardID": 4,
+      "rewardNum": 5,
+      "quality": 6,
+      "des": 7
+    },
+    "note": "Direct field-to-column mapping; conditionals and derived expressions require separate review."
   }
 }

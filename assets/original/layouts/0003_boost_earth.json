@@ -1,0 +1,23 @@
+{
+  "group": [
+    "buildings/0003_boost_earth_g"
+  ],
+  "width": 276,
+  "height": 237,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0003_boost_earth_g_bg.png",
+      "x": 25,
+      "y": 130
+    },
+    {
+      "name": "eff",
+      "type": "eff",
+      "eff": "0003_boost_earth_eff",
+      "width": 88,
+      "height": 130
+    }
+  ]
+}

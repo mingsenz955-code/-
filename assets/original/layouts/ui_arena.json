@@ -1,0 +1,1196 @@
+{
+  "group": [
+    "ui_Batlle"
+  ],
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png"
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_GuanBi1.png",
+      "img_down": "#ui_common_btn_GuanBi2.png",
+      "x": 468.1,
+      "y": 338.9,
+      "right": 43.9
+    },
+    {
+      "name": "tiaozhanduishou",
+      "type": "node",
+      "x": 206.35,
+      "y": 1.32,
+      "width": 600,
+      "height": 514.15,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_DiBan_YangBiZhi.png",
+          "scale9": 1,
+          "x": -299.25,
+          "y": -7.58,
+          "width": 598,
+          "height": 499,
+          "maxw": 598,
+          "maxh": 499
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_haoyoulan2.png",
+          "scale9": 1,
+          "x": -275.15,
+          "y": -49.28,
+          "width": 553,
+          "height": 355,
+          "maxw": 553,
+          "maxh": 355
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_arena_t2.png",
+          "y": 207.07,
+          "width": 600,
+          "height": 100
+        },
+        {
+          "name": "shuaxin",
+          "type": "node",
+          "x": 184.15,
+          "y": 212.97,
+          "width": 92,
+          "height": 46,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btndh1.png",
+              "img_down": "#ui_common_btndh2.png"
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "刷新",
+              "size": 26,
+              "align": "center",
+              "color": 992815615,
+              "outlineColor": 13941402,
+              "x": -42,
+              "y": -1.88,
+              "width": 85,
+              "height": 33.25
+            }
+          ]
+        },
+        {
+          "name": "biaoti",
+          "type": "sprite",
+          "img": "#ui_arena_title_duishou.png",
+          "x": -6.25,
+          "y": 213.47,
+          "width": 169,
+          "height": 49
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_sekuai1.png",
+          "scale9": 1,
+          "x": -169.45,
+          "y": -49.03,
+          "width": 224,
+          "height": 339,
+          "maxw": 224,
+          "maxh": 339
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_sekuai1.png",
+          "scale9": 1,
+          "x": 167.55,
+          "y": -49.03,
+          "width": 104,
+          "height": 339,
+          "maxw": 104,
+          "maxh": 339
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_di2.png",
+          "scale9": 1,
+          "x": -273,
+          "y": 146.72,
+          "width": 547,
+          "height": 41,
+          "maxw": 547,
+          "maxh": 41
+        },
+        {
+          "name": "tx_paiming",
+          "type": "label",
+          "text": "排名",
+          "size": 20,
+          "align": "center",
+          "color": 1092488703,
+          "x": -259,
+          "y": 147.82,
+          "width": 87,
+          "height": 26.5
+        },
+        {
+          "name": "tx_wanjia",
+          "type": "label",
+          "text": "玩家信息",
+          "size": 20,
+          "align": "center",
+          "color": 1092488703,
+          "x": -139,
+          "y": 147.82,
+          "width": 161,
+          "height": 26.5
+        },
+        {
+          "name": "tx_zhandouli",
+          "type": "label",
+          "text": "战斗力",
+          "size": 20,
+          "align": "center",
+          "color": 1092488703,
+          "x": 55,
+          "y": 147.82,
+          "width": 109,
+          "height": 26.5
+        },
+        {
+          "name": "mubiao1",
+          "type": "node",
+          "x": 4.5,
+          "y": 83.2,
+          "width": 527.3,
+          "height": 67.05,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_arena_line_jjc1.png",
+              "x": 2.8,
+              "y": -31.52,
+              "width": 517,
+              "height": 4
+            },
+            {
+              "name": "paiming",
+              "type": "label",
+              "text": "999999",
+              "size": 20,
+              "align": "center",
+              "color": 1092488703,
+              "x": -263.65,
+              "y": 2.27,
+              "width": 87,
+              "height": 26.5
+            },
+            {
+              "name": "xiangkuang",
+              "type": "node",
+              "x": -140.2,
+              "y": 3.52,
+              "width": 60,
+              "height": 60,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_common_touxiang2.png",
+                  "width": 60,
+                  "height": 60
+                },
+                {
+                  "name": "icon",
+                  "type": "node",
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "level",
+                  "type": "label",
+                  "text": "lv25",
+                  "size": 20,
+                  "align": "right",
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -26,
+                  "y": -15.25,
+                  "width": 53,
+                  "height": 26.5
+                }
+              ]
+            },
+            {
+              "name": "wanjia",
+              "type": "label",
+              "text": "圣马圣马龙哈",
+              "size": 20,
+              "align": "left",
+              "color": 1092488703,
+              "x": -106.65,
+              "y": 2.27,
+              "width": 141,
+              "height": 26.5
+            },
+            {
+              "name": "zhandouli",
+              "type": "label",
+              "text": "1234567",
+              "size": 20,
+              "align": "center",
+              "color": 4278190335,
+              "x": 49.35,
+              "y": 2.27,
+              "width": 111,
+              "height": 26.5
+            },
+            {
+              "name": "tiaozhan",
+              "type": "node",
+              "x": 217.65,
+              "y": 3.13,
+              "width": 92,
+              "height": 46,
+              "children": [
+                {
+                  "name": "btn",
+                  "type": "btn",
+                  "img_normal": "#ui_common_btndh1.png",
+                  "img_down": "#ui_common_btndh2.png"
+                },
+                {
+                  "name": "txt_name",
+                  "type": "label",
+                  "text": "挑战",
+                  "size": 26,
+                  "align": "center",
+                  "color": 992815615,
+                  "outlineColor": 13941402,
+                  "x": -42,
+                  "y": -1.13,
+                  "width": 85,
+                  "height": 37.75
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "mubiao2",
+          "type": "node",
+          "x": 4.5,
+          "y": 16.2,
+          "width": 527.3,
+          "height": 67.05,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_arena_line_jjc1.png",
+              "x": 2.8,
+              "y": -31.52,
+              "width": 517,
+              "height": 4
+            },
+            {
+              "name": "paiming",
+              "type": "label",
+              "text": "999999",
+              "size": 20,
+              "align": "center",
+              "color": 1092488703,
+              "x": -263.65,
+              "y": 2.27,
+              "width": 87,
+              "height": 26.5
+            },
+            {
+              "name": "xiangkuang",
+              "type": "node",
+              "x": -140.2,
+              "y": 3.52,
+              "width": 60,
+              "height": 60,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_common_touxiang2.png",
+                  "width": 60,
+                  "height": 60
+                },
+                {
+                  "name": "icon",
+                  "type": "node",
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "level",
+                  "type": "label",
+                  "text": "lv25",
+                  "size": 20,
+                  "align": "right",
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -26,
+                  "y": -15.25,
+                  "width": 53,
+                  "height": 26.5
+                }
+              ]
+            },
+            {
+              "name": "wanjia",
+              "type": "label",
+              "text": "圣马圣马龙哈",
+              "size": 20,
+              "align": "left",
+              "color": 1092488703,
+              "x": -106.65,
+              "y": 2.27,
+              "width": 141,
+              "height": 26.5
+            },
+            {
+              "name": "zhandouli",
+              "type": "label",
+              "text": "1234567",
+              "size": 20,
+              "align": "center",
+              "color": 4278190335,
+              "x": 49.35,
+              "y": 2.27,
+              "width": 111,
+              "height": 26.5
+            },
+            {
+              "name": "tiaozhan",
+              "type": "node",
+              "x": 217.65,
+              "y": 3.13,
+              "width": 92,
+              "height": 46,
+              "children": [
+                {
+                  "name": "btn",
+                  "type": "btn",
+                  "img_normal": "#ui_common_btndh1.png",
+                  "img_down": "#ui_common_btndh2.png"
+                },
+                {
+                  "name": "txt_name",
+                  "type": "label",
+                  "text": "挑战",
+                  "size": 26,
+                  "align": "center",
+                  "color": 992815615,
+                  "outlineColor": 13941402,
+                  "x": -42,
+                  "y": -1.13,
+                  "width": 85,
+                  "height": 37.75
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "mubiao3",
+          "type": "node",
+          "x": 4.5,
+          "y": -51.8,
+          "width": 527.3,
+          "height": 67.05,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_arena_line_jjc1.png",
+              "x": 2.8,
+              "y": -31.52,
+              "width": 517,
+              "height": 4
+            },
+            {
+              "name": "paiming",
+              "type": "label",
+              "text": "999999",
+              "size": 20,
+              "align": "center",
+              "color": 1092488703,
+              "x": -263.65,
+              "y": 2.27,
+              "width": 87,
+              "height": 26.5
+            },
+            {
+              "name": "xiangkuang",
+              "type": "node",
+              "x": -140.2,
+              "y": 3.52,
+              "width": 60,
+              "height": 60,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_common_touxiang2.png",
+                  "width": 60,
+                  "height": 60
+                },
+                {
+                  "name": "icon",
+                  "type": "node",
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "level",
+                  "type": "label",
+                  "text": "lv25",
+                  "size": 20,
+                  "align": "right",
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -26,
+                  "y": -15.25,
+                  "width": 53,
+                  "height": 26.5
+                }
+              ]
+            },
+            {
+              "name": "wanjia",
+              "type": "label",
+              "text": "圣马圣马龙哈",
+              "size": 20,
+              "align": "left",
+              "color": 1092488703,
+              "x": -106.65,
+              "y": 2.27,
+              "width": 141,
+              "height": 26.5
+            },
+            {
+              "name": "zhandouli",
+              "type": "label",
+              "text": "1234567",
+              "size": 20,
+              "align": "center",
+              "color": 4278190335,
+              "x": 49.35,
+              "y": 2.27,
+              "width": 111,
+              "height": 26.5
+            },
+            {
+              "name": "tiaozhan",
+              "type": "node",
+              "x": 217.65,
+              "y": 3.13,
+              "width": 92,
+              "height": 46,
+              "children": [
+                {
+                  "name": "btn",
+                  "type": "btn",
+                  "img_normal": "#ui_common_btndh1.png",
+                  "img_down": "#ui_common_btndh2.png"
+                },
+                {
+                  "name": "txt_name",
+                  "type": "label",
+                  "text": "挑战",
+                  "size": 26,
+                  "align": "center",
+                  "color": 992815615,
+                  "outlineColor": 13941402,
+                  "x": -42,
+                  "y": -1.13,
+                  "width": 85,
+                  "height": 37.75
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "mubiao4",
+          "type": "node",
+          "x": 4.5,
+          "y": -119.8,
+          "width": 527.3,
+          "height": 67.05,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_arena_line_jjc1.png",
+              "x": 2.8,
+              "y": -31.52,
+              "width": 517,
+              "height": 4
+            },
+            {
+              "name": "paiming",
+              "type": "label",
+              "text": "999999",
+              "size": 20,
+              "align": "center",
+              "color": 1092488703,
+              "x": -263.65,
+              "y": 2.27,
+              "width": 87,
+              "height": 26.5
+            },
+            {
+              "name": "xiangkuang",
+              "type": "node",
+              "x": -140.2,
+              "y": 3.52,
+              "width": 60,
+              "height": 60,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_common_touxiang2.png",
+                  "width": 60,
+                  "height": 60
+                },
+                {
+                  "name": "icon",
+                  "type": "node",
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "level",
+                  "type": "label",
+                  "text": "lv25",
+                  "size": 20,
+                  "align": "right",
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -26,
+                  "y": -15.25,
+                  "width": 53,
+                  "height": 26.5
+                }
+              ]
+            },
+            {
+              "name": "wanjia",
+              "type": "label",
+              "text": "圣马圣马龙哈",
+              "size": 20,
+              "align": "left",
+              "color": 1092488703,
+              "x": -106.65,
+              "y": 2.27,
+              "width": 141,
+              "height": 26.5
+            },
+            {
+              "name": "zhandouli",
+              "type": "label",
+              "text": "1234567",
+              "size": 20,
+              "align": "center",
+              "color": 4278190335,
+              "x": 49.35,
+              "y": 2.27,
+              "width": 111,
+              "height": 26.5
+            },
+            {
+              "name": "tiaozhan",
+              "type": "node",
+              "x": 217.65,
+              "y": 3.13,
+              "width": 92,
+              "height": 46,
+              "children": [
+                {
+                  "name": "btn",
+                  "type": "btn",
+                  "img_normal": "#ui_common_btndh1.png",
+                  "img_down": "#ui_common_btndh2.png"
+                },
+                {
+                  "name": "txt_name",
+                  "type": "label",
+                  "text": "挑战",
+                  "size": 26,
+                  "align": "center",
+                  "color": 992815615,
+                  "outlineColor": 13941402,
+                  "x": -42,
+                  "y": -1.13,
+                  "width": 85,
+                  "height": 37.75
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "mubiao5",
+          "type": "node",
+          "x": 4.5,
+          "y": -187.8,
+          "width": 527.3,
+          "height": 67.05,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_arena_line_jjc1.png",
+              "x": 2.8,
+              "y": -31.52,
+              "width": 517,
+              "height": 4
+            },
+            {
+              "name": "paiming",
+              "type": "label",
+              "text": "999999",
+              "size": 20,
+              "align": "center",
+              "color": 1092488703,
+              "x": -263.65,
+              "y": 2.27,
+              "width": 87,
+              "height": 26.5
+            },
+            {
+              "name": "xiangkuang",
+              "type": "node",
+              "x": -140.2,
+              "y": 3.52,
+              "width": 60,
+              "height": 60,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_common_touxiang2.png",
+                  "width": 60,
+                  "height": 60
+                },
+                {
+                  "name": "icon",
+                  "type": "node",
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "level",
+                  "type": "label",
+                  "text": "lv25",
+                  "size": 20,
+                  "align": "right",
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -26,
+                  "y": -15.25,
+                  "width": 53,
+                  "height": 26.5
+                }
+              ]
+            },
+            {
+              "name": "wanjia",
+              "type": "label",
+              "text": "圣马圣马龙哈",
+              "size": 20,
+              "align": "left",
+              "color": 1092488703,
+              "x": -106.65,
+              "y": 2.27,
+              "width": 141,
+              "height": 26.5
+            },
+            {
+              "name": "zhandouli",
+              "type": "label",
+              "text": "1234567",
+              "size": 20,
+              "align": "center",
+              "color": 4278190335,
+              "x": 49.35,
+              "y": 2.27,
+              "width": 111,
+              "height": 26.5
+            },
+            {
+              "name": "tiaozhan",
+              "type": "node",
+              "x": 217.65,
+              "y": 3.13,
+              "width": 92,
+              "height": 46,
+              "children": [
+                {
+                  "name": "btn",
+                  "type": "btn",
+                  "img_normal": "#ui_common_btndh1.png",
+                  "img_down": "#ui_common_btndh2.png"
+                },
+                {
+                  "name": "txt_name",
+                  "type": "label",
+                  "text": "挑战",
+                  "size": 26,
+                  "align": "center",
+                  "color": 992815615,
+                  "outlineColor": 13941402,
+                  "x": -42,
+                  "y": -1.13,
+                  "width": 85,
+                  "height": 37.75
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "jiangli",
+      "type": "node",
+      "x": -298.1,
+      "y": 107.63,
+      "width": 425,
+      "height": 279.75,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_DiBan_YangBiZhi.png",
+          "scale9": 1,
+          "x": -212.5,
+          "y": 3.38,
+          "width": 425,
+          "height": 273,
+          "maxw": 425,
+          "maxh": 273
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_haoyoulan2.png",
+          "scale9": 1,
+          "x": -188,
+          "y": 12.03,
+          "width": 370,
+          "height": 139,
+          "maxw": 370,
+          "maxh": 139
+        },
+        {
+          "name": "tx_wanjia",
+          "type": "label",
+          "text": "您的排名：645646",
+          "size": 20,
+          "align": "left",
+          "color": 1092488703,
+          "x": -188,
+          "y": 98.13,
+          "width": 369,
+          "height": 26.5
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "每天21:00后可领取",
+          "size": 18,
+          "align": "center",
+          "color": 1092488703,
+          "x": -158,
+          "y": -30.75,
+          "width": 311,
+          "height": 24.25
+        },
+        {
+          "name": "meirijiangli",
+          "type": "node",
+          "x": 41.85,
+          "y": -13.47,
+          "width": 85,
+          "height": 85,
+          "children": [
+            {
+              "name": "diban",
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "x": -42.5,
+              "y": 42.5,
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "x": -42.5,
+              "y": 42.5,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": " ",
+              "size": 22,
+              "align": "right",
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -78.5,
+              "y": 21.58,
+              "width": 73,
+              "height": 28.75
+            }
+          ]
+        },
+        {
+          "name": "btn_shuoming",
+          "type": "node",
+          "x": -87.65,
+          "y": -85.57,
+          "width": 154,
+          "height": 46,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btn_pppp1.png",
+              "img_down": "#ui_common_btn_pppp2.png"
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "奖励说明",
+              "size": 26,
+              "align": "center",
+              "color": 992815615,
+              "outlineColor": 13941402,
+              "x": -73,
+              "y": -0.88,
+              "width": 144,
+              "height": 33.25
+            }
+          ]
+        },
+        {
+          "name": "btn_lingqu",
+          "type": "node",
+          "x": 83.35,
+          "y": -85.57,
+          "width": 154,
+          "height": 46,
+          "children": [
+            {
+              "name": "btn",
+              "type": "ckb",
+              "img_on": "#ui_common_btn_pppp2.png",
+              "img_off": "#ui_common_btn_pppp1.png",
+              "img_disable": "#ui_common_btn_pppp3.png"
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "领取奖励",
+              "size": 26,
+              "align": "center",
+              "color": 992815615,
+              "outlineColor": 13941402,
+              "x": -73,
+              "y": -0.88,
+              "width": 144,
+              "height": 33.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_d.png",
+      "x": 1.5,
+      "y": 339,
+      "width": 573,
+      "height": 83
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "竞技之神",
+      "size": 27,
+      "align": "center",
+      "color": 4294967295,
+      "x": -216.9,
+      "y": 332.82,
+      "width": 431.85,
+      "height": 34.35
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_d3.png",
+      "scale9": 1,
+      "x": -97.85,
+      "y": 276,
+      "width": 179,
+      "height": 40,
+      "maxw": 179,
+      "maxh": 40
+    },
+    {
+      "name": "tx_time",
+      "type": "label",
+      "text": "剩余次数：",
+      "size": 21,
+      "align": "left",
+      "color": 4294967295,
+      "x": -91.55,
+      "y": 276.2,
+      "width": 165,
+      "height": 27.6
+    },
+    {
+      "name": "tx_time_num",
+      "type": "label",
+      "text": "10",
+      "size": 21,
+      "align": "left",
+      "color": 4294967295,
+      "x": 8.45,
+      "y": 276.2,
+      "width": 48,
+      "height": 27.6
+    },
+    {
+      "name": "tianjia",
+      "type": "btn",
+      "img_normal": "#ui_main_05.png",
+      "img_down": "#ui_main_05-2.png",
+      "x": 88.4,
+      "y": 275
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_d3.png",
+      "scale9": 1,
+      "x": -387.85,
+      "y": 276,
+      "width": 235,
+      "height": 40,
+      "maxw": 235,
+      "maxh": 40
+    },
+    {
+      "name": "tx_chongzhi",
+      "type": "label",
+      "text": "重置时间",
+      "size": 21,
+      "align": "left",
+      "color": 4294967295,
+      "x": -381.55,
+      "y": 276.2,
+      "width": 217,
+      "height": 27.6
+    },
+    {
+      "name": "tx_chongzhi_num",
+      "type": "label",
+      "text": "08:00:00",
+      "size": 21,
+      "align": "left",
+      "color": 4294967295,
+      "x": -291.55,
+      "y": 276.2,
+      "width": 91,
+      "height": 27.6
+    },
+    {
+      "name": "shuaxin",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_rf1.png",
+      "img_down": "#ui_common_btn_rf2.png",
+      "x": -171.6,
+      "y": 275
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_d3.png",
+      "scale9": 1,
+      "x": 174.15,
+      "y": 274,
+      "width": 121,
+      "height": 40,
+      "maxw": 121,
+      "maxh": 40
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_arena_xunzhang_m.png",
+      "x": 187.15,
+      "y": 273.5,
+      "width": 42,
+      "height": 48
+    },
+    {
+      "name": "tx_jiangli",
+      "type": "label",
+      "text": "9999",
+      "size": 21,
+      "align": "left",
+      "color": 4294967295,
+      "x": 210.45,
+      "y": 274.2,
+      "width": 56,
+      "height": 27.6
+    },
+    {
+      "name": "duihuan",
+      "type": "node",
+      "x": 317.45,
+      "y": 273,
+      "width": 92,
+      "height": 46,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btndh1.png",
+          "img_down": "#ui_common_btndh2.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "兑换",
+          "size": 30,
+          "align": "center",
+          "color": 992815615,
+          "outlineColor": 13941402,
+          "x": -44,
+          "y": -0.13,
+          "width": 85,
+          "height": 37.75
+        }
+      ]
+    },
+    {
+      "name": "buzhen",
+      "type": "node",
+      "x": 418.5,
+      "y": -308,
+      "width": 101,
+      "height": 111,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_main_Z_ico-bg0003.png",
+          "img_down": "#ui_main_Z_ico-bg0004.png",
+          "width": 101,
+          "height": 111
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_Z_ico-BuZhen.png",
+          "x": -0.5,
+          "y": 7,
+          "width": 94,
+          "height": 79
+        },
+        {
+          "name": "con_name",
+          "type": "node",
+          "y": -52.5,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "paiming",
+      "type": "node",
+      "x": 301,
+      "y": -292.5,
+      "width": 118,
+      "height": 150,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_main_Z_ico-bg0003.png",
+          "img_down": "#ui_main_Z_ico-bg0004.png",
+          "x": -3.5,
+          "y": -17.5,
+          "width": 101,
+          "height": 111
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_ico_phb.png",
+          "width": 118,
+          "height": 150
+        },
+        {
+          "name": "con_name",
+          "type": "node",
+          "x": -3.5,
+          "y": -70,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "tiaozhanzhilu",
+      "type": "label",
+      "text": "挑战之路",
+      "size": 24,
+      "align": "left",
+      "color": 4294967295,
+      "x": -491.95,
+      "y": -41.2,
+      "width": 369,
+      "height": 31
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_d2.png",
+      "scale9": 1,
+      "x": -492.95,
+      "y": -153.5,
+      "width": 394,
+      "height": 185,
+      "maxw": 394,
+      "maxh": 185
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_zhandouli.png",
+      "x": -341.6,
+      "y": -326,
+      "width": 340,
+      "height": 60
+    },
+    {
+      "name": "dangqianduiwu",
+      "type": "label",
+      "text": "当前队伍战斗力：1234567",
+      "size": 20,
+      "align": "left",
+      "color": 4294967295,
+      "x": -500.95,
+      "y": -328.2,
+      "width": 297,
+      "height": 31
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "x": -297.1,
+      "y": -153.85,
+      "width": 380,
+      "height": 170
+    }
+  ]
+}

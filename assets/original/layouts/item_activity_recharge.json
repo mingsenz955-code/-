@@ -1,0 +1,211 @@
+{
+  "group": [
+    "ui_activityequip"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768,
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "grid": {
+        "x": 108,
+        "y": 111,
+        "width": 46,
+        "height": 27
+      },
+      "x": -500,
+      "y": -47,
+      "width": 1000,
+      "height": 564,
+      "maxw": 1000,
+      "maxh": 564
+    },
+    {
+      "name": "hint1",
+      "type": "label",
+      "text": "活动期间达成右侧条件,即可领取丰厚奖励",
+      "align": "left",
+      "size": 26,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -457,
+      "y": 84,
+      "width": 282,
+      "height": 122
+    },
+    {
+      "name": "hint2",
+      "type": "label",
+      "text": "当前已充值",
+      "align": "center",
+      "size": 26,
+      "color": 4291572735,
+      "outlineColor": 0,
+      "x": -457,
+      "y": -14,
+      "width": 282,
+      "height": 33
+    },
+    {
+      "name": "hint3",
+      "type": "label",
+      "text": "注：（达成条件后，请及时领取奖励，以免活动结束后将不能领取）",
+      "align": "left",
+      "size": 20,
+      "color": 3422552319,
+      "outlineColor": 0,
+      "x": -457,
+      "y": -257,
+      "width": 298,
+      "height": 92
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_activityequip_bg_num.png",
+      "x": -314,
+      "y": -60,
+      "width": 270,
+      "height": 50
+    },
+    {
+      "name": "spend_num",
+      "type": "label",
+      "text": "",
+      "align": "center",
+      "size": 26,
+      "color": 1092488703,
+      "x": -441,
+      "y": -62,
+      "width": 253,
+      "height": 33
+    },
+    {
+      "type": "node",
+      "x": -316,
+      "y": -141,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3_2.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "width": 200,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "立即充值",
+          "align": "center",
+          "size": 30,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -85,
+          "y": 4,
+          "width": 171,
+          "height": 38
+        }
+      ]
+    },
+    {
+      "name": "title_panel",
+      "type": "node",
+      "y": 220,
+      "width": 996,
+      "height": 55,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_BiaoTi_Bg_s.png",
+          "scale9": 1,
+          "grid": {
+            "x": 25,
+            "y": 20,
+            "width": 10,
+            "height": 10
+          },
+          "x": -498,
+          "width": 996,
+          "height": 55,
+          "maxw": 996,
+          "maxh": 55
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_activityequip_chongzhisonghaoli.png",
+      "x": 5,
+      "y": 237,
+      "width": 301,
+      "height": 59
+    },
+    {
+      "name": "time",
+      "type": "node",
+      "x": 3,
+      "y": 178,
+      "width": 422,
+      "height": 41,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_activityequip_bg_time.png",
+          "width": 422,
+          "height": 41
+        },
+        {
+          "name": "time",
+          "type": "label",
+          "text": " ",
+          "align": "center",
+          "size": 22,
+          "color": 4294967295,
+          "outlineColor": 4267533,
+          "x": -193,
+          "y": 2,
+          "width": 384,
+          "height": 29
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_activityequip_bg9.png",
+      "scale9": 1,
+      "grid": {
+        "x": 21,
+        "y": 21,
+        "width": 41,
+        "height": 35
+      },
+      "x": -146,
+      "y": -73,
+      "width": 625,
+      "height": 456,
+      "maxw": 625,
+      "maxh": 456
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "x": 164,
+      "y": -69,
+      "width": 598,
+      "height": 435
+    }
+  ]
+}

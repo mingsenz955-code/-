@@ -1,0 +1,344 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -268.25,
+      "y": -4.65,
+      "width": 536.95,
+      "height": 620.3,
+      "maxw": 536.95,
+      "maxh": 620.3
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -267.5,
+      "y": 273,
+      "width": 534.5,
+      "height": 55,
+      "maxw": 534.5,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "",
+      "size": 25,
+      "align": "center",
+      "color": 4294967295,
+      "x": -245.35,
+      "y": 275.55,
+      "width": 489.5,
+      "height": 32.1
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_levelup_guang.png",
+      "x": 0.65,
+      "y": 262.35,
+      "width": 500,
+      "height": 250
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_levelup_t1.png",
+      "x": 3.55,
+      "y": 299.75,
+      "width": 275,
+      "height": 85
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_levelup_xing.png",
+      "x": 4.15,
+      "y": 286.25,
+      "width": 100,
+      "height": 100
+    },
+    {
+      "name": "wenzi1",
+      "type": "label",
+      "text": "升至",
+      "size": 25,
+      "align": "right",
+      "color": 4294915071,
+      "x": -143.95,
+      "y": 273.95,
+      "width": 111.45,
+      "height": 32.1
+    },
+    {
+      "name": "wenzi2",
+      "type": "label",
+      "text": "级",
+      "size": 25,
+      "align": "left",
+      "color": 4294915071,
+      "x": 41.95,
+      "y": 274.45,
+      "width": 116.5,
+      "height": 32.1
+    },
+    {
+      "name": "lv",
+      "type": "label",
+      "text": "99",
+      "size": 40,
+      "align": "center",
+      "color": 255,
+      "x": -32.5,
+      "y": 281,
+      "width": 73,
+      "height": 49
+    },
+    {
+      "name": "zhanshi1",
+      "type": "node",
+      "x": -109.37,
+      "y": 65.5,
+      "width": 205.65,
+      "height": 244,
+      "children": [
+        {
+          "name": "kuang",
+          "type": "sprite",
+          "img": "#ui_common_WuPinKuan.png",
+          "x": 1.83,
+          "y": -21,
+          "width": 202,
+          "height": 202
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": 1.83,
+          "y": -21,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "suo",
+          "type": "sprite",
+          "img": "#ui_levelup_jiesuo.png",
+          "x": -77.83,
+          "y": 92,
+          "width": 50,
+          "height": 60
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_jiasumingzi_bg.png",
+          "x": 0.52,
+          "y": -100,
+          "width": 202,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "name": "zhanshi2",
+      "type": "node",
+      "x": 110.42,
+      "y": 65.5,
+      "width": 205.65,
+      "height": 244,
+      "children": [
+        {
+          "name": "kuang",
+          "type": "sprite",
+          "img": "#ui_common_WuPinKuan.png",
+          "x": 1.83,
+          "y": -21,
+          "width": 202,
+          "height": 202
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": 1.83,
+          "y": -21,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "suo",
+          "type": "sprite",
+          "img": "#ui_levelup_jiesuo.png",
+          "x": -77.83,
+          "y": 92,
+          "width": 50,
+          "height": 60
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_jiasumingzi_bg.png",
+          "x": 0.52,
+          "y": -100,
+          "width": 202,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "name": "duandai1",
+      "type": "sprite",
+      "img": "#ui_levelup_t2.png",
+      "scale9": 1,
+      "x": -209.05,
+      "y": 212.5,
+      "width": 420.5,
+      "height": 50,
+      "maxw": 420.5,
+      "maxh": 50
+    },
+    {
+      "name": "jiesuo",
+      "type": "label",
+      "text": "解锁商品",
+      "size": 25,
+      "align": "center",
+      "color": 4294915071,
+      "x": -141.05,
+      "y": 215.45,
+      "width": 286.05,
+      "height": 32.1
+    },
+    {
+      "name": "txt_shuoming1",
+      "type": "label",
+      "text": "",
+      "size": 24,
+      "align": "center",
+      "color": 4294967295,
+      "x": -207.95,
+      "y": -32.5,
+      "width": 199.95,
+      "height": 31
+    },
+    {
+      "name": "txt_shuoming2",
+      "type": "label",
+      "text": "",
+      "size": 24,
+      "align": "center",
+      "color": 4294967295,
+      "x": 12.6,
+      "y": -32.5,
+      "width": 199.95,
+      "height": 31
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_goal_di.png",
+      "scale9": 1,
+      "x": -205.85,
+      "y": -154.2,
+      "width": 415.5,
+      "height": 80,
+      "maxw": 415.5,
+      "maxh": 80
+    },
+    {
+      "name": "duandai2",
+      "type": "sprite",
+      "img": "#ui_levelup_t2.png",
+      "scale9": 1,
+      "x": -209.05,
+      "y": -89.5,
+      "width": 420.5,
+      "height": 50,
+      "maxw": 420.5,
+      "maxh": 50
+    },
+    {
+      "name": "shengjijiangli",
+      "type": "label",
+      "text": "升级奖励",
+      "size": 25,
+      "align": "center",
+      "color": 4294915071,
+      "x": -141.05,
+      "y": -86.55,
+      "width": 286.05,
+      "height": 32.1
+    },
+    {
+      "name": "icon",
+      "type": "sprite",
+      "img": "#ui_common_HuoBi0002.png",
+      "x": -75.85,
+      "y": -152.2,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "name": "dikuang",
+      "type": "sprite",
+      "img": "#ui_common_ShuZiKuang.png",
+      "scale9": 1,
+      "x": -61.85,
+      "y": -154.2,
+      "width": 133,
+      "height": 31,
+      "maxw": 133,
+      "maxh": 31
+    },
+    {
+      "name": "shuzi",
+      "type": "label",
+      "text": "99999",
+      "size": 25,
+      "align": "left",
+      "color": 255,
+      "x": -50,
+      "y": -154.55,
+      "width": 109.95,
+      "height": 32.1
+    },
+    {
+      "name": "btn_GuanBiXiao",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 256.25,
+      "y": 274.5
+    },
+    {
+      "name": "btn_ok",
+      "type": "node",
+      "y": -250.05,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "确定",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_holytree_haoyoulan.png",
+      "width": 684,
+      "height": 220
+    },
+    {
+      "name": "ke_qiangduo",
+      "type": "node",
+      "x": -265,
+      "y": 64,
+      "width": 94,
+      "height": 46,
+      "children": [
+        {
+          "name": "btn",
+          "type": "ckb",
+          "img_on": "#ui_common_cbq2.png",
+          "img_off": "#ui_common_cbq1.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "可抢夺",
+          "size": 20,
+          "align": "center",
+          "color": 1092488703,
+          "x": -43,
+          "y": -0.25,
+          "width": 88,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "choudi",
+      "type": "node",
+      "x": -169,
+      "y": 64,
+      "width": 94,
+      "height": 46,
+      "children": [
+        {
+          "name": "btn",
+          "type": "ckb",
+          "img_on": "#ui_common_cbq2.png",
+          "img_off": "#ui_common_cbq1.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "仇敌",
+          "size": 20,
+          "align": "center",
+          "color": 1092488703,
+          "x": -43,
+          "y": -0.25,
+          "width": 88,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "yi_qiangduo",
+      "type": "node",
+      "x": -73,
+      "y": 64,
+      "width": 94,
+      "height": 46,
+      "children": [
+        {
+          "name": "btn",
+          "type": "ckb",
+          "img_on": "#ui_common_cbq2.png",
+          "img_off": "#ui_common_cbq1.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "已抢夺",
+          "size": 20,
+          "align": "center",
+          "color": 1092488703,
+          "x": -43,
+          "y": -0.25,
+          "width": 88,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "x": 0.05,
+      "y": -31.05,
+      "width": 617.5,
+      "height": 134
+    },
+    {
+      "name": "cishu",
+      "type": "label",
+      "text": "今日还可抢夺20次",
+      "size": 18,
+      "align": "left",
+      "color": 992815615,
+      "x": -24,
+      "y": 58.13,
+      "width": 183.95,
+      "height": 24.25
+    },
+    {
+      "name": "btn_close",
+      "type": "btn",
+      "img_normal": "#ui_common_x1holy_tree.png",
+      "img_down": "#ui_common_x2holy_tree.png",
+      "x": 292.3,
+      "y": 66
+    },
+    {
+      "name": "btn_shuaxin",
+      "type": "node",
+      "x": 216.3,
+      "y": 66,
+      "width": 92,
+      "height": 46,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btndh1.png",
+          "img_down": "#ui_common_btndh2.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "刷新(5)",
+          "size": 20,
+          "align": "center",
+          "color": 992815615,
+          "outlineColor": 13941402,
+          "x": -42,
+          "y": -0.75,
+          "width": 85,
+          "height": 31
+        }
+      ]
+    }
+  ]
+}

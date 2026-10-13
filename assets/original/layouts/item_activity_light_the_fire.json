@@ -1,0 +1,857 @@
+{
+  "group": [
+    "ui_Invite"
+  ],
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_invite_backcolor.png",
+      "width": 900,
+      "height": 585,
+      "scale9": 1,
+      "x": -450.0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_invite_dress_rect.png",
+      "width": 910,
+      "height": 595,
+      "scale9": 1,
+      "x": -455.0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_invite_bg.png",
+      "width": 870,
+      "height": 555
+    },
+    {
+      "name": "title_panel",
+      "type": "node",
+      "x": 0,
+      "y": 298,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_BiaoTi_Bg_d.png",
+          "width": 600,
+          "height": -72
+        },
+        {
+          "name": "close",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_S_GuanBi1.png",
+          "img_down": "#ui_common_btn_S_GuanBi2.png",
+          "x": 437,
+          "y": -15
+        },
+        {
+          "name": "title_txt",
+          "type": "label",
+          "text": "",
+          "size": 26,
+          "align": "center",
+          "width": 200,
+          "height": 50,
+          "x": -100,
+          "y": 5,
+          "color": 4294967295,
+          "outlineColor": 4278190080
+        }
+      ]
+    },
+    {
+      "name": "left_panel",
+      "type": "node",
+      "x": -192,
+      "y": 49,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_invite_dress_bg.png",
+          "width": 450,
+          "height": 416,
+          "x": 0,
+          "y": -13
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_invite_title_bg.png",
+          "width": 322.0,
+          "height": 42.0,
+          "y": 186
+        },
+        {
+          "type": "label",
+          "text": "首抽必得紫装碎片",
+          "width": 200,
+          "height": 40,
+          "x": -100,
+          "y": 191,
+          "size": 20,
+          "align": "center",
+          "color": 4294967295
+        },
+        {
+          "name": "rand_slot_1",
+          "type": "node",
+          "x": -165,
+          "y": 115,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "rand_slot_1_node",
+              "type": "node"
+            },
+            {
+              "name": "rand_slot_1_txt",
+              "type": "label",
+              "text": "",
+              "size": 20,
+              "align": "right",
+              "width": 80,
+              "height": 20,
+              "color": 4294967295,
+              "outlineColor": 4278190080,
+              "x": -45,
+              "y": -20
+            }
+          ]
+        },
+        {
+          "name": "rand_slot_2",
+          "type": "node",
+          "x": 0,
+          "y": 115,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "rand_slot_2_node",
+              "type": "node"
+            },
+            {
+              "name": "rand_slot_2_txt",
+              "type": "label",
+              "text": "",
+              "size": 20,
+              "align": "right",
+              "width": 80,
+              "height": 20,
+              "color": 4294967295,
+              "outlineColor": 4278190080,
+              "x": -45,
+              "y": -20
+            }
+          ]
+        },
+        {
+          "name": "rand_slot_3",
+          "type": "node",
+          "x": 165,
+          "y": 115,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "rand_slot_3_node",
+              "type": "node"
+            },
+            {
+              "name": "rand_slot_3_txt",
+              "type": "label",
+              "text": "",
+              "size": 20,
+              "align": "right",
+              "width": 80,
+              "height": 20,
+              "color": 4294967295,
+              "outlineColor": 4278190080,
+              "x": -45,
+              "y": -20
+            }
+          ]
+        },
+        {
+          "name": "rand_slot_4",
+          "type": "node",
+          "x": 165,
+          "y": -20,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "rand_slot_4_node",
+              "type": "node"
+            },
+            {
+              "name": "rand_slot_4_txt",
+              "type": "label",
+              "text": "",
+              "size": 20,
+              "align": "right",
+              "width": 80,
+              "height": 20,
+              "color": 4294967295,
+              "outlineColor": 4278190080,
+              "x": -45,
+              "y": -20
+            }
+          ]
+        },
+        {
+          "name": "rand_slot_5",
+          "type": "node",
+          "x": 165,
+          "y": -155,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "rand_slot_5_node",
+              "type": "node"
+            },
+            {
+              "name": "rand_slot_5_txt",
+              "type": "label",
+              "text": "",
+              "size": 20,
+              "align": "right",
+              "width": 80,
+              "height": 20,
+              "color": 4294967295,
+              "outlineColor": 4278190080,
+              "x": -45,
+              "y": -20
+            }
+          ]
+        },
+        {
+          "name": "rand_slot_6",
+          "type": "node",
+          "x": 0,
+          "y": -155,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "rand_slot_6_node",
+              "type": "node"
+            },
+            {
+              "name": "rand_slot_6_txt",
+              "type": "label",
+              "text": "",
+              "size": 20,
+              "align": "right",
+              "width": 80,
+              "height": 20,
+              "color": 4294967295,
+              "outlineColor": 4278190080,
+              "x": -45,
+              "y": -20
+            }
+          ]
+        },
+        {
+          "name": "rand_slot_7",
+          "type": "node",
+          "x": -165,
+          "y": -155,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "rand_slot_7_node",
+              "type": "node"
+            },
+            {
+              "name": "rand_slot_7_txt",
+              "type": "label",
+              "text": "",
+              "size": 20,
+              "align": "right",
+              "width": 80,
+              "height": 20,
+              "color": 4294967295,
+              "outlineColor": 4278190080,
+              "x": -45,
+              "y": -20
+            }
+          ]
+        },
+        {
+          "name": "rand_slot_8",
+          "type": "node",
+          "x": -165,
+          "y": -20,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "rand_slot_8_node",
+              "type": "node"
+            },
+            {
+              "name": "rand_slot_8_txt",
+              "type": "label",
+              "text": "",
+              "size": 20,
+              "align": "right",
+              "width": 80,
+              "height": 20,
+              "color": 4294967295,
+              "outlineColor": 4278190080,
+              "x": -45,
+              "y": -20
+            }
+          ]
+        },
+        {
+          "name": "rand_once_node",
+          "type": "node",
+          "x": 0,
+          "y": 35,
+          "children": [
+            {
+              "name": "rand_once",
+              "type": "btn",
+              "img_normal": "#ui_invite_long_btn_1.png",
+              "img_down": "#ui_invite_long_btn_2.png"
+            },
+            {
+              "name": "rand_once_disable",
+              "type": "sprite",
+              "img": "#ui_invite_long_btn_3.png",
+              "width": 139,
+              "height": 37
+            },
+            {
+              "type": "label",
+              "text": "抽奖一次",
+              "size": 20,
+              "align": "center",
+              "width": 200,
+              "height": 40,
+              "x": -100,
+              "color": 4294967295
+            }
+          ]
+        },
+        {
+          "type": "label",
+          "text": "剩余抽奖次数：",
+          "size": 18,
+          "align": "center",
+          "width": 150,
+          "height": 30,
+          "x": -75,
+          "y": -8,
+          "color": 4294967295,
+          "outlineColor": 4278190080
+        },
+        {
+          "name": "left_time",
+          "type": "label",
+          "text": "--次：",
+          "size": 20,
+          "align": "center",
+          "width": 150,
+          "height": 30,
+          "x": -75,
+          "y": -31,
+          "color": 4294967295,
+          "outlineColor": 4278190080
+        },
+        {
+          "name": "rand_ten_times",
+          "type": "node",
+          "x": 0,
+          "y": -70,
+          "children": [
+            {
+              "name": "rand_ten_times",
+              "type": "btn",
+              "img_normal": "#ui_invite_long_btn_1.png",
+              "img_down": "#ui_invite_long_btn_2.png"
+            },
+            {
+              "name": "rand_ten_times_disable",
+              "type": "sprite",
+              "img": "#ui_invite_long_btn_3.png",
+              "width": 139,
+              "height": 37
+            },
+            {
+              "type": "label",
+              "text": "抽奖十次",
+              "size": 20,
+              "align": "center",
+              "width": 200,
+              "height": 40,
+              "x": -100,
+              "color": 4294967295
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "right_panel",
+      "type": "node",
+      "x": 230,
+      "y": 17,
+      "children": [
+        {
+          "name": "desc_node",
+          "type": "node",
+          "x": 0,
+          "y": 90,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_invite_reward_panel.png",
+              "width": 373,
+              "height": 300,
+              "scale9": 1,
+              "x": -186.5
+            },
+            {
+              "name": "desc_txt_node",
+              "type": "node",
+              "x": -340,
+              "y": -140,
+              "children": {}
+            }
+          ]
+        },
+        {
+          "name": "counter_node",
+          "type": "node",
+          "x": 0,
+          "y": -110,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_invite_reward_panel.png",
+              "scale9": 1,
+              "width": 373,
+              "height": 107,
+              "x": -186.5,
+              "y": -5
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_invite_reward_panel.png",
+              "scale9": 1,
+              "width": 373,
+              "height": 49,
+              "x": -186.5,
+              "y": -85
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_invite_reward_panel.png",
+              "scale9": 1,
+              "width": 373,
+              "height": 49,
+              "x": -186.5,
+              "y": -136
+            },
+            {
+              "name": "cont_slot_1",
+              "type": "node",
+              "x": -144,
+              "y": 17,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_common_DaoJuKuang1.png",
+                  "width": 50.32,
+                  "height": 50.32
+                },
+                {
+                  "name": "cont_slot_1_node",
+                  "type": "node"
+                },
+                {
+                  "name": "cont_slot_1_txt",
+                  "type": "label",
+                  "text": "",
+                  "size": 18,
+                  "align": "right",
+                  "width": 50,
+                  "height": 20,
+                  "color": 4294967295,
+                  "x": -28,
+                  "y": -17
+                }
+              ]
+            },
+            {
+              "name": "cont_slot_2",
+              "type": "node",
+              "x": -73,
+              "y": 17,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_common_DaoJuKuang1.png",
+                  "width": 50.32,
+                  "height": 50.32
+                },
+                {
+                  "name": "cont_slot_2_node",
+                  "type": "node"
+                },
+                {
+                  "name": "cont_slot_2_txt",
+                  "type": "label",
+                  "text": "",
+                  "size": 18,
+                  "align": "right",
+                  "width": 50,
+                  "height": 20,
+                  "color": 4294967295,
+                  "x": -28,
+                  "y": -17
+                }
+              ]
+            },
+            {
+              "name": "cont_slot_3",
+              "type": "node",
+              "x": 0,
+              "y": 17,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_common_DaoJuKuang1.png",
+                  "width": 50.32,
+                  "height": 50.32
+                },
+                {
+                  "name": "cont_slot_3_node",
+                  "type": "node"
+                },
+                {
+                  "name": "cont_slot_3_txt",
+                  "type": "label",
+                  "text": "",
+                  "size": 18,
+                  "align": "right",
+                  "width": 50,
+                  "height": 20,
+                  "color": 4294967295,
+                  "x": -28,
+                  "y": -17
+                }
+              ]
+            },
+            {
+              "name": "cont_slot_4",
+              "type": "node",
+              "x": 73,
+              "y": 17,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_common_DaoJuKuang1.png",
+                  "width": 50.32,
+                  "height": 50.32
+                },
+                {
+                  "name": "cont_slot_4_node",
+                  "type": "node"
+                },
+                {
+                  "name": "cont_slot_4_txt",
+                  "type": "label",
+                  "text": "",
+                  "size": 18,
+                  "align": "right",
+                  "width": 50,
+                  "height": 20,
+                  "color": 4294967295,
+                  "x": -28,
+                  "y": -17
+                }
+              ]
+            },
+            {
+              "name": "cont_slot_5",
+              "type": "node",
+              "x": 144,
+              "y": 17,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_common_DaoJuKuang1.png",
+                  "width": 50.32,
+                  "height": 50.32
+                },
+                {
+                  "name": "cont_slot_5_node",
+                  "type": "node"
+                },
+                {
+                  "name": "cont_slot_5_txt",
+                  "type": "label",
+                  "text": "",
+                  "size": 18,
+                  "align": "right",
+                  "width": 50,
+                  "height": 20,
+                  "color": 4294967295,
+                  "x": -28,
+                  "y": -17
+                }
+              ]
+            },
+            {
+              "type": "node",
+              "x": -168,
+              "y": -26,
+              "children": [
+                {
+                  "name": "lv5f_count",
+                  "type": "label",
+                  "text": "获得橙色神火：--",
+                  "size": 17,
+                  "color": 1882526207,
+                  "align": "left",
+                  "width": 200,
+                  "height": 20,
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "name": "lv5f_lt",
+                  "type": "label",
+                  "text": "获得抽奖次数：--",
+                  "size": 17,
+                  "color": 1882526207,
+                  "align": "left",
+                  "width": 200,
+                  "height": 20,
+                  "x": 0,
+                  "y": -19
+                },
+                {
+                  "name": "scrf_count",
+                  "type": "label",
+                  "text": "祭拜祭品数量：--",
+                  "size": 17,
+                  "color": 1882526207,
+                  "align": "left",
+                  "width": 200,
+                  "height": 20,
+                  "x": 0,
+                  "y": -52
+                },
+                {
+                  "name": "scrf_lf",
+                  "type": "label",
+                  "text": "获得抽奖次数：--",
+                  "size": 17,
+                  "color": 1882526207,
+                  "align": "left",
+                  "width": 200,
+                  "height": 20,
+                  "x": 0,
+                  "y": -71
+                },
+                {
+                  "name": "cyst_count",
+                  "type": "label",
+                  "text": "消费魔晶数量：--",
+                  "size": 17,
+                  "color": 1882526207,
+                  "align": "left",
+                  "width": 200,
+                  "height": 20,
+                  "x": 0,
+                  "y": -104
+                },
+                {
+                  "name": "cyst_lf",
+                  "type": "label",
+                  "text": "获得抽奖次数：--",
+                  "size": 17,
+                  "color": 1882526207,
+                  "align": "left",
+                  "width": 200,
+                  "height": 20,
+                  "x": 0,
+                  "y": -123
+                }
+              ]
+            },
+            {
+              "name": "get_times_holyfire_node",
+              "type": "node",
+              "x": 101,
+              "y": -32,
+              "children": [
+                {
+                  "name": "get_times_holyfire",
+                  "type": "btn",
+                  "img_normal": "#ui_invite_long_btn_1.png",
+                  "img_down": "#ui_invite_long_btn_2.png"
+                },
+                {
+                  "name": "get_times_holyfire_disable",
+                  "type": "sprite",
+                  "img": "#ui_invite_long_btn_3.png",
+                  "width": 139,
+                  "height": 37
+                },
+                {
+                  "type": "label",
+                  "text": "领取",
+                  "size": 20,
+                  "align": "center",
+                  "width": 200,
+                  "height": 40,
+                  "x": -100,
+                  "color": 4294967295
+                }
+              ]
+            },
+            {
+              "name": "get_times_sacrifice_node",
+              "type": "node",
+              "x": 101,
+              "y": -85,
+              "children": [
+                {
+                  "name": "get_times_sacrifice",
+                  "type": "btn",
+                  "img_normal": "#ui_invite_long_btn_1.png",
+                  "img_down": "#ui_invite_long_btn_2.png"
+                },
+                {
+                  "name": "get_times_sacrifice_disable",
+                  "type": "sprite",
+                  "img": "#ui_invite_long_btn_3.png",
+                  "width": 139,
+                  "height": 37
+                },
+                {
+                  "type": "label",
+                  "text": "领取",
+                  "size": 20,
+                  "align": "center",
+                  "width": 200,
+                  "height": 40,
+                  "x": -100,
+                  "color": 4294967295
+                }
+              ]
+            },
+            {
+              "name": "get_times_crystal_node",
+              "type": "node",
+              "x": 101,
+              "y": -136,
+              "children": [
+                {
+                  "name": "get_times_crystal",
+                  "type": "btn",
+                  "img_normal": "#ui_invite_long_btn_1.png",
+                  "img_down": "#ui_invite_long_btn_2.png"
+                },
+                {
+                  "name": "get_times_crystal_disable",
+                  "type": "sprite",
+                  "img": "#ui_invite_long_btn_3.png",
+                  "width": 139,
+                  "height": 37
+                },
+                {
+                  "type": "label",
+                  "text": "领取",
+                  "size": 20,
+                  "align": "center",
+                  "width": 200,
+                  "height": 40,
+                  "x": -100,
+                  "color": 4294967295
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "get_fire_node",
+      "type": "node",
+      "x": -192,
+      "y": -225,
+      "children": [
+        {
+          "name": "get_fire",
+          "type": "maskBtn",
+          "img_normal": "#ui_invite_long_btn_1.png",
+          "img_down": "#ui_invite_long_btn_2.png",
+          "width": 194.6,
+          "height": 51.8
+        },
+        {
+          "type": "label",
+          "text": "获取神火",
+          "size": 20,
+          "align": "center",
+          "width": 200,
+          "height": 40,
+          "x": -100,
+          "color": 4294967295
+        }
+      ]
+    },
+    {
+      "name": "rootfront",
+      "type": "node"
+    }
+  ]
+}

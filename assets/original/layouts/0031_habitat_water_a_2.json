@@ -1,0 +1,43 @@
+{
+  "group": [
+    "buildings/0031_habitat_water_a_2_g"
+  ],
+  "width": 442,
+  "height": 282,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0031_habitat_water_a_2_g_bg.png",
+      "x": 14.8,
+      "y": 156.75
+    },
+    {
+      "name": "zuobiao1",
+      "type": "node",
+      "x": -120,
+      "y": 122
+    },
+    {
+      "name": "zuobiao2",
+      "type": "node",
+      "x": -36,
+      "y": 64
+    },
+    {
+      "name": "zuobiao3",
+      "type": "node",
+      "x": 120,
+      "y": 107
+    },
+    {
+      "name": "eff",
+      "type": "eff",
+      "eff": "0031_habitat_water_a_2_eff",
+      "x": 0.35,
+      "y": 0.2,
+      "width": 263.75,
+      "height": 203.7
+    }
+  ]
+}

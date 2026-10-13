@@ -1,0 +1,202 @@
+{
+  "group": [
+    "ui_daojukuang",
+    "ui_arenanew"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768,
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -252.3,
+      "y": 0.3,
+      "width": 483,
+      "height": 394,
+      "maxw": 483,
+      "maxh": 394
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -258.6,
+      "y": 184.95,
+      "width": 488,
+      "height": 55,
+      "maxw": 488,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "竞技场奖励",
+      "align": "center",
+      "size": 25,
+      "color": 4294967295,
+      "x": -236.1,
+      "y": 187.5,
+      "width": 446,
+      "height": 32.1
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_haoyoulan2.png",
+      "scale9": 1,
+      "x": -217.5,
+      "y": 13.45,
+      "width": 414,
+      "height": 281,
+      "maxw": 414,
+      "maxh": 281
+    },
+    {
+      "name": "hint1",
+      "type": "label",
+      "text": "奖励已于21时自动发放！",
+      "align": "center",
+      "size": 25,
+      "color": 1092488703,
+      "x": -215.95,
+      "y": 121.4,
+      "width": 401.95,
+      "height": 32.1
+    },
+    {
+      "name": "xunzhang",
+      "type": "node",
+      "x": -93.65,
+      "y": 8.65,
+      "width": 110,
+      "height": 110,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "width": 110,
+          "height": 110
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_arenanew_xunzhang_l.png",
+          "x": -1.05,
+          "y": 5.05,
+          "width": 69,
+          "height": 78
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": " ",
+          "align": "center",
+          "size": 24,
+          "color": 4294967295,
+          "outlineColor": 4267533,
+          "x": -44,
+          "y": -28.95,
+          "width": 82.95,
+          "height": 31
+        }
+      ]
+    },
+    {
+      "name": "mojing",
+      "type": "node",
+      "x": 72.35,
+      "y": 8.65,
+      "width": 110,
+      "height": 110,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "width": 110,
+          "height": 110
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_arenanew_mojing_l.png",
+          "x": 1,
+          "y": 5.05,
+          "width": 44,
+          "height": 60
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": " ",
+          "align": "center",
+          "size": 24,
+          "color": 4294967295,
+          "outlineColor": 4267533,
+          "x": -44,
+          "y": -28.95,
+          "width": 82.95,
+          "height": 31
+        }
+      ]
+    },
+    {
+      "name": "hint2",
+      "type": "label",
+      "text": "奖励已自动发放！",
+      "align": "center",
+      "size": 24,
+      "color": 3293911807,
+      "x": -214,
+      "y": -93.72,
+      "width": 405,
+      "height": 40.55
+    },
+    {
+      "name": "btn_yes",
+      "type": "node",
+      "x": -10.2,
+      "y": -185.9,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png",
+          "img_disable": "#ui_common_btn_2c.png",
+          "width": 144,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "确定",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 202.6,
+      "y": 190.7,
+      "width": 80,
+      "height": 86
+    }
+  ]
+}

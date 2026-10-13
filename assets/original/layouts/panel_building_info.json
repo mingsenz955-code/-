@@ -1,0 +1,226 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -366.25,
+      "y": -1.03,
+      "width": 731.4,
+      "height": 501.05,
+      "maxw": 731.4,
+      "maxh": 501.05
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -365.25,
+      "y": 217,
+      "width": 728,
+      "height": 55,
+      "maxw": 728,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "只有描述的建筑",
+      "size": 25,
+      "align": "center",
+      "color": 4294967295,
+      "x": -335.1,
+      "y": 219.55,
+      "width": 666.75,
+      "height": 32.1
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_WuPinKuan.png",
+      "x": -217.15,
+      "y": 43.35,
+      "width": 202,
+      "height": 202
+    },
+    {
+      "name": "con_img",
+      "type": "node",
+      "x": -212.9,
+      "y": 37,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan2.png",
+      "scale9": 1,
+      "x": -96.25,
+      "y": -14.15,
+      "width": 415,
+      "height": 315,
+      "maxw": 415,
+      "maxh": 315
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan2b.png",
+      "scale9": 1,
+      "x": -96.25,
+      "y": 122.75,
+      "width": 415,
+      "height": 34,
+      "maxw": 415,
+      "maxh": 34
+    },
+    {
+      "name": "miaoshu",
+      "type": "label",
+      "text": "描述",
+      "size": 27,
+      "align": "center",
+      "color": 255,
+      "x": -30,
+      "y": 120.02,
+      "width": 285.9,
+      "height": 34.35
+    },
+    {
+      "name": "neirong",
+      "type": "label",
+      "text": "啊送达时间快点哈加快速度哈空间说的是大时代",
+      "size": 20,
+      "align": "justify",
+      "color": 255,
+      "x": -71.25,
+      "y": -32.85,
+      "width": 368.15,
+      "height": 252.2
+    },
+    {
+      "name": "exp",
+      "type": "node",
+      "x": 16.35,
+      "y": -144,
+      "width": 176,
+      "height": 31.4,
+      "children": [
+        {
+          "name": "tx_xp",
+          "type": "label",
+          "text": "99999",
+          "size": 22,
+          "align": "left",
+          "color": 255,
+          "x": -1,
+          "y": -1.33,
+          "width": 89,
+          "height": 28.75
+        },
+        {
+          "name": "tx_xp_t",
+          "type": "label",
+          "text": "经验:",
+          "size": 22,
+          "align": "left",
+          "color": 255,
+          "x": -88,
+          "y": -1.33,
+          "width": 55,
+          "height": 28.75
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_hd3.png",
+          "x": -17,
+          "y": 0.7,
+          "width": 30,
+          "height": 30
+        }
+      ]
+    },
+    {
+      "name": "btn_FangRuLongChao",
+      "type": "node",
+      "x": -218.75,
+      "y": -133.1,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "立即购买",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -79,
+          "y": 4.4,
+          "width": 156,
+          "height": 46.2
+        }
+      ]
+    },
+    {
+      "name": "btn_GuanBiXiao",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 351.25,
+      "y": 219.5
+    },
+    {
+      "name": "weijiesuo",
+      "type": "sprite",
+      "img": "#ui_common_suo.png",
+      "x": -318.95,
+      "y": -129,
+      "width": 60,
+      "height": 72
+    },
+    {
+      "name": "gold_bg",
+      "type": "sprite",
+      "img": "#ui_common_ShuZiKuang.png",
+      "scale9": 1,
+      "x": -267.7,
+      "y": -57.15,
+      "width": 145,
+      "height": 31,
+      "maxw": 145,
+      "maxh": 31
+    },
+    {
+      "name": "shuzi",
+      "type": "label",
+      "text": "9999999999",
+      "size": 20,
+      "align": "justify",
+      "color": 255,
+      "x": -252.9,
+      "y": -56.85,
+      "width": 117.9,
+      "height": 26.5
+    },
+    {
+      "name": "con_cost",
+      "type": "node",
+      "x": -287.9,
+      "y": -56.95,
+      "width": 0,
+      "height": 0
+    }
+  ]
+}

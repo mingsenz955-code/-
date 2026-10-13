@@ -1,0 +1,457 @@
+{
+  "group": [
+    "ui_pinzhi"
+  ],
+  "width": 773,
+  "height": 573,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -386,
+      "y": -1.4,
+      "width": 751,
+      "height": 491,
+      "maxw": 751,
+      "maxh": 491
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -386.7,
+      "y": 241.1,
+      "width": 739,
+      "height": 55,
+      "maxw": 739,
+      "maxh": 55
+    },
+    {
+      "name": "title",
+      "type": "label",
+      "text": "加成属性",
+      "align": "center",
+      "size": 24,
+      "color": 4294967295,
+      "x": -225.5,
+      "y": 240.45,
+      "width": 456,
+      "height": 31
+    },
+    {
+      "name": "quality",
+      "type": "node",
+      "x": -194,
+      "y": 162.1,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "icon",
+      "type": "node",
+      "x": -194,
+      "y": 162.1,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "tx_name",
+      "type": "label",
+      "text": "名字名字",
+      "align": "center",
+      "size": 26,
+      "color": 1411781375,
+      "x": -356.45,
+      "y": 100.88,
+      "width": 320,
+      "height": 33.25
+    },
+    {
+      "name": "tx_level",
+      "type": "node",
+      "x": -160.75,
+      "y": 64.03,
+      "width": 171,
+      "height": 33.25,
+      "children": [
+        {
+          "name": "level",
+          "type": "label",
+          "text": "LV99",
+          "align": "left",
+          "size": 26,
+          "color": 1411781375,
+          "x": -85.5,
+          "width": 72,
+          "height": 33.25
+        },
+        {
+          "name": "hint_levelup",
+          "type": "sprite",
+          "img": "#ui_pinzhi_jiantou.png",
+          "x": -0.05,
+          "y": -0.38,
+          "width": 18,
+          "height": 20
+        },
+        {
+          "name": "levelup",
+          "type": "label",
+          "text": "LV99",
+          "align": "left",
+          "size": 26,
+          "color": 1411781375,
+          "x": 13.5,
+          "width": 72,
+          "height": 33.25
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_WuPinKuan.png",
+      "x": -195,
+      "y": -88,
+      "width": 320,
+      "height": 186
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_WuPinKuan.png",
+      "x": 157,
+      "y": 14.6,
+      "width": 368,
+      "height": 394
+    },
+    {
+      "name": "huadong_xiao",
+      "type": "list",
+      "x": 157.5,
+      "y": -5.95,
+      "width": 354,
+      "height": 341
+    },
+    {
+      "name": "xuanze_miaoshu",
+      "type": "label",
+      "text": "点击选择要合成的宝石：",
+      "align": "justify",
+      "size": 22,
+      "color": 1411781375,
+      "x": -12.75,
+      "y": 183.47,
+      "width": 254,
+      "height": 28.75
+    },
+    {
+      "name": "quanxuan",
+      "type": "node",
+      "x": 281.5,
+      "y": 182.85,
+      "width": 98,
+      "height": 30,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_starup_x2.png",
+          "x": -34,
+          "width": 30,
+          "height": 30
+        },
+        {
+          "name": "biaoji",
+          "type": "node",
+          "x": -34,
+          "width": 30,
+          "height": 30,
+          "children": [
+            {
+              "name": "quding_biaoji",
+              "type": "sprite",
+              "img": "#ui_starup_x1.png",
+              "width": 30,
+              "height": 30
+            }
+          ]
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "全选",
+          "align": "justify",
+          "size": 22,
+          "color": 1411781375,
+          "x": -18,
+          "y": -0.38,
+          "width": 67,
+          "height": 28.75
+        }
+      ]
+    },
+    {
+      "name": "shuxing3",
+      "type": "node",
+      "x": -202.17,
+      "y": -106.35,
+      "width": 278.55,
+      "height": 32.1,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "攻击：",
+          "align": "justify",
+          "size": 25,
+          "color": 1411781375,
+          "x": -139.28,
+          "width": 86,
+          "height": 32.1
+        },
+        {
+          "name": "shuzi",
+          "type": "label",
+          "text": "99999",
+          "align": "justify",
+          "size": 25,
+          "color": 4278190335,
+          "x": -56.73,
+          "width": 80.05,
+          "height": 32.1
+        },
+        {
+          "name": "hint_levelup",
+          "type": "sprite",
+          "img": "#ui_pinzhi_jiantou.png",
+          "x": 32.17,
+          "y": -0.95,
+          "width": 18,
+          "height": 20
+        },
+        {
+          "name": "shuzi_levelup",
+          "type": "label",
+          "text": "+99999",
+          "align": "justify",
+          "size": 25,
+          "color": 865665279,
+          "x": 45.28,
+          "width": 94,
+          "height": 32.1
+        }
+      ]
+    },
+    {
+      "name": "shuxing2",
+      "type": "node",
+      "x": -202.17,
+      "y": -71,
+      "width": 278.55,
+      "height": 32.1,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "攻击：",
+          "align": "justify",
+          "size": 25,
+          "color": 1411781375,
+          "x": -139.28,
+          "width": 86,
+          "height": 32.1
+        },
+        {
+          "name": "shuzi",
+          "type": "label",
+          "text": "99999",
+          "align": "justify",
+          "size": 25,
+          "color": 4278190335,
+          "x": -56.73,
+          "width": 80.05,
+          "height": 32.1
+        },
+        {
+          "name": "hint_levelup",
+          "type": "sprite",
+          "img": "#ui_pinzhi_jiantou.png",
+          "x": 32.17,
+          "y": -0.95,
+          "width": 18,
+          "height": 20
+        },
+        {
+          "name": "shuzi_levelup",
+          "type": "label",
+          "text": "+99999",
+          "align": "justify",
+          "size": 25,
+          "color": 865665279,
+          "x": 45.28,
+          "width": 94,
+          "height": 32.1
+        }
+      ]
+    },
+    {
+      "name": "shuxing1",
+      "type": "node",
+      "x": -294.45,
+      "y": -35.65,
+      "width": 94,
+      "height": 32.1,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "品质：",
+          "align": "justify",
+          "size": 25,
+          "color": 1411781375,
+          "x": -47,
+          "width": 81.95,
+          "height": 32.1
+        },
+        {
+          "name": "biaoji",
+          "type": "node",
+          "x": 47,
+          "y": 1.15,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "pingding",
+      "type": "node",
+      "x": -195.47,
+      "y": -141.1,
+      "width": 291.95,
+      "height": 32.1,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "战斗力：",
+          "align": "justify",
+          "size": 25,
+          "color": 1411781375,
+          "x": -145.97,
+          "width": 106,
+          "height": 32.1
+        },
+        {
+          "name": "shuzi",
+          "type": "label",
+          "text": "77777",
+          "align": "justify",
+          "size": 25,
+          "color": 4278190335,
+          "x": -47.02,
+          "width": 80,
+          "height": 32.1
+        },
+        {
+          "name": "hint_levelup",
+          "type": "sprite",
+          "img": "#ui_pinzhi_jiantou.png",
+          "x": 43.47,
+          "y": -0.95,
+          "width": 18,
+          "height": 20
+        },
+        {
+          "name": "shuzi_levelup",
+          "type": "label",
+          "text": "+99999",
+          "align": "justify",
+          "size": 25,
+          "color": 865665279,
+          "x": 54.97,
+          "width": 91,
+          "height": 32.1
+        }
+      ]
+    },
+    {
+      "name": "jindu",
+      "type": "node",
+      "x": -194,
+      "y": 34.13,
+      "width": 302,
+      "height": 28.25,
+      "children": [
+        {
+          "name": "diban",
+          "type": "sprite",
+          "img": "#ui_starup_xp1.png",
+          "y": 0.13,
+          "width": 302,
+          "height": 28
+        },
+        {
+          "name": "tianchong",
+          "type": "node",
+          "y": 0.13,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_shuzi",
+          "type": "label",
+          "text": "",
+          "align": "center",
+          "size": 20,
+          "color": 4294967295,
+          "x": -140,
+          "y": -0.88,
+          "width": 277,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 346.7,
+      "y": 243.65,
+      "width": 80,
+      "height": 86
+    },
+    {
+      "name": "btn_shengji",
+      "type": "node",
+      "x": -6.95,
+      "y": -244.2,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "width": 200,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "升级",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -79.5,
+          "y": 4.93,
+          "width": 158,
+          "height": 45.15
+        }
+      ]
+    }
+  ]
+}

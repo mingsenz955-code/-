@@ -1,0 +1,700 @@
+{
+  "group": [
+    "ui_gonghuifuben",
+    "ui_daojukuang",
+    "ui_common"
+  ],
+  "width": 627,
+  "height": 431,
+  "children": [
+    {
+      "name": "node_container",
+      "type": "node",
+      "x": 304.15,
+      "y": -215.85,
+      "width": 613,
+      "height": 389,
+      "children": [
+        {
+          "name": "node_item1",
+          "type": "node",
+          "x": -538,
+          "y": 290.5,
+          "width": 150,
+          "height": 198,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuifuben_diban.png",
+              "width": 150,
+              "height": 198
+            },
+            {
+              "name": "node_rewardshow",
+              "type": "node",
+              "x": 54.95,
+              "y": -94,
+              "width": 110,
+              "height": 110,
+              "children": [
+                {
+                  "name": "bg",
+                  "type": "sprite",
+                  "img": "#ui_daojukuang_DaoJuKuang1.png",
+                  "x": -55,
+                  "y": 55,
+                  "width": 110,
+                  "height": 110
+                },
+                {
+                  "name": "quality",
+                  "type": "node",
+                  "x": -55,
+                  "y": 55,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "image",
+                  "type": "node",
+                  "x": -55.85,
+                  "y": 57.8,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "eff",
+                  "type": "node",
+                  "x": -55.85,
+                  "y": 56.8,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "txt_num",
+                  "type": "label",
+                  "text": " ",
+                  "align": "right",
+                  "size": 20,
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -92.1,
+                  "y": 29.4,
+                  "width": 77,
+                  "height": 26.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "node_item2",
+          "type": "node",
+          "x": -383.7,
+          "y": 290.5,
+          "width": 150,
+          "height": 198,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuifuben_diban.png",
+              "width": 150,
+              "height": 198
+            },
+            {
+              "name": "node_rewardshow",
+              "type": "node",
+              "x": 54.95,
+              "y": -94,
+              "width": 110,
+              "height": 110,
+              "children": [
+                {
+                  "name": "bg",
+                  "type": "sprite",
+                  "img": "#ui_daojukuang_DaoJuKuang1.png",
+                  "x": -55,
+                  "y": 55,
+                  "width": 110,
+                  "height": 110
+                },
+                {
+                  "name": "quality",
+                  "type": "node",
+                  "x": -55,
+                  "y": 55,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "image",
+                  "type": "node",
+                  "x": -55.85,
+                  "y": 57.8,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "eff",
+                  "type": "node",
+                  "x": -55.85,
+                  "y": 56.8,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "txt_num",
+                  "type": "label",
+                  "text": " ",
+                  "align": "right",
+                  "size": 20,
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -92.1,
+                  "y": 29.4,
+                  "width": 77,
+                  "height": 26.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "node_item3",
+          "type": "node",
+          "x": -229.4,
+          "y": 290.5,
+          "width": 150,
+          "height": 198,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuifuben_diban.png",
+              "width": 150,
+              "height": 198
+            },
+            {
+              "name": "node_rewardshow",
+              "type": "node",
+              "x": 54.95,
+              "y": -94,
+              "width": 110,
+              "height": 110,
+              "children": [
+                {
+                  "name": "bg",
+                  "type": "sprite",
+                  "img": "#ui_daojukuang_DaoJuKuang1.png",
+                  "x": -55,
+                  "y": 55,
+                  "width": 110,
+                  "height": 110
+                },
+                {
+                  "name": "quality",
+                  "type": "node",
+                  "x": -55,
+                  "y": 55,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "image",
+                  "type": "node",
+                  "x": -55.85,
+                  "y": 57.8,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "eff",
+                  "type": "node",
+                  "x": -55.85,
+                  "y": 56.8,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "txt_num",
+                  "type": "label",
+                  "text": " ",
+                  "align": "right",
+                  "size": 20,
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -92.1,
+                  "y": 29.4,
+                  "width": 77,
+                  "height": 26.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "node_item4",
+          "type": "node",
+          "x": -75.1,
+          "y": 290.5,
+          "width": 150,
+          "height": 198,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuifuben_diban.png",
+              "width": 150,
+              "height": 198
+            },
+            {
+              "name": "node_rewardshow",
+              "type": "node",
+              "x": 54.95,
+              "y": -94,
+              "width": 110,
+              "height": 110,
+              "children": [
+                {
+                  "name": "bg",
+                  "type": "sprite",
+                  "img": "#ui_daojukuang_DaoJuKuang1.png",
+                  "x": -55,
+                  "y": 55,
+                  "width": 110,
+                  "height": 110
+                },
+                {
+                  "name": "quality",
+                  "type": "node",
+                  "x": -55,
+                  "y": 55,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "image",
+                  "type": "node",
+                  "x": -55.85,
+                  "y": 57.8,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "eff",
+                  "type": "node",
+                  "x": -55.85,
+                  "y": 56.8,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "txt_num",
+                  "type": "label",
+                  "text": " ",
+                  "align": "right",
+                  "size": 20,
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -92.1,
+                  "y": 29.4,
+                  "width": 77,
+                  "height": 26.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "node_item5",
+          "type": "node",
+          "x": -538,
+          "y": 100.5,
+          "width": 150,
+          "height": 198,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuifuben_diban.png",
+              "width": 150,
+              "height": 198
+            },
+            {
+              "name": "node_rewardshow",
+              "type": "node",
+              "x": 54.95,
+              "y": -94,
+              "width": 110,
+              "height": 110,
+              "children": [
+                {
+                  "name": "bg",
+                  "type": "sprite",
+                  "img": "#ui_daojukuang_DaoJuKuang1.png",
+                  "x": -55,
+                  "y": 55,
+                  "width": 110,
+                  "height": 110
+                },
+                {
+                  "name": "quality",
+                  "type": "node",
+                  "x": -55,
+                  "y": 55,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "image",
+                  "type": "node",
+                  "x": -55.85,
+                  "y": 57.8,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "eff",
+                  "type": "node",
+                  "x": -55.85,
+                  "y": 56.8,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "txt_num",
+                  "type": "label",
+                  "text": " ",
+                  "align": "right",
+                  "size": 20,
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -92.1,
+                  "y": 29.4,
+                  "width": 77,
+                  "height": 26.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "node_item6",
+          "type": "node",
+          "x": -385,
+          "y": 99.5,
+          "width": 150,
+          "height": 198,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuifuben_diban.png",
+              "width": 150,
+              "height": 198
+            },
+            {
+              "name": "node_rewardshow",
+              "type": "node",
+              "x": 54.95,
+              "y": -94,
+              "width": 110,
+              "height": 110,
+              "children": [
+                {
+                  "name": "bg",
+                  "type": "sprite",
+                  "img": "#ui_daojukuang_DaoJuKuang1.png",
+                  "x": -55,
+                  "y": 55,
+                  "width": 110,
+                  "height": 110
+                },
+                {
+                  "name": "quality",
+                  "type": "node",
+                  "x": -55,
+                  "y": 55,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "image",
+                  "type": "node",
+                  "x": -55.85,
+                  "y": 57.8,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "eff",
+                  "type": "node",
+                  "x": -55.85,
+                  "y": 56.8,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "txt_num",
+                  "type": "label",
+                  "text": " ",
+                  "align": "right",
+                  "size": 20,
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -92.1,
+                  "y": 29.4,
+                  "width": 77,
+                  "height": 26.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "node_item7",
+          "type": "node",
+          "x": -230,
+          "y": 100.5,
+          "width": 150,
+          "height": 198,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuifuben_diban.png",
+              "width": 150,
+              "height": 198
+            },
+            {
+              "name": "node_rewardshow",
+              "type": "node",
+              "x": 54.95,
+              "y": -94,
+              "width": 110,
+              "height": 110,
+              "children": [
+                {
+                  "name": "bg",
+                  "type": "sprite",
+                  "img": "#ui_daojukuang_DaoJuKuang1.png",
+                  "x": -55,
+                  "y": 55,
+                  "width": 110,
+                  "height": 110
+                },
+                {
+                  "name": "quality",
+                  "type": "node",
+                  "x": -55,
+                  "y": 55,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "image",
+                  "type": "node",
+                  "x": -55.85,
+                  "y": 57.8,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "eff",
+                  "type": "node",
+                  "x": -55.85,
+                  "y": 56.8,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "txt_num",
+                  "type": "label",
+                  "text": " ",
+                  "align": "right",
+                  "size": 20,
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -92.1,
+                  "y": 29.4,
+                  "width": 77,
+                  "height": 26.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "node_item8",
+          "type": "node",
+          "x": -75,
+          "y": 100.5,
+          "width": 150,
+          "height": 198,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuifuben_diban.png",
+              "width": 150,
+              "height": 198
+            },
+            {
+              "name": "node_rewardshow",
+              "type": "node",
+              "x": 54.95,
+              "y": -94,
+              "width": 110,
+              "height": 110,
+              "children": [
+                {
+                  "name": "bg",
+                  "type": "sprite",
+                  "img": "#ui_daojukuang_DaoJuKuang1.png",
+                  "x": -55,
+                  "y": 55,
+                  "width": 110,
+                  "height": 110
+                },
+                {
+                  "name": "quality",
+                  "type": "node",
+                  "x": -55,
+                  "y": 55,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "image",
+                  "type": "node",
+                  "x": -55.85,
+                  "y": 57.8,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "eff",
+                  "type": "node",
+                  "x": -55.85,
+                  "y": 56.8,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "txt_num",
+                  "type": "label",
+                  "text": " ",
+                  "align": "right",
+                  "size": 20,
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -92.1,
+                  "y": 29.4,
+                  "width": 77,
+                  "height": 26.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_gonghuifuben_1.png",
+          "x": -539.5,
+          "y": 342.05,
+          "width": 11,
+          "height": 26
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_gonghuifuben_2.png",
+          "x": -383.05,
+          "y": 342.5,
+          "width": 16,
+          "height": 26
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_gonghuifuben_3.png",
+          "x": -229.05,
+          "y": 343.5,
+          "width": 15,
+          "height": 26
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_gonghuifuben_4.png",
+          "x": -74.05,
+          "y": 343.05,
+          "width": 42,
+          "height": 26
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_gonghuifuben_5.png",
+          "x": -537,
+          "y": 152.5,
+          "width": 51,
+          "height": 26
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_gonghuifuben_6.png",
+          "x": -385.05,
+          "y": 151.5,
+          "width": 56,
+          "height": 26
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_gonghuifuben_7.png",
+          "x": -228.05,
+          "y": 152.5,
+          "width": 66,
+          "height": 26
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_gonghuifuben_8.png",
+          "x": -74.05,
+          "y": 152.5,
+          "width": 74,
+          "height": 26
+        }
+      ]
+    },
+    {
+      "name": "node_title",
+      "type": "node",
+      "x": 313.55,
+      "y": 174.32,
+      "width": 627.1,
+      "height": 41.35,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_di2.png",
+          "scale9": 2,
+          "grid": {
+            "x": 16,
+            "y": 10.75,
+            "width": 24,
+            "height": 16.25
+          },
+          "x": -639.2,
+          "y": 21,
+          "width": 627.1,
+          "height": 41.35,
+          "maxw": 627.1,
+          "maxh": 41.35
+        },
+        {
+          "name": "txt_1",
+          "type": "label",
+          "text": "伤害排名奖励",
+          "align": "left",
+          "size": 20,
+          "color": 1092488703,
+          "x": -607.4,
+          "y": 22.1,
+          "width": 590.95,
+          "height": 26.75
+        }
+      ]
+    }
+  ]
+}

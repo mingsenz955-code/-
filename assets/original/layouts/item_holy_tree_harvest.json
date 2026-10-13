@@ -1,0 +1,37 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_holytree_line.png",
+      "x": -0.35,
+      "y": -29.55,
+      "width": 530,
+      "height": 4
+    },
+    {
+      "name": "miaoshu",
+      "type": "label",
+      "text": "",
+      "size": 20,
+      "align": "left",
+      "color": 1092488703,
+      "x": -121.3,
+      "y": 5.27,
+      "width": 388.95,
+      "height": 72.55
+    },
+    {
+      "name": "time",
+      "type": "label",
+      "text": "",
+      "size": 20,
+      "align": "left",
+      "color": 1092488703,
+      "x": -267.65,
+      "y": 18.5,
+      "width": 144,
+      "height": 26.5
+    }
+  ]
+}

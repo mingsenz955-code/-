@@ -1,0 +1,23 @@
+{
+  "group": [
+    "buildings/0089_luxury_egg_statue_g"
+  ],
+  "width": 171,
+  "height": 178,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0089_luxury_egg_statue_g_bg.png",
+      "x": -1.5,
+      "y": 119.45
+    },
+    {
+      "name": "eff",
+      "type": "eff",
+      "eff": "0089_luxury_egg_statue_eff",
+      "width": 109.45,
+      "height": 140.4
+    }
+  ]
+}

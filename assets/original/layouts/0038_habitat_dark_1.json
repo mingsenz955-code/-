@@ -1,0 +1,43 @@
+{
+  "group": [
+    "buildings/0038_habitat_dark_1_g"
+  ],
+  "width": 404,
+  "height": 291,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0038_habitat_dark_1_g_bg.png",
+      "x": -2.95,
+      "y": 160.5
+    },
+    {
+      "name": "zuobiao1",
+      "type": "node",
+      "x": -142,
+      "y": 150
+    },
+    {
+      "name": "zuobiao2",
+      "type": "node",
+      "x": -29,
+      "y": 85
+    },
+    {
+      "name": "zuobiao3",
+      "type": "node",
+      "x": 110,
+      "y": 119
+    },
+    {
+      "name": "eff",
+      "type": "eff",
+      "eff": "0038_habitat_dark_1_eff",
+      "x": 0.3,
+      "y": 0.05,
+      "width": 283.35,
+      "height": 167.95
+    }
+  ]
+}

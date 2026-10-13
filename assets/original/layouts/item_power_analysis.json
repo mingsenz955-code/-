@@ -1,0 +1,127 @@
+{
+  "group": [
+    "ui_PowerUp"
+  ],
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -403.8,
+      "y": -42.52,
+      "width": 997,
+      "height": 585.05,
+      "maxw": 997,
+      "maxh": 585.05
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_analysis_banner_zlpj.png",
+      "x": -258.6,
+      "y": -41.95,
+      "width": 216,
+      "height": 523
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_haoyoulan2.png",
+      "scale9": 1,
+      "x": -141,
+      "y": -64.85,
+      "width": 710,
+      "height": 481,
+      "maxw": 710,
+      "maxh": 481
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_d3.png",
+      "scale9": 1,
+      "x": -385.85,
+      "y": -346,
+      "width": 965,
+      "height": 40,
+      "maxw": 965,
+      "maxh": 40
+    },
+    {
+      "name": "tishi",
+      "type": "label",
+      "text": "以上评价只根据你出战的龙来进行判断~所以要记得把强力的龙放到布阵中哟~",
+      "size": 21,
+      "align": "center",
+      "color": 4294967295,
+      "x": -363.5,
+      "y": -345.85,
+      "width": 934,
+      "height": 27.6
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "x": 214.8,
+      "y": -66.65,
+      "width": 696,
+      "height": 460
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_di2.png",
+      "scale9": 1,
+      "x": -141,
+      "y": 197.05,
+      "width": 713,
+      "height": 41,
+      "maxw": 713,
+      "maxh": 41
+    },
+    {
+      "name": "tx_xiangmu",
+      "type": "label",
+      "text": "项目 ",
+      "size": 20,
+      "align": "center",
+      "color": 1092488703,
+      "x": -91.9,
+      "y": 197.72,
+      "width": 160.05,
+      "height": 26.75
+    },
+    {
+      "name": "tx_miaoshu",
+      "type": "label",
+      "text": "描述",
+      "size": 20,
+      "align": "center",
+      "color": 1092488703,
+      "x": 98.1,
+      "y": 197.72,
+      "width": 160.05,
+      "height": 26.75
+    },
+    {
+      "name": "tx_pingjia",
+      "type": "label",
+      "text": "评价",
+      "size": 20,
+      "align": "center",
+      "color": 1092488703,
+      "x": 258.1,
+      "y": 197.72,
+      "width": 160.05,
+      "height": 26.75
+    },
+    {
+      "name": "tx_caozuo",
+      "type": "label",
+      "text": "操作",
+      "size": 20,
+      "align": "center",
+      "color": 1092488703,
+      "x": 462.1,
+      "y": 197.72,
+      "width": 93.95,
+      "height": 26.75
+    }
+  ]
+}

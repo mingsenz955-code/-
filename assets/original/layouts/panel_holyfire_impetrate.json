@@ -1,0 +1,1181 @@
+{
+  "group": [
+    "ui_holyfire_bg_hqsh"
+  ],
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_holyfire_bg_hqsh.png",
+      "x": -14.35,
+      "y": -15.9,
+      "width": 960,
+      "height": 623
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_holyfire_jiantou2.png",
+      "x": -266.3,
+      "y": -233.55,
+      "width": 42,
+      "height": 45
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_holyfire_jiantou2.png",
+      "x": -109.65,
+      "y": -233.55,
+      "width": 42,
+      "height": 45
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_holyfire_jiantou2.png",
+      "x": 47,
+      "y": -233.55,
+      "width": 42,
+      "height": 45
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_holyfire_jiantou2.png",
+      "x": 203.65,
+      "y": -233.55,
+      "width": 42,
+      "height": 45
+    },
+    {
+      "name": "jin1",
+      "type": "sprite",
+      "img": "#ui_holyfire_jiantou1.png",
+      "x": -266.3,
+      "y": -233.55,
+      "width": 42,
+      "height": 45
+    },
+    {
+      "name": "jin2",
+      "type": "sprite",
+      "img": "#ui_holyfire_jiantou1.png",
+      "x": -109.65,
+      "y": -233.55,
+      "width": 42,
+      "height": 45
+    },
+    {
+      "name": "jin3",
+      "type": "sprite",
+      "img": "#ui_holyfire_jiantou1.png",
+      "x": 47,
+      "y": -233.55,
+      "width": 42,
+      "height": 45
+    },
+    {
+      "name": "jin4",
+      "type": "sprite",
+      "img": "#ui_holyfire_jiantou1.png",
+      "x": 203.65,
+      "y": -233.55,
+      "width": 42,
+      "height": 45
+    },
+    {
+      "name": "touxiang1",
+      "type": "node",
+      "x": -343.3,
+      "y": -233,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "qipao1",
+      "type": "sprite",
+      "img": "#ui_holyfire_khq.png",
+      "x": -303.3,
+      "y": -199.55,
+      "width": 66,
+      "height": 60
+    },
+    {
+      "name": "touxiang2",
+      "type": "node",
+      "x": -186.6,
+      "y": -233,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "qipao2",
+      "type": "sprite",
+      "img": "#ui_holyfire_khq.png",
+      "x": -147.3,
+      "y": -199.55,
+      "width": 66,
+      "height": 60
+    },
+    {
+      "name": "touxiang3",
+      "type": "node",
+      "x": -29.9,
+      "y": -233,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "qipao3",
+      "type": "sprite",
+      "img": "#ui_holyfire_khq.png",
+      "x": 8.7,
+      "y": -199.55,
+      "width": 66,
+      "height": 60
+    },
+    {
+      "name": "touxiang4",
+      "type": "node",
+      "x": 126.8,
+      "y": -233,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "qipao4",
+      "type": "sprite",
+      "img": "#ui_holyfire_khq.png",
+      "x": 164.7,
+      "y": -199.55,
+      "width": 66,
+      "height": 60
+    },
+    {
+      "name": "touxiang5",
+      "type": "node",
+      "x": 283.5,
+      "y": -233,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "qipao5",
+      "type": "sprite",
+      "img": "#ui_holyfire_khq.png",
+      "x": 320.7,
+      "y": -199.55,
+      "width": 66,
+      "height": 60
+    },
+    {
+      "name": "tishi",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_tishi1.png",
+      "img_down": "#ui_common_btn_tishi2.png",
+      "x": 324.35,
+      "y": 250
+    },
+    {
+      "name": "price_free",
+      "type": "label",
+      "text": "火种x1",
+      "size": 25,
+      "align": "center",
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -385.3,
+      "y": -299.15,
+      "width": 84,
+      "height": 32.1
+    },
+    {
+      "name": "price1",
+      "type": "node",
+      "x": -348.2,
+      "y": -299.4,
+      "width": 72.5,
+      "height": 40,
+      "children": [
+        {
+          "name": "price_num",
+          "type": "label",
+          "text": "00",
+          "size": 25,
+          "align": "left",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -2.75,
+          "y": -0.55,
+          "width": 39,
+          "height": 32.1
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_HuoBi0002.png",
+          "x": -16.25,
+          "width": 40,
+          "height": 40
+        }
+      ]
+    },
+    {
+      "name": "price2",
+      "type": "node",
+      "x": -191.45,
+      "y": -299.4,
+      "width": 72.5,
+      "height": 40,
+      "children": [
+        {
+          "name": "price_num",
+          "type": "label",
+          "text": "00",
+          "size": 25,
+          "align": "left",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -2.75,
+          "y": -0.55,
+          "width": 39,
+          "height": 32.1
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_HuoBi0002.png",
+          "x": -16.25,
+          "width": 40,
+          "height": 40
+        }
+      ]
+    },
+    {
+      "name": "price3",
+      "type": "node",
+      "x": -34.7,
+      "y": -299.4,
+      "width": 72.5,
+      "height": 40,
+      "children": [
+        {
+          "name": "price_num",
+          "type": "label",
+          "text": "00",
+          "size": 25,
+          "align": "left",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -2.75,
+          "y": -0.55,
+          "width": 39,
+          "height": 32.1
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_HuoBi0002.png",
+          "x": -16.25,
+          "width": 40,
+          "height": 40
+        }
+      ]
+    },
+    {
+      "name": "price4",
+      "type": "node",
+      "x": 122.05,
+      "y": -299.4,
+      "width": 72.5,
+      "height": 40,
+      "children": [
+        {
+          "name": "price_num",
+          "type": "label",
+          "text": "00",
+          "size": 25,
+          "align": "left",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -2.75,
+          "y": -0.55,
+          "width": 39,
+          "height": 32.1
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_HuoBi0002.png",
+          "x": -16.25,
+          "width": 40,
+          "height": 40
+        }
+      ]
+    },
+    {
+      "name": "price5",
+      "type": "node",
+      "x": 278.8,
+      "y": -299.4,
+      "width": 72.5,
+      "height": 40,
+      "children": [
+        {
+          "name": "price_num",
+          "type": "label",
+          "text": "00",
+          "size": 25,
+          "align": "left",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -2.75,
+          "y": -0.55,
+          "width": 39,
+          "height": 32.1
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_HuoBi0002.png",
+          "x": -16.25,
+          "width": 40,
+          "height": 40
+        }
+      ]
+    },
+    {
+      "name": "tx_mianfei",
+      "type": "label",
+      "text": "火种剩余个数：-99",
+      "size": 25,
+      "align": "left",
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -479.3,
+      "y": -161.15,
+      "width": 285,
+      "height": 32.1
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_main_pbar_bg2.png",
+      "scale9": 1,
+      "x": -465.4,
+      "y": 253.5,
+      "width": 130,
+      "height": 46,
+      "maxw": 130,
+      "maxh": 46
+    },
+    {
+      "name": "mojing_num",
+      "type": "label",
+      "text": "0000",
+      "size": 28,
+      "align": "left",
+      "color": 1092488703,
+      "x": -451.9,
+      "y": 253.25,
+      "width": 104,
+      "height": 35.5
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_HuoBi0002.png",
+      "x": -469.4,
+      "y": 253.5,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_main_pbar_bg2.png",
+      "scale9": 1,
+      "x": -313.4,
+      "y": 253.5,
+      "width": 140,
+      "height": 46,
+      "maxw": 140,
+      "maxh": 46
+    },
+    {
+      "name": "yujin_num",
+      "type": "label",
+      "text": "0",
+      "size": 28,
+      "align": "left",
+      "color": 1092488703,
+      "x": -294.9,
+      "y": 253.25,
+      "width": 104,
+      "height": 35.5
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_holyfire_yujin.png",
+      "x": -317.4,
+      "y": 253.5,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "name": "duihuan",
+      "type": "node",
+      "x": -145,
+      "y": 254.55,
+      "width": 92,
+      "height": 46,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btndh1.png",
+          "img_down": "#ui_common_btndh2.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "兑换",
+          "size": 30,
+          "align": "center",
+          "color": 992815615,
+          "outlineColor": 13941402,
+          "x": -44,
+          "y": -0.13,
+          "width": 85,
+          "height": 37.75
+        }
+      ]
+    },
+    {
+      "name": "shuchu1",
+      "type": "node",
+      "x": -340.95,
+      "y": 97.6,
+      "width": 85,
+      "height": 85,
+      "children": [
+        {
+          "name": "diban",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "",
+          "size": 22,
+          "align": "right",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -78.5,
+          "y": 21.58,
+          "width": 73,
+          "height": 28.75
+        }
+      ]
+    },
+    {
+      "name": "shuchu2",
+      "type": "node",
+      "x": -235.75,
+      "y": 97.6,
+      "width": 85,
+      "height": 85,
+      "children": [
+        {
+          "name": "diban",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "",
+          "size": 22,
+          "align": "right",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -78.5,
+          "y": 21.58,
+          "width": 73,
+          "height": 28.75
+        }
+      ]
+    },
+    {
+      "name": "shuchu3",
+      "type": "node",
+      "x": -130.55,
+      "y": 97.6,
+      "width": 85,
+      "height": 85,
+      "children": [
+        {
+          "name": "diban",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "",
+          "size": 22,
+          "align": "right",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -78.5,
+          "y": 21.58,
+          "width": 73,
+          "height": 28.75
+        }
+      ]
+    },
+    {
+      "name": "shuchu4",
+      "type": "node",
+      "x": -25.35,
+      "y": 97.6,
+      "width": 85,
+      "height": 85,
+      "children": [
+        {
+          "name": "diban",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "",
+          "size": 22,
+          "align": "right",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -78.5,
+          "y": 21.58,
+          "width": 73,
+          "height": 28.75
+        }
+      ]
+    },
+    {
+      "name": "shuchu5",
+      "type": "node",
+      "x": 79.85,
+      "y": 97.6,
+      "width": 85,
+      "height": 85,
+      "children": [
+        {
+          "name": "diban",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "",
+          "size": 22,
+          "align": "right",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -78.5,
+          "y": 21.58,
+          "width": 73,
+          "height": 28.75
+        }
+      ]
+    },
+    {
+      "name": "shuchu6",
+      "type": "node",
+      "x": 185.05,
+      "y": 97.6,
+      "width": 85,
+      "height": 85,
+      "children": [
+        {
+          "name": "diban",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "",
+          "size": 22,
+          "align": "right",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -78.5,
+          "y": 21.58,
+          "width": 73,
+          "height": 28.75
+        }
+      ]
+    },
+    {
+      "name": "shuchu7",
+      "type": "node",
+      "x": 290.25,
+      "y": 97.6,
+      "width": 85,
+      "height": 85,
+      "children": [
+        {
+          "name": "diban",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "",
+          "size": 22,
+          "align": "right",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -78.5,
+          "y": 21.58,
+          "width": 73,
+          "height": 28.75
+        }
+      ]
+    },
+    {
+      "name": "shuchu8",
+      "type": "node",
+      "x": 395.45,
+      "y": 97.6,
+      "width": 85,
+      "height": 85,
+      "children": [
+        {
+          "name": "diban",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "",
+          "size": 22,
+          "align": "right",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -78.5,
+          "y": 21.58,
+          "width": 73,
+          "height": 28.75
+        }
+      ]
+    },
+    {
+      "name": "shuchu9",
+      "type": "node",
+      "x": -340.95,
+      "y": -12.4,
+      "width": 85,
+      "height": 85,
+      "children": [
+        {
+          "name": "diban",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "",
+          "size": 22,
+          "align": "right",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -78.5,
+          "y": 21.58,
+          "width": 73,
+          "height": 28.75
+        }
+      ]
+    },
+    {
+      "name": "shuchu10",
+      "type": "node",
+      "x": -235.75,
+      "y": -12.4,
+      "width": 85,
+      "height": 85,
+      "children": [
+        {
+          "name": "diban",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "",
+          "size": 22,
+          "align": "right",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -78.5,
+          "y": 21.58,
+          "width": 73,
+          "height": 28.75
+        }
+      ]
+    },
+    {
+      "name": "shuchu11",
+      "type": "node",
+      "x": -130.55,
+      "y": -12.4,
+      "width": 85,
+      "height": 85,
+      "children": [
+        {
+          "name": "diban",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "",
+          "size": 22,
+          "align": "right",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -78.5,
+          "y": 21.58,
+          "width": 73,
+          "height": 28.75
+        }
+      ]
+    },
+    {
+      "name": "shuchu12",
+      "type": "node",
+      "x": -25.35,
+      "y": -12.4,
+      "width": 85,
+      "height": 85,
+      "children": [
+        {
+          "name": "diban",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "",
+          "size": 22,
+          "align": "right",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -78.5,
+          "y": 21.58,
+          "width": 73,
+          "height": 28.75
+        }
+      ]
+    },
+    {
+      "name": "shuchu13",
+      "type": "node",
+      "x": 79.85,
+      "y": -12.4,
+      "width": 85,
+      "height": 85,
+      "children": [
+        {
+          "name": "diban",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "",
+          "size": 22,
+          "align": "right",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -78.5,
+          "y": 21.58,
+          "width": 73,
+          "height": 28.75
+        }
+      ]
+    },
+    {
+      "name": "shuchu14",
+      "type": "node",
+      "x": 185.05,
+      "y": -12.4,
+      "width": 85,
+      "height": 85,
+      "children": [
+        {
+          "name": "diban",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "",
+          "size": 22,
+          "align": "right",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -78.5,
+          "y": 21.58,
+          "width": 73,
+          "height": 28.75
+        }
+      ]
+    },
+    {
+      "name": "shuchu15",
+      "type": "node",
+      "x": 290.25,
+      "y": -12.4,
+      "width": 85,
+      "height": 85,
+      "children": [
+        {
+          "name": "diban",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "",
+          "size": 22,
+          "align": "right",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -78.5,
+          "y": 21.58,
+          "width": 73,
+          "height": 28.75
+        }
+      ]
+    },
+    {
+      "name": "shuchu16",
+      "type": "node",
+      "x": 395.45,
+      "y": -12.4,
+      "width": 85,
+      "height": 85,
+      "children": [
+        {
+          "name": "diban",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "",
+          "size": 22,
+          "align": "right",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -78.5,
+          "y": 21.58,
+          "width": 73,
+          "height": 28.75
+        }
+      ]
+    },
+    {
+      "name": "baifang",
+      "type": "node",
+      "x": -240.95,
+      "y": -69.9,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "一键拜访",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -79,
+          "y": 4.4,
+          "width": 156,
+          "height": 46.2
+        }
+      ]
+    },
+    {
+      "name": "shiqu",
+      "type": "node",
+      "x": -16,
+      "y": -69.9,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "全部拾取",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -79,
+          "y": 4.4,
+          "width": 156,
+          "height": 46.2
+        }
+      ]
+    },
+    {
+      "name": "zhuangbei",
+      "type": "node",
+      "x": 208.95,
+      "y": -69.9,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3_2.png",
+          "img_down": "#ui_common_btn_4.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "装备神火",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -79,
+          "y": 4.4,
+          "width": 156,
+          "height": 46.2
+        }
+      ]
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_GuanBi1.png",
+      "img_down": "#ui_common_btn_GuanBi2.png",
+      "x": 423.1,
+      "y": 250
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "group": {},
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768,
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_goal_wancheng.png",
+      "x": 124.25,
+      "y": 1.5,
+      "width": 509,
+      "height": 397
+    },
+    {
+      "name": "icon_renwu",
+      "type": "node",
+      "x": -251.35,
+      "y": 49.65,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "tx_renwu_miaoshu",
+      "type": "label",
+      "text": "啊就看谁的卡就是大家啊开始打扫打扫打扫打扫的",
+      "align": "justify",
+      "size": 20,
+      "color": 1092488703,
+      "x": -44.3,
+      "y": 14.05,
+      "width": 376.95,
+      "height": 298
+    },
+    {
+      "name": "yes",
+      "type": "node",
+      "x": 144.75,
+      "y": -183.45,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "width": 200,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "确定",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -79.5,
+          "y": 4.93,
+          "width": 160,
+          "height": 45.15
+        }
+      ]
+    }
+  ]
+}

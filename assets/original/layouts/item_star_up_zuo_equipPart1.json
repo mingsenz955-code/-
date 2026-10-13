@@ -1,0 +1,28 @@
+{
+  "group": {},
+  "children": [
+    {
+      "name": "diban_zuo",
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 2,
+      "x": -75,
+      "width": 151,
+      "height": 585,
+      "maxw": 151,
+      "maxh": 585,
+      "cix": 89.0,
+      "ciy": 81.0,
+      "ciwidth": 89.0,
+      "ciheight": 81.0
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "x": -1.3,
+      "y": -6.15,
+      "width": 104,
+      "height": 526
+    }
+  ]
+}

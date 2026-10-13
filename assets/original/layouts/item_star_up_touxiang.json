@@ -1,0 +1,115 @@
+{
+  "group": {},
+  "width": 100,
+  "height": 100,
+  "children": [
+    {
+      "name": "add",
+      "type": "sprite",
+      "img": "#ui_common_DaoJuKuang1.png",
+      "width": 85,
+      "height": 85
+    },
+    {
+      "name": "xiangkuang",
+      "type": "node",
+      "x": 0.15,
+      "y": -1.15,
+      "width": 0,
+      "height": 0,
+      "children": [
+        {
+          "name": "quality",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "icon_long",
+      "type": "node",
+      "x": 0.15,
+      "y": -1.15,
+      "width": 0,
+      "height": 0,
+      "children": [
+        {
+          "name": "quality",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "selected",
+      "type": "sprite",
+      "img": "#ui_common_selected85.png",
+      "width": 100,
+      "height": 100
+    },
+    {
+      "name": "tx_lv",
+      "type": "label",
+      "text": "Lv99",
+      "align": "right",
+      "size": 20,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -39.85,
+      "y": -30.85,
+      "width": 77,
+      "height": 26.5
+    },
+    {
+      "name": "txt_num",
+      "type": "label",
+      "text": " ",
+      "align": "right",
+      "size": 20,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -40.85,
+      "y": -28.35,
+      "width": 77,
+      "height": 26.5
+    },
+    {
+      "name": "biaoji_zhanbu",
+      "type": "node",
+      "x": -16.35,
+      "y": 15.6,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "biaoji_pinzhi",
+      "type": "node",
+      "x": -29.35,
+      "y": 28.6,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "con_star",
+      "type": "node",
+      "x": -31.35,
+      "y": -31.65,
+      "width": 0,
+      "height": 0
+    }
+  ]
+}

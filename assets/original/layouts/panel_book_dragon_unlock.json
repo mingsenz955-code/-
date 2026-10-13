@@ -1,0 +1,121 @@
+{
+  "group": [
+    "ui_booknew"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768,
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_booknew_bg3.png",
+      "x": 5.85,
+      "y": -8,
+      "width": 467,
+      "height": 474
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_booknew_duandaizise.png",
+      "x": 7.5,
+      "y": 210.5,
+      "width": 631,
+      "height": 107
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_booknew_text_jiesuo.png",
+      "x": 8,
+      "y": 231.45,
+      "width": 282,
+      "height": 51
+    },
+    {
+      "name": "light",
+      "type": "sprite",
+      "img": "#ui_booknew_light.png",
+      "x": 14.6,
+      "y": 3.75,
+      "width": 520,
+      "height": 495
+    },
+    {
+      "name": "dragon_show",
+      "type": "node",
+      "x": 9,
+      "y": 6.75,
+      "width": 142,
+      "height": 142,
+      "children": [
+        {
+          "name": "bg",
+          "type": "sprite",
+          "img": "#ui_booknew_toux_1.png",
+          "width": 142,
+          "height": 142
+        },
+        {
+          "name": "daojukuang",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "biaoji",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "dragon_name",
+      "type": "label",
+      "text": "龙的名字刘子",
+      "align": "center",
+      "size": 28,
+      "color": 1092488703,
+      "x": -154,
+      "y": 165.8,
+      "width": 322,
+      "height": 35.5
+    },
+    {
+      "name": "hint",
+      "type": "label",
+      "text": "激活属性：",
+      "align": "left",
+      "size": 24,
+      "color": 1092488703,
+      "x": -121,
+      "y": -177.45,
+      "width": 124,
+      "height": 31
+    },
+    {
+      "name": "num",
+      "type": "label",
+      "text": "00",
+      "align": "left",
+      "size": 24,
+      "color": 2566914303,
+      "x": 4,
+      "y": -177.45,
+      "width": 198,
+      "height": 31
+    }
+  ]
+}

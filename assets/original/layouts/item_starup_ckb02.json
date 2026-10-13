@@ -1,0 +1,44 @@
+{
+  "group": {},
+  "children": [
+    {
+      "name": "ckb",
+      "type": "ckb",
+      "img_on": "#ui_common_ico_bg_02.png",
+      "img_off": "#ui_common_ico_bg_01.png",
+      "img_disable": "#ui_common_ico_bg_04.png"
+    },
+    {
+      "name": "iconContainer",
+      "type": "node",
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "装备",
+      "size": 24,
+      "align": "center",
+      "color": 4294967295,
+      "outlineColor": 10040064,
+      "x": -64,
+      "y": -37.13,
+      "width": 126,
+      "height": 33.25
+    },
+    {
+      "name": "txt_lockname",
+      "type": "label",
+      "text": "15级解锁",
+      "size": 28,
+      "align": "center",
+      "color": 4294967295,
+      "outlineColor": 4267533,
+      "x": -69,
+      "y": 6.8,
+      "width": 137,
+      "height": 35.5
+    }
+  ]
+}

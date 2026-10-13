@@ -1,0 +1,77 @@
+{
+  "group": [
+    "ui_gonghuizhan"
+  ],
+  "width": 404,
+  "height": 37,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_gonghuizhan_daojishi.png",
+      "x": 56,
+      "y": -1,
+      "width": 254,
+      "height": 37
+    },
+    {
+      "name": "txt_1",
+      "type": "label",
+      "text": "赛季倒计时:",
+      "align": "right",
+      "size": 23,
+      "color": 4294967295,
+      "x": -221,
+      "y": -2,
+      "width": 145,
+      "height": 30
+    },
+    {
+      "name": "txt_time_d",
+      "type": "label",
+      "text": "--",
+      "align": "center",
+      "size": 23,
+      "color": 4294967295,
+      "x": -70,
+      "y": 0,
+      "width": 37,
+      "height": 30
+    },
+    {
+      "name": "txt_time_h",
+      "type": "label",
+      "text": "--",
+      "align": "center",
+      "size": 23,
+      "color": 4294967295,
+      "x": -7,
+      "y": 0,
+      "width": 37,
+      "height": 30
+    },
+    {
+      "name": "txt_time_m",
+      "type": "label",
+      "text": "--",
+      "align": "center",
+      "size": 23,
+      "color": 4294967295,
+      "x": 57,
+      "y": 0,
+      "width": 37,
+      "height": 30
+    },
+    {
+      "name": "txt_time_s",
+      "type": "label",
+      "text": "--",
+      "align": "center",
+      "size": 23,
+      "color": 4294967295,
+      "x": 119,
+      "y": 0,
+      "width": 37,
+      "height": 30
+    }
+  ]
+}

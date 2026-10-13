@@ -1,0 +1,347 @@
+{
+  "group": [
+    "ui_gonghuihongbao"
+  ],
+  "width": 180,
+  "height": 259,
+  "children": [
+    {
+      "name": "node_item_4",
+      "type": "node",
+      "x": 2,
+      "y": 3,
+      "width": 180,
+      "height": 255,
+      "children": [
+        {
+          "name": "node_close",
+          "type": "node",
+          "y": 3,
+          "width": 180,
+          "height": 250,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuihongbao_qiang2.png",
+              "width": 180,
+              "height": 250
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuihongbao_img(22).png",
+              "x": -4,
+              "y": 75,
+              "width": 82,
+              "height": 31
+            }
+          ]
+        },
+        {
+          "name": "node_open",
+          "type": "node",
+          "y": -8,
+          "width": 180,
+          "height": 239,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuihongbao_qiang1.png",
+              "width": 180,
+              "height": 239
+            },
+            {
+              "name": "node_isget",
+              "type": "node",
+              "x": 1,
+              "y": 41,
+              "width": 76,
+              "height": 80,
+              "children": [
+                {
+                  "name": "img_close",
+                  "type": "sprite",
+                  "img": "#ui_gonghuihongbao_img(21).png",
+                  "width": 76,
+                  "height": 80
+                },
+                {
+                  "name": "img_open",
+                  "type": "sprite",
+                  "img": "#ui_gonghuihongbao_img(18).png",
+                  "y": 2,
+                  "width": 39,
+                  "height": 39
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "node_item_3",
+      "type": "node",
+      "x": 2,
+      "y": -2,
+      "width": 180,
+      "height": 256,
+      "children": [
+        {
+          "name": "node_close",
+          "type": "node",
+          "width": 180,
+          "height": 256,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuihongbao_img(26).png",
+              "y": 6,
+              "width": 180,
+              "height": 256
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuihongbao_img(22).png",
+              "x": -4,
+              "y": 78,
+              "width": 82,
+              "height": 31
+            }
+          ]
+        },
+        {
+          "name": "node_open",
+          "type": "node",
+          "y": -8,
+          "width": 180,
+          "height": 240,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuihongbao_img(25).png",
+              "y": 8,
+              "width": 180,
+              "height": 240
+            },
+            {
+              "name": "node_isget",
+              "type": "node",
+              "x": 4,
+              "y": 49,
+              "width": 76,
+              "height": 80,
+              "children": [
+                {
+                  "name": "img_close",
+                  "type": "sprite",
+                  "img": "#ui_gonghuihongbao_img(21).png",
+                  "width": 76,
+                  "height": 80
+                },
+                {
+                  "name": "img_open",
+                  "type": "sprite",
+                  "img": "#ui_gonghuihongbao_img(18).png",
+                  "y": 2,
+                  "width": 39,
+                  "height": 39
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "node_item_2",
+      "type": "node",
+      "x": 2,
+      "y": 3,
+      "width": 180,
+      "height": 256,
+      "children": [
+        {
+          "name": "node_close",
+          "type": "node",
+          "width": 180,
+          "height": 256,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuihongbao_img(7).png",
+              "width": 180,
+              "height": 256
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuihongbao_img(22).png",
+              "x": -4,
+              "y": 78,
+              "width": 82,
+              "height": 31
+            }
+          ]
+        },
+        {
+          "name": "node_open",
+          "type": "node",
+          "y": -8,
+          "width": 180,
+          "height": 240,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuihongbao_img(6).png",
+              "width": 180,
+              "height": 240
+            },
+            {
+              "name": "node_isget",
+              "type": "node",
+              "x": -1,
+              "y": 42,
+              "width": 76,
+              "height": 80,
+              "children": [
+                {
+                  "name": "img_close",
+                  "type": "sprite",
+                  "img": "#ui_gonghuihongbao_img(21).png",
+                  "width": 76,
+                  "height": 80
+                },
+                {
+                  "name": "img_open",
+                  "type": "sprite",
+                  "img": "#ui_gonghuihongbao_img(18).png",
+                  "y": 2,
+                  "width": 39,
+                  "height": 39
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "node_item_1",
+      "type": "node",
+      "x": 2,
+      "y": 1,
+      "width": 180,
+      "height": 256,
+      "children": [
+        {
+          "name": "node_close",
+          "type": "node",
+          "width": 180,
+          "height": 256,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuihongbao_img(16).png",
+              "width": 180,
+              "height": 256
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuihongbao_img(22).png",
+              "x": -4,
+              "y": 78,
+              "width": 82,
+              "height": 31
+            }
+          ]
+        },
+        {
+          "name": "node_open",
+          "type": "node",
+          "y": -8,
+          "width": 180,
+          "height": 240,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuihongbao_img(15).png",
+              "width": 180,
+              "height": 240
+            },
+            {
+              "name": "node_isget",
+              "type": "node",
+              "x": -1,
+              "y": 45,
+              "width": 76,
+              "height": 80,
+              "children": [
+                {
+                  "name": "img_close",
+                  "type": "sprite",
+                  "img": "#ui_gonghuihongbao_img(21).png",
+                  "width": 76,
+                  "height": 80
+                },
+                {
+                  "name": "img_open",
+                  "type": "sprite",
+                  "img": "#ui_gonghuihongbao_img(18).png",
+                  "y": 2,
+                  "width": 39,
+                  "height": 39
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "txt_fromname",
+      "type": "label",
+      "text": "?",
+      "align": "center",
+      "size": 22,
+      "color": 4291572735,
+      "outlineColor": 0,
+      "x": -74,
+      "y": -6,
+      "width": 156,
+      "height": 28
+    },
+    {
+      "name": "showimage",
+      "type": "node",
+      "x": -12,
+      "y": -52,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "txt_leftnum",
+      "type": "label",
+      "text": "剩余数量:?",
+      "align": "center",
+      "size": 18,
+      "color": 4294967295,
+      "outlineColor": 16711680,
+      "x": -69,
+      "y": -89,
+      "width": 143,
+      "height": 24
+    },
+    {
+      "name": "txt_num",
+      "type": "label",
+      "text": "?",
+      "align": "left",
+      "size": 25,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": 6,
+      "y": -54,
+      "width": 79,
+      "height": 32
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "group": [
+    "ui_guild"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "name": "tip",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_tishi1.png",
+      "img_down": "#ui_common_btn_tishi2.png",
+      "x": 373,
+      "y": 338.3,
+      "width": 85,
+      "height": 90,
+      "right": 139
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_GuanBi1.png",
+      "img_down": "#ui_common_btn_GuanBi2.png",
+      "x": 468.1,
+      "y": 338.9,
+      "width": 85,
+      "height": 90,
+      "right": 43.9
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_guild_biban.png",
+      "scale9": 1,
+      "x": -502.95,
+      "y": -41.75,
+      "width": 1008,
+      "height": 647,
+      "maxw": 1008,
+      "maxh": 647
+    },
+    {
+      "name": "ckb_info",
+      "type": "node",
+      "x": -385.95,
+      "y": 302.45,
+      "width": 180,
+      "height": 89,
+      "children": [
+        {
+          "name": "btn",
+          "type": "ckb",
+          "img_on": "#ui_guild_dbq02.png",
+          "img_off": "#ui_guild_dbq01.png"
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "公会信息",
+          "align": "center",
+          "size": 26,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -70,
+          "y": 0.28,
+          "width": 138,
+          "height": 35.55
+        }
+      ]
+    },
+    {
+      "name": "ckb_list",
+      "type": "node",
+      "x": -205.95,
+      "y": 302.45,
+      "width": 180,
+      "height": 89,
+      "children": [
+        {
+          "name": "btn",
+          "type": "ckb",
+          "img_on": "#ui_guild_dbq02.png",
+          "img_off": "#ui_guild_dbq01.png"
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "成员列表",
+          "align": "center",
+          "size": 26,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -70,
+          "y": 0.28,
+          "width": 138,
+          "height": 35.55
+        }
+      ]
+    },
+    {
+      "name": "btn_sortlv",
+      "type": "node",
+      "x": -18,
+      "y": 304,
+      "width": 154,
+      "height": 46,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_pppp1.png",
+          "img_down": "#ui_common_btn_pppp2.png",
+          "img_disable": "#ui_common_btn_pppp3.png",
+          "width": 154,
+          "height": 46
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_guild_paixu.png",
+          "x": -47,
+          "y": 0,
+          "width": 33,
+          "height": 28
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "等级",
+          "align": "center",
+          "size": 26,
+          "color": 992815615,
+          "outlineColor": 13941402,
+          "x": -19,
+          "y": -2,
+          "width": 79,
+          "height": 33
+        }
+      ]
+    },
+    {
+      "name": "zuobiao",
+      "type": "node",
+      "x": 1.05,
+      "y": -41.75,
+      "width": 0,
+      "height": 0
+    }
+  ]
+}

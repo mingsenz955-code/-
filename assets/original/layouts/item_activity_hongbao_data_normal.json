@@ -1,0 +1,73 @@
+{
+  "group": [
+    "ui_activityhongbao"
+  ],
+  "width": 211,
+  "height": 365,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_activityhongbao_diban1.png",
+      "y": 24.9,
+      "width": 211,
+      "height": 315
+    },
+    {
+      "name": "miaoshu",
+      "type": "label",
+      "text": "由于",
+      "align": "left",
+      "size": 22,
+      "color": 4294967295,
+      "outlineColor": 8000778,
+      "x": -80.5,
+      "y": -13.85,
+      "width": 179,
+      "height": 122
+    },
+    {
+      "name": "btn_lingqu",
+      "type": "node",
+      "y": -139.95,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png",
+          "img_disable": "#ui_common_btn_2c.png",
+          "width": 144,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "领取",
+          "align": "center",
+          "size": 28,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -51.5,
+          "y": 4.75,
+          "width": 103,
+          "height": 35.5
+        }
+      ]
+    },
+    {
+      "name": "miaoshu2",
+      "type": "label",
+      "text": "由于",
+      "align": "left",
+      "size": 22,
+      "color": 4294967295,
+      "outlineColor": 8000778,
+      "x": -80.5,
+      "y": -141.85,
+      "width": 179,
+      "height": 82
+    }
+  ]
+}

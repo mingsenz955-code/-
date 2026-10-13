@@ -1,0 +1,14 @@
+{
+  "group": [
+    "buildings/islandright_g"
+  ],
+  "width": 1659,
+  "height": 1162,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#islandright_g_bg.png"
+    }
+  ]
+}

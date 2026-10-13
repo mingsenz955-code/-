@@ -1,0 +1,16 @@
+{
+  "group": [
+    "buildings/0063_xianrenqiu_little_g"
+  ],
+  "width": 85,
+  "height": 62,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0063_xianrenqiu_little_g_bg.png",
+      "x": 10.6,
+      "y": 35.15
+    }
+  ]
+}

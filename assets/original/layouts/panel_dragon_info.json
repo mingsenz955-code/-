@@ -1,0 +1,351 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -366.25,
+      "y": -1.03,
+      "width": 731.4,
+      "height": 501.05,
+      "maxw": 731.4,
+      "maxh": 501.05
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -365.25,
+      "y": 217,
+      "width": 728,
+      "height": 55,
+      "maxw": 728,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "xxx龙",
+      "size": 25,
+      "align": "center",
+      "color": 4294967295,
+      "x": -335.1,
+      "y": 219.55,
+      "width": 666.75,
+      "height": 32.1
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_WuPinKuan.png",
+      "x": -217.15,
+      "y": 43.35,
+      "width": 202,
+      "height": 202
+    },
+    {
+      "name": "con_img",
+      "type": "node",
+      "x": -212.9,
+      "y": 37,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan2.png",
+      "scale9": 1,
+      "x": -96.25,
+      "y": 95,
+      "width": 165,
+      "height": 95,
+      "maxw": 165,
+      "maxh": 95
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan2b.png",
+      "scale9": 1,
+      "x": -96.25,
+      "y": 121.75,
+      "width": 165,
+      "height": 34,
+      "maxw": 165,
+      "maxh": 34
+    },
+    {
+      "name": "chanliang_shuzi",
+      "type": "label",
+      "text": "999999",
+      "size": 27,
+      "align": "justify",
+      "color": 255,
+      "x": -43.95,
+      "y": 81.03,
+      "width": 100.7,
+      "height": 34.35
+    },
+    {
+      "name": "chanliang",
+      "type": "label",
+      "text": "产量",
+      "size": 26,
+      "align": "center",
+      "color": 255,
+      "x": -76.25,
+      "y": 122.13,
+      "width": 126,
+      "height": 33.25
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_HuoBi0001.png",
+      "x": -64.8,
+      "y": 80.8,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan2.png",
+      "scale9": 1,
+      "x": 83.45,
+      "y": 95,
+      "width": 235,
+      "height": 95,
+      "maxw": 235,
+      "maxh": 95
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan2b.png",
+      "scale9": 1,
+      "x": 83.45,
+      "y": 121.75,
+      "width": 235,
+      "height": 34,
+      "maxw": 235,
+      "maxh": 34
+    },
+    {
+      "name": "txt_shuxing",
+      "type": "label",
+      "text": "属性",
+      "size": 26,
+      "align": "center",
+      "color": 255,
+      "x": 110.7,
+      "y": 121.88,
+      "width": 177.5,
+      "height": 33.25
+    },
+    {
+      "name": "shuxing1",
+      "type": "node",
+      "x": 274.9,
+      "y": 79,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "shuxing2",
+      "type": "node",
+      "x": 210.9,
+      "y": 79,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "shuxing3",
+      "type": "node",
+      "x": 141.95,
+      "y": 79,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan2.png",
+      "scale9": 1,
+      "x": -96.25,
+      "y": -66.65,
+      "width": 415,
+      "height": 200,
+      "maxw": 415,
+      "maxh": 200
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan2b.png",
+      "scale9": 1,
+      "x": -96.25,
+      "y": 11.75,
+      "width": 415,
+      "height": 34,
+      "maxw": 415,
+      "maxh": 34
+    },
+    {
+      "name": "miaoshu",
+      "type": "label",
+      "text": "描述",
+      "size": 26,
+      "align": "center",
+      "color": 255,
+      "x": 21.2,
+      "y": 10.57,
+      "width": 177.5,
+      "height": 33.25
+    },
+    {
+      "name": "neirong",
+      "type": "label",
+      "text": "啊送达时间快点哈加快速度哈空间说的是大时代",
+      "size": 20,
+      "align": "justify",
+      "color": 255,
+      "x": -71.25,
+      "y": -85.92,
+      "width": 368.15,
+      "height": 138.45
+    },
+    {
+      "name": "exp",
+      "type": "node",
+      "x": 16.35,
+      "y": -144,
+      "width": 176,
+      "height": 31.4,
+      "children": [
+        {
+          "name": "tx_xp",
+          "type": "label",
+          "text": "99999",
+          "size": 22,
+          "align": "left",
+          "color": 255,
+          "x": -1,
+          "y": -1.33,
+          "width": 89,
+          "height": 28.75
+        },
+        {
+          "name": "tx_xp_t",
+          "type": "label",
+          "text": "经验:",
+          "size": 22,
+          "align": "left",
+          "color": 255,
+          "x": -88,
+          "y": -1.33,
+          "width": 55,
+          "height": 28.75
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_hd3.png",
+          "x": -17,
+          "y": 0.7,
+          "width": 30,
+          "height": 30
+        }
+      ]
+    },
+    {
+      "name": "btn_FangRuLongChao",
+      "type": "node",
+      "x": -218.75,
+      "y": -143.1,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "立即购买",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -79,
+          "y": 4.4,
+          "width": 156,
+          "height": 46.2
+        }
+      ]
+    },
+    {
+      "name": "btn_GuanBiXiao",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 352.25,
+      "y": 218.5
+    },
+    {
+      "name": "weijiesuo",
+      "type": "sprite",
+      "img": "#ui_common_suo.png",
+      "x": -318.95,
+      "y": -141,
+      "width": 60,
+      "height": 72
+    },
+    {
+      "name": "gold_bg",
+      "type": "sprite",
+      "img": "#ui_common_ShuZiKuang.png",
+      "scale9": 1,
+      "x": -267.7,
+      "y": -78.15,
+      "width": 145,
+      "height": 31,
+      "maxw": 145,
+      "maxh": 31
+    },
+    {
+      "name": "shuzi",
+      "type": "label",
+      "text": "9999999999",
+      "size": 20,
+      "align": "justify",
+      "color": 255,
+      "x": -252.9,
+      "y": -77.67,
+      "width": 114.95,
+      "height": 26.15
+    },
+    {
+      "name": "con_cost",
+      "type": "node",
+      "x": -286.85,
+      "y": -78.95,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "tx_power",
+      "type": "label",
+      "text": "战斗力：",
+      "size": 20,
+      "align": "left",
+      "color": 4294967295,
+      "outlineColor": 4267533,
+      "x": -303.15,
+      "y": -40.35,
+      "width": 169,
+      "height": 26.5
+    }
+  ]
+}

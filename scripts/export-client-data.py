@@ -6,9 +6,12 @@ raw=z.read('assets/res/config/config_cn_qq.json');config=json.loads(raw);transla
 data_dir=OUT/'data';data_dir.mkdir(exist_ok=True)
 tables={p.stem:json.loads(p.read_text(encoding='utf8')) for p in (ROOT/'work/config-json').glob('*.json')}
 schemas={}
-for p in (ROOT/'work/client-config/dragon/pconfig/librarys').rglob('Lib*.lua'):
+for p in (ROOT/'work/client-config/dragon/pconfig/librarys').rglob('*Info.lua'):
  data=p.read_bytes()
- if not data.startswith(b'\x1bLua'):continue
+ if not data.startswith(b'\x1bLua'):
+  text=data.decode('utf8');fields={field:int(index) for field,index in re.findall(r'self\.([A-Za-z_0-9]+)\s*=\s*(?:(?:tonumber|tonum)\s*\(\s*)?arr\[(\d+)\]',text)}
+  if fields:schemas[p.stem]={'source':str(p.relative_to(ROOT/'work/client-config')).replace('\\','/'),'columns':fields,'note':'Direct field-to-column mapping; conditionals and derived expressions require separate review.'}
+  continue
  try:
   fn=reader['parse'](p)['nested'][0];regs={0:('self',),1:('arr',)};k=fn['constants'];fields={}
   rk=lambda v:k[v&255] if v&256 else regs.get(v)
@@ -36,5 +39,6 @@ catalog.sort(key=lambda d:d['id']);(OUT/'catalog.json').write_text(json.dumps(ca
 (data_dir/'client-config.json').write_text(json.dumps(config,ensure_ascii=False,indent=2),encoding='utf8');(data_dir/'tables.json').write_text(json.dumps(tables,ensure_ascii=False,indent=2),encoding='utf8');(data_dir/'schemas.json').write_text(json.dumps(schemas,ensure_ascii=False,indent=2),encoding='utf8')
 (data_dir/'provenance.json').write_text(json.dumps({'package':'com.sincetimes.dragonfarmii.dl','version':'2.9.35','resourceVersion':'202402271124','namedConfigSource':'assets/res/config/config_cn_qq.json','namedConfigSha256':hashlib.sha256(raw).hexdigest(),'namedItems':len(config['items']),'pcfItems':len(tables['items']),'literalTables':len(tables),'note':'Named legacy config and pcf config may differ. Server updates, actual pool probabilities and battle simulation require comparison.'},ensure_ascii=False,indent=2),encoding='utf8')
 crop_names=['Dragon Bell','Hot Dragon Chili','Caterpillar Lily','Unicorn Horns','Ladybird Blossom','Rainbow Flower','Spike Balls','Flesh Eaters','Star Shines','Cenarius Fruit','Ignir Saliva','Grandinee Fall'];g=config['globals'];crops=[{'id':i+1,'name':translation[n],'cost':g['COLLECT_PRICE'][i]['g'],'ms':int(float(g['COLLECT_MINUTES'][i])*60000),'yield':g['COLLECT_VALUES'][i],'xp':g['COLLECT_XP'][i],'image':f'assets/original/ui/plant_{i+1}.png'} for i,n in enumerate(crop_names)]
-(data_dir/'rules.mjs').write_text('export const ORIGINAL_CROPS='+json.dumps(crops,ensure_ascii=False)+';\nexport const ORIGINAL_BREEDING='+json.dumps(tables['coition'],ensure_ascii=False)+';\n',encoding='utf8')
+farms=[{**item,'nameCN':translation.get('FARM.'+item['name'],item['name'])} for item in config['items'] if item['group_type']=='FARM']
+(data_dir/'rules.mjs').write_text('export const ORIGINAL_CROPS='+json.dumps(crops,ensure_ascii=False)+';\nexport const ORIGINAL_BREEDING='+json.dumps(tables['coition'],ensure_ascii=False)+';\nexport const ORIGINAL_LEVELS='+json.dumps(config['levels'],ensure_ascii=False)+';\nexport const ORIGINAL_FARMS='+json.dumps(farms,ensure_ascii=False)+';\n',encoding='utf8')
 print('Original dragon records',len(catalog),'verified names',sum(d['nameVerified'] for d in catalog),'missing images',sum(s is None for d in catalog for s in d['images']),'literal data tables',len(tables),'column schemas',len(schemas))

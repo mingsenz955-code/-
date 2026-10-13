@@ -1,0 +1,108 @@
+{
+  "group": [
+    "ui_Active"
+  ],
+  "width": 880,
+  "height": 604,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_bgbaoxiang.png",
+      "scale9": 1,
+      "x": -439.9,
+      "y": -32.9,
+      "width": 880,
+      "height": 551,
+      "maxw": 880,
+      "maxh": 551
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_festival_title.png",
+      "y": 218.95,
+      "width": 372,
+      "height": 60
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_haoyoulan2.png",
+      "scale9": 1,
+      "x": -391,
+      "y": -62.85,
+      "width": 778,
+      "height": 397,
+      "maxw": 778,
+      "maxh": 397
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "x": -1,
+      "y": -62.9,
+      "width": 762,
+      "height": 382
+    },
+    {
+      "name": "dress_l",
+      "type": "sprite",
+      "img": "#ui_dragon_zl.png",
+      "x": -159.95,
+      "y": 160.95,
+      "width": 60,
+      "height": 30
+    },
+    {
+      "name": "dress_r",
+      "type": "sprite",
+      "img": "#ui_dragon_zr.png",
+      "x": 162,
+      "y": 161.95,
+      "width": 60,
+      "height": 30
+    },
+    {
+      "name": "recharge_count_node",
+      "type": "label",
+      "text": "当前已充值：XXXXXXXXX",
+      "align": "center",
+      "size": 19,
+      "color": 1815877375,
+      "x": -158.95,
+      "y": 161.95,
+      "width": 318.95,
+      "height": 26.5
+    },
+    {
+      "name": "recharge_node",
+      "type": "node",
+      "x": -0.65,
+      "y": -312.35,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "go_btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3_2.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "width": 200,
+          "height": 85
+        },
+        {
+          "name": "go_txt_name",
+          "type": "label",
+          "text": "马上获取",
+          "align": "center",
+          "size": 30,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -85.5,
+          "y": 3.63,
+          "width": 171,
+          "height": 37.75
+        }
+      ]
+    }
+  ]
+}

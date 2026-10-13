@@ -1,0 +1,256 @@
+{
+  "group": {},
+  "children": [
+    {
+      "name": "diban_you",
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -245.5,
+      "y": 15.45,
+      "width": 491,
+      "height": 624,
+      "maxw": 491,
+      "maxh": 624
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -243.9,
+      "y": 296.35,
+      "width": 490,
+      "height": 55,
+      "maxw": 490,
+      "maxh": 55
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "x": 1,
+      "y": -68.2,
+      "width": 408,
+      "height": 353
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "加成属性",
+      "size": 25,
+      "align": "center",
+      "color": 4294967295,
+      "x": -221.4,
+      "y": 298.9,
+      "width": 446,
+      "height": 32.1
+    },
+    {
+      "name": "tx_hongzi",
+      "type": "label",
+      "text": "",
+      "size": 22,
+      "align": "left",
+      "color": 4278190335,
+      "x": -74.25,
+      "y": -40.33,
+      "width": 120.5,
+      "height": 28.75
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_starup_line6.png",
+      "x": 2.35,
+      "y": 110.35,
+      "width": 416,
+      "height": 6
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_starup_line6.png",
+      "x": 2.35,
+      "y": -251.65,
+      "width": 416,
+      "height": 6
+    },
+    {
+      "name": "xuanze_miaoshu",
+      "type": "label",
+      "text": "选择要融合的神火：",
+      "size": 22,
+      "align": "justify",
+      "color": 1411781375,
+      "x": -200,
+      "y": 133.72,
+      "width": 254,
+      "height": 28.75
+    },
+    {
+      "name": "quanxuan",
+      "type": "node",
+      "x": 143.25,
+      "y": 133.5,
+      "width": 98,
+      "height": 30,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_starup_x2.png",
+          "x": -34,
+          "width": 30,
+          "height": 30
+        },
+        {
+          "name": "quanxuan_btn",
+          "type": "maskBtn",
+          "img_normal": "#ui_starup_x2.png",
+          "x": -34,
+          "y": 3,
+          "width": 80,
+          "height": 50,
+          "alpha": 0
+        },
+        {
+          "name": "biaoji",
+          "type": "node",
+          "x": -34,
+          "width": 30,
+          "height": 30,
+          "children": [
+            {
+              "name": "quding_biaoji",
+              "type": "sprite",
+              "img": "#ui_starup_x1.png",
+              "width": 30,
+              "height": 30
+            }
+          ]
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "全选",
+          "size": 22,
+          "align": "justify",
+          "color": 1411781375,
+          "x": -18,
+          "y": -0.38,
+          "width": 67,
+          "height": 28.75
+        }
+      ]
+    },
+    {
+      "name": "jindu",
+      "type": "node",
+      "x": -51.65,
+      "y": 165.82,
+      "width": 302,
+      "height": 28.25,
+      "children": [
+        {
+          "name": "diban",
+          "type": "sprite",
+          "img": "#ui_starup_xp1.png",
+          "y": 0.13,
+          "width": 302,
+          "height": 28
+        },
+        {
+          "name": "tianchong",
+          "type": "node",
+          "y": 0.13,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_shuzi",
+          "type": "label",
+          "text": "",
+          "size": 20,
+          "align": "center",
+          "color": 4294967295,
+          "x": -140,
+          "y": -0.88,
+          "width": 277,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "tx_level",
+      "type": "label",
+      "text": "等级：25",
+      "size": 22,
+      "align": "left",
+      "color": 1411781375,
+      "x": -97.9,
+      "y": 208,
+      "width": 184.9,
+      "height": 32.1
+    },
+    {
+      "name": "tx_name",
+      "type": "label",
+      "text": "名字名字名字",
+      "size": 22,
+      "align": "left",
+      "color": 1411781375,
+      "x": -98.1,
+      "y": 238.15,
+      "width": 184.9,
+      "height": 32.1
+    },
+    {
+      "name": "quality",
+      "type": "node",
+      "x": -161.5,
+      "y": 224.6,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "icon",
+      "type": "node",
+      "x": -161.5,
+      "y": 224.6,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 234.15,
+      "y": 297.2
+    },
+    {
+      "name": "btn_ronghe",
+      "type": "node",
+      "x": -8.5,
+      "y": -297.7,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "融合",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    }
+  ]
+}

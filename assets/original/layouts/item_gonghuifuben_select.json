@@ -1,0 +1,124 @@
+{
+  "group": [
+    "ui_gonghuifuben",
+    "ui_activitygem"
+  ],
+  "width": 342,
+  "height": 204,
+  "children": [
+    {
+      "name": "node_bg",
+      "type": "node",
+      "x": -0.95,
+      "y": 4,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "node_info",
+      "type": "node",
+      "x": 5.05,
+      "y": -83,
+      "width": 289,
+      "height": 35,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_gonghuifuben_heitiao1.png",
+          "width": 289,
+          "height": 35
+        },
+        {
+          "name": "txt",
+          "type": "label",
+          "text": "--",
+          "align": "center",
+          "size": 25,
+          "color": 4294967295,
+          "x": -138.5,
+          "y": 0.67,
+          "width": 277,
+          "height": 31.95
+        }
+      ]
+    },
+    {
+      "name": "node_progress",
+      "type": "node",
+      "x": 0.55,
+      "y": -83,
+      "width": 320,
+      "height": 37,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_gonghuifuben_jindu2.png",
+          "width": 320,
+          "height": 37
+        },
+        {
+          "name": "node_progress",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_percent",
+          "type": "label",
+          "text": "?/?",
+          "align": "center",
+          "size": 25,
+          "color": 4294967295,
+          "x": -108,
+          "y": -0.53,
+          "width": 215,
+          "height": 31.95
+        }
+      ]
+    },
+    {
+      "name": "node_btn_open",
+      "type": "node",
+      "x": 1.05,
+      "y": -22.05,
+      "width": 162,
+      "height": 56,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_activitygem_btn1.png",
+          "img_down": "#ui_activitygem_btn2.png",
+          "img_disable": "#ui_activitygem_btn3.png",
+          "width": 162,
+          "height": 56
+        },
+        {
+          "name": "txt_on",
+          "type": "label",
+          "text": "开启",
+          "align": "center",
+          "size": 30,
+          "color": 4294967295,
+          "outlineColor": 11882262,
+          "x": -63.25,
+          "y": 3.6,
+          "width": 128.25,
+          "height": 37.5
+        }
+      ]
+    },
+    {
+      "name": "txt_title",
+      "type": "label",
+      "text": "--",
+      "align": "center",
+      "size": 26,
+      "color": 4294967295,
+      "x": -171,
+      "y": 85.47,
+      "width": 342,
+      "height": 33.05
+    }
+  ]
+}

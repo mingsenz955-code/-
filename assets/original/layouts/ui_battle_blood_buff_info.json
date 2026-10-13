@@ -1,0 +1,237 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "alpha": 0
+    },
+    {
+      "name": "basenode",
+      "type": "node"
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -294,
+      "width": 588,
+      "height": 391
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_invite_dress_rect.png",
+      "scale9": 1,
+      "x": -300,
+      "width": 600,
+      "height": 400
+    },
+    {
+      "type": "node",
+      "y": 200,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_battle_jd1.png",
+          "width": 510,
+          "height": -60
+        },
+        {
+          "type": "label",
+          "text": "激活属性加成",
+          "align": "center",
+          "size": 22,
+          "color": 4294967295,
+          "width": 300,
+          "height": 64,
+          "x": -150,
+          "y": -5
+        }
+      ]
+    },
+    {
+      "type": "label",
+      "text": "开始挑战时扣除魔晶或积分",
+      "align": "center",
+      "size": 20,
+      "color": 4278190335,
+      "y": -50,
+      "width": 400,
+      "height": 32,
+      "x": -200
+    },
+    {
+      "type": "label",
+      "text": "属性加成对当次挑战有效",
+      "align": "center",
+      "size": 20,
+      "color": 4278190335,
+      "y": -75,
+      "width": 400,
+      "height": 32,
+      "x": -200
+    },
+    {
+      "type": "label",
+      "text": "选择花费方式：",
+      "align": "center",
+      "size": 20,
+      "color": 4293907967,
+      "outlineColor": 4278190080,
+      "width": 90,
+      "height": 100,
+      "x": -45,
+      "y": 35
+    },
+    {
+      "name": "tip_content",
+      "type": "label",
+      "text": "效果：本关所有出战的龙 ---- 增加 -- %",
+      "align": "center",
+      "color": 2689740287,
+      "width": 500,
+      "height": 64,
+      "x": -250,
+      "y": 115
+    },
+    {
+      "type": "node",
+      "x": -130,
+      "y": 35,
+      "children": [
+        {
+          "name": "btn_score",
+          "type": "maskBtn",
+          "img_normal": "#ui_common_DaoJuKuang1.png",
+          "width": 120,
+          "height": 120
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_bloodwar_ico_score.png",
+          "width": 80,
+          "height": 82
+        },
+        {
+          "name": "score_cost",
+          "type": "label",
+          "text": "0",
+          "align": "right",
+          "size": 24,
+          "width": 100,
+          "height": 50,
+          "color": 4294967295,
+          "outlineColor": 4278190080,
+          "x": -55,
+          "y": -40
+        },
+        {
+          "name": "sel_score",
+          "type": "sprite",
+          "img": "#ui_common_selected85.png",
+          "x": -65,
+          "y": 0,
+          "width": 130,
+          "height": 130,
+          "scale9": 1
+        }
+      ]
+    },
+    {
+      "type": "node",
+      "x": 130,
+      "y": 35,
+      "children": [
+        {
+          "name": "btn_cryst",
+          "type": "maskBtn",
+          "img_normal": "#ui_common_DaoJuKuang1.png",
+          "width": 120,
+          "height": 120
+        },
+        {
+          "type": "sprite",
+          "img": "#resource_icon_80_c.png",
+          "width": 80,
+          "height": 82
+        },
+        {
+          "name": "cryst_cost",
+          "type": "label",
+          "text": "0",
+          "align": "right",
+          "size": 24,
+          "width": 100,
+          "height": 50,
+          "color": 4294967295,
+          "outlineColor": 4278190080,
+          "x": -55,
+          "y": -40
+        },
+        {
+          "name": "sel_cryst",
+          "type": "sprite",
+          "img": "#ui_common_selected85.png",
+          "x": -65,
+          "y": 0,
+          "width": 130,
+          "height": 130,
+          "scale9": 1
+        }
+      ]
+    },
+    {
+      "type": "node",
+      "x": -130,
+      "y": -130,
+      "children": [
+        {
+          "name": "btn_active",
+          "type": "maskBtn",
+          "img_normal": "#ui_invite_long_btn_1.png",
+          "img_down": "#ui_invite_long_btn_2.png",
+          "img_disable": "#ui_invite_long_btn_3.png",
+          "width": 222.4,
+          "height": 59.2
+        },
+        {
+          "type": "label",
+          "text": "激活",
+          "align": "center",
+          "size": 24,
+          "color": 4294967295,
+          "width": 200,
+          "height": 40,
+          "x": -100
+        }
+      ]
+    },
+    {
+      "type": "node",
+      "x": 130,
+      "y": -130,
+      "children": [
+        {
+          "name": "btn_close",
+          "type": "maskBtn",
+          "img_normal": "#ui_invite_long_btn_1.png",
+          "img_down": "#ui_invite_long_btn_2.png",
+          "img_disable": "#ui_invite_long_btn_3.png",
+          "width": 222.4,
+          "height": 59.2
+        },
+        {
+          "type": "label",
+          "text": "不激活",
+          "align": "center",
+          "size": 24,
+          "color": 4294967295,
+          "width": 200,
+          "height": 40,
+          "x": -100
+        }
+      ]
+    }
+  ]
+}

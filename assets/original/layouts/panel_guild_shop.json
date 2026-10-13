@@ -1,0 +1,249 @@
+{
+  "group": [
+    "ui_guild"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768,
+      "alpha": 0
+    },
+    {
+      "name": "diban",
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "grid": {
+        "x": 108,
+        "y": 111,
+        "width": 46,
+        "height": 27
+      },
+      "x": -420,
+      "y": -24,
+      "width": 848,
+      "height": 702,
+      "maxw": 848,
+      "maxh": 702
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_guild_kkk.png",
+      "x": -196,
+      "y": 257,
+      "width": 146,
+      "height": 44
+    },
+    {
+      "name": "num_personal",
+      "type": "label",
+      "text": "?",
+      "align": "left",
+      "size": 22,
+      "color": 1092488703,
+      "x": -252,
+      "y": 258,
+      "width": 123,
+      "height": 29
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_guild_zitiao.png",
+      "x": 211,
+      "y": 256,
+      "width": 262,
+      "height": 30
+    },
+    {
+      "name": "hint_time",
+      "type": "label",
+      "text": "刷新倒计时",
+      "align": "right",
+      "size": 22,
+      "color": 1092488703,
+      "x": 83,
+      "y": 257,
+      "width": 123,
+      "height": 29
+    },
+    {
+      "name": "time",
+      "type": "label",
+      "text": "00:00:00",
+      "align": "left",
+      "size": 22,
+      "color": 1092488703,
+      "x": 210,
+      "y": 257,
+      "width": 123,
+      "height": 29
+    },
+    {
+      "name": "btn_reset",
+      "type": "node",
+      "x": 335,
+      "y": 257,
+      "width": 46,
+      "height": 46,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_rf1.png",
+          "img_down": "#ui_common_btn_rf2.png",
+          "width": 46,
+          "height": 46
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_haoyoulan2.png",
+      "scale9": 1,
+      "grid": {
+        "x": 28,
+        "y": 29,
+        "width": 38,
+        "height": 36
+      },
+      "x": -386,
+      "y": -78,
+      "width": 781,
+      "height": 529,
+      "maxw": 781,
+      "maxh": 529
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "x": 5,
+      "y": -78,
+      "width": 766,
+      "height": 514
+    },
+    {
+      "name": "page",
+      "type": "node",
+      "x": 4,
+      "y": -325,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "node_tabbar",
+      "type": "node",
+      "x": -227,
+      "y": 209,
+      "width": 297,
+      "height": 54,
+      "children": [
+        {
+          "name": "node_item2",
+          "type": "node",
+          "x": 75,
+          "width": 148,
+          "height": 54,
+          "children": [
+            {
+              "name": "btn",
+              "type": "ckb",
+              "img_on": "#ui_guild_bq02.png",
+              "img_off": "#ui_guild_bq01.png"
+            },
+            {
+              "name": "miaoshu",
+              "type": "label",
+              "text": "副本商人",
+              "align": "center",
+              "size": 27,
+              "color": 1092488703,
+              "x": -65,
+              "y": 0,
+              "width": 130,
+              "height": 34
+            }
+          ]
+        },
+        {
+          "name": "node_item1",
+          "type": "node",
+          "x": -74,
+          "width": 148,
+          "height": 54,
+          "children": [
+            {
+              "name": "btn",
+              "type": "ckb",
+              "img_on": "#ui_guild_bq02.png",
+              "img_off": "#ui_guild_bq01.png"
+            },
+            {
+              "name": "miaoshu",
+              "type": "label",
+              "text": "物资商人",
+              "align": "center",
+              "size": 27,
+              "color": 1092488703,
+              "x": -65,
+              "y": 0,
+              "width": 130,
+              "height": 34
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "grid": {
+        "x": 25,
+        "y": 20,
+        "width": 10,
+        "height": 10
+      },
+      "x": -425,
+      "y": 305,
+      "width": 854,
+      "height": 55,
+      "maxw": 854,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "公会商城",
+      "align": "center",
+      "size": 25,
+      "color": 4294967295,
+      "x": -376,
+      "y": 306,
+      "width": 762,
+      "height": 32
+    },
+    {
+      "name": "node_showicon",
+      "type": "node",
+      "x": -344,
+      "y": 270,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 406,
+      "y": 305,
+      "width": 80,
+      "height": 86
+    }
+  ]
+}

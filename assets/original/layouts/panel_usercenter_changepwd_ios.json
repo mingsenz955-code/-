@@ -1,0 +1,190 @@
+{
+  "group": [
+    "ui_common",
+    "ui_usercenter_ios"
+  ],
+  "width": 536,
+  "height": 322,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768,
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "grid": {
+        "x": 107.95,
+        "y": 111,
+        "width": 45.999999999999986,
+        "height": 27
+      },
+      "x": -262.5,
+      "y": -13.6,
+      "width": 517,
+      "height": 248,
+      "maxw": 517,
+      "maxh": 248
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "grid": {
+        "x": 24.5,
+        "y": 20,
+        "width": 9.5,
+        "height": 9.5
+      },
+      "x": -264.45,
+      "y": 103.15,
+      "width": 520,
+      "height": 55,
+      "maxw": 520,
+      "maxh": 55
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_haoyoulan2.png",
+      "scale9": 1,
+      "grid": {
+        "x": 28.25,
+        "y": 29,
+        "width": 37.75,
+        "height": 36
+      },
+      "x": -223.6,
+      "y": -2.15,
+      "width": 444,
+      "height": 152,
+      "maxw": 444,
+      "maxh": 152
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_usercenter_ios_shurukuang.png",
+      "x": 41.5,
+      "y": -33.35,
+      "width": 345,
+      "height": 46
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_usercenter_ios_shurukuang.png",
+      "x": 41.5,
+      "y": 29.65,
+      "width": 345,
+      "height": 46
+    },
+    {
+      "name": "txt_title",
+      "type": "label",
+      "text": "修改密码",
+      "align": "center",
+      "size": 21,
+      "color": 4294967295,
+      "x": -237.55,
+      "y": 104.58,
+      "width": 469,
+      "height": 29.85
+    },
+    {
+      "name": "node_btn_ok",
+      "type": "node",
+      "x": 1,
+      "y": -127,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png",
+          "img_disable": "#ui_common_btn_2c.png",
+          "width": 144,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "确定",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "name": "txt_1",
+      "type": "label",
+      "text": "新密码",
+      "align": "left",
+      "size": 25,
+      "color": 1092488703,
+      "x": -216.95,
+      "y": -33.05,
+      "width": 83.95,
+      "height": 32.1
+    },
+    {
+      "name": "txt_0",
+      "type": "label",
+      "text": "密   码",
+      "align": "left",
+      "size": 25,
+      "color": 1092488703,
+      "x": -214.95,
+      "y": 29.95,
+      "width": 78.95,
+      "height": 32.1
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 231.35,
+      "y": 109.7,
+      "width": 80,
+      "height": 86
+    },
+    {
+      "name": "newpwd",
+      "type": "input",
+      "img": "#ui_usercenter_ios_shurukuang.png",
+      "fontSize": 25,
+      "color": 0,
+      "holder": "6-16位文字或字母",
+      "holderColor": 9668977,
+      "maxLength": 16,
+      "x": 41.5,
+      "y": -33.35,
+      "width": 345,
+      "height": 46
+    },
+    {
+      "name": "pwd",
+      "type": "input",
+      "img": "#ui_usercenter_ios_shurukuang.png",
+      "fontSize": 25,
+      "color": 0,
+      "holder": "请输入当前帐号的密码",
+      "holderColor": 9668977,
+      "maxLength": 16,
+      "x": 41.5,
+      "y": 29.65,
+      "width": 345,
+      "height": 46
+    }
+  ]
+}

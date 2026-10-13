@@ -1,0 +1,27 @@
+{
+  "group": [
+    "buildings/islandright_entry_g"
+  ],
+  "width": 256,
+  "height": 274,
+  "children": [
+    {
+      "name": "eff",
+      "type": "eff",
+      "eff": "feiting",
+      "x": -0.2,
+      "y": 0.15,
+      "width": 256,
+      "height": 273.5
+    },
+    {
+      "name": "btn",
+      "type": "btn",
+      "img_normal": "#islandright_entry_g_right_btn.png",
+      "img_down": "#islandright_entry_g_right_btn.png",
+      "x": -25.5,
+      "y": 4,
+      "alpha": 0
+    }
+  ]
+}

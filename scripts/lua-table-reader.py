@@ -59,7 +59,7 @@ def normalize(value):
   return {str(k):normalize(v) for k,v in value.items()}
  return value
 def evaluate_text_literal(text):
- pattern=re.compile(r'''\s+|--\[\[.*?\]\]|--[^\r\n]*|\[\[.*?\]\]|"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|-?(?:0x[0-9a-fA-F]+|\d+(?:\.\d*)?(?:[eE][+-]?\d+)?)|[A-Za-z_][A-Za-z_0-9]*|[{}\[\],;=]''',re.S)
+ pattern=re.compile(r'''\s+|--\[\[.*?\]\]|--[^\r\n]*|\[\[.*?\]\]|"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|(?:0x[0-9a-fA-F]+|\d+(?:\.\d*)?(?:[eE][+-]?\d+)?)|[A-Za-z_][A-Za-z_0-9]*|[{}\[\],;=+*/()\-]''',re.S)
  tokens=[];pos=0
  for m in pattern.finditer(text):
   if text[pos:m.start()].strip():raise ValueError('Non-literal text token')
@@ -73,8 +73,10 @@ def evaluate_text_literal(text):
   value=peek()
   if expected is not None and value!=expected:raise ValueError('Expected '+expected)
   index+=1;return value
- def value():
+ def atom():
   token=consume()
+  if token in ['+','-']:return atom()*(1 if token=='+' else -1)
+  if token=='(':result=value();consume(')');return result
   if token=='{':
    table={};array_index=1
    while peek()!='}':
@@ -101,7 +103,25 @@ def evaluate_text_literal(text):
   if token and re.fullmatch(r'-?\d+(?:\.\d*)?(?:[eE][+-]?\d+)?',token):
    result=float(token);return int(result) if result.is_integer() else result
   raise ValueError('Non-literal value '+str(token))
- consume('return');result=value()
+ def product():
+  result=atom()
+  while peek() in ['*','/']:
+   op=consume();rhs=atom()
+   if not isinstance(result,(int,float)) or not isinstance(rhs,(int,float)):raise ValueError('Non-numeric constant expression')
+   result=result*rhs if op=='*' else result/rhs
+  return result
+ def value():
+  result=product()
+  while peek() in ['+','-']:
+   op=consume();rhs=product()
+   if not isinstance(result,(int,float)) or not isinstance(rhs,(int,float)):raise ValueError('Non-numeric constant expression')
+   result=result+rhs if op=='+' else result-rhs
+  return result
+ variable=None
+ if peek()=='local':consume();variable=consume();consume('=')
+ else:consume('return')
+ result=value()
+ if variable:consume('return');consume(variable)
  if index!=len(tokens):raise ValueError('Additional code after literal')
  return result
 if __name__=='__main__':

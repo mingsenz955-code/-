@@ -1,0 +1,111 @@
+{
+  "group": [
+    "ui_adventure",
+    "ui_common"
+  ],
+  "width": 225,
+  "height": 359,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_adventure_itembg.png",
+      "x": -0.5,
+      "y": 0.5,
+      "width": 225,
+      "height": 359
+    },
+    {
+      "name": "node_btn_info",
+      "type": "node",
+      "x": -1,
+      "y": -112.2,
+      "width": 154,
+      "height": 46,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_pppp1.png",
+          "img_down": "#ui_common_btn_pppp2.png",
+          "img_disable": "#ui_common_btn_pppp3.png",
+          "width": 154,
+          "height": 46
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "开启",
+          "align": "center",
+          "size": 30,
+          "color": 992815615,
+          "outlineColor": 13941402,
+          "x": -73,
+          "y": -0.45,
+          "width": 145,
+          "height": 37.5
+        }
+      ]
+    },
+    {
+      "name": "node_show",
+      "type": "node",
+      "y": 40,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "宝箱1",
+      "align": "center",
+      "size": 30,
+      "color": 2067864831,
+      "x": -110,
+      "y": 118.15,
+      "width": 220,
+      "height": 37.5
+    },
+    {
+      "name": "txt_info",
+      "type": "label",
+      "text": "可开启次数:?",
+      "align": "center",
+      "size": 22,
+      "color": 2067864831,
+      "x": -110,
+      "y": -152.93,
+      "width": 220,
+      "height": 28.55
+    },
+    {
+      "name": "node_cost",
+      "type": "node",
+      "x": 36,
+      "y": -84.47,
+      "width": 126,
+      "height": 30.85,
+      "children": [
+        {
+          "name": "node_cost_show",
+          "type": "node",
+          "x": -63,
+          "y": 15.43,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_costnum",
+          "type": "label",
+          "text": "x?",
+          "align": "left",
+          "size": 24,
+          "color": 2067864831,
+          "x": -39,
+          "y": 16,
+          "width": 102,
+          "height": 30.85
+        }
+      ]
+    }
+  ]
+}

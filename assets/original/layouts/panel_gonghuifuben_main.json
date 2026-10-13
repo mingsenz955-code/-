@@ -1,0 +1,433 @@
+{
+  "group": [
+    "ui_battle",
+    "ui_pve",
+    "ui_common",
+    "ui_gonghuifuben",
+    "ui_main"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "node",
+      "width": 1024,
+      "height": 768,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_battle_jd1.png",
+          "y": 330.5,
+          "width": 510,
+          "height": 60
+        },
+        {
+          "name": "img_bg_bottom",
+          "type": "sprite",
+          "img": "#ui_pve_di.png",
+          "y": -322.5,
+          "width": 1024,
+          "height": 123,
+          "left": 0,
+          "right": 0
+        },
+        {
+          "name": "img_bg_top",
+          "type": "sprite",
+          "img": "#ui_pve_ding.png",
+          "y": 319,
+          "width": 1024,
+          "height": 130,
+          "left": 0,
+          "right": 0
+        }
+      ]
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_GuanBi1.png",
+      "img_down": "#ui_common_btn_GuanBi2.png",
+      "x": 468.1,
+      "y": 338.9,
+      "width": 85,
+      "height": 90,
+      "right": 42.5
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "y": -5.4,
+      "width": 1024,
+      "height": 515.6,
+      "left": 0,
+      "right": 0
+    },
+    {
+      "name": "node_info",
+      "type": "node",
+      "x": -164.82,
+      "y": -312.9,
+      "width": 694.35,
+      "height": 95,
+      "left": 0,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_gonghuifuben_shoushabg.png",
+          "x": -53.68,
+          "width": 587,
+          "height": 95
+        },
+        {
+          "name": "node_quick",
+          "type": "node",
+          "x": 71.7,
+          "y": -22.32,
+          "width": 550.95,
+          "height": 34.15,
+          "children": [
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "--",
+              "align": "center",
+              "size": 27,
+              "color": 4291559679,
+              "x": -275.48,
+              "width": 209.9,
+              "height": 34.15
+            },
+            {
+              "name": "txt_time",
+              "type": "label",
+              "text": "--",
+              "align": "left",
+              "size": 27,
+              "color": 4294967295,
+              "x": -65.58,
+              "width": 341.05,
+              "height": 34.15
+            }
+          ]
+        },
+        {
+          "name": "node_first",
+          "type": "node",
+          "x": 69.2,
+          "y": 26.38,
+          "width": 550.95,
+          "height": 34.15,
+          "children": [
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "--",
+              "align": "center",
+              "size": 27,
+              "color": 4291559679,
+              "x": -275.48,
+              "width": 209.9,
+              "height": 34.15
+            },
+            {
+              "name": "txt_time",
+              "type": "label",
+              "text": "--",
+              "align": "left",
+              "size": 27,
+              "color": 4294967295,
+              "x": -65.58,
+              "width": 341.05,
+              "height": 34.15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "node_opentime",
+      "type": "node",
+      "x": 23.33,
+      "y": 272.25,
+      "width": 491.05,
+      "height": 46,
+      "children": [
+        {
+          "name": "node_progress",
+          "type": "node",
+          "x": -55.08,
+          "y": 7.05,
+          "width": 393,
+          "height": 34,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuifuben_heitiao2.png",
+              "width": 393,
+              "height": 34
+            },
+            {
+              "name": "node_progress",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "txt_2",
+          "type": "label",
+          "text": "天",
+          "align": "center",
+          "size": 27,
+          "color": 4291559679,
+          "x": -159.07,
+          "y": 5.63,
+          "width": 31.2,
+          "height": 34.15
+        },
+        {
+          "name": "txt_3",
+          "type": "label",
+          "text": "时",
+          "align": "center",
+          "size": 27,
+          "color": 4291559679,
+          "x": -93.38,
+          "y": 5.63,
+          "width": 31.2,
+          "height": 34.15
+        },
+        {
+          "name": "txt_4",
+          "type": "label",
+          "text": "分",
+          "align": "center",
+          "size": 27,
+          "color": 4291559679,
+          "x": -34.43,
+          "y": 5.63,
+          "width": 31.2,
+          "height": 34.15
+        },
+        {
+          "name": "txt_day",
+          "type": "label",
+          "text": "--",
+          "align": "center",
+          "size": 27,
+          "color": 4294967295,
+          "x": -197.57,
+          "y": 6.98,
+          "width": 38.5,
+          "height": 34.15
+        },
+        {
+          "name": "txt_hour",
+          "type": "label",
+          "text": "--",
+          "align": "center",
+          "size": 27,
+          "color": 4294967295,
+          "x": -128.88,
+          "y": 6.53,
+          "width": 32.8,
+          "height": 34.15
+        },
+        {
+          "name": "txt_second",
+          "type": "label",
+          "text": "--",
+          "align": "center",
+          "size": 27,
+          "color": 4294967295,
+          "x": -68.53,
+          "y": 6.98,
+          "width": 36.2,
+          "height": 34.15
+        },
+        {
+          "name": "txt_end",
+          "type": "label",
+          "text": "/?天",
+          "align": "left",
+          "size": 27,
+          "color": 4294967295,
+          "x": -2.22,
+          "y": 6.53,
+          "width": 92.65,
+          "height": 34.15
+        },
+        {
+          "name": "node_btn_close",
+          "type": "node",
+          "x": 193.47,
+          "y": 9,
+          "width": 92,
+          "height": 46,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btndh1.png",
+              "img_down": "#ui_common_btndh2.png",
+              "img_disable": "#ui_common_btndh3.png",
+              "width": 92,
+              "height": 46
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "关闭",
+              "align": "center",
+              "size": 24,
+              "color": 992815615,
+              "outlineColor": 13941402,
+              "x": -37,
+              "y": -0.75,
+              "width": 73,
+              "height": 31
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "node_page_left",
+      "type": "node",
+      "x": -501,
+      "y": 13,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "node_page_right",
+      "type": "node",
+      "x": 501,
+      "y": 13,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "txt_title",
+      "type": "label",
+      "text": "--",
+      "align": "center",
+      "size": 27,
+      "color": 4294967295,
+      "outlineColor": 10040064,
+      "x": -212.75,
+      "y": 330.73,
+      "width": 431.85,
+      "height": 34.15
+    },
+    {
+      "name": "viewAward",
+      "type": "node",
+      "x": 211.35,
+      "y": -306.25,
+      "width": 116,
+      "height": 117.9,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_main_Z_ico-bg0003.png",
+          "img_down": "#ui_main_Z_ico-bg0004.png",
+          "x": -7.5,
+          "y": 3.45,
+          "width": 101,
+          "height": 111
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_gonghuifuben_ico_cjjl.png",
+          "x": -10.85,
+          "y": 10.2,
+          "width": 97,
+          "height": 93
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_gonghuifuben_zi1.png",
+          "x": -8.25,
+          "y": -41.45,
+          "width": 116,
+          "height": 35
+        }
+      ]
+    },
+    {
+      "name": "damagelist",
+      "type": "node",
+      "x": 331.23,
+      "y": -302.88,
+      "width": 115.35,
+      "height": 123.05,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_main_Z_ico-bg0003.png",
+          "img_down": "#ui_main_Z_ico-bg0004.png",
+          "x": -7.17,
+          "y": 6.02,
+          "width": 101,
+          "height": 111
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_gonghuifuben_ico_shanghaipaihang.png",
+          "x": -6.92,
+          "y": 9.27,
+          "width": 114,
+          "height": 91
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_gonghuifuben_zi2.png",
+          "x": -6.07,
+          "y": -44.02,
+          "width": 115,
+          "height": 35
+        }
+      ]
+    },
+    {
+      "name": "buzhen",
+      "type": "node",
+      "x": 439.35,
+      "y": -306.48,
+      "width": 101,
+      "height": 117.45,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_main_Z_ico-bg0003.png",
+          "img_down": "#ui_main_Z_ico-bg0004.png",
+          "y": 3.23,
+          "width": 101,
+          "height": 111
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_Z_ico-BuZhen.png",
+          "x": -0.5,
+          "y": 10.23,
+          "width": 94,
+          "height": 79
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_gonghuifuben_zi3.png",
+          "x": -0.5,
+          "y": -41.23,
+          "width": 65,
+          "height": 35
+        }
+      ]
+    }
+  ]
+}

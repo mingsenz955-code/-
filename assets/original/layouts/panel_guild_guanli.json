@@ -1,0 +1,344 @@
+{
+  "group": [
+    "ui_main",
+    "ui_guild"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768,
+      "alpha": 0
+    },
+    {
+      "name": "diban",
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "grid": {
+        "x": 108,
+        "y": 111,
+        "width": 46,
+        "height": 27
+      },
+      "x": -332,
+      "y": -46,
+      "width": 672,
+      "height": 565,
+      "maxw": 672,
+      "maxh": 565
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_haoyoulan2.png",
+      "scale9": 1,
+      "grid": {
+        "x": 28,
+        "y": 29,
+        "width": 38,
+        "height": 36
+      },
+      "x": -273,
+      "y": -37,
+      "width": 554,
+      "height": 240,
+      "maxw": 554,
+      "maxh": 240
+    },
+    {
+      "name": "txt_shenpin",
+      "type": "label",
+      "text": "加入公会需要审批：",
+      "align": "left",
+      "size": 25,
+      "color": 1092488703,
+      "x": -252,
+      "y": 9,
+      "width": 297,
+      "height": 33
+    },
+    {
+      "name": "txt_xianzhi",
+      "type": "label",
+      "text": "公会申请战斗力限制：",
+      "align": "left",
+      "size": 25,
+      "color": 1092488703,
+      "x": -252,
+      "y": -77,
+      "width": 297,
+      "height": 33
+    },
+    {
+      "name": "btn_up",
+      "type": "node",
+      "x": 233,
+      "y": -73,
+      "width": 46,
+      "height": 46,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_main_05.png",
+          "img_down": "#ui_main_05-2.png",
+          "width": 46,
+          "height": 46
+        }
+      ]
+    },
+    {
+      "name": "btn_down",
+      "type": "node",
+      "x": 33,
+      "y": -73,
+      "width": 46,
+      "height": 46,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_main_jian1.png",
+          "img_down": "#ui_main_jian2.png",
+          "width": 46,
+          "height": 46
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_ShuZiKuang.png",
+      "scale9": 1,
+      "grid": {
+        "x": 21,
+        "y": 12,
+        "width": 7,
+        "height": 7
+      },
+      "x": 60,
+      "y": -74,
+      "width": 145,
+      "height": 41,
+      "maxw": 145,
+      "maxh": 41
+    },
+    {
+      "name": "power",
+      "type": "label",
+      "text": "999999999",
+      "align": "center",
+      "size": 25,
+      "color": 1092488703,
+      "x": 68,
+      "y": -76,
+      "width": 130,
+      "height": 32
+    },
+    {
+      "name": "ckb_qiehua",
+      "type": "ckb",
+      "img_on": "#ui_guild_on.png",
+      "img_off": "#ui_guild_off.png",
+      "x": 197,
+      "y": 10
+    },
+    {
+      "name": "btn_shengqing",
+      "type": "node",
+      "x": 12,
+      "y": 138,
+      "width": 154,
+      "height": 46,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_pppp1.png",
+          "img_down": "#ui_common_btn_pppp2.png",
+          "img_disable": "#ui_common_btn_pppp3.png",
+          "width": 154,
+          "height": 46
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "入会申请",
+          "align": "center",
+          "size": 26,
+          "color": 992815615,
+          "outlineColor": 13941402,
+          "x": -73,
+          "y": -1,
+          "width": 144,
+          "height": 33
+        }
+      ]
+    },
+    {
+      "name": "btn_info",
+      "type": "node",
+      "x": 225,
+      "y": 138,
+      "width": 154,
+      "height": 46,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_pppp1.png",
+          "img_down": "#ui_common_btn_pppp2.png",
+          "img_disable": "#ui_common_btn_pppp3.png",
+          "width": 154,
+          "height": 46
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "修改信息",
+          "align": "center",
+          "size": 26,
+          "color": 992815615,
+          "outlineColor": 13941402,
+          "x": -73,
+          "y": -1,
+          "width": 144,
+          "height": 33
+        }
+      ]
+    },
+    {
+      "name": "btn_huanming",
+      "type": "node",
+      "x": -211,
+      "y": 138,
+      "width": 154,
+      "height": 46,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_pppp1.png",
+          "img_down": "#ui_common_btn_pppp2.png",
+          "img_disable": "#ui_common_btn_pppp3.png",
+          "width": 154,
+          "height": 46
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "修改名称",
+          "align": "center",
+          "size": 26,
+          "color": 992815615,
+          "outlineColor": 13941402,
+          "x": -73,
+          "y": -1,
+          "width": 144,
+          "height": 38
+        }
+      ]
+    },
+    {
+      "name": "hint_shenqing",
+      "type": "node",
+      "x": 88,
+      "y": 155,
+      "width": 35,
+      "height": 34,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_guild_shuziqiu.png",
+          "width": 35,
+          "height": 34
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "99",
+          "align": "center",
+          "size": 20,
+          "color": 4294967295,
+          "x": -16,
+          "y": 0,
+          "width": 31,
+          "height": 27
+        }
+      ]
+    },
+    {
+      "name": "btn_yes",
+      "type": "node",
+      "x": 7,
+      "y": -207,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png",
+          "img_disable": "#ui_common_btn_2c.png",
+          "width": 144,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "确定",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -51,
+          "y": 5,
+          "width": 103,
+          "height": 45
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "grid": {
+        "x": 25,
+        "y": 20,
+        "width": 10,
+        "height": 10
+      },
+      "x": -337,
+      "y": 215,
+      "width": 678,
+      "height": 55,
+      "maxw": 678,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "公会管理",
+      "align": "center",
+      "size": 25,
+      "color": 4294967295,
+      "x": -288,
+      "y": 216,
+      "width": 577,
+      "height": 32
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 313,
+      "y": 216,
+      "width": 80,
+      "height": 86
+    }
+  ]
+}

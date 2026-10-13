@@ -1,0 +1,252 @@
+{
+  "group": [
+    "ui_gonghuifuben",
+    "ui_daojukuang"
+  ],
+  "width": 487,
+  "height": 160,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_gonghuifuben_yulan.png",
+      "width": 487,
+      "height": 160
+    },
+    {
+      "name": "txt_title",
+      "type": "label",
+      "text": "?",
+      "align": "left",
+      "size": 25,
+      "color": 4294967295,
+      "x": -221.95,
+      "y": 60.78,
+      "width": 320.95,
+      "height": 32.75
+    },
+    {
+      "name": "node_item1",
+      "type": "node",
+      "x": -121.95,
+      "y": -72.6,
+      "width": 110,
+      "height": 110,
+      "children": [
+        {
+          "name": "bg",
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "x": -54,
+          "y": 54,
+          "width": 110,
+          "height": 110
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "x": -54,
+          "y": 54,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "image",
+          "type": "node",
+          "x": -54.85,
+          "y": 56.8,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "eff",
+          "type": "node",
+          "x": -54.85,
+          "y": 55.8,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -91.1,
+          "y": 28.4,
+          "width": 77,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "node_item2",
+      "type": "node",
+      "x": -7.95,
+      "y": -72.6,
+      "width": 110,
+      "height": 110,
+      "children": [
+        {
+          "name": "bg",
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "x": -54,
+          "y": 54,
+          "width": 110,
+          "height": 110
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "x": -54,
+          "y": 54,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "image",
+          "type": "node",
+          "x": -54.85,
+          "y": 56.8,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "eff",
+          "type": "node",
+          "x": -54.85,
+          "y": 55.8,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -91.1,
+          "y": 28.4,
+          "width": 77,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "node_item3",
+      "type": "node",
+      "x": 112,
+      "y": -72.6,
+      "width": 110,
+      "height": 110,
+      "children": [
+        {
+          "name": "bg",
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "x": -54,
+          "y": 54,
+          "width": 110,
+          "height": 110
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "x": -54,
+          "y": 54,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "image",
+          "type": "node",
+          "x": -54.85,
+          "y": 56.8,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "eff",
+          "type": "node",
+          "x": -54.85,
+          "y": 55.8,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -91.1,
+          "y": 28.4,
+          "width": 77,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "node_item4",
+      "type": "node",
+      "x": 230.5,
+      "y": -72.6,
+      "width": 110,
+      "height": 110,
+      "children": [
+        {
+          "name": "bg",
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "x": -54,
+          "y": 54,
+          "width": 110,
+          "height": 110
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "x": -54,
+          "y": 54,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "image",
+          "type": "node",
+          "x": -54.85,
+          "y": 56.8,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "eff",
+          "type": "node",
+          "x": -54.85,
+          "y": 55.8,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -91.1,
+          "y": 28.4,
+          "width": 77,
+          "height": 26.5
+        }
+      ]
+    }
+  ]
+}

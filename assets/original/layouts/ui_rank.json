@@ -1,0 +1,218 @@
+{
+  "group": [
+    "ui_rank_phb_bgm2"
+  ],
+  "children": [
+    {
+      "name": "bg",
+      "type": "btn",
+      "img_normal": "#ui_rank_phb_bgm2.png",
+      "img_down": "#ui_rank_phb_bgm2.png"
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_GuanBi1.png",
+      "img_down": "#ui_common_btn_GuanBi2.png",
+      "x": 468.1,
+      "y": 338.9,
+      "right": 43.9
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "x": -223.95,
+      "y": -3.95,
+      "width": 405,
+      "height": 517
+    },
+    {
+      "name": "btn_shezhi",
+      "type": "node",
+      "x": -424,
+      "y": -322.5,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "设置",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "name": "btn_xuanyao",
+      "type": "node",
+      "x": -274,
+      "y": -322.5,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "炫耀",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "name": "btn_liwu",
+      "type": "node",
+      "x": -124,
+      "y": -322.5,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "礼物",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "name": "btn_yaoqing",
+      "type": "node",
+      "x": 26,
+      "y": -322.5,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "邀请",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "name": "dengjipaihang",
+      "type": "node",
+      "x": -277.6,
+      "y": 277,
+      "width": 101,
+      "height": 42,
+      "children": [
+        {
+          "name": "btn",
+          "type": "ckb",
+          "img_on": "#ui_rank_bql01.png",
+          "img_off": "#ui_rank_bql02.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "等级排行",
+          "size": 20,
+          "align": "center",
+          "color": 4294967295,
+          "x": -41.5,
+          "y": 1.3,
+          "width": 87,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "tujianpaihang",
+      "type": "node",
+      "x": -176.6,
+      "y": 277,
+      "width": 101,
+      "height": 42,
+      "children": [
+        {
+          "name": "btn",
+          "type": "ckb",
+          "img_on": "#ui_rank_bqr01.png",
+          "img_off": "#ui_rank_bqr02.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "图鉴排行",
+          "size": 20,
+          "align": "center",
+          "color": 4294967295,
+          "x": -45.5,
+          "y": 1.3,
+          "width": 87,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_d.png",
+      "x": -1.15,
+      "y": 341,
+      "width": 573,
+      "height": 83
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "排行榜",
+      "size": 28,
+      "align": "center",
+      "color": 4294967295,
+      "x": -216.9,
+      "y": 332.25,
+      "width": 431.85,
+      "height": 35.5
+    }
+  ]
+}

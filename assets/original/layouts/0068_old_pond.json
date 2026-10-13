@@ -1,0 +1,16 @@
+{
+  "group": [
+    "buildings/0068_old_pond_g"
+  ],
+  "width": 230,
+  "height": 139,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0068_old_pond_g_bg.png",
+      "x": 2.05,
+      "y": 93.5
+    }
+  ]
+}

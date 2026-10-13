@@ -1,0 +1,142 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -259.3,
+      "y": -16.22,
+      "width": 507,
+      "height": 585.05,
+      "maxw": 507,
+      "maxh": 585.05
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -265.6,
+      "y": 263.95,
+      "width": 515,
+      "height": 55,
+      "maxw": 515,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "排行榜",
+      "size": 25,
+      "align": "center",
+      "color": 4294967295,
+      "x": -243.1,
+      "y": 266.5,
+      "width": 473,
+      "height": 32.1
+    },
+    {
+      "name": "paiming",
+      "type": "label",
+      "text": "我的排名：1232134",
+      "size": 20,
+      "align": "left",
+      "color": 1092488703,
+      "x": -227.4,
+      "y": 220.15,
+      "width": 404,
+      "height": 26.5
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_di2.png",
+      "scale9": 1,
+      "x": -225.5,
+      "y": 180.35,
+      "width": 437,
+      "height": 41,
+      "maxw": 437,
+      "maxh": 41
+    },
+    {
+      "name": "tx_paiming",
+      "type": "label",
+      "text": "排名",
+      "size": 20,
+      "align": "center",
+      "color": 1092488703,
+      "x": -214.4,
+      "y": 181.03,
+      "width": 87,
+      "height": 26.75
+    },
+    {
+      "name": "tx_wanjiaxinxi",
+      "type": "label",
+      "text": "玩家信息",
+      "size": 20,
+      "align": "center",
+      "color": 1092488703,
+      "x": -117.4,
+      "y": 181.03,
+      "width": 197.95,
+      "height": 26.75
+    },
+    {
+      "name": "tx_zhandouli",
+      "type": "label",
+      "text": "战斗力",
+      "size": 20,
+      "align": "center",
+      "color": 1092488703,
+      "x": 87.6,
+      "y": 181.03,
+      "width": 111,
+      "height": 26.75
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_haoyoulan2.png",
+      "scale9": 1,
+      "x": -225.5,
+      "y": -54.55,
+      "width": 437,
+      "height": 431,
+      "maxw": 437,
+      "maxh": 431
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_sekuai1.png",
+      "scale9": 1,
+      "x": -126.45,
+      "y": -56.1,
+      "width": 211,
+      "height": 417,
+      "maxw": 211,
+      "maxh": 417
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "x": -7.1,
+      "y": -54.6,
+      "width": 420,
+      "height": 410
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 225.6,
+      "y": 265.7
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "group": [
+    "ui_bgpuzzle",
+    "ui_welfare"
+  ],
+  "width": 624,
+  "height": 410,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -312.85,
+      "y": -6,
+      "width": 623,
+      "height": 386,
+      "maxw": 623,
+      "maxh": 386
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -311.85,
+      "y": 154.5,
+      "width": 623,
+      "height": 55,
+      "maxw": 623,
+      "maxh": 55
+    },
+    {
+      "name": "title",
+      "type": "label",
+      "text": "提示",
+      "align": "center",
+      "size": 26,
+      "color": 4294967295,
+      "x": -81,
+      "y": 156.32,
+      "width": 161,
+      "height": 33.25
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_bgpuzzle_bg9.png",
+      "scale9": 1,
+      "x": -255.5,
+      "y": 1.55,
+      "width": 511,
+      "height": 204,
+      "maxw": 511,
+      "maxh": 204
+    },
+    {
+      "name": "miaoshu1",
+      "type": "label",
+      "text": "当日签到奖励已领取",
+      "align": "left",
+      "size": 26,
+      "color": 1092488703,
+      "x": -230,
+      "y": 51.22,
+      "width": 285,
+      "height": 33.25
+    },
+    {
+      "name": "miaoshu",
+      "type": "label",
+      "text": "是否充值？",
+      "align": "left",
+      "size": 26,
+      "color": 1092488703,
+      "x": -230,
+      "y": -35.67,
+      "width": 161,
+      "height": 33.25
+    },
+    {
+      "name": "miaoshu_vip1",
+      "type": "label",
+      "text": "升级至",
+      "align": "left",
+      "size": 26,
+      "color": 1092488703,
+      "x": -230,
+      "y": 7.32,
+      "width": 105,
+      "height": 33.25
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_welfare_g_03.png",
+      "x": -110,
+      "y": 9.05,
+      "width": 66,
+      "height": 28
+    },
+    {
+      "name": "vip_num",
+      "type": "label",
+      "text": "",
+      "align": "center",
+      "font": "orange_22.fnt",
+      "bmp": 1,
+      "x": -142,
+      "y": 8.63,
+      "width": 64,
+      "height": 28.75
+    },
+    {
+      "name": "miaoshu_vip2",
+      "type": "label",
+      "text": "可领取双倍奖励",
+      "align": "left",
+      "size": 26,
+      "color": 1092488703,
+      "x": -70.1,
+      "y": 7.32,
+      "width": 264,
+      "height": 33.25
+    },
+    {
+      "name": "btn_yes",
+      "type": "node",
+      "x": 141.35,
+      "y": -180.3,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "width": 200,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "确定",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -79.5,
+          "y": 4.93,
+          "width": 160,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "name": "btn_no",
+      "type": "node",
+      "x": -133.6,
+      "y": -180.3,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "width": 200,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "取消",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -79.5,
+          "y": 4.93,
+          "width": 160,
+          "height": 45.15
+        }
+      ]
+    }
+  ]
+}

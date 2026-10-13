@@ -1,0 +1,777 @@
+{
+  "group": [
+    "ui_world"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "name": "bg",
+      "type": "btn",
+      "img_normal": "#ui_world_bg.png",
+      "img_down": "#ui_world_bg.png",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "name": "damage",
+      "type": "node",
+      "x": 362,
+      "y": 205.5,
+      "width": 300,
+      "height": 47,
+      "right": 0,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_world_lantiao1.png",
+          "width": 300,
+          "height": 47
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "今日总伤害：",
+          "align": "left",
+          "size": 22,
+          "color": 4294967295,
+          "x": -84,
+          "y": -2.53,
+          "width": 138,
+          "height": 28.75
+        },
+        {
+          "name": "damage_num",
+          "type": "label",
+          "text": "555555",
+          "align": "left",
+          "size": 22,
+          "color": 4291559679,
+          "x": 48,
+          "y": -2.53,
+          "width": 99,
+          "height": 28.75
+        }
+      ]
+    },
+    {
+      "name": "rank",
+      "type": "node",
+      "x": 362,
+      "y": 158.5,
+      "width": 300,
+      "height": 47,
+      "right": 0,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_world_lantiao1.png",
+          "width": 300,
+          "height": 47
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "排名：",
+          "align": "left",
+          "size": 22,
+          "color": 4294967295,
+          "x": -84,
+          "y": -2.53,
+          "width": 70,
+          "height": 28.75
+        },
+        {
+          "name": "rank_num",
+          "type": "label",
+          "text": "555555",
+          "align": "left",
+          "size": 22,
+          "color": 4291559679,
+          "x": -20,
+          "y": -2.53,
+          "width": 84,
+          "height": 28.75
+        }
+      ]
+    },
+    {
+      "name": "paihangbang",
+      "type": "sprite",
+      "img": "#ui_world_paihangbang.png",
+      "x": 387.5,
+      "y": 95.15,
+      "width": 249,
+      "height": 46,
+      "right": 0
+    },
+    {
+      "name": "rank1",
+      "type": "node",
+      "x": 353,
+      "y": 26.65,
+      "width": 316,
+      "height": 85,
+      "right": 0,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_world_lantiao2.png",
+          "width": 316,
+          "height": 85
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_world_touxiang1.png",
+          "x": -43,
+          "y": -0.5,
+          "width": 62,
+          "height": 62
+        },
+        {
+          "name": "touxiang_moren",
+          "type": "sprite",
+          "img": "#ui_world_meiren.png",
+          "x": -43,
+          "y": -0.5,
+          "width": 50,
+          "height": 50
+        },
+        {
+          "name": "touxiang",
+          "type": "node",
+          "x": -43,
+          "y": -0.5,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "play_name",
+          "type": "label",
+          "text": "撒大声大声道",
+          "align": "left",
+          "size": 20,
+          "color": 4294967295,
+          "x": -13,
+          "y": 12.88,
+          "width": 145,
+          "height": 28.75
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "总伤害：",
+          "align": "left",
+          "size": 20,
+          "color": 4291559679,
+          "x": -13,
+          "y": -15.8,
+          "width": 85,
+          "height": 26.5
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "5555555",
+          "align": "left",
+          "size": 20,
+          "color": 4291559679,
+          "x": 67,
+          "y": -16.3,
+          "width": 89,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "rank2",
+      "type": "node",
+      "x": 343,
+      "y": -62.9,
+      "width": 336,
+      "height": 85,
+      "right": 0,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_world_lantiao3.png",
+          "width": 336,
+          "height": 85
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_world_touxiang1.png",
+          "x": -52,
+          "y": -0.5,
+          "width": 62,
+          "height": 62
+        },
+        {
+          "name": "touxiang_moren",
+          "type": "sprite",
+          "img": "#ui_world_meiren.png",
+          "x": -52,
+          "y": -0.5,
+          "width": 50,
+          "height": 50
+        },
+        {
+          "name": "touxiang",
+          "type": "node",
+          "x": -52,
+          "y": -0.5,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "play_name",
+          "type": "label",
+          "text": "撒大声大声道",
+          "align": "left",
+          "size": 20,
+          "color": 4294967295,
+          "x": -22,
+          "y": 12.88,
+          "width": 160,
+          "height": 28.75
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "总伤害：",
+          "align": "left",
+          "size": 20,
+          "color": 4291559679,
+          "x": -22,
+          "y": -15.8,
+          "width": 85,
+          "height": 26.5
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "555555",
+          "align": "left",
+          "size": 20,
+          "color": 4291559679,
+          "x": 58,
+          "y": -15.8,
+          "width": 107,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "rank3",
+      "type": "node",
+      "x": 333,
+      "y": -152.45,
+      "width": 356,
+      "height": 85,
+      "right": 0,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_world_lantiao4.png",
+          "width": 356,
+          "height": 85
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_world_touxiang1.png",
+          "x": -63,
+          "y": -0.5,
+          "width": 62,
+          "height": 62
+        },
+        {
+          "name": "touxiang_moren",
+          "type": "sprite",
+          "img": "#ui_world_meiren.png",
+          "x": -63,
+          "y": -0.5,
+          "width": 50,
+          "height": 50
+        },
+        {
+          "name": "touxiang",
+          "type": "node",
+          "x": -63,
+          "y": -0.5,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "play_name",
+          "type": "label",
+          "text": "撒大声大声道",
+          "align": "left",
+          "size": 20,
+          "color": 4294967295,
+          "x": -33,
+          "y": 12.88,
+          "width": 179,
+          "height": 28.75
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "总伤害：",
+          "align": "left",
+          "size": 20,
+          "color": 4291559679,
+          "x": -33,
+          "y": -15.8,
+          "width": 85,
+          "height": 26.5
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "555555",
+          "align": "left",
+          "size": 20,
+          "color": 4291559679,
+          "x": 47,
+          "y": -15.8,
+          "width": 129,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "dao",
+      "type": "node",
+      "x": -163.95,
+      "y": -177,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "dragon",
+      "type": "node",
+      "x": -173,
+      "y": -183,
+      "width": 456,
+      "height": 169,
+      "children": [
+        {
+          "name": "dragon",
+          "type": "node",
+          "x": 9.05,
+          "y": 84.5,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_world_hp2.png",
+          "y": 26.5,
+          "width": 456,
+          "height": 30
+        },
+        {
+          "name": "hp",
+          "type": "node",
+          "x": 1,
+          "y": 19,
+          "width": 444,
+          "height": 17,
+          "children": [
+            {
+              "name": "tianchong",
+              "type": "sprite",
+              "img": "#ui_world_hp1.png",
+              "y": 8.5,
+              "width": 444,
+              "height": 17
+            }
+          ]
+        },
+        {
+          "name": "hp_hint",
+          "type": "label",
+          "text": "剩余血量：",
+          "align": "left",
+          "size": 18,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -112.5,
+          "y": 26.23,
+          "width": 95,
+          "height": 24.25
+        },
+        {
+          "name": "hp_num",
+          "type": "label",
+          "text": " ",
+          "align": "left",
+          "size": 18,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -16.5,
+          "y": 26.23,
+          "width": 211,
+          "height": 24.25
+        },
+        {
+          "name": "dragon_info",
+          "type": "node",
+          "x": -0.45,
+          "y": -13,
+          "width": 447,
+          "height": 45,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_world_heitiao1.png",
+              "x": -2,
+              "width": 443,
+              "height": 45
+            },
+            {
+              "name": "icon_name",
+              "type": "node",
+              "x": -142.5,
+              "y": -0.5,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "miaoshu1",
+              "type": "label",
+              "text": "Lv",
+              "align": "left",
+              "size": 24,
+              "color": 4294967295,
+              "x": -82.5,
+              "y": -4.25,
+              "width": 33,
+              "height": 31
+            },
+            {
+              "name": "level",
+              "type": "label",
+              "text": "",
+              "align": "left",
+              "size": 24,
+              "color": 4294967295,
+              "x": -48.5,
+              "y": -4.25,
+              "width": 39,
+              "height": 31
+            },
+            {
+              "name": "miaoshu2",
+              "type": "label",
+              "text": "剩余时间：",
+              "align": "left",
+              "size": 22,
+              "color": 4294967295,
+              "x": -6.5,
+              "y": -3.13,
+              "width": 115,
+              "height": 28.75
+            },
+            {
+              "name": "time",
+              "type": "label",
+              "text": "",
+              "align": "left",
+              "size": 24,
+              "color": 4291559679,
+              "x": 108.5,
+              "y": -4.25,
+              "width": 115,
+              "height": 31
+            }
+          ]
+        },
+        {
+          "name": "physical",
+          "type": "node",
+          "x": -2.45,
+          "y": -61.83,
+          "width": 375,
+          "height": 46.65,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_world_heitiao2.png",
+              "y": 0.32,
+              "width": 375,
+              "height": 46
+            },
+            {
+              "name": "miaoshu",
+              "type": "label",
+              "text": "剩余挑战次数：",
+              "align": "left",
+              "size": 22,
+              "color": 4294967295,
+              "x": -135,
+              "y": -0.2,
+              "width": 165,
+              "height": 28.75
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": "",
+              "align": "left",
+              "size": 24,
+              "color": 4291559679,
+              "x": 17.5,
+              "y": -2.43,
+              "width": 49,
+              "height": 31
+            },
+            {
+              "name": "add",
+              "type": "btn",
+              "img_normal": "#ui_main_05.png",
+              "img_down": "#ui_main_05-2.png",
+              "x": 103.8,
+              "y": 0.97,
+              "width": 46,
+              "height": 46
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "hint_time",
+      "type": "label",
+      "text": "世界头目每周二、四、日上午10:00出现",
+      "align": "center",
+      "size": 25,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -452.9,
+      "y": 107.1,
+      "width": 580.75,
+      "height": 32.1
+    },
+    {
+      "name": "diban",
+      "type": "sprite",
+      "img": "#ui_world_QuanPing_BG3.png",
+      "y": -317.5,
+      "width": 1024,
+      "height": 133,
+      "left": 0,
+      "right": 0
+    },
+    {
+      "name": "ding",
+      "type": "sprite",
+      "img": "#ui_world_QuanPing_BG2.png",
+      "y": 312.5,
+      "width": 1024,
+      "height": 143,
+      "left": 0,
+      "right": 0
+    },
+    {
+      "name": "btn_battle",
+      "type": "node",
+      "x": -167.95,
+      "y": -322,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png",
+          "img_disable": "#ui_common_btn_2c.png",
+          "width": 144,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "挑战",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_d.png",
+      "x": -1.15,
+      "y": 341,
+      "width": 573,
+      "height": 83
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "世界头目",
+      "align": "center",
+      "size": 28,
+      "color": 4294967295,
+      "x": -216.9,
+      "y": 332.25,
+      "width": 431.85,
+      "height": 35.5
+    },
+    {
+      "name": "chengjiujiangli",
+      "type": "node",
+      "x": 214,
+      "y": -309,
+      "width": 102,
+      "height": 111,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_main_Z_ico-bg0003.png",
+          "img_down": "#ui_main_Z_ico-bg0004.png",
+          "x": 0.5,
+          "width": 101,
+          "height": 111
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_ico_cjjl.png",
+          "x": -2.5,
+          "y": 3,
+          "width": 97,
+          "height": 93
+        },
+        {
+          "name": "con_name",
+          "type": "node",
+          "x": 0.5,
+          "y": -52.5,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "buzhen",
+      "type": "node",
+      "x": 452.5,
+      "y": -308,
+      "width": 101,
+      "height": 111,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_main_Z_ico-bg0003.png",
+          "img_down": "#ui_main_Z_ico-bg0004.png",
+          "width": 101,
+          "height": 111
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_Z_ico-BuZhen.png",
+          "x": -0.5,
+          "y": 7,
+          "width": 94,
+          "height": 79
+        },
+        {
+          "name": "con_name",
+          "type": "node",
+          "y": -52.5,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "paiming",
+      "type": "node",
+      "x": 331,
+      "y": -309.25,
+      "width": 108,
+      "height": 111,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_main_Z_ico-bg0003.png",
+          "img_down": "#ui_main_Z_ico-bg0004.png",
+          "x": 3.5,
+          "width": 101,
+          "height": 111
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_ico_phb.png",
+          "x": -1.5,
+          "y": 6.5,
+          "width": 105,
+          "height": 86
+        },
+        {
+          "name": "con_name",
+          "type": "node",
+          "x": 3.5,
+          "y": -52.5,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "txt_players",
+      "type": "label",
+      "text": "今日参战人数：",
+      "align": "right",
+      "size": 26,
+      "color": 4294967295,
+      "x": -166.95,
+      "y": 280.35,
+      "width": 208,
+      "height": 35.5
+    },
+    {
+      "name": "num_players",
+      "type": "label",
+      "text": "",
+      "align": "left",
+      "size": 26,
+      "color": 4294967295,
+      "x": 41.05,
+      "y": 280.35,
+      "width": 208,
+      "height": 35.5
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_GuanBi1.png",
+      "img_down": "#ui_common_btn_GuanBi2.png",
+      "x": 468.1,
+      "y": 338.3,
+      "width": 85,
+      "height": 90,
+      "right": 43.9
+    },
+    {
+      "name": "tip",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_tishi1.png",
+      "img_down": "#ui_common_btn_tishi2.png",
+      "x": 373,
+      "y": 338.3,
+      "width": 85,
+      "height": 90,
+      "right": 139
+    }
+  ]
+}

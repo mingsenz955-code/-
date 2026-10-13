@@ -1,0 +1,151 @@
+{
+  "group": [
+    "ui_qixiID63",
+    "ui_ertong",
+    "ui_daojukuang"
+  ],
+  "width": 197,
+  "height": 256,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_qixiID63_dd1.png",
+      "width": 189,
+      "height": 247
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_qixiID63_jk.png",
+      "x": 23,
+      "y": -55,
+      "width": 96,
+      "height": 32
+    },
+    {
+      "name": "node_cost",
+      "type": "node",
+      "x": 30,
+      "y": -52,
+      "width": 150,
+      "height": 26,
+      "children": [
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": "x?",
+          "align": "left",
+          "size": 20,
+          "color": 2237154047,
+          "x": -47,
+          "y": -2,
+          "width": 119,
+          "height": 26
+        },
+        {
+          "name": "img",
+          "type": "node",
+          "x": -78,
+          "y": -1,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "node_btn_exchange",
+      "type": "node",
+      "x": -1,
+      "y": -105,
+      "width": 133,
+      "height": 56,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_ertong_zdbtn1.png",
+          "img_down": "#ui_ertong_zdbtn2.png",
+          "img_disable": "#ui_ertong_zdbtn5.png",
+          "width": 133,
+          "height": 56
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "交换",
+          "align": "center",
+          "size": 26,
+          "color": 4294967295,
+          "outlineColor": 11882262,
+          "x": -65,
+          "y": 3,
+          "width": 129,
+          "height": 33
+        }
+      ]
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "--",
+      "align": "center",
+      "size": 20,
+      "color": 2237154047,
+      "x": -88,
+      "y": 104,
+      "width": 172,
+      "height": 26
+    },
+    {
+      "name": "node_showitem",
+      "type": "node",
+      "x": 0,
+      "y": 21,
+      "width": 110,
+      "height": 110,
+      "children": [
+        {
+          "name": "bg",
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "width": 110,
+          "height": 110
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "image",
+          "type": "node",
+          "x": -1,
+          "y": 3,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "eff",
+          "type": "node",
+          "x": -1,
+          "y": 2,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -37,
+          "y": -26,
+          "width": 77,
+          "height": 27
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "group": [
+    "buildings/0007_boost_water_g"
+  ],
+  "width": 266,
+  "height": 219,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0007_boost_water_g_bg.png",
+      "x": 20,
+      "y": 121
+    },
+    {
+      "name": "eff",
+      "type": "eff",
+      "eff": "0007_boost_water_eff",
+      "width": 93,
+      "height": 119
+    }
+  ]
+}

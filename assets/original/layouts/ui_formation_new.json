@@ -1,0 +1,152 @@
+{
+  "group": [
+    "ui_formationnew"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "name": "bg",
+      "type": "btn",
+      "img_normal": "#ui_formationnew_bg.png",
+      "img_down": "#ui_formationnew_bg.png",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "name": "diban",
+      "type": "sprite",
+      "img": "#ui_formationnew_di.png",
+      "y": -322.5,
+      "width": 1022,
+      "height": 123,
+      "left": 0,
+      "right": 0
+    },
+    {
+      "name": "ding",
+      "type": "sprite",
+      "img": "#ui_formationnew_ding.png",
+      "y": 319,
+      "width": 1022,
+      "height": 130,
+      "left": 0,
+      "right": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_d.png",
+      "x": -1.15,
+      "y": 341,
+      "width": 573,
+      "height": 83
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "阵型预览",
+      "align": "center",
+      "size": 28,
+      "color": 4294967295,
+      "x": -216.9,
+      "y": 332.25,
+      "width": 431.85,
+      "height": 35.5
+    },
+    {
+      "name": "sky1",
+      "type": "node",
+      "x": 176,
+      "y": 184.95,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "sky3",
+      "type": "node",
+      "x": -156,
+      "y": 184.95,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "sky2",
+      "type": "node",
+      "x": 9,
+      "y": 95.95,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "sky4",
+      "type": "node",
+      "x": -336,
+      "y": 95.95,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "earth1",
+      "type": "node",
+      "x": 183,
+      "y": -231.05,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "earth3",
+      "type": "node",
+      "x": -164,
+      "y": -231.05,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "earth2",
+      "type": "node",
+      "x": 16,
+      "y": -258.05,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "earth4",
+      "type": "node",
+      "x": -341,
+      "y": -257.05,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "btn_yes",
+      "type": "node",
+      "x": 424,
+      "y": -341.35,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png",
+          "img_disable": "#ui_common_btn_2c.png",
+          "width": 144,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "确定",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    }
+  ]
+}

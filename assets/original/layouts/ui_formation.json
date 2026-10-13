@@ -1,0 +1,931 @@
+{
+  "group": [
+    "ui_Batlle",
+    "ui_formation_9lbuzhen_bg"
+  ],
+  "children": [
+    {
+      "name": "bg",
+      "type": "btn",
+      "img_normal": "#ui_formation_9lbuzhen_bg.png",
+      "img_down": "#ui_formation_9lbuzhen_bg.png"
+    },
+    {
+      "name": "qizhi1",
+      "type": "node",
+      "x": 248.95,
+      "y": 318.5,
+      "width": 120,
+      "height": 130,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_formation_flag_big.png",
+          "width": 120,
+          "height": 130
+        },
+        {
+          "name": "paiming",
+          "type": "label",
+          "text": " ",
+          "size": 50,
+          "align": "center",
+          "color": 4294967295,
+          "outlineColor": 10027008,
+          "x": -31,
+          "y": 29.33,
+          "width": 60,
+          "height": 60.25
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": " ",
+          "size": 18,
+          "align": "center",
+          "color": 4294967295,
+          "outlineColor": 10027008,
+          "x": -30,
+          "y": -13.13,
+          "width": 60,
+          "height": 24.25
+        },
+        {
+          "name": "tx_num",
+          "type": "label",
+          "text": " ",
+          "size": 15,
+          "align": "center",
+          "color": 4294967295,
+          "outlineColor": 10027008,
+          "x": -34,
+          "y": -31.45,
+          "width": 67,
+          "height": 20.9
+        }
+      ]
+    },
+    {
+      "name": "d1_r1",
+      "type": "node",
+      "x": 319.02,
+      "y": 55.95,
+      "width": 140.35,
+      "height": 228.2,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_formation_fudao01.png",
+          "x": -69.82,
+          "y": 10.9,
+          "width": 140,
+          "height": 110
+        },
+        {
+          "name": "icon_fazhen",
+          "type": "node",
+          "x": -70.17,
+          "y": 44.1,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon_dragon",
+          "type": "node",
+          "x": -70.17,
+          "y": 44.1,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "d1_r2",
+      "type": "node",
+      "x": 260.02,
+      "y": -106.75,
+      "width": 140.35,
+      "height": 228.2,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_formation_fudao01.png",
+          "x": -69.82,
+          "y": 10.9,
+          "width": 140,
+          "height": 110
+        },
+        {
+          "name": "icon_fazhen",
+          "type": "node",
+          "x": -70.17,
+          "y": 44.1,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon_dragon",
+          "type": "node",
+          "x": -70.17,
+          "y": 44.1,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "d1_r3",
+      "type": "node",
+      "x": 319.43,
+      "y": -270.8,
+      "width": 140.35,
+      "height": 228.2,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_formation_fudao01.png",
+          "x": -69.82,
+          "y": 10.9,
+          "width": 140,
+          "height": 110
+        },
+        {
+          "name": "icon_fazhen",
+          "type": "node",
+          "x": -70.17,
+          "y": 44.1,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon_dragon",
+          "type": "node",
+          "x": -70.17,
+          "y": 44.1,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "qizhi2",
+      "type": "node",
+      "x": 5.95,
+      "y": 318.5,
+      "width": 120,
+      "height": 130,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_formation_flag_big.png",
+          "width": 120,
+          "height": 130
+        },
+        {
+          "name": "paiming",
+          "type": "label",
+          "text": " ",
+          "size": 50,
+          "align": "center",
+          "color": 4294967295,
+          "outlineColor": 10027008,
+          "x": -31,
+          "y": 29.33,
+          "width": 60,
+          "height": 60.25
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": " ",
+          "size": 18,
+          "align": "center",
+          "color": 4294967295,
+          "outlineColor": 10027008,
+          "x": -30,
+          "y": -13.13,
+          "width": 60,
+          "height": 24.25
+        },
+        {
+          "name": "tx_num",
+          "type": "label",
+          "text": " ",
+          "size": 15,
+          "align": "center",
+          "color": 4294967295,
+          "outlineColor": 10027008,
+          "x": -34,
+          "y": -31.45,
+          "width": 67,
+          "height": 20.9
+        }
+      ]
+    },
+    {
+      "name": "d2_r1",
+      "type": "node",
+      "x": 76.02,
+      "y": 55.95,
+      "width": 140.35,
+      "height": 228.2,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_formation_fudao02.png",
+          "x": -69.82,
+          "y": 10.9,
+          "width": 140,
+          "height": 110
+        },
+        {
+          "name": "icon_fazhen",
+          "type": "node",
+          "x": -70.17,
+          "y": 44.1,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon_dragon",
+          "type": "node",
+          "x": -70.17,
+          "y": 44.1,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "d2_r2",
+      "type": "node",
+      "x": 17.02,
+      "y": -106.75,
+      "width": 140.35,
+      "height": 228.2,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_formation_fudao02.png",
+          "x": -69.82,
+          "y": 10.9,
+          "width": 140,
+          "height": 110
+        },
+        {
+          "name": "icon_fazhen",
+          "type": "node",
+          "x": -70.17,
+          "y": 44.1,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon_dragon",
+          "type": "node",
+          "x": -70.17,
+          "y": 44.1,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "d2_r3",
+      "type": "node",
+      "x": 76.42,
+      "y": -270.8,
+      "width": 140.35,
+      "height": 228.2,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_formation_fudao02.png",
+          "x": -69.82,
+          "y": 10.9,
+          "width": 140,
+          "height": 110
+        },
+        {
+          "name": "icon_fazhen",
+          "type": "node",
+          "x": -70.17,
+          "y": 44.1,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon_dragon",
+          "type": "node",
+          "x": -70.17,
+          "y": 44.1,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "qizhi3",
+      "type": "node",
+      "x": -250.55,
+      "y": 318.5,
+      "width": 120,
+      "height": 130,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_formation_flag_big.png",
+          "width": 120,
+          "height": 130
+        },
+        {
+          "name": "paiming",
+          "type": "label",
+          "text": " ",
+          "size": 50,
+          "align": "center",
+          "color": 4294967295,
+          "outlineColor": 10027008,
+          "x": -31,
+          "y": 29.33,
+          "width": 60,
+          "height": 60.25
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": " ",
+          "size": 18,
+          "align": "center",
+          "color": 4294967295,
+          "outlineColor": 10027008,
+          "x": -30,
+          "y": -13.13,
+          "width": 60,
+          "height": 24.25
+        },
+        {
+          "name": "tx_num",
+          "type": "label",
+          "text": " ",
+          "size": 15,
+          "align": "center",
+          "color": 4294967295,
+          "outlineColor": 10027008,
+          "x": -34,
+          "y": -31.45,
+          "width": 67,
+          "height": 20.9
+        }
+      ]
+    },
+    {
+      "name": "d3_r1",
+      "type": "node",
+      "x": -180.48,
+      "y": 55.95,
+      "width": 140.35,
+      "height": 228.2,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_formation_fudao03.png",
+          "x": -69.82,
+          "y": 10.9,
+          "width": 140,
+          "height": 110
+        },
+        {
+          "name": "icon_fazhen",
+          "type": "node",
+          "x": -70.17,
+          "y": 44.1,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon_dragon",
+          "type": "node",
+          "x": -70.17,
+          "y": 44.1,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "d3_r2",
+      "type": "node",
+      "x": -239.47,
+      "y": -106.75,
+      "width": 140.35,
+      "height": 228.2,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_formation_fudao03.png",
+          "x": -69.82,
+          "y": 10.9,
+          "width": 140,
+          "height": 110
+        },
+        {
+          "name": "icon_fazhen",
+          "type": "node",
+          "x": -70.17,
+          "y": 44.1,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon_dragon",
+          "type": "node",
+          "x": -70.17,
+          "y": 44.1,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "d3_r3",
+      "type": "node",
+      "x": -180.07,
+      "y": -270.8,
+      "width": 140.35,
+      "height": 228.2,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_formation_fudao03.png",
+          "x": -69.82,
+          "y": 10.9,
+          "width": 140,
+          "height": 110
+        },
+        {
+          "name": "icon_fazhen",
+          "type": "node",
+          "x": -70.17,
+          "y": 44.1,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon_dragon",
+          "type": "node",
+          "x": -70.17,
+          "y": 44.1,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "queding",
+      "type": "node",
+      "x": 439,
+      "y": -341.15,
+      "width": 144,
+      "height": 85,
+      "right": 1,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "确定",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "name": "shuxingxuanze",
+      "type": "node",
+      "x": -83.65,
+      "y": -298.35,
+      "width": 856,
+      "height": 170,
+      "left": 0.35,
+      "children": [
+        {
+          "name": "dikuang",
+          "type": "sprite",
+          "img": "#ui_formation_tiao.png",
+          "width": 856,
+          "height": 170
+        },
+        {
+          "name": "shuxing_e",
+          "type": "node",
+          "x": -367.95,
+          "y": -23.9,
+          "width": 85,
+          "height": 85,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "xiangkuang",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon_element",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon_long",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "add",
+              "type": "btn",
+              "img_normal": "#ui_common_kong.png",
+              "img_down": "#ui_common_kong.png",
+              "alpha": 1
+            }
+          ]
+        },
+        {
+          "name": "shuxing_f",
+          "type": "node",
+          "x": -277.95,
+          "y": -23.9,
+          "width": 85,
+          "height": 85,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "xiangkuang",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon_element",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon_long",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "add",
+              "type": "btn",
+              "img_normal": "#ui_common_kong.png",
+              "img_down": "#ui_common_kong.png",
+              "alpha": 1
+            }
+          ]
+        },
+        {
+          "name": "shuxing_w",
+          "type": "node",
+          "x": -187.95,
+          "y": -23.9,
+          "width": 85,
+          "height": 85,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "xiangkuang",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon_element",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon_long",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "add",
+              "type": "btn",
+              "img_normal": "#ui_common_kong.png",
+              "img_down": "#ui_common_kong.png",
+              "alpha": 1
+            }
+          ]
+        },
+        {
+          "name": "shuxing_p",
+          "type": "node",
+          "x": -97.95,
+          "y": -23.9,
+          "width": 85,
+          "height": 85,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "xiangkuang",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon_element",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon_long",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "add",
+              "type": "btn",
+              "img_normal": "#ui_common_kong.png",
+              "img_down": "#ui_common_kong.png",
+              "alpha": 1
+            }
+          ]
+        },
+        {
+          "name": "shuxing_m",
+          "type": "node",
+          "x": -7.95,
+          "y": -23.9,
+          "width": 85,
+          "height": 85,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "xiangkuang",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon_element",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon_long",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "add",
+              "type": "btn",
+              "img_normal": "#ui_common_kong.png",
+              "img_down": "#ui_common_kong.png",
+              "alpha": 1
+            }
+          ]
+        },
+        {
+          "name": "shuxing_i",
+          "type": "node",
+          "x": 82.05,
+          "y": -23.9,
+          "width": 85,
+          "height": 85,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "xiangkuang",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon_element",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon_long",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "add",
+              "type": "btn",
+              "img_normal": "#ui_common_kong.png",
+              "img_down": "#ui_common_kong.png",
+              "alpha": 1
+            }
+          ]
+        },
+        {
+          "name": "shuxing_el",
+          "type": "node",
+          "x": 172.05,
+          "y": -23.9,
+          "width": 85,
+          "height": 85,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "xiangkuang",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon_element",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon_long",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "add",
+              "type": "btn",
+              "img_normal": "#ui_common_kong.png",
+              "img_down": "#ui_common_kong.png",
+              "alpha": 1
+            }
+          ]
+        },
+        {
+          "name": "shuxing_d",
+          "type": "node",
+          "x": 262.05,
+          "y": -23.9,
+          "width": 85,
+          "height": 85,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "xiangkuang",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon_element",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon_long",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "add",
+              "type": "btn",
+              "img_normal": "#ui_common_kong.png",
+              "img_down": "#ui_common_kong.png",
+              "alpha": 1
+            }
+          ]
+        },
+        {
+          "name": "shuxing_unknown",
+          "type": "node",
+          "x": 352.05,
+          "y": -23.9,
+          "width": 85,
+          "height": 85,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "xiangkuang",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon_element",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon_long",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "add",
+              "type": "btn",
+              "img_normal": "#ui_common_kong.png",
+              "img_down": "#ui_common_kong.png",
+              "alpha": 1
+            }
+          ]
+        },
+        {
+          "name": "txt_miaoshu",
+          "type": "label",
+          "text": "出战龙",
+          "size": 20,
+          "align": "center",
+          "color": 4294967295,
+          "x": -415.95,
+          "y": 52.05,
+          "width": 114,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_GuanBi1.png",
+      "img_down": "#ui_common_btn_GuanBi2.png",
+      "x": 468.1,
+      "y": 338.9,
+      "right": 43.9
+    },
+    {
+      "name": "tishi",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_tishi2.png",
+      "img_down": "#ui_common_btn_tishi2.png",
+      "x": 361.35,
+      "y": 338.9,
+      "right": 150.65
+    }
+  ]
+}

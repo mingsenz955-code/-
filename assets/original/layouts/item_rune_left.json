@@ -1,0 +1,582 @@
+{
+  "group": [
+    "ui_rune"
+  ],
+  "width": 631,
+  "height": 634,
+  "children": [
+    {
+      "name": "btn_sky",
+      "type": "node",
+      "x": -274.1,
+      "y": -52.4,
+      "width": 83,
+      "height": 232,
+      "children": [
+        {
+          "name": "btn",
+          "type": "ckb",
+          "img_on": "#ui_rune_btn2.png",
+          "img_off": "#ui_rune_btn1.png"
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_rune_ts.png",
+          "x": 3.5,
+          "y": 18,
+          "width": 34,
+          "height": 116
+        }
+      ]
+    },
+    {
+      "name": "btn_earth",
+      "type": "node",
+      "x": -274.1,
+      "y": 182.6,
+      "width": 83,
+      "height": 232,
+      "children": [
+        {
+          "name": "btn",
+          "type": "ckb",
+          "img_on": "#ui_rune_btn2.png",
+          "img_off": "#ui_rune_btn1.png"
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_rune_te.png",
+          "x": 3.5,
+          "y": 17,
+          "width": 34,
+          "height": 118
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -247.4,
+      "y": -0.03,
+      "width": 563,
+      "height": 633.95,
+      "maxw": 563,
+      "maxh": 633.95
+    },
+    {
+      "name": "bg_earth",
+      "type": "sprite",
+      "img": "#ui_rune_bg1.png",
+      "x": 35.05,
+      "y": -0.35,
+      "width": 519,
+      "height": 576
+    },
+    {
+      "name": "bg_sky",
+      "type": "sprite",
+      "img": "#ui_rune_bg2.png",
+      "x": 34.55,
+      "y": -0.35,
+      "width": 518,
+      "height": 576
+    },
+    {
+      "name": "eff",
+      "type": "node",
+      "x": 34,
+      "y": 72,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "bg_six",
+      "type": "node",
+      "x": 33.05,
+      "y": 73.2,
+      "width": 395,
+      "height": 427,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_rune_bg3.png",
+          "width": 395,
+          "height": 427
+        },
+        {
+          "name": "icon1",
+          "type": "node",
+          "x": 0.8,
+          "y": 137.2,
+          "width": 78,
+          "height": 84.6,
+          "children": [
+            {
+              "name": "icon",
+              "type": "node",
+              "y": 9.8,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "level_bg",
+              "type": "sprite",
+              "img": "#ui_rune_num_bg.png",
+              "y": -27.8,
+              "width": 78,
+              "height": 24
+            },
+            {
+              "name": "level",
+              "type": "label",
+              "text": " ",
+              "align": "center",
+              "size": 20,
+              "color": 4294967295,
+              "x": -36.45,
+              "y": -29.05,
+              "width": 72.95,
+              "height": 26.5
+            },
+            {
+              "name": "pinzhi",
+              "type": "node",
+              "x": -28.95,
+              "y": 42.3,
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "icon2",
+          "type": "node",
+          "x": 130.8,
+          "y": 65.2,
+          "width": 78,
+          "height": 84.6,
+          "children": [
+            {
+              "name": "icon",
+              "type": "node",
+              "y": 9.8,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "level_bg",
+              "type": "sprite",
+              "img": "#ui_rune_num_bg.png",
+              "y": -27.8,
+              "width": 78,
+              "height": 24
+            },
+            {
+              "name": "level",
+              "type": "label",
+              "text": " ",
+              "align": "center",
+              "size": 20,
+              "color": 4294967295,
+              "x": -36.45,
+              "y": -29.05,
+              "width": 72.95,
+              "height": 26.5
+            },
+            {
+              "name": "pinzhi",
+              "type": "node",
+              "x": -28.95,
+              "y": 42.3,
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "icon3",
+          "type": "node",
+          "x": 134.8,
+          "y": -87.8,
+          "width": 78,
+          "height": 84.6,
+          "children": [
+            {
+              "name": "icon",
+              "type": "node",
+              "y": 9.8,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "level_bg",
+              "type": "sprite",
+              "img": "#ui_rune_num_bg.png",
+              "y": -27.8,
+              "width": 78,
+              "height": 24
+            },
+            {
+              "name": "level",
+              "type": "label",
+              "text": " ",
+              "align": "center",
+              "size": 20,
+              "color": 4294967295,
+              "x": -36.45,
+              "y": -29.05,
+              "width": 72.95,
+              "height": 26.5
+            },
+            {
+              "name": "pinzhi",
+              "type": "node",
+              "x": -28.95,
+              "y": 42.3,
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "icon4",
+          "type": "node",
+          "x": 1.8,
+          "y": -161.8,
+          "width": 78,
+          "height": 84.6,
+          "children": [
+            {
+              "name": "icon",
+              "type": "node",
+              "y": 9.8,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "level_bg",
+              "type": "sprite",
+              "img": "#ui_rune_num_bg.png",
+              "y": -27.8,
+              "width": 78,
+              "height": 24
+            },
+            {
+              "name": "level",
+              "type": "label",
+              "text": " ",
+              "align": "center",
+              "size": 20,
+              "color": 4294967295,
+              "x": -36.45,
+              "y": -29.05,
+              "width": 72.95,
+              "height": 26.5
+            },
+            {
+              "name": "pinzhi",
+              "type": "node",
+              "x": -28.95,
+              "y": 42.3,
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "icon5",
+          "type": "node",
+          "x": -133.2,
+          "y": -85.8,
+          "width": 78,
+          "height": 84.6,
+          "children": [
+            {
+              "name": "icon",
+              "type": "node",
+              "y": 9.8,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "level_bg",
+              "type": "sprite",
+              "img": "#ui_rune_num_bg.png",
+              "y": -27.8,
+              "width": 78,
+              "height": 24
+            },
+            {
+              "name": "level",
+              "type": "label",
+              "text": " ",
+              "align": "center",
+              "size": 20,
+              "color": 4294967295,
+              "x": -36.45,
+              "y": -29.05,
+              "width": 72.95,
+              "height": 26.5
+            },
+            {
+              "name": "pinzhi",
+              "type": "node",
+              "x": -28.95,
+              "y": 42.3,
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "icon6",
+          "type": "node",
+          "x": -130.2,
+          "y": 65.2,
+          "width": 78,
+          "height": 84.6,
+          "children": [
+            {
+              "name": "icon",
+              "type": "node",
+              "y": 9.8,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "level_bg",
+              "type": "sprite",
+              "img": "#ui_rune_num_bg.png",
+              "y": -27.8,
+              "width": 78,
+              "height": 24
+            },
+            {
+              "name": "level",
+              "type": "label",
+              "text": " ",
+              "align": "center",
+              "size": 20,
+              "color": 4294967295,
+              "x": -36.45,
+              "y": -29.05,
+              "width": 72.95,
+              "height": 26.5
+            },
+            {
+              "name": "pinzhi",
+              "type": "node",
+              "x": -28.95,
+              "y": 42.3,
+              "width": 0,
+              "height": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "hint_buff",
+      "type": "node",
+      "x": -219.45,
+      "y": -153.25,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "hint_hp",
+      "type": "node",
+      "x": -131.45,
+      "y": -199.93,
+      "width": 148,
+      "height": 29.05,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "生命:",
+          "align": "left",
+          "size": 22,
+          "color": 4294967295,
+          "x": -74,
+          "width": 65,
+          "height": 29.05
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "555566",
+          "align": "left",
+          "size": 22,
+          "color": 4294967295,
+          "x": -14,
+          "width": 88,
+          "height": 29.05
+        }
+      ]
+    },
+    {
+      "name": "hint_atk",
+      "type": "node",
+      "x": 18.55,
+      "y": -199.93,
+      "width": 148,
+      "height": 29.05,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "攻击:",
+          "align": "left",
+          "size": 22,
+          "color": 4294967295,
+          "x": -74,
+          "width": 65,
+          "height": 29.05
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "555566",
+          "align": "left",
+          "size": 22,
+          "color": 4294967295,
+          "x": -14,
+          "width": 88,
+          "height": 29.05
+        }
+      ]
+    },
+    {
+      "name": "hint_def",
+      "type": "node",
+      "x": 168.55,
+      "y": -199.93,
+      "width": 148,
+      "height": 29.05,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "防御:",
+          "align": "left",
+          "size": 22,
+          "color": 4294967295,
+          "x": -74,
+          "width": 65,
+          "height": 29.05
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "555566",
+          "align": "left",
+          "size": 22,
+          "color": 4294967295,
+          "x": -14,
+          "width": 88,
+          "height": 29.05
+        }
+      ]
+    },
+    {
+      "name": "hint_critical",
+      "type": "node",
+      "x": -133,
+      "y": -232,
+      "width": 145,
+      "height": 29,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "暴击:",
+          "align": "left",
+          "size": 22,
+          "color": 4294967295,
+          "x": -72,
+          "width": 125,
+          "height": 29
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "55",
+          "align": "left",
+          "size": 22,
+          "color": 4294967295,
+          "x": -11,
+          "width": 84,
+          "height": 29
+        }
+      ]
+    },
+    {
+      "name": "hint_resist",
+      "type": "node",
+      "x": 17,
+      "y": -232,
+      "width": 145,
+      "height": 29,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "免爆:",
+          "align": "left",
+          "size": 22,
+          "color": 4294967295,
+          "x": -72,
+          "width": 125,
+          "height": 29
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "55",
+          "align": "left",
+          "size": 22,
+          "color": 4294967295,
+          "x": -11,
+          "width": 84,
+          "height": 29
+        }
+      ]
+    },
+    {
+      "name": "hint_power",
+      "type": "node",
+      "x": -49.95,
+      "y": -265.38,
+      "width": 311,
+      "height": 33.55,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "战斗力提升",
+          "align": "left",
+          "size": 26,
+          "color": 4291559679,
+          "outlineColor": 0,
+          "x": -155.5,
+          "width": 162,
+          "height": 33.55
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "555",
+          "align": "left",
+          "size": 26,
+          "color": 4278190335,
+          "outlineColor": 0,
+          "x": -6.5,
+          "width": 162,
+          "height": 33.55
+        }
+      ]
+    }
+  ]
+}

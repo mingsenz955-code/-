@@ -1,0 +1,308 @@
+{
+  "group": [
+    "ui_bg",
+    "ui_pve"
+  ],
+  "width": 1138,
+  "height": 640,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#ui_bg_960_640bg.png",
+      "width": 1138,
+      "height": 640
+    },
+    {
+      "name": "diban",
+      "type": "node",
+      "x": 1.35,
+      "y": -42.35,
+      "width": 876,
+      "height": 539,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_bg_t_5.png",
+          "scale9": 1,
+          "x": -427.45,
+          "y": 0.13,
+          "width": 849,
+          "height": 500.95,
+          "maxw": 849,
+          "maxh": 500.95
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_bg_t_1.png",
+          "x": -420.45,
+          "y": 245.6,
+          "width": 20,
+          "height": 20
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_bg_t_1.png",
+          "scale_y": -1,
+          "x": -420.45,
+          "y": -245.4,
+          "width": 20,
+          "height": 20
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_bg_t_1.png",
+          "scale_x": -1,
+          "x": 420.55,
+          "y": 245.6,
+          "width": 20,
+          "height": 20
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_bg_t_1.png",
+          "scale_x": -1,
+          "scale_y": -1,
+          "x": 420.55,
+          "y": -245.4,
+          "width": 20,
+          "height": 20
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_bg_t_2.png",
+          "x": -2.6,
+          "y": 249.75,
+          "width": 816,
+          "height": 10
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_bg_t_2.png",
+          "scale_x": -1,
+          "x": -2.15,
+          "y": -253.25,
+          "width": 817,
+          "height": 10
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_bg_t_3.png",
+          "x": -425.45,
+          "y": -0.9,
+          "width": 10,
+          "height": 477
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_bg_t_3.png",
+          "x": 425.55,
+          "y": 0.6,
+          "width": 10,
+          "height": 474
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_bg_t_0.png",
+          "x": -364.5,
+          "y": 198.5,
+          "width": 147,
+          "height": 142
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_bg_t_0.png",
+          "scale_y": -1,
+          "x": -364.5,
+          "y": -198.5,
+          "width": 147,
+          "height": 142
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_bg_t_0.png",
+          "scale_x": -1,
+          "x": 364.5,
+          "y": 198.5,
+          "width": 147,
+          "height": 142
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_bg_t_0.png",
+          "scale_x": -1,
+          "scale_y": -1,
+          "x": 364.5,
+          "y": -198.5,
+          "width": 147,
+          "height": 142
+        }
+      ]
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "x": 1.35,
+      "y": -43.35,
+      "width": 834,
+      "height": 488
+    },
+    {
+      "name": "enemy_info",
+      "type": "node",
+      "x": 1.35,
+      "y": -43.35,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "map_ctrl",
+      "type": "node",
+      "x": 2.98,
+      "y": -31.5,
+      "width": 919.95,
+      "height": 439,
+      "children": [
+        {
+          "name": "btn_right",
+          "type": "node",
+          "x": 435.48,
+          "y": 8.5,
+          "width": 49,
+          "height": 85,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btn_fanye_r_1.png",
+              "img_down": "#ui_common_btn_fanye_r_2.png"
+            }
+          ]
+        },
+        {
+          "name": "dot",
+          "type": "node",
+          "x": -1.83,
+          "y": -219.5,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "btn_left",
+          "type": "node",
+          "x": -435.48,
+          "y": 9.5,
+          "width": 49,
+          "height": 85,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btn_fanye_l_1.png",
+              "img_down": "#ui_common_btn_fanye_l_2.png"
+            }
+          ]
+        },
+        {
+          "name": "btn_normal",
+          "type": "node",
+          "x": -60.38,
+          "y": 187.5,
+          "width": 132,
+          "height": 64,
+          "children": [
+            {
+              "name": "btn",
+              "type": "ckb",
+              "img_on": "#ui_common_biaoqian_02.png",
+              "img_off": "#ui_common_biaoqian_01.png"
+            },
+            {
+              "name": "miaoshu",
+              "type": "label",
+              "text": "普通",
+              "align": "center",
+              "size": 30,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -60.5,
+              "y": 3.88,
+              "width": 120,
+              "height": 37.75
+            }
+          ]
+        },
+        {
+          "name": "btn_elite",
+          "type": "node",
+          "x": 69.63,
+          "y": 187.5,
+          "width": 132,
+          "height": 64,
+          "children": [
+            {
+              "name": "btn",
+              "type": "ckb",
+              "img_on": "#ui_common_biaoqian_02.png",
+              "img_off": "#ui_common_biaoqian_01.png"
+            },
+            {
+              "name": "miaoshu",
+              "type": "label",
+              "text": "精英",
+              "align": "center",
+              "size": 30,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -60.5,
+              "y": 3.88,
+              "width": 120,
+              "height": 37.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_pve_title2.png",
+      "x": -193.65,
+      "y": 200.65,
+      "width": 397,
+      "height": 115
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_pve_title2.png",
+      "scale_x": -1,
+      "x": 202.35,
+      "y": 200.65,
+      "width": 397,
+      "height": 115
+    },
+    {
+      "name": "tx_biaoti2",
+      "type": "label",
+      "text": "黄金海岸.啥啥啥啥啥啊啊啊",
+      "align": "center",
+      "size": 30,
+      "color": 4294565631,
+      "x": -197.95,
+      "y": 224.63,
+      "width": 405.95,
+      "height": 39.25
+    },
+    {
+      "name": "tx_biaoti",
+      "type": "label",
+      "text": "黄金海岸.啥啥啥啥啥啊啊啊",
+      "align": "center",
+      "size": 30,
+      "color": 1211308287,
+      "x": -197.95,
+      "y": 226.13,
+      "width": 405.95,
+      "height": 39.25
+    }
+  ]
+}

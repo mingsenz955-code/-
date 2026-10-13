@@ -1,0 +1,31 @@
+{
+  "group": {},
+  "children": [
+    {
+      "name": "ckb",
+      "type": "ckb",
+      "img_on": "#ui_common_ico_bg_02.png",
+      "img_off": "#ui_common_ico_bg_01.png",
+      "img_disable": "#ui_common_ico_bg_04.png"
+    },
+    {
+      "name": "iconContainer",
+      "type": "node",
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "龙升星",
+      "size": 24,
+      "align": "center",
+      "color": 4294967295,
+      "outlineColor": 10040064,
+      "x": -64,
+      "y": -37.13,
+      "width": 126,
+      "height": 33.25
+    }
+  ]
+}

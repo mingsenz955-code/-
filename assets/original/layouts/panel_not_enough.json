@@ -1,0 +1,131 @@
+{
+  "group": {},
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768,
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -274,
+      "y": -5.25,
+      "width": 531,
+      "height": 348,
+      "maxw": 531,
+      "maxh": 348
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -273,
+      "y": 136.25,
+      "width": 525,
+      "height": 55,
+      "maxw": 525,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "金币不足",
+      "align": "center",
+      "size": 20,
+      "color": 4294967295,
+      "x": -242.85,
+      "y": 136.6,
+      "width": 449,
+      "height": 26.5
+    },
+    {
+      "name": "hint_txt",
+      "type": "label",
+      "text": "",
+      "align": "center",
+      "size": 25,
+      "color": 1714618623,
+      "x": -233,
+      "y": 89.25,
+      "width": 449,
+      "height": 32.1
+    },
+    {
+      "name": "icon1",
+      "type": "node",
+      "x": -155.5,
+      "y": -4.45,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "miaoshu1",
+      "type": "label",
+      "text": "",
+      "align": "center",
+      "size": 25,
+      "color": 1714618623,
+      "x": -229.7,
+      "y": -84.4,
+      "width": 147,
+      "height": 62.2
+    },
+    {
+      "name": "icon2",
+      "type": "node",
+      "x": -7.2,
+      "y": -4.45,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "miaoshu2",
+      "type": "label",
+      "text": "",
+      "align": "center",
+      "size": 25,
+      "color": 1714618623,
+      "x": -80.7,
+      "y": -84.4,
+      "width": 147,
+      "height": 62.2
+    },
+    {
+      "name": "icon3",
+      "type": "node",
+      "x": 141.8,
+      "y": -4.45,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "miaoshu3",
+      "type": "label",
+      "text": "",
+      "align": "center",
+      "size": 25,
+      "color": 1714618623,
+      "x": 68.3,
+      "y": -84.4,
+      "width": 147,
+      "height": 62.2
+    },
+    {
+      "name": "btn_GuanBiXiao",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 234,
+      "y": 136.25,
+      "width": 80,
+      "height": 86
+    }
+  ]
+}

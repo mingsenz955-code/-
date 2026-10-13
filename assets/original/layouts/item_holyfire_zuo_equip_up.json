@@ -1,0 +1,851 @@
+{
+  "group": {},
+  "children": [
+    {
+      "name": "diban_zuo",
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -258.5,
+      "y": 15.42,
+      "width": 517,
+      "height": 591.95,
+      "maxw": 517,
+      "maxh": 591.95
+    },
+    {
+      "name": "qianghua",
+      "type": "node",
+      "x": -1.25,
+      "y": -268.95,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "祭拜",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#ui_holyfire_bg_shenhuo.png",
+      "x": 1.15,
+      "y": 100,
+      "width": 470,
+      "height": 356
+    },
+    {
+      "name": "diaoxiang_name",
+      "type": "label",
+      "text": "",
+      "size": 26,
+      "align": "center",
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -119.2,
+      "y": 250,
+      "width": 239.95,
+      "height": 33.25
+    },
+    {
+      "name": "tx_jibai",
+      "type": "label",
+      "text": "祭拜等级：LV55",
+      "size": 18,
+      "align": "left",
+      "color": 1411781375,
+      "x": -230.65,
+      "y": -142.32,
+      "width": 162,
+      "height": 24.25
+    },
+    {
+      "name": "tx_zhushuxing",
+      "type": "label",
+      "text": "",
+      "size": 18,
+      "align": "center",
+      "color": 1411781375,
+      "x": -180,
+      "y": -110,
+      "width": 363,
+      "height": 60
+    },
+    {
+      "name": "tx_fushuxing",
+      "type": "label",
+      "text": "",
+      "size": 18,
+      "align": "left",
+      "color": 1411781375,
+      "x": -230.65,
+      "y": -207.88,
+      "width": 363,
+      "height": 25.35
+    },
+    {
+      "name": "jindu",
+      "type": "node",
+      "x": 82.8,
+      "y": -143.38,
+      "width": 302,
+      "height": 28.25,
+      "children": [
+        {
+          "name": "diban",
+          "type": "sprite",
+          "img": "#ui_starup_xp1.png",
+          "y": 0.13,
+          "width": 302,
+          "height": 28
+        },
+        {
+          "name": "tianchong",
+          "type": "node",
+          "y": 0.13,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_shuzi",
+          "type": "label",
+          "text": "",
+          "size": 20,
+          "align": "center",
+          "color": 4294967295,
+          "x": -140,
+          "y": -0.88,
+          "width": 277,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "diaoxiangi_icon",
+      "type": "node",
+      "y": 110,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "shenhuo_bar",
+      "type": "sprite",
+      "img": "#ui_main_pbar_bg2.png",
+      "scale9": 1,
+      "x": -198.6,
+      "y": 262.55,
+      "width": 190,
+      "height": 46,
+      "maxw": 190,
+      "maxh": 46
+    },
+    {
+      "name": "shenhuo_num",
+      "type": "label",
+      "text": "0",
+      "size": 28,
+      "align": "left",
+      "color": 1092488703,
+      "x": -180.1,
+      "y": 262.3,
+      "width": 154,
+      "height": 35.5
+    },
+    {
+      "name": "shenhuo_icon",
+      "type": "sprite",
+      "img": "#ui_holyfire_jipin.png",
+      "x": -202.6,
+      "y": 262.55,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "name": "xiangxi",
+      "type": "node",
+      "x": 185.35,
+      "y": -193.35,
+      "width": 92,
+      "height": 46,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btndh1.png",
+          "img_down": "#ui_common_btndh2.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "详细",
+          "size": 30,
+          "align": "center",
+          "color": 992815615,
+          "outlineColor": 13941402,
+          "x": -42,
+          "y": -0.13,
+          "width": 85,
+          "height": 37.75
+        }
+      ]
+    },
+    {
+      "name": "help",
+      "type": "btn",
+      "img_normal": "#ui_common_wenhao1holy_tree.png",
+      "img_down": "#ui_common_wenhao2holy_tree.png",
+      "x": 206.1,
+      "y": 259.4
+    },
+    {
+      "name": "leixing1",
+      "type": "node",
+      "x": -150,
+      "y": 100,
+      "width": 80,
+      "height": 117.75,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_holyfire_tanzi1.png",
+          "y": 16.52,
+          "width": 60,
+          "height": 52
+        },
+        {
+          "name": "con",
+          "type": "node",
+          "x": 0.5,
+          "y": 58.88,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "dengji",
+          "type": "label",
+          "text": "lv25",
+          "size": 20,
+          "align": "center",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -39,
+          "y": -4.98,
+          "width": 79,
+          "height": 26.5
+        },
+        {
+          "name": "rejian",
+          "type": "node",
+          "x": 1,
+          "y": 56.53,
+          "width": 80,
+          "height": 86,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_requ.png",
+              "width": 80,
+              "height": 86
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_common_requ.png",
+              "width": 80,
+              "height": 86
+            }
+          ]
+        },
+        {
+          "type": "label",
+          "text": "",
+          "size": 20,
+          "align": "center",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -39,
+          "y": 105.02,
+          "width": 79,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "leixing2",
+      "type": "node",
+      "x": 0,
+      "y": 100,
+      "width": 80,
+      "height": 117.75,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_holyfire_tanzi1.png",
+          "y": 16.52,
+          "width": 60,
+          "height": 52
+        },
+        {
+          "name": "con",
+          "type": "node",
+          "x": 0.5,
+          "y": 58.88,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "dengji",
+          "type": "label",
+          "text": "lv25",
+          "size": 20,
+          "align": "center",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -39,
+          "y": -4.98,
+          "width": 79,
+          "height": 26.5
+        },
+        {
+          "name": "rejian",
+          "type": "node",
+          "x": 1,
+          "y": 56.53,
+          "width": 80,
+          "height": 86,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_requ.png",
+              "width": 80,
+              "height": 86
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_common_requ.png",
+              "width": 80,
+              "height": 86
+            }
+          ]
+        },
+        {
+          "type": "label",
+          "text": "",
+          "size": 20,
+          "align": "center",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -39,
+          "y": 105.02,
+          "width": 79,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "leixing3",
+      "type": "node",
+      "x": 150,
+      "y": 100,
+      "width": 80,
+      "height": 117.75,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_holyfire_tanzi1.png",
+          "y": 16.52,
+          "width": 60,
+          "height": 52
+        },
+        {
+          "name": "con",
+          "type": "node",
+          "x": 0.5,
+          "y": 58.88,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "dengji",
+          "type": "label",
+          "text": "lv25",
+          "size": 20,
+          "align": "center",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -39,
+          "y": -4.98,
+          "width": 79,
+          "height": 26.5
+        },
+        {
+          "name": "rejian",
+          "type": "node",
+          "x": 1,
+          "y": 56.53,
+          "width": 80,
+          "height": 86,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_requ.png",
+              "width": 80,
+              "height": 86
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_common_requ.png",
+              "width": 80,
+              "height": 86
+            }
+          ]
+        },
+        {
+          "type": "label",
+          "text": "",
+          "size": 20,
+          "align": "center",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -39,
+          "y": 105.02,
+          "width": 79,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "leixing4",
+      "type": "node",
+      "x": -150,
+      "y": -50,
+      "width": 80,
+      "height": 117.75,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_holyfire_tanzi1.png",
+          "y": 16.52,
+          "width": 60,
+          "height": 52
+        },
+        {
+          "name": "con",
+          "type": "node",
+          "x": 0.5,
+          "y": 58.88,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "dengji",
+          "type": "label",
+          "text": "lv25",
+          "size": 20,
+          "align": "center",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -39,
+          "y": -4.98,
+          "width": 79,
+          "height": 26.5
+        },
+        {
+          "name": "rejian",
+          "type": "node",
+          "x": 1,
+          "y": 56.53,
+          "width": 80,
+          "height": 86,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_requ.png",
+              "width": 80,
+              "height": 86
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_common_requ.png",
+              "width": 80,
+              "height": 86
+            }
+          ]
+        },
+        {
+          "type": "label",
+          "text": "",
+          "size": 20,
+          "align": "center",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -39,
+          "y": 105.02,
+          "width": 79,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "leixing5",
+      "type": "node",
+      "x": 0,
+      "y": -50,
+      "width": 80,
+      "height": 117.75,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_holyfire_tanzi1.png",
+          "y": 16.52,
+          "width": 60,
+          "height": 52
+        },
+        {
+          "name": "con",
+          "type": "node",
+          "x": 0.5,
+          "y": 58.88,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "dengji",
+          "type": "label",
+          "text": "lv25",
+          "size": 20,
+          "align": "center",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -39,
+          "y": -4.98,
+          "width": 79,
+          "height": 26.5
+        },
+        {
+          "name": "rejian",
+          "type": "node",
+          "x": 1,
+          "y": 56.53,
+          "width": 80,
+          "height": 86,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_requ.png",
+              "width": 80,
+              "height": 86
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_common_requ.png",
+              "width": 80,
+              "height": 86
+            }
+          ]
+        },
+        {
+          "type": "label",
+          "text": "",
+          "size": 20,
+          "align": "center",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -39,
+          "y": 105.02,
+          "width": 79,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "leixing6",
+      "type": "node",
+      "x": 150,
+      "y": -50,
+      "width": 80,
+      "height": 117.75,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_holyfire_tanzi1.png",
+          "y": 16.52,
+          "width": 60,
+          "height": 52
+        },
+        {
+          "name": "con",
+          "type": "node",
+          "x": 0.5,
+          "y": 58.88,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "dengji",
+          "type": "label",
+          "text": "lv25",
+          "size": 20,
+          "align": "center",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -39,
+          "y": -4.98,
+          "width": 79,
+          "height": 26.5
+        },
+        {
+          "name": "rejian",
+          "type": "node",
+          "x": 1,
+          "y": 56.53,
+          "width": 80,
+          "height": 86,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_requ.png",
+              "width": 80,
+              "height": 86
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_common_requ.png",
+              "width": 80,
+              "height": 86
+            }
+          ]
+        },
+        {
+          "type": "label",
+          "text": "",
+          "size": 20,
+          "align": "center",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -39,
+          "y": 105.02,
+          "width": 79,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "air",
+      "type": "node",
+      "x": -100,
+      "y": 280,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_2.png",
+          "img_down": "#ui_common_btn_1.png",
+          "img_disable": "#ui_common_btn_1.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "天空",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "name": "land",
+      "type": "node",
+      "x": 100,
+      "y": 280,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_2.png",
+          "img_down": "#ui_common_btn_1.png",
+          "img_disable": "#ui_common_btn_1.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "大地",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "name": "power_lab",
+      "type": "label",
+      "text": "战力增加：",
+      "size": 20,
+      "align": "left",
+      "color": 1411781375,
+      "x": -230,
+      "y": -150,
+      "width": 154,
+      "height": 35.5
+    },
+    {
+      "name": "power_value",
+      "type": "label",
+      "text": "0",
+      "size": 20,
+      "align": "left",
+      "color": 1411781375,
+      "x": -130,
+      "y": -150,
+      "width": 154,
+      "height": 35.5
+    },
+    {
+      "name": "attr_lab_1",
+      "type": "label",
+      "text": "攻击：",
+      "size": 20,
+      "align": "left",
+      "color": 1411781375,
+      "x": -230,
+      "y": -180,
+      "width": 154,
+      "height": 35.5
+    },
+    {
+      "name": "attr_value_1",
+      "type": "label",
+      "text": "0",
+      "size": 20,
+      "align": "left",
+      "color": 1411781375,
+      "x": -170,
+      "y": -180,
+      "width": 154,
+      "height": 35.5
+    },
+    {
+      "name": "attr_lab_2",
+      "type": "label",
+      "text": "防御：",
+      "size": 20,
+      "align": "left",
+      "color": 1411781375,
+      "x": -60,
+      "y": -180,
+      "width": 154,
+      "height": 35.5
+    },
+    {
+      "name": "attr_value_2",
+      "type": "label",
+      "text": "0",
+      "size": 20,
+      "align": "left",
+      "color": 1411781375,
+      "x": 0,
+      "y": -180,
+      "width": 154,
+      "height": 35.5
+    },
+    {
+      "name": "attr_lab_3",
+      "type": "label",
+      "text": "生命：",
+      "size": 20,
+      "align": "left",
+      "color": 1411781375,
+      "x": 120,
+      "y": -180,
+      "width": 154,
+      "height": 35.5
+    },
+    {
+      "name": "attr_value_3",
+      "type": "label",
+      "text": "0",
+      "size": 20,
+      "align": "left",
+      "color": 1411781375,
+      "x": 180,
+      "y": -180,
+      "width": 154,
+      "height": 35.5
+    },
+    {
+      "name": "attr_lab_4",
+      "type": "label",
+      "text": "暴击：",
+      "size": 20,
+      "align": "left",
+      "color": 1411781375,
+      "x": -230,
+      "y": -210,
+      "width": 154,
+      "height": 35.5
+    },
+    {
+      "name": "attr_value_4",
+      "type": "label",
+      "text": "0",
+      "size": 20,
+      "align": "left",
+      "color": 1411781375,
+      "x": -170,
+      "y": -210,
+      "width": 154,
+      "height": 35.5
+    },
+    {
+      "name": "attr_lab_5",
+      "type": "label",
+      "text": "免爆：",
+      "size": 20,
+      "align": "left",
+      "color": 1411781375,
+      "x": -60,
+      "y": -210,
+      "width": 154,
+      "height": 35.5
+    },
+    {
+      "name": "attr_value_5",
+      "type": "label",
+      "text": "0",
+      "size": 20,
+      "align": "left",
+      "color": 1411781375,
+      "x": 0,
+      "y": -210,
+      "width": 154,
+      "height": 35.5
+    }
+  ]
+}

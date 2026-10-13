@@ -1,0 +1,1097 @@
+{
+  "group": [
+    "ui_guild",
+    "ui_sevenreward",
+    "ui_bgpuzzle",
+    "ui_activitygem",
+    "ui_daojukuang"
+  ],
+  "width": 1042,
+  "height": 627,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "grid": {
+        "x": 107.95,
+        "y": 111,
+        "width": 45.999999999999986,
+        "height": 27
+      },
+      "x": -521.75,
+      "y": -82.65,
+      "width": 1042,
+      "height": 586,
+      "maxw": 1042,
+      "maxh": 586
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "grid": {
+        "x": 24.5,
+        "y": 20,
+        "width": 9.5,
+        "height": 9.5
+      },
+      "x": -521.4,
+      "y": 201.1,
+      "width": 1041,
+      "height": 55,
+      "maxw": 1041,
+      "maxh": 55
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_guild_bg2.png",
+      "scale9": 1,
+      "grid": {
+        "x": 11,
+        "y": 11,
+        "width": 22,
+        "height": 22
+      },
+      "x": -495.7,
+      "y": -87.33,
+      "width": 989,
+      "height": 514.85,
+      "maxw": 989,
+      "maxh": 514.85
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_haoyoulan2.png",
+      "scale9": 1,
+      "grid": {
+        "x": 28.25,
+        "y": 29,
+        "width": 37.75,
+        "height": 36
+      },
+      "x": -339.55,
+      "y": -85.8,
+      "width": 530,
+      "height": 490,
+      "maxw": 530,
+      "maxh": 490
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_haoyoulan2.png",
+      "scale9": 1,
+      "grid": {
+        "x": 28.25,
+        "y": 29,
+        "width": 37.75,
+        "height": 36
+      },
+      "x": 193.9,
+      "y": -85.4,
+      "width": 290,
+      "height": 490,
+      "maxw": 290,
+      "maxh": 490
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_sevenreward_biaotizi.png",
+      "x": 11.35,
+      "y": 222.6,
+      "width": 203,
+      "height": 58
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_sevenreward_daojishibg.png",
+      "x": -75.55,
+      "y": 90,
+      "width": 512,
+      "height": 117
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_bgpuzzle_dage.png",
+      "scale9": 1,
+      "grid": {
+        "x": 25,
+        "y": 25,
+        "width": 50,
+        "height": 50
+      },
+      "x": -325.55,
+      "y": -135.5,
+      "width": 506,
+      "height": 369,
+      "maxw": 506,
+      "maxh": 369
+    },
+    {
+      "name": "node_timebar",
+      "type": "node",
+      "x": -102.05,
+      "y": 101.95,
+      "width": 311,
+      "height": 39,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_sevenreward_jishi.png",
+          "x": -1.5,
+          "y": -1,
+          "width": 311,
+          "height": 39
+        },
+        {
+          "name": "txt_hour",
+          "type": "label",
+          "text": "--",
+          "align": "center",
+          "size": 25,
+          "color": 4294967295,
+          "x": -42.55,
+          "y": -0.43,
+          "width": 33.05,
+          "height": 34.15
+        },
+        {
+          "name": "txt_minute",
+          "type": "label",
+          "text": "--",
+          "align": "center",
+          "size": 25,
+          "color": 4294967295,
+          "x": 94.45,
+          "y": -0.43,
+          "width": 33.05,
+          "height": 34.15
+        },
+        {
+          "name": "txt_second",
+          "type": "label",
+          "text": "--",
+          "align": "center",
+          "size": 25,
+          "color": 4294967295,
+          "x": 26.45,
+          "y": -0.43,
+          "width": 33.05,
+          "height": 34.15
+        }
+      ]
+    },
+    {
+      "name": "node_harfshoppad",
+      "type": "node",
+      "x": 338.4,
+      "y": -81.32,
+      "width": 287,
+      "height": 448.95,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_sevenreward_taiiz.png",
+          "x": -2.95,
+          "y": 93.28,
+          "width": 253,
+          "height": 243
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_sevenreward_banjiabiaoti.png",
+          "y": 194.97,
+          "width": 287,
+          "height": 59
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_sevenreward_ht.png",
+          "x": -4.15,
+          "y": -113.08,
+          "width": 106,
+          "height": 49
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_sevenreward_line.png",
+          "x": -3.5,
+          "y": -51.38,
+          "width": 124,
+          "height": 2
+        },
+        {
+          "name": "node_btn_buynow",
+          "type": "node",
+          "x": 3.55,
+          "y": -196.47,
+          "width": 162,
+          "height": 56,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_activitygem_btn1.png",
+              "img_down": "#ui_activitygem_btn2.png",
+              "img_disable": "#ui_activitygem_btn3.png",
+              "width": 162,
+              "height": 56
+            },
+            {
+              "name": "txt_on",
+              "type": "label",
+              "text": "马上购买",
+              "align": "center",
+              "size": 30,
+              "color": 4294967295,
+              "outlineColor": 11882262,
+              "x": -63.25,
+              "y": 3.6,
+              "width": 128.25,
+              "height": 37.5
+            },
+            {
+              "name": "txt_off",
+              "type": "label",
+              "text": "已达上限",
+              "align": "center",
+              "size": 30,
+              "color": 4294967295,
+              "outlineColor": 6710886,
+              "x": -63.25,
+              "y": 3.6,
+              "width": 128.25,
+              "height": 37.5
+            }
+          ]
+        },
+        {
+          "name": "txt_nowprice",
+          "type": "label",
+          "text": "x",
+          "align": "left",
+          "size": 25,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -20.5,
+          "y": -112.35,
+          "width": 83,
+          "height": 31.95
+        },
+        {
+          "name": "txt_oldprice",
+          "type": "label",
+          "text": "原价:",
+          "align": "center",
+          "size": 25,
+          "color": 2237154047,
+          "x": -99.5,
+          "y": -51.4,
+          "width": 192,
+          "height": 31.95
+        },
+        {
+          "name": "node_costshow",
+          "type": "node",
+          "x": -39.5,
+          "y": -112.47,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "node_item",
+          "type": "node",
+          "x": -4.35,
+          "y": 77.77,
+          "width": 110,
+          "height": 110,
+          "children": [
+            {
+              "name": "bg",
+              "type": "sprite",
+              "img": "#ui_daojukuang_DaoJuKuang1.png",
+              "width": 110,
+              "height": 110
+            },
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "image",
+              "type": "node",
+              "x": -0.85,
+              "y": 2.8,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "eff",
+              "type": "node",
+              "x": -0.85,
+              "y": 1.8,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_num",
+              "type": "label",
+              "text": " ",
+              "align": "right",
+              "size": 20,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -37.1,
+              "y": -25.6,
+              "width": 77,
+              "height": 26.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "node_leftbar",
+      "type": "node",
+      "x": -404.6,
+      "y": -84.82,
+      "width": 170,
+      "height": 475.95,
+      "children": [
+        {
+          "name": "node_btn_item1",
+          "type": "node",
+          "y": 203.47,
+          "width": 170,
+          "height": 67,
+          "children": [
+            {
+              "name": "btn",
+              "type": "ckb",
+              "img_on": "#ui_sevenreward_bq2.png",
+              "img_off": "#ui_sevenreward_bq1.png"
+            },
+            {
+              "name": "img",
+              "type": "sprite",
+              "img": "#ui_sevenreward_zi0.png",
+              "x": -17,
+              "y": 0.15,
+              "width": 90,
+              "height": 28
+            }
+          ]
+        },
+        {
+          "name": "node_btn_item2",
+          "type": "node",
+          "y": 135.32,
+          "width": 170,
+          "height": 67,
+          "children": [
+            {
+              "name": "btn",
+              "type": "ckb",
+              "img_on": "#ui_sevenreward_bq2.png",
+              "img_off": "#ui_sevenreward_bq1.png"
+            },
+            {
+              "name": "img",
+              "type": "sprite",
+              "img": "#ui_sevenreward_zi0.png",
+              "x": -17,
+              "y": 0.15,
+              "width": 90,
+              "height": 28
+            }
+          ]
+        },
+        {
+          "name": "node_btn_item3",
+          "type": "node",
+          "y": 67.17,
+          "width": 170,
+          "height": 67,
+          "children": [
+            {
+              "name": "btn",
+              "type": "ckb",
+              "img_on": "#ui_sevenreward_bq2.png",
+              "img_off": "#ui_sevenreward_bq1.png"
+            },
+            {
+              "name": "img",
+              "type": "sprite",
+              "img": "#ui_sevenreward_zi0.png",
+              "x": -17,
+              "y": 0.15,
+              "width": 90,
+              "height": 28
+            }
+          ]
+        },
+        {
+          "name": "node_btn_item4",
+          "type": "node",
+          "y": -0.97,
+          "width": 170,
+          "height": 67,
+          "children": [
+            {
+              "name": "btn",
+              "type": "ckb",
+              "img_on": "#ui_sevenreward_bq2.png",
+              "img_off": "#ui_sevenreward_bq1.png"
+            },
+            {
+              "name": "img",
+              "type": "sprite",
+              "img": "#ui_sevenreward_zi0.png",
+              "x": -17,
+              "y": 0.15,
+              "width": 90,
+              "height": 28
+            }
+          ]
+        },
+        {
+          "name": "node_btn_item5",
+          "type": "node",
+          "y": -69.13,
+          "width": 170,
+          "height": 67,
+          "children": [
+            {
+              "name": "btn",
+              "type": "ckb",
+              "img_on": "#ui_sevenreward_bq2.png",
+              "img_off": "#ui_sevenreward_bq1.png"
+            },
+            {
+              "name": "img",
+              "type": "sprite",
+              "img": "#ui_sevenreward_zi0.png",
+              "x": -17,
+              "y": 0.15,
+              "width": 90,
+              "height": 28
+            }
+          ]
+        },
+        {
+          "name": "node_btn_item6",
+          "type": "node",
+          "y": -137.28,
+          "width": 170,
+          "height": 67,
+          "children": [
+            {
+              "name": "btn",
+              "type": "ckb",
+              "img_on": "#ui_sevenreward_bq2.png",
+              "img_off": "#ui_sevenreward_bq1.png"
+            },
+            {
+              "name": "img",
+              "type": "sprite",
+              "img": "#ui_sevenreward_zi0.png",
+              "x": -17,
+              "y": 0.15,
+              "width": 90,
+              "height": 28
+            }
+          ]
+        },
+        {
+          "name": "node_btn_item7",
+          "type": "node",
+          "y": -205.47,
+          "width": 170,
+          "height": 67,
+          "children": [
+            {
+              "name": "btn",
+              "type": "ckb",
+              "img_on": "#ui_sevenreward_bq2.png",
+              "img_off": "#ui_sevenreward_bq1.png"
+            },
+            {
+              "name": "img",
+              "type": "sprite",
+              "img": "#ui_sevenreward_zi0.png",
+              "x": -17,
+              "y": 0.15,
+              "width": 90,
+              "height": 28
+            }
+          ]
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_sevenreward_zi1.png",
+          "x": -17.65,
+          "y": 202.63,
+          "width": 14,
+          "height": 25
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_sevenreward_zi2.png",
+          "x": -17.65,
+          "y": 135.18,
+          "width": 20,
+          "height": 25
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_sevenreward_zi3.png",
+          "x": -17.65,
+          "y": 67.72,
+          "width": 20,
+          "height": 25
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_sevenreward_zi4.png",
+          "x": -17.65,
+          "y": -0.72,
+          "width": 22,
+          "height": 25
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_sevenreward_zi5.png",
+          "x": -16.65,
+          "y": -69.17,
+          "width": 19,
+          "height": 25
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_sevenreward_zi6.png",
+          "x": -19,
+          "y": -137.63,
+          "width": 21,
+          "height": 25
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_sevenreward_zi7.png",
+          "x": -17.65,
+          "y": -206.33,
+          "width": 20,
+          "height": 25
+        }
+      ]
+    },
+    {
+      "name": "node_loginreward",
+      "type": "node",
+      "x": -73.1,
+      "y": -46.18,
+      "width": 491,
+      "height": 165.65,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_haoyoulan2.png",
+          "scale9": 1,
+          "grid": {
+            "x": 28.25,
+            "y": 29,
+            "width": 37.75,
+            "height": 36
+          },
+          "x": -239.5,
+          "y": -6.83,
+          "width": 481,
+          "height": 152,
+          "maxw": 481,
+          "maxh": 152
+        },
+        {
+          "name": "img_canget",
+          "type": "sprite",
+          "img": "#ui_sevenreward_xiewen.png",
+          "x": 57,
+          "y": 0.17,
+          "width": 361,
+          "height": 156
+        },
+        {
+          "name": "node_notenough",
+          "type": "node",
+          "x": 124.6,
+          "y": -46.83,
+          "width": 154,
+          "height": 46,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_btn_pppp3.png",
+              "width": 154,
+              "height": 46
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "未达成",
+              "align": "center",
+              "size": 26,
+              "color": 992815615,
+              "outlineColor": 13421772,
+              "x": -73,
+              "y": -0.88,
+              "width": 144,
+              "height": 33.25
+            }
+          ]
+        },
+        {
+          "name": "node_btn_getreward",
+          "type": "node",
+          "x": 124.6,
+          "y": -46.83,
+          "width": 154,
+          "height": 46,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btn_pppp1.png",
+              "img_down": "#ui_common_btn_pppp2.png",
+              "img_disable": "#ui_common_btn_pppp3.png",
+              "width": 154,
+              "height": 46
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "可领取",
+              "align": "center",
+              "size": 24,
+              "color": 992815615,
+              "outlineColor": 13941402,
+              "x": -68,
+              "y": -0.75,
+              "width": 135,
+              "height": 31
+            }
+          ]
+        },
+        {
+          "name": "node_headbar",
+          "type": "node",
+          "y": 57.83,
+          "width": 491,
+          "height": 50,
+          "children": [
+            {
+              "name": "image",
+              "type": "sprite",
+              "img": "#ui_sevenreward_hengtiao2.png",
+              "width": 491,
+              "height": 50
+            },
+            {
+              "name": "txt",
+              "type": "label",
+              "text": "登录奖励",
+              "align": "left",
+              "size": 22,
+              "color": 4294967295,
+              "outlineColor": 10027008,
+              "x": -234.5,
+              "y": 4.82,
+              "width": 470.95,
+              "height": 28.35
+            }
+          ]
+        },
+        {
+          "name": "node_item2",
+          "type": "node",
+          "x": -42.4,
+          "y": -22.38,
+          "width": 110,
+          "height": 110,
+          "children": [
+            {
+              "name": "bg",
+              "type": "sprite",
+              "img": "#ui_daojukuang_DaoJuKuang1.png",
+              "width": 110,
+              "height": 110
+            },
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "image",
+              "type": "node",
+              "x": -0.85,
+              "y": 2.8,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "eff",
+              "type": "node",
+              "x": -0.85,
+              "y": 1.8,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_num",
+              "type": "label",
+              "text": " ",
+              "align": "right",
+              "size": 20,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -37.1,
+              "y": -25.6,
+              "width": 77,
+              "height": 26.5
+            }
+          ]
+        },
+        {
+          "name": "node_item1",
+          "type": "node",
+          "x": -163.35,
+          "y": -22.38,
+          "width": 110,
+          "height": 110,
+          "children": [
+            {
+              "name": "bg",
+              "type": "sprite",
+              "img": "#ui_daojukuang_DaoJuKuang1.png",
+              "width": 110,
+              "height": 110
+            },
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "image",
+              "type": "node",
+              "x": -0.85,
+              "y": 2.8,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "eff",
+              "type": "node",
+              "x": -0.85,
+              "y": 1.8,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_num",
+              "type": "label",
+              "text": " ",
+              "align": "right",
+              "size": 20,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -37.1,
+              "y": -25.6,
+              "width": 77,
+              "height": 26.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "node_taskreward",
+      "type": "node",
+      "x": -72.1,
+      "y": -223.13,
+      "width": 491,
+      "height": 165.65,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_haoyoulan2.png",
+          "scale9": 1,
+          "grid": {
+            "x": 28.25,
+            "y": 29,
+            "width": 37.75,
+            "height": 36
+          },
+          "x": -239.5,
+          "y": -6.83,
+          "width": 481,
+          "height": 152,
+          "maxw": 481,
+          "maxh": 152
+        },
+        {
+          "name": "img_canget",
+          "type": "sprite",
+          "img": "#ui_sevenreward_xiewen.png",
+          "x": 57,
+          "y": 0.17,
+          "width": 361,
+          "height": 156
+        },
+        {
+          "name": "node_headbar",
+          "type": "node",
+          "y": 57.83,
+          "width": 491,
+          "height": 50,
+          "children": [
+            {
+              "name": "image",
+              "type": "sprite",
+              "img": "#ui_sevenreward_hengtiao1.png",
+              "width": 491,
+              "height": 50
+            },
+            {
+              "name": "txt",
+              "type": "label",
+              "text": "登录奖励",
+              "align": "left",
+              "size": 22,
+              "color": 4294967295,
+              "outlineColor": 2723235,
+              "x": -236.5,
+              "y": 3.82,
+              "width": 473.95,
+              "height": 28.35
+            }
+          ]
+        },
+        {
+          "name": "node_notenough",
+          "type": "node",
+          "x": 124.6,
+          "y": -46.83,
+          "width": 154,
+          "height": 46,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_btn_pppp3.png",
+              "width": 154,
+              "height": 46
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "未达成",
+              "align": "center",
+              "size": 26,
+              "color": 992815615,
+              "outlineColor": 13421772,
+              "x": -73,
+              "y": -0.88,
+              "width": 144,
+              "height": 33.25
+            }
+          ]
+        },
+        {
+          "name": "node_btn_getreward",
+          "type": "node",
+          "x": 124.6,
+          "y": -46.83,
+          "width": 154,
+          "height": 46,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btn_pppp1.png",
+              "img_down": "#ui_common_btn_pppp2.png",
+              "img_disable": "#ui_common_btn_pppp3.png",
+              "width": 154,
+              "height": 46
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "可领取",
+              "align": "center",
+              "size": 24,
+              "color": 992815615,
+              "outlineColor": 13941402,
+              "x": -68,
+              "y": -0.75,
+              "width": 135,
+              "height": 31
+            }
+          ]
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_sevenreward_jindu1.png",
+          "x": 125,
+          "y": 4.83,
+          "width": 173,
+          "height": 26
+        },
+        {
+          "name": "node_progress",
+          "type": "node",
+          "x": 125,
+          "y": 4.83,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "node_item2",
+          "type": "node",
+          "x": -42.4,
+          "y": -22.38,
+          "width": 110,
+          "height": 110,
+          "children": [
+            {
+              "name": "bg",
+              "type": "sprite",
+              "img": "#ui_daojukuang_DaoJuKuang1.png",
+              "width": 110,
+              "height": 110
+            },
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "image",
+              "type": "node",
+              "x": -0.85,
+              "y": 2.8,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "eff",
+              "type": "node",
+              "x": -0.85,
+              "y": 1.8,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_num",
+              "type": "label",
+              "text": " ",
+              "align": "right",
+              "size": 20,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -37.1,
+              "y": -25.6,
+              "width": 77,
+              "height": 26.5
+            }
+          ]
+        },
+        {
+          "name": "node_item1",
+          "type": "node",
+          "x": -163.35,
+          "y": -22.38,
+          "width": 110,
+          "height": 110,
+          "children": [
+            {
+              "name": "bg",
+              "type": "sprite",
+              "img": "#ui_daojukuang_DaoJuKuang1.png",
+              "width": 110,
+              "height": 110
+            },
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "image",
+              "type": "node",
+              "x": -0.85,
+              "y": 2.8,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "eff",
+              "type": "node",
+              "x": -0.85,
+              "y": 1.8,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_num",
+              "type": "label",
+              "text": " ",
+              "align": "right",
+              "size": 20,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -37.1,
+              "y": -25.6,
+              "width": 77,
+              "height": 26.5
+            }
+          ]
+        },
+        {
+          "name": "txt_percent",
+          "type": "label",
+          "text": "?/?",
+          "align": "center",
+          "size": 18,
+          "color": 4294967295,
+          "outlineColor": 2723235,
+          "x": 62,
+          "y": 2.78,
+          "width": 120.45,
+          "height": 24.1
+        }
+      ]
+    },
+    {
+      "name": "btn_help",
+      "type": "btn",
+      "img_normal": "#ui_common_wenhao1holy_tree.png",
+      "img_down": "#ui_common_wenhao2holy_tree.png",
+      "x": 103.5,
+      "y": 101.45,
+      "width": 46,
+      "height": 46
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_sevenreward_scl.png",
+      "x": -387.1,
+      "y": -265,
+      "width": 67,
+      "height": 25
+    }
+  ]
+}

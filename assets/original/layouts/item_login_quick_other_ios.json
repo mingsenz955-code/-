@@ -1,0 +1,27 @@
+{
+  "group": [
+    "ui_login_ios"
+  ],
+  "width": 374,
+  "height": 39,
+  "children": [
+    {
+      "name": "img_select",
+      "type": "sprite",
+      "img": "#ui_login_ios_xuanzhongtiao.png",
+      "width": 374,
+      "height": 39
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "其他帐号",
+      "align": "center",
+      "size": 28,
+      "color": 6750207,
+      "x": -169.45,
+      "width": 338.95,
+      "height": 35.5
+    }
+  ]
+}

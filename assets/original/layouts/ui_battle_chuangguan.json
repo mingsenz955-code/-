@@ -1,0 +1,241 @@
+{
+  "group": [
+    "ui_Batlle"
+  ],
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png"
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "y": -5.4,
+      "width": 1024,
+      "height": 515.6,
+      "left": 0,
+      "right": 0
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_GuanBi1.png",
+      "img_down": "#ui_common_btn_GuanBi2.png",
+      "x": 468.1,
+      "y": 338.9,
+      "right": 43.9
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_battle_jd1.png",
+      "y": 330.5,
+      "width": 510,
+      "height": 60
+    },
+    {
+      "name": "con_tianchong",
+      "type": "node",
+      "y": 330.5,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "联赛",
+      "size": 27,
+      "align": "center",
+      "color": 4294967295,
+      "outlineColor": 10040064,
+      "x": -216.9,
+      "y": 332.93,
+      "width": 431.85,
+      "height": 34.15
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_d3.png",
+      "scale9": 1,
+      "x": -245.85,
+      "y": 274,
+      "width": 196,
+      "height": 40,
+      "maxw": 196,
+      "maxh": 40
+    },
+    {
+      "name": "tx_time",
+      "type": "label",
+      "text": "剩余体力：10_10",
+      "size": 21,
+      "align": "left",
+      "color": 4294967295,
+      "x": -239.55,
+      "y": 274.2,
+      "width": 168,
+      "height": 27.6
+    },
+    {
+      "name": "tx_huifu",
+      "type": "label",
+      "text": "恢复时间08:00:00",
+      "size": 21,
+      "align": "left",
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -239.55,
+      "y": 238.6,
+      "width": 215.5,
+      "height": 27.6
+    },
+    {
+      "name": "tianjia",
+      "type": "btn",
+      "img_normal": "#ui_main_05.png",
+      "img_down": "#ui_main_05-2.png",
+      "x": -49.6,
+      "y": 273
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_d3.png",
+      "scale9": 1,
+      "x": 44.15,
+      "y": 274,
+      "width": 121,
+      "height": 40,
+      "maxw": 121,
+      "maxh": 40
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_battle_hsldsp.png",
+      "x": 71.15,
+      "y": 280.5,
+      "width": 60,
+      "height": 60
+    },
+    {
+      "name": "tx_jiangli",
+      "type": "label",
+      "text": "999",
+      "size": 21,
+      "align": "left",
+      "color": 4294967295,
+      "x": 98.45,
+      "y": 274.2,
+      "width": 40,
+      "height": 27.6
+    },
+    {
+      "name": "duihuan",
+      "type": "node",
+      "x": 192.45,
+      "y": 273,
+      "width": 92,
+      "height": 46,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_battle_btndh1.png",
+          "img_down": "#ui_battle_btndh2.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "兑换",
+          "size": 24,
+          "align": "center",
+          "color": 992815615,
+          "outlineColor": 13941402,
+          "x": -37,
+          "y": -0.55,
+          "width": 73,
+          "height": 30.6
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_d3.png",
+      "scale9": 1,
+      "x": -385.85,
+      "y": -286,
+      "width": 780,
+      "height": 40,
+      "maxw": 780,
+      "maxh": 40
+    },
+    {
+      "name": "jiangli_miaoshu_chs",
+      "type": "label",
+      "text": "每章满星通关可获得",
+      "size": 21,
+      "align": "center",
+      "color": 4294967295,
+      "x": -364.55,
+      "y": -285.8,
+      "width": 201,
+      "height": 27.6
+    },
+    {
+      "name": "jiangli_miaoshu_chs2",
+      "type": "label",
+      "text": "。收集",
+      "size": 21,
+      "align": "center",
+      "color": 4294967295,
+      "x": 14.45,
+      "y": -285.8,
+      "width": 77.95,
+      "height": 27.6
+    },
+    {
+      "name": "jiangli_miaoshu_chs3",
+      "type": "label",
+      "text": "个即可兑换传奇·黄狮龙！",
+      "size": 21,
+      "align": "left",
+      "color": 4294967295,
+      "x": 107.4,
+      "y": -285.8,
+      "width": 261,
+      "height": 27.6
+    },
+    {
+      "name": "jiangli_miaoshu red1",
+      "type": "label",
+      "text": "传奇·黄狮龙蛋碎片",
+      "size": 21,
+      "align": "center",
+      "color": 3422552319,
+      "x": -236.55,
+      "y": -285.8,
+      "width": 327,
+      "height": 27.6
+    },
+    {
+      "name": "jiangli_miaoshu red2",
+      "type": "label",
+      "text": "10",
+      "size": 21,
+      "align": "center",
+      "color": 3422552319,
+      "x": 71.45,
+      "y": -285.8,
+      "width": 49,
+      "height": 27.6
+    },
+    {
+      "name": "back",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_FanHui1.png",
+      "img_down": "#ui_common_btn_FanHui2.png",
+      "x": -468.3,
+      "y": 338.9,
+      "left": 43.7
+    }
+  ]
+}

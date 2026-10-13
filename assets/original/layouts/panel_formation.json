@@ -1,0 +1,68 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -202.5,
+      "y": 27.38,
+      "width": 400.75,
+      "height": 601.25,
+      "maxw": 400.75,
+      "maxh": 601.25
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -202.5,
+      "y": 296.55,
+      "width": 400,
+      "height": 55,
+      "maxw": 400,
+      "maxh": 55
+    },
+    {
+      "name": "txt",
+      "type": "label",
+      "text": "",
+      "size": 23,
+      "align": "center",
+      "color": 4294967295,
+      "x": -182.8,
+      "y": 297.97,
+      "width": 361.95,
+      "height": 29.85
+    },
+    {
+      "name": "tx_help",
+      "type": "label",
+      "text": " ",
+      "size": 24,
+      "align": "left",
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -153.95,
+      "y": 2.32,
+      "width": 306.95,
+      "height": 100.65
+    },
+    {
+      "name": "huadong_left",
+      "type": "list",
+      "x": -1.65,
+      "y": 10.1,
+      "width": 520,
+      "height": 509.7
+    },
+    {
+      "name": "btn_GuanBiXiao",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 187.25,
+      "y": 301.4
+    }
+  ]
+}

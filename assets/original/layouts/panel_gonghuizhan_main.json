@@ -1,0 +1,1153 @@
+{
+  "group": [
+    "ui_gonghuizhan",
+    "ui_main",
+    "ui_gonghuifuben",
+    "ui_activitygem",
+    "ui_entrance"
+  ],
+  "width": 1366,
+  "height": 768,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_gonghuizhan_bg.jpg",
+      "x": 1,
+      "y": 0,
+      "width": 1366,
+      "height": 768
+    },
+    {
+      "name": "leftbar",
+      "type": "node",
+      "x": -561,
+      "y": 124,
+      "width": 243,
+      "height": 152,
+      "left": 0,
+      "children": [
+        {
+          "name": "node_curt_winnum",
+          "type": "node",
+          "y": -51,
+          "width": 243,
+          "height": 49,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuizhan_cetiao.png",
+              "x": -1,
+              "width": 241,
+              "height": 49
+            },
+            {
+              "name": "txt_title",
+              "type": "label",
+              "text": "--",
+              "align": "left",
+              "size": 25,
+              "color": 4294967295,
+              "x": -120,
+              "y": -1,
+              "width": 115,
+              "height": 35
+            },
+            {
+              "name": "txt_point",
+              "type": "label",
+              "text": "--",
+              "align": "left",
+              "size": 23,
+              "color": 4291559679,
+              "x": -1,
+              "y": -1,
+              "width": 122,
+              "height": 30
+            }
+          ]
+        },
+        {
+          "name": "node_max_winnum",
+          "type": "node",
+          "width": 243,
+          "height": 49,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuizhan_cetiao.png",
+              "x": -1,
+              "width": 241,
+              "height": 49
+            },
+            {
+              "name": "txt_title",
+              "type": "label",
+              "text": "--",
+              "align": "left",
+              "size": 25,
+              "color": 4294967295,
+              "x": -120,
+              "y": -1,
+              "width": 115,
+              "height": 35
+            },
+            {
+              "name": "txt_point",
+              "type": "label",
+              "text": "--",
+              "align": "left",
+              "size": 23,
+              "color": 4291559679,
+              "x": -1,
+              "y": -1,
+              "width": 122,
+              "height": 30
+            }
+          ]
+        },
+        {
+          "name": "node_curtpoint",
+          "type": "node",
+          "y": 51,
+          "width": 243,
+          "height": 49,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuizhan_cetiao.png",
+              "x": -1,
+              "width": 241,
+              "height": 49
+            },
+            {
+              "name": "txt_title",
+              "type": "label",
+              "text": "--",
+              "align": "left",
+              "size": 25,
+              "color": 4294967295,
+              "x": -120,
+              "y": -1,
+              "width": 115,
+              "height": 35
+            },
+            {
+              "name": "txt_point",
+              "type": "label",
+              "text": "--",
+              "align": "left",
+              "size": 23,
+              "color": 4291559679,
+              "x": -1,
+              "y": -1,
+              "width": 122,
+              "height": 30
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "topbar",
+      "type": "node",
+      "y": 359,
+      "width": 1365,
+      "height": 49,
+      "left": 0,
+      "right": 0,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_gonghuizhan_hengtiao.png",
+          "scale9": 1,
+          "grid": {
+            "x": 372,
+            "y": 12,
+            "width": 277,
+            "height": 25
+          },
+          "x": -682,
+          "y": 0,
+          "width": 1365,
+          "height": 49,
+          "maxw": 1365,
+          "maxh": 49
+        }
+      ]
+    },
+    {
+      "name": "btn_impair_rank",
+      "type": "node",
+      "x": -614,
+      "y": -321,
+      "width": 115,
+      "height": 123,
+      "left": 10,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_main_Z_ico-bg0003.png",
+          "img_down": "#ui_main_Z_ico-bg0004.png",
+          "x": -7,
+          "y": 6,
+          "width": 101,
+          "height": 111
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_gonghuifuben_ico_shanghaipaihang.png",
+          "x": -7,
+          "y": 9,
+          "width": 114,
+          "height": 91
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_gonghuifuben_zi2.png",
+          "x": -6,
+          "y": -44,
+          "width": 115,
+          "height": 35
+        }
+      ]
+    },
+    {
+      "name": "btn_vedio",
+      "type": "node",
+      "x": 516,
+      "y": -329,
+      "width": 101,
+      "height": 121,
+      "right": 110,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_main_Z_ico-bg0003.png",
+          "img_down": "#ui_main_Z_ico-bg0004.png",
+          "y": 5,
+          "width": 101,
+          "height": 111
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_gonghuizhan_ico_re.png",
+          "x": -4,
+          "y": 16,
+          "width": 90,
+          "height": 100
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_gonghuifuben_zi3.png",
+          "x": 0,
+          "y": -37,
+          "width": 65,
+          "height": 35
+        }
+      ]
+    },
+    {
+      "name": "btn_formate",
+      "type": "node",
+      "x": 625,
+      "y": -324,
+      "width": 101,
+      "height": 117,
+      "right": 0,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_main_Z_ico-bg0003.png",
+          "img_down": "#ui_main_Z_ico-bg0004.png",
+          "y": 3,
+          "width": 101,
+          "height": 111
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_Z_ico-BuZhen.png",
+          "x": 0,
+          "y": 10,
+          "width": 94,
+          "height": 79
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_gonghuifuben_zi3.png",
+          "x": 0,
+          "y": -41,
+          "width": 65,
+          "height": 35
+        }
+      ]
+    },
+    {
+      "name": "node_vigorbar",
+      "type": "node",
+      "x": 16,
+      "y": -315,
+      "width": 459,
+      "height": 122,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_gonghuizhan_ditiao.png",
+          "y": 36,
+          "width": 459,
+          "height": 49
+        },
+        {
+          "name": "btn_go",
+          "type": "node",
+          "x": -14,
+          "y": -33,
+          "width": 162,
+          "height": 56,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_activitygem_btn1.png",
+              "img_down": "#ui_activitygem_btn2.png",
+              "img_disable": "#ui_activitygem_btn3.png",
+              "width": 162,
+              "height": 56
+            },
+            {
+              "name": "txt_on",
+              "type": "label",
+              "text": "开始匹配",
+              "align": "center",
+              "size": 23,
+              "color": 4294967295,
+              "outlineColor": 11882262,
+              "x": -70,
+              "y": 5,
+              "width": 138,
+              "height": 30
+            }
+          ]
+        },
+        {
+          "name": "txt1",
+          "type": "label",
+          "text": "剩余体力:",
+          "align": "right",
+          "size": 28,
+          "color": 4294967295,
+          "x": -194,
+          "y": 36,
+          "width": 171,
+          "height": 35
+        },
+        {
+          "name": "txt_vigorrecover",
+          "type": "label",
+          "text": "(--:--)",
+          "align": "center",
+          "size": 28,
+          "color": 4294967295,
+          "x": 114,
+          "y": 35,
+          "width": 91,
+          "height": 35
+        },
+        {
+          "name": "btn_addvigor",
+          "type": "btn",
+          "img_normal": "#ui_main_05.png",
+          "img_down": "#ui_main_05-2.png",
+          "x": 91,
+          "y": 36,
+          "width": 46,
+          "height": 46
+        },
+        {
+          "name": "txt_vigor",
+          "type": "label",
+          "text": "xx/xx",
+          "align": "right",
+          "size": 28,
+          "color": 4291559679,
+          "x": -23,
+          "y": 35,
+          "width": 89,
+          "height": 40
+        }
+      ]
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_GuanBi1.png",
+      "img_down": "#ui_common_btn_GuanBi2.png",
+      "x": 641,
+      "y": 339,
+      "width": 85,
+      "height": 90,
+      "right": 43
+    },
+    {
+      "name": "btn_help",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_tishi1.png",
+      "img_down": "#ui_common_btn_tishi2.png",
+      "x": 548,
+      "y": 339,
+      "width": 85,
+      "height": 90,
+      "right": 143
+    },
+    {
+      "name": "node_nestOwner",
+      "type": "node",
+      "x": 329,
+      "y": -344,
+      "width": 728,
+      "height": 494,
+      "children": [
+        {
+          "name": "item1",
+          "type": "node",
+          "x": -323,
+          "y": 551,
+          "width": 78,
+          "height": 130,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuizhan_touxiangk.png",
+              "y": 11,
+              "width": 78,
+              "height": 78
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuizhan_jindu2.png",
+              "x": 0,
+              "y": 57,
+              "width": 74,
+              "height": 15
+            },
+            {
+              "name": "node_headicon",
+              "type": "node",
+              "x": -33,
+              "y": 43,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "node_progress_container",
+              "type": "node",
+              "x": 0,
+              "y": 58,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "xx",
+              "align": "center",
+              "size": 22,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -35,
+              "y": -51,
+              "width": 69,
+              "height": 29
+            },
+            {
+              "name": "node_viplv",
+              "type": "node",
+              "x": -1,
+              "y": -24,
+              "width": 66,
+              "height": 29,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_entrance_g_03.png",
+                  "y": 0,
+                  "width": 66,
+                  "height": 28
+                },
+                {
+                  "name": "vip_num",
+                  "type": "label",
+                  "text": "",
+                  "align": "center",
+                  "font": "orange_22.fnt",
+                  "bmp": 1,
+                  "x": -33,
+                  "width": 64,
+                  "height": 29
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "item2",
+          "type": "node",
+          "x": -486,
+          "y": 418,
+          "width": 78,
+          "height": 130,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuizhan_touxiangk.png",
+              "y": 11,
+              "width": 78,
+              "height": 78
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuizhan_jindu2.png",
+              "x": 0,
+              "y": 57,
+              "width": 74,
+              "height": 15
+            },
+            {
+              "name": "node_headicon",
+              "type": "node",
+              "x": -33,
+              "y": 43,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "node_progress_container",
+              "type": "node",
+              "x": 0,
+              "y": 58,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "xx",
+              "align": "center",
+              "size": 22,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -35,
+              "y": -51,
+              "width": 69,
+              "height": 29
+            },
+            {
+              "name": "node_viplv",
+              "type": "node",
+              "x": -1,
+              "y": -24,
+              "width": 66,
+              "height": 29,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_entrance_g_03.png",
+                  "y": 0,
+                  "width": 66,
+                  "height": 28
+                },
+                {
+                  "name": "vip_num",
+                  "type": "label",
+                  "text": "",
+                  "align": "center",
+                  "font": "orange_22.fnt",
+                  "bmp": 1,
+                  "x": -33,
+                  "width": 64,
+                  "height": 29
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "item3",
+          "type": "node",
+          "x": -326,
+          "y": 398,
+          "width": 78,
+          "height": 130,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuizhan_touxiangk.png",
+              "y": 11,
+              "width": 78,
+              "height": 78
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuizhan_jindu2.png",
+              "x": 0,
+              "y": 57,
+              "width": 74,
+              "height": 15
+            },
+            {
+              "name": "node_headicon",
+              "type": "node",
+              "x": -33,
+              "y": 43,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "node_progress_container",
+              "type": "node",
+              "x": 0,
+              "y": 58,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "xx",
+              "align": "center",
+              "size": 22,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -35,
+              "y": -51,
+              "width": 69,
+              "height": 29
+            },
+            {
+              "name": "node_viplv",
+              "type": "node",
+              "x": -1,
+              "y": -24,
+              "width": 66,
+              "height": 29,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_entrance_g_03.png",
+                  "y": 0,
+                  "width": 66,
+                  "height": 28
+                },
+                {
+                  "name": "vip_num",
+                  "type": "label",
+                  "text": "",
+                  "align": "center",
+                  "font": "orange_22.fnt",
+                  "bmp": 1,
+                  "x": -33,
+                  "width": 64,
+                  "height": 29
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "item4",
+          "type": "node",
+          "x": -156,
+          "y": 418,
+          "width": 78,
+          "height": 130,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuizhan_touxiangk.png",
+              "y": 11,
+              "width": 78,
+              "height": 78
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuizhan_jindu2.png",
+              "x": 0,
+              "y": 57,
+              "width": 74,
+              "height": 15
+            },
+            {
+              "name": "node_headicon",
+              "type": "node",
+              "x": -33,
+              "y": 43,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "node_progress_container",
+              "type": "node",
+              "x": 0,
+              "y": 58,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "xx",
+              "align": "center",
+              "size": 22,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -35,
+              "y": -51,
+              "width": 69,
+              "height": 29
+            },
+            {
+              "name": "node_viplv",
+              "type": "node",
+              "x": -1,
+              "y": -24,
+              "width": 66,
+              "height": 29,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_entrance_g_03.png",
+                  "y": 0,
+                  "width": 66,
+                  "height": 28
+                },
+                {
+                  "name": "vip_num",
+                  "type": "label",
+                  "text": "",
+                  "align": "center",
+                  "font": "orange_22.fnt",
+                  "bmp": 1,
+                  "x": -33,
+                  "width": 64,
+                  "height": 29
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "item5",
+          "type": "node",
+          "x": -656,
+          "y": 288,
+          "width": 78,
+          "height": 130,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuizhan_touxiangk.png",
+              "y": 11,
+              "width": 78,
+              "height": 78
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuizhan_jindu2.png",
+              "x": 0,
+              "y": 57,
+              "width": 74,
+              "height": 15
+            },
+            {
+              "name": "node_headicon",
+              "type": "node",
+              "x": -33,
+              "y": 43,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "node_progress_container",
+              "type": "node",
+              "x": 0,
+              "y": 58,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "xx",
+              "align": "center",
+              "size": 22,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -35,
+              "y": -51,
+              "width": 69,
+              "height": 29
+            },
+            {
+              "name": "node_viplv",
+              "type": "node",
+              "x": -1,
+              "y": -24,
+              "width": 66,
+              "height": 29,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_entrance_g_03.png",
+                  "y": 0,
+                  "width": 66,
+                  "height": 28
+                },
+                {
+                  "name": "vip_num",
+                  "type": "label",
+                  "text": "",
+                  "align": "center",
+                  "font": "orange_22.fnt",
+                  "bmp": 1,
+                  "x": -33,
+                  "width": 64,
+                  "height": 29
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "item6",
+          "type": "node",
+          "x": -506,
+          "y": 218,
+          "width": 78,
+          "height": 130,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuizhan_touxiangk.png",
+              "y": 11,
+              "width": 78,
+              "height": 78
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuizhan_jindu2.png",
+              "x": 0,
+              "y": 57,
+              "width": 74,
+              "height": 15
+            },
+            {
+              "name": "node_headicon",
+              "type": "node",
+              "x": -33,
+              "y": 43,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "node_progress_container",
+              "type": "node",
+              "x": 0,
+              "y": 58,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "xx",
+              "align": "center",
+              "size": 22,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -35,
+              "y": -51,
+              "width": 69,
+              "height": 29
+            },
+            {
+              "name": "node_viplv",
+              "type": "node",
+              "x": -1,
+              "y": -24,
+              "width": 66,
+              "height": 29,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_entrance_g_03.png",
+                  "y": 0,
+                  "width": 66,
+                  "height": 28
+                },
+                {
+                  "name": "vip_num",
+                  "type": "label",
+                  "text": "",
+                  "align": "center",
+                  "font": "orange_22.fnt",
+                  "bmp": 1,
+                  "x": -33,
+                  "width": 64,
+                  "height": 29
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "item7",
+          "type": "node",
+          "x": -326,
+          "y": 188,
+          "width": 78,
+          "height": 130,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuizhan_touxiangk.png",
+              "y": 11,
+              "width": 78,
+              "height": 78
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuizhan_jindu2.png",
+              "x": 0,
+              "y": 57,
+              "width": 74,
+              "height": 15
+            },
+            {
+              "name": "node_headicon",
+              "type": "node",
+              "x": -33,
+              "y": 43,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "node_progress_container",
+              "type": "node",
+              "x": 0,
+              "y": 58,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "xx",
+              "align": "center",
+              "size": 22,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -35,
+              "y": -51,
+              "width": 69,
+              "height": 29
+            },
+            {
+              "name": "node_viplv",
+              "type": "node",
+              "x": -1,
+              "y": -24,
+              "width": 66,
+              "height": 29,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_entrance_g_03.png",
+                  "y": 0,
+                  "width": 66,
+                  "height": 28
+                },
+                {
+                  "name": "vip_num",
+                  "type": "label",
+                  "text": "",
+                  "align": "center",
+                  "font": "orange_22.fnt",
+                  "bmp": 1,
+                  "x": -33,
+                  "width": 64,
+                  "height": 29
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "item8",
+          "type": "node",
+          "x": -146,
+          "y": 224,
+          "width": 78,
+          "height": 130,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuizhan_touxiangk.png",
+              "y": 11,
+              "width": 78,
+              "height": 78
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuizhan_jindu2.png",
+              "x": 0,
+              "y": 57,
+              "width": 74,
+              "height": 15
+            },
+            {
+              "name": "node_headicon",
+              "type": "node",
+              "x": -33,
+              "y": 43,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "node_progress_container",
+              "type": "node",
+              "x": 0,
+              "y": 58,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "xx",
+              "align": "center",
+              "size": 22,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -35,
+              "y": -51,
+              "width": 69,
+              "height": 29
+            },
+            {
+              "name": "node_viplv",
+              "type": "node",
+              "x": -1,
+              "y": -24,
+              "width": 66,
+              "height": 29,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_entrance_g_03.png",
+                  "y": 0,
+                  "width": 66,
+                  "height": 28
+                },
+                {
+                  "name": "vip_num",
+                  "type": "label",
+                  "text": "",
+                  "align": "center",
+                  "font": "orange_22.fnt",
+                  "bmp": 1,
+                  "x": -33,
+                  "width": 64,
+                  "height": 29
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "item9",
+          "type": "node",
+          "x": -6,
+          "y": 308,
+          "width": 78,
+          "height": 130,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuizhan_touxiangk.png",
+              "y": 11,
+              "width": 78,
+              "height": 78
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuizhan_jindu2.png",
+              "x": 0,
+              "y": 57,
+              "width": 74,
+              "height": 15
+            },
+            {
+              "name": "node_headicon",
+              "type": "node",
+              "x": -33,
+              "y": 43,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "node_progress_container",
+              "type": "node",
+              "x": 0,
+              "y": 58,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "xx",
+              "align": "center",
+              "size": 22,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -35,
+              "y": -51,
+              "width": 69,
+              "height": 29
+            },
+            {
+              "name": "node_viplv",
+              "type": "node",
+              "x": -1,
+              "y": -24,
+              "width": 66,
+              "height": 29,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_entrance_g_03.png",
+                  "y": 0,
+                  "width": 66,
+                  "height": 28
+                },
+                {
+                  "name": "vip_num",
+                  "type": "label",
+                  "text": "",
+                  "align": "center",
+                  "font": "orange_22.fnt",
+                  "bmp": 1,
+                  "x": -33,
+                  "width": 64,
+                  "height": 29
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

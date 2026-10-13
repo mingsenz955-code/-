@@ -1,0 +1,172 @@
+{
+  "group": [
+    "ui_lottery"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_GuanBi1.png",
+      "img_down": "#ui_common_btn_GuanBi2.png",
+      "x": 468.1,
+      "y": 338.9,
+      "width": 85,
+      "height": 90,
+      "right": 43.9
+    },
+    {
+      "name": "dragonball",
+      "type": "node",
+      "x": -271.95,
+      "y": -342.47,
+      "width": 438,
+      "height": 58.05,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_lottery_ziyuan.png",
+          "scale9": 1,
+          "x": -219,
+          "y": -5.03,
+          "width": 438,
+          "height": 48,
+          "maxw": 438,
+          "maxh": 48
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_lottery_46.png",
+          "x": -179.5,
+          "y": 4.52,
+          "width": 48,
+          "height": 49
+        },
+        {
+          "name": "diji",
+          "type": "label",
+          "text": " ",
+          "align": "left",
+          "size": 26,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -157,
+          "y": -4.3,
+          "width": 86,
+          "height": 33.25
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_lottery_47.png",
+          "x": -42,
+          "y": 2.52,
+          "width": 48,
+          "height": 49
+        },
+        {
+          "name": "zhongji",
+          "type": "label",
+          "text": " ",
+          "align": "left",
+          "size": 26,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -17,
+          "y": -4.3,
+          "width": 86,
+          "height": 33.25
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_lottery_48.png",
+          "x": 95.35,
+          "y": 3.02,
+          "width": 46,
+          "height": 46
+        },
+        {
+          "name": "gaoji",
+          "type": "label",
+          "text": " ",
+          "align": "left",
+          "size": 26,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": 123,
+          "y": -4.3,
+          "width": 86,
+          "height": 33.25
+        }
+      ]
+    },
+    {
+      "name": "mojing",
+      "type": "node",
+      "x": 61.05,
+      "y": -343.45,
+      "width": 224,
+      "height": 60,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_lottery_ziyuan.png",
+          "scale9": 1,
+          "x": -112,
+          "y": -4.05,
+          "width": 224,
+          "height": 48,
+          "maxw": 224,
+          "maxh": 48
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_lottery_08.png",
+          "x": -73.65,
+          "width": 44,
+          "height": 60
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": " ",
+          "align": "left",
+          "size": 26,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -50,
+          "y": -3.32,
+          "width": 142,
+          "height": 33.25
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_d.png",
+      "x": -1.15,
+      "y": 341,
+      "width": 573,
+      "height": 83
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "探索",
+      "align": "center",
+      "size": 28,
+      "color": 4294967295,
+      "x": -216.9,
+      "y": 332.07,
+      "width": 431.85,
+      "height": 35.85
+    }
+  ]
+}

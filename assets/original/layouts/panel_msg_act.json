@@ -1,0 +1,125 @@
+{
+  "group": {},
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768,
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -270.3,
+      "y": -7.3,
+      "width": 604,
+      "height": 424,
+      "maxw": 604,
+      "maxh": 424
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -271.9,
+      "y": 192.4,
+      "width": 608.95,
+      "height": 55,
+      "maxw": 608.95,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "提示",
+      "align": "center",
+      "size": 25,
+      "color": 4294967295,
+      "x": -213.4,
+      "y": 194.95,
+      "width": 502,
+      "height": 32.1
+    },
+    {
+      "name": "btn_QueDing",
+      "type": "node",
+      "x": 25.5,
+      "y": -193.55,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png",
+          "img_disable": "#ui_common_btn_2c.png",
+          "width": 144,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "确定",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_pao.png",
+      "scale9": 1,
+      "x": -202.4,
+      "y": 10.05,
+      "width": 494,
+      "height": 290,
+      "maxw": 494,
+      "maxh": 290
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "x": 55.3,
+      "y": 11.65,
+      "width": 464,
+      "height": 282
+    },
+    {
+      "name": "txt",
+      "type": "node",
+      "x": -168.35,
+      "y": 148.05,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "btn_close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 318.05,
+      "y": 195.65,
+      "width": 80,
+      "height": 86
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_long.png",
+      "x": -276,
+      "y": -97.95,
+      "width": 160,
+      "height": 160
+    }
+  ]
+}

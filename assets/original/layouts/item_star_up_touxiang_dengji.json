@@ -1,0 +1,66 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_DaoJuKuang1.png",
+      "x": -0.4,
+      "y": -4.05,
+      "width": 85,
+      "height": 85
+    },
+    {
+      "name": "quality",
+      "type": "node",
+      "x": -0.4,
+      "y": -4.05,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "icon",
+      "type": "node",
+      "x": -0.4,
+      "y": -4.05,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "selected",
+      "type": "sprite",
+      "img": "#ui_common_selected85.png",
+      "x": -2,
+      "y": -1,
+      "width": 100,
+      "height": 100
+    },
+    {
+      "name": "biaoji",
+      "type": "node",
+      "x": -25.3,
+      "y": 18.1,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_main_ico_LongDengJi.png",
+      "x": 25.8,
+      "y": 26.5,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "name": "tx_lv",
+      "type": "label",
+      "text": "99",
+      "size": 23,
+      "align": "center",
+      "color": 255,
+      "x": 11.9,
+      "y": 25.62,
+      "width": 29.8,
+      "height": 29.85
+    }
+  ]
+}

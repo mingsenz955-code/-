@@ -1,0 +1,252 @@
+{
+  "group": [
+    "ui_recharge"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768,
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -487.8,
+      "y": -19.48,
+      "width": 977,
+      "height": 624.95,
+      "maxw": 977,
+      "maxh": 624.95
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -486.8,
+      "y": 260.5,
+      "width": 977,
+      "height": 55,
+      "maxw": 977,
+      "maxh": 55
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_recharge_titlebg.png",
+      "x": 7.6,
+      "y": 278.4,
+      "width": 485,
+      "height": 109
+    },
+    {
+      "name": "title",
+      "type": "label",
+      "text": "",
+      "align": "center",
+      "font": "orange_46.fnt",
+      "bmp": 1,
+      "x": -74.95,
+      "y": 284.48,
+      "width": 167.9,
+      "height": 55.75
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 459.8,
+      "y": 262,
+      "width": 80,
+      "height": 86
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_recharge_bg9.png",
+      "scale9": 1,
+      "x": -458.8,
+      "y": -39.6,
+      "width": 925,
+      "height": 517,
+      "maxw": 925,
+      "maxh": 517
+    },
+    {
+      "name": "data",
+      "type": "node",
+      "x": 1.2,
+      "y": -36.58,
+      "width": 920,
+      "height": 508.35,
+      "children": [
+        {
+          "name": "hadong",
+          "type": "list",
+          "x": -1,
+          "y": -62.68,
+          "width": 915,
+          "height": 383
+        },
+        {
+          "name": "status",
+          "type": "node",
+          "y": 191.18,
+          "width": 920,
+          "height": 126,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_recharge_fengeban.png",
+              "width": 920,
+              "height": 126
+            },
+            {
+              "name": "vip_lv",
+              "type": "label",
+              "text": " ",
+              "align": "left",
+              "size": 36,
+              "color": 4244570367,
+              "outlineColor": 0,
+              "x": -438,
+              "y": 16.15,
+              "width": 112,
+              "height": 44.5
+            },
+            {
+              "name": "vip_lv_next",
+              "type": "label",
+              "text": " ",
+              "align": "left",
+              "size": 36,
+              "color": 4244570367,
+              "outlineColor": 0,
+              "x": 14,
+              "y": 16.15,
+              "width": 112,
+              "height": 44.5
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_recharge_jindubg.png",
+              "x": -161.1,
+              "y": 18,
+              "width": 328,
+              "height": 32
+            },
+            {
+              "name": "exp",
+              "type": "sprite",
+              "img": "#ui_recharge_jindu.png",
+              "x": -161.1,
+              "y": 18,
+              "width": 322,
+              "height": 26
+            },
+            {
+              "name": "exp_num",
+              "type": "label",
+              "text": "",
+              "align": "center",
+              "size": 24,
+              "color": 4294967295,
+              "x": -296.05,
+              "y": 18.1,
+              "width": 264.9,
+              "height": 31
+            },
+            {
+              "name": "hint1",
+              "type": "label",
+              "text": "再充值",
+              "align": "right",
+              "size": 24,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -436,
+              "y": -24.1,
+              "width": 84,
+              "height": 31
+            },
+            {
+              "name": "hint2",
+              "type": "label",
+              "text": "魔晶，即可成为",
+              "align": "left",
+              "size": 24,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -246,
+              "y": -24.1,
+              "width": 267,
+              "height": 31
+            },
+            {
+              "name": "mojing",
+              "type": "label",
+              "text": " ",
+              "align": "center",
+              "size": 24,
+              "color": 3008887551,
+              "outlineColor": 0,
+              "x": -352,
+              "y": -24.1,
+              "width": 106,
+              "height": 31
+            },
+            {
+              "name": "vip_lv_target",
+              "type": "label",
+              "text": " ",
+              "align": "left",
+              "size": 24,
+              "color": 4244570367,
+              "outlineColor": 0,
+              "x": -64,
+              "y": -24.1,
+              "width": 112,
+              "height": 31
+            },
+            {
+              "name": "btn_privilege",
+              "type": "node",
+              "x": 369.75,
+              "y": -3.35,
+              "width": 144,
+              "height": 85,
+              "children": [
+                {
+                  "name": "btn",
+                  "type": "btn",
+                  "img_normal": "#ui_common_btn_1.png",
+                  "img_down": "#ui_common_btn_2.png",
+                  "img_disable": "#ui_common_btn_2c.png",
+                  "width": 144,
+                  "height": 85
+                },
+                {
+                  "name": "txt_name",
+                  "type": "label",
+                  "text": "VIP特权",
+                  "align": "center",
+                  "size": 30,
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -64.5,
+                  "y": 3.63,
+                  "width": 130,
+                  "height": 37.75
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,811 @@
+{
+  "group": [
+    "ui_battlenormal",
+    "ui_battle"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "name": "bg",
+      "type": "btn",
+      "img_normal": "#ui_battlenormal_bg.png",
+      "img_down": "#ui_battlenormal_bg.png",
+      "width": 1022,
+      "height": 768
+    },
+    {
+      "name": "leftstage",
+      "type": "sprite",
+      "img": "#ui_battlenormal_leftstage.png",
+      "x": -269,
+      "y": -297,
+      "width": 486,
+      "height": 174,
+      "left": 0,
+      "bottom": 0
+    },
+    {
+      "name": "rightstage",
+      "type": "sprite",
+      "img": "#ui_battlenormal_rightstage.png",
+      "x": 275.5,
+      "y": -294.5,
+      "width": 473,
+      "height": 179,
+      "right": 0,
+      "bottom": 0
+    },
+    {
+      "name": "top_bg",
+      "type": "sprite",
+      "img": "#ui_battle_bantouhei.png",
+      "scale9": 1,
+      "grid": {
+        "x": 5,
+        "y": 25,
+        "width": 10,
+        "height": 50
+      },
+      "x": -511,
+      "y": 334,
+      "width": 1022,
+      "height": 100,
+      "maxw": 1022,
+      "maxh": 100,
+      "left": 0,
+      "right": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_battle_toubu.png",
+      "x": -1,
+      "y": 327.5,
+      "width": 181,
+      "height": 113
+    },
+    {
+      "name": "left1",
+      "type": "node",
+      "x": -123.4,
+      "y": 313.85,
+      "width": 63,
+      "height": 44,
+      "children": [
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -0.5,
+          "y": 22,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_xuetiao1.png",
+          "y": -16.5,
+          "width": 63,
+          "height": 11
+        },
+        {
+          "name": "hp",
+          "type": "sprite",
+          "img": "#ui_battle_xuetiao2.png",
+          "x": 0.35,
+          "y": -16.35,
+          "width": 59,
+          "height": 7
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_dengji.png",
+          "x": 9.85,
+          "y": 2.65,
+          "width": 34,
+          "height": 15
+        },
+        {
+          "name": "lv",
+          "type": "label",
+          "text": "",
+          "align": "right",
+          "size": 14,
+          "color": 4294967295,
+          "x": -24.5,
+          "y": 0.88,
+          "width": 51,
+          "height": 19.75
+        }
+      ]
+    },
+    {
+      "name": "left2",
+      "type": "node",
+      "x": -193.4,
+      "y": 313.85,
+      "width": 63,
+      "height": 44,
+      "children": [
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -0.5,
+          "y": 22,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_xuetiao1.png",
+          "y": -16.5,
+          "width": 63,
+          "height": 11
+        },
+        {
+          "name": "hp",
+          "type": "sprite",
+          "img": "#ui_battle_xuetiao2.png",
+          "x": 0.35,
+          "y": -16.35,
+          "width": 59,
+          "height": 7
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_dengji.png",
+          "x": 9.85,
+          "y": 2.65,
+          "width": 34,
+          "height": 15
+        },
+        {
+          "name": "lv",
+          "type": "label",
+          "text": "",
+          "align": "right",
+          "size": 14,
+          "color": 4294967295,
+          "x": -24.5,
+          "y": 0.88,
+          "width": 51,
+          "height": 19.75
+        }
+      ]
+    },
+    {
+      "name": "left3",
+      "type": "node",
+      "x": -263.4,
+      "y": 313.85,
+      "width": 63,
+      "height": 44,
+      "children": [
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -0.5,
+          "y": 22,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_xuetiao1.png",
+          "y": -16.5,
+          "width": 63,
+          "height": 11
+        },
+        {
+          "name": "hp",
+          "type": "sprite",
+          "img": "#ui_battle_xuetiao2.png",
+          "x": 0.35,
+          "y": -16.35,
+          "width": 59,
+          "height": 7
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_dengji.png",
+          "x": 9.85,
+          "y": 2.65,
+          "width": 34,
+          "height": 15
+        },
+        {
+          "name": "lv",
+          "type": "label",
+          "text": "",
+          "align": "right",
+          "size": 14,
+          "color": 4294967295,
+          "x": -24.5,
+          "y": 0.88,
+          "width": 51,
+          "height": 19.75
+        }
+      ]
+    },
+    {
+      "name": "left4",
+      "type": "node",
+      "x": -333.4,
+      "y": 313.85,
+      "width": 63,
+      "height": 44,
+      "children": [
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -0.5,
+          "y": 22,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_xuetiao1.png",
+          "y": -16.5,
+          "width": 63,
+          "height": 11
+        },
+        {
+          "name": "hp",
+          "type": "sprite",
+          "img": "#ui_battle_xuetiao2.png",
+          "x": 0.35,
+          "y": -16.35,
+          "width": 59,
+          "height": 7
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_dengji.png",
+          "x": 9.85,
+          "y": 2.65,
+          "width": 34,
+          "height": 15
+        },
+        {
+          "name": "lv",
+          "type": "label",
+          "text": "",
+          "align": "right",
+          "size": 14,
+          "color": 4294967295,
+          "x": -24.5,
+          "y": 0.88,
+          "width": 51,
+          "height": 19.75
+        }
+      ]
+    },
+    {
+      "name": "left5",
+      "type": "node",
+      "x": -403.4,
+      "y": 313.85,
+      "width": 63,
+      "height": 44,
+      "children": [
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -0.5,
+          "y": 22,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_xuetiao1.png",
+          "y": -16.5,
+          "width": 63,
+          "height": 11
+        },
+        {
+          "name": "hp",
+          "type": "sprite",
+          "img": "#ui_battle_xuetiao2.png",
+          "x": 0.35,
+          "y": -16.35,
+          "width": 59,
+          "height": 7
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_dengji.png",
+          "x": 9.85,
+          "y": 2.65,
+          "width": 34,
+          "height": 15
+        },
+        {
+          "name": "lv",
+          "type": "label",
+          "text": "",
+          "align": "right",
+          "size": 14,
+          "color": 4294967295,
+          "x": -24.5,
+          "y": 0.88,
+          "width": 51,
+          "height": 19.75
+        }
+      ]
+    },
+    {
+      "name": "left6",
+      "type": "node",
+      "x": -473.4,
+      "y": 313.85,
+      "width": 63,
+      "height": 44,
+      "children": [
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -0.5,
+          "y": 22,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_xuetiao1.png",
+          "y": -16.5,
+          "width": 63,
+          "height": 11
+        },
+        {
+          "name": "hp",
+          "type": "sprite",
+          "img": "#ui_battle_xuetiao2.png",
+          "x": 0.35,
+          "y": -16.35,
+          "width": 59,
+          "height": 7
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_dengji.png",
+          "x": 9.85,
+          "y": 2.65,
+          "width": 34,
+          "height": 15
+        },
+        {
+          "name": "lv",
+          "type": "label",
+          "text": "",
+          "align": "right",
+          "size": 14,
+          "color": 4294967295,
+          "x": -24.5,
+          "y": 0.88,
+          "width": 51,
+          "height": 19.75
+        }
+      ]
+    },
+    {
+      "name": "right1",
+      "type": "node",
+      "x": 121.6,
+      "y": 313.85,
+      "width": 63,
+      "height": 44,
+      "children": [
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -0.5,
+          "y": 22,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_xuetiao1.png",
+          "y": -16.5,
+          "width": 63,
+          "height": 11
+        },
+        {
+          "name": "hp",
+          "type": "sprite",
+          "img": "#ui_battle_xuetiao2.png",
+          "x": 0.35,
+          "y": -16.35,
+          "width": 59,
+          "height": 7
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_dengji.png",
+          "x": 9.85,
+          "y": 2.65,
+          "width": 34,
+          "height": 15
+        },
+        {
+          "name": "lv",
+          "type": "label",
+          "text": "",
+          "align": "right",
+          "size": 14,
+          "color": 4294967295,
+          "x": -24.5,
+          "y": 0.88,
+          "width": 51,
+          "height": 19.75
+        }
+      ]
+    },
+    {
+      "name": "right2",
+      "type": "node",
+      "x": 191.6,
+      "y": 313.85,
+      "width": 63,
+      "height": 44,
+      "children": [
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -0.5,
+          "y": 22,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_xuetiao1.png",
+          "y": -16.5,
+          "width": 63,
+          "height": 11
+        },
+        {
+          "name": "hp",
+          "type": "sprite",
+          "img": "#ui_battle_xuetiao2.png",
+          "x": 0.35,
+          "y": -16.35,
+          "width": 59,
+          "height": 7
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_dengji.png",
+          "x": 9.85,
+          "y": 2.65,
+          "width": 34,
+          "height": 15
+        },
+        {
+          "name": "lv",
+          "type": "label",
+          "text": "",
+          "align": "right",
+          "size": 14,
+          "color": 4294967295,
+          "x": -24.5,
+          "y": 0.88,
+          "width": 51,
+          "height": 19.75
+        }
+      ]
+    },
+    {
+      "name": "right3",
+      "type": "node",
+      "x": 261.6,
+      "y": 313.85,
+      "width": 63,
+      "height": 44,
+      "children": [
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -0.5,
+          "y": 22,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_xuetiao1.png",
+          "y": -16.5,
+          "width": 63,
+          "height": 11
+        },
+        {
+          "name": "hp",
+          "type": "sprite",
+          "img": "#ui_battle_xuetiao2.png",
+          "x": 0.35,
+          "y": -16.35,
+          "width": 59,
+          "height": 7
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_dengji.png",
+          "x": 9.85,
+          "y": 2.65,
+          "width": 34,
+          "height": 15
+        },
+        {
+          "name": "lv",
+          "type": "label",
+          "text": "",
+          "align": "right",
+          "size": 14,
+          "color": 4294967295,
+          "x": -24.5,
+          "y": 0.88,
+          "width": 51,
+          "height": 19.75
+        }
+      ]
+    },
+    {
+      "name": "right4",
+      "type": "node",
+      "x": 331.6,
+      "y": 313.85,
+      "width": 63,
+      "height": 44,
+      "children": [
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -0.5,
+          "y": 22,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_xuetiao1.png",
+          "y": -16.5,
+          "width": 63,
+          "height": 11
+        },
+        {
+          "name": "hp",
+          "type": "sprite",
+          "img": "#ui_battle_xuetiao2.png",
+          "x": 0.35,
+          "y": -16.35,
+          "width": 59,
+          "height": 7
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_dengji.png",
+          "x": 9.85,
+          "y": 2.65,
+          "width": 34,
+          "height": 15
+        },
+        {
+          "name": "lv",
+          "type": "label",
+          "text": "",
+          "align": "right",
+          "size": 14,
+          "color": 4294967295,
+          "x": -24.5,
+          "y": 0.88,
+          "width": 51,
+          "height": 19.75
+        }
+      ]
+    },
+    {
+      "name": "right5",
+      "type": "node",
+      "x": 401.6,
+      "y": 313.85,
+      "width": 63,
+      "height": 44,
+      "children": [
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -0.5,
+          "y": 22,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_xuetiao1.png",
+          "y": -16.5,
+          "width": 63,
+          "height": 11
+        },
+        {
+          "name": "hp",
+          "type": "sprite",
+          "img": "#ui_battle_xuetiao2.png",
+          "x": 0.35,
+          "y": -16.35,
+          "width": 59,
+          "height": 7
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_dengji.png",
+          "x": 9.85,
+          "y": 2.65,
+          "width": 34,
+          "height": 15
+        },
+        {
+          "name": "lv",
+          "type": "label",
+          "text": "",
+          "align": "right",
+          "size": 14,
+          "color": 4294967295,
+          "x": -24.5,
+          "y": 0.88,
+          "width": 51,
+          "height": 19.75
+        }
+      ]
+    },
+    {
+      "name": "right6",
+      "type": "node",
+      "x": 471.6,
+      "y": 313.85,
+      "width": 63,
+      "height": 44,
+      "children": [
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -0.5,
+          "y": 22,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_xuetiao1.png",
+          "y": -16.5,
+          "width": 63,
+          "height": 11
+        },
+        {
+          "name": "hp",
+          "type": "sprite",
+          "img": "#ui_battle_xuetiao2.png",
+          "x": 0.35,
+          "y": -16.35,
+          "width": 59,
+          "height": 7
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_dengji.png",
+          "x": 9.85,
+          "y": 2.65,
+          "width": 34,
+          "height": 15
+        },
+        {
+          "name": "lv",
+          "type": "label",
+          "text": "",
+          "align": "right",
+          "size": 14,
+          "color": 4294967295,
+          "x": -24.5,
+          "y": 0.88,
+          "width": 51,
+          "height": 19.75
+        }
+      ]
+    },
+    {
+      "name": "round",
+      "type": "node",
+      "x": 5.5,
+      "y": 261.18,
+      "width": 257,
+      "height": 28.75,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "战斗回合:",
+          "align": "right",
+          "size": 22,
+          "color": 1092488703,
+          "x": -128.5,
+          "width": 128,
+          "height": 28.75
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "",
+          "align": "left",
+          "size": 22,
+          "color": 1092488703,
+          "x": 0.5,
+          "width": 128,
+          "height": 28.75
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_battle_dibu.png",
+      "y": -327.5,
+      "width": 539,
+      "height": 113
+    },
+    {
+      "name": "power_left",
+      "type": "label",
+      "text": "",
+      "align": "center",
+      "size": 24,
+      "color": 4294967295,
+      "x": -220,
+      "y": -361.55,
+      "width": 137,
+      "height": 31
+    },
+    {
+      "name": "power_right",
+      "type": "label",
+      "text": "",
+      "align": "center",
+      "size": 24,
+      "color": 4294967295,
+      "x": 81,
+      "y": -361.55,
+      "width": 137,
+      "height": 31
+    },
+    {
+      "name": "skip",
+      "type": "node",
+      "x": 0.1,
+      "y": -338,
+      "width": 136,
+      "height": 90,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_battle_btn01.png",
+          "img_down": "#ui_battle_btn02.png",
+          "img_disable": "#ui_battle_btn03.png",
+          "width": 136,
+          "height": 90
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "跳过",
+          "align": "center",
+          "size": 40,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -61,
+          "y": -7.63,
+          "width": 120.95,
+          "height": 52.75
+        }
+      ]
+    }
+  ]
+}

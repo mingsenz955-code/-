@@ -1,0 +1,84 @@
+{
+  "group": [
+    "ui_Holytree"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768,
+      "alpha": 0
+    },
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#ui_common_bgbaoxiang.png",
+      "x": 1.35,
+      "y": -10.35,
+      "width": 530,
+      "height": 320
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "y": -14.4,
+      "width": 480,
+      "height": 230
+    },
+    {
+      "name": "btn_QueDing",
+      "type": "node",
+      "x": -4.4,
+      "y": -214.5,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png",
+          "img_disable": "#ui_common_btn_2c.png",
+          "width": 144,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "确定",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_holytree_zidongshouhuo.png",
+      "x": -6,
+      "y": 128.5,
+      "width": 186,
+      "height": 51
+    },
+    {
+      "name": "hint",
+      "type": "label",
+      "text": "被抢夺的果实成熟后会自动收获",
+      "align": "center",
+      "size": 22,
+      "color": 1092488703,
+      "x": -181.95,
+      "y": -146.63,
+      "width": 368.95,
+      "height": 32.75
+    }
+  ]
+}

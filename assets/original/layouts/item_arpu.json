@@ -1,0 +1,764 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -244.5,
+      "y": 6.05,
+      "width": 489,
+      "height": 508,
+      "maxw": 489,
+      "maxh": 508
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_cao.png",
+      "x": 1.35,
+      "y": 248.75,
+      "width": 408,
+      "height": 82
+    },
+    {
+      "name": "biaoqian_long",
+      "type": "sprite",
+      "img": "#ui_carnival_title_sl.png",
+      "x": -4.2,
+      "y": 254.15,
+      "width": 251,
+      "height": 50
+    },
+    {
+      "name": "biaoqian_zhuangbei",
+      "type": "sprite",
+      "img": "#ui_carnival_title_zb.png",
+      "x": -2.7,
+      "y": 253.65,
+      "width": 254,
+      "height": 53
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_haoyoulan2.png",
+      "scale9": 1,
+      "x": -214.5,
+      "y": -31.3,
+      "width": 430,
+      "height": 343,
+      "maxw": 430,
+      "maxh": 343
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_chongzhitiao.png",
+      "scale9": 1,
+      "x": -201.15,
+      "y": 28.5,
+      "width": 406,
+      "height": 139,
+      "maxw": 406,
+      "maxh": 139
+    },
+    {
+      "name": "btn_zhuangtai1",
+      "type": "node",
+      "x": -144.5,
+      "y": 160.55,
+      "width": 140,
+      "height": 48,
+      "children": [
+        {
+          "name": "btn",
+          "type": "ckb",
+          "img_on": "#ui_common_xxx01.png",
+          "img_off": "#ui_common_xxx02.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "",
+          "size": 24,
+          "align": "center",
+          "color": 1092488703,
+          "x": -67.5,
+          "y": -1.5,
+          "width": 133,
+          "height": 31
+        }
+      ]
+    },
+    {
+      "name": "btn_zhuangtai2",
+      "type": "node",
+      "x": -1.8,
+      "y": 160.55,
+      "width": 140,
+      "height": 48,
+      "children": [
+        {
+          "name": "btn",
+          "type": "ckb",
+          "img_on": "#ui_common_xxx01.png",
+          "img_off": "#ui_common_xxx02.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "",
+          "size": 24,
+          "align": "center",
+          "color": 1092488703,
+          "x": -67.5,
+          "y": -1.5,
+          "width": 133,
+          "height": 31
+        }
+      ]
+    },
+    {
+      "name": "xianshi2",
+      "type": "node",
+      "x": 64.88,
+      "y": -20.13,
+      "width": 292.95,
+      "height": 109.25,
+      "children": [
+        {
+          "name": "jiangli1",
+          "type": "node",
+          "x": -80,
+          "width": 132.95,
+          "height": 109.25,
+          "children": [
+            {
+              "name": "diban",
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "x": -66.47,
+              "y": 54.63,
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "quality",
+              "type": "node",
+              "x": -66.47,
+              "y": 54.63,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "x": -66.47,
+              "y": 54.63,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": "",
+              "size": 19,
+              "align": "right",
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -101.47,
+              "y": 35.4,
+              "width": 69,
+              "height": 25.35
+            },
+            {
+              "name": "miaoshu",
+              "type": "label",
+              "text": "神圣冰月龙",
+              "size": 18,
+              "align": "center",
+              "color": 1092488703,
+              "x": -131.47,
+              "width": 132.95,
+              "height": 24.25
+            }
+          ]
+        },
+        {
+          "name": "jiangli2",
+          "type": "node",
+          "x": 80,
+          "width": 132.95,
+          "height": 109.25,
+          "children": [
+            {
+              "name": "diban",
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "x": -66.47,
+              "y": 54.63,
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "quality",
+              "type": "node",
+              "x": -66.47,
+              "y": 54.63,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "x": -66.47,
+              "y": 54.63,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": "",
+              "size": 19,
+              "align": "right",
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -101.47,
+              "y": 35.4,
+              "width": 69,
+              "height": 25.35
+            },
+            {
+              "name": "miaoshu",
+              "type": "label",
+              "text": "神圣冰月龙",
+              "size": 18,
+              "align": "center",
+              "color": 1092488703,
+              "x": -131.47,
+              "width": 132.95,
+              "height": 24.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "xianshi4",
+      "type": "node",
+      "x": 66.32,
+      "y": -20.13,
+      "width": 432.95,
+      "height": 109.25,
+      "children": [
+        {
+          "name": "jiangli1",
+          "type": "node",
+          "x": -150,
+          "width": 132.95,
+          "height": 109.25,
+          "children": [
+            {
+              "name": "diban",
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "x": -66.47,
+              "y": 54.63,
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "quality",
+              "type": "node",
+              "x": -66.47,
+              "y": 54.63,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "x": -66.47,
+              "y": 54.63,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": "",
+              "size": 19,
+              "align": "right",
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -101.47,
+              "y": 35.4,
+              "width": 69,
+              "height": 25.35
+            },
+            {
+              "name": "miaoshu",
+              "type": "label",
+              "text": "神圣冰月龙",
+              "size": 18,
+              "align": "center",
+              "color": 1092488703,
+              "x": -131.47,
+              "width": 132.95,
+              "height": 24.25
+            }
+          ]
+        },
+        {
+          "name": "jiangli2",
+          "type": "node",
+          "x": -50,
+          "width": 132.95,
+          "height": 109.25,
+          "children": [
+            {
+              "name": "diban",
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "x": -66.47,
+              "y": 54.63,
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "quality",
+              "type": "node",
+              "x": -66.47,
+              "y": 54.63,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "x": -66.47,
+              "y": 54.63,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": "",
+              "size": 19,
+              "align": "right",
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -101.47,
+              "y": 35.4,
+              "width": 69,
+              "height": 25.35
+            },
+            {
+              "name": "miaoshu",
+              "type": "label",
+              "text": "神圣冰月龙",
+              "size": 18,
+              "align": "center",
+              "color": 1092488703,
+              "x": -131.47,
+              "width": 132.95,
+              "height": 24.25
+            }
+          ]
+        },
+        {
+          "name": "jiangli3",
+          "type": "node",
+          "x": 50,
+          "width": 132.95,
+          "height": 109.25,
+          "children": [
+            {
+              "name": "diban",
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "x": -66.47,
+              "y": 54.63,
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "quality",
+              "type": "node",
+              "x": -66.47,
+              "y": 54.63,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "x": -66.47,
+              "y": 54.63,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": "",
+              "size": 19,
+              "align": "right",
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -101.47,
+              "y": 35.4,
+              "width": 69,
+              "height": 25.35
+            },
+            {
+              "name": "miaoshu",
+              "type": "label",
+              "text": "神圣冰月龙",
+              "size": 18,
+              "align": "center",
+              "color": 1092488703,
+              "x": -131.47,
+              "width": 132.95,
+              "height": 24.25
+            }
+          ]
+        },
+        {
+          "name": "jiangli4",
+          "type": "node",
+          "x": 150,
+          "width": 132.95,
+          "height": 109.25,
+          "children": [
+            {
+              "name": "diban",
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "x": -66.47,
+              "y": 54.63,
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "quality",
+              "type": "node",
+              "x": -66.47,
+              "y": 54.63,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "x": -66.47,
+              "y": 54.63,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": "",
+              "size": 19,
+              "align": "right",
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -101.47,
+              "y": 35.4,
+              "width": 69,
+              "height": 25.35
+            },
+            {
+              "name": "miaoshu",
+              "type": "label",
+              "text": "神圣冰月龙",
+              "size": 18,
+              "align": "center",
+              "color": 1092488703,
+              "x": -131.47,
+              "width": 132.95,
+              "height": 24.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "jiahao",
+      "type": "sprite",
+      "img": "#ui_common_ico_add.png",
+      "x": -69.5,
+      "y": -128.45,
+      "width": 36,
+      "height": 36
+    },
+    {
+      "name": "jianglizuo",
+      "type": "node",
+      "x": -76.88,
+      "y": -180.13,
+      "width": 132.95,
+      "height": 109.25,
+      "children": [
+        {
+          "name": "diban",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": -66.47,
+          "y": 54.63,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "x": -66.47,
+          "y": 54.63,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -66.47,
+          "y": 54.63,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "",
+          "size": 19,
+          "align": "right",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -101.47,
+          "y": 35.4,
+          "width": 69,
+          "height": 25.35
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "神圣冰月龙",
+          "size": 18,
+          "align": "center",
+          "color": 1092488703,
+          "x": -131.47,
+          "width": 132.95,
+          "height": 24.25
+        }
+      ]
+    },
+    {
+      "name": "jiangliyou",
+      "type": "node",
+      "x": 72.57,
+      "y": -180.13,
+      "width": 132.95,
+      "height": 109.25,
+      "children": [
+        {
+          "name": "diban",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": -66.47,
+          "y": 54.63,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "x": -66.47,
+          "y": 54.63,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -66.47,
+          "y": 54.63,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "",
+          "size": 19,
+          "align": "right",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -101.47,
+          "y": 35.4,
+          "width": 69,
+          "height": 25.35
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "神圣冰月龙",
+          "size": 18,
+          "align": "center",
+          "color": 1092488703,
+          "x": -131.47,
+          "width": 132.95,
+          "height": 24.25
+        }
+      ]
+    },
+    {
+      "name": "tx_shangweihuode",
+      "type": "label",
+      "text": "尚未获得",
+      "size": 22,
+      "align": "center",
+      "color": 4278190335,
+      "x": 70.4,
+      "y": -134.57,
+      "width": 131,
+      "height": 28.75
+    },
+    {
+      "name": "btn_lingqu",
+      "type": "node",
+      "x": 137.85,
+      "y": -133.45,
+      "width": 92,
+      "height": 46,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btndh1.png",
+          "img_down": "#ui_common_btndh2.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "领取",
+          "size": 24,
+          "align": "center",
+          "color": 992815615,
+          "outlineColor": 13941402,
+          "x": -37,
+          "y": -0.75,
+          "width": 73,
+          "height": 31
+        }
+      ]
+    },
+    {
+      "name": "shuoming",
+      "type": "label",
+      "text": "",
+      "size": 18,
+      "align": "center",
+      "color": 1092488703,
+      "x": -220.55,
+      "y": 199.78,
+      "width": 443.95,
+      "height": 24.25
+    },
+    {
+      "name": "yihuode",
+      "type": "label",
+      "text": "已获得传奇龙",
+      "size": 18,
+      "align": "right",
+      "color": 1092488703,
+      "x": -208.5,
+      "y": 115.78,
+      "width": 131,
+      "height": 24.25
+    },
+    {
+      "name": "yihuode_shuliang",
+      "type": "label",
+      "text": "x5",
+      "size": 18,
+      "align": "left",
+      "color": 4278190335,
+      "x": -75.5,
+      "y": 115.78,
+      "width": 51,
+      "height": 24.25
+    },
+    {
+      "name": "yihuode_shuoming",
+      "type": "label",
+      "text": "（每获得1个即可获得1份奖励）",
+      "size": 18,
+      "align": "left",
+      "color": 1092488703,
+      "x": -40.45,
+      "y": 115.78,
+      "width": 264,
+      "height": 24.25
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_line400.png",
+      "x": -1.15,
+      "y": -77.85,
+      "width": 400,
+      "height": 4
+    },
+    {
+      "name": "kelingqu",
+      "type": "label",
+      "text": "已获得传奇龙",
+      "size": 18,
+      "align": "right",
+      "color": 1092488703,
+      "x": -208.5,
+      "y": -59.23,
+      "width": 131,
+      "height": 24.25
+    },
+    {
+      "name": "kelingqu_shuliang",
+      "type": "label",
+      "text": "x5",
+      "size": 18,
+      "align": "left",
+      "color": 4278190335,
+      "x": -75.5,
+      "y": -59.23,
+      "width": 51,
+      "height": 24.25
+    },
+    {
+      "name": "mashangzhanbu",
+      "type": "node",
+      "x": 8.6,
+      "y": -247.3,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -79,
+          "y": 4.4,
+          "width": 156,
+          "height": 46.2
+        }
+      ]
+    }
+  ]
+}

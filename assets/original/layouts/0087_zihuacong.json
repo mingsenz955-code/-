@@ -1,0 +1,16 @@
+{
+  "group": [
+    "buildings/0087_zihuacong_g"
+  ],
+  "width": 123,
+  "height": 94,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0087_zihuacong_g_bg.png",
+      "x": 3.5,
+      "y": 50
+    }
+  ]
+}

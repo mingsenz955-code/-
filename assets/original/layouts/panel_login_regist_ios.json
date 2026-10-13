@@ -1,0 +1,184 @@
+{
+  "group": [
+    "ui_login_ios"
+  ],
+  "width": 424,
+  "height": 529,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_login_ios_ditu.png",
+      "width": 424,
+      "height": 529
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_login_ios_title.png",
+      "x": 1,
+      "y": 217.5,
+      "width": 320,
+      "height": 55
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_login_ios_z1.png",
+      "x": -143.65,
+      "y": 109.65,
+      "width": 94,
+      "height": 25
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_login_ios_z2.png",
+      "x": -144.15,
+      "y": 30.2,
+      "width": 93,
+      "height": 25
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_login_ios_z3.png",
+      "x": -145.15,
+      "y": -49.3,
+      "width": 91,
+      "height": 25
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_login_ios_shurukuang1.png",
+      "x": 46.85,
+      "y": -50.35,
+      "width": 276,
+      "height": 55
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_login_ios_shurukuang1.png",
+      "x": 46.85,
+      "y": 29.65,
+      "width": 276,
+      "height": 55
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_login_ios_shurukuang1.png",
+      "x": 46.85,
+      "y": 108.65,
+      "width": 276,
+      "height": 55
+    },
+    {
+      "name": "ckb_agree",
+      "type": "ckb",
+      "img_on": "#ui_login_ios_ckb.png",
+      "img_off": "#ui_login_ios_xuankuang.png",
+      "x": -110.55,
+      "y": -131.8
+    },
+    {
+      "name": "btn_agreement",
+      "type": "btn",
+      "img_normal": "#ui_login_ios_xieyi.png",
+      "img_down": "#ui_login_ios_xieyi.png",
+      "x": 9,
+      "y": -131.3,
+      "width": 183,
+      "height": 23
+    },
+    {
+      "name": "node_regist",
+      "type": "node",
+      "x": 3.35,
+      "y": -209.3,
+      "width": 359,
+      "height": 56,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_login_ios_btn5.png",
+          "img_down": "#ui_login_ios_btn6.png",
+          "img_disable": "#ui_login_ios_btn0.png",
+          "width": 359,
+          "height": 56
+        },
+        {
+          "name": "txt",
+          "type": "label",
+          "text": "注册",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -135.55,
+          "y": 2.9,
+          "width": 273,
+          "height": 43.4
+        }
+      ]
+    },
+    {
+      "name": "title_text",
+      "type": "label",
+      "text": "注册",
+      "align": "center",
+      "size": 28,
+      "color": 4294967295,
+      "x": -89.05,
+      "y": 218.85,
+      "width": 216.05,
+      "height": 35.5
+    },
+    {
+      "name": "btn_back",
+      "type": "btn",
+      "img_normal": "#ui_login_ios_btn7.png",
+      "img_down": "#ui_login_ios_btn8.png",
+      "x": -144,
+      "y": 219,
+      "width": 102,
+      "height": 60
+    },
+    {
+      "name": "checkpwd",
+      "type": "input",
+      "img": "#ui_login_ios_shurukuang1.png",
+      "fontSize": 22,
+      "color": 16777215,
+      "holder": "请再次填写密码",
+      "holderColor": 10526880,
+      "maxLength": 16,
+      "x": 46.85,
+      "y": -50.35,
+      "width": 276,
+      "height": 55
+    },
+    {
+      "name": "pwd",
+      "type": "input",
+      "img": "#ui_login_ios_shurukuang1.png",
+      "fontSize": 22,
+      "color": 16777215,
+      "holder": "请填写6~16位数字或字母",
+      "holderColor": 10526880,
+      "maxLength": 16,
+      "x": 46.85,
+      "y": 29.65,
+      "width": 276,
+      "height": 55
+    },
+    {
+      "name": "name",
+      "type": "input",
+      "img": "#ui_login_ios_shurukuang1.png",
+      "fontSize": 22,
+      "color": 16777215,
+      "holder": "请填写6~16位数字或字母",
+      "holderColor": 10526880,
+      "maxLength": 16,
+      "x": 46.85,
+      "y": 108.65,
+      "width": 276,
+      "height": 55
+    }
+  ]
+}

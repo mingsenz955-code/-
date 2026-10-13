@@ -1,0 +1,328 @@
+{
+  "group": [
+    "ui_bg",
+    "ui_pve"
+  ],
+  "width": 1138,
+  "height": 640,
+  "children": [
+    {
+      "name": "bg",
+      "type": "btn",
+      "img_normal": "#ui_bg_960_640bg.png",
+      "img_down": "#ui_bg_960_640bg.png",
+      "x": 89,
+      "alpha": 0
+    },
+    {
+      "name": "target",
+      "type": "node",
+      "x": 7.82,
+      "y": -17.93,
+      "width": 728.35,
+      "height": 287.35,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_bg_ziyuan2.png",
+          "scale9": 1,
+          "x": -364.18,
+          "y": 6.68,
+          "width": 713,
+          "height": 274,
+          "maxw": 713,
+          "maxh": 274
+        },
+        {
+          "name": "start",
+          "type": "node",
+          "x": 272.68,
+          "y": -13.57,
+          "width": 115,
+          "height": 119,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btn_jixu1.png",
+              "img_down": "#ui_common_btn_jixu2.png"
+            }
+          ]
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_pve_tx.png",
+          "x": -305.28,
+          "y": 85.43,
+          "width": 65,
+          "height": 65
+        },
+        {
+          "name": "target_icon_60",
+          "type": "node",
+          "x": -305.28,
+          "y": 85.43,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_pve_tx_xinxi.png",
+          "x": -182.13,
+          "y": 83.83,
+          "width": 199,
+          "height": 37
+        },
+        {
+          "name": "lvl",
+          "type": "label",
+          "text": "99",
+          "align": "center",
+          "size": 18,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -278.43,
+          "y": 84.9,
+          "width": 27,
+          "height": 24.25
+        },
+        {
+          "name": "target_name",
+          "type": "label",
+          "text": "阿萨德哈金属大",
+          "align": "left",
+          "size": 21,
+          "color": 4294967295,
+          "x": -243.68,
+          "y": 83.38,
+          "width": 163,
+          "height": 27.6
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "(1/90)",
+          "align": "left",
+          "size": 24,
+          "color": 4294915071,
+          "x": -75.68,
+          "y": 83.08,
+          "width": 109,
+          "height": 31
+        },
+        {
+          "name": "enemy1",
+          "type": "node",
+          "x": -293.33,
+          "y": -15.97,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "enemy2",
+          "type": "node",
+          "x": -184.33,
+          "y": -15.97,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "enemy3",
+          "type": "node",
+          "x": -75.32,
+          "y": -15.97,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "enemy4",
+          "type": "node",
+          "x": 33.68,
+          "y": -15.97,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "enemy5",
+          "type": "node",
+          "x": 142.68,
+          "y": -15.97,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_pve_fenge.png",
+          "x": -76.68,
+          "y": -78.72,
+          "width": 532,
+          "height": 1
+        },
+        {
+          "name": "txt_source",
+          "type": "label",
+          "text": "来自公会:",
+          "align": "left",
+          "size": 24,
+          "color": 3432592383,
+          "x": -346.63,
+          "y": -97.82,
+          "width": 150.05,
+          "height": 31
+        },
+        {
+          "name": "txt_guild",
+          "type": "label",
+          "text": "9999999",
+          "align": "left",
+          "size": 24,
+          "color": 4294967295,
+          "x": -194.63,
+          "y": -97.82,
+          "width": 381,
+          "height": 31
+        },
+        {
+          "name": "close",
+          "type": "node",
+          "x": 334.68,
+          "y": 127.03,
+          "width": 59,
+          "height": 60,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_close1.png",
+              "img_down": "#ui_common_close2.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_bg_ziyuan2.png",
+      "scale9": 1,
+      "x": -356.35,
+      "y": -251.45,
+      "width": 713,
+      "height": 69,
+      "maxw": 713,
+      "maxh": 69
+    },
+    {
+      "name": "btn_rule",
+      "type": "node",
+      "x": -284.2,
+      "y": -253.5,
+      "width": 132,
+      "height": 59,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_07_1.png",
+          "img_down": "#ui_common_btn_07_2.png"
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "查看规则",
+          "align": "center",
+          "size": 24,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -60,
+          "y": 1.55,
+          "width": 119,
+          "height": 31
+        }
+      ]
+    },
+    {
+      "name": "btn_exchange",
+      "type": "node",
+      "x": -135.95,
+      "y": -253.5,
+      "width": 132,
+      "height": 59,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_07_1.png",
+          "img_down": "#ui_common_btn_07_2.png"
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "兑换奖励",
+          "align": "center",
+          "size": 24,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -60,
+          "y": 1.55,
+          "width": 119,
+          "height": 31
+        }
+      ]
+    },
+    {
+      "name": "tx_today",
+      "type": "label",
+      "text": "今日剩余次数：",
+      "align": "left",
+      "size": 24,
+      "color": 4243177983,
+      "outlineColor": 0,
+      "x": -49.65,
+      "y": -251.7,
+      "width": 172,
+      "height": 31
+    },
+    {
+      "name": "today",
+      "type": "label",
+      "text": "3/3",
+      "align": "left",
+      "size": 24,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": 118.35,
+      "y": -249.7,
+      "width": 76,
+      "height": 31
+    },
+    {
+      "name": "replay",
+      "type": "node",
+      "x": 283,
+      "y": -253.5,
+      "width": 132,
+      "height": 59,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_07_1.png",
+          "img_down": "#ui_common_btn_07_2.png"
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "重新开始",
+          "align": "center",
+          "size": 24,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -60,
+          "y": 1.55,
+          "width": 119,
+          "height": 31
+        }
+      ]
+    }
+  ]
+}

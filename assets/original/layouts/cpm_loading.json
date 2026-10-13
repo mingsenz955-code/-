@@ -1,0 +1,41 @@
+{
+  "group": {},
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#ui_common_loading1.png",
+      "scale9": 1,
+      "x": -275,
+      "y": -11.75,
+      "width": 550,
+      "height": 40,
+      "maxw": 550,
+      "maxh": 40
+    },
+    {
+      "name": "bar",
+      "type": "sprite",
+      "img": "#ui_common_loading2.png",
+      "scale9": 1,
+      "x": -275,
+      "y": -11.75,
+      "width": 550,
+      "height": 40,
+      "maxw": 550,
+      "maxh": 40
+    },
+    {
+      "name": "txt",
+      "type": "label",
+      "text": "Loading......100%",
+      "size": 20,
+      "align": "center",
+      "color": 255,
+      "x": -137.5,
+      "y": 18.45,
+      "width": 275,
+      "height": 26.5
+    }
+  ]
+}

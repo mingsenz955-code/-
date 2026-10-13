@@ -1,0 +1,51 @@
+{
+  "group": {},
+  "children": [
+    {
+      "name": "add",
+      "type": "btn",
+      "img_normal": "#ui_common_kong.png",
+      "img_down": "#ui_common_kong.png"
+    },
+    {
+      "name": "xiangkuang",
+      "type": "node",
+      "width": 0,
+      "height": 0,
+      "children": [
+        {
+          "name": "quality",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "icon",
+      "type": "node",
+      "width": 0,
+      "height": 0,
+      "children": [
+        {
+          "name": "quality",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        }
+      ]
+    }
+  ]
+}

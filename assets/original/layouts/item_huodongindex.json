@@ -1,0 +1,38 @@
+{
+  "group": [
+    "ui_huodongindex"
+  ],
+  "width": 685,
+  "height": 434,
+  "children": [
+    {
+      "name": "node_container",
+      "type": "node",
+      "y": 1,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "txt_time",
+      "type": "label",
+      "text": "活动时间:2015年3月5日 - 2016年3月8日",
+      "align": "center",
+      "size": 22,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -360,
+      "y": -157,
+      "width": 685,
+      "height": 29
+    },
+    {
+      "name": "image_title",
+      "type": "sprite",
+      "img": "#ui_huodongindex_title.png",
+      "x": 6,
+      "y": 211,
+      "width": 610,
+      "height": 104
+    }
+  ]
+}

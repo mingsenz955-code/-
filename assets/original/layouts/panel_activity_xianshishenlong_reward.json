@@ -1,0 +1,380 @@
+{
+  "group": [
+    "ui_activityxianshi"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768,
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -397,
+      "y": -22,
+      "width": 795,
+      "height": 713,
+      "maxw": 795,
+      "maxh": 713
+    },
+    {
+      "name": "title_panel",
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -391.55,
+      "y": 325,
+      "width": 788.05,
+      "height": 55,
+      "maxw": 788.05,
+      "maxh": 55
+    },
+    {
+      "name": "title",
+      "type": "label",
+      "text": "限时神龙",
+      "align": "center",
+      "size": 25,
+      "color": 4294967295,
+      "x": -241.95,
+      "y": 325.45,
+      "width": 484.95,
+      "height": 32.1
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_activityxianshi_ditu2.png",
+      "x": 2,
+      "y": 32.5,
+      "width": 694,
+      "height": 528
+    },
+    {
+      "name": "res",
+      "type": "node",
+      "x": 1.5,
+      "y": -328.4,
+      "width": 705,
+      "height": 44,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_activityxianshi_kkk.png",
+          "scale9": 1,
+          "x": -352.5,
+          "width": 705,
+          "height": 44,
+          "maxw": 705,
+          "maxh": 44
+        },
+        {
+          "name": "txt_benci_jifen",
+          "type": "label",
+          "text": "本次获得积分：",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "x": -346.5,
+          "y": 0.2,
+          "width": 149,
+          "height": 26.5
+        },
+        {
+          "name": "num_benci_jifen",
+          "type": "label",
+          "text": "2000",
+          "align": "left",
+          "size": 20,
+          "color": 1728053247,
+          "x": -205.5,
+          "y": 0.2,
+          "width": 80,
+          "height": 26.5
+        },
+        {
+          "name": "txt_jifen",
+          "type": "label",
+          "text": "当前积分：",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "x": -150.5,
+          "y": 0.2,
+          "width": 111,
+          "height": 26.5
+        },
+        {
+          "name": "num_jifen",
+          "type": "label",
+          "text": "2000",
+          "align": "left",
+          "size": 20,
+          "color": 1728053247,
+          "x": -47.5,
+          "y": 0.2,
+          "width": 80,
+          "height": 26.5
+        },
+        {
+          "name": "txt_paihang",
+          "type": "label",
+          "text": "当前排行：",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "x": 15.5,
+          "y": 0.2,
+          "width": 111,
+          "height": 26.5
+        },
+        {
+          "name": "num_paihang",
+          "type": "label",
+          "text": "2000",
+          "align": "left",
+          "size": 20,
+          "color": 4291559679,
+          "x": 120.5,
+          "y": 0.2,
+          "width": 80,
+          "height": 26.5
+        },
+        {
+          "name": "txt_mojing",
+          "type": "label",
+          "text": "拥有：",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "x": 182.5,
+          "y": 0.2,
+          "width": 70,
+          "height": 26.5
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_activityxianshi_mojing.png",
+          "x": 254.45,
+          "y": 1,
+          "width": 25,
+          "height": 36
+        },
+        {
+          "name": "num_mojing",
+          "type": "label",
+          "text": "999",
+          "align": "left",
+          "size": 22,
+          "color": 4288269567,
+          "x": 268.5,
+          "y": -0.93,
+          "width": 82,
+          "height": 28.75
+        }
+      ]
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "x": 1.05,
+      "y": 32.5,
+      "width": 763,
+      "height": 511
+    },
+    {
+      "name": "requ1",
+      "type": "btn",
+      "img_normal": "#ui_activityxianshi_t2.png",
+      "img_down": "#ui_activityxianshi_t2.png",
+      "x": -194,
+      "y": -248,
+      "width": 381,
+      "height": 44,
+      "alpha": 0
+    },
+    {
+      "name": "requ2",
+      "type": "btn",
+      "img_normal": "#ui_activityxianshi_t2.png",
+      "img_down": "#ui_activityxianshi_t2.png",
+      "x": 196,
+      "y": -248,
+      "width": 381,
+      "height": 44,
+      "alpha": 0
+    },
+    {
+      "name": "btn_one",
+      "type": "node",
+      "x": -146.95,
+      "y": -269.35,
+      "width": 162,
+      "height": 56,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_activityxianshi_btn1.png",
+          "img_down": "#ui_activityxianshi_btn2.png",
+          "width": 162,
+          "height": 56
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "再抽一次",
+          "align": "center",
+          "size": 26,
+          "color": 4294967295,
+          "outlineColor": 11882262,
+          "x": -65,
+          "y": 2.13,
+          "width": 128.95,
+          "height": 33.25
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_activityxianshi_mojing.png",
+      "x": -49.65,
+      "y": -269,
+      "width": 25,
+      "height": 36
+    },
+    {
+      "name": "price_one",
+      "type": "label",
+      "text": "x1",
+      "align": "left",
+      "size": 22,
+      "color": 1092488703,
+      "x": -34,
+      "y": -268.02,
+      "width": 95,
+      "height": 28.75
+    },
+    {
+      "name": "btn_ten",
+      "type": "node",
+      "x": 145.05,
+      "y": -269.35,
+      "width": 162,
+      "height": 56,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_activityxianshi_btn1.png",
+          "img_down": "#ui_activityxianshi_btn2.png",
+          "width": 162,
+          "height": 56
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "再抽十次",
+          "align": "center",
+          "size": 26,
+          "color": 4294967295,
+          "outlineColor": 11882262,
+          "x": -65,
+          "y": 2.13,
+          "width": 128.95,
+          "height": 33.25
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_activityxianshi_mojing.png",
+      "x": 242.35,
+      "y": -269,
+      "width": 25,
+      "height": 36
+    },
+    {
+      "name": "price_ten",
+      "type": "label",
+      "text": "x10",
+      "align": "left",
+      "size": 22,
+      "color": 1092488703,
+      "x": 258,
+      "y": -268.02,
+      "width": 95,
+      "height": 28.75
+    },
+    {
+      "name": "show_dragon_one",
+      "type": "node",
+      "x": -26.45,
+      "y": -133.6,
+      "width": 371,
+      "height": 93.2,
+      "children": [
+        {
+          "name": "dragon_icon",
+          "type": "node",
+          "x": 28.45,
+          "y": 46.6,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "hint",
+          "type": "label",
+          "text": "额外赠送：",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "x": -185.5,
+          "y": -33.35,
+          "width": 166,
+          "height": 26.5
+        },
+        {
+          "name": "dragon_name",
+          "type": "label",
+          "text": "撒大声大声大声道",
+          "align": "left",
+          "size": 20,
+          "color": 4288217343,
+          "x": -23.5,
+          "y": -33.35,
+          "width": 174,
+          "height": 26.5
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "x1",
+          "align": "left",
+          "size": 20,
+          "color": 4294967295,
+          "x": 141.5,
+          "y": -33.35,
+          "width": 44,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 367.9,
+      "y": 323,
+      "width": 80,
+      "height": 86
+    }
+  ]
+}

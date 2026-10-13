@@ -1,0 +1,121 @@
+{
+  "group": [
+    "ui_welfare",
+    "ui_daojukuang"
+  ],
+  "width": 158,
+  "height": 144,
+  "children": [
+    {
+      "name": "diban",
+      "type": "sprite",
+      "img": "#ui_welfare_qiandao1.png",
+      "x": 0.45,
+      "y": -1.3,
+      "width": 144,
+      "height": 144
+    },
+    {
+      "name": "qiandao_yiban",
+      "type": "sprite",
+      "img": "#ui_welfare_qiandao3.png",
+      "x": 0.45,
+      "y": -1.3,
+      "width": 144,
+      "height": 144
+    },
+    {
+      "name": "qiandao",
+      "type": "sprite",
+      "img": "#ui_welfare_qiandao2.png",
+      "x": 0.45,
+      "y": -1.3,
+      "width": 144,
+      "height": 144
+    },
+    {
+      "name": "item",
+      "type": "node",
+      "x": 0.55,
+      "y": -4.65,
+      "width": 110,
+      "height": 110,
+      "children": [
+        {
+          "name": "add",
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "width": 110,
+          "height": 110
+        },
+        {
+          "name": "xiangkuang",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "x": -0.85,
+          "y": 2.8,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -37.1,
+          "y": -25.6,
+          "width": 77,
+          "height": 26.5
+        },
+        {
+          "name": "biaoji_pinzhi",
+          "type": "node",
+          "x": -36.35,
+          "y": 38.55,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "biaoji",
+      "type": "node",
+      "x": -26.05,
+      "y": 19.75,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "mengban",
+      "type": "sprite",
+      "img": "#ui_welfare_qiandaomengban.png",
+      "x": 0.45,
+      "y": -1.3,
+      "width": 144,
+      "height": 144
+    },
+    {
+      "name": "zaicilingqu",
+      "type": "sprite",
+      "img": "#ui_welfare_zaici.png",
+      "x": 0.55,
+      "y": -1.55,
+      "width": 158,
+      "height": 114
+    },
+    {
+      "name": "biaoji_tips",
+      "type": "node",
+      "width": 0,
+      "height": 0
+    }
+  ]
+}

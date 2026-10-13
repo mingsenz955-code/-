@@ -1,0 +1,37 @@
+{
+  "group": [
+    "buildings/islandleft_g"
+  ],
+  "width": 1929,
+  "height": 1408,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#islandleft_g_bg.png"
+    },
+    {
+      "name": "entry",
+      "type": "sprite",
+      "img": "#islandleft_g_entry.png",
+      "x": 34.5,
+      "y": 470
+    },
+    {
+      "name": "lock",
+      "type": "sprite",
+      "img": "#islandleft_g_lock.png",
+      "x": 5,
+      "y": 295.5
+    },
+    {
+      "name": "btn",
+      "type": "btn",
+      "img_normal": "#islandleft_g_left_btn.png",
+      "img_down": "#islandleft_g_left_btn.png",
+      "x": 1.25,
+      "y": 355.85,
+      "alpha": 0
+    }
+  ]
+}

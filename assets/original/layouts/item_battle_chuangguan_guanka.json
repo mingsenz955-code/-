@@ -1,0 +1,112 @@
+{
+  "group": {},
+  "children": [
+    {
+      "name": "diban",
+      "type": "sprite",
+      "img": "#ui_battle_x0003.png",
+      "y": 11.5,
+      "width": 150,
+      "height": 157
+    },
+    {
+      "name": "elite",
+      "type": "node",
+      "x": -2.05,
+      "y": 16,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "boss",
+      "type": "node",
+      "x": -2.05,
+      "y": 16,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "stars",
+      "type": "node",
+      "x": -0.05,
+      "y": -70,
+      "width": 120,
+      "height": 40,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_battle_s3.png",
+          "x": -40,
+          "width": 40,
+          "height": 40
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_s3.png",
+          "width": 40,
+          "height": 40
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_battle_s3.png",
+          "x": 40,
+          "width": 40,
+          "height": 40
+        },
+        {
+          "name": "star1",
+          "type": "sprite",
+          "img": "#ui_battle_s4.png",
+          "x": -40,
+          "width": 40,
+          "height": 40
+        },
+        {
+          "name": "star2",
+          "type": "sprite",
+          "img": "#ui_battle_s4.png",
+          "width": 40,
+          "height": 40
+        },
+        {
+          "name": "star3",
+          "type": "sprite",
+          "img": "#ui_battle_s4.png",
+          "x": 40,
+          "width": 40,
+          "height": 40
+        }
+      ]
+    },
+    {
+      "name": "level",
+      "type": "label",
+      "text": "99",
+      "size": 50,
+      "align": "center",
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -45.5,
+      "y": 18.38,
+      "width": 84.95,
+      "height": 60.25
+    },
+    {
+      "name": "icon",
+      "type": "node",
+      "x": -2.05,
+      "y": 16,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "lock",
+      "type": "sprite",
+      "img": "#ui_common_suo.png",
+      "x": -3.05,
+      "y": 20.4,
+      "width": 60,
+      "height": 72
+    }
+  ]
+}

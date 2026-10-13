@@ -1,0 +1,43 @@
+{
+  "group": [
+    "buildings/0032_habitat_ice_1_g"
+  ],
+  "width": 404,
+  "height": 288,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0032_habitat_ice_1_g_bg.png",
+      "x": -0.95,
+      "y": 157
+    },
+    {
+      "name": "zuobiao1",
+      "type": "node",
+      "x": -127,
+      "y": 130
+    },
+    {
+      "name": "zuobiao2",
+      "type": "node",
+      "x": 21,
+      "y": 75
+    },
+    {
+      "name": "zuobiao3",
+      "type": "node",
+      "x": 120,
+      "y": 169
+    },
+    {
+      "name": "eff",
+      "type": "eff",
+      "eff": "0032_habitat_ice_1_eff",
+      "x": -0.2,
+      "y": -0.6,
+      "width": 50,
+      "height": 40.1
+    }
+  ]
+}

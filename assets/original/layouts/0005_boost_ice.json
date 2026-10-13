@@ -1,0 +1,23 @@
+{
+  "group": [
+    "buildings/0005_boost_ice_g"
+  ],
+  "width": 272,
+  "height": 231,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0005_boost_ice_g_bg.png",
+      "x": 24,
+      "y": 125.5
+    },
+    {
+      "name": "eff",
+      "type": "eff",
+      "eff": "0005_boost_ice_eff",
+      "width": 108,
+      "height": 124
+    }
+  ]
+}

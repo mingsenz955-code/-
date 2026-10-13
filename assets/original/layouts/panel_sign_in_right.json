@@ -1,0 +1,93 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "alpha": 0
+    },
+    {
+      "name": "diban_zuo",
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -317.8,
+      "y": -13.3,
+      "width": 641,
+      "height": 599,
+      "maxw": 641,
+      "maxh": 599
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_haoyoulan2.png",
+      "scale9": 1,
+      "x": -287.4,
+      "y": -6.3,
+      "width": 583,
+      "height": 498,
+      "maxw": 583,
+      "maxh": 498
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "x": 4.7,
+      "y": -5.6,
+      "width": 561,
+      "height": 474
+    },
+    {
+      "name": "btn_qiandao",
+      "type": "node",
+      "x": 4.35,
+      "y": -295.35,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "签到",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -79,
+          "y": 4.4,
+          "width": 156,
+          "height": 46.2
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -323.2,
+      "y": 264.3,
+      "width": 646,
+      "height": 55,
+      "maxw": 646,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "每日签到",
+      "size": 25,
+      "align": "center",
+      "color": 4294967295,
+      "x": -274.2,
+      "y": 265.7,
+      "width": 548,
+      "height": 31.7
+    }
+  ]
+}

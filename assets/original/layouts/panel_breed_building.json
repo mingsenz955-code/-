@@ -1,0 +1,557 @@
+{
+  "group": [
+    "ui_Breed"
+  ],
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -350.25,
+      "y": -1.02,
+      "width": 701.3,
+      "height": 601.25,
+      "maxw": 701.3,
+      "maxh": 601.25
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -349.25,
+      "y": 267.1,
+      "width": 700,
+      "height": 55,
+      "maxw": 700,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "育龙",
+      "size": 25,
+      "align": "center",
+      "color": 4294967295,
+      "x": -306.35,
+      "y": 269.5,
+      "width": 619.05,
+      "height": 32.4
+    },
+    {
+      "name": "btn_GuanBiXiao",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 336.1,
+      "y": 266.6
+    },
+    {
+      "name": "yulongshan",
+      "type": "node",
+      "x": 118.55,
+      "y": -247.05,
+      "width": 261.1,
+      "height": 494.1,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_DiBan2.png",
+          "scale9": 1,
+          "x": -418.85,
+          "y": 240.85,
+          "width": 261.1,
+          "height": 450,
+          "maxw": 261.1,
+          "maxh": 450
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_WuPinKuan.png",
+          "x": -289.95,
+          "y": 304.2,
+          "width": 202,
+          "height": 202
+        },
+        {
+          "name": "txt_yulongta",
+          "type": "label",
+          "text": "育龙塔",
+          "size": 25,
+          "align": "center",
+          "color": 255,
+          "x": -400.4,
+          "y": 443.45,
+          "width": 217.5,
+          "height": 32.1
+        },
+        {
+          "name": "di2",
+          "type": "node",
+          "x": -234.4,
+          "y": 154.85,
+          "width": 85,
+          "height": 85,
+          "children": [
+            {
+              "name": "add",
+              "type": "btn",
+              "img_normal": "#ui_common_kong.png",
+              "img_down": "#ui_common_kong.png"
+            },
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "di1",
+          "type": "node",
+          "x": -346.45,
+          "y": 154.85,
+          "width": 85,
+          "height": 85,
+          "children": [
+            {
+              "name": "add",
+              "type": "btn",
+              "img_normal": "#ui_common_kong.png",
+              "img_down": "#ui_common_kong.png"
+            },
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "quality1",
+          "type": "node",
+          "x": -346.6,
+          "y": 157.05,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "con1",
+          "type": "node",
+          "x": -346.6,
+          "y": 157.05,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "quality2",
+          "type": "node",
+          "x": -234.6,
+          "y": 157.05,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "con2",
+          "type": "node",
+          "x": -234.6,
+          "y": 157.05,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "huise",
+          "type": "sprite",
+          "img": "#ui_breed_x1.png",
+          "x": -292.35,
+          "y": 150.45,
+          "width": 37,
+          "height": 37
+        },
+        {
+          "name": "wg_state",
+          "type": "sprite",
+          "img": "#ui_breed_x2.png",
+          "x": -291.85,
+          "y": 150.45,
+          "width": 37,
+          "height": 37
+        },
+        {
+          "name": "tx_doc",
+          "type": "label",
+          "text": "培育中：00:00:00",
+          "size": 25,
+          "align": "center",
+          "color": 255,
+          "x": -395.65,
+          "y": 85.15,
+          "width": 214.3,
+          "height": 32.1
+        },
+        {
+          "name": "btn_LiKeWanCheng",
+          "type": "node",
+          "x": -288.95,
+          "y": 14.25,
+          "width": 200,
+          "height": 85,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btn_3.png",
+              "img_down": "#ui_common_btn_4.png"
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "立即完成",
+              "size": 35,
+              "align": "center",
+              "color": 4294967295,
+              "x": -79,
+              "y": 4.4,
+              "width": 156,
+              "height": 46.2
+            }
+          ]
+        },
+        {
+          "name": "img_building",
+          "type": "node",
+          "x": -285.4,
+          "y": 302.8,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "shengmingshan",
+      "type": "node",
+      "x": 460.35,
+      "y": -247.05,
+      "width": 261.1,
+      "height": 494.1,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_DiBan2.png",
+          "scale9": 1,
+          "x": -418.85,
+          "y": 240.85,
+          "width": 261.1,
+          "height": 450,
+          "maxw": 261.1,
+          "maxh": 450
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_WuPinKuan.png",
+          "x": -289.95,
+          "y": 304.2,
+          "width": 202,
+          "height": 202
+        },
+        {
+          "name": "txt_yulongta",
+          "type": "label",
+          "text": "育龙塔",
+          "size": 25,
+          "align": "center",
+          "color": 255,
+          "x": -400.4,
+          "y": 443.45,
+          "width": 217.5,
+          "height": 32.1
+        },
+        {
+          "name": "di2",
+          "type": "node",
+          "x": -234.4,
+          "y": 154.85,
+          "width": 85,
+          "height": 85,
+          "children": [
+            {
+              "name": "add",
+              "type": "btn",
+              "img_normal": "#ui_common_kong.png",
+              "img_down": "#ui_common_kong.png"
+            },
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "di1",
+          "type": "node",
+          "x": -346.45,
+          "y": 154.85,
+          "width": 85,
+          "height": 85,
+          "children": [
+            {
+              "name": "add",
+              "type": "btn",
+              "img_normal": "#ui_common_kong.png",
+              "img_down": "#ui_common_kong.png"
+            },
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "quality1",
+          "type": "node",
+          "x": -346.6,
+          "y": 157.05,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "con1",
+          "type": "node",
+          "x": -346.6,
+          "y": 157.05,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "quality2",
+          "type": "node",
+          "x": -234.6,
+          "y": 157.05,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "con2",
+          "type": "node",
+          "x": -234.6,
+          "y": 157.05,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "huise",
+          "type": "sprite",
+          "img": "#ui_breed_x1.png",
+          "x": -292.35,
+          "y": 150.45,
+          "width": 37,
+          "height": 37
+        },
+        {
+          "name": "wg_state",
+          "type": "sprite",
+          "img": "#ui_breed_x2.png",
+          "x": -291.85,
+          "y": 150.45,
+          "width": 37,
+          "height": 37
+        },
+        {
+          "name": "tx_doc",
+          "type": "label",
+          "text": "培育中：00:00:00",
+          "size": 25,
+          "align": "center",
+          "color": 255,
+          "x": -395.65,
+          "y": 85.15,
+          "width": 214.3,
+          "height": 32.1
+        },
+        {
+          "name": "btn_LiKeWanCheng",
+          "type": "node",
+          "x": -288.95,
+          "y": 14.25,
+          "width": 200,
+          "height": 85,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btn_3.png",
+              "img_down": "#ui_common_btn_4.png"
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "立即完成",
+              "size": 35,
+              "align": "center",
+              "color": 4294967295,
+              "x": -79,
+              "y": 4.4,
+              "width": 156,
+              "height": 46.2
+            }
+          ]
+        },
+        {
+          "name": "img_building",
+          "type": "node",
+          "x": -285.4,
+          "y": 302.8,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    }
+  ]
+}

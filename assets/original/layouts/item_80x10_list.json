@@ -1,0 +1,1225 @@
+{
+  "group": {},
+  "children": [
+    {
+      "name": "n1",
+      "type": "node",
+      "x": -157.5,
+      "y": 3.5,
+      "width": 85,
+      "height": 85,
+      "children": [
+        {
+          "name": "add",
+          "type": "sprite",
+          "img": "#ui_common_kgez.png",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "xiangkuang",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "tx_lv",
+          "type": "label",
+          "text": "Lv99",
+          "size": 20,
+          "align": "left",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -79.5,
+          "y": 66.8,
+          "width": 77,
+          "height": 26.5
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "size": 20,
+          "align": "right",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -83.5,
+          "y": 15.3,
+          "width": 77,
+          "height": 26.5
+        },
+        {
+          "name": "biaoji",
+          "type": "node",
+          "x": -23,
+          "y": 65,
+          "width": 30,
+          "height": 30,
+          "children": [
+            {
+              "name": "quding_biaoji",
+              "type": "sprite",
+              "img": "#ui_starup_x1.png",
+              "width": 30,
+              "height": 30
+            }
+          ]
+        },
+        {
+          "name": "biaoji_zhanbu",
+          "type": "node",
+          "x": -59,
+          "y": 59.25,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "con_star",
+          "type": "node",
+          "x": -74,
+          "y": 12,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "n2",
+      "type": "node",
+      "x": -57.5,
+      "y": 3.5,
+      "width": 85,
+      "height": 85,
+      "children": [
+        {
+          "name": "add",
+          "type": "sprite",
+          "img": "#ui_common_kgez.png",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "xiangkuang",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "tx_lv",
+          "type": "label",
+          "text": "Lv99",
+          "size": 20,
+          "align": "left",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -79.5,
+          "y": 66.8,
+          "width": 77,
+          "height": 26.5
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "size": 20,
+          "align": "right",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -83.5,
+          "y": 15.3,
+          "width": 77,
+          "height": 26.5
+        },
+        {
+          "name": "biaoji",
+          "type": "node",
+          "x": -23,
+          "y": 65,
+          "width": 30,
+          "height": 30,
+          "children": [
+            {
+              "name": "quding_biaoji",
+              "type": "sprite",
+              "img": "#ui_starup_x1.png",
+              "width": 30,
+              "height": 30
+            }
+          ]
+        },
+        {
+          "name": "biaoji_zhanbu",
+          "type": "node",
+          "x": -59,
+          "y": 59.25,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "con_star",
+          "type": "node",
+          "x": -74,
+          "y": 12,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "n3",
+      "type": "node",
+      "x": 42.5,
+      "y": 3.5,
+      "width": 85,
+      "height": 85,
+      "children": [
+        {
+          "name": "add",
+          "type": "sprite",
+          "img": "#ui_common_kgez.png",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "xiangkuang",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "tx_lv",
+          "type": "label",
+          "text": "Lv99",
+          "size": 20,
+          "align": "left",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -79.5,
+          "y": 66.8,
+          "width": 77,
+          "height": 26.5
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "size": 20,
+          "align": "right",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -83.5,
+          "y": 15.3,
+          "width": 77,
+          "height": 26.5
+        },
+        {
+          "name": "biaoji",
+          "type": "node",
+          "x": -23,
+          "y": 65,
+          "width": 30,
+          "height": 30,
+          "children": [
+            {
+              "name": "quding_biaoji",
+              "type": "sprite",
+              "img": "#ui_starup_x1.png",
+              "width": 30,
+              "height": 30
+            }
+          ]
+        },
+        {
+          "name": "biaoji_zhanbu",
+          "type": "node",
+          "x": -59,
+          "y": 59.25,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "con_star",
+          "type": "node",
+          "x": -74,
+          "y": 12,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "n4",
+      "type": "node",
+      "x": 142.5,
+      "y": 3.5,
+      "width": 85,
+      "height": 85,
+      "children": [
+        {
+          "name": "add",
+          "type": "sprite",
+          "img": "#ui_common_kgez.png",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "xiangkuang",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "tx_lv",
+          "type": "label",
+          "text": "Lv99",
+          "size": 20,
+          "align": "left",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -79.5,
+          "y": 66.8,
+          "width": 77,
+          "height": 26.5
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "size": 20,
+          "align": "right",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -83.5,
+          "y": 15.3,
+          "width": 77,
+          "height": 26.5
+        },
+        {
+          "name": "biaoji",
+          "type": "node",
+          "x": -23,
+          "y": 65,
+          "width": 30,
+          "height": 30,
+          "children": [
+            {
+              "name": "quding_biaoji",
+              "type": "sprite",
+              "img": "#ui_starup_x1.png",
+              "width": 30,
+              "height": 30
+            }
+          ]
+        },
+        {
+          "name": "biaoji_zhanbu",
+          "type": "node",
+          "x": -59,
+          "y": 59.25,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "con_star",
+          "type": "node",
+          "x": -74,
+          "y": 12,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "n5",
+      "type": "node",
+      "x": 242.5,
+      "y": 3.5,
+      "width": 85,
+      "height": 85,
+      "children": [
+        {
+          "name": "add",
+          "type": "sprite",
+          "img": "#ui_common_kgez.png",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "xiangkuang",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "tx_lv",
+          "type": "label",
+          "text": "Lv99",
+          "size": 20,
+          "align": "left",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -79.5,
+          "y": 66.8,
+          "width": 77,
+          "height": 26.5
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "size": 20,
+          "align": "right",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -83.5,
+          "y": 15.3,
+          "width": 77,
+          "height": 26.5
+        },
+        {
+          "name": "biaoji",
+          "type": "node",
+          "x": -23,
+          "y": 65,
+          "width": 30,
+          "height": 30,
+          "children": [
+            {
+              "name": "quding_biaoji",
+              "type": "sprite",
+              "img": "#ui_starup_x1.png",
+              "width": 30,
+              "height": 30
+            }
+          ]
+        },
+        {
+          "name": "biaoji_zhanbu",
+          "type": "node",
+          "x": -59,
+          "y": 59.25,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "con_star",
+          "type": "node",
+          "x": -74,
+          "y": 12,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "n6",
+      "type": "node",
+      "x": -157.5,
+      "y": -88.5,
+      "width": 85,
+      "height": 85,
+      "children": [
+        {
+          "name": "add",
+          "type": "sprite",
+          "img": "#ui_common_kgez.png",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "xiangkuang",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "tx_lv",
+          "type": "label",
+          "text": "Lv99",
+          "size": 20,
+          "align": "left",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -79.5,
+          "y": 66.8,
+          "width": 77,
+          "height": 26.5
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "size": 20,
+          "align": "right",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -83.5,
+          "y": 15.3,
+          "width": 77,
+          "height": 26.5
+        },
+        {
+          "name": "biaoji",
+          "type": "node",
+          "x": -23,
+          "y": 65,
+          "width": 30,
+          "height": 30,
+          "children": [
+            {
+              "name": "quding_biaoji",
+              "type": "sprite",
+              "img": "#ui_starup_x1.png",
+              "width": 30,
+              "height": 30
+            }
+          ]
+        },
+        {
+          "name": "biaoji_zhanbu",
+          "type": "node",
+          "x": -59,
+          "y": 59.25,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "con_star",
+          "type": "node",
+          "x": -74,
+          "y": 12,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "n7",
+      "type": "node",
+      "x": -57.5,
+      "y": -88.5,
+      "width": 85,
+      "height": 85,
+      "children": [
+        {
+          "name": "add",
+          "type": "sprite",
+          "img": "#ui_common_kgez.png",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "xiangkuang",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "tx_lv",
+          "type": "label",
+          "text": "Lv99",
+          "size": 20,
+          "align": "left",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -79.5,
+          "y": 66.8,
+          "width": 77,
+          "height": 26.5
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "size": 20,
+          "align": "right",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -83.5,
+          "y": 15.3,
+          "width": 77,
+          "height": 26.5
+        },
+        {
+          "name": "biaoji",
+          "type": "node",
+          "x": -23,
+          "y": 65,
+          "width": 30,
+          "height": 30,
+          "children": [
+            {
+              "name": "quding_biaoji",
+              "type": "sprite",
+              "img": "#ui_starup_x1.png",
+              "width": 30,
+              "height": 30
+            }
+          ]
+        },
+        {
+          "name": "biaoji_zhanbu",
+          "type": "node",
+          "x": -59,
+          "y": 59.25,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "con_star",
+          "type": "node",
+          "x": -74,
+          "y": 12,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "n8",
+      "type": "node",
+      "x": 42.5,
+      "y": -88.5,
+      "width": 85,
+      "height": 85,
+      "children": [
+        {
+          "name": "add",
+          "type": "sprite",
+          "img": "#ui_common_kgez.png",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "xiangkuang",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "tx_lv",
+          "type": "label",
+          "text": "Lv99",
+          "size": 20,
+          "align": "left",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -79.5,
+          "y": 66.8,
+          "width": 77,
+          "height": 26.5
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "size": 20,
+          "align": "right",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -83.5,
+          "y": 15.3,
+          "width": 77,
+          "height": 26.5
+        },
+        {
+          "name": "biaoji",
+          "type": "node",
+          "x": -23,
+          "y": 65,
+          "width": 30,
+          "height": 30,
+          "children": [
+            {
+              "name": "quding_biaoji",
+              "type": "sprite",
+              "img": "#ui_starup_x1.png",
+              "width": 30,
+              "height": 30
+            }
+          ]
+        },
+        {
+          "name": "biaoji_zhanbu",
+          "type": "node",
+          "x": -59,
+          "y": 59.25,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "con_star",
+          "type": "node",
+          "x": -74,
+          "y": 12,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "n9",
+      "type": "node",
+      "x": 142.5,
+      "y": -88.5,
+      "width": 85,
+      "height": 85,
+      "children": [
+        {
+          "name": "add",
+          "type": "sprite",
+          "img": "#ui_common_kgez.png",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "xiangkuang",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "tx_lv",
+          "type": "label",
+          "text": "Lv99",
+          "size": 20,
+          "align": "left",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -79.5,
+          "y": 66.8,
+          "width": 77,
+          "height": 26.5
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "size": 20,
+          "align": "right",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -83.5,
+          "y": 15.3,
+          "width": 77,
+          "height": 26.5
+        },
+        {
+          "name": "biaoji",
+          "type": "node",
+          "x": -23,
+          "y": 65,
+          "width": 30,
+          "height": 30,
+          "children": [
+            {
+              "name": "quding_biaoji",
+              "type": "sprite",
+              "img": "#ui_starup_x1.png",
+              "width": 30,
+              "height": 30
+            }
+          ]
+        },
+        {
+          "name": "biaoji_zhanbu",
+          "type": "node",
+          "x": -59,
+          "y": 59.25,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "con_star",
+          "type": "node",
+          "x": -74,
+          "y": 12,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "n10",
+      "type": "node",
+      "x": 242.5,
+      "y": -88.5,
+      "width": 85,
+      "height": 85,
+      "children": [
+        {
+          "name": "add",
+          "type": "sprite",
+          "img": "#ui_common_kgez.png",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "xiangkuang",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "tx_lv",
+          "type": "label",
+          "text": "Lv99",
+          "size": 20,
+          "align": "left",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -79.5,
+          "y": 66.8,
+          "width": 77,
+          "height": 26.5
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "size": 20,
+          "align": "right",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -83.5,
+          "y": 15.3,
+          "width": 77,
+          "height": 26.5
+        },
+        {
+          "name": "biaoji",
+          "type": "node",
+          "x": -23,
+          "y": 65,
+          "width": 30,
+          "height": 30,
+          "children": [
+            {
+              "name": "quding_biaoji",
+              "type": "sprite",
+              "img": "#ui_starup_x1.png",
+              "width": 30,
+              "height": 30
+            }
+          ]
+        },
+        {
+          "name": "biaoji_zhanbu",
+          "type": "node",
+          "x": -59,
+          "y": 59.25,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "con_star",
+          "type": "node",
+          "x": -74,
+          "y": 12,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    }
+  ]
+}

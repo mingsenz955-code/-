@@ -1,0 +1,138 @@
+{
+  "group": [
+    "ui_common",
+    "ui_fuwen",
+    "ui_longmibao"
+  ],
+  "width": 404,
+  "height": 612,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 2,
+      "grid": {
+        "x": 55,
+        "y": 111,
+        "width": 169,
+        "height": 27
+      },
+      "x": -202,
+      "y": 11.48,
+      "width": 404,
+      "height": 589.05,
+      "maxw": 404,
+      "maxh": 589.05
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "x": -0.05,
+      "y": -3.8,
+      "width": 360,
+      "height": 460
+    },
+    {
+      "name": "txt_1",
+      "type": "label",
+      "text": "请选择你要镶嵌的符文",
+      "align": "center",
+      "size": 23,
+      "color": 1008799231,
+      "x": -170.05,
+      "y": 252.88,
+      "width": 234.2,
+      "height": 29.65
+    },
+    {
+      "name": "node_btn_getfw",
+      "type": "node",
+      "x": 98.45,
+      "y": -272.8,
+      "width": 193,
+      "height": 67,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn7.png",
+          "img_down": "#ui_common_btn8.png",
+          "img_disable": "#ui_common_btn6.png",
+          "width": 193,
+          "height": 67
+        },
+        {
+          "name": "txt_1",
+          "type": "label",
+          "text": "获取符文",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -95.15,
+          "y": 6.2,
+          "width": 190.3,
+          "height": 43.1
+        }
+      ]
+    },
+    {
+      "name": "node_btn_putonall",
+      "type": "node",
+      "x": -96.55,
+      "y": -272.8,
+      "width": 193,
+      "height": 67,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn4.png",
+          "img_down": "#ui_common_btn5.png",
+          "img_disable": "#ui_common_btn6.png",
+          "width": 193,
+          "height": 67
+        },
+        {
+          "name": "txt_1",
+          "type": "label",
+          "text": "一键镶嵌",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -77.95,
+          "y": 5.6,
+          "width": 156.95,
+          "height": 43.1
+        }
+      ]
+    },
+    {
+      "name": "image_fenge2",
+      "type": "sprite",
+      "img": "#ui_fuwen_fenge.png",
+      "x": 2.95,
+      "y": -238.8,
+      "width": 348,
+      "height": 9
+    },
+    {
+      "name": "image_fenge1",
+      "type": "sprite",
+      "img": "#ui_fuwen_fenge.png",
+      "x": 2.95,
+      "y": 225.2,
+      "width": 348,
+      "height": 9
+    },
+    {
+      "name": "btn_help",
+      "type": "btn",
+      "img_normal": "#ui_longmibao_btn_xiangqing1.png",
+      "img_down": "#ui_longmibao_btn_xiangqing2.png",
+      "x": 150.85,
+      "y": 254.2,
+      "width": 46,
+      "height": 46
+    }
+  ]
+}

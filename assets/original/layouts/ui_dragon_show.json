@@ -1,0 +1,23 @@
+{
+  "group": [
+    "ui_dragonshow"
+  ],
+  "width": 1022,
+  "height": 768,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#ui_dragonshow_bgm.png",
+      "width": 1022,
+      "height": 768
+    },
+    {
+      "name": "dragon",
+      "type": "node",
+      "y": -101.95,
+      "width": 0,
+      "height": 0
+    }
+  ]
+}

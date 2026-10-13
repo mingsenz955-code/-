@@ -1,0 +1,161 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "alpha": 0
+    },
+    {
+      "name": "basenode",
+      "type": "node"
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_invite_dress_rect.png",
+      "width": 530,
+      "height": 360,
+      "scale9": 1,
+      "x": -265.0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "width": 518,
+      "height": 351,
+      "scale9": 1,
+      "x": -259.0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_bloodwar_winpanel.png",
+      "width": 599,
+      "height": 176,
+      "y": 135
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_bloodwar_text_bwin.png",
+      "width": 273,
+      "height": 78,
+      "y": 191
+    },
+    {
+      "name": "stage",
+      "type": "node",
+      "y": 95,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_bloodwar_text_pass.png",
+          "width": 278,
+          "height": 38
+        }
+      ]
+    },
+    {
+      "type": "label",
+      "text": "本关获得：",
+      "size": 20,
+      "align": "left",
+      "width": 140,
+      "height": 32,
+      "x": -160,
+      "y": 41,
+      "color": 2336560127
+    },
+    {
+      "name": "score",
+      "type": "label",
+      "text": "/15 积分",
+      "size": 20,
+      "align": "left",
+      "width": 140,
+      "height": 32,
+      "x": -60,
+      "y": 41,
+      "color": 4294967295,
+      "outlineColor": 4287317267
+    },
+    {
+      "type": "label",
+      "text": "（满积分通关可以激活自动通关功能）",
+      "align": "left",
+      "size": 20,
+      "width": 400,
+      "height": 32,
+      "x": -150,
+      "y": 15,
+      "color": 2336560127
+    },
+    {
+      "type": "label",
+      "text": "通关奖励：",
+      "size": 20,
+      "align": "left",
+      "width": 140,
+      "height": 32,
+      "x": -160,
+      "y": -40,
+      "color": 4278190335
+    },
+    {
+      "type": "node",
+      "x": -56,
+      "y": -41,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_ShuZiKuang.png",
+          "width": 200,
+          "height": 35,
+          "scale9": 1
+        },
+        {
+          "name": "itemnum",
+          "type": "label",
+          "text": "---",
+          "size": 20,
+          "align": "left",
+          "width": 200,
+          "height": 32,
+          "x": 40,
+          "color": 2336560127
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#thumbs_store_treasure_item_113.png",
+      "width": 57,
+      "height": 57,
+      "x": -28,
+      "y": -18
+    },
+    {
+      "type": "node",
+      "y": -110,
+      "children": [
+        {
+          "name": "btn_ok",
+          "type": "maskBtn",
+          "img_normal": "#ui_invite_long_btn_1.png",
+          "img_down": "#ui_invite_long_btn_2.png",
+          "width": 222.4,
+          "height": 59.2
+        },
+        {
+          "type": "label",
+          "text": "确　定",
+          "size": 24,
+          "align": "center",
+          "color": 4294967295,
+          "width": 200,
+          "height": 40,
+          "x": -100
+        }
+      ]
+    }
+  ]
+}

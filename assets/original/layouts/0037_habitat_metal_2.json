@@ -1,0 +1,43 @@
+{
+  "group": [
+    "buildings/0037_habitat_metal_2_g"
+  ],
+  "width": 404,
+  "height": 311,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0037_habitat_metal_2_g_bg.png",
+      "x": 0.05,
+      "y": 172.5
+    },
+    {
+      "name": "zuobiao1",
+      "type": "node",
+      "x": -140,
+      "y": 134
+    },
+    {
+      "name": "zuobiao2",
+      "type": "node",
+      "x": -9,
+      "y": 66
+    },
+    {
+      "name": "zuobiao3",
+      "type": "node",
+      "x": 133,
+      "y": 131
+    },
+    {
+      "name": "eff",
+      "type": "eff",
+      "eff": "0037_habitat_metal_2_eff",
+      "x": 0.15,
+      "y": 1.9,
+      "width": 21.1,
+      "height": 24.95
+    }
+  ]
+}

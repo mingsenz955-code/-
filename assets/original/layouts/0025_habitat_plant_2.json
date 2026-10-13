@@ -1,0 +1,41 @@
+{
+  "group": [
+    "buildings/0025_habitat_plant_2_g"
+  ],
+  "width": 405,
+  "height": 332,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0025_habitat_plant_2_g_bg.png",
+      "x": -1.45,
+      "y": 182
+    },
+    {
+      "name": "zuobiao1",
+      "type": "node",
+      "x": -119,
+      "y": 133
+    },
+    {
+      "name": "zuobiao2",
+      "type": "node",
+      "x": -4,
+      "y": 176
+    },
+    {
+      "name": "zuobiao3",
+      "type": "node",
+      "x": 102,
+      "y": 112
+    },
+    {
+      "name": "eff",
+      "type": "eff",
+      "eff": "0025_habitat_plant_2_eff",
+      "width": 9.15,
+      "height": 9.75
+    }
+  ]
+}

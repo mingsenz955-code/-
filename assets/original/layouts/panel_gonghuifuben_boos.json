@@ -1,0 +1,307 @@
+{
+  "group": [
+    "ui_common",
+    "ui_gonghuifuben",
+    "ui_daojukuang"
+  ],
+  "width": 872,
+  "height": 632,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 2,
+      "grid": {
+        "x": 107.95,
+        "y": 111,
+        "width": 45.999999999999986,
+        "height": 27
+      },
+      "x": -435.5,
+      "y": -15.45,
+      "width": 860,
+      "height": 570,
+      "maxw": 860,
+      "maxh": 570
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_haoyoulan2.png",
+      "scale9": 2,
+      "grid": {
+        "x": 28.25,
+        "y": 29,
+        "width": 37.75,
+        "height": 36
+      },
+      "x": -403.15,
+      "y": -19.7,
+      "width": 793.85,
+      "height": 507.4,
+      "maxw": 793.85,
+      "maxh": 507.4
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 2,
+      "grid": {
+        "x": 24.5,
+        "y": 20,
+        "width": 9.5,
+        "height": 9.5
+      },
+      "x": -435.5,
+      "y": 259.23,
+      "width": 836.95,
+      "height": 49.05,
+      "maxw": 836.95,
+      "maxh": 49.05
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_gonghuifuben_longbg.png",
+      "x": -222.75,
+      "y": -16.9,
+      "width": 345,
+      "height": 461
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_gonghuifuben_d1.png",
+      "x": 169.15,
+      "y": 164.1,
+      "width": 414,
+      "height": 99
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_gonghuifuben_d1.png",
+      "x": 170.9,
+      "y": 57.05,
+      "width": 414,
+      "height": 99
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_gonghuifuben_d2.png",
+      "x": 171.15,
+      "y": -84.95,
+      "width": 414,
+      "height": 169
+    },
+    {
+      "name": "txt_1",
+      "type": "label",
+      "text": "BOSS",
+      "align": "center",
+      "size": 28,
+      "color": 1092488703,
+      "x": 23.25,
+      "y": 188.35,
+      "width": 289.9,
+      "height": 35.3
+    },
+    {
+      "name": "txt_2",
+      "type": "label",
+      "text": "剩余血量:",
+      "align": "left",
+      "size": 25,
+      "color": 1092488703,
+      "x": -24.75,
+      "y": 79.15,
+      "width": 117,
+      "height": 35.3
+    },
+    {
+      "name": "txt_3",
+      "type": "label",
+      "text": "参战奖励",
+      "align": "center",
+      "size": 25,
+      "color": 1092488703,
+      "x": 46.25,
+      "y": -25.85,
+      "width": 231,
+      "height": 35.3
+    },
+    {
+      "name": "node_dropshow1",
+      "type": "node",
+      "x": 227.5,
+      "y": -164.4,
+      "width": 110,
+      "height": 110,
+      "children": [
+        {
+          "name": "bg",
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "x": -55,
+          "y": 55,
+          "width": 110,
+          "height": 110
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "x": -55,
+          "y": 55,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "image",
+          "type": "node",
+          "x": -55.85,
+          "y": 57.8,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "eff",
+          "type": "node",
+          "x": -55.85,
+          "y": 56.8,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -92.1,
+          "y": 29.4,
+          "width": 77,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "node_dragonshow",
+      "type": "node",
+      "x": -218.75,
+      "y": -2.9,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "txt_now_max_hp",
+      "type": "label",
+      "text": "?/?",
+      "align": "center",
+      "size": 25,
+      "color": 1092488703,
+      "x": 92.25,
+      "y": 79.15,
+      "width": 271,
+      "height": 35.3
+    },
+    {
+      "name": "node_blood_progress",
+      "type": "node",
+      "x": 168.75,
+      "y": 38.6,
+      "width": 391,
+      "height": 27,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_gonghuifuben_jindu6.png",
+          "y": -3.5,
+          "width": 391,
+          "height": 27
+        },
+        {
+          "name": "node_progress",
+          "type": "node",
+          "y": -3.5,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "txt_curtboss_name",
+      "type": "label",
+      "text": "--",
+      "align": "center",
+      "size": 28,
+      "color": 4278190335,
+      "x": 23.25,
+      "y": 142.15,
+      "width": 289.9,
+      "height": 35.3
+    },
+    {
+      "name": "txt_title",
+      "type": "label",
+      "text": "--",
+      "align": "center",
+      "size": 21,
+      "color": 4294967295,
+      "x": -78.25,
+      "y": 260.63,
+      "width": 235,
+      "height": 29.85
+    },
+    {
+      "name": "node_btn_fight",
+      "type": "node",
+      "x": 177.25,
+      "y": -289.9,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png",
+          "img_disable": "#ui_common_btn_2c.png",
+          "width": 144,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "挑战",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "name": "times",
+      "type": "label",
+      "text": "",
+      "align": "center",
+      "size": 25,
+      "color": 1092488703,
+      "x": -8,
+      "y": -207.8,
+      "width": 361,
+      "height": 43.1
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 396.15,
+      "y": 257,
+      "width": 80,
+      "height": 86
+    }
+  ]
+}

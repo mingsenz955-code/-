@@ -1,0 +1,1514 @@
+{
+  "group": [
+    "ui_formationinfo",
+    "ui_daojukuang"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_d.png",
+      "x": -1,
+      "y": 341,
+      "width": 573,
+      "height": 83
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "阵容",
+      "align": "center",
+      "size": 28,
+      "color": 4294967295,
+      "x": -217,
+      "y": 332,
+      "width": 432,
+      "height": 35
+    },
+    {
+      "name": "left",
+      "type": "node",
+      "x": -410,
+      "y": -36,
+      "width": 172,
+      "height": 677,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_formationinfo_bg1.png",
+          "x": -4,
+          "y": 21,
+          "width": 164,
+          "height": 636
+        },
+        {
+          "name": "huadong",
+          "type": "list",
+          "x": -3,
+          "y": 86,
+          "width": 131,
+          "height": 394
+        },
+        {
+          "name": "hint_up",
+          "type": "btn",
+          "img_normal": "#ui_formationinfo_hint_down.png",
+          "img_down": "#ui_formationinfo_hint_down.png",
+          "y": 298,
+          "width": 42,
+          "height": 29
+        },
+        {
+          "name": "hint_down",
+          "type": "btn",
+          "img_normal": "#ui_formationinfo_hint_up.png",
+          "img_down": "#ui_formationinfo_hint_up.png",
+          "x": -4,
+          "y": -126,
+          "width": 42,
+          "height": 29
+        },
+        {
+          "name": "btn_formation",
+          "type": "node",
+          "x": -5,
+          "y": -296,
+          "width": 144,
+          "height": 85,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btn_1.png",
+              "img_down": "#ui_common_btn_2.png",
+              "img_disable": "#ui_common_btn_2c.png",
+              "width": 144,
+              "height": 85
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "阵型",
+              "align": "center",
+              "size": 35,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -51,
+              "y": 5,
+              "width": 103,
+              "height": 45
+            }
+          ]
+        },
+        {
+          "name": "tx_team",
+          "type": "label",
+          "text": "上阵：",
+          "align": "left",
+          "size": 22,
+          "color": 1092488703,
+          "x": -59,
+          "y": -170,
+          "width": 72,
+          "height": 29
+        },
+        {
+          "name": "tx_team_num",
+          "type": "label",
+          "text": "",
+          "align": "left",
+          "size": 22,
+          "color": 4278190335,
+          "x": 14,
+          "y": -170,
+          "width": 72,
+          "height": 29
+        },
+        {
+          "name": "tx_sky",
+          "type": "label",
+          "text": "飞行龙：",
+          "align": "left",
+          "size": 22,
+          "color": 1092488703,
+          "x": -59,
+          "y": -200,
+          "width": 93,
+          "height": 29
+        },
+        {
+          "name": "tx_shy_num",
+          "type": "label",
+          "text": "",
+          "align": "left",
+          "size": 22,
+          "color": 4278190335,
+          "x": 34,
+          "y": -200,
+          "width": 52,
+          "height": 29
+        },
+        {
+          "name": "tx_land",
+          "type": "label",
+          "text": "爬行龙：",
+          "align": "left",
+          "size": 22,
+          "color": 1092488703,
+          "x": -59,
+          "y": -230,
+          "width": 93,
+          "height": 29
+        },
+        {
+          "name": "tx_land_num",
+          "type": "label",
+          "text": "",
+          "align": "left",
+          "size": 22,
+          "color": 4278190335,
+          "x": 34,
+          "y": -230,
+          "width": 52,
+          "height": 29
+        }
+      ]
+    },
+    {
+      "name": "right",
+      "type": "node",
+      "x": 81,
+      "y": -32,
+      "width": 842,
+      "height": 692,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_DiBan_YangBiZhi.png",
+          "scale9": 1,
+          "grid": {
+            "x": 108,
+            "y": 111,
+            "width": 46,
+            "height": 27
+          },
+          "x": -421,
+          "y": 16,
+          "width": 842,
+          "height": 660,
+          "maxw": 842,
+          "maxh": 660
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_formationinfo_zhuangbeibg.png",
+          "x": 19,
+          "y": -197,
+          "width": 767,
+          "height": 159
+        },
+        {
+          "name": "dragong_info",
+          "type": "node",
+          "x": -10,
+          "y": 31,
+          "width": 667,
+          "height": 284,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_formationinfo_bg3.png",
+              "x": -1,
+              "y": 1,
+              "width": 661,
+              "height": 281
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_formationinfo_bg2.png",
+              "y": 117,
+              "width": 667,
+              "height": 50
+            },
+            {
+              "name": "text_dragong_name",
+              "type": "label",
+              "text": "龙的名称",
+              "align": "center",
+              "size": 28,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -139,
+              "y": 119,
+              "width": 258,
+              "height": 36
+            },
+            {
+              "name": "dragon",
+              "type": "node",
+              "x": -1,
+              "y": -96,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "lv1",
+              "type": "node",
+              "x": -68,
+              "y": -114,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "lv2",
+              "type": "node",
+              "x": -35,
+              "y": -114,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "lv3",
+              "type": "node",
+              "x": -2,
+              "y": -114,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "lv4",
+              "type": "node",
+              "x": 31,
+              "y": -114,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "lv5",
+              "type": "node",
+              "x": 64,
+              "y": -114,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "btn_xiangqing",
+              "type": "node",
+              "x": 269,
+              "y": 117,
+              "width": 92,
+              "height": 46,
+              "children": [
+                {
+                  "name": "btn",
+                  "type": "btn",
+                  "img_normal": "#ui_common_btndh1.png",
+                  "img_down": "#ui_common_btndh2.png",
+                  "img_disable": "#ui_common_btndh3.png",
+                  "width": 92,
+                  "height": 46
+                },
+                {
+                  "name": "txt_name",
+                  "type": "label",
+                  "text": "详情",
+                  "align": "center",
+                  "size": 30,
+                  "color": 992815615,
+                  "outlineColor": 13941402,
+                  "x": -43,
+                  "y": -1,
+                  "width": 85,
+                  "height": 38
+                }
+              ]
+            },
+            {
+              "name": "lv",
+              "type": "node",
+              "x": -302,
+              "y": 60,
+              "width": 47,
+              "height": 51,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_formationinfo_lvbg.png",
+                  "width": 47,
+                  "height": 51
+                },
+                {
+                  "name": "level",
+                  "type": "label",
+                  "text": "55",
+                  "align": "center",
+                  "size": 30,
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -23,
+                  "y": 0,
+                  "width": 47,
+                  "height": 38
+                }
+              ]
+            },
+            {
+              "name": "text_type",
+              "type": "label",
+              "text": "飞行",
+              "align": "left",
+              "size": 24,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -275,
+              "y": 116,
+              "width": 105,
+              "height": 31
+            },
+            {
+              "name": "type_sky",
+              "type": "sprite",
+              "img": "#ui_formationinfo_type_sky.png",
+              "x": -302,
+              "y": 118,
+              "width": 52,
+              "height": 52
+            },
+            {
+              "name": "type_land",
+              "type": "sprite",
+              "img": "#ui_formationinfo_type_land.png",
+              "x": -302,
+              "y": 118,
+              "width": 52,
+              "height": 52
+            },
+            {
+              "name": "type_shuxing3",
+              "type": "node",
+              "x": 303,
+              "y": 70,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "type_shuxing2",
+              "type": "node",
+              "x": 272,
+              "y": 70,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "type_shuxing1",
+              "type": "node",
+              "x": 240,
+              "y": 70,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "hp",
+              "type": "node",
+              "x": 245,
+              "y": 15,
+              "width": 165,
+              "height": 31,
+              "children": [
+                {
+                  "name": "miaoshu",
+                  "type": "label",
+                  "text": "生命:",
+                  "align": "left",
+                  "size": 24,
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -82,
+                  "width": 70,
+                  "height": 31
+                },
+                {
+                  "name": "num",
+                  "type": "label",
+                  "text": "000000",
+                  "align": "left",
+                  "size": 24,
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -11,
+                  "width": 94,
+                  "height": 31
+                }
+              ]
+            },
+            {
+              "name": "atk",
+              "type": "node",
+              "x": 245,
+              "y": -17,
+              "width": 165,
+              "height": 31,
+              "children": [
+                {
+                  "name": "miaoshu",
+                  "type": "label",
+                  "text": "攻击:",
+                  "align": "left",
+                  "size": 24,
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -82,
+                  "width": 70,
+                  "height": 31
+                },
+                {
+                  "name": "num",
+                  "type": "label",
+                  "text": "000000",
+                  "align": "left",
+                  "size": 24,
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -11,
+                  "width": 94,
+                  "height": 31
+                }
+              ]
+            },
+            {
+              "name": "def",
+              "type": "node",
+              "x": 245,
+              "y": -49,
+              "width": 165,
+              "height": 31,
+              "children": [
+                {
+                  "name": "miaoshu",
+                  "type": "label",
+                  "text": "防御:",
+                  "align": "left",
+                  "size": 24,
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -82,
+                  "width": 70,
+                  "height": 31
+                },
+                {
+                  "name": "num",
+                  "type": "label",
+                  "text": "000000",
+                  "align": "left",
+                  "size": 24,
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -11,
+                  "width": 94,
+                  "height": 31
+                }
+              ]
+            },
+            {
+              "name": "critical",
+              "type": "node",
+              "x": 245,
+              "y": -80,
+              "width": 165,
+              "height": 31,
+              "children": [
+                {
+                  "name": "miaoshu",
+                  "type": "label",
+                  "text": "暴击:",
+                  "align": "left",
+                  "size": 24,
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -82,
+                  "width": 70,
+                  "height": 31
+                },
+                {
+                  "name": "num",
+                  "type": "label",
+                  "text": "000000",
+                  "align": "left",
+                  "size": 24,
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -11,
+                  "width": 94,
+                  "height": 31
+                }
+              ]
+            },
+            {
+              "name": "resist",
+              "type": "node",
+              "x": 245,
+              "y": -112,
+              "width": 165,
+              "height": 31,
+              "children": [
+                {
+                  "name": "miaoshu",
+                  "type": "label",
+                  "text": "免爆:",
+                  "align": "left",
+                  "size": 24,
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -82,
+                  "width": 70,
+                  "height": 31
+                },
+                {
+                  "name": "num",
+                  "type": "label",
+                  "text": "000000",
+                  "align": "left",
+                  "size": 24,
+                  "color": 4294967295,
+                  "outlineColor": 0,
+                  "x": -11,
+                  "width": 94,
+                  "height": 31
+                }
+              ]
+            },
+            {
+              "name": "power",
+              "type": "node",
+              "x": -213,
+              "y": -113,
+              "width": 229,
+              "height": 33,
+              "children": [
+                {
+                  "name": "miaoshu",
+                  "type": "label",
+                  "text": "战斗力:",
+                  "align": "left",
+                  "size": 26,
+                  "color": 4291572735,
+                  "outlineColor": 0,
+                  "x": -108,
+                  "y": 1,
+                  "width": 105,
+                  "height": 33
+                },
+                {
+                  "name": "num",
+                  "type": "label",
+                  "text": "000000",
+                  "align": "left",
+                  "size": 26,
+                  "color": 3422552319,
+                  "outlineColor": 0,
+                  "x": -3,
+                  "y": 1,
+                  "width": 124,
+                  "height": 33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "equip1",
+          "type": "node",
+          "x": -156,
+          "y": -194,
+          "width": 110,
+          "height": 135,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_daojukuang_DaoJuKuang1.png",
+              "y": 13,
+              "width": 110,
+              "height": 110
+            },
+            {
+              "name": "quality",
+              "type": "node",
+              "y": 13,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "x": -1,
+              "y": 15,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "star",
+              "type": "node",
+              "x": 39,
+              "y": 48,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "",
+              "align": "center",
+              "size": 24,
+              "color": 1092488703,
+              "x": -55,
+              "y": -52,
+              "width": 110,
+              "height": 31
+            },
+            {
+              "name": "txt_num",
+              "type": "label",
+              "text": " ",
+              "align": "right",
+              "size": 28,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -41,
+              "y": -15,
+              "width": 80,
+              "height": 36
+            },
+            {
+              "name": "hint",
+              "type": "node",
+              "x": 38,
+              "y": 52,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "biaoji_pinzhi",
+              "type": "node",
+              "x": -35,
+              "y": 50,
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "equip2",
+          "type": "node",
+          "x": -37,
+          "y": -194,
+          "width": 110,
+          "height": 135,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_daojukuang_DaoJuKuang1.png",
+              "y": 13,
+              "width": 110,
+              "height": 110
+            },
+            {
+              "name": "quality",
+              "type": "node",
+              "y": 13,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "x": -1,
+              "y": 15,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "star",
+              "type": "node",
+              "x": 39,
+              "y": 48,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "",
+              "align": "center",
+              "size": 24,
+              "color": 1092488703,
+              "x": -55,
+              "y": -52,
+              "width": 110,
+              "height": 31
+            },
+            {
+              "name": "txt_num",
+              "type": "label",
+              "text": " ",
+              "align": "right",
+              "size": 28,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -41,
+              "y": -15,
+              "width": 80,
+              "height": 36
+            },
+            {
+              "name": "hint",
+              "type": "node",
+              "x": 38,
+              "y": 52,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "biaoji_pinzhi",
+              "type": "node",
+              "x": -35,
+              "y": 50,
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "equip3",
+          "type": "node",
+          "x": 81,
+          "y": -194,
+          "width": 110,
+          "height": 135,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_daojukuang_DaoJuKuang1.png",
+              "y": 13,
+              "width": 110,
+              "height": 110
+            },
+            {
+              "name": "quality",
+              "type": "node",
+              "y": 13,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "x": -1,
+              "y": 15,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "star",
+              "type": "node",
+              "x": 39,
+              "y": 48,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "",
+              "align": "center",
+              "size": 24,
+              "color": 1092488703,
+              "x": -55,
+              "y": -52,
+              "width": 110,
+              "height": 31
+            },
+            {
+              "name": "txt_num",
+              "type": "label",
+              "text": " ",
+              "align": "right",
+              "size": 28,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -41,
+              "y": -15,
+              "width": 80,
+              "height": 36
+            },
+            {
+              "name": "hint",
+              "type": "node",
+              "x": 38,
+              "y": 52,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "biaoji_pinzhi",
+              "type": "node",
+              "x": -35,
+              "y": 50,
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "equip4",
+          "type": "node",
+          "x": 199,
+          "y": -194,
+          "width": 110,
+          "height": 135,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_daojukuang_DaoJuKuang1.png",
+              "y": 13,
+              "width": 110,
+              "height": 110
+            },
+            {
+              "name": "quality",
+              "type": "node",
+              "y": 13,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "x": -1,
+              "y": 15,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "star",
+              "type": "node",
+              "x": 39,
+              "y": 48,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "",
+              "align": "center",
+              "size": 24,
+              "color": 1092488703,
+              "x": -55,
+              "y": -52,
+              "width": 110,
+              "height": 31
+            },
+            {
+              "name": "txt_num",
+              "type": "label",
+              "text": " ",
+              "align": "right",
+              "size": 28,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -41,
+              "y": -15,
+              "width": 80,
+              "height": 36
+            },
+            {
+              "name": "hint",
+              "type": "node",
+              "x": 38,
+              "y": 52,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "biaoji_pinzhi",
+              "type": "node",
+              "x": -35,
+              "y": 50,
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "equip5",
+          "type": "node",
+          "x": -289,
+          "y": -194,
+          "width": 110,
+          "height": 135,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_daojukuang_DaoJuKuang1.png",
+              "y": 13,
+              "width": 110,
+              "height": 110
+            },
+            {
+              "name": "quality",
+              "type": "node",
+              "y": 13,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "x": -1,
+              "y": 15,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "star",
+              "type": "node",
+              "x": 39,
+              "y": 48,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "",
+              "align": "center",
+              "size": 24,
+              "color": 1092488703,
+              "x": -55,
+              "y": -52,
+              "width": 110,
+              "height": 31
+            },
+            {
+              "name": "txt_num",
+              "type": "label",
+              "text": " ",
+              "align": "right",
+              "size": 28,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -41,
+              "y": -15,
+              "width": 80,
+              "height": 36
+            },
+            {
+              "name": "hint",
+              "type": "node",
+              "x": 38,
+              "y": 52,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "biaoji_pinzhi",
+              "type": "node",
+              "x": -35,
+              "y": 50,
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "equip6",
+          "type": "node",
+          "x": 328,
+          "y": -194,
+          "width": 110,
+          "height": 135,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_daojukuang_DaoJuKuang1.png",
+              "y": 13,
+              "width": 110,
+              "height": 110
+            },
+            {
+              "name": "quality",
+              "type": "node",
+              "y": 13,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "x": -1,
+              "y": 15,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "star",
+              "type": "node",
+              "x": 39,
+              "y": 48,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "",
+              "align": "center",
+              "size": 24,
+              "color": 1092488703,
+              "x": -55,
+              "y": -52,
+              "width": 110,
+              "height": 31
+            },
+            {
+              "name": "txt_num",
+              "type": "label",
+              "text": " ",
+              "align": "right",
+              "size": 28,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -41,
+              "y": -15,
+              "width": 80,
+              "height": 36
+            },
+            {
+              "name": "hint",
+              "type": "node",
+              "x": 38,
+              "y": 52,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "biaoji_pinzhi",
+              "type": "node",
+              "x": -35,
+              "y": 50,
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "skill1",
+          "type": "node",
+          "x": -266,
+          "y": 249,
+          "width": 110,
+          "height": 135,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_daojukuang_DaoJuKuang1.png",
+              "y": 13,
+              "width": 110,
+              "height": 110
+            },
+            {
+              "name": "quality",
+              "type": "node",
+              "y": 13,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "x": -1,
+              "y": 15,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "star",
+              "type": "node",
+              "x": 39,
+              "y": 48,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "",
+              "align": "center",
+              "size": 24,
+              "color": 1092488703,
+              "x": -55,
+              "y": -52,
+              "width": 110,
+              "height": 31
+            },
+            {
+              "name": "txt_num",
+              "type": "label",
+              "text": " ",
+              "align": "right",
+              "size": 28,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -41,
+              "y": -15,
+              "width": 80,
+              "height": 36
+            },
+            {
+              "name": "hint",
+              "type": "node",
+              "x": 38,
+              "y": 52,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "biaoji_pinzhi",
+              "type": "node",
+              "x": -35,
+              "y": 50,
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "skill2",
+          "type": "node",
+          "x": -96,
+          "y": 249,
+          "width": 110,
+          "height": 135,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_daojukuang_DaoJuKuang1.png",
+              "y": 13,
+              "width": 110,
+              "height": 110
+            },
+            {
+              "name": "quality",
+              "type": "node",
+              "y": 13,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "x": -1,
+              "y": 15,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "star",
+              "type": "node",
+              "x": 39,
+              "y": 48,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "",
+              "align": "center",
+              "size": 24,
+              "color": 1092488703,
+              "x": -55,
+              "y": -52,
+              "width": 110,
+              "height": 31
+            },
+            {
+              "name": "txt_num",
+              "type": "label",
+              "text": " ",
+              "align": "right",
+              "size": 28,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -41,
+              "y": -15,
+              "width": 80,
+              "height": 36
+            },
+            {
+              "name": "hint",
+              "type": "node",
+              "x": 38,
+              "y": 52,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "biaoji_pinzhi",
+              "type": "node",
+              "x": -35,
+              "y": 50,
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "skill3",
+          "type": "node",
+          "x": 74,
+          "y": 249,
+          "width": 110,
+          "height": 135,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_daojukuang_DaoJuKuang1.png",
+              "y": 13,
+              "width": 110,
+              "height": 110
+            },
+            {
+              "name": "quality",
+              "type": "node",
+              "y": 13,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "x": -1,
+              "y": 15,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "star",
+              "type": "node",
+              "x": 39,
+              "y": 48,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "",
+              "align": "center",
+              "size": 24,
+              "color": 1092488703,
+              "x": -55,
+              "y": -52,
+              "width": 110,
+              "height": 31
+            },
+            {
+              "name": "txt_num",
+              "type": "label",
+              "text": " ",
+              "align": "right",
+              "size": 28,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -41,
+              "y": -15,
+              "width": 80,
+              "height": 36
+            },
+            {
+              "name": "hint",
+              "type": "node",
+              "x": 38,
+              "y": 52,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "biaoji_pinzhi",
+              "type": "node",
+              "x": -35,
+              "y": 50,
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "skill4",
+          "type": "node",
+          "x": 244,
+          "y": 249,
+          "width": 110,
+          "height": 135,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_daojukuang_DaoJuKuang1.png",
+              "y": 13,
+              "width": 110,
+              "height": 110
+            },
+            {
+              "name": "quality",
+              "type": "node",
+              "y": 13,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "x": -1,
+              "y": 15,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "star",
+              "type": "node",
+              "x": 39,
+              "y": 48,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "",
+              "align": "center",
+              "size": 24,
+              "color": 1092488703,
+              "x": -55,
+              "y": -52,
+              "width": 110,
+              "height": 31
+            },
+            {
+              "name": "txt_num",
+              "type": "label",
+              "text": " ",
+              "align": "right",
+              "size": 28,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -41,
+              "y": -15,
+              "width": 80,
+              "height": 36
+            },
+            {
+              "name": "hint",
+              "type": "node",
+              "x": 38,
+              "y": 52,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "biaoji_pinzhi",
+              "type": "node",
+              "x": -35,
+              "y": 50,
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "change",
+          "type": "node",
+          "x": -160,
+          "y": -304,
+          "width": 200,
+          "height": 85,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btn_3.png",
+              "img_down": "#ui_common_btn_4.png",
+              "img_disable": "#ui_common_btn_4c.png",
+              "width": 200,
+              "height": 85
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "更换龙",
+              "align": "center",
+              "size": 35,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -79,
+              "y": 5,
+              "width": 155,
+              "height": 45
+            }
+          ]
+        },
+        {
+          "name": "equip",
+          "type": "node",
+          "x": 120,
+          "y": -304,
+          "width": 200,
+          "height": 85,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btn_3_2.png",
+              "img_down": "#ui_common_btn_4.png",
+              "img_disable": "#ui_common_btn_4c.png",
+              "width": 200,
+              "height": 85
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "一键装备",
+              "align": "center",
+              "size": 35,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -83,
+              "y": 5,
+              "width": 167,
+              "height": 45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_GuanBi1.png",
+      "img_down": "#ui_common_btn_GuanBi2.png",
+      "x": 468,
+      "y": 339,
+      "width": 85,
+      "height": 90,
+      "right": 44
+    }
+  ]
+}

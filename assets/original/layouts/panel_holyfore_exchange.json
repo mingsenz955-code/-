@@ -1,0 +1,119 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -399.3,
+      "y": -16.22,
+      "width": 778,
+      "height": 585.05,
+      "maxw": 778,
+      "maxh": 585.05
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -405.6,
+      "y": 263.95,
+      "width": 785,
+      "height": 55,
+      "maxw": 785,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "兑换",
+      "size": 25,
+      "align": "center",
+      "color": 4294967295,
+      "x": -383.1,
+      "y": 266.5,
+      "width": 741,
+      "height": 32.1
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_haoyoulan2.png",
+      "scale9": 1,
+      "x": -365.5,
+      "y": -42.55,
+      "width": 710,
+      "height": 481,
+      "maxw": 710,
+      "maxh": 481
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "x": -9.7,
+      "y": -42.35,
+      "width": 696,
+      "height": 460
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_di2.png",
+      "scale9": 1,
+      "x": -365.5,
+      "y": 219.35,
+      "width": 713,
+      "height": 41,
+      "maxw": 713,
+      "maxh": 41
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 365.6,
+      "y": 265.7
+    },
+    {
+      "name": "tx_shenghuo",
+      "type": "label",
+      "text": "神火",
+      "size": 20,
+      "align": "center",
+      "color": 1092488703,
+      "x": -346.4,
+      "y": 220.03,
+      "width": 160.05,
+      "height": 26.75
+    },
+    {
+      "name": "tx_miaoshu",
+      "type": "label",
+      "text": "详细信息",
+      "size": 20,
+      "align": "center",
+      "color": 1092488703,
+      "x": -87.4,
+      "y": 220.03,
+      "width": 160.05,
+      "height": 26.75
+    },
+    {
+      "name": "tx_miaoshu2",
+      "type": "label",
+      "text": "需要余烬",
+      "size": 20,
+      "align": "center",
+      "color": 1092488703,
+      "x": 121.6,
+      "y": 220.03,
+      "width": 160.05,
+      "height": 26.75
+    }
+  ]
+}

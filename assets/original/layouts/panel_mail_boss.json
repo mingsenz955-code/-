@@ -1,0 +1,111 @@
+{
+  "group": [
+    "ui_common"
+  ],
+  "width": 605,
+  "height": 650,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "grid": {
+        "x": 107.95,
+        "y": 111,
+        "width": 45.999999999999986,
+        "height": 27
+      },
+      "x": -315,
+      "y": -18.15,
+      "width": 605,
+      "height": 632,
+      "maxw": 605,
+      "maxh": 632
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "grid": {
+        "x": 24.5,
+        "y": 20,
+        "width": 9.5,
+        "height": 9.5
+      },
+      "x": -314.85,
+      "y": 288.6,
+      "width": 604.4,
+      "height": 55,
+      "maxw": 604.4,
+      "maxh": 55
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_haoyoulan2.png",
+      "scale9": 1,
+      "grid": {
+        "x": 28.25,
+        "y": 29,
+        "width": 37.75,
+        "height": 36
+      },
+      "x": -290.4,
+      "y": 10.1,
+      "width": 558.2,
+      "height": 495,
+      "maxw": 558.2,
+      "maxh": 495
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "x": -11.9,
+      "y": 9.75,
+      "width": 548,
+      "height": 476.8
+    },
+    {
+      "name": "node_btn_ok",
+      "type": "node",
+      "x": -8.3,
+      "y": -279.4,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png",
+          "img_disable": "#ui_common_btn_2c.png",
+          "width": 144,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "确定",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "name": "txt_title",
+      "type": "label",
+      "text": "世界头目结算奖励",
+      "align": "center",
+      "size": 21,
+      "color": 4294967295,
+      "x": -130,
+      "y": 288.63,
+      "width": 235,
+      "height": 29.85
+    }
+  ]
+}

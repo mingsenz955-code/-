@@ -1,0 +1,164 @@
+{
+  "group": [
+    "ui_login_ios"
+  ],
+  "width": 424,
+  "height": 529,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_login_ios_ditu.png",
+      "width": 424,
+      "height": 529
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_login_ios_title.png",
+      "x": 1,
+      "y": 217.5,
+      "width": 320,
+      "height": 55
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_login_ios_z1.png",
+      "x": -145.45,
+      "y": 99.65,
+      "width": 94,
+      "height": 25
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_login_ios_z2.png",
+      "x": -145.95,
+      "y": 9.65,
+      "width": 93,
+      "height": 25
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_login_ios_shurukuang1.png",
+      "x": 46.85,
+      "y": 98.65,
+      "width": 276,
+      "height": 55
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_login_ios_shurukuang1.png",
+      "x": 46.85,
+      "y": 8.65,
+      "width": 276,
+      "height": 55
+    },
+    {
+      "name": "txt_title",
+      "type": "label",
+      "text": "登陆",
+      "align": "center",
+      "size": 28,
+      "color": 4294967295,
+      "x": -89.55,
+      "y": 218.85,
+      "width": 218.55,
+      "height": 35.5
+    },
+    {
+      "name": "node_login",
+      "type": "node",
+      "y": -112.3,
+      "width": 359,
+      "height": 56,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_login_ios_btn3.png",
+          "img_down": "#ui_login_ios_btn4.png",
+          "width": 359,
+          "height": 56
+        },
+        {
+          "name": "txt",
+          "type": "label",
+          "text": "登录",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -135.55,
+          "y": 2.03,
+          "width": 273,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "name": "node_forgetpsw",
+      "type": "node",
+      "y": -191.3,
+      "width": 359,
+      "height": 56,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_login_ios_btn5.png",
+          "img_down": "#ui_login_ios_btn6.png",
+          "img_disable": "#ui_login_ios_btn0.png",
+          "width": 359,
+          "height": 56
+        },
+        {
+          "name": "txt",
+          "type": "label",
+          "text": "忘记密码",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -135.55,
+          "y": 2.9,
+          "width": 273,
+          "height": 43.4
+        }
+      ]
+    },
+    {
+      "name": "pwd",
+      "type": "input",
+      "img": "#ui_login_ios_shurukuang1.png",
+      "fontSize": 22,
+      "color": 16777215,
+      "holder": "请填写6~16位数字或字母",
+      "holderColor": 10526880,
+      "maxLength": 16,
+      "x": 46.85,
+      "y": 8.65,
+      "width": 276,
+      "height": 55
+    },
+    {
+      "name": "name",
+      "type": "input",
+      "img": "#ui_login_ios_shurukuang1.png",
+      "fontSize": 22,
+      "color": 16777215,
+      "holder": "请填写6~16位数字或字母",
+      "holderColor": 10526880,
+      "maxLength": 16,
+      "x": 46.85,
+      "y": 98.65,
+      "width": 276,
+      "height": 55
+    },
+    {
+      "name": "btn_back",
+      "type": "btn",
+      "img_normal": "#ui_login_ios_btn7.png",
+      "img_down": "#ui_login_ios_btn8.png",
+      "x": -144,
+      "y": 219,
+      "width": 102,
+      "height": 60
+    }
+  ]
+}

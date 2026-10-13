@@ -1,0 +1,29 @@
+{
+  "group": [
+    "buildings/0001_incubator_g"
+  ],
+  "width": 382,
+  "height": 310,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0001_incubator_g_bg.png",
+      "x": -0.95,
+      "y": 180
+    },
+    {
+      "name": "egg1",
+      "type": "node",
+      "x": 27.05,
+      "y": 233
+    },
+    {
+      "name": "s1",
+      "type": "sprite",
+      "img": "#0001_incubator_g_s1.png",
+      "x": 27.05,
+      "y": 234.5
+    }
+  ]
+}

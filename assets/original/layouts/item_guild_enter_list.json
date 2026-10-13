@@ -1,0 +1,27 @@
+{
+  "group": [
+    "ui_bgpuzzle"
+  ],
+  "width": 920,
+  "height": 575,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_bgpuzzle_dage.png",
+      "scale9": 1,
+      "x": -460,
+      "width": 920,
+      "height": 575,
+      "maxw": 920,
+      "maxh": 575
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "x": -0.5,
+      "y": -0.1,
+      "width": 912,
+      "height": 566
+    }
+  ]
+}

@@ -1,0 +1,360 @@
+{
+  "group": [
+    "ui_xianshixiaofei",
+    "ui_activityequip",
+    "ui_hd68",
+    "ui_ertong",
+    "ui_daojukuang"
+  ],
+  "width": 1043,
+  "height": 626,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "grid": {
+        "x": 108,
+        "y": 111,
+        "width": 46,
+        "height": 27
+      },
+      "x": -521,
+      "y": -34,
+      "width": 1043,
+      "height": 558,
+      "maxw": 1043,
+      "maxh": 558
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "grid": {
+        "x": 25,
+        "y": 20,
+        "width": 10,
+        "height": 10
+      },
+      "x": -521,
+      "y": 222,
+      "width": 1039,
+      "height": 55,
+      "maxw": 1039,
+      "maxh": 55
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_xianshixiaofei_bg2.png",
+      "scale9": 1,
+      "grid": {
+        "x": 11,
+        "y": 11,
+        "width": 22,
+        "height": 22
+      },
+      "x": -132,
+      "y": -65,
+      "width": 630,
+      "height": 432,
+      "maxw": 630,
+      "maxh": 432
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_activityequip_bg_time.png",
+      "y": 174,
+      "width": 422,
+      "height": 41
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_hd68_wrczbj.png",
+      "x": -313,
+      "y": -64,
+      "width": 345,
+      "height": 425
+    },
+    {
+      "name": "txt_startendtime",
+      "type": "label",
+      "text": "活动时间",
+      "align": "center",
+      "size": 22,
+      "color": 4294967295,
+      "x": -209,
+      "y": 176,
+      "width": 417,
+      "height": 29
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "x": 184,
+      "y": -64,
+      "width": 615,
+      "height": 417
+    },
+    {
+      "name": "node_btn_superreward",
+      "type": "node",
+      "x": -309,
+      "y": -247,
+      "width": 133,
+      "height": 56,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_ertong_zdbtn1.png",
+          "img_down": "#ui_ertong_zdbtn2.png",
+          "img_disable": "#ui_ertong_zdbtn5.png",
+          "width": 133,
+          "height": 56
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "领取",
+          "align": "center",
+          "size": 26,
+          "color": 4294967295,
+          "outlineColor": 11882262,
+          "x": -65,
+          "y": 3,
+          "width": 129,
+          "height": 33
+        }
+      ]
+    },
+    {
+      "name": "image_superisget",
+      "type": "sprite",
+      "img": "#ui_activityequip_yilingqu.png",
+      "x": -308,
+      "y": -246,
+      "width": 145,
+      "height": 84
+    },
+    {
+      "name": "node_showitem3",
+      "type": "node",
+      "x": -195,
+      "y": -159,
+      "width": 110,
+      "height": 110,
+      "children": [
+        {
+          "name": "bg",
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "width": 110,
+          "height": 110
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "image",
+          "type": "node",
+          "x": -1,
+          "y": 3,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "eff",
+          "type": "node",
+          "x": -1,
+          "y": 2,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -37,
+          "y": -26,
+          "width": 77,
+          "height": 27
+        }
+      ]
+    },
+    {
+      "name": "node_showitem2",
+      "type": "node",
+      "x": -308,
+      "y": -159,
+      "width": 110,
+      "height": 110,
+      "children": [
+        {
+          "name": "bg",
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "width": 110,
+          "height": 110
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "image",
+          "type": "node",
+          "x": -1,
+          "y": 3,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "eff",
+          "type": "node",
+          "x": -1,
+          "y": 2,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -37,
+          "y": -26,
+          "width": 77,
+          "height": 27
+        }
+      ]
+    },
+    {
+      "name": "node_showitem1",
+      "type": "node",
+      "x": -421,
+      "y": -159,
+      "width": 110,
+      "height": 110,
+      "children": [
+        {
+          "name": "bg",
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "width": 110,
+          "height": 110
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "image",
+          "type": "node",
+          "x": -1,
+          "y": 3,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "eff",
+          "type": "node",
+          "x": -1,
+          "y": 2,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -37,
+          "y": -26,
+          "width": 77,
+          "height": 27
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_hd68_wrczbt.png",
+      "y": 252,
+      "width": 449,
+      "height": 123
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_hd68_ttczwz.png",
+      "y": 235,
+      "width": 369,
+      "height": 77
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_hd68_lb.png",
+      "x": -308,
+      "y": -65,
+      "width": 88,
+      "height": 79
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_hd68_ljcz.png",
+      "x": -317,
+      "y": 106,
+      "width": 266,
+      "height": 77
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_hd68_ljczt.png",
+      "x": -371,
+      "y": 20,
+      "width": 231,
+      "height": 104
+    },
+    {
+      "name": "txt_day",
+      "type": "label",
+      "text": "(0/5)",
+      "align": "center",
+      "size": 22,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -265,
+      "y": 41,
+      "width": 125,
+      "height": 34
+    },
+    {
+      "name": "txt_cost",
+      "type": "label",
+      "text": "(0/200)",
+      "align": "center",
+      "size": 22,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -265,
+      "y": -9,
+      "width": 124,
+      "height": 34
+    }
+  ]
+}

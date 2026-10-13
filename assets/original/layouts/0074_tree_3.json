@@ -1,0 +1,16 @@
+{
+  "group": [
+    "buildings/0074_tree_3_g"
+  ],
+  "width": 306,
+  "height": 341,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0074_tree_3_g_bg.png",
+      "x": 18.05,
+      "y": 186.5
+    }
+  ]
+}

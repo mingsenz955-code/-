@@ -1,0 +1,62 @@
+{
+  "group": [
+    "ui_login"
+  ],
+  "width": 267,
+  "height": 79,
+  "children": [
+    {
+      "name": "btn",
+      "type": "ckb",
+      "img_on": "#ui_login_btn_fuwuqi3.png",
+      "img_off": "#ui_login_btn_fuwuqi1.png",
+      "img_disable": "#ui_login_btn_fuwuqi2.png",
+      "x": -11.25,
+      "y": -5.75
+    },
+    {
+      "name": "type",
+      "type": "label",
+      "text": " ",
+      "align": "left",
+      "size": 25,
+      "color": 4294967295,
+      "outlineColor": 4135427,
+      "x": -102.25,
+      "y": -6.45,
+      "width": 108,
+      "height": 32.1
+    },
+    {
+      "name": "name",
+      "type": "label",
+      "text": " ",
+      "align": "left",
+      "size": 25,
+      "color": 4294967295,
+      "outlineColor": 4135427,
+      "x": -22.25,
+      "y": -6.45,
+      "width": 130,
+      "height": 32.1
+    },
+    {
+      "name": "hint_hot",
+      "type": "sprite",
+      "img": "#ui_login_biaoji_hot.png",
+      "x": 107.75,
+      "y": 20.75,
+      "width": 51,
+      "height": 37
+    },
+    {
+      "name": "hint_new",
+      "type": "sprite",
+      "img": "#ui_login_biaoji_new.png",
+      "x": 107.75,
+      "y": 20.75,
+      "width": 51,
+      "height": 37
+    }
+  ]
+}

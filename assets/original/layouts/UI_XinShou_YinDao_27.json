@@ -1,0 +1,84 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "mask",
+      "maskRGBA": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0
+      },
+      "maskAnchor": {
+        "x": 1,
+        "y": 0
+      },
+      "x": -45,
+      "y": -40,
+      "m_width": 230,
+      "m_height": 120,
+      "base": "ru",
+      "scale9mask": true
+    },
+    {
+      "type": "sprite",
+      "img": "#UI_RW_L_icon_5.png",
+      "x": -423.45,
+      "y": 204,
+      "width": 205,
+      "height": 244
+    },
+    {
+      "type": "sprite",
+      "img": "#hint_bg.png",
+      "scale9": 1,
+      "x": -327,
+      "y": 210.5,
+      "width": 474,
+      "height": 167,
+      "maxw": 474,
+      "maxh": 167
+    },
+    {
+      "type": "sprite",
+      "img": "#hint_bg_t.png",
+      "x": -342.5,
+      "y": 231,
+      "width": 49,
+      "height": 36
+    },
+    {
+      "name": "biaoti",
+      "type": "label",
+      "text": "说明标题",
+      "size": 30,
+      "align": "center",
+      "color": 3429236991,
+      "x": -310.3,
+      "y": 265.8,
+      "width": 438,
+      "height": 34
+    },
+    {
+      "name": "miaoshu",
+      "type": "label",
+      "text": "恭喜你，你已经成为一名合格的驯龙师，接下来你可以根据左侧的任务指引，继续你的驯龙之旅吧！",
+      "size": 25,
+      "align": "center",
+      "color": 1714618623,
+      "x": -313.05,
+      "y": 185.3,
+      "width": 445,
+      "height": 99
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_main_Z_ico_Zuo-bg0001.png",
+      "img_down": "#ui_main_Z_ico_Zuo-bg0002.png",
+      "x": 459.03,
+      "y": 341.05,
+      "alpha": 0
+    }
+  ]
+}

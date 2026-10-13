@@ -1,0 +1,23 @@
+{
+  "group": [
+    "buildings/0015_boost_metal_g"
+  ],
+  "width": 254,
+  "height": 224,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0015_boost_metal_g_bg.png",
+      "x": 15,
+      "y": 122
+    },
+    {
+      "name": "eff",
+      "type": "eff",
+      "eff": "0015_boost_metal_eff",
+      "width": 104,
+      "height": 133
+    }
+  ]
+}

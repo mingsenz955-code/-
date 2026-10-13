@@ -1,0 +1,71 @@
+{
+  "group": [
+    "ui_peiyanghuodong"
+  ],
+  "width": 600,
+  "height": 58,
+  "children": [
+    {
+      "name": "image_off",
+      "type": "sprite",
+      "img": "#ui_peiyanghuodong_tt3.png",
+      "width": 600,
+      "height": 58
+    },
+    {
+      "name": "image_on",
+      "type": "sprite",
+      "img": "#ui_peiyanghuodong_tt4.png",
+      "width": 600,
+      "height": 58
+    },
+    {
+      "name": "txt_index",
+      "type": "label",
+      "text": "?",
+      "align": "center",
+      "size": 24,
+      "color": 2237154047,
+      "x": -300,
+      "y": 0,
+      "width": 65,
+      "height": 32
+    },
+    {
+      "name": "txt_info",
+      "type": "label",
+      "text": "xxx",
+      "align": "center",
+      "size": 24,
+      "color": 2237154047,
+      "x": -235,
+      "y": 0,
+      "width": 278,
+      "height": 32
+    },
+    {
+      "name": "txt_now",
+      "type": "label",
+      "text": "?/?",
+      "align": "center",
+      "size": 24,
+      "color": 2237154047,
+      "x": 44,
+      "y": 0,
+      "width": 182,
+      "height": 32
+    },
+    {
+      "name": "txt_rewardpoint",
+      "type": "label",
+      "text": "?",
+      "align": "center",
+      "size": 24,
+      "color": 2237154047,
+      "x": 228,
+      "y": 0,
+      "width": 70,
+      "height": 32
+    }
+  ]
+}

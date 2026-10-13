@@ -1,0 +1,16 @@
+{
+  "group": [
+    "buildings/0060_magic_yelloflower_a_g"
+  ],
+  "width": 70,
+  "height": 71,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0060_magic_yelloflower_a_g_bg.png",
+      "x": 1.35,
+      "y": 37.65
+    }
+  ]
+}

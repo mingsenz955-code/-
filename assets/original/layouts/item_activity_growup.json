@@ -1,0 +1,158 @@
+{
+  "group": [
+    "ui_activityequip"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768,
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -487.45,
+      "y": -48.5,
+      "width": 975.95,
+      "height": 568,
+      "maxw": 975.95,
+      "maxh": 568
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_activityequip_bg_chengzhang.png",
+      "x": -307.45,
+      "y": -47.75,
+      "width": 299,
+      "height": 450
+    },
+    {
+      "name": "hint",
+      "type": "label",
+      "text": "VIP2或以上的玩家可以购买",
+      "align": "center",
+      "size": 23,
+      "color": 4294967295,
+      "x": -452.95,
+      "y": -249.98,
+      "width": 290,
+      "height": 29.85
+    },
+    {
+      "name": "btn_chongzhi",
+      "type": "node",
+      "x": -380.95,
+      "y": -191.35,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png",
+          "img_disable": "#ui_common_btn_2c.png",
+          "width": 144,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "充值",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "name": "btn_goumai",
+      "type": "node",
+      "x": -233.95,
+      "y": -191.35,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_goal_rbtn3.png",
+          "img_down": "#ui_goal_rbtn4.png",
+          "width": 144,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "购买",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -64.5,
+          "y": 4.93,
+          "width": 130,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_activityequip_biaoqian.png",
+      "x": -231.45,
+      "y": -148.5,
+      "width": 141,
+      "height": 56
+    },
+    {
+      "name": "title_panel",
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -485.95,
+      "y": 219.65,
+      "width": 974,
+      "height": 55,
+      "maxw": 974,
+      "maxh": 55
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_activityequip_title_chengzhangjihua.png",
+      "x": 15,
+      "y": 229.5,
+      "width": 203,
+      "height": 59
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_activityequip_bg9.png",
+      "scale9": 1,
+      "x": -151,
+      "y": -48.75,
+      "width": 614,
+      "height": 454,
+      "maxw": 614,
+      "maxh": 454
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "x": 153.35,
+      "y": -46.3,
+      "width": 598,
+      "height": 442
+    }
+  ]
+}

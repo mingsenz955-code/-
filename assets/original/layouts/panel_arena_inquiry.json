@@ -1,0 +1,1021 @@
+{
+  "group": [
+    "ui_arenanew"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768,
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -338.8,
+      "y": -16.2,
+      "width": 663,
+      "height": 615,
+      "maxw": 663,
+      "maxh": 615
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -345.1,
+      "y": 278.95,
+      "width": 670,
+      "height": 55,
+      "maxw": 670,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "查看奖励",
+      "align": "center",
+      "size": 25,
+      "color": 4294967295,
+      "x": -322.6,
+      "y": 281.5,
+      "width": 634,
+      "height": 32.1
+    },
+    {
+      "name": "shuoming1",
+      "type": "label",
+      "text": "保持当前的排名（第10001位至第15000位），可领奖励为：",
+      "align": "left",
+      "size": 20,
+      "color": 1092488703,
+      "x": -306.9,
+      "y": 235.15,
+      "width": 547,
+      "height": 26.5
+    },
+    {
+      "name": "shuoming2",
+      "type": "label",
+      "text": "结算奖励每晚21时系统会自动发放给玩家，无需玩家手动领取！",
+      "align": "left",
+      "size": 20,
+      "color": 1092488703,
+      "x": -288.9,
+      "y": -274.85,
+      "width": 571,
+      "height": 26.5
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_arenanew_xunzhang_m.png",
+      "x": -286.45,
+      "y": 197,
+      "width": 42,
+      "height": 48
+    },
+    {
+      "name": "jianglishuliang",
+      "type": "label",
+      "text": "x999",
+      "align": "left",
+      "size": 20,
+      "color": 1092488703,
+      "x": -265.5,
+      "y": 199.05,
+      "width": 56,
+      "height": 26.5
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_di2.png",
+      "scale9": 1,
+      "x": -305,
+      "y": 157.35,
+      "width": 605,
+      "height": 41,
+      "maxw": 605,
+      "maxh": 41
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_arenanew_mojing.png",
+      "x": -185.5,
+      "y": 197.9,
+      "width": 36,
+      "height": 48
+    },
+    {
+      "name": "mojingshuliang",
+      "type": "label",
+      "text": "999",
+      "align": "left",
+      "size": 20,
+      "color": 1092488703,
+      "x": -168.45,
+      "y": 199.05,
+      "width": 55,
+      "height": 26.5
+    },
+    {
+      "name": "tx_paiming1",
+      "type": "label",
+      "text": "排名",
+      "align": "center",
+      "size": 20,
+      "color": 1092488703,
+      "x": -293.9,
+      "y": 158.03,
+      "width": 87,
+      "height": 26.75
+    },
+    {
+      "name": "tx_jiangli1",
+      "type": "label",
+      "text": "奖励",
+      "align": "center",
+      "size": 20,
+      "color": 1092488703,
+      "x": -206.9,
+      "y": 158.03,
+      "width": 205,
+      "height": 26.75
+    },
+    {
+      "name": "tx_paiming2",
+      "type": "label",
+      "text": "排名",
+      "align": "center",
+      "size": 20,
+      "color": 1092488703,
+      "x": 1.1,
+      "y": 158.03,
+      "width": 87,
+      "height": 26.75
+    },
+    {
+      "name": "tx_jiangli2",
+      "type": "label",
+      "text": "奖励",
+      "align": "center",
+      "size": 20,
+      "color": 1092488703,
+      "x": 88.1,
+      "y": 158.03,
+      "width": 208,
+      "height": 26.75
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_haoyoulan2.png",
+      "scale9": 1,
+      "x": -305,
+      "y": -58.05,
+      "width": 602,
+      "height": 390,
+      "maxw": 602,
+      "maxh": 390
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_sekuai1.png",
+      "scale9": 1,
+      "x": -205.95,
+      "y": -59.1,
+      "width": 201,
+      "height": 375,
+      "maxw": 201,
+      "maxh": 375
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_sekuai1.png",
+      "scale9": 1,
+      "x": 89.05,
+      "y": -59.1,
+      "width": 201,
+      "height": 375,
+      "maxw": 201,
+      "maxh": 375
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_arenanew_fenge.png",
+      "x": -1.45,
+      "y": 64.15,
+      "width": 578,
+      "height": 2
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_arenanew_fenge.png",
+      "x": -1.45,
+      "y": 2.15,
+      "width": 578,
+      "height": 2
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_arenanew_fenge.png",
+      "x": -1.45,
+      "y": -59.85,
+      "width": 578,
+      "height": 2
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_arenanew_fenge.png",
+      "x": -1.45,
+      "y": -121.85,
+      "width": 578,
+      "height": 2
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_arenanew_fenge.png",
+      "x": -1.45,
+      "y": -183.85,
+      "width": 578,
+      "height": 2
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_arenanew_fenge.png",
+      "x": -1.45,
+      "y": -245.85,
+      "width": 578,
+      "height": 2
+    },
+    {
+      "name": "mubiao1",
+      "type": "node",
+      "x": -155.8,
+      "y": 99.65,
+      "width": 276,
+      "height": 49,
+      "children": [
+        {
+          "name": "paiming",
+          "type": "label",
+          "text": "9999999",
+          "align": "center",
+          "size": 20,
+          "color": 1092488703,
+          "x": -138,
+          "y": -6.75,
+          "width": 87,
+          "height": 26.5
+        },
+        {
+          "name": "icon",
+          "type": "sprite",
+          "img": "#ui_arenanew_xunzhang_m.png",
+          "x": -12,
+          "y": -6.5,
+          "width": 42,
+          "height": 48
+        },
+        {
+          "name": "wanjia",
+          "type": "label",
+          "text": "999",
+          "align": "left",
+          "size": 20,
+          "color": 1092488703,
+          "x": 9,
+          "y": -6.75,
+          "width": 47,
+          "height": 26.5
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_arenanew_mojing.png",
+          "x": 73.95,
+          "y": -5.5,
+          "width": 36,
+          "height": 48
+        },
+        {
+          "name": "mojing_num",
+          "type": "label",
+          "text": "999",
+          "align": "left",
+          "size": 20,
+          "color": 1092488703,
+          "x": 91,
+          "y": -6.75,
+          "width": 47,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "mubiao2",
+      "type": "node",
+      "x": -155.8,
+      "y": 37.65,
+      "width": 276,
+      "height": 49,
+      "children": [
+        {
+          "name": "paiming",
+          "type": "label",
+          "text": "9999999",
+          "align": "center",
+          "size": 20,
+          "color": 1092488703,
+          "x": -138,
+          "y": -6.75,
+          "width": 87,
+          "height": 26.5
+        },
+        {
+          "name": "icon",
+          "type": "sprite",
+          "img": "#ui_arenanew_xunzhang_m.png",
+          "x": -12,
+          "y": -6.5,
+          "width": 42,
+          "height": 48
+        },
+        {
+          "name": "wanjia",
+          "type": "label",
+          "text": "999",
+          "align": "left",
+          "size": 20,
+          "color": 1092488703,
+          "x": 9,
+          "y": -6.75,
+          "width": 47,
+          "height": 26.5
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_arenanew_mojing.png",
+          "x": 73.95,
+          "y": -5.5,
+          "width": 36,
+          "height": 48
+        },
+        {
+          "name": "mojing_num",
+          "type": "label",
+          "text": "999",
+          "align": "left",
+          "size": 20,
+          "color": 1092488703,
+          "x": 91,
+          "y": -6.75,
+          "width": 47,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "mubiao3",
+      "type": "node",
+      "x": -155.8,
+      "y": -24.35,
+      "width": 276,
+      "height": 49,
+      "children": [
+        {
+          "name": "paiming",
+          "type": "label",
+          "text": "9999999",
+          "align": "center",
+          "size": 20,
+          "color": 1092488703,
+          "x": -138,
+          "y": -6.75,
+          "width": 87,
+          "height": 26.5
+        },
+        {
+          "name": "icon",
+          "type": "sprite",
+          "img": "#ui_arenanew_xunzhang_m.png",
+          "x": -12,
+          "y": -6.5,
+          "width": 42,
+          "height": 48
+        },
+        {
+          "name": "wanjia",
+          "type": "label",
+          "text": "999",
+          "align": "left",
+          "size": 20,
+          "color": 1092488703,
+          "x": 9,
+          "y": -6.75,
+          "width": 47,
+          "height": 26.5
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_arenanew_mojing.png",
+          "x": 73.95,
+          "y": -5.5,
+          "width": 36,
+          "height": 48
+        },
+        {
+          "name": "mojing_num",
+          "type": "label",
+          "text": "999",
+          "align": "left",
+          "size": 20,
+          "color": 1092488703,
+          "x": 91,
+          "y": -6.75,
+          "width": 47,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "mubiao4",
+      "type": "node",
+      "x": -155.8,
+      "y": -86.35,
+      "width": 276,
+      "height": 49,
+      "children": [
+        {
+          "name": "paiming",
+          "type": "label",
+          "text": "9999999",
+          "align": "center",
+          "size": 20,
+          "color": 1092488703,
+          "x": -138,
+          "y": -6.75,
+          "width": 87,
+          "height": 26.5
+        },
+        {
+          "name": "icon",
+          "type": "sprite",
+          "img": "#ui_arenanew_xunzhang_m.png",
+          "x": -12,
+          "y": -6.5,
+          "width": 42,
+          "height": 48
+        },
+        {
+          "name": "wanjia",
+          "type": "label",
+          "text": "999",
+          "align": "left",
+          "size": 20,
+          "color": 1092488703,
+          "x": 9,
+          "y": -6.75,
+          "width": 47,
+          "height": 26.5
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_arenanew_mojing.png",
+          "x": 73.95,
+          "y": -5.5,
+          "width": 36,
+          "height": 48
+        },
+        {
+          "name": "mojing_num",
+          "type": "label",
+          "text": "999",
+          "align": "left",
+          "size": 20,
+          "color": 1092488703,
+          "x": 91,
+          "y": -6.75,
+          "width": 47,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "mubiao5",
+      "type": "node",
+      "x": -155.8,
+      "y": -148.35,
+      "width": 276,
+      "height": 49,
+      "children": [
+        {
+          "name": "paiming",
+          "type": "label",
+          "text": "9999999",
+          "align": "center",
+          "size": 20,
+          "color": 1092488703,
+          "x": -138,
+          "y": -6.75,
+          "width": 87,
+          "height": 26.5
+        },
+        {
+          "name": "icon",
+          "type": "sprite",
+          "img": "#ui_arenanew_xunzhang_m.png",
+          "x": -12,
+          "y": -6.5,
+          "width": 42,
+          "height": 48
+        },
+        {
+          "name": "wanjia",
+          "type": "label",
+          "text": "999",
+          "align": "left",
+          "size": 20,
+          "color": 1092488703,
+          "x": 9,
+          "y": -6.75,
+          "width": 47,
+          "height": 26.5
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_arenanew_mojing.png",
+          "x": 73.95,
+          "y": -5.5,
+          "width": 36,
+          "height": 48
+        },
+        {
+          "name": "mojing_num",
+          "type": "label",
+          "text": "999",
+          "align": "left",
+          "size": 20,
+          "color": 1092488703,
+          "x": 91,
+          "y": -6.75,
+          "width": 47,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "mubiao6",
+      "type": "node",
+      "x": -155.8,
+      "y": -210.35,
+      "width": 276,
+      "height": 49,
+      "children": [
+        {
+          "name": "paiming",
+          "type": "label",
+          "text": "9999999",
+          "align": "center",
+          "size": 20,
+          "color": 1092488703,
+          "x": -138,
+          "y": -6.75,
+          "width": 87,
+          "height": 26.5
+        },
+        {
+          "name": "icon",
+          "type": "sprite",
+          "img": "#ui_arenanew_xunzhang_m.png",
+          "x": -12,
+          "y": -6.5,
+          "width": 42,
+          "height": 48
+        },
+        {
+          "name": "wanjia",
+          "type": "label",
+          "text": "999",
+          "align": "left",
+          "size": 20,
+          "color": 1092488703,
+          "x": 9,
+          "y": -6.75,
+          "width": 47,
+          "height": 26.5
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_arenanew_mojing.png",
+          "x": 73.95,
+          "y": -5.5,
+          "width": 36,
+          "height": 48
+        },
+        {
+          "name": "mojing_num",
+          "type": "label",
+          "text": "999",
+          "align": "left",
+          "size": 20,
+          "color": 1092488703,
+          "x": 91,
+          "y": -6.75,
+          "width": 47,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "mubiao7",
+      "type": "node",
+      "x": 139.2,
+      "y": 99.65,
+      "width": 276,
+      "height": 49,
+      "children": [
+        {
+          "name": "paiming",
+          "type": "label",
+          "text": "9999999",
+          "align": "center",
+          "size": 20,
+          "color": 1092488703,
+          "x": -138,
+          "y": -6.75,
+          "width": 87,
+          "height": 26.5
+        },
+        {
+          "name": "icon",
+          "type": "sprite",
+          "img": "#ui_arenanew_xunzhang_m.png",
+          "x": -12,
+          "y": -6.5,
+          "width": 42,
+          "height": 48
+        },
+        {
+          "name": "wanjia",
+          "type": "label",
+          "text": "999",
+          "align": "left",
+          "size": 20,
+          "color": 1092488703,
+          "x": 9,
+          "y": -6.75,
+          "width": 47,
+          "height": 26.5
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_arenanew_mojing.png",
+          "x": 73.95,
+          "y": -5.5,
+          "width": 36,
+          "height": 48
+        },
+        {
+          "name": "mojing_num",
+          "type": "label",
+          "text": "999",
+          "align": "left",
+          "size": 20,
+          "color": 1092488703,
+          "x": 91,
+          "y": -6.75,
+          "width": 47,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "mubiao8",
+      "type": "node",
+      "x": 139.2,
+      "y": 37.65,
+      "width": 276,
+      "height": 49,
+      "children": [
+        {
+          "name": "paiming",
+          "type": "label",
+          "text": "9999999",
+          "align": "center",
+          "size": 20,
+          "color": 1092488703,
+          "x": -138,
+          "y": -6.75,
+          "width": 87,
+          "height": 26.5
+        },
+        {
+          "name": "icon",
+          "type": "sprite",
+          "img": "#ui_arenanew_xunzhang_m.png",
+          "x": -12,
+          "y": -6.5,
+          "width": 42,
+          "height": 48
+        },
+        {
+          "name": "wanjia",
+          "type": "label",
+          "text": "999",
+          "align": "left",
+          "size": 20,
+          "color": 1092488703,
+          "x": 9,
+          "y": -6.75,
+          "width": 47,
+          "height": 26.5
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_arenanew_mojing.png",
+          "x": 73.95,
+          "y": -5.5,
+          "width": 36,
+          "height": 48
+        },
+        {
+          "name": "mojing_num",
+          "type": "label",
+          "text": "999",
+          "align": "left",
+          "size": 20,
+          "color": 1092488703,
+          "x": 91,
+          "y": -6.75,
+          "width": 47,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "mubiao9",
+      "type": "node",
+      "x": 139.2,
+      "y": -24.35,
+      "width": 276,
+      "height": 49,
+      "children": [
+        {
+          "name": "paiming",
+          "type": "label",
+          "text": "9999999",
+          "align": "center",
+          "size": 20,
+          "color": 1092488703,
+          "x": -138,
+          "y": -6.75,
+          "width": 87,
+          "height": 26.5
+        },
+        {
+          "name": "icon",
+          "type": "sprite",
+          "img": "#ui_arenanew_xunzhang_m.png",
+          "x": -12,
+          "y": -6.5,
+          "width": 42,
+          "height": 48
+        },
+        {
+          "name": "wanjia",
+          "type": "label",
+          "text": "999",
+          "align": "left",
+          "size": 20,
+          "color": 1092488703,
+          "x": 9,
+          "y": -6.75,
+          "width": 47,
+          "height": 26.5
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_arenanew_mojing.png",
+          "x": 73.95,
+          "y": -5.5,
+          "width": 36,
+          "height": 48
+        },
+        {
+          "name": "mojing_num",
+          "type": "label",
+          "text": "999",
+          "align": "left",
+          "size": 20,
+          "color": 1092488703,
+          "x": 91,
+          "y": -6.75,
+          "width": 47,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "mubiao10",
+      "type": "node",
+      "x": 139.2,
+      "y": -86.35,
+      "width": 276,
+      "height": 49,
+      "children": [
+        {
+          "name": "paiming",
+          "type": "label",
+          "text": "9999999",
+          "align": "center",
+          "size": 20,
+          "color": 1092488703,
+          "x": -138,
+          "y": -6.75,
+          "width": 87,
+          "height": 26.5
+        },
+        {
+          "name": "icon",
+          "type": "sprite",
+          "img": "#ui_arenanew_xunzhang_m.png",
+          "x": -12,
+          "y": -6.5,
+          "width": 42,
+          "height": 48
+        },
+        {
+          "name": "wanjia",
+          "type": "label",
+          "text": "999",
+          "align": "left",
+          "size": 20,
+          "color": 1092488703,
+          "x": 9,
+          "y": -6.75,
+          "width": 47,
+          "height": 26.5
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_arenanew_mojing.png",
+          "x": 73.95,
+          "y": -5.5,
+          "width": 36,
+          "height": 48
+        },
+        {
+          "name": "mojing_num",
+          "type": "label",
+          "text": "999",
+          "align": "left",
+          "size": 20,
+          "color": 1092488703,
+          "x": 91,
+          "y": -6.75,
+          "width": 47,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "mubiao11",
+      "type": "node",
+      "x": 139.2,
+      "y": -148.35,
+      "width": 276,
+      "height": 49,
+      "children": [
+        {
+          "name": "paiming",
+          "type": "label",
+          "text": "9999999",
+          "align": "center",
+          "size": 20,
+          "color": 1092488703,
+          "x": -138,
+          "y": -6.75,
+          "width": 87,
+          "height": 26.5
+        },
+        {
+          "name": "icon",
+          "type": "sprite",
+          "img": "#ui_arenanew_xunzhang_m.png",
+          "x": -12,
+          "y": -6.5,
+          "width": 42,
+          "height": 48
+        },
+        {
+          "name": "wanjia",
+          "type": "label",
+          "text": "999",
+          "align": "left",
+          "size": 20,
+          "color": 1092488703,
+          "x": 9,
+          "y": -6.75,
+          "width": 47,
+          "height": 26.5
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_arenanew_mojing.png",
+          "x": 73.95,
+          "y": -5.5,
+          "width": 36,
+          "height": 48
+        },
+        {
+          "name": "mojing_num",
+          "type": "label",
+          "text": "999",
+          "align": "left",
+          "size": 20,
+          "color": 1092488703,
+          "x": 91,
+          "y": -6.75,
+          "width": 47,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "mubiao12",
+      "type": "node",
+      "x": 139.2,
+      "y": -210.35,
+      "width": 276,
+      "height": 49,
+      "children": [
+        {
+          "name": "paiming",
+          "type": "label",
+          "text": "9999999",
+          "align": "center",
+          "size": 20,
+          "color": 1092488703,
+          "x": -138,
+          "y": -6.75,
+          "width": 87,
+          "height": 26.5
+        },
+        {
+          "name": "icon",
+          "type": "sprite",
+          "img": "#ui_arenanew_xunzhang_m.png",
+          "x": -12,
+          "y": -6.5,
+          "width": 42,
+          "height": 48
+        },
+        {
+          "name": "wanjia",
+          "type": "label",
+          "text": "999",
+          "align": "left",
+          "size": 20,
+          "color": 1092488703,
+          "x": 9,
+          "y": -6.75,
+          "width": 47,
+          "height": 26.5
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_arenanew_mojing.png",
+          "x": 73.95,
+          "y": -5.5,
+          "width": 36,
+          "height": 48
+        },
+        {
+          "name": "mojing_num",
+          "type": "label",
+          "text": "999",
+          "align": "left",
+          "size": 20,
+          "color": 1092488703,
+          "x": 91,
+          "y": -6.75,
+          "width": 47,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 305.1,
+      "y": 283.7,
+      "width": 80,
+      "height": 86
+    }
+  ]
+}

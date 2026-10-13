@@ -1,0 +1,101 @@
+{
+  "group": [
+    "ui_breednew",
+    "ui_pinzhi"
+  ],
+  "width": 334,
+  "height": 130,
+  "children": [
+    {
+      "name": "btn",
+      "type": "ckb",
+      "img_on": "#ui_breednew_d2.png",
+      "img_off": "#ui_breednew_d1.png",
+      "img_disable": "#ui_breednew_d3.png"
+    },
+    {
+      "name": "tx_name",
+      "type": "label",
+      "text": "XXXX龙",
+      "align": "justify",
+      "size": 23,
+      "color": 255,
+      "x": -48.3,
+      "y": -26.08,
+      "width": 94.45,
+      "height": 29.85
+    },
+    {
+      "name": "tx_type",
+      "type": "label",
+      "text": "撒上大声说道",
+      "align": "center",
+      "size": 23,
+      "color": 255,
+      "x": -59.15,
+      "y": 34.92,
+      "width": 224,
+      "height": 29.85
+    },
+    {
+      "name": "img_type1",
+      "type": "node",
+      "x": 136.85,
+      "y": -2.5,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "img_type2",
+      "type": "node",
+      "x": 96.85,
+      "y": -2.5,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "img_type3",
+      "type": "node",
+      "x": 56.85,
+      "y": -2.5,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "quality",
+      "type": "node",
+      "x": -101.8,
+      "y": -0.85,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "icon",
+      "type": "node",
+      "x": -103.4,
+      "y": 3.25,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_pinzhi_lv.png",
+      "x": -86.8,
+      "y": -30.85,
+      "width": 56,
+      "height": 25
+    },
+    {
+      "name": "tx_lv",
+      "type": "label",
+      "text": "Lv30",
+      "align": "right",
+      "size": 20,
+      "color": 4294967295,
+      "x": -117.45,
+      "y": -33.4,
+      "width": 59,
+      "height": 26.5
+    }
+  ]
+}

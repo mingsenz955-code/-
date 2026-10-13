@@ -1,0 +1,733 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -400,
+      "y": -23,
+      "width": 800,
+      "height": 480,
+      "maxw": 800,
+      "maxh": 480
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_cao.png",
+      "x": -261,
+      "y": 213,
+      "width": 266,
+      "height": 54,
+      "maxw": 266,
+      "maxh": 54
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_cao.png",
+      "x": 262,
+      "y": 213,
+      "width": 266,
+      "height": 54,
+      "maxw": 266,
+      "maxh": 54
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_cao.png",
+      "x": 0,
+      "y": 213,
+      "width": 266,
+      "height": 54,
+      "maxw": 266,
+      "maxh": 54
+    },
+    {
+      "name": "act_title",
+      "type": "sprite",
+      "img": "#ui_festival_secKillTitle.png",
+      "x": 0,
+      "y": 230,
+      "width": 372,
+      "height": 81
+    },
+    {
+      "name": "act_title_new",
+      "type": "sprite",
+      "img": "#ui_festival_secKillTitle_new.png",
+      "x": 25,
+      "y": 230,
+      "width": 372,
+      "height": 81
+    },
+    {
+      "name": "buy_panel",
+      "type": "node",
+      "x": -106,
+      "y": -90,
+      "width": 450,
+      "height": 300,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_jiasumingzi_bg.png",
+          "scale9": 1,
+          "x": -15,
+          "y": 47,
+          "width": 480,
+          "height": 50,
+          "maxw": 480,
+          "maxh": 50
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_DiBan2.png",
+          "scale9": 1,
+          "x": 15,
+          "y": 210,
+          "width": 420,
+          "height": 120,
+          "maxw": 420,
+          "maxh": 120
+        },
+        {
+          "name": "item_draw_1",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": 76,
+          "y": 209,
+          "width": 85,
+          "height": 85,
+          "maxw": 85,
+          "maxh": 85
+        },
+        {
+          "name": "item_draw_1_num",
+          "type": "label",
+          "size": 17,
+          "text": "9999",
+          "align": "right",
+          "x": 44,
+          "y": 179,
+          "width": 68,
+          "height": 68,
+          "color": 4294967295
+        },
+        {
+          "name": "item_draw_2",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": 175,
+          "y": 209,
+          "width": 85,
+          "height": 85,
+          "maxw": 85,
+          "maxh": 85
+        },
+        {
+          "name": "item_draw_2_num",
+          "type": "label",
+          "size": 17,
+          "text": "9999",
+          "align": "right",
+          "x": 143,
+          "y": 179,
+          "width": 68,
+          "height": 68,
+          "color": 4294967295
+        },
+        {
+          "name": "item_draw_3",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": 274,
+          "y": 209,
+          "width": 85,
+          "height": 85,
+          "maxw": 85,
+          "maxh": 85
+        },
+        {
+          "name": "item_draw_3_num",
+          "type": "label",
+          "size": 17,
+          "text": "9999",
+          "align": "right",
+          "x": 242,
+          "y": 179,
+          "width": 68,
+          "height": 68,
+          "color": 4294967295
+        },
+        {
+          "name": "item_draw_4",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": 373,
+          "y": 209,
+          "width": 85,
+          "height": 85,
+          "maxw": 85,
+          "maxh": 85
+        },
+        {
+          "name": "item_draw_4_num",
+          "type": "label",
+          "size": 17,
+          "text": "9999",
+          "align": "right",
+          "x": 341,
+          "y": 179,
+          "width": 68,
+          "height": 68,
+          "color": 4294967295
+        },
+        {
+          "name": "left_hana_1",
+          "type": "sprite",
+          "img": "#ui_dragon_zl.png",
+          "x": 45,
+          "y": 157,
+          "width": 57,
+          "height": 26,
+          "maxw": 57,
+          "maxh": 26
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_dragon_zl.png",
+          "x": 407,
+          "y": 157,
+          "width": 57,
+          "height": 26,
+          "maxw": 57,
+          "maxh": 26
+        },
+        {
+          "name": "desc_body",
+          "type": "sprite",
+          "img": "#ui_festival_secKillDes.png",
+          "x": 80,
+          "y": 112,
+          "width": 323,
+          "height": 73,
+          "maxw": 323,
+          "maxh": 73
+        },
+        {
+          "name": "desc_body_new",
+          "type": "sprite",
+          "img": "#ui_festival_secKillDes_new.png",
+          "x": 80,
+          "y": 112,
+          "width": 323,
+          "height": 73,
+          "maxw": 323,
+          "maxh": 73
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_festival_brackets_left.png",
+          "x": 254,
+          "y": 112,
+          "width": 9,
+          "height": 60,
+          "maxw": 9,
+          "maxh": 60
+        },
+        {
+          "name": "right_brackets",
+          "type": "sprite",
+          "img": "#ui_festival_brackets_left.png",
+          "x": 463,
+          "y": 112,
+          "width": 9,
+          "height": 60,
+          "maxw": 9,
+          "maxh": 60
+        },
+        {
+          "type": "label",
+          "text": "就可以获得",
+          "size": 18,
+          "align": "left",
+          "color": 2422619903,
+          "x": 260,
+          "y": 125,
+          "width": 100,
+          "height": 22
+        },
+        {
+          "type": "label",
+          "text": "魔晶、",
+          "size": 18,
+          "align": "left",
+          "color": 1968350975,
+          "x": 354,
+          "y": 125,
+          "width": 100,
+          "height": 22
+        },
+        {
+          "type": "label",
+          "text": "神圣·冰",
+          "size": 18,
+          "align": "left",
+          "color": 3428451071,
+          "x": 400,
+          "y": 125,
+          "width": 100,
+          "height": 22
+        },
+        {
+          "type": "label",
+          "text": "月龙碎片",
+          "size": 18,
+          "align": "left",
+          "color": 3428451071,
+          "x": 260,
+          "y": 97,
+          "width": 100,
+          "height": 22
+        },
+        {
+          "type": "label",
+          "text": "与各种资源",
+          "size": 18,
+          "align": "left",
+          "color": 2422619903,
+          "x": 330,
+          "y": 97,
+          "width": 100,
+          "height": 22
+        },
+        {
+          "name": "buy_btn",
+          "type": "maskBtn",
+          "img_normal": "#ui_common_btn_3_2.png",
+          "img_down": "#ui_common_btn_3.png",
+          "x": 155,
+          "y": 45,
+          "width": 200,
+          "height": 85
+        },
+        {
+          "name": "buy_txt",
+          "type": "label",
+          "text": "立即购买",
+          "size": 24,
+          "align": "center",
+          "color": 255,
+          "outlineColor": 16777215,
+          "x": 80,
+          "y": 48,
+          "width": 150,
+          "height": 27
+        },
+        {
+          "type": "label",
+          "text": "（每人每天限购一次）",
+          "size": 18,
+          "align": "center",
+          "color": 4294967295,
+          "x": 194,
+          "y": 37,
+          "width": 280,
+          "height": 30
+        }
+      ]
+    },
+    {
+      "name": "dragon_panel",
+      "type": "node",
+      "x": -380,
+      "y": -95,
+      "width": 320,
+      "height": 400,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_carnival_mm.png",
+          "x": 81,
+          "y": 160,
+          "width": 307.2,
+          "height": 498.0,
+          "maxw": 307.2,
+          "maxh": 498.0
+        }
+      ]
+    },
+    {
+      "name": "count_panel",
+      "type": "node",
+      "x": -300,
+      "y": -255,
+      "width": 630,
+      "height": 180,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_jiasumingzi_bg.png",
+          "scale9": 1,
+          "x": 0,
+          "y": 80,
+          "width": 660,
+          "height": 80,
+          "maxw": 660,
+          "maxh": 80
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_DiBan2.png",
+          "scale9": 1,
+          "x": 420,
+          "y": 82,
+          "width": 210,
+          "height": 140,
+          "maxw": 210,
+          "maxh": 140
+        },
+        {
+          "name": "item_draw_5",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": 528,
+          "y": 89,
+          "width": 85,
+          "height": 85,
+          "maxw": 85,
+          "maxh": 85
+        },
+        {
+          "name": "item_draw_5_num",
+          "type": "label",
+          "size": 17,
+          "text": "9999",
+          "align": "right",
+          "x": 496,
+          "y": 59,
+          "width": 68,
+          "height": 68,
+          "color": 4294967295
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_festival_subtitle_panel.png",
+          "x": 532,
+          "y": 150,
+          "width": 130,
+          "height": 34,
+          "maxw": 130,
+          "maxh": 34
+        },
+        {
+          "name": "left_hana_2",
+          "type": "sprite",
+          "img": "#ui_dragon_zl.png",
+          "x": 442,
+          "y": 151,
+          "width": 57,
+          "height": 26,
+          "maxw": 57,
+          "maxh": 26
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_dragon_zl.png",
+          "x": 610,
+          "y": 151,
+          "width": 57,
+          "height": 26,
+          "maxw": 57,
+          "maxh": 26
+        },
+        {
+          "type": "label",
+          "text": "特卖次数：",
+          "size": 23,
+          "align": "center",
+          "color": 4288885759,
+          "outlineColor": 16777215,
+          "x": 18,
+          "y": 99,
+          "width": 120,
+          "height": 30
+        },
+        {
+          "type": "label",
+          "text": "（参与7次限购可领取额外商品）",
+          "size": 18,
+          "align": "center",
+          "color": 4294967295,
+          "x": 153,
+          "y": 95,
+          "width": 280,
+          "height": 30
+        },
+        {
+          "name": "count_label",
+          "type": "label",
+          "text": "7/7",
+          "size": 18,
+          "align": "center",
+          "color": 4294967295,
+          "x": 123,
+          "y": 95,
+          "width": 50,
+          "height": 30
+        },
+        {
+          "name": "giftDes",
+          "type": "label",
+          "text": "魔晶x30",
+          "size": 18,
+          "align": "center",
+          "color": 255,
+          "x": 478,
+          "y": 150,
+          "width": 100,
+          "height": 27
+        },
+        {
+          "name": "choose_btn_1",
+          "type": "maskBtn",
+          "img_normal": "#ui_common_btn_3_2.png",
+          "img_down": "#ui_common_btn_3.png",
+          "x": 528,
+          "y": 16,
+          "width": 140.0,
+          "height": 59.49999999999999
+        },
+        {
+          "name": "choose_txt_1",
+          "type": "label",
+          "text": "领取",
+          "size": 23,
+          "align": "center",
+          "color": 255,
+          "x": 481,
+          "y": 18,
+          "width": 90,
+          "height": 27
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_X_JinDu3.png",
+          "x": 80,
+          "y": 65,
+          "width": 47,
+          "height": 25,
+          "maxw": 47,
+          "maxh": 25
+        },
+        {
+          "name": "progress_1",
+          "type": "sprite",
+          "img": "#ui_main_X_JinDu2.png",
+          "x": 80,
+          "y": 65,
+          "width": 47,
+          "height": 17,
+          "maxw": 47,
+          "maxh": 17
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_X_JinDu1.png",
+          "x": 80,
+          "y": 65,
+          "width": 47,
+          "height": 25,
+          "maxw": 47,
+          "maxh": 25
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_X_JinDu3.png",
+          "x": 127,
+          "y": 65,
+          "width": 47,
+          "height": 25,
+          "maxw": 47,
+          "maxh": 25
+        },
+        {
+          "name": "progress_2",
+          "type": "sprite",
+          "img": "#ui_main_X_JinDu2.png",
+          "x": 127,
+          "y": 65,
+          "width": 47,
+          "height": 17,
+          "maxw": 47,
+          "maxh": 17
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_X_JinDu1.png",
+          "x": 127,
+          "y": 65,
+          "width": 47,
+          "height": 25,
+          "maxw": 47,
+          "maxh": 25
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_X_JinDu3.png",
+          "x": 174,
+          "y": 65,
+          "width": 47,
+          "height": 25,
+          "maxw": 47,
+          "maxh": 25
+        },
+        {
+          "name": "progress_3",
+          "type": "sprite",
+          "img": "#ui_main_X_JinDu2.png",
+          "x": 174,
+          "y": 65,
+          "width": 47,
+          "height": 17,
+          "maxw": 47,
+          "maxh": 17
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_X_JinDu1.png",
+          "x": 174,
+          "y": 65,
+          "width": 47,
+          "height": 25,
+          "maxw": 47,
+          "maxh": 25
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_X_JinDu3.png",
+          "x": 221,
+          "y": 65,
+          "width": 47,
+          "height": 25,
+          "maxw": 47,
+          "maxh": 25
+        },
+        {
+          "name": "progress_4",
+          "type": "sprite",
+          "img": "#ui_main_X_JinDu2.png",
+          "x": 221,
+          "y": 65,
+          "width": 47,
+          "height": 17,
+          "maxw": 47,
+          "maxh": 17
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_X_JinDu1.png",
+          "x": 221,
+          "y": 65,
+          "width": 47,
+          "height": 25,
+          "maxw": 47,
+          "maxh": 25
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_X_JinDu3.png",
+          "x": 268,
+          "y": 65,
+          "width": 47,
+          "height": 25,
+          "maxw": 47,
+          "maxh": 25
+        },
+        {
+          "name": "progress_5",
+          "type": "sprite",
+          "img": "#ui_main_X_JinDu2.png",
+          "x": 268,
+          "y": 65,
+          "width": 47,
+          "height": 17,
+          "maxw": 47,
+          "maxh": 17
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_X_JinDu1.png",
+          "x": 268,
+          "y": 65,
+          "width": 47,
+          "height": 25,
+          "maxw": 47,
+          "maxh": 25
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_X_JinDu3.png",
+          "x": 315,
+          "y": 65,
+          "width": 47,
+          "height": 25,
+          "maxw": 47,
+          "maxh": 25
+        },
+        {
+          "name": "progress_6",
+          "type": "sprite",
+          "img": "#ui_main_X_JinDu2.png",
+          "x": 315,
+          "y": 65,
+          "width": 47,
+          "height": 17,
+          "maxw": 47,
+          "maxh": 17
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_X_JinDu1.png",
+          "x": 315,
+          "y": 65,
+          "width": 47,
+          "height": 25,
+          "maxw": 47,
+          "maxh": 25
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_X_JinDu3.png",
+          "x": 362,
+          "y": 65,
+          "width": 47,
+          "height": 25,
+          "maxw": 47,
+          "maxh": 25
+        },
+        {
+          "name": "progress_7",
+          "type": "sprite",
+          "img": "#ui_main_X_JinDu2.png",
+          "x": 362,
+          "y": 65,
+          "width": 47,
+          "height": 17,
+          "maxw": 47,
+          "maxh": 17
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_X_JinDu1.png",
+          "x": 362,
+          "y": 65,
+          "width": 47,
+          "height": 25,
+          "maxw": 47,
+          "maxh": 25
+        }
+      ]
+    }
+  ]
+}

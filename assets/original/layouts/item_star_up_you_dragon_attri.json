@@ -1,0 +1,624 @@
+{
+  "group": {},
+  "width": 491,
+  "height": 615,
+  "children": [
+    {
+      "name": "diban_you",
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -245.5,
+      "y": 11.42,
+      "width": 491,
+      "height": 591.95,
+      "maxw": 491,
+      "maxh": 591.95
+    },
+    {
+      "name": "panel_top",
+      "type": "node",
+      "x": 3.08,
+      "y": 171.52,
+      "width": 440.05,
+      "height": 166.35,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "培养等级:",
+          "align": "left",
+          "size": 28,
+          "color": 255,
+          "x": -175.53,
+          "y": 65.42,
+          "width": 177.95,
+          "height": 35.5
+        },
+        {
+          "name": "txt_level",
+          "type": "label",
+          "text": "100阶",
+          "align": "left",
+          "size": 28,
+          "color": 4278190335,
+          "x": -35.53,
+          "y": 65.42,
+          "width": 177.95,
+          "height": 35.5
+        },
+        {
+          "name": "txt_goal",
+          "type": "label",
+          "text": "培养达到2阶额外奖励属性：",
+          "align": "left",
+          "size": 18,
+          "color": 255,
+          "x": -220.03,
+          "y": 4.55,
+          "width": 395.45,
+          "height": 24.25
+        },
+        {
+          "name": "txt_ex_atk",
+          "type": "label",
+          "text": "攻击：+1234567890",
+          "align": "left",
+          "size": 20,
+          "color": 4278190335,
+          "x": -219.97,
+          "y": -26.67,
+          "width": 220,
+          "height": 26.5
+        },
+        {
+          "name": "txt_ex_def",
+          "type": "label",
+          "text": "防御：+1234567890",
+          "align": "left",
+          "size": 20,
+          "color": 4278190335,
+          "x": 0.03,
+          "y": -26.67,
+          "width": 220,
+          "height": 26.5
+        },
+        {
+          "name": "txt_ex_hp",
+          "type": "label",
+          "text": "生命：+1234567890",
+          "align": "left",
+          "size": 20,
+          "color": 4278190335,
+          "x": -219.97,
+          "y": -57.67,
+          "width": 220,
+          "height": 26.5
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_line400.png",
+          "x": -3.22,
+          "y": -81.17,
+          "width": 400,
+          "height": 4
+        }
+      ]
+    },
+    {
+      "name": "panel_mid",
+      "type": "node",
+      "x": 5.45,
+      "y": 5.28,
+      "width": 444.8,
+      "height": 136.85,
+      "children": [
+        {
+          "type": "label",
+          "text": "培养获得/本阶培养上限",
+          "align": "left",
+          "size": 18,
+          "color": 255,
+          "x": -136.9,
+          "y": 56.3,
+          "width": 208,
+          "height": 24.25
+        },
+        {
+          "type": "label",
+          "text": "本次培养获得",
+          "align": "left",
+          "size": 18,
+          "color": 255,
+          "x": 88.4,
+          "y": 56.3,
+          "width": 134,
+          "height": 24.25
+        },
+        {
+          "type": "label",
+          "text": "攻击：",
+          "align": "left",
+          "size": 18,
+          "color": 255,
+          "x": -222.4,
+          "y": 23.9,
+          "width": 134,
+          "height": 24.25
+        },
+        {
+          "type": "label",
+          "text": "防御：",
+          "align": "left",
+          "size": 18,
+          "color": 255,
+          "x": -222.4,
+          "y": -15.1,
+          "width": 134,
+          "height": 24.25
+        },
+        {
+          "type": "label",
+          "text": "生命：",
+          "align": "left",
+          "size": 18,
+          "color": 255,
+          "x": -222.4,
+          "y": -52.1,
+          "width": 134,
+          "height": 24.25
+        },
+        {
+          "name": "txt_mid_left_atk_node",
+          "type": "node",
+          "x": -36.1,
+          "y": 23.07,
+          "width": 211,
+          "height": 31,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_ShuZiKuang.png",
+              "scale9": 1,
+              "x": -105.5,
+              "width": 211,
+              "height": 31,
+              "maxw": 211,
+              "maxh": 31
+            },
+            {
+              "name": "txt_mid_left_atk",
+              "type": "label",
+              "text": "123456/123456",
+              "align": "center",
+              "size": 18,
+              "color": 255,
+              "x": -98.5,
+              "y": -1.47,
+              "width": 196,
+              "height": 24.25
+            }
+          ]
+        },
+        {
+          "name": "txt_mid_left_def_node",
+          "type": "node",
+          "x": -36.1,
+          "y": -15.08,
+          "width": 211,
+          "height": 31,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_ShuZiKuang.png",
+              "scale9": 1,
+              "x": -105.5,
+              "width": 211,
+              "height": 31,
+              "maxw": 211,
+              "maxh": 31
+            },
+            {
+              "name": "txt_mid_left_def",
+              "type": "label",
+              "text": "123456/123456",
+              "align": "center",
+              "size": 18,
+              "color": 255,
+              "x": -98.5,
+              "y": -1.47,
+              "width": 196,
+              "height": 24.25
+            }
+          ]
+        },
+        {
+          "name": "txt_mid_left_hp_node",
+          "type": "node",
+          "x": -36.1,
+          "y": -52.92,
+          "width": 211,
+          "height": 31,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_ShuZiKuang.png",
+              "scale9": 1,
+              "x": -105.5,
+              "width": 211,
+              "height": 31,
+              "maxw": 211,
+              "maxh": 31
+            },
+            {
+              "name": "txt_mid_left_hp",
+              "type": "label",
+              "text": "123456/123456",
+              "align": "center",
+              "size": 18,
+              "color": 255,
+              "x": -98.5,
+              "y": -1.47,
+              "width": 196,
+              "height": 24.25
+            }
+          ]
+        },
+        {
+          "name": "txt_mid_right_atk_node",
+          "type": "node",
+          "x": 144.55,
+          "y": 23.07,
+          "width": 120,
+          "height": 31,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_ShuZiKuang.png",
+              "scale9": 1,
+              "x": -60,
+              "width": 120,
+              "height": 31,
+              "maxw": 120,
+              "maxh": 31
+            },
+            {
+              "name": "txt_mid_right_atk",
+              "type": "label",
+              "text": "123456",
+              "align": "center",
+              "size": 18,
+              "color": 255,
+              "x": -51.5,
+              "y": -1.03,
+              "width": 106,
+              "height": 24.25
+            }
+          ]
+        },
+        {
+          "name": "txt_mid_right_def_node",
+          "type": "node",
+          "x": 144.55,
+          "y": -15.08,
+          "width": 120,
+          "height": 31,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_ShuZiKuang.png",
+              "scale9": 1,
+              "x": -60,
+              "width": 120,
+              "height": 31,
+              "maxw": 120,
+              "maxh": 31
+            },
+            {
+              "name": "txt_mid_right_def",
+              "type": "label",
+              "text": "123456",
+              "align": "center",
+              "size": 18,
+              "color": 255,
+              "x": -51.5,
+              "y": -1.03,
+              "width": 106,
+              "height": 24.25
+            }
+          ]
+        },
+        {
+          "name": "txt_mid_right_hp_node",
+          "type": "node",
+          "x": 144.55,
+          "y": -52.92,
+          "width": 120,
+          "height": 31,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_ShuZiKuang.png",
+              "scale9": 1,
+              "x": -60,
+              "width": 120,
+              "height": 31,
+              "maxw": 120,
+              "maxh": 31
+            },
+            {
+              "name": "txt_mid_right_hp",
+              "type": "label",
+              "text": "123456",
+              "align": "center",
+              "size": 18,
+              "color": 255,
+              "x": -51.5,
+              "y": -1.03,
+              "width": 106,
+              "height": 24.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "panel_bot",
+      "type": "node",
+      "x": 1.03,
+      "y": -149.9,
+      "width": 431.95,
+      "height": 114,
+      "children": [
+        {
+          "type": "label",
+          "text": "拥有培养丹:",
+          "align": "left",
+          "size": 18,
+          "color": 255,
+          "x": -215.97,
+          "y": 45.63,
+          "width": 120,
+          "height": 24.25
+        },
+        {
+          "type": "label",
+          "text": "消耗培养丹:",
+          "align": "left",
+          "size": 18,
+          "color": 255,
+          "x": -215.97,
+          "y": 4.13,
+          "width": 120,
+          "height": 24.25
+        },
+        {
+          "type": "label",
+          "text": "培养成功率:",
+          "align": "left",
+          "size": 18,
+          "color": 255,
+          "x": -215.97,
+          "y": -37.38,
+          "width": 180,
+          "height": 24.25
+        },
+        {
+          "name": "txt_bot_left_earn_node",
+          "type": "node",
+          "x": -27.03,
+          "y": 45.65,
+          "width": 120,
+          "height": 31,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_ShuZiKuang.png",
+              "scale9": 1,
+              "x": -60,
+              "width": 120,
+              "height": 31,
+              "maxw": 120,
+              "maxh": 31
+            },
+            {
+              "name": "txt_bot_left_earn",
+              "type": "label",
+              "text": "123456",
+              "align": "center",
+              "size": 18,
+              "color": 255,
+              "x": -51.5,
+              "y": -1.03,
+              "width": 106,
+              "height": 24.25
+            }
+          ]
+        },
+        {
+          "name": "txt_bot_left_cost_node",
+          "type": "node",
+          "x": -27.03,
+          "y": 4.15,
+          "width": 120,
+          "height": 31,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_ShuZiKuang.png",
+              "scale9": 1,
+              "x": -60,
+              "width": 120,
+              "height": 31,
+              "maxw": 120,
+              "maxh": 31
+            },
+            {
+              "name": "txt_bot_left_cost",
+              "type": "label",
+              "text": "123456",
+              "align": "center",
+              "size": 18,
+              "color": 255,
+              "x": -51.5,
+              "y": -1.03,
+              "width": 106,
+              "height": 24.25
+            }
+          ]
+        },
+        {
+          "name": "txt_bot_left_rate_node",
+          "type": "node",
+          "x": -27.03,
+          "y": -37.35,
+          "width": 120,
+          "height": 31,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_ShuZiKuang.png",
+              "scale9": 1,
+              "x": -60,
+              "width": 120,
+              "height": 31,
+              "maxw": 120,
+              "maxh": 31
+            },
+            {
+              "name": "txt_bot_left_rate",
+              "type": "label",
+              "text": "123456",
+              "align": "center",
+              "size": 18,
+              "color": 255,
+              "x": -51.5,
+              "y": -1.03,
+              "width": 106,
+              "height": 24.25
+            }
+          ]
+        },
+        {
+          "name": "hint",
+          "type": "label",
+          "text": "VIP加成：",
+          "align": "center",
+          "size": 18,
+          "color": 4244570367,
+          "outlineColor": 0,
+          "x": 36.47,
+          "y": -37.38,
+          "width": 103,
+          "height": 24.25
+        },
+        {
+          "name": "txt_bot_left_rate_node_vip",
+          "type": "node",
+          "x": 175.97,
+          "y": -37.35,
+          "width": 80,
+          "height": 31,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_ShuZiKuang.png",
+              "scale9": 1,
+              "x": -40,
+              "width": 80,
+              "height": 31,
+              "maxw": 80,
+              "maxh": 31
+            },
+            {
+              "name": "txt_bot_left_rate_vip",
+              "type": "label",
+              "text": "100%",
+              "align": "center",
+              "size": 18,
+              "color": 255,
+              "x": -31.5,
+              "y": -1.03,
+              "width": 60,
+              "height": 24.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "tipbtn",
+      "type": "btn",
+      "img_normal": "#ui_common_wenhao1holy_tree.png",
+      "img_down": "#ui_common_wenhao2holy_tree.png",
+      "x": -196.9,
+      "y": 237.6,
+      "width": 46,
+      "height": 46
+    },
+    {
+      "name": "train_ndoe",
+      "type": "node",
+      "x": -76.65,
+      "y": -264.9,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "train",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png",
+          "img_disable": "#ui_common_btn_2c.png",
+          "width": 144,
+          "height": 85
+        },
+        {
+          "name": "train_txt",
+          "type": "label",
+          "text": "培养",
+          "align": "center",
+          "size": 27,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -58,
+          "y": 4.43,
+          "width": 116,
+          "height": 34.35
+        }
+      ]
+    },
+    {
+      "name": "train_ndoe_vip",
+      "type": "node",
+      "x": 83.35,
+      "y": -264.9,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "train",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png",
+          "img_disable": "#ui_common_btn_2c.png",
+          "width": 144,
+          "height": 85
+        },
+        {
+          "name": "train_txt",
+          "type": "label",
+          "text": "一键培养",
+          "align": "center",
+          "size": 27,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -65,
+          "y": 4.43,
+          "width": 130,
+          "height": 34.35
+        }
+      ]
+    }
+  ]
+}

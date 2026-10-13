@@ -1,0 +1,194 @@
+{
+  "group": [
+    "ui_guild"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768,
+      "alpha": 0
+    },
+    {
+      "name": "diban",
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -359,
+      "y": 3,
+      "width": 739,
+      "height": 565,
+      "maxw": 739,
+      "maxh": 565
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_haoyoulan2.png",
+      "scale9": 1,
+      "x": -312.9,
+      "y": 8,
+      "width": 648,
+      "height": 432,
+      "maxw": 648,
+      "maxh": 432
+    },
+    {
+      "name": "qq_txt",
+      "type": "label",
+      "text": "QQ群：",
+      "align": "left",
+      "size": 26,
+      "color": 1092488703,
+      "x": -292.4,
+      "y": 164.93,
+      "width": 101,
+      "height": 33.25
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_guild_changtiao.png",
+      "x": 54.4,
+      "y": 167.55,
+      "width": 510,
+      "height": 46
+    },
+    {
+      "name": "qq_num",
+      "type": "node",
+      "x": -189.4,
+      "y": 166.05,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "gonggao_txt",
+      "type": "label",
+      "text": "公  告：",
+      "align": "left",
+      "size": 26,
+      "color": 1092488703,
+      "x": -292.4,
+      "y": 94.92,
+      "width": 101,
+      "height": 33.25
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_guild_shurukuang.png",
+      "scale9": 1,
+      "x": -200.95,
+      "y": 42,
+      "width": 509,
+      "height": 154,
+      "maxw": 509,
+      "maxh": 154
+    },
+    {
+      "name": "gonggao",
+      "type": "node",
+      "x": -189.4,
+      "y": 109.55,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "xuanyan_txt",
+      "type": "label",
+      "text": "宣  言：",
+      "align": "left",
+      "size": 26,
+      "color": 1092488703,
+      "x": -292.4,
+      "y": -85.08,
+      "width": 101,
+      "height": 33.25
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_guild_shurukuang.png",
+      "scale9": 1,
+      "x": -200.95,
+      "y": -120.5,
+      "width": 509,
+      "height": 119,
+      "maxw": 509,
+      "maxh": 119
+    },
+    {
+      "name": "xuanyan",
+      "type": "node",
+      "x": -189.4,
+      "y": -70.45,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "btn_yes",
+      "type": "node",
+      "x": 13,
+      "y": -264.3,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png",
+          "img_disable": "#ui_common_btn_2c.png",
+          "width": 144,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "确定",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -364.4,
+      "y": 263.6,
+      "width": 744,
+      "height": 55,
+      "maxw": 744,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "修改信息",
+      "align": "center",
+      "size": 25,
+      "color": 4294967295,
+      "x": -315.4,
+      "y": 264.8,
+      "width": 639,
+      "height": 32.1
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 353.4,
+      "y": 266.1,
+      "width": 80,
+      "height": 86
+    }
+  ]
+}

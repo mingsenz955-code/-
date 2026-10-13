@@ -1,0 +1,293 @@
+{
+  "group": [
+    "ui_bgpuzzle",
+    "ui_main"
+  ],
+  "width": 567,
+  "height": 482,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "grid": {
+        "x": 108,
+        "y": 111,
+        "width": 46,
+        "height": 27
+      },
+      "x": -260,
+      "y": -21,
+      "width": 537,
+      "height": 445,
+      "maxw": 537,
+      "maxh": 445
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_bgpuzzle_bg9.png",
+      "scale9": 1,
+      "grid": {
+        "x": 33,
+        "y": 33,
+        "width": 42,
+        "height": 35
+      },
+      "x": -222,
+      "y": 7,
+      "width": 462,
+      "height": 296,
+      "maxw": 462,
+      "maxh": 296
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "grid": {
+        "x": 25,
+        "y": 20,
+        "width": 10,
+        "height": 10
+      },
+      "x": -262,
+      "y": 189,
+      "width": 550,
+      "height": 55,
+      "maxw": 550,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "游戏设置",
+      "align": "center",
+      "size": 25,
+      "color": 4294967295,
+      "x": -203,
+      "y": 192,
+      "width": 400,
+      "height": 32
+    },
+    {
+      "name": "qiehuanzhanghao",
+      "type": "node",
+      "x": -89,
+      "y": -92,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "width": 200,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "切换账号",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -79,
+          "y": 4,
+          "width": 156,
+          "height": 46
+        }
+      ]
+    },
+    {
+      "name": "node_btn_wtfk",
+      "type": "node",
+      "x": 118,
+      "y": -90,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "width": 200,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "联系客服",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -79,
+          "y": 4,
+          "width": 156,
+          "height": 46
+        }
+      ]
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 265,
+      "y": 196,
+      "width": 80,
+      "height": 86
+    },
+    {
+      "name": "txt",
+      "type": "label",
+      "text": "当前账号:",
+      "align": "left",
+      "size": 22,
+      "color": 255,
+      "x": -141,
+      "y": -27,
+      "width": 225,
+      "height": 29
+    },
+    {
+      "name": "player_name",
+      "type": "label",
+      "text": "",
+      "align": "left",
+      "size": 22,
+      "color": 255,
+      "x": -11,
+      "y": -27,
+      "width": 225,
+      "height": 29
+    },
+    {
+      "name": "musicOn",
+      "type": "btn",
+      "img_normal": "#ui_main_music_on.png",
+      "img_down": "#ui_main_music_on_highlight.png",
+      "x": -105,
+      "y": 115,
+      "width": 50,
+      "height": 50
+    },
+    {
+      "name": "musicOnGou",
+      "type": "sprite",
+      "img": "#ui_common_gou.png",
+      "x": -101,
+      "y": 94,
+      "width": 84,
+      "height": 71
+    },
+    {
+      "name": "musicOff",
+      "type": "btn",
+      "img_normal": "#ui_main_music_off.png",
+      "img_down": "#ui_main_music_off_highlight.png",
+      "x": -105,
+      "y": 39,
+      "width": 50,
+      "height": 50
+    },
+    {
+      "name": "musicOffGou",
+      "type": "sprite",
+      "img": "#ui_common_gou.png",
+      "x": -101,
+      "y": 19,
+      "width": 84,
+      "height": 71
+    },
+    {
+      "name": "musicOnBtn",
+      "type": "node",
+      "x": 90,
+      "y": 106,
+      "width": 160,
+      "height": 67,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "width": 160,
+          "height": 67
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "声音开",
+          "align": "center",
+          "size": 30,
+          "color": 4294967295,
+          "x": -68,
+          "y": 2,
+          "width": 137,
+          "height": 38
+        }
+      ]
+    },
+    {
+      "name": "musicOffBtn",
+      "type": "node",
+      "x": 90,
+      "y": 31,
+      "width": 160,
+      "height": 67,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "width": 160,
+          "height": 67
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "声音关",
+          "align": "center",
+          "size": 30,
+          "color": 4294967295,
+          "x": -68,
+          "y": 2,
+          "width": 137,
+          "height": 38
+        }
+      ]
+    },
+    {
+      "name": "userid",
+      "type": "label",
+      "text": "您的ID:",
+      "align": "left",
+      "size": 26,
+      "color": 1092488703,
+      "x": -182,
+      "y": -162,
+      "width": 102,
+      "height": 33
+    },
+    {
+      "name": "userid_num",
+      "type": "label",
+      "text": " ",
+      "align": "left",
+      "size": 26,
+      "color": 1092488703,
+      "x": -77,
+      "y": -162,
+      "width": 313,
+      "height": 33
+    }
+  ]
+}

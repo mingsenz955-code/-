@@ -1,0 +1,351 @@
+{
+  "group": [
+    "ui_pve"
+  ],
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "x": 0.1,
+      "width": 1024,
+      "height": 768,
+      "alpha": 0
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "y": -5.4,
+      "width": 1024,
+      "height": 768,
+      "left": 0,
+      "right": 0
+    },
+    {
+      "name": "diban",
+      "type": "sprite",
+      "img": "#ui_pve_di.png",
+      "y": -322.5,
+      "width": 1024,
+      "height": 123,
+      "left": 0,
+      "right": 0
+    },
+    {
+      "name": "ding",
+      "type": "sprite",
+      "img": "#ui_pve_ding.png",
+      "y": 319,
+      "width": 1024,
+      "height": 130,
+      "left": 0,
+      "right": 0
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_GuanBi1.png",
+      "img_down": "#ui_common_btn_GuanBi2.png",
+      "x": 468.1,
+      "y": 338.9,
+      "width": 85,
+      "height": 90,
+      "right": 43.9
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_battle_jd1.png",
+      "y": 330.5,
+      "width": 510,
+      "height": 60
+    },
+    {
+      "name": "con_tianchong",
+      "type": "node",
+      "y": 330.5,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "联赛",
+      "size": 27,
+      "align": "center",
+      "color": 4294967295,
+      "outlineColor": 10040064,
+      "x": -216.9,
+      "y": 332.93,
+      "width": 431.85,
+      "height": 34.15
+    },
+    {
+      "name": "star_num",
+      "type": "label",
+      "text": "(60/60)",
+      "size": 25,
+      "align": "left",
+      "color": 4294967295,
+      "outlineColor": 10040064,
+      "x": 132,
+      "y": 331.02,
+      "width": 104,
+      "height": 31.95
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_battle_s4.png",
+      "x": 114.35,
+      "y": 333,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "name": "shijian",
+      "type": "sprite",
+      "img": "#ui_common_d3.png",
+      "scale9": 1,
+      "x": -245.85,
+      "y": 274,
+      "width": 196,
+      "height": 40,
+      "maxw": 196,
+      "maxh": 40
+    },
+    {
+      "name": "tx_time",
+      "type": "label",
+      "text": "剩余体力：10/10",
+      "size": 21,
+      "align": "left",
+      "color": 4294967295,
+      "x": -239.55,
+      "y": 274.2,
+      "width": 168,
+      "height": 27.6
+    },
+    {
+      "name": "tx_huifu",
+      "type": "label",
+      "text": "恢复时间08:00:00",
+      "size": 21,
+      "align": "left",
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -239.55,
+      "y": 238.6,
+      "width": 215.5,
+      "height": 27.6
+    },
+    {
+      "name": "tianjia_tili",
+      "type": "btn",
+      "img_normal": "#ui_main_05.png",
+      "img_down": "#ui_main_05-2.png",
+      "x": -49.6,
+      "y": 273
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_d3.png",
+      "scale9": 1,
+      "x": 23.15,
+      "y": 274,
+      "width": 220,
+      "height": 40,
+      "maxw": 220,
+      "maxh": 40
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_battle_hsldsp.png",
+      "x": 212.45,
+      "y": 281.2,
+      "width": 60,
+      "height": 60
+    },
+    {
+      "name": "tx_jiangli",
+      "type": "label",
+      "text": "满星通关奖励：",
+      "size": 21,
+      "align": "left",
+      "color": 4294967295,
+      "x": 33.45,
+      "y": 274.2,
+      "width": 170,
+      "height": 27.6
+    },
+    {
+      "name": "buzhen",
+      "type": "node",
+      "x": 418.5,
+      "y": -308,
+      "width": 101,
+      "height": 111,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_main_Z_ico-bg0003.png",
+          "img_down": "#ui_main_Z_ico-bg0004.png",
+          "width": 101,
+          "height": 111
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_Z_ico-BuZhen.png",
+          "x": -0.5,
+          "y": 7,
+          "width": 94,
+          "height": 79
+        },
+        {
+          "name": "con_name",
+          "type": "node",
+          "y": -52.5,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "tansuo",
+      "type": "node",
+      "x": 292.5,
+      "y": -308,
+      "width": 101,
+      "height": 111,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_main_Z_ico-bg0003.png",
+          "img_down": "#ui_main_Z_ico-bg0004.png",
+          "width": 101,
+          "height": 111
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_main_Z_ico-BaoShi.png",
+          "x": -2,
+          "y": 13.5,
+          "width": 97,
+          "height": 84
+        },
+        {
+          "name": "new",
+          "type": "node",
+          "x": 27.5,
+          "y": 39.5,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "con_name",
+          "type": "node",
+          "y": -52.5,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "page_left",
+      "type": "node",
+      "x": -477.5,
+      "y": 13.5,
+      "width": 67,
+      "height": 107,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_pve_zuo.png",
+          "img_down": "#ui_pve_zuo.png",
+          "width": 67,
+          "height": 107
+        }
+      ]
+    },
+    {
+      "name": "page_right",
+      "type": "node",
+      "x": 477.1,
+      "y": 13.5,
+      "width": 67,
+      "height": 107,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_pve_you.png",
+          "img_down": "#ui_pve_you.png",
+          "width": 67,
+          "height": 107
+        }
+      ]
+    },
+    {
+      "name": "node_btn_getreward",
+      "type": "node",
+      "x": 318,
+      "y": 270.45,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png",
+          "img_disable": "#ui_common_btn_2c.png",
+          "width": 144,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "领取",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "name": "power_bg",
+      "type": "node",
+      "x": -340.8,
+      "y": -344.95,
+      "width": 340,
+      "height": 60,
+      "left": 1.2,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_zhandouli.png",
+          "width": 340,
+          "height": 60
+        },
+        {
+          "name": "tx_power_num",
+          "type": "label",
+          "text": "",
+          "size": 20,
+          "align": "left",
+          "color": 4294967295,
+          "x": -151,
+          "y": -1.3,
+          "width": 273,
+          "height": 26.5
+        }
+      ]
+    }
+  ]
+}

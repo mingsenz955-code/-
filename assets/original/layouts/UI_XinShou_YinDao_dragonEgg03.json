@@ -1,0 +1,52 @@
+{
+  "group": {},
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "mask",
+      "maskRGBA": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0
+      },
+      "maskAnchor": {
+        "x": 1,
+        "y": 1
+      },
+      "scale9mask": true
+    },
+    {
+      "name": "btn_yes",
+      "type": "node",
+      "x": 223.5,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "width": 200,
+          "height": 85
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "确    定",
+          "align": "center",
+          "size": 30,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -85.9,
+          "y": 3.63,
+          "width": 170,
+          "height": 37.75
+        }
+      ]
+    }
+  ]
+}

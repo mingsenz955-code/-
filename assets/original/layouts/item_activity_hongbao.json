@@ -1,0 +1,674 @@
+{
+  "group": [
+    "ui_activityhongbao",
+    "ui_activitycat"
+  ],
+  "width": 1032,
+  "height": 629,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -518,
+      "y": -54,
+      "width": 1032,
+      "height": 629,
+      "maxw": 1032,
+      "maxh": 629
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_activityhongbao_bg.png",
+      "x": 1,
+      "y": -50.45,
+      "width": 927,
+      "height": 539
+    },
+    {
+      "name": "hint_day",
+      "type": "label",
+      "text": "活动时间",
+      "align": "left",
+      "size": 22,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -188.95,
+      "y": 108.83,
+      "width": 394,
+      "height": 28.75
+    },
+    {
+      "name": "hint_time",
+      "type": "label",
+      "text": " ",
+      "align": "left",
+      "size": 22,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": 99.05,
+      "y": 108.83,
+      "width": 106,
+      "height": 28.75
+    },
+    {
+      "name": "hongbao1",
+      "type": "node",
+      "x": -325.4,
+      "y": -108,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "hongbao2",
+      "type": "node",
+      "x": -107.1,
+      "y": -108,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "hongbao3",
+      "type": "node",
+      "x": 111.2,
+      "y": -108,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "hongbao4",
+      "type": "node",
+      "x": 329.5,
+      "y": -108,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "help",
+      "type": "node",
+      "x": 350.6,
+      "y": 109.15,
+      "width": 71,
+      "height": 34,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_activitycat_btn_help.png",
+          "img_down": "#ui_activitycat_btn_help.png",
+          "width": 71,
+          "height": 34
+        }
+      ]
+    },
+    {
+      "name": "light1",
+      "type": "node",
+      "x": -412.45,
+      "y": 148.05,
+      "width": 55,
+      "height": 55,
+      "children": [
+        {
+          "name": "light",
+          "type": "sprite",
+          "img": "#ui_activityhongbao_deng2.png",
+          "x": -27.5,
+          "y": 27.5,
+          "width": 55,
+          "height": 55
+        },
+        {
+          "name": "normal",
+          "type": "sprite",
+          "img": "#ui_activityhongbao_deng1.png",
+          "x": -27.5,
+          "y": 27.5,
+          "width": 40,
+          "height": 40
+        }
+      ]
+    },
+    {
+      "name": "light2",
+      "type": "node",
+      "x": -347.4,
+      "y": 148.05,
+      "width": 55,
+      "height": 55,
+      "children": [
+        {
+          "name": "normal",
+          "type": "sprite",
+          "img": "#ui_activityhongbao_deng1.png",
+          "x": -27.5,
+          "y": 27.5,
+          "width": 40,
+          "height": 40
+        },
+        {
+          "name": "light",
+          "type": "sprite",
+          "img": "#ui_activityhongbao_deng2.png",
+          "x": -27.5,
+          "y": 27.5,
+          "width": 55,
+          "height": 55
+        }
+      ]
+    },
+    {
+      "name": "light3",
+      "type": "node",
+      "x": -282.35,
+      "y": 148.05,
+      "width": 55,
+      "height": 55,
+      "children": [
+        {
+          "name": "light",
+          "type": "sprite",
+          "img": "#ui_activityhongbao_deng2.png",
+          "x": -27.5,
+          "y": 27.5,
+          "width": 55,
+          "height": 55
+        },
+        {
+          "name": "normal",
+          "type": "sprite",
+          "img": "#ui_activityhongbao_deng1.png",
+          "x": -27.5,
+          "y": 27.5,
+          "width": 40,
+          "height": 40
+        }
+      ]
+    },
+    {
+      "name": "light4",
+      "type": "node",
+      "x": 338.55,
+      "y": 148.05,
+      "width": 55,
+      "height": 55,
+      "children": [
+        {
+          "name": "normal",
+          "type": "sprite",
+          "img": "#ui_activityhongbao_deng1.png",
+          "x": -27.5,
+          "y": 27.5,
+          "width": 40,
+          "height": 40
+        },
+        {
+          "name": "light",
+          "type": "sprite",
+          "img": "#ui_activityhongbao_deng2.png",
+          "x": -27.5,
+          "y": 27.5,
+          "width": 55,
+          "height": 55
+        }
+      ]
+    },
+    {
+      "name": "light5",
+      "type": "node",
+      "x": 403.6,
+      "y": 148.05,
+      "width": 55,
+      "height": 55,
+      "children": [
+        {
+          "name": "light",
+          "type": "sprite",
+          "img": "#ui_activityhongbao_deng2.png",
+          "x": -27.5,
+          "y": 27.5,
+          "width": 55,
+          "height": 55
+        },
+        {
+          "name": "normal",
+          "type": "sprite",
+          "img": "#ui_activityhongbao_deng1.png",
+          "x": -27.5,
+          "y": 27.5,
+          "width": 40,
+          "height": 40
+        }
+      ]
+    },
+    {
+      "name": "light6",
+      "type": "node",
+      "x": 468.65,
+      "y": 148.05,
+      "width": 55,
+      "height": 55,
+      "children": [
+        {
+          "name": "normal",
+          "type": "sprite",
+          "img": "#ui_activityhongbao_deng1.png",
+          "x": -27.5,
+          "y": 27.5,
+          "width": 40,
+          "height": 40
+        },
+        {
+          "name": "light",
+          "type": "sprite",
+          "img": "#ui_activityhongbao_deng2.png",
+          "x": -27.5,
+          "y": 27.5,
+          "width": 55,
+          "height": 55
+        }
+      ]
+    },
+    {
+      "name": "light7",
+      "type": "node",
+      "x": -388.45,
+      "y": -341.45,
+      "width": 55,
+      "height": 55,
+      "children": [
+        {
+          "name": "light",
+          "type": "sprite",
+          "img": "#ui_activityhongbao_deng2.png",
+          "x": -27.5,
+          "y": 27.5,
+          "width": 55,
+          "height": 55
+        },
+        {
+          "name": "normal",
+          "type": "sprite",
+          "img": "#ui_activityhongbao_deng1.png",
+          "x": -27.5,
+          "y": 27.5,
+          "width": 40,
+          "height": 40
+        }
+      ]
+    },
+    {
+      "name": "light8",
+      "type": "node",
+      "x": -324.9,
+      "y": -341.45,
+      "width": 55,
+      "height": 55,
+      "children": [
+        {
+          "name": "normal",
+          "type": "sprite",
+          "img": "#ui_activityhongbao_deng1.png",
+          "x": -27.5,
+          "y": 27.5,
+          "width": 40,
+          "height": 40
+        },
+        {
+          "name": "light",
+          "type": "sprite",
+          "img": "#ui_activityhongbao_deng2.png",
+          "x": -27.5,
+          "y": 27.5,
+          "width": 55,
+          "height": 55
+        }
+      ]
+    },
+    {
+      "name": "light9",
+      "type": "node",
+      "x": -261.35,
+      "y": -341.45,
+      "width": 55,
+      "height": 55,
+      "children": [
+        {
+          "name": "light",
+          "type": "sprite",
+          "img": "#ui_activityhongbao_deng2.png",
+          "x": -27.5,
+          "y": 27.5,
+          "width": 55,
+          "height": 55
+        },
+        {
+          "name": "normal",
+          "type": "sprite",
+          "img": "#ui_activityhongbao_deng1.png",
+          "x": -27.5,
+          "y": 27.5,
+          "width": 40,
+          "height": 40
+        }
+      ]
+    },
+    {
+      "name": "light10",
+      "type": "node",
+      "x": -197.8,
+      "y": -341.45,
+      "width": 55,
+      "height": 55,
+      "children": [
+        {
+          "name": "normal",
+          "type": "sprite",
+          "img": "#ui_activityhongbao_deng1.png",
+          "x": -27.5,
+          "y": 27.5,
+          "width": 40,
+          "height": 40
+        },
+        {
+          "name": "light",
+          "type": "sprite",
+          "img": "#ui_activityhongbao_deng2.png",
+          "x": -27.5,
+          "y": 27.5,
+          "width": 55,
+          "height": 55
+        }
+      ]
+    },
+    {
+      "name": "light11",
+      "type": "node",
+      "x": -134.25,
+      "y": -341.45,
+      "width": 55,
+      "height": 55,
+      "children": [
+        {
+          "name": "light",
+          "type": "sprite",
+          "img": "#ui_activityhongbao_deng2.png",
+          "x": -27.5,
+          "y": 27.5,
+          "width": 55,
+          "height": 55
+        },
+        {
+          "name": "normal",
+          "type": "sprite",
+          "img": "#ui_activityhongbao_deng1.png",
+          "x": -27.5,
+          "y": 27.5,
+          "width": 40,
+          "height": 40
+        }
+      ]
+    },
+    {
+      "name": "light12",
+      "type": "node",
+      "x": -70.7,
+      "y": -341.45,
+      "width": 55,
+      "height": 55,
+      "children": [
+        {
+          "name": "normal",
+          "type": "sprite",
+          "img": "#ui_activityhongbao_deng1.png",
+          "x": -27.5,
+          "y": 27.5,
+          "width": 40,
+          "height": 40
+        },
+        {
+          "name": "light",
+          "type": "sprite",
+          "img": "#ui_activityhongbao_deng2.png",
+          "x": -27.5,
+          "y": 27.5,
+          "width": 55,
+          "height": 55
+        }
+      ]
+    },
+    {
+      "name": "light13",
+      "type": "node",
+      "x": -7.15,
+      "y": -341.45,
+      "width": 55,
+      "height": 55,
+      "children": [
+        {
+          "name": "light",
+          "type": "sprite",
+          "img": "#ui_activityhongbao_deng2.png",
+          "x": -27.5,
+          "y": 27.5,
+          "width": 55,
+          "height": 55
+        },
+        {
+          "name": "normal",
+          "type": "sprite",
+          "img": "#ui_activityhongbao_deng1.png",
+          "x": -27.5,
+          "y": 27.5,
+          "width": 40,
+          "height": 40
+        }
+      ]
+    },
+    {
+      "name": "light14",
+      "type": "node",
+      "x": 56.4,
+      "y": -341.45,
+      "width": 55,
+      "height": 55,
+      "children": [
+        {
+          "name": "normal",
+          "type": "sprite",
+          "img": "#ui_activityhongbao_deng1.png",
+          "x": -27.5,
+          "y": 27.5,
+          "width": 40,
+          "height": 40
+        },
+        {
+          "name": "light",
+          "type": "sprite",
+          "img": "#ui_activityhongbao_deng2.png",
+          "x": -27.5,
+          "y": 27.5,
+          "width": 55,
+          "height": 55
+        }
+      ]
+    },
+    {
+      "name": "light15",
+      "type": "node",
+      "x": 119.95,
+      "y": -341.45,
+      "width": 55,
+      "height": 55,
+      "children": [
+        {
+          "name": "light",
+          "type": "sprite",
+          "img": "#ui_activityhongbao_deng2.png",
+          "x": -27.5,
+          "y": 27.5,
+          "width": 55,
+          "height": 55
+        },
+        {
+          "name": "normal",
+          "type": "sprite",
+          "img": "#ui_activityhongbao_deng1.png",
+          "x": -27.5,
+          "y": 27.5,
+          "width": 40,
+          "height": 40
+        }
+      ]
+    },
+    {
+      "name": "light16",
+      "type": "node",
+      "x": 183.5,
+      "y": -341.45,
+      "width": 55,
+      "height": 55,
+      "children": [
+        {
+          "name": "normal",
+          "type": "sprite",
+          "img": "#ui_activityhongbao_deng1.png",
+          "x": -27.5,
+          "y": 27.5,
+          "width": 40,
+          "height": 40
+        },
+        {
+          "name": "light",
+          "type": "sprite",
+          "img": "#ui_activityhongbao_deng2.png",
+          "x": -27.5,
+          "y": 27.5,
+          "width": 55,
+          "height": 55
+        }
+      ]
+    },
+    {
+      "name": "light17",
+      "type": "node",
+      "x": 247.05,
+      "y": -341.45,
+      "width": 55,
+      "height": 55,
+      "children": [
+        {
+          "name": "light",
+          "type": "sprite",
+          "img": "#ui_activityhongbao_deng2.png",
+          "x": -27.5,
+          "y": 27.5,
+          "width": 55,
+          "height": 55
+        },
+        {
+          "name": "normal",
+          "type": "sprite",
+          "img": "#ui_activityhongbao_deng1.png",
+          "x": -27.5,
+          "y": 27.5,
+          "width": 40,
+          "height": 40
+        }
+      ]
+    },
+    {
+      "name": "light18",
+      "type": "node",
+      "x": 310.6,
+      "y": -341.45,
+      "width": 55,
+      "height": 55,
+      "children": [
+        {
+          "name": "normal",
+          "type": "sprite",
+          "img": "#ui_activityhongbao_deng1.png",
+          "x": -27.5,
+          "y": 27.5,
+          "width": 40,
+          "height": 40
+        },
+        {
+          "name": "light",
+          "type": "sprite",
+          "img": "#ui_activityhongbao_deng2.png",
+          "x": -27.5,
+          "y": 27.5,
+          "width": 55,
+          "height": 55
+        }
+      ]
+    },
+    {
+      "name": "light19",
+      "type": "node",
+      "x": 374.15,
+      "y": -341.45,
+      "width": 55,
+      "height": 55,
+      "children": [
+        {
+          "name": "light",
+          "type": "sprite",
+          "img": "#ui_activityhongbao_deng2.png",
+          "x": -27.5,
+          "y": 27.5,
+          "width": 55,
+          "height": 55
+        },
+        {
+          "name": "normal",
+          "type": "sprite",
+          "img": "#ui_activityhongbao_deng1.png",
+          "x": -27.5,
+          "y": 27.5,
+          "width": 40,
+          "height": 40
+        }
+      ]
+    },
+    {
+      "name": "light20",
+      "type": "node",
+      "x": 437.7,
+      "y": -341.45,
+      "width": 55,
+      "height": 55,
+      "children": [
+        {
+          "name": "normal",
+          "type": "sprite",
+          "img": "#ui_activityhongbao_deng1.png",
+          "x": -27.5,
+          "y": 27.5,
+          "width": 40,
+          "height": 40
+        },
+        {
+          "name": "light",
+          "type": "sprite",
+          "img": "#ui_activityhongbao_deng2.png",
+          "x": -27.5,
+          "y": 27.5,
+          "width": 55,
+          "height": 55
+        }
+      ]
+    },
+    {
+      "name": "zhuangshi",
+      "type": "sprite",
+      "img": "#ui_activityhongbao_zhuangshi.png",
+      "x": -388.95,
+      "y": 158.45,
+      "width": 204,
+      "height": 143
+    }
+  ]
+}

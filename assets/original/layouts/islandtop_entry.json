@@ -1,0 +1,16 @@
+{
+  "group": {},
+  "width": 687,
+  "height": 577,
+  "children": [
+    {
+      "name": "eff",
+      "type": "eff",
+      "eff": "yandong_eff",
+      "x": 0.4,
+      "y": -0.6,
+      "width": 687.3,
+      "height": 577.45
+    }
+  ]
+}

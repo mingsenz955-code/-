@@ -1,0 +1,90 @@
+{
+  "group": [
+    "ui_common"
+  ],
+  "width": 557,
+  "height": 718,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 2,
+      "grid": {
+        "x": 107.95,
+        "y": 111,
+        "width": 45.999999999999986,
+        "height": 27
+      },
+      "x": -279,
+      "y": -11.03,
+      "width": 548,
+      "height": 693.95,
+      "maxw": 548,
+      "maxh": 693.95
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_haoyoulan2.png",
+      "scale9": 2,
+      "grid": {
+        "x": 28.25,
+        "y": 29,
+        "width": 37.75,
+        "height": 36
+      },
+      "x": -258.3,
+      "y": -23.5,
+      "width": 505.85,
+      "height": 629,
+      "maxw": 505.85,
+      "maxh": 629
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 2,
+      "grid": {
+        "x": 24.5,
+        "y": 20,
+        "width": 9.5,
+        "height": 9.5
+      },
+      "x": -275.6,
+      "y": 303.45,
+      "width": 538.45,
+      "height": 58.9,
+      "maxw": 538.45,
+      "maxh": 58.9
+    },
+    {
+      "name": "txt_title",
+      "type": "label",
+      "text": "奖励预览",
+      "align": "center",
+      "size": 21,
+      "color": 4294967295,
+      "x": -111.4,
+      "y": 300.52,
+      "width": 235,
+      "height": 29.85
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "x": -4.35,
+      "y": -26.4,
+      "width": 504,
+      "height": 609
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 238.2,
+      "y": 317,
+      "width": 80,
+      "height": 86
+    }
+  ]
+}

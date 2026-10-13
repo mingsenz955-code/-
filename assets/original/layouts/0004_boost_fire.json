@@ -1,0 +1,23 @@
+{
+  "group": [
+    "buildings/0004_boost_fire_g"
+  ],
+  "width": 259,
+  "height": 265,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0004_boost_fire_g_bg.png",
+      "x": 16,
+      "y": 118
+    },
+    {
+      "name": "eff",
+      "type": "eff",
+      "eff": "0004_boost_fire_eff",
+      "width": 183.1,
+      "height": 210.3
+    }
+  ]
+}

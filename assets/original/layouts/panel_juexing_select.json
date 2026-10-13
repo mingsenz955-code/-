@@ -1,0 +1,200 @@
+{
+  "group": [
+    "ui_common"
+  ],
+  "width": 758,
+  "height": 638,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 2,
+      "grid": {
+        "x": 107.95,
+        "y": 111,
+        "width": 45.999999999999986,
+        "height": 27
+      },
+      "x": -379,
+      "y": -13.55,
+      "width": 751,
+      "height": 610,
+      "maxw": 751,
+      "maxh": 610
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 2,
+      "grid": {
+        "x": 24.5,
+        "y": 20,
+        "width": 9.5,
+        "height": 9.5
+      },
+      "x": -374.5,
+      "y": 280.95,
+      "width": 744.05,
+      "height": 55,
+      "maxw": 744.05,
+      "maxh": 55
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_haoyoulan2.png",
+      "scale9": 2,
+      "grid": {
+        "x": 28.25,
+        "y": 29,
+        "width": 37.75,
+        "height": 36
+      },
+      "x": -347.4,
+      "y": 51.9,
+      "width": 688.05,
+      "height": 399,
+      "maxw": 688.05,
+      "maxh": 399
+    },
+    {
+      "name": "btn_cancel",
+      "type": "node",
+      "x": 129,
+      "y": -257.05,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png",
+          "img_disable": "#ui_common_btn_2c.png",
+          "width": 144,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "取消",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.75,
+          "width": 103,
+          "height": 43.5
+        }
+      ]
+    },
+    {
+      "name": "btn_ok",
+      "type": "node",
+      "x": -113.95,
+      "y": -257.05,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png",
+          "img_disable": "#ui_common_btn_2c.png",
+          "width": 144,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "确定",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -57.5,
+          "y": 4.95,
+          "width": 115.45,
+          "height": 43.1
+        }
+      ]
+    },
+    {
+      "name": "txt_1",
+      "type": "label",
+      "text": "进度:",
+      "align": "center",
+      "size": 30,
+      "color": 2067864831,
+      "x": -175.95,
+      "y": -184.6,
+      "width": 104,
+      "height": 37.5
+    },
+    {
+      "name": "txt_2",
+      "type": "label",
+      "text": "-",
+      "align": "center",
+      "size": 30,
+      "color": 2067864831,
+      "x": 33.05,
+      "y": -184.6,
+      "width": 38,
+      "height": 37.5
+    },
+    {
+      "name": "txt_nowpercent",
+      "type": "label",
+      "text": "?%",
+      "align": "center",
+      "size": 30,
+      "color": 2067864831,
+      "x": -74.95,
+      "y": -184.6,
+      "width": 108,
+      "height": 37.5
+    },
+    {
+      "name": "txt_leftpercent",
+      "type": "label",
+      "text": "?%",
+      "align": "center",
+      "size": 30,
+      "color": 3422552319,
+      "x": 71.05,
+      "y": -184.6,
+      "width": 108,
+      "height": 37.5
+    },
+    {
+      "name": "txt_title",
+      "type": "label",
+      "text": "选择材料",
+      "align": "center",
+      "size": 25,
+      "color": 4294967295,
+      "x": -144.95,
+      "y": 283.88,
+      "width": 325.95,
+      "height": 31.95
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "x": -2.6,
+      "y": 56.15,
+      "width": 681,
+      "height": 394
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 339.1,
+      "y": 276,
+      "width": 80,
+      "height": 86
+    }
+  ]
+}

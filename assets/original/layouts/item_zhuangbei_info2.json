@@ -1,0 +1,52 @@
+{
+  "group": {},
+  "children": [
+    {
+      "name": "diban",
+      "type": "sprite",
+      "img": "#ui_common_d1.png",
+      "scale9": 1,
+      "x": -146,
+      "width": 292,
+      "height": 100,
+      "maxw": 292,
+      "maxh": 100
+    },
+    {
+      "name": "miaoshu",
+      "type": "label",
+      "text": "星级加成：",
+      "size": 21,
+      "align": "left",
+      "color": 4294902015,
+      "x": -137.15,
+      "y": 29.55,
+      "width": 273,
+      "height": 27.6
+    },
+    {
+      "name": "fujia_shuxing1",
+      "type": "label",
+      "text": "生命+16000",
+      "size": 21,
+      "align": "left",
+      "color": 4284875007,
+      "x": -137.15,
+      "y": -0.95,
+      "width": 271.95,
+      "height": 27.6
+    },
+    {
+      "name": "fujia_shuxing2",
+      "type": "label",
+      "text": "生命+16000",
+      "size": 21,
+      "align": "left",
+      "color": 4284875007,
+      "x": -137.15,
+      "y": -30.95,
+      "width": 271.95,
+      "height": 27.6
+    }
+  ]
+}

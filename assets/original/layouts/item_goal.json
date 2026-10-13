@@ -1,0 +1,305 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_goal_dix.png",
+      "scale9": 1,
+      "x": -420,
+      "width": 844,
+      "height": 169,
+      "maxw": 844,
+      "maxh": 169
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_goal_di2.png",
+      "scale9": 1,
+      "x": -355.25,
+      "y": 47.95,
+      "width": 719.95,
+      "height": 43,
+      "maxw": 719.95,
+      "maxh": 43
+    },
+    {
+      "name": "tx_neirong",
+      "type": "label",
+      "text": "撒旦卷卡式带卡就是电话卡就是打开就是大家稍等哈空间说的哈是的阿斯科利的教案设计的卢卡斯建档立卡手机的aksdjalskjdl",
+      "size": 22,
+      "align": "justify",
+      "color": 858993663,
+      "x": -276.15,
+      "y": -16.95,
+      "width": 490.15,
+      "height": 89
+    },
+    {
+      "name": "tx_mubiao",
+      "type": "label",
+      "text": "目标：购买第二个饲料农场(1/2)",
+      "size": 22,
+      "align": "justify",
+      "color": 858993663,
+      "x": -318.5,
+      "y": 49.78,
+      "width": 668,
+      "height": 28.75
+    },
+    {
+      "name": "btn_tubiao",
+      "type": "node",
+      "x": -326.15,
+      "y": -14.55,
+      "width": 90,
+      "height": 90,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_goal_quan.png",
+          "img_down": "#ui_goal_quan.png"
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "miaoshu",
+          "type": "node",
+          "y": -34,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "btn_qianwang",
+      "type": "node",
+      "x": 287.55,
+      "y": -22.5,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_goal_rbtn3.png",
+          "img_down": "#ui_goal_rbtn4.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "前往",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "name": "jiangli",
+      "type": "node",
+      "x": 3.85,
+      "y": -58.55,
+      "width": 385,
+      "height": 85,
+      "children": [
+        {
+          "name": "jiangli1",
+          "type": "node",
+          "x": -150,
+          "width": 85,
+          "height": 85,
+          "children": [
+            {
+              "name": "diban",
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "x": -42.5,
+              "y": 42.5,
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "quality",
+              "type": "node",
+              "x": -42.5,
+              "y": 42.5,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "x": -42.5,
+              "y": 42.5,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": "",
+              "size": 22,
+              "align": "right",
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -78.5,
+              "y": 21.58,
+              "width": 73,
+              "height": 28.75
+            }
+          ]
+        },
+        {
+          "name": "jiangli2",
+          "type": "node",
+          "x": -50,
+          "width": 85,
+          "height": 85,
+          "children": [
+            {
+              "name": "diban",
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "x": -42.5,
+              "y": 42.5,
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "quality",
+              "type": "node",
+              "x": -42.5,
+              "y": 42.5,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "x": -42.5,
+              "y": 42.5,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": "",
+              "size": 22,
+              "align": "right",
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -78.5,
+              "y": 21.58,
+              "width": 73,
+              "height": 28.75
+            }
+          ]
+        },
+        {
+          "name": "jiangli3",
+          "type": "node",
+          "x": 50,
+          "width": 85,
+          "height": 85,
+          "children": [
+            {
+              "name": "diban",
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "x": -42.5,
+              "y": 42.5,
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "quality",
+              "type": "node",
+              "x": -42.5,
+              "y": 42.5,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "x": -42.5,
+              "y": 42.5,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": "",
+              "size": 22,
+              "align": "right",
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -78.5,
+              "y": 21.58,
+              "width": 73,
+              "height": 28.75
+            }
+          ]
+        },
+        {
+          "name": "jiangli4",
+          "type": "node",
+          "x": 150,
+          "width": 85,
+          "height": 85,
+          "children": [
+            {
+              "name": "diban",
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "x": -42.5,
+              "y": 42.5,
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "quality",
+              "type": "node",
+              "x": -42.5,
+              "y": 42.5,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "x": -42.5,
+              "y": 42.5,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": "",
+              "size": 22,
+              "align": "right",
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -78.5,
+              "y": 21.58,
+              "width": 73,
+              "height": 28.75
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

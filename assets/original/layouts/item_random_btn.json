@@ -1,0 +1,42 @@
+{
+  "group": [
+    "ui_randombtn"
+  ],
+  "width": 193,
+  "height": 109,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#ui_randombtn_btn_bg.png",
+      "width": 193,
+      "height": 109
+    },
+    {
+      "name": "icon",
+      "type": "node",
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "time",
+      "type": "label",
+      "text": "00:00:00",
+      "align": "center",
+      "size": 26,
+      "color": 4294967295,
+      "x": -24.6,
+      "y": -26.18,
+      "width": 111,
+      "height": 33.25
+    },
+    {
+      "name": "hint",
+      "type": "sprite",
+      "img": "#ui_randombtn_btn_hint.png",
+      "y": 2,
+      "width": 182,
+      "height": 97
+    }
+  ]
+}

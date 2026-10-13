@@ -1,0 +1,673 @@
+{
+  "group": {},
+  "children": [
+    {
+      "name": "diban_you",
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -185,
+      "y": -0.03,
+      "width": 370,
+      "height": 591.95,
+      "maxw": 370,
+      "maxh": 591.95
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_d1.png",
+      "scale9": 1,
+      "x": -151.25,
+      "y": -180,
+      "width": 154,
+      "height": 30,
+      "maxw": 154,
+      "maxh": 30
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_d1.png",
+      "scale9": 1,
+      "x": 5.75,
+      "y": -180,
+      "width": 154,
+      "height": 30,
+      "maxw": 154,
+      "maxh": 30
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_d1.png",
+      "scale9": 1,
+      "x": -151.25,
+      "y": -252,
+      "width": 154,
+      "height": 30,
+      "maxw": 154,
+      "maxh": 30
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_d1.png",
+      "scale9": 1,
+      "x": 5.75,
+      "y": -252,
+      "width": 154,
+      "height": 30,
+      "maxw": 154,
+      "maxh": 30
+    },
+    {
+      "name": "tx_zhandouli",
+      "type": "node",
+      "x": -44.38,
+      "y": -143.63,
+      "width": 213.75,
+      "height": 28.75,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "",
+          "size": 22,
+          "align": "justify",
+          "color": 1411781375,
+          "x": -106.88,
+          "width": 97,
+          "height": 28.75
+        },
+        {
+          "name": "shuzi",
+          "type": "label",
+          "text": "",
+          "size": 22,
+          "align": "justify",
+          "color": 2566914303,
+          "x": -10.13,
+          "width": 117,
+          "height": 28.75
+        }
+      ]
+    },
+    {
+      "name": "tx_shengming",
+      "type": "node",
+      "x": -66.92,
+      "y": -179.25,
+      "width": 154.65,
+      "height": 26.5,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "",
+          "size": 20,
+          "align": "left",
+          "color": 1411781375,
+          "x": -85.33,
+          "width": 73.5,
+          "height": 26.5
+        },
+        {
+          "name": "shuzi",
+          "type": "label",
+          "text": "",
+          "size": 20,
+          "align": "left",
+          "color": 1411781375,
+          "x": -11.67,
+          "width": 81,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "tx_gongji",
+      "type": "node",
+      "x": 91.08,
+      "y": -179.25,
+      "width": 154.65,
+      "height": 26.5,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "",
+          "size": 20,
+          "align": "left",
+          "color": 1411781375,
+          "x": -85.33,
+          "width": 73.5,
+          "height": 26.5
+        },
+        {
+          "name": "shuzi",
+          "type": "label",
+          "text": "",
+          "size": 20,
+          "align": "left",
+          "color": 1411781375,
+          "x": -11.67,
+          "width": 81,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "tx_fangyu",
+      "type": "node",
+      "x": -66.92,
+      "y": -215.25,
+      "width": 154.65,
+      "height": 26.5,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "",
+          "size": 20,
+          "align": "left",
+          "color": 1411781375,
+          "x": -85.33,
+          "width": 73.5,
+          "height": 26.5
+        },
+        {
+          "name": "shuzi",
+          "type": "label",
+          "text": "",
+          "size": 20,
+          "align": "left",
+          "color": 1411781375,
+          "x": -11.67,
+          "width": 81,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "tx_baoji",
+      "type": "node",
+      "x": -66.92,
+      "y": -251.25,
+      "width": 154.65,
+      "height": 26.5,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "",
+          "size": 20,
+          "align": "left",
+          "color": 1411781375,
+          "x": -85.33,
+          "width": 73.5,
+          "height": 26.5
+        },
+        {
+          "name": "shuzi",
+          "type": "label",
+          "text": "",
+          "size": 20,
+          "align": "left",
+          "color": 1411781375,
+          "x": -11.67,
+          "width": 81,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "tx_fangbao",
+      "type": "node",
+      "x": 91.08,
+      "y": -251.25,
+      "width": 154.65,
+      "height": 26.5,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "",
+          "size": 20,
+          "align": "left",
+          "color": 1411781375,
+          "x": -85.33,
+          "width": 73.5,
+          "height": 26.5
+        },
+        {
+          "name": "shuzi",
+          "type": "label",
+          "text": "",
+          "size": 20,
+          "align": "left",
+          "color": 1411781375,
+          "x": -11.67,
+          "width": 81,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_starup_llbg.png",
+      "x": -0.25,
+      "y": 84.65,
+      "width": 309,
+      "height": 388
+    },
+    {
+      "name": "tx_name",
+      "type": "label",
+      "text": "",
+      "size": 26,
+      "align": "center",
+      "color": 1411781375,
+      "x": -90.35,
+      "y": 249.73,
+      "width": 178.1,
+      "height": 33.25
+    },
+    {
+      "name": "dragon",
+      "type": "node",
+      "x": 1.5,
+      "y": -10.15,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_starup_line1.png",
+      "x": -1.15,
+      "y": -119.15,
+      "width": 300,
+      "height": 4
+    },
+    {
+      "name": "biaoji_long",
+      "type": "node",
+      "x": 107,
+      "y": -145.05,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "linjia",
+      "type": "node",
+      "x": 107.5,
+      "y": -63.55,
+      "width": 105,
+      "height": 105,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_starup_zb0.png",
+          "width": 105,
+          "height": 105
+        },
+        {
+          "name": "tubiao",
+          "type": "sprite",
+          "img": "#ui_starup_zb2.png",
+          "width": 105,
+          "height": 105
+        },
+        {
+          "name": "xiangkuang",
+          "type": "node",
+          "x": 0.5,
+          "y": -1.5,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "x": 0.5,
+          "y": -1.5,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "tx_lv",
+          "type": "label",
+          "text": " ",
+          "size": 20,
+          "align": "left",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -38.5,
+          "y": 24.8,
+          "width": 77,
+          "height": 26.5
+        },
+        {
+          "name": "con_star",
+          "type": "node",
+          "x": -33,
+          "y": -30,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "zhua",
+      "type": "node",
+      "x": -110.5,
+      "y": -63.7,
+      "width": 105,
+      "height": 105,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_starup_zb0.png",
+          "width": 105,
+          "height": 105
+        },
+        {
+          "name": "tubiao",
+          "type": "sprite",
+          "img": "#ui_starup_zb1.png",
+          "width": 105,
+          "height": 105
+        },
+        {
+          "name": "xiangkuang",
+          "type": "node",
+          "x": 0.5,
+          "y": -1.5,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "x": 0.5,
+          "y": -1.5,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "tx_lv",
+          "type": "label",
+          "text": " ",
+          "size": 20,
+          "align": "left",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -38.5,
+          "y": 24.8,
+          "width": 77,
+          "height": 26.5
+        },
+        {
+          "name": "con_star",
+          "type": "node",
+          "x": -33,
+          "y": -30,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "jiao",
+      "type": "node",
+      "x": 108.5,
+      "y": 177.45,
+      "width": 105,
+      "height": 105,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_starup_zb0.png",
+          "width": 105,
+          "height": 105
+        },
+        {
+          "name": "tubiao",
+          "type": "sprite",
+          "img": "#ui_starup_zb3.png",
+          "width": 105,
+          "height": 105
+        },
+        {
+          "name": "xiangkuang",
+          "type": "node",
+          "x": 0.5,
+          "y": -1.5,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "x": 0.5,
+          "y": -1.5,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "tx_lv",
+          "type": "label",
+          "text": " ",
+          "size": 20,
+          "align": "left",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -38.5,
+          "y": 24.8,
+          "width": 77,
+          "height": 26.5
+        },
+        {
+          "name": "con_star",
+          "type": "node",
+          "x": -33,
+          "y": -30,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "gu",
+      "type": "node",
+      "x": -110.5,
+      "y": 174.45,
+      "width": 105,
+      "height": 105,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_starup_zb0.png",
+          "width": 105,
+          "height": 105
+        },
+        {
+          "name": "tubiao",
+          "type": "sprite",
+          "img": "#ui_starup_zb4.png",
+          "width": 105,
+          "height": 105
+        },
+        {
+          "name": "xiangkuang",
+          "type": "node",
+          "x": 0.5,
+          "y": -1.5,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "x": 0.5,
+          "y": -1.5,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "tx_lv",
+          "type": "label",
+          "text": " ",
+          "size": 20,
+          "align": "left",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -38.5,
+          "y": 24.8,
+          "width": 77,
+          "height": 26.5
+        },
+        {
+          "name": "con_star",
+          "type": "node",
+          "x": -33,
+          "y": -30,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "img_type1",
+      "type": "node",
+      "x": 39.5,
+      "y": 199.55,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "img_type2",
+      "type": "node",
+      "x": -0.5,
+      "y": 199.55,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "img_type3",
+      "type": "node",
+      "x": -40.5,
+      "y": 199.55,
+      "width": 0,
+      "height": 0
+    }
+  ]
+}

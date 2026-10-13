@@ -1,0 +1,49 @@
+{
+  "group": {},
+  "children": [
+    {
+      "name": "diban",
+      "type": "sprite",
+      "img": "#ui_common_tip1.png",
+      "scale9": 1,
+      "x": -188.5,
+      "width": 377,
+      "height": 161.5,
+      "maxw": 377,
+      "maxh": 161.5
+    },
+    {
+      "name": "jiantou_you",
+      "type": "sprite",
+      "img": "#ui_common_tip3.png",
+      "x": 1.75,
+      "y": -90.25,
+      "width": 27,
+      "height": 27
+    },
+    {
+      "name": "txt_neirong",
+      "type": "label",
+      "text": "",
+      "size": 23,
+      "align": "center",
+      "color": 255,
+      "x": -173.75,
+      "y": -23.53,
+      "width": 347.6,
+      "height": 91.95
+    },
+    {
+      "name": "txt_biaoti",
+      "type": "label",
+      "text": "",
+      "size": 25,
+      "align": "center",
+      "color": 255,
+      "x": -127.45,
+      "y": 50.08,
+      "width": 255.45,
+      "height": 32.15
+    }
+  ]
+}

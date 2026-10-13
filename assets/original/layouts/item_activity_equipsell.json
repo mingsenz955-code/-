@@ -1,0 +1,423 @@
+{
+  "group": [
+    "ui_qianghuatehui"
+  ],
+  "width": 1024,
+  "height": 611,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "grid": {
+        "x": 108,
+        "y": 111,
+        "width": 46,
+        "height": 27
+      },
+      "x": -512,
+      "y": -46,
+      "width": 1023,
+      "height": 580,
+      "maxw": 1023,
+      "maxh": 580
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "grid": {
+        "x": 25,
+        "y": 20,
+        "width": 10,
+        "height": 10
+      },
+      "x": -513,
+      "y": 231,
+      "width": 1023,
+      "height": 55,
+      "maxw": 1023,
+      "maxh": 55
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_qianghuatehui_bg.png",
+      "x": 3,
+      "y": -60,
+      "width": 950,
+      "height": 484
+    },
+    {
+      "name": "txt_rule",
+      "type": "label",
+      "text": "",
+      "align": "center",
+      "size": 14,
+      "color": 255,
+      "x": -192,
+      "y": -310,
+      "width": 392,
+      "height": 20
+    },
+    {
+      "name": "item1",
+      "type": "node",
+      "x": -309,
+      "y": -70,
+      "width": 301,
+      "height": 444,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_qianghuatehui_diban.png",
+          "y": 9,
+          "width": 301,
+          "height": 425
+        },
+        {
+          "name": "node_sellicon",
+          "type": "node",
+          "x": 3,
+          "y": 15,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "node_title_container",
+          "type": "node",
+          "x": 3,
+          "y": 183,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "btn_buy",
+          "type": "btn",
+          "img_normal": "#ui_qianghuatehui_btn7.png",
+          "img_down": "#ui_qianghuatehui_btn8.png",
+          "img_disable": "#ui_qianghuatehui_btn9.png",
+          "x": -3,
+          "y": -190,
+          "width": 193,
+          "height": 67
+        },
+        {
+          "name": "txt_btninfo",
+          "type": "label",
+          "text": "",
+          "align": "center",
+          "size": 30,
+          "color": 4294967295,
+          "x": -81,
+          "y": -185,
+          "width": 154,
+          "height": 38
+        },
+        {
+          "name": "txt_getnum",
+          "type": "label",
+          "text": "0个",
+          "align": "center",
+          "size": 23,
+          "color": 4294967295,
+          "x": -109,
+          "y": -78,
+          "width": 217,
+          "height": 30
+        },
+        {
+          "name": "txt_price",
+          "type": "label",
+          "text": "",
+          "align": "center",
+          "size": 23,
+          "color": 4294967295,
+          "x": -10,
+          "y": -117,
+          "width": 90,
+          "height": 30
+        },
+        {
+          "name": "txt_discount",
+          "type": "label",
+          "text": "当前折扣:?折",
+          "align": "center",
+          "size": 25,
+          "color": 4294967295,
+          "x": -120,
+          "y": 126,
+          "width": 241,
+          "height": 38
+        },
+        {
+          "type": "label",
+          "text": "抢购价",
+          "align": "left",
+          "size": 23,
+          "color": 4294967295,
+          "x": -85,
+          "y": -117,
+          "width": 132,
+          "height": 30
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_qianghuatehui_mojing.png",
+          "x": 97,
+          "y": -116,
+          "width": 31,
+          "height": 42
+        }
+      ]
+    },
+    {
+      "name": "item2",
+      "type": "node",
+      "x": 3,
+      "y": -70,
+      "width": 301,
+      "height": 444,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_qianghuatehui_diban.png",
+          "y": 9,
+          "width": 301,
+          "height": 425
+        },
+        {
+          "name": "node_sellicon",
+          "type": "node",
+          "x": 3,
+          "y": 15,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "node_title_container",
+          "type": "node",
+          "x": 3,
+          "y": 183,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "btn_buy",
+          "type": "btn",
+          "img_normal": "#ui_qianghuatehui_btn7.png",
+          "img_down": "#ui_qianghuatehui_btn8.png",
+          "img_disable": "#ui_qianghuatehui_btn9.png",
+          "x": -3,
+          "y": -190,
+          "width": 193,
+          "height": 67
+        },
+        {
+          "name": "txt_btninfo",
+          "type": "label",
+          "text": "",
+          "align": "center",
+          "size": 30,
+          "color": 4294967295,
+          "x": -81,
+          "y": -185,
+          "width": 154,
+          "height": 38
+        },
+        {
+          "name": "txt_getnum",
+          "type": "label",
+          "text": "0个",
+          "align": "center",
+          "size": 23,
+          "color": 4294967295,
+          "x": -109,
+          "y": -78,
+          "width": 217,
+          "height": 30
+        },
+        {
+          "name": "txt_price",
+          "type": "label",
+          "text": "",
+          "align": "center",
+          "size": 23,
+          "color": 4294967295,
+          "x": -10,
+          "y": -117,
+          "width": 90,
+          "height": 30
+        },
+        {
+          "name": "txt_discount",
+          "type": "label",
+          "text": "当前折扣:?折",
+          "align": "center",
+          "size": 25,
+          "color": 4294967295,
+          "x": -120,
+          "y": 126,
+          "width": 241,
+          "height": 38
+        },
+        {
+          "type": "label",
+          "text": "抢购价",
+          "align": "left",
+          "size": 23,
+          "color": 4294967295,
+          "x": -85,
+          "y": -117,
+          "width": 132,
+          "height": 30
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_qianghuatehui_mojing.png",
+          "x": 97,
+          "y": -116,
+          "width": 31,
+          "height": 42
+        }
+      ]
+    },
+    {
+      "name": "item3",
+      "type": "node",
+      "x": 315,
+      "y": -70,
+      "width": 301,
+      "height": 444,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_qianghuatehui_diban.png",
+          "y": 9,
+          "width": 301,
+          "height": 425
+        },
+        {
+          "name": "node_sellicon",
+          "type": "node",
+          "x": 3,
+          "y": 15,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "node_title_container",
+          "type": "node",
+          "x": 3,
+          "y": 183,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "btn_buy",
+          "type": "btn",
+          "img_normal": "#ui_qianghuatehui_btn7.png",
+          "img_down": "#ui_qianghuatehui_btn8.png",
+          "img_disable": "#ui_qianghuatehui_btn9.png",
+          "x": -3,
+          "y": -190,
+          "width": 193,
+          "height": 67
+        },
+        {
+          "name": "txt_btninfo",
+          "type": "label",
+          "text": "",
+          "align": "center",
+          "size": 30,
+          "color": 4294967295,
+          "x": -81,
+          "y": -185,
+          "width": 154,
+          "height": 38
+        },
+        {
+          "name": "txt_getnum",
+          "type": "label",
+          "text": "0个",
+          "align": "center",
+          "size": 23,
+          "color": 4294967295,
+          "x": -109,
+          "y": -78,
+          "width": 217,
+          "height": 30
+        },
+        {
+          "name": "txt_price",
+          "type": "label",
+          "text": "",
+          "align": "center",
+          "size": 23,
+          "color": 4294967295,
+          "x": -10,
+          "y": -117,
+          "width": 90,
+          "height": 30
+        },
+        {
+          "name": "txt_discount",
+          "type": "label",
+          "text": "当前折扣:?折",
+          "align": "center",
+          "size": 25,
+          "color": 4294967295,
+          "x": -120,
+          "y": 126,
+          "width": 241,
+          "height": 38
+        },
+        {
+          "type": "label",
+          "text": "抢购价",
+          "align": "left",
+          "size": 23,
+          "color": 4294967295,
+          "x": -85,
+          "y": -117,
+          "width": 132,
+          "height": 30
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_qianghuatehui_mojing.png",
+          "x": 97,
+          "y": -116,
+          "width": 31,
+          "height": 42
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_qianghuatehui_heitiao.png",
+      "y": 185,
+      "width": 422,
+      "height": 41
+    },
+    {
+      "name": "txt_startendtime",
+      "type": "label",
+      "text": "每种道具每日可购买5次，次日零点购买机会重置",
+      "align": "center",
+      "size": 18,
+      "color": 4294967295,
+      "x": -196,
+      "y": 183,
+      "width": 392,
+      "height": 30
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_qianghuatehui_title.png",
+      "x": 23,
+      "y": 245,
+      "width": 302,
+      "height": 60
+    }
+  ]
+}

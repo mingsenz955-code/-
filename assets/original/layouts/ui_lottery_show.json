@@ -1,0 +1,91 @@
+{
+  "group": [
+    "ui_lotteryshow"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "name": "bg",
+      "type": "btn",
+      "img_normal": "#ui_lotteryshow_newdragon.png",
+      "img_down": "#ui_lotteryshow_newdragon.png",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "name": "dragon_name",
+      "type": "node",
+      "x": -1.5,
+      "y": -123.95,
+      "width": 247,
+      "height": 71,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_lotteryshow_xiaotiao1.png",
+          "width": 247,
+          "height": 71
+        },
+        {
+          "name": "txt2",
+          "type": "label",
+          "text": "",
+          "align": "center",
+          "size": 22,
+          "color": 4294967295,
+          "x": -84.5,
+          "y": 7.48,
+          "width": 162.9,
+          "height": 28.75
+        },
+        {
+          "name": "txt",
+          "type": "label",
+          "text": "",
+          "align": "center",
+          "size": 22,
+          "color": 1211308287,
+          "x": -84.5,
+          "y": 9.48,
+          "width": 162.9,
+          "height": 28.75
+        }
+      ]
+    },
+    {
+      "name": "bling",
+      "type": "sprite",
+      "img": "#ui_lotteryshow_light.png",
+      "x": -4.5,
+      "y": 3,
+      "width": 235,
+      "height": 224
+    },
+    {
+      "name": "dragon",
+      "type": "node",
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "txt_hint",
+      "type": "label",
+      "text": "点击屏幕任意处返回",
+      "align": "center",
+      "size": 25,
+      "color": 22053887,
+      "x": -450.5,
+      "y": -180.65,
+      "width": 901,
+      "height": 32.1
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_lotteryshow_title.png",
+      "y": 189,
+      "width": 438,
+      "height": 58
+    }
+  ]
+}

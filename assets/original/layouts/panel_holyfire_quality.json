@@ -1,0 +1,405 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -123.4,
+      "y": -7.6,
+      "width": 246,
+      "height": 458,
+      "maxw": 246,
+      "maxh": 458
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -125,
+      "y": 209.1,
+      "width": 250,
+      "height": 55,
+      "maxw": 250,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "加成属性",
+      "size": 25,
+      "align": "center",
+      "color": 4294967295,
+      "x": -106.5,
+      "y": 211.65,
+      "width": 220,
+      "height": 32.1
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_d1.png",
+      "scale9": 1,
+      "x": -90.1,
+      "y": 166.6,
+      "width": 179,
+      "height": 30,
+      "maxw": 179,
+      "maxh": 30
+    },
+    {
+      "name": "tx_zhushuxing",
+      "type": "label",
+      "text": "主属性加成",
+      "size": 21,
+      "align": "left",
+      "color": 1411781375,
+      "x": -87.1,
+      "y": 165.32,
+      "width": 171,
+      "height": 29.85
+    },
+    {
+      "name": "zhushuxing1",
+      "type": "node",
+      "x": 0.18,
+      "y": 132.72,
+      "width": 174.55,
+      "height": 29.85,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "生命：",
+          "size": 21,
+          "align": "justify",
+          "color": 1411781375,
+          "x": -87.28,
+          "width": 81.95,
+          "height": 29.85
+        },
+        {
+          "name": "shuzi",
+          "type": "label",
+          "text": "+99999",
+          "size": 21,
+          "align": "justify",
+          "color": 6684927,
+          "x": -4.73,
+          "width": 92,
+          "height": 29.85
+        }
+      ]
+    },
+    {
+      "name": "zhushuxing2",
+      "type": "node",
+      "x": 0.18,
+      "y": 102.73,
+      "width": 174.55,
+      "height": 29.85,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "生命：",
+          "size": 21,
+          "align": "justify",
+          "color": 1411781375,
+          "x": -87.28,
+          "width": 81.95,
+          "height": 29.85
+        },
+        {
+          "name": "shuzi",
+          "type": "label",
+          "text": "+99999",
+          "size": 21,
+          "align": "justify",
+          "color": 6684927,
+          "x": -4.73,
+          "width": 92,
+          "height": 29.85
+        }
+      ]
+    },
+    {
+      "name": "zhushuxing3",
+      "type": "node",
+      "x": 0.18,
+      "y": 72.73,
+      "width": 174.55,
+      "height": 29.85,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "生命：",
+          "size": 21,
+          "align": "justify",
+          "color": 1411781375,
+          "x": -87.28,
+          "width": 81.95,
+          "height": 29.85
+        },
+        {
+          "name": "shuzi",
+          "type": "label",
+          "text": "+99999",
+          "size": 21,
+          "align": "justify",
+          "color": 6684927,
+          "x": -4.73,
+          "width": 92,
+          "height": 29.85
+        }
+      ]
+    },
+    {
+      "name": "zhushuxing4",
+      "type": "node",
+      "x": 0.18,
+      "y": 42.72,
+      "width": 174.55,
+      "height": 29.85,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "生命：",
+          "size": 21,
+          "align": "justify",
+          "color": 1411781375,
+          "x": -87.28,
+          "width": 81.95,
+          "height": 29.85
+        },
+        {
+          "name": "shuzi",
+          "type": "label",
+          "text": "+99999",
+          "size": 21,
+          "align": "justify",
+          "color": 6684927,
+          "x": -4.73,
+          "width": 92,
+          "height": 29.85
+        }
+      ]
+    },
+    {
+      "name": "zhushuxing5",
+      "type": "node",
+      "x": 0.18,
+      "y": 12.72,
+      "width": 174.55,
+      "height": 29.85,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "生命：",
+          "size": 21,
+          "align": "justify",
+          "color": 1411781375,
+          "x": -87.28,
+          "width": 81.95,
+          "height": 29.85
+        },
+        {
+          "name": "shuzi",
+          "type": "label",
+          "text": "+99999",
+          "size": 21,
+          "align": "justify",
+          "color": 6684927,
+          "x": -4.73,
+          "width": 92,
+          "height": 29.85
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_d1.png",
+      "scale9": 1,
+      "x": -90.1,
+      "y": -28.4,
+      "width": 179,
+      "height": 30,
+      "maxw": 179,
+      "maxh": 30
+    },
+    {
+      "name": "tx_fushuxing",
+      "type": "label",
+      "text": "副属性加成",
+      "size": 21,
+      "align": "left",
+      "color": 1411781375,
+      "x": -87.1,
+      "y": -29.68,
+      "width": 171,
+      "height": 29.85
+    },
+    {
+      "name": "fushuxing1",
+      "type": "node",
+      "x": 0.18,
+      "y": -62.28,
+      "width": 174.55,
+      "height": 29.85,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "生命：",
+          "size": 21,
+          "align": "justify",
+          "color": 1411781375,
+          "x": -87.28,
+          "width": 81.95,
+          "height": 29.85
+        },
+        {
+          "name": "shuzi",
+          "type": "label",
+          "text": "+99999",
+          "size": 21,
+          "align": "justify",
+          "color": 6684927,
+          "x": -4.73,
+          "width": 92,
+          "height": 29.85
+        }
+      ]
+    },
+    {
+      "name": "fushuxing2",
+      "type": "node",
+      "x": 0.18,
+      "y": -92.27,
+      "width": 174.55,
+      "height": 29.85,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "生命：",
+          "size": 21,
+          "align": "justify",
+          "color": 1411781375,
+          "x": -87.28,
+          "width": 81.95,
+          "height": 29.85
+        },
+        {
+          "name": "shuzi",
+          "type": "label",
+          "text": "+99999",
+          "size": 21,
+          "align": "justify",
+          "color": 6684927,
+          "x": -4.73,
+          "width": 92,
+          "height": 29.85
+        }
+      ]
+    },
+    {
+      "name": "fushuxing3",
+      "type": "node",
+      "x": 0.18,
+      "y": -122.27,
+      "width": 174.55,
+      "height": 29.85,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "生命：",
+          "size": 21,
+          "align": "justify",
+          "color": 1411781375,
+          "x": -87.28,
+          "width": 81.95,
+          "height": 29.85
+        },
+        {
+          "name": "shuzi",
+          "type": "label",
+          "text": "+99999",
+          "size": 21,
+          "align": "justify",
+          "color": 6684927,
+          "x": -4.73,
+          "width": 92,
+          "height": 29.85
+        }
+      ]
+    },
+    {
+      "name": "fushuxing4",
+      "type": "node",
+      "x": 0.18,
+      "y": -152.28,
+      "width": 174.55,
+      "height": 29.85,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "生命：",
+          "size": 21,
+          "align": "justify",
+          "color": 1411781375,
+          "x": -87.28,
+          "width": 81.95,
+          "height": 29.85
+        },
+        {
+          "name": "shuzi",
+          "type": "label",
+          "text": "+99999",
+          "size": 21,
+          "align": "justify",
+          "color": 6684927,
+          "x": -4.73,
+          "width": 92,
+          "height": 29.85
+        }
+      ]
+    },
+    {
+      "name": "fushuxing5",
+      "type": "node",
+      "x": 0.18,
+      "y": -182.28,
+      "width": 174.55,
+      "height": 29.85,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "生命：",
+          "size": 21,
+          "align": "justify",
+          "color": 1411781375,
+          "x": -87.28,
+          "width": 81.95,
+          "height": 29.85
+        },
+        {
+          "name": "shuzi",
+          "type": "label",
+          "text": "+99999",
+          "size": 21,
+          "align": "justify",
+          "color": 6684927,
+          "x": -4.73,
+          "width": 92,
+          "height": 29.85
+        }
+      ]
+    }
+  ]
+}

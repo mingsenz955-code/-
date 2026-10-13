@@ -1,0 +1,26 @@
+{
+  "group": [
+    "ui_mail"
+  ],
+  "width": 528,
+  "height": 106,
+  "children": [
+    {
+      "name": "node_bg",
+      "type": "sprite",
+      "img": "#ui_mail_fujiankk.png",
+      "scale9": 1,
+      "grid": {
+        "x": 25,
+        "y": 25,
+        "width": 50,
+        "height": 50
+      },
+      "x": -264,
+      "width": 528,
+      "height": 106,
+      "maxw": 528,
+      "maxh": 106
+    }
+  ]
+}

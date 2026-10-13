@@ -1,0 +1,225 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "alpha": 0
+    },
+    {
+      "name": "basenode",
+      "type": "node"
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "width": 480,
+      "height": 350,
+      "x": -240
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "width": 480,
+      "height": 55,
+      "x": -240,
+      "y": 170
+    },
+    {
+      "type": "label",
+      "text": "龙魂合成",
+      "size": 26,
+      "align": "center",
+      "width": 150,
+      "height": 48,
+      "x": -75,
+      "y": 170,
+      "color": 4294967295
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 214,
+      "y": 172
+    },
+    {
+      "type": "label",
+      "text": "消耗：",
+      "size": 24,
+      "align": "center",
+      "width": 150,
+      "height": 48,
+      "x": -245,
+      "y": 120,
+      "color": 2336560127
+    },
+    {
+      "type": "label",
+      "text": "花费：",
+      "size": 24,
+      "align": "center",
+      "width": 150,
+      "height": 48,
+      "x": -245,
+      "y": -5,
+      "color": 2336560127
+    },
+    {
+      "type": "label",
+      "text": "获得：",
+      "size": 24,
+      "align": "center",
+      "width": 150,
+      "height": 48,
+      "x": -30,
+      "y": -5,
+      "color": 2336560127
+    },
+    {
+      "type": "node",
+      "x": -85,
+      "y": -65,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_shuzikuangcp.png",
+          "width": 170,
+          "height": 46
+        },
+        {
+          "name": "icon_c",
+          "type": "sprite",
+          "img": "#resource_icon_80_c.png",
+          "width": 80,
+          "height": 80,
+          "x": -55,
+          "y": 10
+        },
+        {
+          "name": "icon_g",
+          "type": "sprite",
+          "img": "#resource_icon_80_g.png",
+          "width": 80,
+          "height": 80,
+          "x": -55,
+          "y": 10
+        },
+        {
+          "name": "res_string",
+          "type": "label",
+          "text": "0",
+          "size": 24,
+          "align": "right",
+          "color": 4294967295,
+          "outlineColor": 4278190080,
+          "width": 300,
+          "height": 48,
+          "x": -251,
+          "y": -4
+        }
+      ]
+    },
+    {
+      "type": "node",
+      "x": 0,
+      "y": 62,
+      "children": [
+        {
+          "name": "slot_1",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": -110,
+          "y": 0,
+          "width": 80,
+          "height": 80
+        },
+        {
+          "name": "slot_2",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": 0,
+          "y": 0,
+          "width": 80,
+          "height": 80
+        },
+        {
+          "name": "slot_3",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": 110,
+          "y": 0,
+          "width": 80,
+          "height": 80
+        }
+      ]
+    },
+    {
+      "name": "slot_r",
+      "type": "sprite",
+      "img": "#ui_common_DaoJuKuang1.png",
+      "x": 120,
+      "y": -65,
+      "width": 80,
+      "height": 80
+    },
+    {
+      "type": "node",
+      "x": -120,
+      "y": -155,
+      "children": [
+        {
+          "name": "merge",
+          "type": "maskBtn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png",
+          "img_disable": "#ui_common_btn_2c.png",
+          "width": 160,
+          "height": 85
+        },
+        {
+          "type": "label",
+          "text": "合成1次",
+          "size": 28,
+          "align": "center",
+          "width": 150,
+          "height": 48,
+          "x": -75,
+          "y": 3,
+          "color": 4294967295
+        }
+      ]
+    },
+    {
+      "type": "node",
+      "x": 120,
+      "y": -155,
+      "children": [
+        {
+          "name": "merge_10",
+          "type": "maskBtn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png",
+          "img_disable": "#ui_common_btn_2c.png",
+          "width": 160,
+          "height": 85
+        },
+        {
+          "type": "label",
+          "text": "合成10次",
+          "size": 28,
+          "align": "center",
+          "width": 150,
+          "height": 48,
+          "x": -75,
+          "y": 3,
+          "color": 4294967295
+        }
+      ]
+    }
+  ]
+}

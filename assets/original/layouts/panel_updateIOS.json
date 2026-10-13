@@ -1,0 +1,125 @@
+{
+  "group": [
+    "ui_updategameIOS",
+    "ui_FramesNormal",
+    "ui_ButtonNormal"
+  ],
+  "width": 800,
+  "height": 481,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768,
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_updategameIOS_2.png",
+      "x": -1,
+      "y": 10,
+      "width": 797,
+      "height": 481
+    },
+    {
+      "name": "bar",
+      "type": "node",
+      "x": 4,
+      "y": -149,
+      "width": 500,
+      "height": 27,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_updategameIOS_diban.png",
+          "width": 500,
+          "height": 27
+        },
+        {
+          "name": "prog",
+          "type": "sprite",
+          "img": "#ui_updategameIOS_tianchong.png",
+          "y": 1,
+          "width": 500,
+          "height": 25
+        }
+      ]
+    },
+    {
+      "name": "node_btn_later",
+      "type": "node",
+      "x": -103,
+      "y": -152,
+      "width": 162,
+      "height": 56,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_updategameIOS_btn1.png",
+          "img_down": "#ui_updategameIOS_btn2.png",
+          "img_disable": "#ui_updategameIOS_btn3.png",
+          "width": 162,
+          "height": 56
+        },
+        {
+          "name": "txt_on",
+          "type": "label",
+          "text": "稍后下载",
+          "align": "center",
+          "size": 30,
+          "color": 4294967295,
+          "outlineColor": 11882262,
+          "x": -63,
+          "y": 3,
+          "width": 128,
+          "height": 38
+        }
+      ]
+    },
+    {
+      "name": "node_btn_now",
+      "type": "node",
+      "x": 119,
+      "y": -152,
+      "width": 162,
+      "height": 56,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_updategameIOS_btn1.png",
+          "img_down": "#ui_updategameIOS_btn2.png",
+          "img_disable": "#ui_updategameIOS_btn3.png",
+          "width": 162,
+          "height": 56
+        },
+        {
+          "name": "txt_on",
+          "type": "label",
+          "text": "立即下载",
+          "align": "center",
+          "size": 30,
+          "color": 4294967295,
+          "outlineColor": 11882262,
+          "x": -63,
+          "y": 3,
+          "width": 128,
+          "height": 38
+        }
+      ]
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 360,
+      "y": 189,
+      "width": 80,
+      "height": 86
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "group": [
+    "buildings/0002_boost_plant_g"
+  ],
+  "width": 272,
+  "height": 224,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0002_boost_plant_g_bg.png",
+      "x": 24,
+      "y": 123.5
+    },
+    {
+      "name": "eff",
+      "type": "eff",
+      "eff": "0002_boost_plant_eff",
+      "width": 90,
+      "height": 112
+    }
+  ]
+}

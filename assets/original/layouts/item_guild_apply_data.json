@@ -1,0 +1,189 @@
+{
+  "group": [
+    "ui_guild"
+  ],
+  "width": 740,
+  "height": 94,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_haoyoulan2.png",
+      "scale9": 1,
+      "x": -370,
+      "width": 740,
+      "height": 94,
+      "maxw": 740,
+      "maxh": 94
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_sekuai1.png",
+      "scale9": 1,
+      "x": -269.9,
+      "y": -0.4,
+      "width": 184,
+      "height": 86,
+      "maxw": 184,
+      "maxh": 86
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_sekuai1.png",
+      "scale9": 1,
+      "x": 133.1,
+      "y": -0.4,
+      "width": 230,
+      "height": 86,
+      "maxw": 230,
+      "maxh": 86
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_guild_touxiang1.png",
+      "x": -318,
+      "y": 0.05,
+      "width": 62,
+      "height": 62
+    },
+    {
+      "name": "touxiang_moren",
+      "type": "sprite",
+      "img": "#ui_guild_meiren.png",
+      "x": -318,
+      "y": 1.05,
+      "width": 50,
+      "height": 50
+    },
+    {
+      "name": "touxiang_icon",
+      "type": "node",
+      "x": -318,
+      "y": 1.05,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "player_name",
+      "type": "label",
+      "text": "萨达萨达.",
+      "align": "left",
+      "size": 20,
+      "color": 1092488703,
+      "x": -265,
+      "y": 11.1,
+      "width": 149,
+      "height": 26.5
+    },
+    {
+      "name": "hint",
+      "type": "label",
+      "text": "等级：",
+      "align": "left",
+      "size": 20,
+      "color": 1092488703,
+      "x": -265,
+      "y": -14.9,
+      "width": 64,
+      "height": 26.5
+    },
+    {
+      "name": "player_level",
+      "type": "label",
+      "text": "25",
+      "align": "left",
+      "size": 20,
+      "color": 1092488703,
+      "x": -201,
+      "y": -14.9,
+      "width": 87,
+      "height": 26.5
+    },
+    {
+      "name": "power_txt",
+      "type": "label",
+      "text": "战斗力：",
+      "align": "right",
+      "size": 20,
+      "color": 1092488703,
+      "x": -72.05,
+      "y": -0.95,
+      "width": 86,
+      "height": 26.5
+    },
+    {
+      "name": "power_num",
+      "type": "label",
+      "text": "",
+      "align": "left",
+      "size": 20,
+      "color": 2566914303,
+      "x": 14.95,
+      "y": -0.95,
+      "width": 112,
+      "height": 26.5
+    },
+    {
+      "name": "btn_no",
+      "type": "node",
+      "x": 193.3,
+      "y": 0.95,
+      "width": 92,
+      "height": 46,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_guild_btnred1.png",
+          "img_down": "#ui_guild_btnred2.png",
+          "width": 92,
+          "height": 46
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "拒绝",
+          "align": "center",
+          "size": 30,
+          "color": 992815615,
+          "outlineColor": 13941402,
+          "x": -42,
+          "y": -0.13,
+          "width": 85,
+          "height": 37.75
+        }
+      ]
+    },
+    {
+      "name": "btn_yes",
+      "type": "node",
+      "x": 307.95,
+      "y": 0.95,
+      "width": 92,
+      "height": 46,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btndh1.png",
+          "img_down": "#ui_common_btndh2.png",
+          "img_disable": "#ui_common_btndh3.png",
+          "width": 92,
+          "height": 46
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "批准",
+          "align": "center",
+          "size": 30,
+          "color": 992815615,
+          "outlineColor": 13941402,
+          "x": -42,
+          "y": -0.13,
+          "width": 85,
+          "height": 37.75
+        }
+      ]
+    }
+  ]
+}

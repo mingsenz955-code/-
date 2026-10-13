@@ -1,0 +1,194 @@
+{
+  "group": [
+    "ui_arenanew",
+    "ui_daojukuang",
+    "ui_world"
+  ],
+  "width": 593,
+  "height": 130,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_arenanew_tbg.png",
+      "x": 297,
+      "y": -65,
+      "width": 593,
+      "height": 130
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_arenanew_fen.png",
+      "x": 109,
+      "y": -99,
+      "width": 36,
+      "height": 37
+    },
+    {
+      "name": "txt_point",
+      "type": "label",
+      "text": "",
+      "align": "center",
+      "font": "orange_60.fnt",
+      "bmp": 1,
+      "x": 24,
+      "y": -65,
+      "width": 79,
+      "height": 71
+    },
+    {
+      "name": "node_item1",
+      "type": "node",
+      "x": 218,
+      "y": -73,
+      "width": 110,
+      "height": 110,
+      "children": [
+        {
+          "name": "add",
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "width": 110,
+          "height": 110
+        },
+        {
+          "name": "xiangkuang",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "x": -1,
+          "y": 3,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -37,
+          "y": -26,
+          "width": 77,
+          "height": 27
+        },
+        {
+          "name": "biaoji_pinzhi",
+          "type": "node",
+          "x": -36,
+          "y": 39,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "node_item2",
+      "type": "node",
+      "x": 335,
+      "y": -73,
+      "width": 110,
+      "height": 110,
+      "children": [
+        {
+          "name": "add",
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "width": 110,
+          "height": 110
+        },
+        {
+          "name": "xiangkuang",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "x": -1,
+          "y": 3,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -37,
+          "y": -26,
+          "width": 77,
+          "height": 27
+        },
+        {
+          "name": "biaoji_pinzhi",
+          "type": "node",
+          "x": -36,
+          "y": 39,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "node_kelingqu",
+      "type": "node",
+      "x": 485,
+      "y": -71,
+      "width": 154,
+      "height": 46,
+      "children": [
+        {
+          "name": "btn",
+          "type": "ckb",
+          "img_on": "#ui_common_btn_pppp2.png",
+          "img_off": "#ui_common_btn_pppp1.png",
+          "img_disable": "#ui_common_btn_pppp3.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "领取奖励",
+          "align": "center",
+          "size": 26,
+          "color": 992815615,
+          "outlineColor": 13941402,
+          "x": -73,
+          "y": -1,
+          "width": 144,
+          "height": 33
+        }
+      ]
+    },
+    {
+      "name": "txt_bukeling",
+      "type": "label",
+      "text": "不可领取",
+      "align": "center",
+      "size": 26,
+      "color": 1092488703,
+      "x": 413,
+      "y": -72,
+      "width": 143,
+      "height": 33
+    },
+    {
+      "name": "image_yilingqu",
+      "type": "sprite",
+      "img": "#ui_world_yilingqu.png",
+      "x": 477,
+      "y": -68,
+      "width": 89,
+      "height": 89
+    }
+  ]
+}

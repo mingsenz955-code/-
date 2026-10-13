@@ -1,0 +1,243 @@
+{
+  "group": {},
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768,
+      "alpha": 0
+    },
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -236.05,
+      "y": -8.25,
+      "width": 447,
+      "height": 297,
+      "maxw": 447,
+      "maxh": 297
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -236.75,
+      "y": 137.25,
+      "width": 446,
+      "height": 55,
+      "maxw": 446,
+      "maxh": 55
+    },
+    {
+      "name": "title",
+      "type": "label",
+      "text": "抢夺果实",
+      "align": "center",
+      "size": 24,
+      "color": 4294967295,
+      "x": -151.55,
+      "y": 136.6,
+      "width": 282,
+      "height": 31
+    },
+    {
+      "name": "quality",
+      "type": "node",
+      "x": -136,
+      "y": 54.25,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "icon",
+      "type": "node",
+      "x": -136,
+      "y": 54.25,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "tx_type",
+      "type": "node",
+      "x": 44.9,
+      "y": 80.42,
+      "width": 210,
+      "height": 28.75,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "果实类型:",
+          "align": "left",
+          "size": 22,
+          "color": 1411781375,
+          "x": -105,
+          "width": 105,
+          "height": 28.75
+        },
+        {
+          "name": "phase",
+          "type": "label",
+          "text": "强化石",
+          "align": "left",
+          "size": 22,
+          "color": 1411781375,
+          "width": 105,
+          "height": 28.75
+        }
+      ]
+    },
+    {
+      "name": "tx_phase",
+      "type": "node",
+      "x": 44.9,
+      "y": 51.42,
+      "width": 210,
+      "height": 28.75,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "果实阶段:",
+          "align": "left",
+          "size": 22,
+          "color": 1411781375,
+          "x": -105,
+          "width": 105,
+          "height": 28.75
+        },
+        {
+          "name": "phase",
+          "type": "label",
+          "text": "幼芽期",
+          "align": "left",
+          "size": 22,
+          "color": 1411781375,
+          "width": 105,
+          "height": 28.75
+        }
+      ]
+    },
+    {
+      "name": "tx_harvest",
+      "type": "node",
+      "x": 44.9,
+      "y": 22.42,
+      "width": 210,
+      "height": 28.75,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "抢夺收获:",
+          "align": "left",
+          "size": 22,
+          "color": 1411781375,
+          "x": -105,
+          "width": 105,
+          "height": 28.75
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "100",
+          "align": "left",
+          "size": 22,
+          "color": 1411781375,
+          "width": 105,
+          "height": 28.75
+        }
+      ]
+    },
+    {
+      "name": "tx_help",
+      "type": "label",
+      "text": "抢夺幼芽期阶段的果实得到的果实数量最多，生长期其次，成熟期最少。",
+      "align": "left",
+      "size": 18,
+      "color": 2566914303,
+      "x": -186.95,
+      "y": -46.25,
+      "width": 350,
+      "height": 50
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 196.8,
+      "y": 137.55,
+      "width": 80,
+      "height": 86
+    },
+    {
+      "name": "btn_fangqi",
+      "type": "node",
+      "x": -16.4,
+      "y": -138.05,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png",
+          "img_disable": "#ui_common_btn_2c.png",
+          "width": 144,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "放弃",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "name": "btn_qiangduo",
+      "type": "node",
+      "x": -16.4,
+      "y": -138.05,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png",
+          "img_disable": "#ui_common_btn_2c.png",
+          "width": 144,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "抢夺",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    }
+  ]
+}

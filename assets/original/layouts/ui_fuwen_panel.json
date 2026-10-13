@@ -1,0 +1,727 @@
+{
+  "group": [
+    "ui_fuwen",
+    "ui_main"
+  ],
+  "width": 1435,
+  "height": 769,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_fuwen_bg02_1.jpg",
+      "x": 0,
+      "y": 1,
+      "width": 1435,
+      "height": 768
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_fuwen_dibu.png",
+      "scale9": 1,
+      "grid": {
+        "x": 27,
+        "y": 95,
+        "width": 104,
+        "height": 47
+      },
+      "x": -718,
+      "y": -262,
+      "width": 1435,
+      "height": 244,
+      "maxw": 1435,
+      "maxh": 244
+    },
+    {
+      "name": "node_npcbar",
+      "type": "node",
+      "x": 58,
+      "y": -269,
+      "width": 1064,
+      "height": 168,
+      "children": [
+        {
+          "name": "node_item1",
+          "type": "node",
+          "x": -437,
+          "y": -16,
+          "width": 190,
+          "height": 168,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_fuwen_ttt.png",
+              "x": -40,
+              "y": -70,
+              "width": 70,
+              "height": 28
+            },
+            {
+              "name": "node_head",
+              "type": "node",
+              "x": -95,
+              "y": 84,
+              "width": 0,
+              "height": 0,
+              "children": [
+                {
+                  "name": "node_hide",
+                  "type": "node",
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "node_show",
+                  "type": "node",
+                  "width": 0,
+                  "height": 0
+                }
+              ]
+            },
+            {
+              "name": "node_costbar",
+              "type": "node",
+              "x": -1,
+              "y": -69,
+              "width": 139,
+              "height": 30,
+              "children": [
+                {
+                  "name": "txt_cost",
+                  "type": "label",
+                  "text": "x?",
+                  "align": "left",
+                  "size": 23,
+                  "color": 4294967295,
+                  "x": -41,
+                  "width": 119,
+                  "height": 30
+                },
+                {
+                  "name": "img_money",
+                  "type": "node",
+                  "x": -61,
+                  "y": 1,
+                  "width": 0,
+                  "height": 0
+                }
+              ]
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "xx",
+              "align": "center",
+              "size": 28,
+              "color": 3149642751,
+              "x": -113,
+              "y": -32,
+              "width": 138,
+              "height": 35
+            }
+          ]
+        },
+        {
+          "name": "node_item2",
+          "type": "node",
+          "x": -218,
+          "y": -16,
+          "width": 190,
+          "height": 168,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_fuwen_ttt.png",
+              "x": -40,
+              "y": -70,
+              "width": 70,
+              "height": 28
+            },
+            {
+              "name": "node_head",
+              "type": "node",
+              "x": -95,
+              "y": 84,
+              "width": 0,
+              "height": 0,
+              "children": [
+                {
+                  "name": "node_hide",
+                  "type": "node",
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "node_show",
+                  "type": "node",
+                  "width": 0,
+                  "height": 0
+                }
+              ]
+            },
+            {
+              "name": "node_costbar",
+              "type": "node",
+              "x": -1,
+              "y": -69,
+              "width": 139,
+              "height": 30,
+              "children": [
+                {
+                  "name": "txt_cost",
+                  "type": "label",
+                  "text": "x?",
+                  "align": "left",
+                  "size": 23,
+                  "color": 4294967295,
+                  "x": -41,
+                  "width": 119,
+                  "height": 30
+                },
+                {
+                  "name": "img_money",
+                  "type": "node",
+                  "x": -61,
+                  "y": 1,
+                  "width": 0,
+                  "height": 0
+                }
+              ]
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "xx",
+              "align": "center",
+              "size": 28,
+              "color": 3149642751,
+              "x": -113,
+              "y": -32,
+              "width": 138,
+              "height": 35
+            }
+          ]
+        },
+        {
+          "name": "node_item3",
+          "type": "node",
+          "y": -16,
+          "width": 190,
+          "height": 168,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_fuwen_ttt.png",
+              "x": -40,
+              "y": -70,
+              "width": 70,
+              "height": 28
+            },
+            {
+              "name": "node_head",
+              "type": "node",
+              "x": -95,
+              "y": 84,
+              "width": 0,
+              "height": 0,
+              "children": [
+                {
+                  "name": "node_hide",
+                  "type": "node",
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "node_show",
+                  "type": "node",
+                  "width": 0,
+                  "height": 0
+                }
+              ]
+            },
+            {
+              "name": "node_costbar",
+              "type": "node",
+              "x": -1,
+              "y": -69,
+              "width": 139,
+              "height": 30,
+              "children": [
+                {
+                  "name": "txt_cost",
+                  "type": "label",
+                  "text": "x?",
+                  "align": "left",
+                  "size": 23,
+                  "color": 4294967295,
+                  "x": -41,
+                  "width": 119,
+                  "height": 30
+                },
+                {
+                  "name": "img_money",
+                  "type": "node",
+                  "x": -61,
+                  "y": 1,
+                  "width": 0,
+                  "height": 0
+                }
+              ]
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "xx",
+              "align": "center",
+              "size": 28,
+              "color": 3149642751,
+              "x": -113,
+              "y": -32,
+              "width": 138,
+              "height": 35
+            }
+          ]
+        },
+        {
+          "name": "node_item4",
+          "type": "node",
+          "x": 218,
+          "y": -16,
+          "width": 190,
+          "height": 168,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_fuwen_ttt.png",
+              "x": -40,
+              "y": -70,
+              "width": 70,
+              "height": 28
+            },
+            {
+              "name": "node_head",
+              "type": "node",
+              "x": -95,
+              "y": 84,
+              "width": 0,
+              "height": 0,
+              "children": [
+                {
+                  "name": "node_hide",
+                  "type": "node",
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "node_show",
+                  "type": "node",
+                  "width": 0,
+                  "height": 0
+                }
+              ]
+            },
+            {
+              "name": "node_costbar",
+              "type": "node",
+              "x": -1,
+              "y": -69,
+              "width": 139,
+              "height": 30,
+              "children": [
+                {
+                  "name": "txt_cost",
+                  "type": "label",
+                  "text": "x?",
+                  "align": "left",
+                  "size": 23,
+                  "color": 4294967295,
+                  "x": -41,
+                  "width": 119,
+                  "height": 30
+                },
+                {
+                  "name": "img_money",
+                  "type": "node",
+                  "x": -61,
+                  "y": 1,
+                  "width": 0,
+                  "height": 0
+                }
+              ]
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "xx",
+              "align": "center",
+              "size": 28,
+              "color": 3149642751,
+              "x": -113,
+              "y": -32,
+              "width": 138,
+              "height": 35
+            }
+          ]
+        },
+        {
+          "name": "node_item5",
+          "type": "node",
+          "x": 437,
+          "y": -16,
+          "width": 190,
+          "height": 168,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_fuwen_ttt.png",
+              "x": -40,
+              "y": -70,
+              "width": 70,
+              "height": 28
+            },
+            {
+              "name": "node_head",
+              "type": "node",
+              "x": -95,
+              "y": 84,
+              "width": 0,
+              "height": 0,
+              "children": [
+                {
+                  "name": "node_hide",
+                  "type": "node",
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "node_show",
+                  "type": "node",
+                  "width": 0,
+                  "height": 0
+                }
+              ]
+            },
+            {
+              "name": "node_costbar",
+              "type": "node",
+              "x": -1,
+              "y": -69,
+              "width": 139,
+              "height": 30,
+              "children": [
+                {
+                  "name": "txt_cost",
+                  "type": "label",
+                  "text": "x?",
+                  "align": "left",
+                  "size": 23,
+                  "color": 4294967295,
+                  "x": -41,
+                  "width": 119,
+                  "height": 30
+                },
+                {
+                  "name": "img_money",
+                  "type": "node",
+                  "x": -61,
+                  "y": 1,
+                  "width": 0,
+                  "height": 0
+                }
+              ]
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "xx",
+              "align": "center",
+              "size": 28,
+              "color": 3149642751,
+              "x": -113,
+              "y": -32,
+              "width": 138,
+              "height": 35
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "node_btn_usefw",
+      "type": "node",
+      "x": 410,
+      "y": -106,
+      "width": 193,
+      "height": 67,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn7.png",
+          "img_down": "#ui_common_btn8.png",
+          "img_disable": "#ui_common_btn6.png",
+          "width": 193,
+          "height": 67
+        },
+        {
+          "name": "txt_1",
+          "type": "label",
+          "text": "镶嵌符文",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -95,
+          "y": 6,
+          "width": 190,
+          "height": 43
+        }
+      ]
+    },
+    {
+      "name": "node_btn_exchange",
+      "type": "node",
+      "x": 14,
+      "y": -106,
+      "width": 193,
+      "height": 67,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn4.png",
+          "img_down": "#ui_common_btn5.png",
+          "img_disable": "#ui_common_btn6.png",
+          "width": 193,
+          "height": 67
+        },
+        {
+          "name": "txt_1",
+          "type": "label",
+          "text": "兑换",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -78,
+          "y": 6,
+          "width": 157,
+          "height": 43
+        }
+      ]
+    },
+    {
+      "name": "node_btn_pickall",
+      "type": "node",
+      "x": -197,
+      "y": -106,
+      "width": 193,
+      "height": 67,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn4.png",
+          "img_down": "#ui_common_btn5.png",
+          "img_disable": "#ui_common_btn6.png",
+          "width": 193,
+          "height": 67
+        },
+        {
+          "name": "txt_1",
+          "type": "label",
+          "text": "全部拾取",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -78,
+          "y": 6,
+          "width": 157,
+          "height": 43
+        }
+      ]
+    },
+    {
+      "name": "node_btn_autoget",
+      "type": "node",
+      "x": -404,
+      "y": -106,
+      "width": 193,
+      "height": 67,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn4.png",
+          "img_down": "#ui_common_btn5.png",
+          "img_disable": "#ui_common_btn6.png",
+          "width": 193,
+          "height": 67
+        },
+        {
+          "name": "txt_1",
+          "type": "label",
+          "text": "一键探索",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -78,
+          "y": 6,
+          "width": 157,
+          "height": 43
+        }
+      ]
+    },
+    {
+      "name": "node_shiwu",
+      "type": "node",
+      "x": -184,
+      "y": 359,
+      "width": 209,
+      "height": 46,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_main_pbar_bg2.png",
+          "scale9": 1,
+          "grid": {
+            "x": 14,
+            "y": 19,
+            "width": 10,
+            "height": 13
+          },
+          "x": -71,
+          "y": -5,
+          "width": 114,
+          "height": 44,
+          "maxw": 114,
+          "maxh": 44
+        },
+        {
+          "name": "txt_ShiWu",
+          "type": "node",
+          "x": 5,
+          "y": -6,
+          "width": 157,
+          "height": 30,
+          "children": [
+            {
+              "name": "img_money",
+              "type": "node",
+              "x": -70,
+              "y": 1,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_cost",
+              "type": "label",
+              "text": "x?",
+              "align": "right",
+              "size": 23,
+              "color": 2034244863,
+              "x": -140,
+              "width": 157,
+              "height": 30
+            }
+          ]
+        },
+        {
+          "name": "btn_ShiWu",
+          "type": "btn",
+          "img_normal": "#ui_main_05.png",
+          "img_down": "#ui_main_05-2.png",
+          "x": 50,
+          "y": -7,
+          "width": 46,
+          "height": 46
+        }
+      ]
+    },
+    {
+      "name": "node_mojing",
+      "type": "node",
+      "x": -388,
+      "y": 362,
+      "width": 209,
+      "height": 46,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_main_pbar_bg2.png",
+          "scale9": 1,
+          "grid": {
+            "x": 14,
+            "y": 19,
+            "width": 10,
+            "height": 13
+          },
+          "x": -72,
+          "y": -7,
+          "width": 114,
+          "height": 44,
+          "maxw": 114,
+          "maxh": 44
+        },
+        {
+          "name": "txt_MoJing",
+          "type": "node",
+          "x": 5,
+          "y": -8,
+          "width": 157,
+          "height": 30,
+          "children": [
+            {
+              "name": "img_money",
+              "type": "node",
+              "x": -70,
+              "y": 1,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_cost",
+              "type": "label",
+              "text": "x?",
+              "align": "right",
+              "size": 23,
+              "color": 2034244863,
+              "x": -140,
+              "width": 157,
+              "height": 30
+            }
+          ]
+        },
+        {
+          "name": "btn_MoJing",
+          "type": "btn",
+          "img_normal": "#ui_main_05.png",
+          "img_down": "#ui_main_05-2.png",
+          "x": 50,
+          "y": -9,
+          "width": 46,
+          "height": 46
+        }
+      ]
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_GuanBi1.png",
+      "img_down": "#ui_common_btn_GuanBi2.png",
+      "x": 674,
+      "y": 340,
+      "width": 85,
+      "height": 90,
+      "right": 43
+    },
+    {
+      "name": "btn_help",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_tishi1.png",
+      "img_down": "#ui_common_btn_tishi2.png",
+      "x": 575,
+      "y": 340,
+      "width": 85,
+      "height": 90,
+      "right": 143
+    }
+  ]
+}

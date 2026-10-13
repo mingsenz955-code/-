@@ -1,0 +1,115 @@
+{
+  "group": {},
+  "width": 1024,
+  "height": 600,
+  "children": [
+    {
+      "name": "huadong",
+      "type": "list",
+      "y": 47.75,
+      "width": 1024,
+      "height": 504,
+      "left": 0,
+      "right": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_d2.png",
+      "scale9": 1,
+      "x": -404,
+      "y": -255.2,
+      "width": 174,
+      "height": 57,
+      "maxw": 174,
+      "maxh": 57
+    },
+    {
+      "name": "miaoshu",
+      "type": "label",
+      "text": "已选择:",
+      "align": "left",
+      "size": 30,
+      "color": 4294967295,
+      "x": -401.85,
+      "y": -253.78,
+      "width": 110,
+      "height": 37.75
+    },
+    {
+      "name": "num",
+      "type": "label",
+      "text": "123",
+      "align": "left",
+      "size": 30,
+      "color": 4294967295,
+      "x": -291.85,
+      "y": -253.78,
+      "width": 61,
+      "height": 37.75
+    },
+    {
+      "name": "btn_decompose",
+      "type": "node",
+      "x": 132,
+      "y": -257.25,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "width": 200,
+          "height": 85
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "分解",
+          "align": "center",
+          "size": 30,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -86,
+          "y": 3.63,
+          "width": 170,
+          "height": 37.75
+        }
+      ]
+    },
+    {
+      "name": "btn_all",
+      "type": "node",
+      "x": -117,
+      "y": -257.25,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "width": 200,
+          "height": 85
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "全选",
+          "align": "center",
+          "size": 30,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -85.9,
+          "y": 3.63,
+          "width": 170,
+          "height": 37.75
+        }
+      ]
+    }
+  ]
+}

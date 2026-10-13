@@ -9,12 +9,12 @@ export const SPECIES = {
   mist: { name:'雾岚龙', element:'水 / 木', color:'#81c6b5', accent:'#c9f6dd', rarity:'稀有', income:4 },
   steam: { name:'流焰龙', element:'火 / 水', color:'#a59bd8', accent:'#eee0ff', rarity:'稀有', income:4 },
 };
-export {ORIGINAL_CROPS} from '../assets/original/data/rules.mjs';
+export {ORIGINAL_CROPS,ORIGINAL_LEVELS,ORIGINAL_FARMS} from '../assets/original/data/rules.mjs';
 export const RULES = { cropCost:50, cropYield:10, cropMs:30000, breedCost:120, breedMs:20000, hatchMs:15000, habitatCost:300, habitatCapacity:3, maxHabitats:6, incomeCapMs:8*3600000, maxLevel:20,feedsPerLevel:4,breedMinLevel:4 };
 export const RECIPES = { 'ember+leaf':'bloom', 'leaf+tide':'mist', 'ember+tide':'steam' };
 export const speciesKey=id=>({1000:'leaf',1020:'ember',1033:'tide'})[id]||`original${id}`;
 const elements={e:'岩土',f:'烈火',w:'深水',p:'草木',m:'金属',i:'寒冰',el:'闪电',d:'黑暗',l:'传奇'};
-for(const record of ORIGINAL_CATALOG){const key=speciesKey(record.id);SPECIES[key]={...(SPECIES[key]??{color:'#8ba8ad',accent:'#d7e7e4',income:2}),name:record.name,element:(record.original.attributes??[]).map(e=>elements[e]??e).join(' / '),rarity:`品质 ${record.extended.quality??'待核对'}`,original:record.base,originalId:record.id,stages:record.images,skeletal:[1000,1020,1033].includes(record.id),breedingMs:record.original.breeding_time*1000,hatchingMs:record.original.hatching_time*1000};}
+for(const record of ORIGINAL_CATALOG){const key=speciesKey(record.id);SPECIES[key]={...(SPECIES[key]??{color:'#8ba8ad',accent:'#d7e7e4',income:2}),name:record.name,element:(record.original.attributes??[]).map(e=>elements[e]??e).join(' / '),rarity:`品质 ${record.extended.quality??'待核对'}`,original:record.base,originalId:record.id,stages:record.images,skeletal:[1000,1020,1033].includes(record.id),breedingMs:record.original.breeding_time*1000,hatchingMs:record.original.hatching_time*1000,coinStart:record.original.starting_coins,coinAdded:record.original.coins_added};}
 const breedIndex=new Map(ORIGINAL_BREEDING.map(row=>[[row[1],row[2]].sort((a,b)=>a-b).join('+'),row]));
 export function breedingOptions(a,b){const sa=SPECIES[a],sb=SPECIES[b];if(!sa?.originalId||!sb?.originalId)return null;const row=breedIndex.get([sa.originalId,sb.originalId].sort((a,b)=>a-b).join('+'));if(!row||row[3]!==1)return [];const result=[];for(let i=4;i<row.length;i+=2)if(row[i]>0&&row[i+1]>0&&SPECIES[speciesKey(row[i])])result.push({species:speciesKey(row[i]),weight:row[i+1]});return result;}
 export const ROADMAP = [

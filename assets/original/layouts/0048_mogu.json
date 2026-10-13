@@ -1,0 +1,24 @@
+{
+  "group": [
+    "buildings/0048_mogu_g"
+  ],
+  "width": 78,
+  "height": 64,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0048_mogu_g_bg.png",
+      "x": 7,
+      "y": 39.5
+    },
+    {
+      "name": "eff",
+      "type": "eff",
+      "eff": "0048_mogu_eff",
+      "x": 0.65,
+      "width": 57,
+      "height": 51
+    }
+  ]
+}

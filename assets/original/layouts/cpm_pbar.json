@@ -1,0 +1,44 @@
+{
+  "group": {},
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#ui_main_X_JinDu3.png",
+      "y": -0.15,
+      "width": 188,
+      "height": 50
+    },
+    {
+      "name": "bar",
+      "type": "sprite",
+      "img": "#ui_main_X_JinDu2.png",
+      "scale9": 1,
+      "x": -85,
+      "y": 0.1,
+      "width": 170.95,
+      "height": 28,
+      "maxw": 170.95,
+      "maxh": 28
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_main_X_JinDu1.png",
+      "y": -0.15,
+      "width": 188,
+      "height": 50
+    },
+    {
+      "name": "txt",
+      "type": "label",
+      "text": "",
+      "size": 30,
+      "align": "center",
+      "color": 255,
+      "x": -82,
+      "y": -0.02,
+      "width": 165,
+      "height": 37.75
+    }
+  ]
+}

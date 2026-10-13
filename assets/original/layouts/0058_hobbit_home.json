@@ -1,0 +1,25 @@
+{
+  "group": [
+    "buildings/0058_hobbit_home_g"
+  ],
+  "width": 246,
+  "height": 183,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0058_hobbit_home_g_bg.png",
+      "x": 20,
+      "y": 126.5
+    },
+    {
+      "name": "eff",
+      "type": "eff",
+      "eff": "0058_hobbit_home_eff",
+      "x": 0.35,
+      "y": 0.1,
+      "width": 90,
+      "height": 100.7
+    }
+  ]
+}

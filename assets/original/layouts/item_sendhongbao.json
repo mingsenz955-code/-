@@ -1,0 +1,187 @@
+{
+  "group": [
+    "ui_gonghuihongbao",
+    "ui_ertong"
+  ],
+  "width": 236,
+  "height": 365,
+  "children": [
+    {
+      "name": "node_type",
+      "type": "node",
+      "x": 1,
+      "y": 0,
+      "width": 236,
+      "height": 365,
+      "children": [
+        {
+          "name": "node_type1",
+          "type": "node",
+          "x": 0,
+          "y": 1,
+          "width": 235,
+          "height": 364,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuihongbao_img(13).png",
+              "width": 235,
+              "height": 364
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuihongbao_img(17).png",
+              "x": 1,
+              "y": 135,
+              "width": 106,
+              "height": 29
+            }
+          ]
+        },
+        {
+          "name": "node_type2",
+          "type": "node",
+          "x": -1,
+          "y": 0,
+          "width": 235,
+          "height": 364,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuihongbao_img(4).png",
+              "width": 235,
+              "height": 364
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuihongbao_img(8).png",
+              "x": 0,
+              "y": 131,
+              "width": 106,
+              "height": 29
+            }
+          ]
+        },
+        {
+          "name": "node_type3",
+          "type": "node",
+          "x": 0,
+          "y": 0,
+          "width": 235,
+          "height": 364,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuihongbao_img(23).png",
+              "width": 235,
+              "height": 364
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuihongbao_img(1).png",
+              "x": 1,
+              "y": 129,
+              "width": 106,
+              "height": 29
+            }
+          ]
+        },
+        {
+          "name": "node_type4",
+          "type": "node",
+          "x": 0,
+          "y": 1,
+          "width": 235,
+          "height": 364,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuihongbao_fa.png",
+              "width": 235,
+              "height": 364
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuihongbao_zi.png",
+              "x": 5,
+              "y": 125,
+              "width": 106,
+              "height": 29
+            }
+          ]
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_gonghuihongbao_img(3).png",
+          "x": -1,
+          "y": 60,
+          "width": 49,
+          "height": 56
+        }
+      ]
+    },
+    {
+      "name": "item",
+      "type": "node",
+      "x": -58,
+      "y": 161,
+      "width": 113,
+      "height": 38,
+      "children": [
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": "?",
+          "align": "left",
+          "size": 30,
+          "color": 4294967295,
+          "outlineColor": 10027008,
+          "x": 38,
+          "y": -247,
+          "width": 89,
+          "height": 38
+        },
+        {
+          "name": "img",
+          "type": "node",
+          "x": 14,
+          "y": -247,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "node_btn",
+      "type": "node",
+      "x": 5,
+      "y": -28,
+      "width": 133,
+      "height": 56,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_ertong_zdbtn1.png",
+          "img_down": "#ui_ertong_zdbtn2.png",
+          "img_disable": "#ui_ertong_zdbtn5.png",
+          "width": 133,
+          "height": 56
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "赏",
+          "align": "center",
+          "size": 26,
+          "color": 4294967295,
+          "outlineColor": 11882262,
+          "x": -40,
+          "y": 5,
+          "width": 83,
+          "height": 33
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "group": [
+    "ui_activityxianshi"
+  ],
+  "width": 381,
+  "height": 44,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_activityxianshi_t1.png",
+      "width": 381,
+      "height": 44
+    },
+    {
+      "name": "txt_mingci",
+      "type": "label",
+      "text": "第",
+      "align": "right",
+      "size": 22,
+      "color": 4294967295,
+      "x": -180.5,
+      "y": -0.97,
+      "width": 30,
+      "height": 28.75
+    },
+    {
+      "name": "num_mingci",
+      "type": "label",
+      "text": "--",
+      "align": "center",
+      "size": 22,
+      "color": 4291559679,
+      "x": -150.5,
+      "y": -0.97,
+      "width": 33,
+      "height": 28.75
+    },
+    {
+      "name": "txt_mingci2",
+      "type": "label",
+      "text": "名",
+      "align": "left",
+      "size": 22,
+      "color": 4294967295,
+      "x": -117.5,
+      "y": -0.97,
+      "width": 30,
+      "height": 28.75
+    },
+    {
+      "name": "txt_mingzi",
+      "type": "label",
+      "text": "-",
+      "align": "center",
+      "size": 22,
+      "color": 4294967295,
+      "x": -82.5,
+      "y": -0.97,
+      "width": 162.95,
+      "height": 28.75
+    },
+    {
+      "name": "num_jifen",
+      "type": "label",
+      "text": "-",
+      "align": "right",
+      "size": 22,
+      "color": 1728053247,
+      "x": 82.5,
+      "y": -0.97,
+      "width": 102,
+      "height": 28.75
+    }
+  ]
+}

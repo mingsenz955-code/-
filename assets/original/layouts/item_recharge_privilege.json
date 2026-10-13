@@ -1,0 +1,38 @@
+{
+  "group": [
+    "ui_recharge"
+  ],
+  "width": 295,
+  "height": 63,
+  "children": [
+    {
+      "name": "vip_lv",
+      "type": "label",
+      "text": "",
+      "align": "center",
+      "font": "orange_46.fnt",
+      "bmp": 1,
+      "x": -444.85,
+      "y": 105.88,
+      "width": 136,
+      "height": 55.75
+    },
+    {
+      "name": "biaoji",
+      "type": "sprite",
+      "img": "#ui_recharge_hint.png",
+      "x": -228.85,
+      "y": 107.25,
+      "width": 157,
+      "height": 53
+    },
+    {
+      "name": "txt_data",
+      "type": "node",
+      "x": -418.85,
+      "y": 70.75,
+      "width": 0,
+      "height": 0
+    }
+  ]
+}

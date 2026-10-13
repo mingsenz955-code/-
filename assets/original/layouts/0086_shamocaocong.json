@@ -1,0 +1,16 @@
+{
+  "group": [
+    "buildings/0086_shamocaocong_g"
+  ],
+  "width": 69,
+  "height": 46,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0086_shamocaocong_g_bg.png",
+      "x": 2.5,
+      "y": 32.9
+    }
+  ]
+}

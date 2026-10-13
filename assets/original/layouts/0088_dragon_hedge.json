@@ -1,0 +1,15 @@
+{
+  "group": [
+    "buildings/0088_dragon_hedge_g"
+  ],
+  "width": 197,
+  "height": 200,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#0088_dragon_hedge_g_bg.png",
+      "x": 13.85,
+      "y": 136.65
+    }
+  ]
+}

@@ -1,0 +1,373 @@
+{
+  "group": [
+    "ui_ertong",
+    "ui_daojukuang"
+  ],
+  "width": 460,
+  "height": 362,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "grid": {
+        "x": 108,
+        "y": 111,
+        "width": 46,
+        "height": 27
+      },
+      "x": -226,
+      "y": -15,
+      "width": 446,
+      "height": 320,
+      "maxw": 446,
+      "maxh": 320
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_haoyoulan2.png",
+      "scale9": 1,
+      "grid": {
+        "x": 28,
+        "y": 29,
+        "width": 38,
+        "height": 36
+      },
+      "x": -194,
+      "y": -6,
+      "width": 390,
+      "height": 231,
+      "maxw": 390,
+      "maxh": 231
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "grid": {
+        "x": 25,
+        "y": 20,
+        "width": 10,
+        "height": 10
+      },
+      "x": -227,
+      "y": 135,
+      "width": 447,
+      "height": 55,
+      "maxw": 447,
+      "maxh": 55
+    },
+    {
+      "name": "node_item1",
+      "type": "node",
+      "x": -82,
+      "y": -24,
+      "width": 180,
+      "height": 249,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_hggl.png",
+          "x": -10,
+          "y": 22,
+          "width": 160,
+          "height": 205
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_ShuZiKuang.png",
+          "scale9": 1,
+          "grid": {
+            "x": 21,
+            "y": 12,
+            "width": 7,
+            "height": 7
+          },
+          "x": -39,
+          "y": -44,
+          "width": 92,
+          "height": 32,
+          "maxw": 92,
+          "maxh": 32
+        },
+        {
+          "name": "node_buy",
+          "type": "node",
+          "x": -9,
+          "y": -97,
+          "width": 133,
+          "height": 56,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_ertong_zdbtn3.png",
+              "img_down": "#ui_ertong_zdbtn4.png",
+              "img_disable": "#ui_ertong_zdbtn5.png",
+              "width": 133,
+              "height": 56
+            },
+            {
+              "name": "miaoshu",
+              "type": "label",
+              "text": "购买锤子",
+              "align": "center",
+              "size": 26,
+              "color": 4294967295,
+              "outlineColor": 11882262,
+              "x": -65,
+              "y": 3,
+              "width": 129,
+              "height": 33
+            }
+          ]
+        },
+        {
+          "name": "txt_title",
+          "type": "label",
+          "text": "xxx",
+          "align": "center",
+          "size": 20,
+          "color": 1092488703,
+          "x": -99,
+          "y": 99,
+          "width": 180,
+          "height": 27
+        },
+        {
+          "name": "txt_cost",
+          "type": "label",
+          "text": "?",
+          "align": "justify",
+          "size": 20,
+          "color": 255,
+          "x": -31,
+          "y": -43,
+          "width": 73,
+          "height": 27
+        },
+        {
+          "name": "node_cost_container",
+          "type": "node",
+          "x": -58,
+          "y": -42,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "node_onsell",
+          "type": "node",
+          "x": -8,
+          "y": 27,
+          "width": 110,
+          "height": 110,
+          "children": [
+            {
+              "name": "bg",
+              "type": "sprite",
+              "img": "#ui_daojukuang_DaoJuKuang1.png",
+              "width": 110,
+              "height": 110
+            },
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "image",
+              "type": "node",
+              "x": -1,
+              "y": 3,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "eff",
+              "type": "node",
+              "x": -1,
+              "y": 2,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_num",
+              "type": "label",
+              "text": " ",
+              "align": "right",
+              "size": 20,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -37,
+              "y": -26,
+              "width": 77,
+              "height": 27
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "node_item2",
+      "type": "node",
+      "x": 104,
+      "y": -24,
+      "width": 180,
+      "height": 249,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_hggl.png",
+          "x": -10,
+          "y": 22,
+          "width": 160,
+          "height": 205
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_ShuZiKuang.png",
+          "scale9": 1,
+          "grid": {
+            "x": 21,
+            "y": 12,
+            "width": 7,
+            "height": 7
+          },
+          "x": -39,
+          "y": -44,
+          "width": 92,
+          "height": 32,
+          "maxw": 92,
+          "maxh": 32
+        },
+        {
+          "name": "node_buy",
+          "type": "node",
+          "x": -9,
+          "y": -97,
+          "width": 133,
+          "height": 56,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_ertong_zdbtn3.png",
+              "img_down": "#ui_ertong_zdbtn4.png",
+              "img_disable": "#ui_ertong_zdbtn5.png",
+              "width": 133,
+              "height": 56
+            },
+            {
+              "name": "miaoshu",
+              "type": "label",
+              "text": "购买锤子",
+              "align": "center",
+              "size": 26,
+              "color": 4294967295,
+              "outlineColor": 11882262,
+              "x": -65,
+              "y": 3,
+              "width": 129,
+              "height": 33
+            }
+          ]
+        },
+        {
+          "name": "txt_title",
+          "type": "label",
+          "text": "xxx",
+          "align": "center",
+          "size": 20,
+          "color": 1092488703,
+          "x": -99,
+          "y": 99,
+          "width": 180,
+          "height": 27
+        },
+        {
+          "name": "txt_cost",
+          "type": "label",
+          "text": "?",
+          "align": "justify",
+          "size": 20,
+          "color": 255,
+          "x": -31,
+          "y": -43,
+          "width": 73,
+          "height": 27
+        },
+        {
+          "name": "node_cost_container",
+          "type": "node",
+          "x": -58,
+          "y": -42,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "node_onsell",
+          "type": "node",
+          "x": -8,
+          "y": 27,
+          "width": 110,
+          "height": 110,
+          "children": [
+            {
+              "name": "bg",
+              "type": "sprite",
+              "img": "#ui_daojukuang_DaoJuKuang1.png",
+              "width": 110,
+              "height": 110
+            },
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "image",
+              "type": "node",
+              "x": -1,
+              "y": 3,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "eff",
+              "type": "node",
+              "x": -1,
+              "y": 2,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_num",
+              "type": "label",
+              "text": " ",
+              "align": "right",
+              "size": 20,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -37,
+              "y": -26,
+              "width": 77,
+              "height": 27
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 193,
+      "y": 144,
+      "width": 80,
+      "height": 86
+    }
+  ]
+}

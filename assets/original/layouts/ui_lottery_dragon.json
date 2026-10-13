@@ -1,0 +1,964 @@
+{
+  "group": [
+    "ui_bgnew",
+    "ui_lotterydragon"
+  ],
+  "width": 1024,
+  "height": 770,
+  "children": [
+    {
+      "name": "bg",
+      "type": "btn",
+      "img_normal": "#ui_bgnew_bg.png",
+      "img_down": "#ui_bgnew_bg.png",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "name": "txt_des",
+      "type": "label",
+      "text": "免费单抽不计入必得次数，中/高级扭蛋机抽到紫/橙龙后必得次数重置。",
+      "align": "left",
+      "size": 18,
+      "color": 4294967295,
+      "x": -512,
+      "y": -316.25,
+      "width": 603,
+      "height": 24.1
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_GuanBi1.png",
+      "img_down": "#ui_common_btn_GuanBi2.png",
+      "x": 468.1,
+      "y": 338.9,
+      "width": 85,
+      "height": 90,
+      "right": 43.9
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_d.png",
+      "x": -1.15,
+      "y": 341,
+      "width": 573,
+      "height": 83
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "扭蛋机",
+      "align": "center",
+      "size": 28,
+      "color": 4294967295,
+      "x": -216.9,
+      "y": 332.25,
+      "width": 431.85,
+      "height": 35.5
+    },
+    {
+      "name": "chuji",
+      "type": "node",
+      "x": -334.95,
+      "y": 1.25,
+      "width": 302,
+      "height": 551.5,
+      "children": [
+        {
+          "name": "bg_eff_choujiangji1",
+          "type": "node",
+          "x": -4,
+          "y": -238.25,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_lotterydragon_txt1.png",
+          "y": 247.25,
+          "width": 302,
+          "height": 57
+        },
+        {
+          "name": "one",
+          "type": "node",
+          "x": -54.5,
+          "y": -203.2,
+          "width": 82,
+          "height": 82,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_lotterydragon_btn_1.png",
+              "img_down": "#ui_lotterydragon_btn_2.png",
+              "width": 82,
+              "height": 82
+            },
+            {
+              "name": "miaoshu",
+              "type": "label",
+              "text": "抽1次",
+              "align": "center",
+              "size": 21,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -34,
+              "y": -7.35,
+              "width": 69,
+              "height": 31
+            }
+          ]
+        },
+        {
+          "name": "ten",
+          "type": "node",
+          "x": 56.5,
+          "y": -203.2,
+          "width": 84,
+          "height": 82,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_lotterydragon_btn_3.png",
+              "img_down": "#ui_lotterydragon_btn_4.png",
+              "x": -1,
+              "width": 82,
+              "height": 82
+            },
+            {
+              "name": "miaoshu",
+              "type": "label",
+              "text": "抽10次",
+              "align": "center",
+              "size": 21,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -44,
+              "y": -9.35,
+              "width": 84,
+              "height": 31
+            }
+          ]
+        },
+        {
+          "name": "money",
+          "type": "node",
+          "x": 6.53,
+          "y": -138.1,
+          "width": 238.75,
+          "height": 49,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_lotterydragon_bg_duan.png",
+              "x": -59.63,
+              "y": -3.25,
+              "width": 111,
+              "height": 48
+            },
+            {
+              "name": "daijuan_one",
+              "type": "sprite",
+              "img": "#ui_lotterydragon_daijuan1.png",
+              "x": -105.38,
+              "y": -0.75,
+              "width": 31,
+              "height": 45
+            },
+            {
+              "name": "num_one",
+              "type": "label",
+              "text": " ",
+              "align": "left",
+              "size": 24,
+              "color": 4294967295,
+              "x": -85.38,
+              "y": -1,
+              "width": 61,
+              "height": 31
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_lotterydragon_bg_duan.png",
+              "x": 62.38,
+              "y": -3.25,
+              "width": 111,
+              "height": 48
+            },
+            {
+              "name": "daijuan_ten",
+              "type": "sprite",
+              "img": "#ui_lotterydragon_daijuan1.png",
+              "x": 16.63,
+              "y": -0.75,
+              "width": 31,
+              "height": 45
+            },
+            {
+              "name": "num_ten",
+              "type": "label",
+              "text": " ",
+              "align": "left",
+              "size": 24,
+              "color": 4294967295,
+              "x": 36.63,
+              "y": -1,
+              "width": 61,
+              "height": 31
+            }
+          ]
+        },
+        {
+          "name": "cj_niudan",
+          "type": "node",
+          "x": -4,
+          "y": -83.25,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "free",
+          "type": "label",
+          "text": "本次单抽免费",
+          "align": "center",
+          "size": 24,
+          "color": 4294902015,
+          "outlineColor": 0,
+          "x": -97.35,
+          "y": -260.25,
+          "width": 188,
+          "height": 31
+        }
+      ]
+    },
+    {
+      "name": "zhongji",
+      "type": "node",
+      "x": -18.95,
+      "y": 0.68,
+      "width": 302,
+      "height": 550.65,
+      "children": [
+        {
+          "name": "bg_eff_choujiangji2",
+          "type": "node",
+          "x": 15,
+          "y": -238.68,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_lotterydragon_txt2.png",
+          "x": 13.5,
+          "y": 246.82,
+          "width": 302,
+          "height": 57
+        },
+        {
+          "name": "one",
+          "type": "node",
+          "x": -42.85,
+          "y": -198.63,
+          "width": 82,
+          "height": 82,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_lotterydragon_btn_1.png",
+              "img_down": "#ui_lotterydragon_btn_2.png",
+              "width": 82,
+              "height": 82
+            },
+            {
+              "name": "miaoshu",
+              "type": "label",
+              "text": "抽1次",
+              "align": "center",
+              "size": 21,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -34,
+              "y": -7.35,
+              "width": 69,
+              "height": 31
+            }
+          ]
+        },
+        {
+          "name": "ten",
+          "type": "node",
+          "x": 68.15,
+          "y": -198.63,
+          "width": 84,
+          "height": 82,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_lotterydragon_btn_3.png",
+              "img_down": "#ui_lotterydragon_btn_4.png",
+              "x": -1,
+              "width": 82,
+              "height": 82
+            },
+            {
+              "name": "miaoshu",
+              "type": "label",
+              "text": "抽10次",
+              "align": "center",
+              "size": 21,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -44,
+              "y": -9.35,
+              "width": 84,
+              "height": 31
+            }
+          ]
+        },
+        {
+          "name": "money",
+          "type": "node",
+          "x": 17.17,
+          "y": -128.88,
+          "width": 240.25,
+          "height": 51.5,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_lotterydragon_bg_duan.png",
+              "x": -60.38,
+              "y": -2,
+              "width": 111,
+              "height": 48
+            },
+            {
+              "name": "mojing_one",
+              "type": "sprite",
+              "img": "#ui_lotterydragon_mojing.png",
+              "x": -105.13,
+              "y": 1.5,
+              "width": 36,
+              "height": 48
+            },
+            {
+              "name": "daijuan_one",
+              "type": "sprite",
+              "img": "#ui_lotterydragon_daijuan2.png",
+              "x": -106.13,
+              "y": 0.5,
+              "width": 31,
+              "height": 45
+            },
+            {
+              "name": "num_one",
+              "type": "label",
+              "text": " ",
+              "align": "left",
+              "size": 24,
+              "color": 4294967295,
+              "x": -86.13,
+              "y": 0.25,
+              "width": 61,
+              "height": 31
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_lotterydragon_bg_duan.png",
+              "x": 61.63,
+              "y": -2,
+              "width": 111,
+              "height": 48
+            },
+            {
+              "name": "mojing_ten",
+              "type": "sprite",
+              "img": "#ui_lotterydragon_mojing.png",
+              "x": 16.88,
+              "y": 1.5,
+              "width": 36,
+              "height": 48
+            },
+            {
+              "name": "daijuan_ten",
+              "type": "sprite",
+              "img": "#ui_lotterydragon_daijuan2.png",
+              "x": 15.88,
+              "y": 0.5,
+              "width": 31,
+              "height": 45
+            },
+            {
+              "name": "num_ten",
+              "type": "label",
+              "text": " ",
+              "align": "left",
+              "size": 24,
+              "color": 4294967295,
+              "x": 35.88,
+              "y": 0.25,
+              "width": 61,
+              "height": 31
+            }
+          ]
+        },
+        {
+          "name": "cj_niudan",
+          "type": "node",
+          "x": 13,
+          "y": -65.68,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "free",
+          "type": "label",
+          "text": "本次单抽免费",
+          "align": "center",
+          "size": 24,
+          "color": 4294902015,
+          "outlineColor": 0,
+          "x": -78.35,
+          "y": -259.82,
+          "width": 188,
+          "height": 31
+        },
+        {
+          "name": "Countdown",
+          "type": "node",
+          "x": 15.15,
+          "y": -78.98,
+          "width": 220,
+          "height": 48,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_lotterydragon_bg_chang.png",
+              "width": 220,
+              "height": 48
+            },
+            {
+              "name": "miaoshu1",
+              "type": "label",
+              "text": "再抽",
+              "align": "left",
+              "size": 24,
+              "color": 4294967295,
+              "x": -100.5,
+              "width": 57,
+              "height": 31
+            },
+            {
+              "name": "miaoshu2",
+              "type": "label",
+              "text": "次必得",
+              "align": "right",
+              "size": 24,
+              "color": 4294967295,
+              "x": -32.5,
+              "width": 82.5,
+              "height": 31
+            },
+            {
+              "name": "miaoshu3",
+              "type": "label",
+              "text": "紫",
+              "align": "right",
+              "size": 24,
+              "color": 4294967295,
+              "x": 45.5,
+              "width": 28.5,
+              "height": 31
+            },
+            {
+              "name": "miaoshu4",
+              "type": "label",
+              "text": "龙",
+              "align": "right",
+              "size": 24,
+              "color": 4294967295,
+              "x": 70.5,
+              "width": 28.5,
+              "height": 31
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": "9",
+              "align": "center",
+              "size": 24,
+              "color": 4281571839,
+              "x": -52.5,
+              "width": 29,
+              "height": 31
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "gaoji",
+      "type": "node",
+      "x": 312.05,
+      "y": 0.68,
+      "width": 302,
+      "height": 550.65,
+      "children": [
+        {
+          "name": "bg_eff_choujiangji3",
+          "type": "node",
+          "x": 15,
+          "y": -239.68,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_lotterydragon_txt3.png",
+          "x": 11.5,
+          "y": 246.82,
+          "width": 302,
+          "height": 57
+        },
+        {
+          "name": "one",
+          "type": "node",
+          "x": -39.85,
+          "y": -175.63,
+          "width": 82,
+          "height": 82,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_lotterydragon_btn_1.png",
+              "img_down": "#ui_lotterydragon_btn_2.png",
+              "width": 82,
+              "height": 82
+            },
+            {
+              "name": "miaoshu",
+              "type": "label",
+              "text": "抽1次",
+              "align": "center",
+              "size": 21,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -34,
+              "y": -7.35,
+              "width": 69,
+              "height": 31
+            }
+          ]
+        },
+        {
+          "name": "ten",
+          "type": "node",
+          "x": 63.5,
+          "y": -173.63,
+          "width": 84,
+          "height": 82,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_lotterydragon_btn_3.png",
+              "img_down": "#ui_lotterydragon_btn_4.png",
+              "x": -1,
+              "width": 82,
+              "height": 82
+            },
+            {
+              "name": "miaoshu",
+              "type": "label",
+              "text": "抽10次",
+              "align": "center",
+              "size": 21,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -44,
+              "y": -9.35,
+              "width": 84,
+              "height": 31
+            }
+          ]
+        },
+        {
+          "name": "money",
+          "type": "node",
+          "x": 17.67,
+          "y": -102.28,
+          "width": 240.25,
+          "height": 51.5,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_lotterydragon_bg_duan.png",
+              "x": -60.38,
+              "y": -2,
+              "width": 111,
+              "height": 48
+            },
+            {
+              "name": "mojing_one",
+              "type": "sprite",
+              "img": "#ui_lotterydragon_mojing.png",
+              "x": -105.13,
+              "y": 1.5,
+              "width": 36,
+              "height": 48
+            },
+            {
+              "name": "daijuan_one",
+              "type": "sprite",
+              "img": "#ui_lotterydragon_daijuan3.png",
+              "x": -106.13,
+              "y": 0.5,
+              "width": 31,
+              "height": 45
+            },
+            {
+              "name": "num_one",
+              "type": "label",
+              "text": " ",
+              "align": "left",
+              "size": 24,
+              "color": 4294967295,
+              "x": -86.13,
+              "y": 0.25,
+              "width": 61,
+              "height": 31
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_lotterydragon_bg_duan.png",
+              "x": 61.63,
+              "y": -2,
+              "width": 111,
+              "height": 48
+            },
+            {
+              "name": "mojing_ten",
+              "type": "sprite",
+              "img": "#ui_lotterydragon_mojing.png",
+              "x": 16.88,
+              "y": 1.5,
+              "width": 36,
+              "height": 48
+            },
+            {
+              "name": "daijuan_ten",
+              "type": "sprite",
+              "img": "#ui_lotterydragon_daijuan3.png",
+              "x": 15.88,
+              "y": 0.5,
+              "width": 31,
+              "height": 45
+            },
+            {
+              "name": "num_ten",
+              "type": "label",
+              "text": " ",
+              "align": "left",
+              "size": 24,
+              "color": 4294967295,
+              "x": 35.88,
+              "y": 0.25,
+              "width": 61,
+              "height": 31
+            }
+          ]
+        },
+        {
+          "name": "cj_niudan",
+          "type": "node",
+          "x": 14,
+          "y": -44.68,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "Countdown",
+          "type": "node",
+          "x": 15.65,
+          "y": -51.38,
+          "width": 220,
+          "height": 48,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_lotterydragon_bg_chang.png",
+              "width": 220,
+              "height": 48
+            },
+            {
+              "name": "miaoshu1",
+              "type": "label",
+              "text": "再抽",
+              "align": "left",
+              "size": 24,
+              "color": 4294967295,
+              "x": -100.5,
+              "width": 57,
+              "height": 31
+            },
+            {
+              "name": "miaoshu2",
+              "type": "label",
+              "text": "次必得",
+              "align": "right",
+              "size": 24,
+              "color": 4294967295,
+              "x": -40.5,
+              "width": 88.5,
+              "height": 31
+            },
+            {
+              "name": "miaoshu3",
+              "type": "label",
+              "text": "橙",
+              "align": "right",
+              "size": 24,
+              "color": 4294967295,
+              "x": 44.5,
+              "y": 0.07,
+              "width": 28.5,
+              "height": 30.85
+            },
+            {
+              "name": "miaoshu4",
+              "type": "label",
+              "text": "龙",
+              "align": "right",
+              "size": 24,
+              "color": 4294967295,
+              "x": 69.5,
+              "width": 28.5,
+              "height": 31
+            },
+            {
+              "name": "num",
+              "type": "label",
+              "text": "9",
+              "align": "center",
+              "size": 24,
+              "color": 4281571839,
+              "x": -52.5,
+              "width": 29,
+              "height": 31
+            }
+          ]
+        },
+        {
+          "name": "free",
+          "type": "label",
+          "text": "本次单抽免费",
+          "align": "center",
+          "size": 24,
+          "color": 4294902015,
+          "outlineColor": 0,
+          "x": -80.35,
+          "y": -259.82,
+          "width": 188,
+          "height": 31
+        }
+      ]
+    },
+    {
+      "name": "btn_yulan",
+      "type": "node",
+      "x": 193.35,
+      "y": -343.35,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "width": 200,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "奖品预览",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -79,
+          "y": 2.4,
+          "width": 156,
+          "height": 46.2
+        }
+      ]
+    },
+    {
+      "name": "btn_jiyin",
+      "type": "node",
+      "x": 397.35,
+      "y": -343.35,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "width": 200,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "基因中心",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -79,
+          "y": 2.4,
+          "width": 156,
+          "height": 46.2
+        }
+      ]
+    },
+    {
+      "name": "ziyuan_daijuan",
+      "type": "node",
+      "x": -313.95,
+      "y": -354.75,
+      "width": 330,
+      "height": 49.5,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_lotterydragon_bg_da.png",
+          "y": 0.75,
+          "width": 330,
+          "height": 48
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_lotterydragon_daijuan1.png",
+          "x": -135.65,
+          "y": 3.75,
+          "width": 31,
+          "height": 45
+        },
+        {
+          "name": "num_chuji",
+          "type": "label",
+          "text": " ",
+          "align": "left",
+          "size": 27,
+          "color": 4294967295,
+          "x": -119,
+          "y": 1.13,
+          "width": 64,
+          "height": 34.15
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_lotterydragon_daijuan2.png",
+          "x": -37.65,
+          "y": 3.75,
+          "width": 31,
+          "height": 45
+        },
+        {
+          "name": "num_zhongji",
+          "type": "label",
+          "text": " ",
+          "align": "left",
+          "size": 27,
+          "color": 4294967295,
+          "x": -21,
+          "y": 1.13,
+          "width": 64,
+          "height": 34.15
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_lotterydragon_daijuan3.png",
+          "x": 60.35,
+          "y": 3.75,
+          "width": 31,
+          "height": 45
+        },
+        {
+          "name": "num_gaoji",
+          "type": "label",
+          "text": " ",
+          "align": "left",
+          "size": 27,
+          "color": 4294967295,
+          "x": 77,
+          "y": 1.13,
+          "width": 64,
+          "height": 34.15
+        }
+      ]
+    },
+    {
+      "name": "ziyuan_mojing",
+      "type": "node",
+      "x": -39.5,
+      "y": -352,
+      "width": 220,
+      "height": 52,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_lotterydragon_bg_chang.png",
+          "x": -2,
+          "y": -2,
+          "width": 220,
+          "height": 48
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_lotterydragon_mojing.png",
+          "x": -84,
+          "y": 2,
+          "width": 36,
+          "height": 48
+        },
+        {
+          "name": "num_mojing",
+          "type": "label",
+          "text": " ",
+          "align": "left",
+          "size": 27,
+          "color": 4294967295,
+          "x": -58,
+          "y": -1.78,
+          "width": 127,
+          "height": 36.45
+        }
+      ]
+    },
+    {
+      "name": "txt1",
+      "type": "label",
+      "text": "应用内抽奖活动与苹果公司无关，最终解释权归华清飞扬网络股份有限公司所有",
+      "align": "center",
+      "size": 12,
+      "color": 4294967295,
+      "x": -241,
+      "y": 296,
+      "width": 458,
+      "height": 17
+    }
+  ]
+}

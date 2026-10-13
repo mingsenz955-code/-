@@ -1,0 +1,43 @@
+{
+  "group": [
+    "buildings/0019_breeding_cave_a_g"
+  ],
+  "width": 401,
+  "height": 286,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0019_breeding_cave_a_g_bg.png",
+      "x": 0.8,
+      "y": 186.15
+    },
+    {
+      "name": "zuobiao1",
+      "type": "node",
+      "x": -112,
+      "y": 140
+    },
+    {
+      "name": "zuobiao2",
+      "type": "node",
+      "x": -28,
+      "y": 77
+    },
+    {
+      "name": "zuobiao3",
+      "type": "node",
+      "x": 81,
+      "y": 111
+    },
+    {
+      "name": "eff",
+      "type": "eff",
+      "eff": "0019_breeding_cave_a_eff",
+      "x": 0.4,
+      "y": 0.8,
+      "width": 189.95,
+      "height": 169.25
+    }
+  ]
+}

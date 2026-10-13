@@ -1,0 +1,43 @@
+{
+  "group": [
+    "buildings/PlunderTree_g"
+  ],
+  "width": 648,
+  "height": 802,
+  "children": [
+    {
+      "name": "bg",
+      "type": "btn",
+      "img_normal": "#PlunderTree_g_bg.png",
+      "img_down": "#PlunderTree_g_bg.png",
+      "x": -13,
+      "y": 266.95
+    },
+    {
+      "type": "eff",
+      "eff": "PlunderTree",
+      "x": -13,
+      "y": 265.4,
+      "width": 563.65,
+      "height": 453.5
+    },
+    {
+      "name": "s1",
+      "type": "node",
+      "x": 195,
+      "y": 281.85
+    },
+    {
+      "name": "s2",
+      "type": "node",
+      "x": -8,
+      "y": 339.85
+    },
+    {
+      "name": "s3",
+      "type": "node",
+      "x": -225,
+      "y": 307.85
+    }
+  ]
+}

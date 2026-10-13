@@ -1,0 +1,58 @@
+{
+  "group": {},
+  "children": [
+    {
+      "name": "guangxiao",
+      "type": "sprite",
+      "img": "#ui_newdragon_fg.png",
+      "y": -10.95,
+      "width": 340,
+      "height": 340
+    },
+    {
+      "name": "touxiang",
+      "type": "node",
+      "x": 2,
+      "y": -10.95,
+      "width": 85,
+      "height": 85,
+      "children": [
+        {
+          "name": "xiangkuang",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "eff",
+      "type": "node",
+      "x": 3,
+      "y": 52,
+      "width": 0,
+      "height": 0
+    }
+  ]
+}

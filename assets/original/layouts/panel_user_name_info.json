@@ -1,0 +1,403 @@
+{
+  "group": [
+    "ui_common",
+    "ui_entrance",
+    "ui_bgpuzzle"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768,
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 2,
+      "grid": {
+        "x": 107.95,
+        "y": 111,
+        "width": 45.999999999999986,
+        "height": 27
+      },
+      "x": -315.3,
+      "y": -16.2,
+      "width": 648,
+      "height": 493,
+      "maxw": 648,
+      "maxh": 493
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 2,
+      "grid": {
+        "x": 24.5,
+        "y": 20,
+        "width": 9.5,
+        "height": 9.5
+      },
+      "x": -316.9,
+      "y": 218,
+      "width": 649,
+      "height": 55,
+      "maxw": 649,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "玩家信息",
+      "align": "center",
+      "size": 25,
+      "color": 4294967295,
+      "x": -258.4,
+      "y": 220.55,
+      "width": 538,
+      "height": 32.1
+    },
+    {
+      "name": "userid",
+      "type": "label",
+      "text": "您的ID:",
+      "align": "left",
+      "size": 26,
+      "color": 1092488703,
+      "x": -150.95,
+      "y": 53.83,
+      "width": 102,
+      "height": 33.25
+    },
+    {
+      "name": "userid_num",
+      "type": "label",
+      "text": " ",
+      "align": "left",
+      "size": 26,
+      "color": 1092488703,
+      "x": -45.95,
+      "y": 53.83,
+      "width": 313,
+      "height": 33.25
+    },
+    {
+      "name": "userexp",
+      "type": "label",
+      "text": "升级所需的经验:",
+      "align": "left",
+      "size": 26,
+      "color": 1092488703,
+      "x": -150.95,
+      "y": 89.83,
+      "width": 205,
+      "height": 33.25
+    },
+    {
+      "name": "userexp_num",
+      "type": "label",
+      "text": " ",
+      "align": "left",
+      "size": 26,
+      "color": 1092488703,
+      "x": 54.05,
+      "y": 89.83,
+      "width": 213,
+      "height": 33.25
+    },
+    {
+      "name": "bg_icon",
+      "type": "sprite",
+      "img": "#ui_entrance_g_04.png",
+      "x": -211.2,
+      "y": 120.4,
+      "width": 110,
+      "height": 110
+    },
+    {
+      "name": "icon",
+      "type": "node",
+      "x": -212.6,
+      "y": 124.15,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "node_img_change",
+      "type": "sprite",
+      "img": "#ui_entrance_ts.png",
+      "x": -212.4,
+      "y": 92,
+      "width": 82,
+      "height": 24
+    },
+    {
+      "name": "player_name",
+      "type": "label",
+      "text": "请输入昵称",
+      "align": "left",
+      "size": 28,
+      "color": 1092488703,
+      "x": -150.95,
+      "y": 150.85,
+      "width": 206,
+      "height": 35.5
+    },
+    {
+      "name": "vip",
+      "type": "node",
+      "x": -212.95,
+      "y": 55.08,
+      "width": 66,
+      "height": 28.75,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_entrance_g_03.png",
+          "y": 0.38,
+          "width": 66,
+          "height": 28
+        },
+        {
+          "name": "vip_num",
+          "type": "label",
+          "text": "",
+          "align": "center",
+          "font": "orange_22.fnt",
+          "bmp": 1,
+          "x": -33,
+          "width": 64,
+          "height": 28.75
+        }
+      ]
+    },
+    {
+      "name": "revise",
+      "type": "node",
+      "x": 195.35,
+      "y": 147.3,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "width": 200,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "修改昵称",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -79.5,
+          "y": 4.93,
+          "width": 160,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_bgpuzzle_bg9.png",
+      "scale9": 2,
+      "grid": {
+        "x": 33,
+        "y": 33,
+        "width": 42,
+        "height": 35
+      },
+      "x": -261.95,
+      "y": -57.7,
+      "width": 543,
+      "height": 166,
+      "maxw": 543,
+      "maxh": 166
+    },
+    {
+      "name": "strength",
+      "type": "label",
+      "text": "体力:",
+      "align": "left",
+      "size": 26,
+      "color": 1092488703,
+      "x": -232.95,
+      "y": -21.18,
+      "width": 75,
+      "height": 33.25
+    },
+    {
+      "name": "strength_num",
+      "type": "label",
+      "text": "5/5",
+      "align": "left",
+      "size": 26,
+      "color": 2566914303,
+      "x": -154.95,
+      "y": -21.18,
+      "width": 253,
+      "height": 33.25
+    },
+    {
+      "name": "boss",
+      "type": "label",
+      "text": "BOSS挑战次数:",
+      "align": "left",
+      "size": 26,
+      "color": 1092488703,
+      "x": -232.95,
+      "y": -57.17,
+      "width": 195,
+      "height": 33.25
+    },
+    {
+      "name": "boss_num",
+      "type": "label",
+      "text": "5/5",
+      "align": "left",
+      "size": 26,
+      "color": 2566914303,
+      "x": -37.95,
+      "y": -57.17,
+      "width": 253,
+      "height": 33.25
+    },
+    {
+      "name": "arena",
+      "type": "label",
+      "text": "竞技场挑战次数:",
+      "align": "left",
+      "size": 26,
+      "color": 1092488703,
+      "x": -232.95,
+      "y": -95.17,
+      "width": 195,
+      "height": 33.25
+    },
+    {
+      "name": "arena_num",
+      "type": "label",
+      "text": "5/5",
+      "align": "left",
+      "size": 26,
+      "color": 2566914303,
+      "x": -37.95,
+      "y": -95.17,
+      "width": 253,
+      "height": 33.25
+    },
+    {
+      "name": "btn_set",
+      "type": "node",
+      "x": 20,
+      "y": -193.7,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "width": 200,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "设置",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -79.5,
+          "y": 4.93,
+          "width": 159,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "name": "btn_usercenter",
+      "type": "node",
+      "x": -176.95,
+      "y": -193.7,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "width": 200,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "设置",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -79.5,
+          "y": 4.93,
+          "width": 159,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "name": "btn_approve",
+      "type": "node",
+      "x": 216.7,
+      "y": -193.7,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "width": 200,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "设置",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "x": -79.5,
+          "y": 4.93,
+          "width": 159,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 317.05,
+      "y": 219.65,
+      "width": 80,
+      "height": 86
+    }
+  ]
+}

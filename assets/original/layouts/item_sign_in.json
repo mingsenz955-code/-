@@ -1,0 +1,98 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_hhh2.png",
+      "scale9": 1,
+      "x": -53,
+      "width": 106,
+      "height": 152,
+      "maxw": 106,
+      "maxh": 152
+    },
+    {
+      "name": "jiangpin",
+      "type": "node",
+      "x": 42.5,
+      "y": -43.85,
+      "width": 85,
+      "height": 85,
+      "children": [
+        {
+          "name": "diban",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang1.png",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": " ",
+          "size": 22,
+          "align": "right",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -78.5,
+          "y": 21.58,
+          "width": 73,
+          "height": 28.75
+        }
+      ]
+    },
+    {
+      "name": "tx_daoju",
+      "type": "label",
+      "text": "金币",
+      "size": 18,
+      "align": "center",
+      "color": 1092488703,
+      "x": -48.5,
+      "y": -57.88,
+      "width": 97,
+      "height": 24.25
+    },
+    {
+      "name": "tx_riqi",
+      "type": "label",
+      "text": "第12天",
+      "size": 18,
+      "align": "center",
+      "color": 1092488703,
+      "x": -48.5,
+      "y": 56.13,
+      "width": 97,
+      "height": 24.25
+    },
+    {
+      "name": "zhezhao",
+      "type": "sprite",
+      "img": "#ui_common_hhh1.png",
+      "scale9": 1,
+      "x": -53,
+      "width": 106,
+      "height": 152,
+      "maxw": 106,
+      "maxh": 152
+    },
+    {
+      "name": "biaoji",
+      "type": "sprite",
+      "img": "#ui_common_gou.png",
+      "y": -1.35,
+      "width": 84,
+      "height": 71
+    }
+  ]
+}

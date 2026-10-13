@@ -1,0 +1,27 @@
+{
+  "group": {},
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "mask",
+      "maskRGBA": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0
+      },
+      "maskAnchor": {
+        "x": 1,
+        "y": 1
+      },
+      "scale9mask": true
+    },
+    {
+      "name": "randDragonBtn",
+      "type": "btn",
+      "img_normal": "#ui_entrance_egg1.png",
+      "img_down": "#ui_entrance_egg2.png"
+    }
+  ]
+}

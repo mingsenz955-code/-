@@ -1,0 +1,237 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png"
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_GuanBi1.png",
+      "img_down": "#ui_common_btn_GuanBi2.png",
+      "x": 468.1,
+      "y": 338.9,
+      "right": 43.9
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_d.png",
+      "x": -1.15,
+      "y": 341,
+      "width": 573,
+      "height": 83
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "商城",
+      "size": 28,
+      "align": "center",
+      "color": 4294967295,
+      "x": -216.9,
+      "y": 332.25,
+      "width": 431.85,
+      "height": 35.5
+    },
+    {
+      "name": "longdan",
+      "type": "node",
+      "x": -272.5,
+      "y": 141.25,
+      "width": 215,
+      "height": 217.5,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_shop_fenlei0001.png",
+          "img_down": "#ui_shop_fenlei0001-2.png",
+          "x": -7.5,
+          "y": 8.75
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_shop_fenlei0000.png",
+          "y": -71.25,
+          "width": 215,
+          "height": 75
+        },
+        {
+          "name": "con_name",
+          "type": "node",
+          "x": -8.5,
+          "y": -70.25,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "jianzhu",
+      "type": "node",
+      "x": -2.5,
+      "y": 141.25,
+      "width": 215,
+      "height": 217.5,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_shop_fenlei0004.png",
+          "img_down": "#ui_shop_fenlei0004-2.png",
+          "x": -7.5,
+          "y": 8.75
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_shop_fenlei0000.png",
+          "y": -71.25,
+          "width": 215,
+          "height": 75
+        },
+        {
+          "name": "con_name",
+          "type": "node",
+          "x": -8.5,
+          "y": -70.25,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "zhuangshi",
+      "type": "node",
+      "x": 267.5,
+      "y": 141.25,
+      "width": 215,
+      "height": 217.5,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_shop_fenlei0002.png",
+          "img_down": "#ui_shop_fenlei0002-2.png",
+          "x": -7.5,
+          "y": 8.75
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_shop_fenlei0000.png",
+          "y": -71.25,
+          "width": 215,
+          "height": 75
+        },
+        {
+          "name": "con_name",
+          "type": "node",
+          "x": -8.5,
+          "y": -70.25,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "longchao",
+      "type": "node",
+      "x": -272.5,
+      "y": -148.75,
+      "width": 215,
+      "height": 217.5,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_shop_fenlei0005.png",
+          "img_down": "#ui_shop_fenlei0005-2.png",
+          "x": -7.5,
+          "y": 8.75
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_shop_fenlei0000.png",
+          "y": -71.25,
+          "width": 215,
+          "height": 75
+        },
+        {
+          "name": "con_name",
+          "type": "node",
+          "x": -8.5,
+          "y": -70.25,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "kuojian",
+      "type": "node",
+      "x": -2.5,
+      "y": -148.75,
+      "width": 215,
+      "height": 217.5,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_shop_fenlei0003.png",
+          "img_down": "#ui_shop_fenlei0003-2.png",
+          "x": -7.5,
+          "y": 8.75
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_shop_fenlei0000.png",
+          "y": -71.25,
+          "width": 215,
+          "height": 75
+        },
+        {
+          "name": "con_name",
+          "type": "node",
+          "x": -8.5,
+          "y": -70.25,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "ziyuan",
+      "type": "node",
+      "x": 267.5,
+      "y": -148.75,
+      "width": 215,
+      "height": 217.5,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_shop_fenlei0006.png",
+          "img_down": "#ui_shop_fenlei0006-2.png",
+          "x": -7.5,
+          "y": 8.75
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_shop_fenlei0000.png",
+          "y": -71.25,
+          "width": 215,
+          "height": 75
+        },
+        {
+          "name": "con_name",
+          "type": "node",
+          "x": -8.5,
+          "y": -70.25,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    }
+  ]
+}

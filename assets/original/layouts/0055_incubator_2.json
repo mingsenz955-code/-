@@ -1,0 +1,35 @@
+{
+  "group": [
+    "buildings/0055_incubator_2_g"
+  ],
+  "width": 386,
+  "height": 324,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0055_incubator_2_g_bg.png",
+      "x": 0.05,
+      "y": 185.95
+    },
+    {
+      "name": "egg1",
+      "type": "node",
+      "x": -56,
+      "y": 219
+    },
+    {
+      "name": "egg2",
+      "type": "node",
+      "x": 66,
+      "y": 238
+    },
+    {
+      "name": "s1",
+      "type": "sprite",
+      "img": "#0055_incubator_2_g_s1.png",
+      "x": 5.2,
+      "y": 237.25
+    }
+  ]
+}

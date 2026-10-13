@@ -1,0 +1,454 @@
+{
+  "group": [
+    "ui_gonghuihongbao",
+    "ui_activityhongbao",
+    "ui_gonghuifuben"
+  ],
+  "width": 925,
+  "height": 714,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "grid": {
+        "x": 108,
+        "y": 111,
+        "width": 46,
+        "height": 27
+      },
+      "x": -462,
+      "y": -20,
+      "width": 914,
+      "height": 676,
+      "maxw": 914,
+      "maxh": 676
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "grid": {
+        "x": 25,
+        "y": 20,
+        "width": 10,
+        "height": 10
+      },
+      "x": -462,
+      "y": 308,
+      "width": 925,
+      "height": 55,
+      "maxw": 925,
+      "maxh": 55
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_haoyoulan2.png",
+      "scale9": 1,
+      "grid": {
+        "x": 28,
+        "y": 29,
+        "width": 38,
+        "height": 36
+      },
+      "x": -425,
+      "y": -20,
+      "width": 841,
+      "height": 481,
+      "maxw": 841,
+      "maxh": 481
+    },
+    {
+      "name": "node_pad2",
+      "type": "node",
+      "x": 7,
+      "y": -128,
+      "width": 811,
+      "height": 543,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_gonghuihongbao_img(2).png",
+          "x": -29,
+          "y": 305,
+          "width": 794,
+          "height": 76
+        },
+        {
+          "name": "txt_1",
+          "type": "label",
+          "text": "红包",
+          "align": "center",
+          "size": 35,
+          "color": 2237154047,
+          "x": -77,
+          "y": 317,
+          "width": 149,
+          "height": 44
+        },
+        {
+          "name": "node_btn_reward",
+          "type": "node",
+          "x": 304,
+          "y": 310,
+          "width": 154,
+          "height": 46,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btn_pppp1.png",
+              "img_down": "#ui_common_btn_pppp2.png",
+              "img_disable": "#ui_common_btn_pppp3.png",
+              "width": 154,
+              "height": 46
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "公会奖励 ",
+              "align": "center",
+              "size": 24,
+              "color": 992815615,
+              "outlineColor": 13941402,
+              "x": -68,
+              "y": -1,
+              "width": 135,
+              "height": 31
+            }
+          ]
+        },
+        {
+          "name": "node_info",
+          "type": "node",
+          "x": -152,
+          "y": -150,
+          "width": 514,
+          "height": 68,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuihongbao_img(14).png",
+              "x": -199,
+              "y": 0,
+              "width": 117,
+              "height": 67
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuihongbao_img(24).png",
+              "x": -67,
+              "y": 0,
+              "width": 117,
+              "height": 67
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuihongbao_img(5).png",
+              "x": 67,
+              "y": 0,
+              "width": 117,
+              "height": 67
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_gonghuihongbao_shuliang.png",
+              "x": 199,
+              "y": 0,
+              "width": 117,
+              "height": 67
+            },
+            {
+              "name": "txt_hb4",
+              "type": "label",
+              "text": "?",
+              "align": "left",
+              "size": 22,
+              "color": 2237154047,
+              "x": 190,
+              "y": -18,
+              "width": 58,
+              "height": 29
+            },
+            {
+              "name": "txt_hb3",
+              "type": "label",
+              "text": "?",
+              "align": "left",
+              "size": 22,
+              "color": 2237154047,
+              "x": 58,
+              "y": -14,
+              "width": 58,
+              "height": 29
+            },
+            {
+              "name": "txt_hb2",
+              "type": "label",
+              "text": "?",
+              "align": "left",
+              "size": 22,
+              "color": 2237154047,
+              "x": -77,
+              "y": -14,
+              "width": 58,
+              "height": 29
+            },
+            {
+              "name": "txt_hb1",
+              "type": "label",
+              "text": "?",
+              "align": "left",
+              "size": 22,
+              "color": 2237154047,
+              "x": -207,
+              "y": -15,
+              "width": 58,
+              "height": 29
+            }
+          ]
+        },
+        {
+          "name": "node_btn_sendhb",
+          "type": "node",
+          "x": 274,
+          "y": -158,
+          "width": 200,
+          "height": 85,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btn_3.png",
+              "img_down": "#ui_common_btn_4.png",
+              "img_disable": "#ui_common_btn_4c.png",
+              "width": 200,
+              "height": 85
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "购买红包",
+              "align": "center",
+              "size": 35,
+              "color": 4294967295,
+              "x": -79,
+              "y": 5,
+              "width": 156,
+              "height": 45
+            }
+          ]
+        },
+        {
+          "name": "huadong",
+          "type": "list",
+          "x": -13,
+          "y": 81,
+          "width": 796,
+          "height": 387
+        }
+      ]
+    },
+    {
+      "name": "node_pad1",
+      "type": "node",
+      "x": -6,
+      "y": -72,
+      "width": 797,
+      "height": 549,
+      "children": [
+        {
+          "name": "huadong",
+          "type": "list",
+          "y": 52,
+          "width": 797,
+          "height": 447
+        },
+        {
+          "name": "txt_1",
+          "type": "label",
+          "text": "今日抢得:",
+          "align": "right",
+          "size": 25,
+          "color": 2237154047,
+          "x": -176,
+          "y": -230,
+          "width": 140,
+          "height": 32
+        },
+        {
+          "name": "txt_ownnum",
+          "type": "label",
+          "text": "?",
+          "align": "left",
+          "size": 25,
+          "color": 2237154047,
+          "x": 0,
+          "y": -230,
+          "width": 104,
+          "height": 32
+        },
+        {
+          "name": "txt_null",
+          "type": "label",
+          "text": "当前没有可抢红包",
+          "align": "left",
+          "size": 28,
+          "color": 2237154047,
+          "x": -149,
+          "y": 78,
+          "width": 260,
+          "height": 36
+        },
+        {
+          "name": "node_get",
+          "type": "sprite",
+          "img": "#ui_activityhongbao_mojing.png",
+          "x": -18,
+          "y": -228,
+          "width": 31,
+          "height": 42
+        },
+        {
+          "name": "node_btn_help",
+          "type": "node",
+          "x": 291,
+          "y": -231,
+          "width": 200,
+          "height": 85,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btn_3.png",
+              "img_down": "#ui_common_btn_4.png",
+              "img_disable": "#ui_common_btn_4c.png",
+              "width": 200,
+              "height": 85
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "玩法说明",
+              "align": "center",
+              "size": 35,
+              "color": 4294967295,
+              "x": -79,
+              "y": 5,
+              "width": 156,
+              "height": 45
+            }
+          ]
+        },
+        {
+          "name": "node_btn_refresh",
+          "type": "node",
+          "x": -326,
+          "y": -231,
+          "width": 144,
+          "height": 85,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btn_1.png",
+              "img_down": "#ui_common_btn_2.png",
+              "img_disable": "#ui_common_btn_2c.png",
+              "width": 144,
+              "height": 85
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "刷新",
+              "align": "center",
+              "size": 35,
+              "color": 4294967295,
+              "x": -51,
+              "y": 5,
+              "width": 103,
+              "height": 44
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "node_tab_2",
+      "type": "node",
+      "x": -195,
+      "y": 244,
+      "width": 150,
+      "height": 55,
+      "children": [
+        {
+          "name": "btn",
+          "type": "ckb",
+          "img_on": "#ui_gonghuifuben_bq4.png",
+          "img_off": "#ui_gonghuifuben_bq3.png"
+        },
+        {
+          "name": "txt",
+          "type": "label",
+          "text": "发红包",
+          "align": "center",
+          "size": 25,
+          "color": 2237154047,
+          "x": -59,
+          "y": -1,
+          "width": 117,
+          "height": 32
+        }
+      ]
+    },
+    {
+      "name": "node_tab_1",
+      "type": "node",
+      "x": -350,
+      "y": 244,
+      "width": 150,
+      "height": 55,
+      "children": [
+        {
+          "name": "btn",
+          "type": "ckb",
+          "img_on": "#ui_gonghuifuben_bq4.png",
+          "img_off": "#ui_gonghuifuben_bq3.png"
+        },
+        {
+          "name": "txt",
+          "type": "label",
+          "text": "抢红包",
+          "align": "center",
+          "size": 25,
+          "color": 2237154047,
+          "x": -59,
+          "y": -1,
+          "width": 117,
+          "height": 32
+        }
+      ]
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 423,
+      "y": 313,
+      "width": 80,
+      "height": 86
+    },
+    {
+      "type": "label",
+      "text": "红包",
+      "align": "center",
+      "size": 25,
+      "color": 4294967295,
+      "x": -162,
+      "y": 310,
+      "width": 326,
+      "height": 32
+    }
+  ]
+}

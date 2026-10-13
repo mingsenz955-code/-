@@ -1,0 +1,578 @@
+{
+  "group": [
+    "ui_fuwen",
+    "ui_daojukuang"
+  ],
+  "width": 473,
+  "height": 589,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "grid": {
+        "x": 55,
+        "y": 111,
+        "width": 169,
+        "height": 27
+      },
+      "x": -237,
+      "y": 0,
+      "width": 473,
+      "height": 589,
+      "maxw": 473,
+      "maxh": 589
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_fuwen_xiangqian.png",
+      "x": -1,
+      "y": 10,
+      "width": 418,
+      "height": 418
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_fuwen_zhanlibg.png",
+      "x": 14,
+      "y": -225,
+      "width": 345,
+      "height": 40
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_fuwen_zdl.png",
+      "x": -91,
+      "y": -226,
+      "width": 78,
+      "height": 25
+    },
+    {
+      "name": "txt_power",
+      "type": "label",
+      "text": "xx",
+      "align": "left",
+      "size": 26,
+      "color": 2566914303,
+      "x": -41,
+      "y": -226,
+      "width": 190,
+      "height": 33
+    },
+    {
+      "name": "node_name",
+      "type": "label",
+      "text": "xxxxx",
+      "align": "center",
+      "size": 26,
+      "color": 1008799231,
+      "x": -100,
+      "y": 253,
+      "width": 201,
+      "height": 33
+    },
+    {
+      "name": "node_temp_item1",
+      "type": "node",
+      "x": -63,
+      "y": 68,
+      "width": 110,
+      "height": 110,
+      "children": [
+        {
+          "name": "bg",
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "width": 110,
+          "height": 110
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "image",
+          "type": "node",
+          "x": -1,
+          "y": 3,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "eff",
+          "type": "node",
+          "x": -1,
+          "y": 2,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -37,
+          "y": -26,
+          "width": 77,
+          "height": 27
+        }
+      ]
+    },
+    {
+      "name": "node_temp_item2",
+      "type": "node",
+      "x": 53,
+      "y": 68,
+      "width": 110,
+      "height": 110,
+      "children": [
+        {
+          "name": "bg",
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "width": 110,
+          "height": 110
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "image",
+          "type": "node",
+          "x": -1,
+          "y": 3,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "eff",
+          "type": "node",
+          "x": -1,
+          "y": 2,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -37,
+          "y": -26,
+          "width": 77,
+          "height": 27
+        }
+      ]
+    },
+    {
+      "name": "node_temp_item3",
+      "type": "node",
+      "x": -64,
+      "y": -48,
+      "width": 110,
+      "height": 110,
+      "children": [
+        {
+          "name": "bg",
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "width": 110,
+          "height": 110
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "image",
+          "type": "node",
+          "x": -1,
+          "y": 3,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "eff",
+          "type": "node",
+          "x": -1,
+          "y": 2,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -37,
+          "y": -26,
+          "width": 77,
+          "height": 27
+        }
+      ]
+    },
+    {
+      "name": "node_temp_item4",
+      "type": "node",
+      "x": 53,
+      "y": -48,
+      "width": 110,
+      "height": 110,
+      "children": [
+        {
+          "name": "bg",
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "width": 110,
+          "height": 110
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "image",
+          "type": "node",
+          "x": -1,
+          "y": 3,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "eff",
+          "type": "node",
+          "x": -1,
+          "y": 2,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -37,
+          "y": -26,
+          "width": 77,
+          "height": 27
+        }
+      ]
+    },
+    {
+      "name": "node_fw_item1",
+      "type": "node",
+      "x": -139,
+      "y": 147,
+      "width": 102,
+      "height": 102,
+      "children": [
+        {
+          "name": "image_off",
+          "type": "sprite",
+          "img": "#ui_fuwen_fuk0.png",
+          "x": 3,
+          "y": -1,
+          "width": 102,
+          "height": 102
+        },
+        {
+          "name": "image_on",
+          "type": "sprite",
+          "img": "#ui_fuwen_fuk1.png",
+          "x": 3,
+          "y": -1,
+          "width": 102,
+          "height": 102
+        },
+        {
+          "name": "image_sign",
+          "type": "sprite",
+          "img": "#ui_fuwen_fud1.png",
+          "x": 2,
+          "y": -2,
+          "width": 60,
+          "height": 60
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "x": 4,
+          "y": -4,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "image",
+          "type": "node",
+          "x": 3,
+          "y": -1,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "eff",
+          "type": "node",
+          "x": 3,
+          "y": -2,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -33,
+          "y": -30,
+          "width": 77,
+          "height": 27
+        }
+      ]
+    },
+    {
+      "name": "node_fw_item2",
+      "type": "node",
+      "x": 128,
+      "y": 147,
+      "width": 102,
+      "height": 102,
+      "children": [
+        {
+          "name": "image_off",
+          "type": "sprite",
+          "img": "#ui_fuwen_fuk0.png",
+          "x": 3,
+          "y": -1,
+          "width": 102,
+          "height": 102
+        },
+        {
+          "name": "image_on",
+          "type": "sprite",
+          "img": "#ui_fuwen_fuk1.png",
+          "x": 3,
+          "y": -1,
+          "width": 102,
+          "height": 102
+        },
+        {
+          "name": "image_sign",
+          "type": "sprite",
+          "img": "#ui_fuwen_fud2.png",
+          "x": 2,
+          "y": -1,
+          "width": 60,
+          "height": 60
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "x": 4,
+          "y": -4,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "image",
+          "type": "node",
+          "x": 3,
+          "y": -1,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "eff",
+          "type": "node",
+          "x": 3,
+          "y": -2,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -33,
+          "y": -30,
+          "width": 77,
+          "height": 27
+        }
+      ]
+    },
+    {
+      "name": "node_fw_item3",
+      "type": "node",
+      "x": -139,
+      "y": -119,
+      "width": 102,
+      "height": 102,
+      "children": [
+        {
+          "name": "image_off",
+          "type": "sprite",
+          "img": "#ui_fuwen_fuk0.png",
+          "x": 3,
+          "y": -1,
+          "width": 102,
+          "height": 102
+        },
+        {
+          "name": "image_on",
+          "type": "sprite",
+          "img": "#ui_fuwen_fuk1.png",
+          "x": 3,
+          "y": -1,
+          "width": 102,
+          "height": 102
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_fuwen_fud3.png",
+          "x": 5,
+          "y": -1,
+          "width": 60,
+          "height": 60
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "x": 4,
+          "y": -4,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "image",
+          "type": "node",
+          "x": 3,
+          "y": -1,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "eff",
+          "type": "node",
+          "x": 3,
+          "y": -2,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -33,
+          "y": -30,
+          "width": 77,
+          "height": 27
+        }
+      ]
+    },
+    {
+      "name": "node_fw_item4",
+      "type": "node",
+      "x": 128,
+      "y": -119,
+      "width": 102,
+      "height": 102,
+      "children": [
+        {
+          "name": "image_off",
+          "type": "sprite",
+          "img": "#ui_fuwen_fuk0.png",
+          "x": 3,
+          "y": -1,
+          "width": 102,
+          "height": 102
+        },
+        {
+          "name": "image_on",
+          "type": "sprite",
+          "img": "#ui_fuwen_fuk1.png",
+          "x": 3,
+          "y": -1,
+          "width": 102,
+          "height": 102
+        },
+        {
+          "name": "image_sign",
+          "type": "sprite",
+          "img": "#ui_fuwen_fud4.png",
+          "x": 7,
+          "y": 1,
+          "width": 60,
+          "height": 60
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "x": 4,
+          "y": -4,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "image",
+          "type": "node",
+          "x": 3,
+          "y": -1,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "eff",
+          "type": "node",
+          "x": 3,
+          "y": -2,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -33,
+          "y": -30,
+          "width": 77,
+          "height": 27
+        }
+      ]
+    }
+  ]
+}

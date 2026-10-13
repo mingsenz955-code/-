@@ -1,0 +1,126 @@
+{
+  "group": [
+    "ui_Active",
+    "ui_carnival_banner_fanli"
+  ],
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -384.05,
+      "y": -16.6,
+      "width": 746,
+      "height": 485,
+      "maxw": 746,
+      "maxh": 485
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -389.05,
+      "y": 215.65,
+      "width": 756,
+      "height": 55,
+      "maxw": 756,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "充值返利",
+      "size": 25,
+      "align": "center",
+      "color": 4294967295,
+      "x": -365.5,
+      "y": 218.2,
+      "width": 720,
+      "height": 32.1
+    },
+    {
+      "name": "xinxi",
+      "type": "sprite",
+      "img": "#ui_carnival_banner_fanli.png",
+      "x": -10.85,
+      "y": 21.8,
+      "width": 685,
+      "height": 325
+    },
+    {
+      "name": "tishi_hongse",
+      "type": "label",
+      "text": "",
+      "size": 19,
+      "align": "center",
+      "color": 4278190335,
+      "x": -328,
+      "y": -160.78,
+      "width": 624,
+      "height": 25.35
+    },
+    {
+      "name": "shuoming",
+      "type": "label",
+      "text": "",
+      "size": 19,
+      "align": "center",
+      "color": 1092488703,
+      "x": -328,
+      "y": -191.68,
+      "width": 624,
+      "height": 25.35
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 349.05,
+      "y": 219.15
+    },
+    {
+      "name": "btn_QueDing",
+      "type": "node",
+      "x": -3.9,
+      "y": -252.7,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "确定",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    },
+    {
+      "name": "yilingqu",
+      "type": "sprite",
+      "img": "#ui_carnival_yilingqu.png",
+      "x": 220.5,
+      "y": -104.6,
+      "width": 204,
+      "height": 128
+    }
+  ]
+}

@@ -1,0 +1,354 @@
+{
+  "group": {},
+  "children": [
+    {
+      "name": "bg",
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "y": 2,
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_battle_panding.png",
+      "width": 613,
+      "height": 432
+    },
+    {
+      "name": "miaoshu",
+      "type": "label",
+      "text": "获得道具：",
+      "size": 22,
+      "align": "left",
+      "color": 1092488703,
+      "x": -135.95,
+      "y": 81.03,
+      "width": 276,
+      "height": 28.75
+    },
+    {
+      "name": "btn_cangku",
+      "type": "node",
+      "x": 0.35,
+      "y": -180.3,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "放入仓库",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -79,
+          "y": 4.4,
+          "width": 156,
+          "height": 46.2
+        }
+      ]
+    },
+    {
+      "name": "zuobiao",
+      "type": "node",
+      "y": 178,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "jiangli1",
+      "type": "node",
+      "x": -68.15,
+      "y": -30.85,
+      "width": 85,
+      "height": 85,
+      "children": [
+        {
+          "name": "diban",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang0.png",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "999",
+          "size": 22,
+          "align": "right",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -78.5,
+          "y": 21.58,
+          "width": 73,
+          "height": 28.75
+        }
+      ]
+    },
+    {
+      "name": "jiangli2",
+      "type": "node",
+      "x": 41.85,
+      "y": -30.85,
+      "width": 85,
+      "height": 85,
+      "children": [
+        {
+          "name": "diban",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang0.png",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "999",
+          "size": 22,
+          "align": "right",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -78.5,
+          "y": 21.58,
+          "width": 73,
+          "height": 28.75
+        }
+      ]
+    },
+    {
+      "name": "jiangli3",
+      "type": "node",
+      "x": 151.85,
+      "y": -30.85,
+      "width": 85,
+      "height": 85,
+      "children": [
+        {
+          "name": "diban",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang0.png",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "999",
+          "size": 22,
+          "align": "right",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -78.5,
+          "y": 21.58,
+          "width": 73,
+          "height": 28.75
+        }
+      ]
+    },
+    {
+      "name": "jiangli4",
+      "type": "node",
+      "x": -68.15,
+      "y": -121.85,
+      "width": 85,
+      "height": 85,
+      "children": [
+        {
+          "name": "diban",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang0.png",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "999",
+          "size": 22,
+          "align": "right",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -78.5,
+          "y": 21.58,
+          "width": 73,
+          "height": 28.75
+        }
+      ]
+    },
+    {
+      "name": "jiangli5",
+      "type": "node",
+      "x": 41.85,
+      "y": -121.85,
+      "width": 85,
+      "height": 85,
+      "children": [
+        {
+          "name": "diban",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang0.png",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "999",
+          "size": 22,
+          "align": "right",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -78.5,
+          "y": 21.58,
+          "width": 73,
+          "height": 28.75
+        }
+      ]
+    },
+    {
+      "name": "jiangli6",
+      "type": "node",
+      "x": 151.85,
+      "y": -121.85,
+      "width": 85,
+      "height": 85,
+      "children": [
+        {
+          "name": "diban",
+          "type": "sprite",
+          "img": "#ui_common_DaoJuKuang0.png",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -42.5,
+          "y": 42.5,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "999",
+          "size": 22,
+          "align": "right",
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -78.5,
+          "y": 21.58,
+          "width": 73,
+          "height": 28.75
+        }
+      ]
+    }
+  ]
+}

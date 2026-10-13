@@ -1,0 +1,74 @@
+{
+  "group": [
+    "ui_dafuweng"
+  ],
+  "width": 1379,
+  "height": 478,
+  "children": [
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_GuanBi1.png",
+      "img_down": "#ui_common_btn_GuanBi2.png",
+      "x": 640,
+      "y": 339,
+      "width": 85,
+      "height": 90,
+      "right": 43
+    },
+    {
+      "name": "node_btn_full",
+      "type": "node",
+      "x": 597,
+      "y": -27,
+      "width": 135,
+      "height": 134,
+      "right": 20,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_dafuweng_shaizi.png",
+          "img_down": "#ui_dafuweng_shaizi.png",
+          "width": 135,
+          "height": 134
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_dafuweng_zi2.png",
+          "x": 2,
+          "y": -33,
+          "width": 129,
+          "height": 38
+        }
+      ]
+    },
+    {
+      "name": "node_btn_one",
+      "type": "node",
+      "x": -629,
+      "y": -27,
+      "width": 135,
+      "height": 134,
+      "left": 20,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_dafuweng_shaizi.png",
+          "img_down": "#ui_dafuweng_shaizi.png",
+          "width": 135,
+          "height": 134
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_dafuweng_zi1.png",
+          "x": 6,
+          "y": -35,
+          "width": 68,
+          "height": 38
+        }
+      ]
+    }
+  ]
+}

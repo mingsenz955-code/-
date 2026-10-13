@@ -1,0 +1,799 @@
+{
+  "group": {},
+  "children": [
+    {
+      "name": "bg",
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -366.25,
+      "y": -1.03,
+      "width": 384.65,
+      "height": 501.05,
+      "maxw": 384.65,
+      "maxh": 501.05
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -365.7,
+      "y": 217,
+      "width": 382.85,
+      "height": 55,
+      "maxw": 382.85,
+      "maxh": 55
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "",
+      "size": 25,
+      "align": "center",
+      "color": 4294967295,
+      "x": -349.9,
+      "y": 219.55,
+      "width": 350.65,
+      "height": 32.1
+    },
+    {
+      "name": "btn_fight",
+      "type": "node",
+      "x": -173.35,
+      "y": -180.35,
+      "width": 270,
+      "height": 52,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_battle_btn3.png",
+          "img_down": "#ui_battle_btn4.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "战斗",
+          "size": 30,
+          "align": "center",
+          "color": 4294967295,
+          "x": -103,
+          "y": -2.18,
+          "width": 206,
+          "height": 37.75
+        }
+      ]
+    },
+    {
+      "name": "btn_visit",
+      "type": "node",
+      "x": -173.35,
+      "y": -115.75,
+      "width": 270,
+      "height": 52,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_battle_btn1.png",
+          "img_down": "#ui_battle_btn2.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "拜访",
+          "size": 30,
+          "align": "center",
+          "color": 4294967295,
+          "x": -103,
+          "y": -2.18,
+          "width": 206,
+          "height": 37.75
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_d1.png",
+      "scale9": 1,
+      "x": -335,
+      "y": 175,
+      "width": 317.5,
+      "height": 30,
+      "maxw": 317.5,
+      "maxh": 30
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_d1.png",
+      "scale9": 1,
+      "x": -335,
+      "y": 107,
+      "width": 317.5,
+      "height": 30,
+      "maxw": 317.5,
+      "maxh": 30
+    },
+    {
+      "name": "tx_name",
+      "type": "label",
+      "text": "名字",
+      "size": 25,
+      "align": "left",
+      "color": 255,
+      "x": -320.5,
+      "y": 173.95,
+      "width": 292.6,
+      "height": 32.1
+    },
+    {
+      "name": "dengji",
+      "type": "label",
+      "text": "等级：",
+      "size": 25,
+      "align": "left",
+      "color": 255,
+      "x": -320.5,
+      "y": 139.95,
+      "width": 292.6,
+      "height": 32.1
+    },
+    {
+      "name": "tx_power",
+      "type": "label",
+      "text": "战斗力：",
+      "size": 25,
+      "align": "left",
+      "color": 255,
+      "x": -320.5,
+      "y": 105.95,
+      "width": 292.6,
+      "height": 32.1
+    },
+    {
+      "name": "tx_team",
+      "type": "label",
+      "text": "出战队伍：",
+      "size": 25,
+      "align": "left",
+      "color": 255,
+      "x": -320.5,
+      "y": 71.95,
+      "width": 292.6,
+      "height": 32.1
+    },
+    {
+      "name": "dragon1",
+      "type": "node",
+      "x": -281.15,
+      "y": -12.2,
+      "width": 98,
+      "height": 124,
+      "children": [
+        {
+          "name": "mg_selected",
+          "type": "sprite",
+          "img": "#ui_battle_sss2.png",
+          "width": 98,
+          "height": 124
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "x": 0.2,
+          "y": 14.55,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": 0.2,
+          "y": 14.55,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "type1",
+          "type": "node",
+          "x": 27.2,
+          "y": -43.45,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "type2",
+          "type": "node",
+          "x": -0.3,
+          "y": -43.45,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "type3",
+          "type": "node",
+          "x": -27.8,
+          "y": -42.95,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "level",
+          "type": "sprite",
+          "img": "#ui_battle_v2.png",
+          "x": 32.85,
+          "y": 44.35,
+          "width": 32,
+          "height": 32
+        },
+        {
+          "name": "tx_lv",
+          "type": "label",
+          "text": "99",
+          "size": 17,
+          "align": "center",
+          "color": 255,
+          "x": 20.7,
+          "y": 44.7,
+          "width": 23,
+          "height": 23.1
+        },
+        {
+          "name": "biaoji",
+          "type": "node",
+          "x": -25,
+          "y": 34.5,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "dragon2",
+      "type": "node",
+      "x": -175.15,
+      "y": -12.2,
+      "width": 98,
+      "height": 124,
+      "children": [
+        {
+          "name": "mg_selected",
+          "type": "sprite",
+          "img": "#ui_battle_sss2.png",
+          "width": 98,
+          "height": 124
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "x": 0.2,
+          "y": 14.55,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": 0.2,
+          "y": 14.55,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "type1",
+          "type": "node",
+          "x": 27.2,
+          "y": -43.45,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "type2",
+          "type": "node",
+          "x": -0.3,
+          "y": -43.45,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "type3",
+          "type": "node",
+          "x": -27.8,
+          "y": -42.95,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "level",
+          "type": "sprite",
+          "img": "#ui_battle_v2.png",
+          "x": 32.85,
+          "y": 44.35,
+          "width": 32,
+          "height": 32
+        },
+        {
+          "name": "tx_lv",
+          "type": "label",
+          "text": "99",
+          "size": 17,
+          "align": "center",
+          "color": 255,
+          "x": 20.7,
+          "y": 44.7,
+          "width": 23,
+          "height": 23.1
+        },
+        {
+          "name": "biaoji",
+          "type": "node",
+          "x": -25,
+          "y": 34.5,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "dragon3",
+      "type": "node",
+      "x": -69.15,
+      "y": -12.2,
+      "width": 98,
+      "height": 124,
+      "children": [
+        {
+          "name": "mg_selected",
+          "type": "sprite",
+          "img": "#ui_battle_sss2.png",
+          "width": 98,
+          "height": 124
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "x": 0.2,
+          "y": 14.55,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": 0.2,
+          "y": 14.55,
+          "width": 0,
+          "height": 0,
+          "children": [
+            {
+              "name": "quality",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "type1",
+          "type": "node",
+          "x": 27.2,
+          "y": -43.45,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "type2",
+          "type": "node",
+          "x": -0.3,
+          "y": -43.45,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "type3",
+          "type": "node",
+          "x": -27.8,
+          "y": -42.95,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "level",
+          "type": "sprite",
+          "img": "#ui_battle_v2.png",
+          "x": 32.85,
+          "y": 44.35,
+          "width": 32,
+          "height": 32
+        },
+        {
+          "name": "tx_lv",
+          "type": "label",
+          "text": "99",
+          "size": 17,
+          "align": "center",
+          "color": 255,
+          "x": 20.7,
+          "y": 44.7,
+          "width": 23,
+          "height": 23.1
+        },
+        {
+          "name": "biaoji",
+          "type": "node",
+          "x": -25,
+          "y": 34.5,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "dragon",
+      "type": "node",
+      "x": 163.42,
+      "y": -37.67,
+      "width": 339.15,
+      "height": 427.45,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_DiBan_YangBiZhi.png",
+          "scale9": 1,
+          "x": -169.57,
+          "width": 339.15,
+          "height": 427.45,
+          "maxw": 339.15,
+          "maxh": 427.45
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "x": 94.48,
+          "y": 137.72,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": 94.48,
+          "y": 137.72,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "type1",
+          "type": "node",
+          "x": -120.57,
+          "y": 164.72,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "type2",
+          "type": "node",
+          "x": -72.57,
+          "y": 164.72,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "type3",
+          "type": "node",
+          "x": -24.57,
+          "y": 164.72,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "tx_name",
+          "type": "label",
+          "text": "名字",
+          "size": 25,
+          "align": "left",
+          "color": 255,
+          "x": -134.92,
+          "y": 112.08,
+          "width": 184.9,
+          "height": 32.1
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_d1.png",
+          "scale9": 1,
+          "x": -143.77,
+          "y": 65.63,
+          "width": 292.1,
+          "height": 30,
+          "maxw": 292.1,
+          "maxh": 30
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_d1.png",
+          "scale9": 1,
+          "x": -143.77,
+          "y": -2.38,
+          "width": 292.1,
+          "height": 30,
+          "maxw": 292.1,
+          "maxh": 30
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_d1.png",
+          "scale9": 1,
+          "x": -143.77,
+          "y": -70.38,
+          "width": 292.1,
+          "height": 30,
+          "maxw": 292.1,
+          "maxh": 30
+        },
+        {
+          "name": "tx_star",
+          "type": "label",
+          "text": "星级：",
+          "size": 25,
+          "align": "left",
+          "color": 255,
+          "x": -134.92,
+          "y": 64.58,
+          "width": 184.9,
+          "height": 32.1
+        },
+        {
+          "name": "tx_zhongzu",
+          "type": "label",
+          "text": "种族：",
+          "size": 25,
+          "align": "left",
+          "color": 255,
+          "x": -134.92,
+          "y": 30.57,
+          "width": 273,
+          "height": 32.1
+        },
+        {
+          "name": "tx_level",
+          "type": "label",
+          "text": "等级：",
+          "size": 25,
+          "align": "left",
+          "color": 255,
+          "x": -134.92,
+          "y": -3.43,
+          "width": 273,
+          "height": 32.1
+        },
+        {
+          "name": "tx_peiyang",
+          "type": "label",
+          "text": "培养：",
+          "size": 25,
+          "align": "left",
+          "color": 255,
+          "x": -134.92,
+          "y": -37.42,
+          "width": 273,
+          "height": 32.1
+        },
+        {
+          "name": "tx_power",
+          "type": "label",
+          "text": "战斗力：",
+          "size": 25,
+          "align": "left",
+          "color": 255,
+          "x": -134.92,
+          "y": -71.43,
+          "width": 273,
+          "height": 32.1
+        },
+        {
+          "name": "tx_skill",
+          "type": "label",
+          "text": "技能：",
+          "size": 25,
+          "align": "left",
+          "color": 255,
+          "x": -134.92,
+          "y": -105.43,
+          "width": 273,
+          "height": 32.1
+        },
+        {
+          "name": "skill1",
+          "type": "node",
+          "x": -93.12,
+          "y": -152.72,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "skill2",
+          "type": "node",
+          "x": -34.13,
+          "y": -152.72,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "skill3",
+          "type": "node",
+          "x": 24.88,
+          "y": -152.72,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "skill4",
+          "type": "node",
+          "x": 83.88,
+          "y": -152.72,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "star1",
+          "type": "node",
+          "x": -41.07,
+          "y": 66.13,
+          "width": 29,
+          "height": 29,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_dragon_x0001.png",
+              "width": 29,
+              "height": 29
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "star2",
+          "type": "node",
+          "x": -11.07,
+          "y": 66.13,
+          "width": 29,
+          "height": 29,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_dragon_x0001.png",
+              "width": 29,
+              "height": 29
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "star3",
+          "type": "node",
+          "x": 18.93,
+          "y": 66.13,
+          "width": 29,
+          "height": 29,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_dragon_x0001.png",
+              "width": 29,
+              "height": 29
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "star4",
+          "type": "node",
+          "x": 48.93,
+          "y": 66.13,
+          "width": 29,
+          "height": 29,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_dragon_x0001.png",
+              "width": 29,
+              "height": 29
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "star5",
+          "type": "node",
+          "x": 78.93,
+          "y": 66.13,
+          "width": 29,
+          "height": 29,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_dragon_x0001.png",
+              "width": 29,
+              "height": 29
+            },
+            {
+              "name": "icon",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_S_GuanBi1.png",
+      "img_down": "#ui_common_btn_S_GuanBi2.png",
+      "x": 9.85,
+      "y": 219.05
+    }
+  ]
+}

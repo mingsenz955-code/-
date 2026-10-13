@@ -1,0 +1,65 @@
+{
+  "group": [
+    "ui_Book"
+  ],
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png"
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_GuanBi1.png",
+      "img_down": "#ui_common_btn_GuanBi2.png",
+      "x": 468.1,
+      "y": 338.9,
+      "right": 43.9
+    },
+    {
+      "name": "fanhui",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_FanHui1.png",
+      "img_down": "#ui_common_btn_FanHui2.png",
+      "x": -469.5,
+      "y": 339,
+      "left": 42.5
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_battle_jd1.png",
+      "y": 330.5,
+      "width": 510,
+      "height": 60
+    },
+    {
+      "name": "con_tianchong",
+      "type": "node",
+      "y": 330.5,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "图鉴",
+      "size": 27,
+      "align": "center",
+      "color": 4294967295,
+      "x": -216.9,
+      "y": 332.82,
+      "width": 431.85,
+      "height": 34.35
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "y": 4.6,
+      "width": 1024,
+      "height": 515.6,
+      "left": 0,
+      "right": 0
+    }
+  ]
+}

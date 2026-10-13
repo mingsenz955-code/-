@@ -1,0 +1,401 @@
+{
+  "group": [
+    "ui_bgpuzzle",
+    "ui_guild"
+  ],
+  "width": 923,
+  "height": 575,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_bgpuzzle_dage.png",
+      "scale9": 1,
+      "x": -459.45,
+      "y": 181.4,
+      "width": 920,
+      "height": 212,
+      "maxw": 920,
+      "maxh": 212
+    },
+    {
+      "name": "flag_icon",
+      "type": "node",
+      "x": -383.45,
+      "y": 196.45,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_guild_xiaoheitiao.png",
+      "x": -385.5,
+      "y": 148.45,
+      "width": 65,
+      "height": 24
+    },
+    {
+      "name": "level",
+      "type": "label",
+      "text": "",
+      "align": "center",
+      "size": 20,
+      "color": 4294967295,
+      "x": -415.45,
+      "y": 146.5,
+      "width": 61,
+      "height": 26.5
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_guild_toumingtiao.png",
+      "x": 0.55,
+      "y": 247.45,
+      "width": 912,
+      "height": 53
+    },
+    {
+      "name": "guild_name",
+      "type": "label",
+      "text": "",
+      "align": "left",
+      "size": 28,
+      "color": 4294967295,
+      "x": -309.45,
+      "y": 244.95,
+      "width": 393,
+      "height": 35.5
+    },
+    {
+      "name": "leader_txt",
+      "type": "label",
+      "text": "会长：",
+      "align": "left",
+      "size": 24,
+      "color": 3293911807,
+      "x": -310.45,
+      "y": 188.05,
+      "width": 78,
+      "height": 31
+    },
+    {
+      "name": "leader_name",
+      "type": "label",
+      "text": "",
+      "align": "left",
+      "size": 24,
+      "color": 4294967295,
+      "x": -232.45,
+      "y": 188.05,
+      "width": 182,
+      "height": 31
+    },
+    {
+      "name": "res_txt",
+      "type": "label",
+      "text": "物资：",
+      "align": "left",
+      "size": 24,
+      "color": 3293911807,
+      "x": -310.45,
+      "y": 146.05,
+      "width": 78,
+      "height": 31
+    },
+    {
+      "name": "res_num",
+      "type": "label",
+      "text": "",
+      "align": "left",
+      "size": 24,
+      "color": 4294967295,
+      "x": -232.45,
+      "y": 146.05,
+      "width": 182,
+      "height": 31
+    },
+    {
+      "name": "slogan_txt",
+      "type": "label",
+      "text": "宣言：",
+      "align": "left",
+      "size": 24,
+      "color": 3293911807,
+      "x": -310.45,
+      "y": 104.05,
+      "width": 78,
+      "height": 31
+    },
+    {
+      "name": "slogan",
+      "type": "label",
+      "text": "",
+      "align": "left",
+      "size": 24,
+      "color": 4294967295,
+      "x": -232.45,
+      "y": 104.05,
+      "width": 387,
+      "height": 31
+    },
+    {
+      "name": "id_txt",
+      "type": "label",
+      "text": "公会ID：",
+      "align": "left",
+      "size": 24,
+      "color": 3293911807,
+      "x": -50.45,
+      "y": 188.05,
+      "width": 101,
+      "height": 31
+    },
+    {
+      "name": "id_num",
+      "type": "label",
+      "text": "",
+      "align": "left",
+      "size": 24,
+      "color": 4294967295,
+      "x": 50.55,
+      "y": 188.05,
+      "width": 153,
+      "height": 31
+    },
+    {
+      "name": "qq_txt",
+      "type": "label",
+      "text": "QQ群：",
+      "align": "left",
+      "size": 24,
+      "color": 3293911807,
+      "x": -50.45,
+      "y": 146.05,
+      "width": 101,
+      "height": 31
+    },
+    {
+      "name": "qq_num",
+      "type": "label",
+      "text": "",
+      "align": "left",
+      "size": 24,
+      "color": 4294967295,
+      "x": 50.55,
+      "y": 146.05,
+      "width": 385,
+      "height": 31
+    },
+    {
+      "name": "member_txt",
+      "type": "label",
+      "text": "成员：",
+      "align": "left",
+      "size": 24,
+      "color": 3293911807,
+      "x": 206.55,
+      "y": 188.05,
+      "width": 79,
+      "height": 31
+    },
+    {
+      "name": "member_num",
+      "type": "label",
+      "text": "",
+      "align": "left",
+      "size": 24,
+      "color": 4294967295,
+      "x": 285.55,
+      "y": 188.05,
+      "width": 153,
+      "height": 31
+    },
+    {
+      "name": "btn_manage",
+      "type": "node",
+      "x": 263.85,
+      "y": 245.95,
+      "width": 154,
+      "height": 46,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_pppp1.png",
+          "img_down": "#ui_common_btn_pppp2.png",
+          "width": 154,
+          "height": 46
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "公会管理",
+          "align": "center",
+          "size": 26,
+          "color": 992815615,
+          "outlineColor": 13941402,
+          "x": -73,
+          "y": -0.88,
+          "width": 144,
+          "height": 33.25
+        }
+      ]
+    },
+    {
+      "name": "hint_news",
+      "type": "node",
+      "x": 327.5,
+      "y": 263.65,
+      "width": 35,
+      "height": 34,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_guild_shuziqiu.png",
+          "width": 35,
+          "height": 34
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "99",
+          "align": "center",
+          "size": 20,
+          "color": 4294967295,
+          "x": -16.1,
+          "y": 0.1,
+          "width": 31,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "btn_exit",
+      "type": "node",
+      "x": 401.5,
+      "y": 245.95,
+      "width": 92,
+      "height": 46,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_guild_btnred1.png",
+          "img_down": "#ui_guild_btnred2.png",
+          "width": 92,
+          "height": 46
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "退出",
+          "align": "center",
+          "size": 26,
+          "color": 992815615,
+          "outlineColor": 13941402,
+          "x": -42,
+          "y": -0.88,
+          "width": 85,
+          "height": 33.25
+        }
+      ]
+    },
+    {
+      "name": "btn_xuanchuan",
+      "type": "node",
+      "x": -384.1,
+      "y": 109.05,
+      "width": 92,
+      "height": 46,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btndh1.png",
+          "img_down": "#ui_common_btndh2.png",
+          "img_disable": "#ui_common_btndh3.png",
+          "width": 92,
+          "height": 46
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "宣传",
+          "align": "center",
+          "size": 30,
+          "color": 992815615,
+          "outlineColor": 13941402,
+          "x": -44,
+          "y": -0.13,
+          "width": 85,
+          "height": 37.75
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_guild_gonggaotiao.png",
+      "x": -119.5,
+      "y": -9.45,
+      "width": 684,
+      "height": 155
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_guild_gonggao.png",
+      "x": -368.6,
+      "y": 45.05,
+      "width": 91,
+      "height": 35
+    },
+    {
+      "name": "announcement",
+      "type": "label",
+      "text": "",
+      "align": "left",
+      "size": 24,
+      "color": 1092488703,
+      "x": -411.45,
+      "y": -15.8,
+      "width": 587.95,
+      "height": 75.5
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_bgpuzzle_dage.png",
+      "scale9": 1,
+      "x": -457.45,
+      "y": -187.05,
+      "width": 683,
+      "height": 197,
+      "maxw": 683,
+      "maxh": 197
+    },
+    {
+      "name": "huadong_announcement",
+      "type": "list",
+      "x": -116,
+      "y": -187.05,
+      "width": 666,
+      "height": 190
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_bgpuzzle_dage.png",
+      "scale9": 1,
+      "x": 232.55,
+      "y": -112.45,
+      "width": 229,
+      "height": 350,
+      "maxw": 229,
+      "maxh": 350
+    },
+    {
+      "name": "huadong_btn",
+      "type": "list",
+      "x": 345.95,
+      "y": -112.05,
+      "width": 215,
+      "height": 342
+    }
+  ]
+}

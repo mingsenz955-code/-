@@ -1,0 +1,184 @@
+{
+  "group": [
+    "ui_activityequip"
+  ],
+  "width": 1024,
+  "height": 768,
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "width": 1024,
+      "height": 768,
+      "alpha": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -500.45,
+      "y": -47.5,
+      "width": 1000,
+      "height": 564,
+      "maxw": 1000,
+      "maxh": 564
+    },
+    {
+      "name": "hint1",
+      "type": "label",
+      "text": "消费魔晶达成右侧条件,即可领取丰厚奖励",
+      "align": "left",
+      "size": 26,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -456.95,
+      "y": 83.55,
+      "width": 282,
+      "height": 122
+    },
+    {
+      "name": "hint2",
+      "type": "label",
+      "text": "当期累计消费魔晶",
+      "align": "left",
+      "size": 26,
+      "color": 4291572735,
+      "outlineColor": 0,
+      "x": -457.7,
+      "y": -54.02,
+      "width": 282,
+      "height": 33.25
+    },
+    {
+      "name": "hint3",
+      "type": "label",
+      "text": "注：（达成条件后，请及时领取奖励，以免活动结束后将不能领取）",
+      "align": "left",
+      "size": 20,
+      "color": 3422552319,
+      "outlineColor": 0,
+      "x": -456.95,
+      "y": -257.45,
+      "width": 298,
+      "height": 92
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_activityequip_mijing.png",
+      "x": -443.6,
+      "y": -111,
+      "width": 31,
+      "height": 42
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_activityequip_bg_num.png",
+      "x": -288.95,
+      "y": -114.35,
+      "width": 270,
+      "height": 50
+    },
+    {
+      "name": "spend_num",
+      "type": "label",
+      "text": "",
+      "align": "left",
+      "size": 26,
+      "color": 1092488703,
+      "x": -415.95,
+      "y": -116.28,
+      "width": 253,
+      "height": 33.25
+    },
+    {
+      "name": "title_panel",
+      "type": "node",
+      "x": 0.5,
+      "y": 219.9,
+      "width": 996,
+      "height": 55,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_BiaoTi_Bg_s.png",
+          "scale9": 1,
+          "x": -498,
+          "width": 996,
+          "height": 55,
+          "maxw": 996,
+          "maxh": 55
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_activityequip_title_xiaofei.png",
+      "x": -0.5,
+      "y": 231.5,
+      "width": 203,
+      "height": 59
+    },
+    {
+      "name": "time",
+      "type": "node",
+      "x": 3,
+      "y": 177.5,
+      "width": 422,
+      "height": 41,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_activityequip_bg_time.png",
+          "width": 422,
+          "height": 41
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "活动时间:",
+          "align": "left",
+          "size": 22,
+          "color": 4294967295,
+          "outlineColor": 4267533,
+          "x": -189,
+          "y": 0.88,
+          "width": 100.95,
+          "height": 28.75
+        },
+        {
+          "name": "time",
+          "type": "label",
+          "text": " ",
+          "align": "left",
+          "size": 22,
+          "color": 4294967295,
+          "outlineColor": 4267533,
+          "x": -88.05,
+          "y": 0.88,
+          "width": 429.05,
+          "height": 28.75
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_activityequip_bg9.png",
+      "scale9": 1,
+      "x": -146,
+      "y": -72.75,
+      "width": 625,
+      "height": 456,
+      "maxw": 625,
+      "maxh": 456
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "x": 164.35,
+      "y": -69.35,
+      "width": 598,
+      "height": 435
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "group": {},
+  "width": 666,
+  "height": 27,
+  "children": [
+    {
+      "name": "time",
+      "type": "label",
+      "text": "3-28 18:00,",
+      "align": "left",
+      "size": 20,
+      "color": 4294967295,
+      "x": -333,
+      "width": 666,
+      "height": 26.5
+    },
+    {
+      "name": "miaoshu",
+      "type": "node",
+      "x": -199,
+      "width": 0,
+      "height": 0
+    }
+  ]
+}

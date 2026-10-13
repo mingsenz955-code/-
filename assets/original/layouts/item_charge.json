@@ -1,0 +1,164 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_chongzhitiao.png",
+      "scale9": 1,
+      "x": -259.5,
+      "y": -5.5,
+      "width": 519,
+      "height": 86,
+      "maxw": 519,
+      "maxh": 86
+    },
+    {
+      "name": "danwei",
+      "type": "sprite",
+      "img": "#ui_common_yuan.png",
+      "x": -228.2,
+      "y": -0.4,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "name": "num_jiage",
+      "type": "label",
+      "text": "999",
+      "size": 26,
+      "align": "center",
+      "color": 1092488703,
+      "x": -223.2,
+      "y": -1.68,
+      "width": 53,
+      "height": 33.25
+    },
+    {
+      "name": "denghao",
+      "type": "sprite",
+      "img": "#ui_common_deng.png",
+      "x": -149.2,
+      "y": 12.65,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "name": "icon_duihuan",
+      "type": "sprite",
+      "img": "#ui_common_HuoBi0002.png",
+      "x": -125.7,
+      "y": -1.35,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "name": "num_duihuan",
+      "type": "label",
+      "text": "9999",
+      "size": 26,
+      "align": "center",
+      "color": 1092488703,
+      "x": -113.55,
+      "y": -1.68,
+      "width": 67,
+      "height": 33.25
+    },
+    {
+      "name": "zengsong",
+      "type": "node",
+      "x": 43.12,
+      "y": -5.05,
+      "width": 202.45,
+      "height": 40,
+      "children": [
+        {
+          "type": "label",
+          "text": "送",
+          "size": 26,
+          "align": "right",
+          "color": 1092488703,
+          "x": -101.22,
+          "y": 3.38,
+          "width": 88.1,
+          "height": 33.25
+        },
+        {
+          "name": "icon_zengsong",
+          "type": "sprite",
+          "img": "#ui_common_HuoBi0002.png",
+          "x": 14.08,
+          "y": 4,
+          "width": 40,
+          "height": 40
+        },
+        {
+          "name": "num_zengsong",
+          "type": "label",
+          "text": "9999",
+          "size": 26,
+          "align": "center",
+          "color": 1092488703,
+          "x": 34.22,
+          "y": 3.38,
+          "width": 67,
+          "height": 33.25
+        }
+      ]
+    },
+    {
+      "name": "btn_chongzhi",
+      "type": "node",
+      "x": 197.75,
+      "y": -6.47,
+      "width": 92,
+      "height": 58.15,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btndh1.png",
+          "img_down": "#ui_common_btndh2.png",
+          "y": 6.07
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "充值",
+          "size": 24,
+          "align": "center",
+          "color": 992815615,
+          "outlineColor": 13941402,
+          "x": -37,
+          "y": 5.32,
+          "width": 73,
+          "height": 31
+        },
+        {
+          "name": "tax_miaoshu",
+          "type": "label",
+          "text": "仅限一次",
+          "size": 16,
+          "align": "center",
+          "color": 4294967295,
+          "outlineColor": 4267533,
+          "x": -43,
+          "y": -16.95,
+          "width": 86,
+          "height": 24.25
+        }
+      ]
+    },
+    {
+      "name": "tax_miaoshu",
+      "type": "label",
+      "text": "仅限一次",
+      "size": 16,
+      "align": "center",
+      "color": 255,
+      "x": -239.95,
+      "y": -33.38,
+      "width": 384,
+      "height": 22.05
+    }
+  ]
+}

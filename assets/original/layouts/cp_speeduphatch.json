@@ -1,0 +1,65 @@
+{
+  "group": {},
+  "children": [
+    {
+      "name": "btn",
+      "type": "btn",
+      "img_normal": "#ui_main_ico_Long_DiBan0001.png",
+      "img_down": "#ui_main_ico_Long_DiBan0002.png"
+    },
+    {
+      "name": "con_img",
+      "type": "node",
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "shuzidiban",
+      "type": "sprite",
+      "img": "#ui_common_shuzikuangcp.png",
+      "y": 65,
+      "width": 94,
+      "height": 30
+    },
+    {
+      "name": "miaoshu",
+      "type": "node",
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "txt_boost",
+      "type": "label",
+      "text": " ",
+      "size": 20,
+      "align": "center",
+      "color": 4294967269,
+      "outlineColor": 0,
+      "x": -141,
+      "y": -36.4,
+      "width": 282.05,
+      "height": 26.5
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": " ",
+      "size": 18,
+      "align": "right",
+      "color": 229,
+      "x": -39.9,
+      "y": 62.45,
+      "width": 60,
+      "height": 26.5
+    },
+    {
+      "name": "con_icon",
+      "type": "sprite",
+      "img": "#ui_common_HuoBi0002.png",
+      "x": 44.1,
+      "y": 63.15,
+      "width": 40,
+      "height": 40
+    }
+  ]
+}

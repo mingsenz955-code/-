@@ -1,0 +1,113 @@
+{
+  "group": [
+    "ui_Start",
+    "ui_login"
+  ],
+  "width": 2045,
+  "height": 1152,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#ui_start_start.png",
+      "width": 2045,
+      "height": 1152
+    },
+    {
+      "name": "btn_weixin",
+      "type": "node",
+      "x": -173.75,
+      "y": -311.7,
+      "width": 265,
+      "height": 67,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_login_btn_weixin1.png",
+          "img_down": "#ui_login_btn_weixin2.png",
+          "width": 265,
+          "height": 67
+        },
+        {
+          "name": "miaoshu2",
+          "type": "label",
+          "text": "与微信好友一起玩",
+          "align": "left",
+          "size": 23,
+          "color": 255,
+          "x": -74.5,
+          "y": -0.48,
+          "width": 200,
+          "height": 29.85
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "与微信好友一起玩",
+          "align": "left",
+          "size": 23,
+          "color": 4294967295,
+          "x": -74.5,
+          "y": 0.52,
+          "width": 200,
+          "height": 29.85
+        }
+      ]
+    },
+    {
+      "name": "btn_qq",
+      "type": "node",
+      "x": 174.8,
+      "y": -311.7,
+      "width": 265,
+      "height": 67,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_login_btn_qq1.png",
+          "img_down": "#ui_login_btn_qq2.png",
+          "width": 265,
+          "height": 67
+        },
+        {
+          "name": "miaoshu2",
+          "type": "label",
+          "text": "与QQ好友一起玩",
+          "align": "left",
+          "size": 23,
+          "color": 255,
+          "x": -74.5,
+          "y": -0.35,
+          "width": 200,
+          "height": 29.6
+        },
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "与QQ好友一起玩",
+          "align": "left",
+          "size": 23,
+          "color": 4294967295,
+          "x": -74.5,
+          "y": 0.63,
+          "width": 200,
+          "height": 29.65
+        }
+      ]
+    },
+    {
+      "name": "ver",
+      "type": "label",
+      "text": "",
+      "align": "left",
+      "size": 18,
+      "color": 1697913343,
+      "width": 151,
+      "height": 24,
+      "left": 0,
+      "bottom": 0
+    }
+  ]
+}

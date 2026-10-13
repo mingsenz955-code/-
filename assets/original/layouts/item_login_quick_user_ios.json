@@ -1,0 +1,36 @@
+{
+  "group": [
+    "ui_login_ios"
+  ],
+  "width": 374,
+  "height": 39,
+  "children": [
+    {
+      "name": "img_select",
+      "type": "sprite",
+      "img": "#ui_login_ios_xuanzhongtiao.png",
+      "width": 374,
+      "height": 39
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "快速登录",
+      "align": "left",
+      "size": 28,
+      "color": 6750207,
+      "x": -165.5,
+      "width": 311,
+      "height": 35.5
+    },
+    {
+      "name": "btn_del",
+      "type": "btn",
+      "img_normal": "#ui_login_ios_close1.png",
+      "img_down": "#ui_login_ios_close2.png",
+      "x": 164,
+      "width": 26,
+      "height": 25
+    }
+  ]
+}

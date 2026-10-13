@@ -1,0 +1,1102 @@
+{
+  "group": [
+    "ui_Invite",
+    "thumbs_store_dragon"
+  ],
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png",
+      "alpha": 0
+    },
+    {
+      "name": "basenode",
+      "type": "node"
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_invite_backcolor.png",
+      "scale9": 1,
+      "width": 656,
+      "height": 671,
+      "x": -328.0,
+      "y": 14
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_invite_dress_rect.png",
+      "scale9": 1,
+      "width": 680,
+      "height": 692,
+      "x": -338.5,
+      "y": 14
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_invite_bg.png",
+      "width": 644,
+      "height": 610,
+      "x": 0,
+      "y": -10
+    },
+    {
+      "name": "title_panel",
+      "type": "node",
+      "x": 0,
+      "y": 300,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_invite_title_bg.png",
+          "width": 644,
+          "height": 84,
+          "x": 1
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_invite_title.png",
+          "width": 138,
+          "height": 41,
+          "y": 15
+        },
+        {
+          "name": "close",
+          "type": "maskBtn",
+          "img_normal": "#ui_common_btn_S_GuanBi1.png",
+          "img_down": "#ui_common_btn_S_GuanBi2.png",
+          "x": 309,
+          "y": 24,
+          "width": 85,
+          "height": 90
+        }
+      ]
+    },
+    {
+      "name": "wait_text",
+      "type": "label",
+      "text": "请稍候 ...",
+      "align": "center",
+      "size": 40,
+      "color": 4278190079,
+      "outlineColor": 4287900160,
+      "width": 600,
+      "height": 200,
+      "x": -300
+    },
+    {
+      "name": "be_invited_panel",
+      "type": "node",
+      "x": 0,
+      "y": 210,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_main_ico_huodong01.png",
+          "width": 105,
+          "height": 105,
+          "x": -197,
+          "y": 12
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_invite_text_1.png",
+          "width": 339,
+          "height": 20,
+          "y": -55
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_dragon_zl.png",
+          "width": 57,
+          "height": 26,
+          "x": -209,
+          "y": -55
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_dragon_zl.png",
+          "width": -57,
+          "height": 26,
+          "x": 209,
+          "y": -55
+        },
+        {
+          "name": "input_node",
+          "type": "node",
+          "x": -46,
+          "y": -93,
+          "children": [
+            {
+              "name": "tishi",
+              "type": "maskBtn",
+              "img_normal": "#ui_common_btn_tishi1.png",
+              "img_down": "#ui_common_btn_tishi2.png",
+              "x": -214,
+              "y": 6,
+              "width": 58,
+              "height": 58
+            }
+          ]
+        },
+        {
+          "name": "be_invited_btn_node",
+          "type": "node",
+          "x": 173,
+          "y": -93,
+          "children": [
+            {
+              "name": "be_invited_btn",
+              "type": "btn",
+              "img_normal": "#ui_invite_long_btn_1.png",
+              "img_down": "#ui_invite_long_btn_2.png"
+            },
+            {
+              "name": "be_invited_btn_block",
+              "type": "sprite",
+              "img": "#ui_invite_long_btn_3.png",
+              "width": 139,
+              "height": 37
+            },
+            {
+              "name": "be_invited_btn_txt",
+              "type": "label",
+              "text": "马上验证",
+              "color": 4294967295,
+              "align": "center",
+              "width": 140,
+              "height": 56,
+              "x": -70,
+              "size": 20
+            }
+          ]
+        },
+        {
+          "name": "join_gift_slot_1",
+          "type": "node",
+          "x": -76,
+          "y": 10,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "join_gift_slot_1_node",
+              "type": "node"
+            },
+            {
+              "name": "join_gift_slot_1_txt",
+              "type": "label",
+              "text": "-1",
+              "size": 18,
+              "align": "right",
+              "color": 4294967295,
+              "width": 68,
+              "height": 34,
+              "x": -36,
+              "y": -25
+            }
+          ]
+        },
+        {
+          "name": "join_gift_slot_2",
+          "type": "node",
+          "x": 16,
+          "y": 10,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "join_gift_slot_2_node",
+              "type": "node"
+            },
+            {
+              "name": "join_gift_slot_2_txt",
+              "type": "label",
+              "text": "-1",
+              "size": 18,
+              "align": "right",
+              "color": 4294967295,
+              "width": 68,
+              "height": 34,
+              "x": -36,
+              "y": -25
+            }
+          ]
+        },
+        {
+          "name": "join_gift_slot_3",
+          "type": "node",
+          "x": 108,
+          "y": 10,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "join_gift_slot_3_node",
+              "type": "node"
+            },
+            {
+              "name": "join_gift_slot_3_txt",
+              "type": "label",
+              "text": "-1",
+              "size": 18,
+              "align": "right",
+              "color": 4294967295,
+              "width": 68,
+              "height": 34,
+              "x": -36,
+              "y": -25
+            }
+          ]
+        },
+        {
+          "name": "join_gift_slot_4",
+          "type": "node",
+          "x": 200,
+          "y": 10,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png",
+              "width": 85,
+              "height": 85
+            },
+            {
+              "name": "join_gift_slot_4_node",
+              "type": "node"
+            },
+            {
+              "name": "join_gift_slot_4_txt",
+              "type": "label",
+              "text": "-1",
+              "size": 18,
+              "align": "right",
+              "color": 4294967295,
+              "width": 68,
+              "height": 34,
+              "x": -36,
+              "y": -25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_invite_breakline.png",
+      "width": 639,
+      "height": 3,
+      "y": 86
+    },
+    {
+      "name": "invite_panel",
+      "type": "node",
+      "x": 0,
+      "y": 33,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_invite_text_2.png",
+          "x": -220,
+          "y": 25,
+          "width": 134,
+          "height": 25
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_invite_text_3.png",
+          "x": 230,
+          "y": 37,
+          "width": 68,
+          "height": 18
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_HuoBi0001.png",
+          "x": 172,
+          "y": 25,
+          "width": 9,
+          "height": 34
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_common_HuoBi0001.png",
+          "x": 288,
+          "y": 25,
+          "width": -9,
+          "height": 34
+        },
+        {
+          "name": "invite_code_label",
+          "type": "label",
+          "text": "XXXXXXXXXXXX",
+          "x": -143,
+          "y": 24,
+          "width": 360,
+          "height": 40,
+          "align": "left",
+          "size": 26,
+          "color": 4278190079,
+          "outlineColor": 4287900160
+        },
+        {
+          "name": "invite_count_label",
+          "type": "label",
+          "text": "XXX",
+          "x": 132,
+          "y": 12,
+          "width": 200,
+          "height": 40,
+          "size": 22,
+          "align": "center",
+          "color": 4278190079,
+          "outlineColor": 4287900160
+        },
+        {
+          "name": "invite_gift_1_panel",
+          "type": "node",
+          "x": 0,
+          "y": -72,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_invite_reward_panel.png",
+              "scale9": 1,
+              "x": -308.5,
+              "y": 21,
+              "width": 617,
+              "height": 99
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_invite_count_panel.png",
+              "width": 96,
+              "height": 57,
+              "x": -237,
+              "y": 21
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_dragon_zl.png",
+              "width": -57,
+              "height": 26,
+              "x": -276.5,
+              "y": -18
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_dragon_zl.png",
+              "width": 57,
+              "height": 26,
+              "x": 276.5,
+              "y": -18
+            },
+            {
+              "name": "invite_gift_1_panel_goal_txt",
+              "type": "label",
+              "size": 20,
+              "text": "邀请--人",
+              "color": 4278190079,
+              "outlineColor": 4287900160,
+              "align": "center",
+              "width": 120,
+              "height": 32,
+              "x": -295,
+              "y": 34
+            },
+            {
+              "name": "invite_gift_1_panel_count_txt",
+              "type": "label",
+              "size": 20,
+              "text": "仅差--人",
+              "color": 4292356607,
+              "outlineColor": 4287900160,
+              "align": "center",
+              "width": 120,
+              "height": 32,
+              "x": -295,
+              "y": 7
+            },
+            {
+              "name": "invite_gift_1_slot_1",
+              "type": "node",
+              "x": -135,
+              "y": 22,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_common_DaoJuKuang1.png",
+                  "width": 85,
+                  "height": 85
+                },
+                {
+                  "name": "invite_gift_1_slot_1_node",
+                  "type": "node"
+                },
+                {
+                  "name": "invite_gift_1_slot_1_txt",
+                  "type": "label",
+                  "text": "-1",
+                  "size": 18,
+                  "align": "right",
+                  "color": 4294967295,
+                  "width": 68,
+                  "height": 34,
+                  "x": -36,
+                  "y": -25
+                }
+              ]
+            },
+            {
+              "name": "invite_gift_1_slot_2",
+              "type": "node",
+              "x": -43,
+              "y": 22,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_common_DaoJuKuang1.png",
+                  "width": 85,
+                  "height": 85
+                },
+                {
+                  "name": "invite_gift_1_slot_2_node",
+                  "type": "node"
+                },
+                {
+                  "name": "invite_gift_1_slot_2_txt",
+                  "type": "label",
+                  "text": "-1",
+                  "size": 18,
+                  "align": "right",
+                  "color": 4294967295,
+                  "width": 68,
+                  "height": 34,
+                  "x": -36,
+                  "y": -25
+                }
+              ]
+            },
+            {
+              "name": "invite_gift_1_slot_3",
+              "type": "node",
+              "x": 49,
+              "y": 22,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_common_DaoJuKuang1.png",
+                  "width": 85,
+                  "height": 85
+                },
+                {
+                  "name": "invite_gift_1_slot_3_node",
+                  "type": "node"
+                },
+                {
+                  "name": "invite_gift_1_slot_3_txt",
+                  "type": "label",
+                  "text": "-1",
+                  "size": 18,
+                  "align": "right",
+                  "color": 4294967295,
+                  "width": 68,
+                  "height": 34,
+                  "x": -36,
+                  "y": -25
+                }
+              ]
+            },
+            {
+              "name": "invite_gift_1_slot_4",
+              "type": "node",
+              "x": 141,
+              "y": 22,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_common_DaoJuKuang1.png",
+                  "width": 85,
+                  "height": 85
+                },
+                {
+                  "name": "invite_gift_1_slot_4_node",
+                  "type": "node"
+                },
+                {
+                  "name": "invite_gift_1_slot_4_txt",
+                  "type": "label",
+                  "text": "-1",
+                  "size": 18,
+                  "align": "right",
+                  "color": 4294967295,
+                  "width": 68,
+                  "height": 34,
+                  "x": -36,
+                  "y": -25
+                }
+              ]
+            },
+            {
+              "name": "invite_gift_1_btn_node",
+              "type": "node",
+              "x": 248,
+              "y": 25,
+              "children": [
+                {
+                  "name": "invite_gift_1_btn",
+                  "type": "btn",
+                  "img_normal": "#ui_invite_rect_btn_1.png",
+                  "img_down": "#ui_invite_rect_btn_2.png"
+                },
+                {
+                  "name": "invite_gift_1_btn_txt",
+                  "type": "label",
+                  "text": "立即",
+                  "color": 4294967295,
+                  "align": "center",
+                  "width": 140,
+                  "height": 56,
+                  "x": -70,
+                  "y": 10,
+                  "size": 20
+                },
+                {
+                  "name": "invite_gift_1_btn_txt_2",
+                  "type": "label",
+                  "text": "领取",
+                  "color": 4294967295,
+                  "align": "center",
+                  "width": 140,
+                  "height": 56,
+                  "x": -70,
+                  "y": -10,
+                  "size": 20
+                },
+                {
+                  "name": "invite_gift_1_btn_d",
+                  "type": "sprite",
+                  "img": "#ui_invite_rect_btn_3.png",
+                  "width": 92,
+                  "height": 57
+                },
+                {
+                  "name": "invite_gift_1_btn_d_txt",
+                  "type": "label",
+                  "text": "未达成",
+                  "size": 20,
+                  "align": "center",
+                  "width": 140,
+                  "height": 56,
+                  "x": -70,
+                  "color": 4278190079,
+                  "outlineColor": 4281545523
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "invite_gift_2_panel",
+          "type": "node",
+          "x": 0,
+          "y": -181,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_invite_reward_panel.png",
+              "scale9": 1,
+              "x": -308.5,
+              "y": 21,
+              "width": 617,
+              "height": 99
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_invite_count_panel.png",
+              "width": 96,
+              "height": 57,
+              "x": -237,
+              "y": 21
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_dragon_zl.png",
+              "width": -57,
+              "height": 26,
+              "x": -276.5,
+              "y": -18
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_dragon_zl.png",
+              "width": 57,
+              "height": 26,
+              "x": 276.5,
+              "y": -18
+            },
+            {
+              "name": "invite_gift_2_panel_goal_txt",
+              "type": "label",
+              "size": 20,
+              "text": "邀请--人",
+              "color": 4278190079,
+              "outlineColor": 4287900160,
+              "align": "center",
+              "width": 120,
+              "height": 32,
+              "x": -295,
+              "y": 34
+            },
+            {
+              "name": "invite_gift_2_panel_count_txt",
+              "type": "label",
+              "size": 20,
+              "text": "仅差--人",
+              "color": 4292356607,
+              "outlineColor": 4287900160,
+              "align": "center",
+              "width": 120,
+              "height": 32,
+              "x": -295,
+              "y": 7
+            },
+            {
+              "name": "invite_gift_2_slot_1",
+              "type": "node",
+              "x": -135,
+              "y": 22,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_common_DaoJuKuang1.png",
+                  "width": 85,
+                  "height": 85
+                },
+                {
+                  "name": "invite_gift_2_slot_1_node",
+                  "type": "node"
+                },
+                {
+                  "name": "invite_gift_2_slot_1_txt",
+                  "type": "label",
+                  "text": "-1",
+                  "size": 18,
+                  "align": "right",
+                  "color": 4294967295,
+                  "width": 68,
+                  "height": 34,
+                  "x": -36,
+                  "y": -25
+                }
+              ]
+            },
+            {
+              "name": "invite_gift_2_slot_2",
+              "type": "node",
+              "x": -43,
+              "y": 22,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_common_DaoJuKuang1.png",
+                  "width": 85,
+                  "height": 85
+                },
+                {
+                  "name": "invite_gift_2_slot_2_node",
+                  "type": "node"
+                },
+                {
+                  "name": "invite_gift_2_slot_2_txt",
+                  "type": "label",
+                  "text": "-1",
+                  "size": 18,
+                  "align": "right",
+                  "color": 4294967295,
+                  "width": 68,
+                  "height": 34,
+                  "x": -36,
+                  "y": -25
+                }
+              ]
+            },
+            {
+              "name": "invite_gift_2_slot_3",
+              "type": "node",
+              "x": 49,
+              "y": 22,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_common_DaoJuKuang1.png",
+                  "width": 85,
+                  "height": 85
+                },
+                {
+                  "name": "invite_gift_2_slot_3_node",
+                  "type": "node"
+                },
+                {
+                  "name": "invite_gift_2_slot_3_txt",
+                  "type": "label",
+                  "text": "-1",
+                  "size": 18,
+                  "align": "right",
+                  "color": 4294967295,
+                  "width": 68,
+                  "height": 34,
+                  "x": -36,
+                  "y": -25
+                }
+              ]
+            },
+            {
+              "name": "invite_gift_2_slot_4",
+              "type": "node",
+              "x": 141,
+              "y": 22,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_common_DaoJuKuang1.png",
+                  "width": 85,
+                  "height": 85
+                },
+                {
+                  "name": "invite_gift_2_slot_4_node",
+                  "type": "node"
+                },
+                {
+                  "name": "invite_gift_2_slot_4_txt",
+                  "type": "label",
+                  "text": "-1",
+                  "size": 18,
+                  "align": "right",
+                  "color": 4294967295,
+                  "width": 68,
+                  "height": 34,
+                  "x": -36,
+                  "y": -25
+                }
+              ]
+            },
+            {
+              "name": "invite_gift_2_btn_node",
+              "type": "node",
+              "x": 248,
+              "y": 25,
+              "children": [
+                {
+                  "name": "invite_gift_2_btn",
+                  "type": "btn",
+                  "img_normal": "#ui_invite_rect_btn_1.png",
+                  "img_down": "#ui_invite_rect_btn_2.png"
+                },
+                {
+                  "name": "invite_gift_2_btn_txt",
+                  "type": "label",
+                  "text": "立即",
+                  "color": 4294967295,
+                  "align": "center",
+                  "width": 140,
+                  "height": 56,
+                  "x": -70,
+                  "y": 10,
+                  "size": 20
+                },
+                {
+                  "name": "invite_gift_2_btn_txt_2",
+                  "type": "label",
+                  "text": "领取",
+                  "color": 4294967295,
+                  "align": "center",
+                  "width": 140,
+                  "height": 56,
+                  "x": -70,
+                  "y": -10,
+                  "size": 20
+                },
+                {
+                  "name": "invite_gift_2_btn_d",
+                  "type": "sprite",
+                  "img": "#ui_invite_rect_btn_3.png",
+                  "width": 92,
+                  "height": 57
+                },
+                {
+                  "name": "invite_gift_2_btn_d_txt",
+                  "type": "label",
+                  "text": "未达成",
+                  "size": 20,
+                  "align": "center",
+                  "width": 140,
+                  "height": 56,
+                  "x": -70,
+                  "color": 4278190079,
+                  "outlineColor": 4281545523
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "invite_gift_3_panel",
+          "type": "node",
+          "x": 0,
+          "y": -290,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_invite_reward_panel.png",
+              "scale9": 1,
+              "x": -308.5,
+              "y": 21,
+              "width": 617,
+              "height": 99
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_invite_count_panel.png",
+              "width": 96,
+              "height": 57,
+              "x": -237,
+              "y": 21
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_dragon_zl.png",
+              "width": -57,
+              "height": 26,
+              "x": -276.5,
+              "y": -18
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_dragon_zl.png",
+              "width": 57,
+              "height": 26,
+              "x": 276.5,
+              "y": -18
+            },
+            {
+              "name": "invite_gift_3_panel_goal_txt",
+              "type": "label",
+              "size": 20,
+              "text": "邀请--人",
+              "color": 4278190079,
+              "outlineColor": 4287900160,
+              "align": "center",
+              "width": 120,
+              "height": 32,
+              "x": -295,
+              "y": 34
+            },
+            {
+              "name": "invite_gift_3_panel_count_txt",
+              "type": "label",
+              "size": 20,
+              "text": "仅差--人",
+              "color": 4292356607,
+              "outlineColor": 4287900160,
+              "align": "center",
+              "width": 120,
+              "height": 32,
+              "x": -295,
+              "y": 7
+            },
+            {
+              "name": "invite_gift_3_slot_1",
+              "type": "node",
+              "x": -135,
+              "y": 22,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_common_DaoJuKuang1.png",
+                  "width": 85,
+                  "height": 85
+                },
+                {
+                  "name": "invite_gift_3_slot_1_node",
+                  "type": "node"
+                },
+                {
+                  "name": "invite_gift_3_slot_1_txt",
+                  "type": "label",
+                  "text": "-1",
+                  "size": 18,
+                  "align": "right",
+                  "color": 4294967295,
+                  "width": 68,
+                  "height": 34,
+                  "x": -36,
+                  "y": -25
+                }
+              ]
+            },
+            {
+              "name": "invite_gift_3_slot_2",
+              "type": "node",
+              "x": -43,
+              "y": 22,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_common_DaoJuKuang1.png",
+                  "width": 85,
+                  "height": 85
+                },
+                {
+                  "name": "invite_gift_3_slot_2_node",
+                  "type": "node"
+                },
+                {
+                  "name": "invite_gift_3_slot_2_txt",
+                  "type": "label",
+                  "text": "-1",
+                  "size": 18,
+                  "align": "right",
+                  "color": 4294967295,
+                  "width": 68,
+                  "height": 34,
+                  "x": -36,
+                  "y": -25
+                }
+              ]
+            },
+            {
+              "name": "invite_gift_3_slot_3",
+              "type": "node",
+              "x": 49,
+              "y": 22,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_common_DaoJuKuang1.png",
+                  "width": 85,
+                  "height": 85
+                },
+                {
+                  "name": "invite_gift_3_slot_3_node",
+                  "type": "node"
+                },
+                {
+                  "name": "invite_gift_3_slot_3_txt",
+                  "type": "label",
+                  "text": "-1",
+                  "size": 18,
+                  "align": "right",
+                  "color": 4294967295,
+                  "width": 68,
+                  "height": 34,
+                  "x": -36,
+                  "y": -25
+                }
+              ]
+            },
+            {
+              "name": "invite_gift_3_slot_4",
+              "type": "node",
+              "x": 141,
+              "y": 22,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_common_DaoJuKuang1.png",
+                  "width": 85,
+                  "height": 85
+                },
+                {
+                  "name": "invite_gift_3_slot_4_node",
+                  "type": "node"
+                },
+                {
+                  "name": "invite_gift_3_slot_4_txt",
+                  "type": "label",
+                  "text": "-1",
+                  "size": 18,
+                  "align": "right",
+                  "color": 4294967295,
+                  "width": 68,
+                  "height": 34,
+                  "x": -36,
+                  "y": -25
+                }
+              ]
+            },
+            {
+              "name": "invite_gift_3_btn_node",
+              "type": "node",
+              "x": 248,
+              "y": 25,
+              "children": [
+                {
+                  "name": "invite_gift_3_btn",
+                  "type": "btn",
+                  "img_normal": "#ui_invite_rect_btn_1.png",
+                  "img_down": "#ui_invite_rect_btn_2.png"
+                },
+                {
+                  "name": "invite_gift_3_btn_txt",
+                  "type": "label",
+                  "text": "立即",
+                  "color": 4294967295,
+                  "align": "center",
+                  "width": 140,
+                  "height": 56,
+                  "x": -70,
+                  "y": 10,
+                  "size": 20
+                },
+                {
+                  "name": "invite_gift_3_btn_txt_2",
+                  "type": "label",
+                  "text": "领取",
+                  "color": 4294967295,
+                  "align": "center",
+                  "width": 140,
+                  "height": 56,
+                  "x": -70,
+                  "y": -10,
+                  "size": 20
+                },
+                {
+                  "name": "invite_gift_3_btn_d",
+                  "type": "sprite",
+                  "img": "#ui_invite_rect_btn_3.png",
+                  "width": 92,
+                  "height": 57
+                },
+                {
+                  "name": "invite_gift_3_btn_d_txt",
+                  "type": "label",
+                  "text": "未达成",
+                  "size": 20,
+                  "align": "center",
+                  "width": 140,
+                  "height": 56,
+                  "x": -70,
+                  "color": 4278190079,
+                  "outlineColor": 4281545523
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

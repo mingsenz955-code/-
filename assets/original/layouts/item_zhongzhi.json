@@ -1,0 +1,212 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan2.png",
+      "scale9": 1,
+      "x": -117.5,
+      "y": 26.3,
+      "width": 235,
+      "height": 200,
+      "maxw": 235,
+      "maxh": 200
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan2b.png",
+      "scale9": 1,
+      "x": -117.5,
+      "y": 105.75,
+      "width": 235,
+      "height": 34,
+      "maxw": 235,
+      "maxh": 34
+    },
+    {
+      "name": "tx_name",
+      "type": "label",
+      "text": "xxx花",
+      "size": 22,
+      "align": "center",
+      "color": 255,
+      "x": -86.95,
+      "y": 105.13,
+      "width": 176.95,
+      "height": 29.05
+    },
+    {
+      "name": "con_img",
+      "type": "node",
+      "x": -86.95,
+      "y": 46.45,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "tx_time",
+      "type": "label",
+      "text": "8天24小时",
+      "size": 18,
+      "align": "left",
+      "color": 255,
+      "x": 21,
+      "y": 64.58,
+      "width": 90,
+      "height": 26.75
+    },
+    {
+      "name": "tx_time_t",
+      "type": "label",
+      "text": "成熟:",
+      "size": 18,
+      "align": "left",
+      "color": 255,
+      "x": -56,
+      "y": 64.58,
+      "width": 52,
+      "height": 26.75
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_hd1.png",
+      "x": 5,
+      "y": 66,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "name": "tx_food",
+      "type": "label",
+      "text": "99999",
+      "size": 18,
+      "align": "left",
+      "color": 255,
+      "x": 21,
+      "y": 38.7,
+      "width": 89,
+      "height": 26.5
+    },
+    {
+      "name": "tx_food_t",
+      "type": "label",
+      "text": "收获:",
+      "size": 18,
+      "align": "left",
+      "color": 255,
+      "x": -56,
+      "y": 38.58,
+      "width": 52,
+      "height": 26.75
+    },
+    {
+      "name": "food_ico",
+      "type": "sprite",
+      "img": "#ui_common_hd2.png",
+      "x": 7,
+      "y": 40,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "name": "fruit_ico",
+      "type": "sprite",
+      "img": "#resource_icon_80_ef.png",
+      "x": 18,
+      "y": 44,
+      "width": 37,
+      "height": 37
+    },
+    {
+      "name": "tx_xp",
+      "type": "label",
+      "text": "99999",
+      "size": 18,
+      "align": "left",
+      "color": 255,
+      "x": 21,
+      "y": 13.23,
+      "width": 89,
+      "height": 24.25
+    },
+    {
+      "name": "tx_xp_t",
+      "type": "label",
+      "text": "经验:",
+      "size": 18,
+      "align": "left",
+      "color": 255,
+      "x": -56,
+      "y": 13.23,
+      "width": 52,
+      "height": 24.25
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_hd3.png",
+      "x": 7,
+      "y": 13,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_ShuZiKuang.png",
+      "scale9": 1,
+      "x": -50.35,
+      "y": -22.15,
+      "width": 150,
+      "height": 31,
+      "maxw": 150,
+      "maxh": 31
+    },
+    {
+      "name": "tx_gold",
+      "type": "label",
+      "text": "9999999999",
+      "size": 20,
+      "align": "justify",
+      "color": 255,
+      "x": -33.5,
+      "y": -22.43,
+      "width": 118.9,
+      "height": 26.75
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_HuoBi0001.png",
+      "x": -73.8,
+      "y": -23.15,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "name": "btn_zhongzhi",
+      "type": "node",
+      "x": 1.45,
+      "y": -83.8,
+      "width": 144,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_1.png",
+          "img_down": "#ui_common_btn_2.png"
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "种植",
+          "size": 35,
+          "align": "center",
+          "color": 4294967295,
+          "x": -51.5,
+          "y": 4.93,
+          "width": 103,
+          "height": 45.15
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1192 @@
+{
+  "group": [
+    "ui_pve",
+    "ui_gonghuifuben"
+  ],
+  "width": 795,
+  "height": 534,
+  "children": [
+    {
+      "name": "basenode",
+      "type": "node",
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "check1",
+      "type": "node",
+      "x": 433.55,
+      "y": -166.13,
+      "width": 130,
+      "height": 119.95,
+      "children": [
+        {
+          "name": "close",
+          "type": "sprite",
+          "img": "#ui_pve_fbd0.png",
+          "x": -28,
+          "y": 15.48,
+          "width": 58,
+          "height": 49
+        },
+        {
+          "name": "open",
+          "type": "node",
+          "x": 40,
+          "y": -94.5,
+          "width": 130,
+          "height": 119.95,
+          "children": [
+            {
+              "name": "node_dragonshow",
+              "type": "node",
+              "x": -121,
+              "y": 166.93,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "node_progress",
+              "type": "node",
+              "x": -2,
+              "y": 45.98,
+              "width": 130,
+              "height": 27,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_gonghuifuben_jindu4.png",
+                  "x": -65,
+                  "y": 14.5,
+                  "width": 130,
+                  "height": 27
+                },
+                {
+                  "name": "node_progress",
+                  "type": "node",
+                  "x": -65,
+                  "y": 14.5,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "txt_percent",
+                  "type": "label",
+                  "text": "?/?",
+                  "align": "center",
+                  "size": 18,
+                  "color": 4294967295,
+                  "x": -115.5,
+                  "y": 13.95,
+                  "width": 103,
+                  "height": 24.1
+                }
+              ]
+            },
+            {
+              "name": "img_ispass",
+              "type": "sprite",
+              "img": "#ui_gonghuifuben_yiguo.png",
+              "x": -65,
+              "y": 113.93,
+              "width": 55,
+              "height": 66
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "check2",
+      "type": "node",
+      "x": 341.55,
+      "y": -137.13,
+      "width": 130,
+      "height": 119.95,
+      "children": [
+        {
+          "name": "close",
+          "type": "sprite",
+          "img": "#ui_pve_fbd0.png",
+          "x": -28,
+          "y": 15.48,
+          "width": 58,
+          "height": 49
+        },
+        {
+          "name": "open",
+          "type": "node",
+          "x": 40,
+          "y": -94.5,
+          "width": 130,
+          "height": 119.95,
+          "children": [
+            {
+              "name": "node_dragonshow",
+              "type": "node",
+              "x": -121,
+              "y": 166.93,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "node_progress",
+              "type": "node",
+              "x": -2,
+              "y": 45.98,
+              "width": 130,
+              "height": 27,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_gonghuifuben_jindu4.png",
+                  "x": -65,
+                  "y": 14.5,
+                  "width": 130,
+                  "height": 27
+                },
+                {
+                  "name": "node_progress",
+                  "type": "node",
+                  "x": -65,
+                  "y": 14.5,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "txt_percent",
+                  "type": "label",
+                  "text": "?/?",
+                  "align": "center",
+                  "size": 18,
+                  "color": 4294967295,
+                  "x": -115.5,
+                  "y": 13.95,
+                  "width": 103,
+                  "height": 24.1
+                }
+              ]
+            },
+            {
+              "name": "img_ispass",
+              "type": "sprite",
+              "img": "#ui_gonghuifuben_yiguo.png",
+              "x": -65,
+              "y": 113.93,
+              "width": 55,
+              "height": 66
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "check3",
+      "type": "node",
+      "x": 260.4,
+      "y": 52.87,
+      "width": 130,
+      "height": 119.95,
+      "children": [
+        {
+          "name": "close",
+          "type": "sprite",
+          "img": "#ui_pve_fbd0.png",
+          "x": -28,
+          "y": 15.48,
+          "width": 58,
+          "height": 49
+        },
+        {
+          "name": "open",
+          "type": "node",
+          "x": 40,
+          "y": -94.5,
+          "width": 130,
+          "height": 119.95,
+          "children": [
+            {
+              "name": "node_dragonshow",
+              "type": "node",
+              "x": -121,
+              "y": 166.93,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "node_progress",
+              "type": "node",
+              "x": -2,
+              "y": 45.98,
+              "width": 130,
+              "height": 27,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_gonghuifuben_jindu4.png",
+                  "x": -65,
+                  "y": 14.5,
+                  "width": 130,
+                  "height": 27
+                },
+                {
+                  "name": "node_progress",
+                  "type": "node",
+                  "x": -65,
+                  "y": 14.5,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "txt_percent",
+                  "type": "label",
+                  "text": "?/?",
+                  "align": "center",
+                  "size": 18,
+                  "color": 4294967295,
+                  "x": -115.5,
+                  "y": 13.95,
+                  "width": 103,
+                  "height": 24.1
+                }
+              ]
+            },
+            {
+              "name": "img_ispass",
+              "type": "sprite",
+              "img": "#ui_gonghuifuben_yiguo.png",
+              "x": -65,
+              "y": 113.93,
+              "width": 55,
+              "height": 66
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "check4",
+      "type": "node",
+      "x": 206.45,
+      "y": 108.03,
+      "width": 130,
+      "height": 119.95,
+      "children": [
+        {
+          "name": "close",
+          "type": "sprite",
+          "img": "#ui_pve_fbd0.png",
+          "x": -28,
+          "y": 15.48,
+          "width": 58,
+          "height": 49
+        },
+        {
+          "name": "open",
+          "type": "node",
+          "x": 40,
+          "y": -94.5,
+          "width": 130,
+          "height": 119.95,
+          "children": [
+            {
+              "name": "node_dragonshow",
+              "type": "node",
+              "x": -121,
+              "y": 166.93,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "node_progress",
+              "type": "node",
+              "x": -2,
+              "y": 45.98,
+              "width": 130,
+              "height": 27,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_gonghuifuben_jindu4.png",
+                  "x": -65,
+                  "y": 14.5,
+                  "width": 130,
+                  "height": 27
+                },
+                {
+                  "name": "node_progress",
+                  "type": "node",
+                  "x": -65,
+                  "y": 14.5,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "txt_percent",
+                  "type": "label",
+                  "text": "?/?",
+                  "align": "center",
+                  "size": 18,
+                  "color": 4294967295,
+                  "x": -115.5,
+                  "y": 13.95,
+                  "width": 103,
+                  "height": 24.1
+                }
+              ]
+            },
+            {
+              "name": "img_ispass",
+              "type": "sprite",
+              "img": "#ui_gonghuifuben_yiguo.png",
+              "x": -65,
+              "y": 113.93,
+              "width": 55,
+              "height": 66
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "check5",
+      "type": "node",
+      "x": 131.55,
+      "y": 160.13,
+      "width": 130,
+      "height": 119.95,
+      "children": [
+        {
+          "name": "close",
+          "type": "sprite",
+          "img": "#ui_pve_fbd0.png",
+          "x": -28,
+          "y": 15.48,
+          "width": 58,
+          "height": 49
+        },
+        {
+          "name": "open",
+          "type": "node",
+          "x": 40,
+          "y": -94.5,
+          "width": 130,
+          "height": 119.95,
+          "children": [
+            {
+              "name": "node_dragonshow",
+              "type": "node",
+              "x": -121,
+              "y": 166.93,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "node_progress",
+              "type": "node",
+              "x": -2,
+              "y": 45.98,
+              "width": 130,
+              "height": 27,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_gonghuifuben_jindu4.png",
+                  "x": -65,
+                  "y": 14.5,
+                  "width": 130,
+                  "height": 27
+                },
+                {
+                  "name": "node_progress",
+                  "type": "node",
+                  "x": -65,
+                  "y": 14.5,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "txt_percent",
+                  "type": "label",
+                  "text": "?/?",
+                  "align": "center",
+                  "size": 18,
+                  "color": 4294967295,
+                  "x": -115.5,
+                  "y": 13.95,
+                  "width": 103,
+                  "height": 24.1
+                }
+              ]
+            },
+            {
+              "name": "img_ispass",
+              "type": "sprite",
+              "img": "#ui_gonghuifuben_yiguo.png",
+              "x": -65,
+              "y": 113.93,
+              "width": 55,
+              "height": 66
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "check6",
+      "type": "node",
+      "x": 65.1,
+      "y": 6.87,
+      "width": 130,
+      "height": 119.95,
+      "children": [
+        {
+          "name": "close",
+          "type": "sprite",
+          "img": "#ui_pve_fbd0.png",
+          "x": -28,
+          "y": 15.48,
+          "width": 58,
+          "height": 49
+        },
+        {
+          "name": "open",
+          "type": "node",
+          "x": 40,
+          "y": -94.5,
+          "width": 130,
+          "height": 119.95,
+          "children": [
+            {
+              "name": "node_dragonshow",
+              "type": "node",
+              "x": -121,
+              "y": 166.93,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "node_progress",
+              "type": "node",
+              "x": -2,
+              "y": 45.98,
+              "width": 130,
+              "height": 27,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_gonghuifuben_jindu4.png",
+                  "x": -65,
+                  "y": 14.5,
+                  "width": 130,
+                  "height": 27
+                },
+                {
+                  "name": "node_progress",
+                  "type": "node",
+                  "x": -65,
+                  "y": 14.5,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "txt_percent",
+                  "type": "label",
+                  "text": "?/?",
+                  "align": "center",
+                  "size": 18,
+                  "color": 4294967295,
+                  "x": -115.5,
+                  "y": 13.95,
+                  "width": 103,
+                  "height": 24.1
+                }
+              ]
+            },
+            {
+              "name": "img_ispass",
+              "type": "sprite",
+              "img": "#ui_gonghuifuben_yiguo.png",
+              "x": -65,
+              "y": 113.93,
+              "width": 55,
+              "height": 66
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "check7",
+      "type": "node",
+      "x": 84,
+      "y": -75.42,
+      "width": 130,
+      "height": 119.95,
+      "children": [
+        {
+          "name": "close",
+          "type": "sprite",
+          "img": "#ui_pve_fbd0.png",
+          "x": -28,
+          "y": 15.48,
+          "width": 58,
+          "height": 49
+        },
+        {
+          "name": "open",
+          "type": "node",
+          "x": 40,
+          "y": -94.5,
+          "width": 130,
+          "height": 119.95,
+          "children": [
+            {
+              "name": "node_dragonshow",
+              "type": "node",
+              "x": -121,
+              "y": 166.93,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "node_progress",
+              "type": "node",
+              "x": -2,
+              "y": 45.98,
+              "width": 130,
+              "height": 27,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_gonghuifuben_jindu4.png",
+                  "x": -65,
+                  "y": 14.5,
+                  "width": 130,
+                  "height": 27
+                },
+                {
+                  "name": "node_progress",
+                  "type": "node",
+                  "x": -65,
+                  "y": 14.5,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "txt_percent",
+                  "type": "label",
+                  "text": "?/?",
+                  "align": "center",
+                  "size": 18,
+                  "color": 4294967295,
+                  "x": -115.5,
+                  "y": 13.95,
+                  "width": 103,
+                  "height": 24.1
+                }
+              ]
+            },
+            {
+              "name": "img_ispass",
+              "type": "sprite",
+              "img": "#ui_gonghuifuben_yiguo.png",
+              "x": -65,
+              "y": 113.93,
+              "width": 55,
+              "height": 66
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "check8",
+      "type": "node",
+      "x": 218.35,
+      "y": -213.13,
+      "width": 130,
+      "height": 119.95,
+      "children": [
+        {
+          "name": "close",
+          "type": "sprite",
+          "img": "#ui_pve_fbd0.png",
+          "x": -28,
+          "y": 15.48,
+          "width": 58,
+          "height": 49
+        },
+        {
+          "name": "open",
+          "type": "node",
+          "x": 40,
+          "y": -94.5,
+          "width": 130,
+          "height": 119.95,
+          "children": [
+            {
+              "name": "node_dragonshow",
+              "type": "node",
+              "x": -121,
+              "y": 166.93,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "node_progress",
+              "type": "node",
+              "x": -2,
+              "y": 45.98,
+              "width": 130,
+              "height": 27,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_gonghuifuben_jindu4.png",
+                  "x": -65,
+                  "y": 14.5,
+                  "width": 130,
+                  "height": 27
+                },
+                {
+                  "name": "node_progress",
+                  "type": "node",
+                  "x": -65,
+                  "y": 14.5,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "txt_percent",
+                  "type": "label",
+                  "text": "?/?",
+                  "align": "center",
+                  "size": 18,
+                  "color": 4294967295,
+                  "x": -115.5,
+                  "y": 13.95,
+                  "width": 103,
+                  "height": 24.1
+                }
+              ]
+            },
+            {
+              "name": "img_ispass",
+              "type": "sprite",
+              "img": "#ui_gonghuifuben_yiguo.png",
+              "x": -65,
+              "y": 113.93,
+              "width": 55,
+              "height": 66
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "check9",
+      "type": "node",
+      "x": 121.4,
+      "y": -201.22,
+      "width": 130,
+      "height": 119.95,
+      "children": [
+        {
+          "name": "close",
+          "type": "sprite",
+          "img": "#ui_pve_fbd0.png",
+          "x": -28,
+          "y": 15.48,
+          "width": 58,
+          "height": 49
+        },
+        {
+          "name": "open",
+          "type": "node",
+          "x": 40,
+          "y": -94.5,
+          "width": 130,
+          "height": 119.95,
+          "children": [
+            {
+              "name": "node_dragonshow",
+              "type": "node",
+              "x": -121,
+              "y": 166.93,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "node_progress",
+              "type": "node",
+              "x": -2,
+              "y": 45.98,
+              "width": 130,
+              "height": 27,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_gonghuifuben_jindu4.png",
+                  "x": -65,
+                  "y": 14.5,
+                  "width": 130,
+                  "height": 27
+                },
+                {
+                  "name": "node_progress",
+                  "type": "node",
+                  "x": -65,
+                  "y": 14.5,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "txt_percent",
+                  "type": "label",
+                  "text": "?/?",
+                  "align": "center",
+                  "size": 18,
+                  "color": 4294967295,
+                  "x": -115.5,
+                  "y": 13.95,
+                  "width": 103,
+                  "height": 24.1
+                }
+              ]
+            },
+            {
+              "name": "img_ispass",
+              "type": "sprite",
+              "img": "#ui_gonghuifuben_yiguo.png",
+              "x": -65,
+              "y": 113.93,
+              "width": 55,
+              "height": 66
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "check10",
+      "type": "node",
+      "x": 22.45,
+      "y": -161.18,
+      "width": 130,
+      "height": 119.95,
+      "children": [
+        {
+          "name": "close",
+          "type": "sprite",
+          "img": "#ui_pve_fbd0.png",
+          "x": -28,
+          "y": 15.48,
+          "width": 58,
+          "height": 49
+        },
+        {
+          "name": "open",
+          "type": "node",
+          "x": 40,
+          "y": -94.5,
+          "width": 130,
+          "height": 119.95,
+          "children": [
+            {
+              "name": "node_dragonshow",
+              "type": "node",
+              "x": -121,
+              "y": 166.93,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "node_progress",
+              "type": "node",
+              "x": -2,
+              "y": 45.98,
+              "width": 130,
+              "height": 27,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_gonghuifuben_jindu4.png",
+                  "x": -65,
+                  "y": 14.5,
+                  "width": 130,
+                  "height": 27
+                },
+                {
+                  "name": "node_progress",
+                  "type": "node",
+                  "x": -65,
+                  "y": 14.5,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "txt_percent",
+                  "type": "label",
+                  "text": "?/?",
+                  "align": "center",
+                  "size": 18,
+                  "color": 4294967295,
+                  "x": -115.5,
+                  "y": 13.95,
+                  "width": 103,
+                  "height": 24.1
+                }
+              ]
+            },
+            {
+              "name": "img_ispass",
+              "type": "sprite",
+              "img": "#ui_gonghuifuben_yiguo.png",
+              "x": -65,
+              "y": 113.93,
+              "width": 55,
+              "height": 66
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "check11",
+      "type": "node",
+      "x": -38,
+      "y": -5.93,
+      "width": 130,
+      "height": 119.95,
+      "children": [
+        {
+          "name": "close",
+          "type": "sprite",
+          "img": "#ui_pve_fbd0.png",
+          "x": -28,
+          "y": 15.48,
+          "width": 58,
+          "height": 49
+        },
+        {
+          "name": "open",
+          "type": "node",
+          "x": 40,
+          "y": -94.5,
+          "width": 130,
+          "height": 119.95,
+          "children": [
+            {
+              "name": "node_dragonshow",
+              "type": "node",
+              "x": -121,
+              "y": 166.93,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "node_progress",
+              "type": "node",
+              "x": -2,
+              "y": 45.98,
+              "width": 130,
+              "height": 27,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_gonghuifuben_jindu4.png",
+                  "x": -65,
+                  "y": 14.5,
+                  "width": 130,
+                  "height": 27
+                },
+                {
+                  "name": "node_progress",
+                  "type": "node",
+                  "x": -65,
+                  "y": 14.5,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "txt_percent",
+                  "type": "label",
+                  "text": "?/?",
+                  "align": "center",
+                  "size": 18,
+                  "color": 4294967295,
+                  "x": -115.5,
+                  "y": 13.95,
+                  "width": 103,
+                  "height": 24.1
+                }
+              ]
+            },
+            {
+              "name": "img_ispass",
+              "type": "sprite",
+              "img": "#ui_gonghuifuben_yiguo.png",
+              "x": -65,
+              "y": 113.93,
+              "width": 55,
+              "height": 66
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "check12",
+      "type": "node",
+      "x": -62.9,
+      "y": 73.18,
+      "width": 130,
+      "height": 119.95,
+      "children": [
+        {
+          "name": "close",
+          "type": "sprite",
+          "img": "#ui_pve_fbd0.png",
+          "x": -28,
+          "y": 15.48,
+          "width": 58,
+          "height": 49
+        },
+        {
+          "name": "open",
+          "type": "node",
+          "x": 40,
+          "y": -94.5,
+          "width": 130,
+          "height": 119.95,
+          "children": [
+            {
+              "name": "node_dragonshow",
+              "type": "node",
+              "x": -121,
+              "y": 166.93,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "node_progress",
+              "type": "node",
+              "x": -2,
+              "y": 45.98,
+              "width": 130,
+              "height": 27,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_gonghuifuben_jindu4.png",
+                  "x": -65,
+                  "y": 14.5,
+                  "width": 130,
+                  "height": 27
+                },
+                {
+                  "name": "node_progress",
+                  "type": "node",
+                  "x": -65,
+                  "y": 14.5,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "txt_percent",
+                  "type": "label",
+                  "text": "?/?",
+                  "align": "center",
+                  "size": 18,
+                  "color": 4294967295,
+                  "x": -115.5,
+                  "y": 13.95,
+                  "width": 103,
+                  "height": 24.1
+                }
+              ]
+            },
+            {
+              "name": "img_ispass",
+              "type": "sprite",
+              "img": "#ui_gonghuifuben_yiguo.png",
+              "x": -65,
+              "y": 113.93,
+              "width": 55,
+              "height": 66
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "check13",
+      "type": "node",
+      "x": -231.55,
+      "y": 32.73,
+      "width": 130,
+      "height": 119.95,
+      "children": [
+        {
+          "name": "close",
+          "type": "sprite",
+          "img": "#ui_pve_fbd0.png",
+          "x": -28,
+          "y": 15.48,
+          "width": 58,
+          "height": 49
+        },
+        {
+          "name": "open",
+          "type": "node",
+          "x": 40,
+          "y": -94.5,
+          "width": 130,
+          "height": 119.95,
+          "children": [
+            {
+              "name": "node_dragonshow",
+              "type": "node",
+              "x": -121,
+              "y": 166.93,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "node_progress",
+              "type": "node",
+              "x": -2,
+              "y": 45.98,
+              "width": 130,
+              "height": 27,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_gonghuifuben_jindu4.png",
+                  "x": -65,
+                  "y": 14.5,
+                  "width": 130,
+                  "height": 27
+                },
+                {
+                  "name": "node_progress",
+                  "type": "node",
+                  "x": -65,
+                  "y": 14.5,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "txt_percent",
+                  "type": "label",
+                  "text": "?/?",
+                  "align": "center",
+                  "size": 18,
+                  "color": 4294967295,
+                  "x": -115.5,
+                  "y": 13.95,
+                  "width": 103,
+                  "height": 24.1
+                }
+              ]
+            },
+            {
+              "name": "img_ispass",
+              "type": "sprite",
+              "img": "#ui_gonghuifuben_yiguo.png",
+              "x": -65,
+              "y": 113.93,
+              "width": 55,
+              "height": 66
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "check14",
+      "type": "node",
+      "x": -202.6,
+      "y": 200.78,
+      "width": 130,
+      "height": 119.95,
+      "children": [
+        {
+          "name": "close",
+          "type": "sprite",
+          "img": "#ui_pve_fbd0.png",
+          "x": -28,
+          "y": 15.48,
+          "width": 58,
+          "height": 49
+        },
+        {
+          "name": "open",
+          "type": "node",
+          "x": 40,
+          "y": -94.5,
+          "width": 130,
+          "height": 119.95,
+          "children": [
+            {
+              "name": "node_dragonshow",
+              "type": "node",
+              "x": -121,
+              "y": 166.93,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "node_progress",
+              "type": "node",
+              "x": -2,
+              "y": 45.98,
+              "width": 130,
+              "height": 27,
+              "children": [
+                {
+                  "type": "sprite",
+                  "img": "#ui_gonghuifuben_jindu4.png",
+                  "x": -65,
+                  "y": 14.5,
+                  "width": 130,
+                  "height": 27
+                },
+                {
+                  "name": "node_progress",
+                  "type": "node",
+                  "x": -65,
+                  "y": 14.5,
+                  "width": 0,
+                  "height": 0
+                },
+                {
+                  "name": "txt_percent",
+                  "type": "label",
+                  "text": "?/?",
+                  "align": "center",
+                  "size": 18,
+                  "color": 4294967295,
+                  "x": -115.5,
+                  "y": 13.95,
+                  "width": 103,
+                  "height": 24.1
+                }
+              ]
+            },
+            {
+              "name": "img_ispass",
+              "type": "sprite",
+              "img": "#ui_gonghuifuben_yiguo.png",
+              "x": -65,
+              "y": 113.93,
+              "width": 55,
+              "height": 66
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

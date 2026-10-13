@@ -1,0 +1,139 @@
+{
+  "group": [
+    "ui_booknew"
+  ],
+  "width": 148,
+  "height": 197,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#ui_booknew_toux_1.png",
+      "y": 25.6,
+      "width": 142,
+      "height": 142
+    },
+    {
+      "name": "daojukuang",
+      "type": "node",
+      "y": 25.6,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "icon",
+      "type": "node",
+      "y": 25.6,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "biaoji",
+      "type": "node",
+      "y": 25.6,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_booknew_bg_name.png",
+      "y": -30.9,
+      "width": 139,
+      "height": 29
+    },
+    {
+      "name": "name",
+      "type": "label",
+      "text": "龙的名字刘子",
+      "align": "center",
+      "size": 18,
+      "color": 4294967295,
+      "outlineColor": 7627074,
+      "x": -71,
+      "y": -30.57,
+      "width": 142,
+      "height": 24.25
+    },
+    {
+      "name": "ability1",
+      "type": "node",
+      "x": 5.5,
+      "y": -59.48,
+      "width": 111,
+      "height": 24.25,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "生命：",
+          "align": "left",
+          "size": 18,
+          "color": 1092488703,
+          "x": -55.5,
+          "width": 58,
+          "height": 24.25
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "+99",
+          "align": "left",
+          "size": 18,
+          "color": 1092488703,
+          "x": 2.5,
+          "width": 53,
+          "height": 24.25
+        }
+      ]
+    },
+    {
+      "name": "ability2",
+      "type": "node",
+      "x": 5.5,
+      "y": -84.47,
+      "width": 111,
+      "height": 24.25,
+      "children": [
+        {
+          "name": "miaoshu",
+          "type": "label",
+          "text": "生命：",
+          "align": "left",
+          "size": 18,
+          "color": 1092488703,
+          "x": -55.5,
+          "width": 58,
+          "height": 24.25
+        },
+        {
+          "name": "num",
+          "type": "label",
+          "text": "+99",
+          "align": "left",
+          "size": 18,
+          "color": 1092488703,
+          "x": 2.5,
+          "width": 53,
+          "height": 24.25
+        }
+      ]
+    },
+    {
+      "name": "new",
+      "type": "sprite",
+      "img": "#ui_booknew_new.png",
+      "x": 51.75,
+      "y": 81.9,
+      "width": 51,
+      "height": 37
+    },
+    {
+      "name": "lock",
+      "type": "sprite",
+      "img": "#ui_booknew_lock.png",
+      "y": 26.6,
+      "width": 140,
+      "height": 140
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "group": [
+    "ui_recharge"
+  ],
+  "width": 251,
+  "height": 361,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_recharge_itembg.png",
+      "width": 249,
+      "height": 361
+    },
+    {
+      "name": "icon",
+      "type": "node",
+      "x": -0.5,
+      "y": 54.55,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "num",
+      "type": "label",
+      "text": " ",
+      "align": "center",
+      "size": 38,
+      "color": 4220254719,
+      "outlineColor": 0,
+      "x": -89.5,
+      "y": -45.52,
+      "width": 180,
+      "height": 46.75
+    },
+    {
+      "name": "give",
+      "type": "label",
+      "text": " ",
+      "align": "center",
+      "size": 25,
+      "color": 4281999615,
+      "outlineColor": 0,
+      "x": -111.5,
+      "y": -86.2,
+      "width": 223,
+      "height": 32.1
+    },
+    {
+      "name": "hint",
+      "type": "node",
+      "x": -64.5,
+      "y": 122.55,
+      "width": 111,
+      "height": 111,
+      "children": [
+        {
+          "name": "image_2",
+          "type": "sprite",
+          "img": "#ui_recharge_biaoji1.png",
+          "x": -3,
+          "width": 105,
+          "height": 111
+        },
+        {
+          "name": "image_3",
+          "type": "sprite",
+          "img": "#ui_recharge_vip3bei.png",
+          "x": -6,
+          "width": 111,
+          "height": 111
+        }
+      ]
+    },
+    {
+      "name": "price",
+      "type": "label",
+      "text": " ",
+      "align": "center",
+      "size": 38,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -89.5,
+      "y": -142.53,
+      "width": 180,
+      "height": 46.75
+    }
+  ]
+}

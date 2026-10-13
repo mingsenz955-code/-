@@ -1,0 +1,23 @@
+{
+  "group": [
+    "buildings/0011_shrine_25_g"
+  ],
+  "width": 351,
+  "height": 348,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0011_shrine_25_g_bg.png",
+      "x": 55.55,
+      "y": 186
+    },
+    {
+      "name": "eff",
+      "type": "eff",
+      "eff": "0011_shrine_25_eff",
+      "width": 138.85,
+      "height": 168.2
+    }
+  ]
+}

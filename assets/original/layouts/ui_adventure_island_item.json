@@ -1,0 +1,65 @@
+{
+  "group": [
+    "ui_adventure"
+  ],
+  "width": 369,
+  "height": 373,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_adventure_island.png",
+      "x": 1,
+      "y": 11,
+      "width": 369,
+      "height": 362
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_adventure_wanjia.png",
+      "x": -12,
+      "y": 58,
+      "width": 236,
+      "height": 147
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_adventure_bg3.png",
+      "x": 105,
+      "y": -151.95,
+      "width": 126,
+      "height": 58
+    },
+    {
+      "name": "txt_index",
+      "type": "label",
+      "text": "",
+      "align": "center",
+      "font": "maoxian_30.fnt",
+      "bmp": 1,
+      "x": 30.5,
+      "y": -150.7,
+      "width": 149,
+      "height": 38.6
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "",
+      "align": "center",
+      "size": 20,
+      "color": 4294967295,
+      "x": -51,
+      "y": 85,
+      "width": 149,
+      "height": 50.7
+    },
+    {
+      "name": "node_headimage",
+      "type": "node",
+      "x": -89,
+      "y": 89.95,
+      "width": 0,
+      "height": 0
+    }
+  ]
+}

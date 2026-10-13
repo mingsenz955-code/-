@@ -1,0 +1,16 @@
+{
+  "group": [
+    "buildings/0067_duorou_old_g"
+  ],
+  "width": 80,
+  "height": 59,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0067_duorou_old_g_bg.png",
+      "x": 4.05,
+      "y": 31.5
+    }
+  ]
+}

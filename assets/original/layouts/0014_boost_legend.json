@@ -1,0 +1,23 @@
+{
+  "group": [
+    "buildings/0014_boost_legend_g"
+  ],
+  "width": 233,
+  "height": 189,
+  "children": [
+    {
+      "name": "bg",
+      "type": "sprite",
+      "img": "#0014_boost_legend_g_bg.png",
+      "x": 1.5,
+      "y": 107.5
+    },
+    {
+      "name": "eff",
+      "type": "eff",
+      "eff": "0014_boost_legend_eff",
+      "width": 66.25,
+      "height": 65.8
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "group": {},
+  "children": [
+    {
+      "name": "xinxi",
+      "type": "label",
+      "text": "你挑战了倒萨打算打打，你获得了胜利。",
+      "size": 20,
+      "align": "left",
+      "color": 4294967295,
+      "x": -185,
+      "width": 370,
+      "height": 27
+    }
+  ]
+}

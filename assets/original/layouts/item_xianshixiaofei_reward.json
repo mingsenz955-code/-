@@ -1,0 +1,303 @@
+{
+  "group": [
+    "ui_peiyanghuodong",
+    "ui_common",
+    "ui_daojukuang"
+  ],
+  "width": 597,
+  "height": 161,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_peiyanghuodong_tt6.png",
+      "scale9": 2,
+      "grid": {
+        "x": 24.8,
+        "y": 24.8,
+        "width": 50.3,
+        "height": 50.35000000000001
+      },
+      "x": -296.5,
+      "y": -0.5,
+      "width": 595.05,
+      "height": 161,
+      "maxw": 595.05,
+      "maxh": 161
+    },
+    {
+      "name": "image_on",
+      "type": "sprite",
+      "img": "#ui_peiyanghuodong_tt2.png",
+      "x": 114.45,
+      "y": 0.55,
+      "width": 361,
+      "height": 156
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_peiyanghuodong_tt1.png",
+      "y": 56,
+      "width": 597,
+      "height": 50
+    },
+    {
+      "name": "node_btn_on",
+      "type": "node",
+      "x": 183.95,
+      "y": -43.4,
+      "width": 154,
+      "height": 46,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_pppp1.png",
+          "img_down": "#ui_common_btn_pppp2.png",
+          "img_disable": "#ui_common_btn_pppp3.png",
+          "width": 154,
+          "height": 46
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "可领取",
+          "align": "center",
+          "size": 24,
+          "color": 992815615,
+          "outlineColor": 13941402,
+          "x": -68,
+          "y": -0.75,
+          "width": 135,
+          "height": 31
+        }
+      ]
+    },
+    {
+      "name": "node_btn_off",
+      "type": "node",
+      "x": 183.95,
+      "y": -43.4,
+      "width": 154,
+      "height": 46,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_btn_pppp3.png",
+          "width": 154,
+          "height": 46
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "未达成",
+          "align": "center",
+          "size": 26,
+          "color": 992815615,
+          "outlineColor": 13421772,
+          "x": -73,
+          "y": -0.88,
+          "width": 144,
+          "height": 33.25
+        }
+      ]
+    },
+    {
+      "name": "node_btn_isget",
+      "type": "node",
+      "x": 183.95,
+      "y": -43.4,
+      "width": 154,
+      "height": 46,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_btn_pppp2.png",
+          "width": 154,
+          "height": 46
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "已领取",
+          "align": "center",
+          "size": 26,
+          "color": 16711935,
+          "outlineColor": 0,
+          "x": -73,
+          "y": -0.88,
+          "width": 144,
+          "height": 33.25
+        }
+      ]
+    },
+    {
+      "name": "txt_info",
+      "type": "label",
+      "text": "xxx",
+      "align": "left",
+      "size": 25,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -284.5,
+      "y": 62.02,
+      "width": 430,
+      "height": 31.95
+    },
+    {
+      "name": "item_3",
+      "type": "node",
+      "x": -101.15,
+      "y": -21,
+      "width": 110,
+      "height": 110,
+      "children": [
+        {
+          "name": "bg",
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "width": 110,
+          "height": 110
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "image",
+          "type": "node",
+          "x": -0.85,
+          "y": 2.8,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "eff",
+          "type": "node",
+          "x": -0.85,
+          "y": 1.8,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -37.1,
+          "y": -25.6,
+          "width": 77,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "item_2",
+      "type": "node",
+      "x": 22.7,
+      "y": -21,
+      "width": 110,
+      "height": 110,
+      "children": [
+        {
+          "name": "bg",
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "width": 110,
+          "height": 110
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "image",
+          "type": "node",
+          "x": -0.85,
+          "y": 2.8,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "eff",
+          "type": "node",
+          "x": -0.85,
+          "y": 1.8,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -37.1,
+          "y": -25.6,
+          "width": 77,
+          "height": 26.5
+        }
+      ]
+    },
+    {
+      "name": "item_1",
+      "type": "node",
+      "x": -225,
+      "y": -21,
+      "width": 110,
+      "height": 110,
+      "children": [
+        {
+          "name": "bg",
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "width": 110,
+          "height": 110
+        },
+        {
+          "name": "quality",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "image",
+          "type": "node",
+          "x": -0.85,
+          "y": 2.8,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "eff",
+          "type": "node",
+          "x": -0.85,
+          "y": 1.8,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -37.1,
+          "y": -25.6,
+          "width": 77,
+          "height": 26.5
+        }
+      ]
+    }
+  ]
+}

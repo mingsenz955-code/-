@@ -1,0 +1,479 @@
+{
+  "group": {},
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_book_dabg.png",
+      "width": 875,
+      "height": 642
+    },
+    {
+      "name": "con_dragon",
+      "type": "node",
+      "x": -178.3,
+      "y": -63.95,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "shuxing1",
+      "type": "node",
+      "x": -27.35,
+      "y": 195,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "shuxing2",
+      "type": "node",
+      "x": -57.35,
+      "y": 195,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "shuxing3",
+      "type": "node",
+      "x": -87.35,
+      "y": 195,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "xuanzhong",
+      "type": "sprite",
+      "img": "#ui_book_touxxuanzhong.png",
+      "x": -220.4,
+      "y": -184.8,
+      "width": 114,
+      "height": 114
+    },
+    {
+      "name": "long1",
+      "type": "node",
+      "x": -220,
+      "y": -186.83,
+      "width": 86,
+      "height": 86.05,
+      "children": [
+        {
+          "name": "btn_anniu",
+          "type": "sprite",
+          "img": "#ui_book_toux2.png",
+          "x": -0.5,
+          "y": 0.52,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -0.5,
+          "y": 0.52,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "new",
+          "type": "sprite",
+          "img": "#ui_book_new.png",
+          "x": 25,
+          "y": 26.07,
+          "width": 36,
+          "height": 36
+        },
+        {
+          "name": "biaoji",
+          "type": "node",
+          "x": -25.5,
+          "y": 22.52,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "long2",
+      "type": "node",
+      "x": -110,
+      "y": -186.83,
+      "width": 86,
+      "height": 86.05,
+      "children": [
+        {
+          "name": "btn_anniu",
+          "type": "sprite",
+          "img": "#ui_book_toux2.png",
+          "x": -0.5,
+          "y": 0.52,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -0.5,
+          "y": 0.52,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "new",
+          "type": "sprite",
+          "img": "#ui_book_new.png",
+          "x": 25,
+          "y": 26.07,
+          "width": 36,
+          "height": 36
+        },
+        {
+          "name": "biaoji",
+          "type": "node",
+          "x": -25.5,
+          "y": 22.52,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "long3",
+      "type": "node",
+      "x": 0,
+      "y": -186.83,
+      "width": 86,
+      "height": 86.05,
+      "children": [
+        {
+          "name": "btn_anniu",
+          "type": "sprite",
+          "img": "#ui_book_toux2.png",
+          "x": -0.5,
+          "y": 0.52,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -0.5,
+          "y": 0.52,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "new",
+          "type": "sprite",
+          "img": "#ui_book_new.png",
+          "x": 25,
+          "y": 26.07,
+          "width": 36,
+          "height": 36
+        },
+        {
+          "name": "biaoji",
+          "type": "node",
+          "x": -25.5,
+          "y": 22.52,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "long4",
+      "type": "node",
+      "x": 110,
+      "y": -186.83,
+      "width": 86,
+      "height": 86.05,
+      "children": [
+        {
+          "name": "btn_anniu",
+          "type": "sprite",
+          "img": "#ui_book_toux2.png",
+          "x": -0.5,
+          "y": 0.52,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -0.5,
+          "y": 0.52,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "new",
+          "type": "sprite",
+          "img": "#ui_book_new.png",
+          "x": 25,
+          "y": 26.07,
+          "width": 36,
+          "height": 36
+        },
+        {
+          "name": "biaoji",
+          "type": "node",
+          "x": -25.5,
+          "y": 22.52,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "long5",
+      "type": "node",
+      "x": 220,
+      "y": -186.83,
+      "width": 86,
+      "height": 86.05,
+      "children": [
+        {
+          "name": "btn_anniu",
+          "type": "sprite",
+          "img": "#ui_book_toux2.png",
+          "x": -0.5,
+          "y": 0.52,
+          "width": 85,
+          "height": 85
+        },
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -0.5,
+          "y": 0.52,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "new",
+          "type": "sprite",
+          "img": "#ui_book_new.png",
+          "x": 25,
+          "y": 26.07,
+          "width": 36,
+          "height": 36
+        },
+        {
+          "name": "biaoji",
+          "type": "node",
+          "x": -25.5,
+          "y": 22.52,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "long_mingcheng",
+      "type": "label",
+      "text": " ",
+      "size": 30,
+      "align": "center",
+      "color": 1513365503,
+      "x": -178.3,
+      "y": 260.48,
+      "width": 325,
+      "height": 37.75
+    },
+    {
+      "name": "jineng_tx",
+      "type": "label",
+      "text": "",
+      "size": 22,
+      "align": "center",
+      "color": 255,
+      "x": 28.65,
+      "y": 184.78,
+      "width": 289,
+      "height": 28.75
+    },
+    {
+      "name": "jineng1",
+      "type": "node",
+      "x": 92.15,
+      "y": 63.85,
+      "width": 71,
+      "height": 62.3,
+      "children": [
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -35,
+          "y": 62.3,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "mingcheng",
+          "type": "label",
+          "text": "",
+          "size": 18,
+          "align": "center",
+          "color": 255,
+          "x": -71,
+          "y": 12.13,
+          "width": 71,
+          "height": 24.25
+        }
+      ]
+    },
+    {
+      "name": "jineng2",
+      "type": "node",
+      "x": 172.15,
+      "y": 63.85,
+      "width": 71,
+      "height": 62.3,
+      "children": [
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -35,
+          "y": 62.3,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "mingcheng",
+          "type": "label",
+          "text": "",
+          "size": 18,
+          "align": "center",
+          "color": 255,
+          "x": -71,
+          "y": 12.13,
+          "width": 71,
+          "height": 24.25
+        }
+      ]
+    },
+    {
+      "name": "jineng3",
+      "type": "node",
+      "x": 252.15,
+      "y": 63.85,
+      "width": 71,
+      "height": 62.3,
+      "children": [
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -35,
+          "y": 62.3,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "mingcheng",
+          "type": "label",
+          "text": "",
+          "size": 18,
+          "align": "center",
+          "color": 255,
+          "x": -71,
+          "y": 12.13,
+          "width": 71,
+          "height": 24.25
+        }
+      ]
+    },
+    {
+      "name": "jineng4",
+      "type": "node",
+      "x": 332.15,
+      "y": 63.85,
+      "width": 71,
+      "height": 62.3,
+      "children": [
+        {
+          "name": "icon",
+          "type": "node",
+          "x": -35,
+          "y": 62.3,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "mingcheng",
+          "type": "label",
+          "text": "",
+          "size": 18,
+          "align": "center",
+          "color": 255,
+          "x": -71,
+          "y": 12.13,
+          "width": 71,
+          "height": 24.25
+        }
+      ]
+    },
+    {
+      "name": "kezhi_tx",
+      "type": "label",
+      "text": "",
+      "size": 22,
+      "align": "center",
+      "color": 255,
+      "x": 10.65,
+      "y": -31.23,
+      "width": 145,
+      "height": 28.75
+    },
+    {
+      "name": "kezhi1",
+      "type": "node",
+      "x": 116.65,
+      "y": -82,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "kezhi2",
+      "type": "node",
+      "x": 46.65,
+      "y": -82,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "beikezhi_tx",
+      "type": "label",
+      "text": "",
+      "size": 22,
+      "align": "center",
+      "color": 255,
+      "x": 200.65,
+      "y": -31.23,
+      "width": 145,
+      "height": 28.75
+    },
+    {
+      "name": "beikezhi1",
+      "type": "node",
+      "x": 306.65,
+      "y": -82,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "beikezhi2",
+      "type": "node",
+      "x": 236.65,
+      "y": -82,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "name": "diandian",
+      "type": "node",
+      "y": -240,
+      "width": 0,
+      "height": 0
+    }
+  ]
+}

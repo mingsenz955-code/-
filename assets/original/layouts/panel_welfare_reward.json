@@ -1,0 +1,175 @@
+{
+  "group": [
+    "ui_bgpuzzle",
+    "ui_daojukuang"
+  ],
+  "width": 624,
+  "height": 449,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_common_DiBan_YangBiZhi.png",
+      "scale9": 1,
+      "x": -312.85,
+      "y": 9,
+      "width": 623,
+      "height": 416,
+      "maxw": 623,
+      "maxh": 416
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_s.png",
+      "scale9": 1,
+      "x": -311.85,
+      "y": 184.5,
+      "width": 623,
+      "height": 55,
+      "maxw": 623,
+      "maxh": 55
+    },
+    {
+      "name": "title",
+      "type": "label",
+      "text": "获得奖励",
+      "align": "center",
+      "size": 26,
+      "color": 4294967295,
+      "x": -77,
+      "y": 186.32,
+      "width": 161,
+      "height": 33.25
+    },
+    {
+      "name": "miaoshu",
+      "type": "label",
+      "text": "获得奖励:",
+      "align": "left",
+      "size": 26,
+      "color": 1092488703,
+      "x": -255,
+      "y": 120.32,
+      "width": 161,
+      "height": 33.25
+    },
+    {
+      "name": "miaoshu_vip",
+      "type": "label",
+      "text": "",
+      "align": "left",
+      "size": 26,
+      "color": 1092488703,
+      "x": -255,
+      "y": -121.67,
+      "width": 471,
+      "height": 33.25
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_bgpuzzle_bg9.png",
+      "scale9": 1,
+      "x": -255.5,
+      "y": 2.05,
+      "width": 511,
+      "height": 183,
+      "maxw": 511,
+      "maxh": 183
+    },
+    {
+      "name": "item",
+      "type": "node",
+      "x": -118.65,
+      "y": 0.65,
+      "width": 110,
+      "height": 110,
+      "children": [
+        {
+          "name": "add",
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "width": 110,
+          "height": 110
+        },
+        {
+          "name": "xiangkuang",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "x": -0.85,
+          "y": 2.8,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -37.1,
+          "y": -25.6,
+          "width": 77,
+          "height": 26.5
+        },
+        {
+          "name": "biaoji_pinzhi",
+          "type": "node",
+          "x": -36.35,
+          "y": 38.55,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "item_name",
+      "type": "label",
+      "text": "",
+      "align": "left",
+      "size": 26,
+      "color": 2566914303,
+      "x": -45,
+      "y": 0.32,
+      "width": 285,
+      "height": 33.25
+    },
+    {
+      "name": "btn_yes",
+      "type": "node",
+      "x": 2.35,
+      "y": -189.3,
+      "width": 200,
+      "height": 85,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_3.png",
+          "img_down": "#ui_common_btn_4.png",
+          "img_disable": "#ui_common_btn_4c.png",
+          "width": 200,
+          "height": 85
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "确定",
+          "align": "center",
+          "size": 35,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -79.5,
+          "y": 4.93,
+          "width": 160,
+          "height": 45.15
+        }
+      ]
+    }
+  ]
+}

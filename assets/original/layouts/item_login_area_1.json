@@ -1,0 +1,42 @@
+{
+  "group": [
+    "ui_login"
+  ],
+  "width": 244,
+  "height": 67,
+  "children": [
+    {
+      "name": "btn",
+      "type": "ckb",
+      "img_on": "#ui_login_btn_fuwuqi3.png",
+      "img_off": "#ui_login_btn_fuwuqi1.png",
+      "img_disable": "#ui_login_btn_fuwuqi2.png"
+    },
+    {
+      "name": "type",
+      "type": "label",
+      "text": " ",
+      "align": "center",
+      "size": 25,
+      "color": 4294967295,
+      "outlineColor": 4135427,
+      "x": -119,
+      "y": -0.7,
+      "width": 236,
+      "height": 32.1
+    },
+    {
+      "name": "name",
+      "type": "label",
+      "text": " ",
+      "align": "left",
+      "size": 25,
+      "color": 4294967295,
+      "outlineColor": 4135427,
+      "x": -11,
+      "y": -0.7,
+      "width": 130,
+      "height": 32.1
+    }
+  ]
+}

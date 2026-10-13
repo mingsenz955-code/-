@@ -1,0 +1,747 @@
+{
+  "group": [
+    "ui_activitytrained",
+    "ui_daojukuang"
+  ],
+  "width": 820,
+  "height": 450,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_activitytrained_bg1.png",
+      "y": 115.7,
+      "width": 820,
+      "height": 219
+    },
+    {
+      "name": "item_small",
+      "type": "node",
+      "x": -164.65,
+      "y": 125.85,
+      "width": 110,
+      "height": 110,
+      "children": [
+        {
+          "name": "add",
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "width": 110,
+          "height": 110
+        },
+        {
+          "name": "xiangkuang",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "x": -0.85,
+          "y": 2.8,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -37.1,
+          "y": -25.6,
+          "width": 77,
+          "height": 26.5
+        },
+        {
+          "name": "biaoji_pinzhi",
+          "type": "node",
+          "x": -19,
+          "y": 18.15,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "name_small",
+      "type": "label",
+      "text": "小包培养丹",
+      "align": "center",
+      "size": 24,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": -239.8,
+      "y": 200.1,
+      "width": 147,
+      "height": 31
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_activitytrained_mojing.png",
+      "x": -240,
+      "y": 46.25,
+      "width": 31,
+      "height": 42
+    },
+    {
+      "name": "price_small",
+      "type": "label",
+      "text": "150",
+      "align": "left",
+      "size": 30,
+      "color": 4294967295,
+      "x": -223,
+      "y": 43.88,
+      "width": 74.95,
+      "height": 37.75
+    },
+    {
+      "name": "btn_buy_small",
+      "type": "node",
+      "x": -113.7,
+      "y": 45.85,
+      "width": 92,
+      "height": 46,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btndh1.png",
+          "img_down": "#ui_common_btndh2.png",
+          "img_disable": "#ui_common_btndh3.png",
+          "width": 92,
+          "height": 46
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "购买",
+          "align": "center",
+          "size": 26,
+          "color": 992815615,
+          "outlineColor": 13941402,
+          "x": -43,
+          "y": -2.88,
+          "width": 85,
+          "height": 33.25
+        }
+      ]
+    },
+    {
+      "name": "item_big",
+      "type": "node",
+      "x": 163.35,
+      "y": 125.85,
+      "width": 110,
+      "height": 110,
+      "children": [
+        {
+          "name": "add",
+          "type": "sprite",
+          "img": "#ui_daojukuang_DaoJuKuang1.png",
+          "width": 110,
+          "height": 110
+        },
+        {
+          "name": "xiangkuang",
+          "type": "node",
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "icon_long",
+          "type": "node",
+          "x": -0.85,
+          "y": 2.8,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "name": "txt_num",
+          "type": "label",
+          "text": " ",
+          "align": "right",
+          "size": 20,
+          "color": 4294967295,
+          "outlineColor": 0,
+          "x": -37.1,
+          "y": -25.6,
+          "width": 77,
+          "height": 26.5
+        },
+        {
+          "name": "biaoji_pinzhi",
+          "type": "node",
+          "x": -19,
+          "y": 18.15,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "name": "name_big",
+      "type": "label",
+      "text": "大包培养丹",
+      "align": "center",
+      "size": 24,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": 88.2,
+      "y": 200.1,
+      "width": 147,
+      "height": 31
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_activitytrained_mojing.png",
+      "x": 88,
+      "y": 46.25,
+      "width": 31,
+      "height": 42
+    },
+    {
+      "name": "price_big",
+      "type": "label",
+      "text": "500",
+      "align": "left",
+      "size": 30,
+      "color": 4294967295,
+      "x": 105,
+      "y": 43.88,
+      "width": 74.95,
+      "height": 37.75
+    },
+    {
+      "name": "btn_buy_big",
+      "type": "node",
+      "x": 214.3,
+      "y": 45.85,
+      "width": 92,
+      "height": 46,
+      "children": [
+        {
+          "name": "btn",
+          "type": "btn",
+          "img_normal": "#ui_common_btndh1.png",
+          "img_down": "#ui_common_btndh2.png",
+          "img_disable": "#ui_common_btndh3.png",
+          "width": 92,
+          "height": 46
+        },
+        {
+          "name": "txt_name",
+          "type": "label",
+          "text": "购买",
+          "align": "center",
+          "size": 26,
+          "color": 992815615,
+          "outlineColor": 13941402,
+          "x": -43,
+          "y": -2.88,
+          "width": 85,
+          "height": 33.25
+        }
+      ]
+    },
+    {
+      "name": "score",
+      "type": "label",
+      "text": "当前剩余积分：",
+      "align": "right",
+      "size": 24,
+      "color": 1996425471,
+      "outlineColor": 0,
+      "x": -303,
+      "y": -8.75,
+      "width": 191.95,
+      "height": 31
+    },
+    {
+      "name": "score_num",
+      "type": "label",
+      "text": "10000",
+      "align": "left",
+      "size": 24,
+      "color": 1996425471,
+      "outlineColor": 0,
+      "x": -114,
+      "y": -8.75,
+      "width": 116,
+      "height": 31
+    },
+    {
+      "name": "score_all",
+      "type": "label",
+      "text": "总积分累计：",
+      "align": "right",
+      "size": 24,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": 6,
+      "y": -8.75,
+      "width": 185,
+      "height": 31
+    },
+    {
+      "name": "score_all_num",
+      "type": "label",
+      "text": "000000",
+      "align": "left",
+      "size": 24,
+      "color": 4294967295,
+      "outlineColor": 0,
+      "x": 189,
+      "y": -8.75,
+      "width": 185,
+      "height": 31
+    },
+    {
+      "name": "item1",
+      "type": "node",
+      "x": -303,
+      "y": -124.7,
+      "width": 199,
+      "height": 201,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_activitytrained_bg8.png",
+          "width": 199,
+          "height": 201
+        },
+        {
+          "name": "btn_buy_small",
+          "type": "node",
+          "x": -1.15,
+          "y": -76.85,
+          "width": 92,
+          "height": 46,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btndh1.png",
+              "img_down": "#ui_common_btndh2.png",
+              "img_disable": "#ui_common_btndh3.png",
+              "width": 92,
+              "height": 46
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "兑换",
+              "align": "center",
+              "size": 30,
+              "color": 992815615,
+              "outlineColor": 13941402,
+              "x": -44,
+              "y": -0.13,
+              "width": 85,
+              "height": 37.75
+            }
+          ]
+        },
+        {
+          "name": "item",
+          "type": "node",
+          "y": -1,
+          "width": 110,
+          "height": 110,
+          "children": [
+            {
+              "name": "add",
+              "type": "sprite",
+              "img": "#ui_daojukuang_DaoJuKuang1.png",
+              "width": 110,
+              "height": 110
+            },
+            {
+              "name": "xiangkuang",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon_long",
+              "type": "node",
+              "x": -0.85,
+              "y": 2.8,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_num",
+              "type": "label",
+              "text": " ",
+              "align": "right",
+              "size": 20,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -37.1,
+              "y": -25.6,
+              "width": 77,
+              "height": 26.5
+            },
+            {
+              "name": "biaoji_pinzhi",
+              "type": "node",
+              "x": -36.35,
+              "y": 38.55,
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "price_score",
+          "type": "label",
+          "text": "666666积分",
+          "align": "center",
+          "size": 26,
+          "color": 1092488703,
+          "x": -95.5,
+          "y": 73.78,
+          "width": 188,
+          "height": 33.25
+        }
+      ]
+    },
+    {
+      "name": "item2",
+      "type": "node",
+      "x": -102,
+      "y": -124.7,
+      "width": 199,
+      "height": 201,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_activitytrained_bg8.png",
+          "width": 199,
+          "height": 201
+        },
+        {
+          "name": "btn_buy_small",
+          "type": "node",
+          "x": -1.15,
+          "y": -76.85,
+          "width": 92,
+          "height": 46,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btndh1.png",
+              "img_down": "#ui_common_btndh2.png",
+              "img_disable": "#ui_common_btndh3.png",
+              "width": 92,
+              "height": 46
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "兑换",
+              "align": "center",
+              "size": 30,
+              "color": 992815615,
+              "outlineColor": 13941402,
+              "x": -44,
+              "y": -0.13,
+              "width": 85,
+              "height": 37.75
+            }
+          ]
+        },
+        {
+          "name": "item",
+          "type": "node",
+          "y": -1,
+          "width": 110,
+          "height": 110,
+          "children": [
+            {
+              "name": "add",
+              "type": "sprite",
+              "img": "#ui_daojukuang_DaoJuKuang1.png",
+              "width": 110,
+              "height": 110
+            },
+            {
+              "name": "xiangkuang",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon_long",
+              "type": "node",
+              "x": -0.85,
+              "y": 2.8,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_num",
+              "type": "label",
+              "text": " ",
+              "align": "right",
+              "size": 20,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -37.1,
+              "y": -25.6,
+              "width": 77,
+              "height": 26.5
+            },
+            {
+              "name": "biaoji_pinzhi",
+              "type": "node",
+              "x": -36.35,
+              "y": 38.55,
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "price_score",
+          "type": "label",
+          "text": "666666积分",
+          "align": "center",
+          "size": 26,
+          "color": 1092488703,
+          "x": -95.5,
+          "y": 73.78,
+          "width": 188,
+          "height": 33.25
+        }
+      ]
+    },
+    {
+      "name": "item3",
+      "type": "node",
+      "x": 99,
+      "y": -124.7,
+      "width": 199,
+      "height": 201,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_activitytrained_bg8.png",
+          "width": 199,
+          "height": 201
+        },
+        {
+          "name": "btn_buy_small",
+          "type": "node",
+          "x": -1.15,
+          "y": -76.85,
+          "width": 92,
+          "height": 46,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btndh1.png",
+              "img_down": "#ui_common_btndh2.png",
+              "img_disable": "#ui_common_btndh3.png",
+              "width": 92,
+              "height": 46
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "兑换",
+              "align": "center",
+              "size": 30,
+              "color": 992815615,
+              "outlineColor": 13941402,
+              "x": -44,
+              "y": -0.13,
+              "width": 85,
+              "height": 37.75
+            }
+          ]
+        },
+        {
+          "name": "item",
+          "type": "node",
+          "y": -1,
+          "width": 110,
+          "height": 110,
+          "children": [
+            {
+              "name": "add",
+              "type": "sprite",
+              "img": "#ui_daojukuang_DaoJuKuang1.png",
+              "width": 110,
+              "height": 110
+            },
+            {
+              "name": "xiangkuang",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon_long",
+              "type": "node",
+              "x": -0.85,
+              "y": 2.8,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_num",
+              "type": "label",
+              "text": " ",
+              "align": "right",
+              "size": 20,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -37.1,
+              "y": -25.6,
+              "width": 77,
+              "height": 26.5
+            },
+            {
+              "name": "biaoji_pinzhi",
+              "type": "node",
+              "x": -36.35,
+              "y": 38.55,
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "price_score",
+          "type": "label",
+          "text": "666666积分",
+          "align": "center",
+          "size": 26,
+          "color": 1092488703,
+          "x": -95.5,
+          "y": 73.78,
+          "width": 188,
+          "height": 33.25
+        }
+      ]
+    },
+    {
+      "name": "item4",
+      "type": "node",
+      "x": 300,
+      "y": -124.7,
+      "width": 199,
+      "height": 201,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_activitytrained_bg8.png",
+          "width": 199,
+          "height": 201
+        },
+        {
+          "name": "btn_buy_small",
+          "type": "node",
+          "x": -1.15,
+          "y": -76.85,
+          "width": 92,
+          "height": 46,
+          "children": [
+            {
+              "name": "btn",
+              "type": "btn",
+              "img_normal": "#ui_common_btndh1.png",
+              "img_down": "#ui_common_btndh2.png",
+              "img_disable": "#ui_common_btndh3.png",
+              "width": 92,
+              "height": 46
+            },
+            {
+              "name": "txt_name",
+              "type": "label",
+              "text": "兑换",
+              "align": "center",
+              "size": 30,
+              "color": 992815615,
+              "outlineColor": 13941402,
+              "x": -44,
+              "y": -0.13,
+              "width": 85,
+              "height": 37.75
+            }
+          ]
+        },
+        {
+          "name": "item",
+          "type": "node",
+          "y": -1,
+          "width": 110,
+          "height": 110,
+          "children": [
+            {
+              "name": "add",
+              "type": "sprite",
+              "img": "#ui_daojukuang_DaoJuKuang1.png",
+              "width": 110,
+              "height": 110
+            },
+            {
+              "name": "xiangkuang",
+              "type": "node",
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "icon_long",
+              "type": "node",
+              "x": -0.85,
+              "y": 2.8,
+              "width": 0,
+              "height": 0
+            },
+            {
+              "name": "txt_num",
+              "type": "label",
+              "text": " ",
+              "align": "right",
+              "size": 20,
+              "color": 4294967295,
+              "outlineColor": 0,
+              "x": -37.1,
+              "y": -25.6,
+              "width": 77,
+              "height": 26.5
+            },
+            {
+              "name": "biaoji_pinzhi",
+              "type": "node",
+              "x": -36.35,
+              "y": 38.55,
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "price_score",
+          "type": "label",
+          "text": "666666积分",
+          "align": "center",
+          "size": 26,
+          "color": 1092488703,
+          "x": -95.5,
+          "y": 73.78,
+          "width": 188,
+          "height": 33.25
+        }
+      ]
+    }
+  ]
+}

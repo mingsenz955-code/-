@@ -1,0 +1,83 @@
+{
+  "group": [
+    "ui_hd70"
+  ],
+  "width": 818,
+  "height": 35,
+  "children": [
+    {
+      "type": "sprite",
+      "img": "#ui_hd70_heng.png",
+      "width": 818,
+      "height": 35
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_hd70_xiaohongbaodaoju.png",
+      "x": 259,
+      "y": 0.5,
+      "width": 38,
+      "height": 32
+    },
+    {
+      "name": "node_index",
+      "type": "label",
+      "text": "?",
+      "align": "center",
+      "size": 22,
+      "color": 992815615,
+      "x": -398.95,
+      "y": -0.18,
+      "width": 91,
+      "height": 28.85
+    },
+    {
+      "name": "node_info",
+      "type": "label",
+      "text": "--",
+      "align": "center",
+      "size": 22,
+      "color": 992815615,
+      "x": -300.95,
+      "y": -0.18,
+      "width": 330.95,
+      "height": 28.85
+    },
+    {
+      "name": "node_rate",
+      "type": "label",
+      "text": "?/?",
+      "align": "center",
+      "size": 22,
+      "color": 992815615,
+      "x": 37,
+      "y": -0.18,
+      "width": 132,
+      "height": 28.85
+    },
+    {
+      "name": "node_rewardNum",
+      "type": "label",
+      "text": "?",
+      "align": "right",
+      "size": 22,
+      "color": 992815615,
+      "x": 178,
+      "y": -0.18,
+      "width": 53,
+      "height": 28.85
+    },
+    {
+      "name": "node_ing",
+      "type": "label",
+      "text": "?",
+      "align": "center",
+      "size": 22,
+      "color": 3422552319,
+      "x": 302,
+      "y": -0.18,
+      "width": 99,
+      "height": 28.85
+    }
+  ]
+}
