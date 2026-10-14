@@ -36,3 +36,13 @@
 - `scripts/export-adventure.py` → `assets/original/data/adventure.mjs` + `adventure-provenance.json`（含 `tables.json` 哈希与列证据说明）。
 - `src/adventure.mjs`：只按**已证明的列**读取，提供地图 / 节点 / 链查询。
 - `tests/adventure.test.mjs` 3 项：逐行保留与哈希一致、20×20 与链完整性、节点类型分布。
+
+## 界面（v0.19）
+
+冒险面板用原版 `panel_pve`（1138×640）：`huadong` 地图滚动区、`map_ctrl` 的左右翻页与普通/精英按钮、标题 `tx_biaoti`。地图用 `item_pve_map_1..12`，每张布局里正好 `check1..check20`，与 `mapevents` 每图 20 个节点**一一对应**（checkN = 第 N 个节点）。小节点用 `point2`、大节点用 `diban`，两者都包成可点按钮；点节点报告名称与类型。入口是主界面「战斗」。
+
+**这个 APK 缺图**：`panel_pve` 引用 11 个 frame，遍历全部 152 个 ui 图集与 APK 内所有 plist 都找不到 —— `ui_bg_960_640bg`、`ui_common_bg_t_0..5`、`ui_common_btn_fanye_l/r_1`、`ui_common_biaoqian_01/02`、`ui_pve_title2`。界面改为加载失败即隐藏，底板暂用同源 `ui_common_DiBan_YangBiZhi.png` 兜底；翻页按钮仍可点，但没有箭头图。
+
+**导入策略变更**：`scripts/import-original-assets.py` 由手写白名单改为**全量导入** `assets/res/ui/*.plist`（152 个图集，外加 7 张 `pve_map`）。手写列表已两次漏图（`ui_formationinfo`、`ui_common_bg_t_*`），全量后登记 4427 条、`assets/original/ui` 3832 个文件；同时修复图集内 `.jpg` 条目无法以 RGBA 保存导致整批中断的问题。
+
+**进度仍是服务器权威**：节点一律按中性状态绘制，不伪造通关/星级/宝箱。战斗、体力与结算未实现。

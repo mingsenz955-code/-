@@ -1,5 +1,7 @@
 import {openWarehouse,chooseWarehouseDragon} from './warehouse-dialog.mjs';
 import {openEquipDialog,openEquipInfoDialog,openEquipChangeDialog,openEquipSourceDialog} from './equip-dialog.mjs';
+import {openAdventureDialog} from './adventure-dialog.mjs';
+import {adventureEvent,adventureEventKind} from './adventure.mjs';
 import {equipmentInstance,definitionPart,EQUIPMENT_SLOTS} from './equipment.mjs';
 import {openShop,openHabitatShop,openHabitatInfo,openBreed,openIncubator,openCatalog,openNativePaper,nativeButton} from './ranch-dialogs.mjs';
 import {openRaffleDialog,openRafflePreview,closeRafflePreview} from './raffle-dialog.mjs';
@@ -77,6 +79,10 @@ document.addEventListener('click',async e=>{
   if(type==='wearEquipSelected'){const d=$('#modal'),dragonId=Number(d.dataset.dragonId),equipmentId=d.dataset.selectedEquipment;if(!equipmentId){toast('请先在右侧选中一件未装备的装备。');return}const item=equipmentInstance(state,equipmentId);if(!item){toast('找不到这件装备。');return}const part=definitionPart(item);if(part!==Number(el.dataset.value)){toast(`这件装备属于${EQUIPMENT_SLOTS[part]??'未知'}部位，请点对应槽位。`);return}const next=action(state,'wearEquipment',{id:dragonId,equipmentId});await persist(next);render();delete d.dataset.selectedEquipment;await openEquipDialog(state,dragonId);toast(state.log[0]);return}
   if(type==='equipTab'){toast(el.dataset.value==='frag'?'装备碎片尚未接入，当前只有装备列表。':'当前已显示未装备的装备。');return}
   if(type==='unverifiedEquip'){toast('装备的更换、强化、升星与原版获取来源尚未实现。');return}
+  if(type==='openAdventure'){await openAdventureDialog(state);return}
+  if(type==='pveMap'){await openAdventureDialog(state,Number(el.dataset.value));return}
+  if(type==='pveNode'){const node=adventureEvent(Number(el.dataset.id));toast(node?`${node.name} · ${adventureEventKind(node)==='monster'?'怪物关卡':'龙关卡'}（战斗程序尚未实现）`:'找不到这个关卡节点。');return}
+  if(type==='pveUnverified'){toast('普通与精英关卡的战斗、体力与结算尚未实现。');return}
   if(type==='openWarehouse'){await openWarehouse(state);return}
   if(type==='raffleEggUse'){const next=action(state,'raffleEggHatch',{id});await persist(next);render();toast(state.log[0]);await openIncubator(state);return}
   if(type==='warehouseFilter'){await openWarehouse(state,el.dataset.value);return}

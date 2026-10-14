@@ -34,11 +34,22 @@ def unpack(base,folder):
   sw,sh=numbers(frame.get('sourceSize','{%d,%d}'%(w,h)))
   color=numbers(frame.get('sourceColorRect','{{0,0},{%d,%d}}'%(w,h)))
   canvas=Image.new('RGBA',(sw,sh));canvas.paste(tile,(color[0],color[1]))
-  safe=Path(key).name;dest=OUT/folder/safe;dest.parent.mkdir(parents=True,exist_ok=True);canvas.save(dest,optimize=True)
+  safe=Path(key).name;dest=OUT/folder/safe;dest.parent.mkdir(parents=True,exist_ok=True)
+  # A few atlas entries are named .jpg; JPEG cannot carry the atlas alpha channel, so those
+  # are flattened the way a JPEG decoder would show them instead of failing the whole run.
+  if dest.suffix.lower() in ('.jpg','.jpeg') and canvas.mode=='RGBA':canvas=canvas.convert('RGB')
+  canvas.save(dest,optimize=True)
   manifest['assets'][folder+'/'+safe]={'archive':base+'.plist','frame':key,'texture':base+('.png' if base+'.png' in names else '.pkm'),'width':sw,'height':sh,'sha256':hashlib.file_digest(dest.open('rb'),'sha256').hexdigest()}
-for name in ['ui_dragontype','ui_booknew','thumbs_store','ui_shop','ui_breednew','ui_pinzhi','ui_lotterydragon','ui_bgnew','ui_RandDragon','ui_dragonrand_bg1','ui_PowerUp','ui_ButtonProp','ui_evolution','ui_star','ui_daojukuang','ui_mydragon','ui_FunctionIcons1','ui_FunctionIcons2','ui_FramesNormal','ui_FramesAlpha','ui_ButtonNormal','ui_activitybutton','ui_Book','ui_Breed','thumbs_dragon','thumbs_egg','thumbs_equip','ui_AttributeIcon','ui_Map','ui_mapland','ui_mapshadow','ui_Plant','ui_egg','ui_world','ui_entrance','ui_mail','ui_formationinfo','ui_formation','ui_equipformation','ui_starup']:
+# Import every UI atlas. The panel set is not stable enough for a hand-written whitelist: a
+# single missing frame silently breaks a source page (panel_pve needs ui_common_bg_t_* and
+# ui_bg_960_640bg, which no previous whitelist entry covered).
+for name in sorted({n[len('assets/res/ui/'):-len('.plist')] for n in names if n.startswith('assets/res/ui/') and n.endswith('.plist')}):
  base='assets/res/ui/'+name
  if base+'.plist' in names:unpack(base,'ui')
+# The twenty PVE maps reuse seven map atlases; item_pve_map_1..12 layouts reference them.
+for index in range(1,8):
+ map_base='assets/res/pve_map/pve_map_%d'%index
+ if map_base+'.plist' in names:unpack(map_base,'ui')
 habitat_atlases=[g.split('/')[-1] for p in (OUT/'layouts').glob('00*_habitat_*.json') for g in json.loads(p.read_text(encoding='utf8'))['group']]
 for name in ['islandbg','islandtop_g','islandbottom_g','islandleft_g','islandright_g','0001_incubator_g','0016_farm_1_g','0017_farm_2_g','0019_breeding_cave_a_g',*habitat_atlases]:
  unpack('assets/res/buildings/'+name,'world')

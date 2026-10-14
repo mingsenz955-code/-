@@ -325,3 +325,10 @@
 - 已证明结构：20 图 × 20 节点；400 行第 5/6 列前后链**全部自洽**；节点表地图列减 900 可完全复现地图 id 列表；400 节点是**贯穿 20 图的一条长链**（仅 1 个无前驱、1 个无后继）；节点类型 `monster` 320 + 龙 80（每图 16+4）。`map` 第 6 列总星数 12，与用户实机第 20 关「12/12」吻合。
 - 新增 `scripts/export-adventure.py`、`assets/original/data/adventure.mjs` + provenance、`src/adventure.mjs`、`tests/adventure.test.mjs` 3 项；合计 68 项 Node 检查全绿。证据与已实现/未实现边界见 `docs/ADVENTURE.md`。
 - 未做：战斗结算、体力、星级、宝箱与奖励（服务器权威且战斗程序未实现），以及冒险界面。下一轮先做地图与节点界面，再决定战斗做到什么程度。
+
+## 最新检查点 — v0.19 冒险界面接通原版地图（2026-10-14）
+- 继续②：冒险界面已用原版布局接上。`panel_pve`（1138×640）是主面板，地图是 `item_pve_map_1..12` 循环，每张布局里 `check1..check20` 与 `mapevents` 每图 20 节点一一对应（checkN=第 N 个）。入口改为主界面「战斗」。
+- 资源问题两处：①`scripts/import-original-assets.py` 的手写白名单再次漏图（`ui_common_bg_t_*` 等），已改为**全量导入** `assets/res/ui/*.plist`（152 图集）+ 7 张 `pve_map`，登记 4427 条、ui 目录 3832 文件；②图集里 `.jpg` 条目无法以 RGBA 保存会中断整批，已按 JPEG 可见结果展平处理。
+- **`panel_pve` 引用的 11 个 frame 在该 APK 中不存在**（遍历全部图集与 plist 确认）：`ui_bg_960_640bg`、`ui_common_bg_t_0..5`、`ui_common_btn_fanye_l/r_1`、`ui_common_biaoqian_01/02`、`ui_pve_title2`。界面改为加载失败即隐藏，底板用同源 `ui_common_DiBan_YangBiZhi.png` 兜底并记录，不拿生成图冒充。
+- 隔离档 `--smoke-adventure` 通过：20 节点、地图背景随地图切换、节点点击、浏览不写存档。68 项 Node 检查全绿；证据见 `docs/ADVENTURE.md`。
+- 仍缺：战斗结算、体力、星级、宝箱与奖励（服务器权威）。下一轮决定战斗做到什么程度（离线推演并标注 policy，或先做扫荡式结算）。
