@@ -40,20 +40,26 @@ exports.run=async(window,store,verify)=>{
  await shot('raffle-native-qa.png');
 
  await click('#modal [data-action=raffleDraw][data-value="mid:1"]');
- await wait(1350);
+ await wait(1200);
  const afterMid=await state();
  assert.equal(afterMid.raffle.pending.length,1,'the middle draw stores one egg');
  assert.equal(afterMid.gems,before.gems,'one card pays for one draw');
  assert.equal(afterMid.raffle.tickets['6048'],4);
  assert.equal(afterMid.raffle.counters.mid,afterMid.raffle.pending[0].quality===4?0:1,'the 必得 counter advances unless 紫 dropped');
- assert.equal(await js("document.querySelector('#modal canvas[data-model=eff_choujiangji2]').dataset.clip"),'1','the source draw animation returns to idle');
+ assert.equal(await js("document.querySelector('#modal').dataset.mode"),'sourceRaffleResult','the original result panel opens after the machine animation');
+ assert.equal(await js("document.querySelectorAll('#modal .raffle-result-egg').length"),1,'the result panel shows the won egg');
+ assert(await js("document.querySelector('#modal').textContent.includes('获得的龙蛋，可在仓库中查看')"));
+ await shot('raffle-result-qa.png');
+ await click('#modal [data-action=returnRaffle]');
 
  const gemsBeforeJunior=afterMid.gems;
  await click('#modal [data-action=raffleDraw][data-value="junior:1"]');
- await wait(1350);
+ await wait(1200);
  const afterJunior=await state();
  assert.equal(afterJunior.gems,gemsBeforeJunior,'the junior single draw is free');
  assert.equal(afterJunior.raffle.pending.length,2);
+ assert.equal(await js("document.querySelector('#modal').dataset.mode"),'sourceRaffleResult');
+ await click('#modal [data-action=returnRaffle]');
 
  await click('#modal [data-action=close]');
  // 更多 is a toggle: it is already expanded from opening the raffle, so only click it

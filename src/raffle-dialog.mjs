@@ -1,9 +1,10 @@
 import CATALOG from '../assets/original/catalog.mjs';
 import {RAFFLE_PREVIEW_ROWS} from '../assets/original/data/raffle.mjs';
-import {RAFFLE_GUARANTEE_DRAWS} from './raffle.mjs';
+import {ORIGINAL_EGGS} from '../assets/original/data/eggs.mjs';
+import {RAFFLE_GUARANTEE_DRAWS,raffleCost} from './raffle.mjs';
 import EFFECTS from '../assets/original/effects/index.mjs';
 import {renderSourceLayout} from './source-layout.mjs';
-let layoutPromise,previewPromise,itemPromise;
+let layoutPromise,previewPromise,itemPromise,resultPromise;
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 // Later mobile raffle UI is a different system from the old Dragonrand table.
 // Never charge its prices while sampling the unrelated legacy pool.
@@ -32,11 +33,25 @@ export async function openRaffleDialog(state){
 export async function playRaffleDraw(mode){
  const index={junior:1,mid:2,senior:3}[mode],dialog=document.querySelector('#modal');
  const canvas=dialog?.querySelector(`canvas[data-model="eff_choujiangji${index}"]`);if(!canvas)return false;
- let duration=1100;
- try{const response=await fetch(EFFECTS[`eff_choujiangji${index}`].data),model=await response.json(),clip=model.clips?.['2'];if(clip?.frames&&model.fps)duration=Math.ceil(clip.frames/model.fps*1000)+60}catch{}
  canvas.dataset.clip='2';canvas.dataset.replay=String(Number(canvas.dataset.replay??0)+1);
  if(matchMedia('(prefers-reduced-motion: reduce)').matches){canvas.dataset.clip='1';return dialog.open&&canvas.isConnected}
- return new Promise(resolve=>{const started=performance.now();const finish=kept=>{if(canvas.isConnected){canvas.dataset.clip='1';canvas.dataset.replay=String(Number(canvas.dataset.replay??0)+1)}resolve(kept)};const frame=now=>{if(!dialog.open||!canvas.isConnected)return finish(false);if(now-started>=duration)return finish(true);requestAnimationFrame(frame)};requestAnimationFrame(frame)});
+ return new Promise(resolve=>{const started=performance.now();const finish=kept=>{if(canvas.isConnected){canvas.dataset.clip='1';canvas.dataset.replay=String(Number(canvas.dataset.replay??0)+1)}resolve(kept)};const frame=now=>{if(!dialog.open||!canvas.isConnected)return finish(false);if(now-started>=1000)return finish(true);requestAnimationFrame(frame)};requestAnimationFrame(frame)});
+}
+
+export async function openRaffleResult(state,results,mode,count){
+ resultPromise??=fetch('assets/original/layouts/panel_dragon_lottery_effect.json').then(r=>r.json());
+ const layout=structuredClone(await resultPromise),dialog=document.querySelector('#modal'),byId=new Map(CATALOG.map(d=>[d.id,d]));
+ if(dialog.open)dialog.close();dialog.className='source-dragon-dialog source-raffle-dialog';dialog.dataset.mode='sourceRaffleResult';
+ let cost=null;try{cost=raffleCost(state.raffle,mode,count)}catch{}
+ const useTicket=cost&&cost.tickets===count,costValue=useTicket?count:cost?.gems??0,machineIndex={junior:1,mid:2,senior:3}[mode];
+ const actions={'quit/btn_yes/btn':{type:'returnRaffle',label:'确定'},'quit/btn_too/btn':{type:'raffleAgain',value:`${mode}:${count}`,label:'再来一次'}};
+ const hidden=new Set();if(!cost)hidden.add('quit/btn_too');
+ const values={'quit/num':String(costValue),'quit/btn_too/miaoshu':'再来一次','quit/btn_yes/miaoshu':'确    定'};
+ const ticket=`#ui_lotterydragon_daijuan${machineIndex}.png`;for(const node of layout.children)if(node.name==='quit')for(const child of node.children??[])if(child.name==='icon')child.img=useTicket?ticket:'#ui_lotterydragon_mojing.png';
+ const colors={1:'#f6f6f6',2:'#00fe30',3:'#00a8ff',4:'#d33bff',5:'#fead00'};
+ const eggs=results.map((result,i)=>{const dragon=byId.get(result.dragonId),x=results.length===1?0:(i%5)*125-250,y=results.length===1?0:-Math.floor(i/5)*150+80,image=ORIGINAL_EGGS[result.dragonId]??dragon?.images[1];return `<div class="raffle-result-egg" style="left:calc(50% + ${x}px);top:calc(50% - ${y}px);--result-delay:${i*90}ms"><img src="${escape(image??'')}" alt="${escape(dragon?.name??'龙蛋')}"><span style="color:${colors[result.quality]??'#fff'}">${escape(dragon?.name??`原ID ${result.dragonId}`)}</span></div>`}).join('');
+ const scale=Math.min((innerWidth-20)/1024,(innerHeight-20)/768);dialog.style.setProperty('--source-scale',scale);
+ dialog.innerHTML=`<div class="source-artboard">${renderSourceLayout(layout,{values,actions,hidden})}<div class="raffle-result-eggs">${eggs}</div></div>`;dialog.showModal();
 }
 
 export async function openRafflePreview(){
