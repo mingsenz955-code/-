@@ -1,0 +1,355 @@
+{
+  "group": [
+    "ui_ButtonProp"
+  ],
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png",
+      "img_down": "#ui_common_QuanPing_BG.png"
+    },
+    {
+      "name": "longzuleixing",
+      "type": "node",
+      "x": 1.7,
+      "y": -332.9,
+      "width": 973,
+      "height": 100,
+      "children": [
+        {
+          "name": "all",
+          "type": "ckb",
+          "img_on": "#ui_shop_c0010.png",
+          "img_off": "#ui_shop_a0010.png",
+          "x": -450
+        },
+        {
+          "name": "el",
+          "type": "ckb",
+          "img_on": "#ui_shop_c0001.png",
+          "img_off": "#ui_shop_a0001.png",
+          "x": 50
+        },
+        {
+          "name": "l",
+          "type": "ckb",
+          "img_on": "#ui_shop_c0002.png",
+          "img_off": "#ui_shop_a0002.png",
+          "x": 450
+        },
+        {
+          "name": "e",
+          "type": "ckb",
+          "img_on": "#ui_shop_c0003.png",
+          "img_off": "#ui_shop_a0003.png",
+          "x": -350
+        },
+        {
+          "name": "d",
+          "type": "ckb",
+          "img_on": "#ui_shop_c0004.png",
+          "img_off": "#ui_shop_a0004.png",
+          "x": 350
+        },
+        {
+          "name": "m",
+          "type": "ckb",
+          "img_on": "#ui_shop_c0005.png",
+          "img_off": "#ui_shop_a0005.png",
+          "x": 250
+        },
+        {
+          "name": "w",
+          "type": "ckb",
+          "img_on": "#ui_shop_c0006.png",
+          "img_off": "#ui_shop_a0006.png",
+          "x": -150
+        },
+        {
+          "name": "f",
+          "type": "ckb",
+          "img_on": "#ui_shop_c0007.png",
+          "img_off": "#ui_shop_a0007.png",
+          "x": -250
+        },
+        {
+          "name": "p",
+          "type": "ckb",
+          "img_on": "#ui_shop_c0008.png",
+          "img_off": "#ui_shop_a0008.png",
+          "x": -50
+        },
+        {
+          "name": "i",
+          "type": "ckb",
+          "img_on": "#ui_shop_c0009.png",
+          "img_off": "#ui_shop_a0009.png",
+          "x": 150
+        }
+      ]
+    },
+    {
+      "name": "close",
+      "type": "btn",
+      "img_normal": "#ui_common_btn_GuanBi1.png",
+      "img_down": "#ui_common_btn_GuanBi2.png",
+      "x": 468.1,
+      "y": 338.9,
+      "right": 43.9
+    },
+    {
+      "name": "huadong",
+      "type": "list",
+      "y": -70,
+      "width": 1024,
+      "height": 515.6,
+      "left": 0,
+      "right": 0
+    },
+    {
+      "type": "sprite",
+      "img": "#ui_common_BiaoTi_Bg_d.png",
+      "x": -1.15,
+      "y": 341,
+      "width": 573,
+      "height": 83
+    },
+    {
+      "name": "txt_name",
+      "type": "label",
+      "text": "仓库",
+      "size": 28,
+      "align": "center",
+      "color": 4294967295,
+      "x": -216.9,
+      "y": 332.25,
+      "width": 431.85,
+      "height": 35.5
+    },
+    {
+      "name": "category_root",
+      "type": "node",
+      "y": 236,
+      "left": 90,
+      "top": 135,
+      "children": [
+        {
+          "name": "category_node_all",
+          "type": "node",
+          "x": 0,
+          "y": 0,
+          "children": [
+            {
+              "name": "category_btn_all",
+              "type": "ckb",
+              "img_off": "#ui_main_Z_ico-bg0001.png",
+              "img_on": "#ui_main_Z_ico-bg0002.png"
+            },
+            {
+              "name": "category_ico_all",
+              "type": "sprite",
+              "x": -1,
+              "y": -3,
+              "img": "#ui_rank_libao01.png",
+              "width": 75,
+              "height": 75
+            },
+            {
+              "name": "category_txt_all",
+              "type": "label",
+              "text": "ware.all",
+              "size": 20,
+              "align": "center",
+              "width": 140,
+              "height": 48,
+              "x": -70,
+              "y": -50,
+              "color": 4294967295,
+              "outlineColor": 4278190080
+            }
+          ]
+        },
+        {
+          "name": "category_node_dragon",
+          "type": "node",
+          "x": 130,
+          "y": 0,
+          "children": [
+            {
+              "name": "category_btn_dragon",
+              "type": "ckb",
+              "img_off": "#ui_main_Z_ico-bg0001.png",
+              "img_on": "#ui_main_Z_ico-bg0002.png"
+            },
+            {
+              "name": "category_ico_dragon",
+              "type": "sprite",
+              "x": 0,
+              "y": -1,
+              "img": "#ui_shop_fenlei0001.png",
+              "width": 75,
+              "height": 75
+            },
+            {
+              "name": "category_txt_dragon",
+              "type": "label",
+              "text": "ware.dragon",
+              "size": 20,
+              "align": "center",
+              "width": 140,
+              "height": 48,
+              "x": -70,
+              "y": -50,
+              "color": 4294967295,
+              "outlineColor": 4278190080
+            }
+          ]
+        },
+        {
+          "name": "category_node_prop",
+          "type": "node",
+          "x": 260,
+          "y": 0,
+          "children": [
+            {
+              "name": "category_btn_prop",
+              "type": "ckb",
+              "img_off": "#ui_main_Z_ico-bg0001.png",
+              "img_on": "#ui_main_Z_ico-bg0002.png"
+            },
+            {
+              "name": "category_ico_prop",
+              "type": "sprite",
+              "x": -2,
+              "y": -8,
+              "img": "#icon80_zd0003.png",
+              "width": 70,
+              "height": 70
+            },
+            {
+              "name": "category_txt_prop",
+              "type": "label",
+              "text": "ware.prop",
+              "size": 20,
+              "align": "center",
+              "width": 140,
+              "height": 48,
+              "x": -70,
+              "y": -50,
+              "color": 4294967295,
+              "outlineColor": 4278190080
+            }
+          ]
+        },
+        {
+          "name": "category_node_habitat",
+          "type": "node",
+          "x": 390,
+          "y": 0,
+          "children": [
+            {
+              "name": "category_btn_habitat",
+              "type": "ckb",
+              "img_off": "#ui_main_Z_ico-bg0001.png",
+              "img_on": "#ui_main_Z_ico-bg0002.png"
+            },
+            {
+              "name": "category_ico_habitat",
+              "type": "sprite",
+              "x": 1,
+              "y": -1,
+              "img": "#ui_shop_fenlei0005.png",
+              "width": 75,
+              "height": 75
+            },
+            {
+              "name": "category_txt_habitat",
+              "type": "label",
+              "text": "ware.habitat",
+              "size": 20,
+              "align": "center",
+              "width": 140,
+              "height": 48,
+              "x": -70,
+              "y": -50,
+              "color": 4294967295,
+              "outlineColor": 4278190080
+            }
+          ]
+        },
+        {
+          "name": "category_node_building",
+          "type": "node",
+          "x": 520,
+          "y": 0,
+          "children": [
+            {
+              "name": "category_btn_building",
+              "type": "ckb",
+              "img_off": "#ui_main_Z_ico-bg0001.png",
+              "img_on": "#ui_main_Z_ico-bg0002.png"
+            },
+            {
+              "name": "category_ico_building",
+              "type": "sprite",
+              "x": 6,
+              "y": -2,
+              "img": "#ui_shop_fenlei0004.png",
+              "width": 75,
+              "height": 75
+            },
+            {
+              "name": "category_txt_building",
+              "type": "label",
+              "text": "ware.building",
+              "size": 20,
+              "align": "center",
+              "width": 140,
+              "height": 48,
+              "x": -70,
+              "y": -50,
+              "color": 4294967295,
+              "outlineColor": 4278190080
+            }
+          ]
+        },
+        {
+          "name": "category_node_deco",
+          "type": "node",
+          "x": 650,
+          "y": 0,
+          "children": [
+            {
+              "name": "category_btn_deco",
+              "type": "ckb",
+              "img_off": "#ui_main_Z_ico-bg0001.png",
+              "img_on": "#ui_main_Z_ico-bg0002.png"
+            },
+            {
+              "name": "category_ico_deco",
+              "type": "sprite",
+              "x": 9,
+              "y": -1,
+              "img": "#ui_shop_fenlei0002.png",
+              "width": 75,
+              "height": 75
+            },
+            {
+              "name": "category_txt_deco",
+              "type": "label",
+              "text": "ware.deco",
+              "size": 20,
+              "align": "center",
+              "width": 140,
+              "height": 48,
+              "x": -70,
+              "y": -50,
+              "color": 4294967295,
+              "outlineColor": 4278190080
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -75,7 +75,7 @@ def evaluate_text_literal(text):
   token=m.group();pos=m.end()
   if not token.isspace() and not token.startswith('--'):tokens.append(token)
  if text[pos:].strip():raise ValueError('Trailing non-literal text')
- index=0
+ index=0;bindings={}
  def peek(offset=0):return tokens[index+offset] if index+offset<len(tokens) else None
  def consume(expected=None):
   nonlocal index
@@ -111,6 +111,13 @@ def evaluate_text_literal(text):
   if token and re.fullmatch(r'-?0x[0-9a-fA-F]+',token):return int(token,16)
   if token and re.fullmatch(r'-?\d+(?:\.\d*)?(?:[eE][+-]?\d+)?',token):
    result=float(token);return int(result) if result.is_integer() else result
+  if token in bindings:
+   result=bindings[token]
+   while peek()=='[':
+    consume();key=value();consume(']')
+    if not isinstance(result,dict) or not isinstance(key,(str,int)) or key not in result:raise ValueError('Unknown literal table key')
+    result=result[key]
+   return result
   raise ValueError('Non-literal value '+str(token))
  def product():
   result=atom()
@@ -126,11 +133,12 @@ def evaluate_text_literal(text):
    if not isinstance(result,(int,float)) or not isinstance(rhs,(int,float)):raise ValueError('Non-numeric constant expression')
    result=result+rhs if op=='+' else result-rhs
   return result
- variable=None
- if peek()=='local':consume();variable=consume();consume('=')
- else:consume('return')
- result=value()
- if variable:consume('return');consume(variable)
+ while peek()=='local':
+  consume();name=consume()
+  if not name or not re.fullmatch(r'[A-Za-z_][A-Za-z_0-9]*',name) or name in ['local','return','nil','true','false'] or name in bindings:raise ValueError('Invalid or repeated literal local')
+  consume('=');bindings[name]=value()
+  if peek()==';':consume()
+ consume('return');result=value()
  if index!=len(tokens):raise ValueError('Additional code after literal')
  return result
 if __name__=='__main__':

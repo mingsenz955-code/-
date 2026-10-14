@@ -58,3 +58,5 @@ canvas.dragon{display:inline-block;object-fit:contain}.dragon-preview-dialog{wid
 .native-timed-art .egg-preview{width:100%;height:100%;object-fit:contain}.native-hatch-dragon{position:absolute;width:220px;height:220px;transform:translate(-50%,-50%)}.native-hatch-dragon .dragon{width:100%;height:100%}.native-ranch-dialog .source-label[data-source=neirong]{white-space:normal;line-height:1.5}
 
 .native-crop-list{height:480px}.native-farm-upgrade{top:650px}
+
+.native-warehouse-empty{position:absolute;transform:translate(-50%,-50%);width:800px;text-align:center;color:#ffe9bf;font-size:27px}.native-resident:focus-visible{outline:2px solid #c8a35e;outline-offset:1px}

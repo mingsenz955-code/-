@@ -151,3 +151,8 @@
 - 用户提供旧网页栖息地管理截图并明确禁止旧界面；删除运行时三栏/网页管理与图鉴，全部入口留在原牧场底图和原窗口。
 - 原ShopPanel明文ui_shop六分类、PlantsPanel明文panel_zhongzhi_info/item_zhongzhi；PokedexPanel/PokedexItem明文ui_book_new/item_book_show、六列gap7。图鉴加成来自服务端pokedexData，仍留未知。
 - 新原图集与thumbs_store补齐，manifest2176、UI尺寸1581。龙巢、种植、选亲代、繁殖中、育龙塔/幼龙/图鉴均使用对应原布局；详尽适配差异见UI-PARITY.md。
+
+## E05 v0.15 原仓库与后期实例边界
+- ui_warehouse原文本仅local颜色与layout；静态字面绑定安全读取，无原代码执行。原血战布局dragonY字面数组索引亦已安全读取，现661布局、4拒绝；哈希见layout-report。
+- StorePanel使用ui_warehouse/item_warehouse、六类筛选；龙使用路径createEgg与育龙塔容量限制。当前仓库仅兼容旧抽奖pending，旧直接安置与后期龙蛋流程明确分开。
+- 原后期装备实例/穿脱/来源提示审计见EQUIPMENT.md新增段，未伪造装备或总属性。

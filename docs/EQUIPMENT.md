@@ -38,3 +38,9 @@
 1. 核对EquipPanel/FormationEquipPanel的真实槽位/实例/背包模型；原页面包括panel_equip_info、item_equiplist_equip、ui_formation_equip_change，需继续补齐ui_equip/ui_equipformation/ui_bgpuzzle依赖及动态填充。
 2. 确认一个有直接原证据的装备获取入口，再接玩家库存、穿脱、互换与存档迁移。不得用出售价格伪造商店，或给正常玩家档塞测试装备。
 3. 原强化/升阶/升星/宝石/随机属性与战斗计算逐层接入。服务器概率和结算未核实前明确保留差异。
+
+## v0.15 后期装备实例调用链补证
+- EquipPanel.lua源SHA256 581388adaa9fa2b3e7e59a53e61229dc1cbe51efdf010f3d41a37e561cf564f5。静态函数3/4通过dceWearEquip/dceUnWearEquip传龙_data.id和装备data；函数12按data.dragonid过滤未穿戴装备，库存是实例，不是6000条静态定义。
+- FormationEquipPanel.lua源SHA256 6b2c2157eeb74b948f854fbb93c1dd2a7562fd0c1356daf2714a3fd57ef82d42。panel_equip_info取DataManager.getEquipByID、实例grade/star和curAtk/curHp/curDef/curUnCrit/curCrit；星属性来自lib_equipStarInfo。不能把定义基础值冒充穿戴后实例属性。
+- EquipPanel空槽提示通过原Locale键You can obtain the equipment in the Dragon Wildland；须继续核对对应龙境/野外模式的原掉落，再接装备获取，不凭这句提示编造关卡/概率或免费装备。
+- 本轮只完成此调用链补证，没有新增装备库存/穿脱/战斗属性功能。优先真实来源和玩家实例，再穿脱/养成；旧四槽DragonElement分支不能替代此后期流程。

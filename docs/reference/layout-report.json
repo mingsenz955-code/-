@@ -1,5 +1,5 @@
 {
-  "converted": 659,
+  "converted": 661,
   "files": [
     {
       "file": "0001_incubator.lua",
@@ -390,6 +390,281 @@
       "file": "0108_farm2_EvolutionLand.lua",
       "sourceSha256": "4320a9d734e38e0d6bd4209bc350add3e8b577a8c292da7fee18eecf2a2a1ca9",
       "outputSha256": "b9634a18500deec4e21ca7882048a919f19533ed3c2be4b1f94faa41fddb67aa"
+    },
+    {
+      "file": "PlunderTree.lua",
+      "sourceSha256": "58b714d7a612b3dfcb8281b93c04ddae288a8471e00d205854f33784b1c11c5b",
+      "outputSha256": "b07349815d14a4de9671f4f04490c7a1ca2951db32353f93fc018dd9bb9742eb"
+    },
+    {
+      "file": "UI_XinShou_RuneLottery.lua",
+      "sourceSha256": "9bb413baeae9481410ced3ffd6d6bbbd370cccbba20dde7cd7d7d19d3c886f89",
+      "outputSha256": "f8103d82c746c8b426a68a2753d2e14970800dad1b8eeaf93978a590844b5cf4"
+    },
+    {
+      "file": "UI_XinShou_YinDao_1.lua",
+      "sourceSha256": "13ee027748b1fc8e070dd228a73c3cc68d6712d1e788b43766a6e2396f3a6811",
+      "outputSha256": "a2d8026d288c939315e9ca4df6570f0154c8727cb52cafdbf68c795ab85ba63b"
+    },
+    {
+      "file": "UI_XinShou_YinDao_10.lua",
+      "sourceSha256": "2d6986f619fa4bf6f3fd21782861610b693d7b2db4129deadda2b3420061a7ff",
+      "outputSha256": "70216d5935c4393fa7d7094850e35f79e5fefba603478bcbd6a3576a31d4a9e7"
+    },
+    {
+      "file": "UI_XinShou_YinDao_13.lua",
+      "sourceSha256": "8786e36259b06732cbaab7fbe7356f5a72c4b4718c2ddf6a1ba43b94a5c1e16f",
+      "outputSha256": "d4618a9c5cef9376b9938a432fb719775095fa47b6a3b755120be9340313b751"
+    },
+    {
+      "file": "UI_XinShou_YinDao_14.lua",
+      "sourceSha256": "8bee05158066964194d75c2054978f14e38c5e730710f6b6717f29f88908a339",
+      "outputSha256": "53e04d5a3a6da43565d84471733ad4e0f1131049b4052ce7ed98972c768b06e9"
+    },
+    {
+      "file": "UI_XinShou_YinDao_15.lua",
+      "sourceSha256": "07f940f05012a984f7db459f624a99bd6af4d3cad4e6a09fade191d3fe9de68f",
+      "outputSha256": "bedb28f6179c994bc307c4107edd2074e4bf4e025a3a243cb595458c79b1c2ed"
+    },
+    {
+      "file": "UI_XinShou_YinDao_16.lua",
+      "sourceSha256": "5e83f7c31455b65f57323e289c9ae5cce69413babbe472065e00ced31d1f69f0",
+      "outputSha256": "986ce63fb33ecba176cc57be0841c52e1feb411651067715581364d218347e54"
+    },
+    {
+      "file": "UI_XinShou_YinDao_17.lua",
+      "sourceSha256": "aeaab5064c17bcbe2ed82d39e37c04022ac3182b542f00462f0817223f88cc7f",
+      "outputSha256": "8e421b41f3cebaafb20de9fe0d7752c1f5cd88d435feeb813b4207f1e514abea"
+    },
+    {
+      "file": "UI_XinShou_YinDao_18.lua",
+      "sourceSha256": "3ea55691395565daec2ffce1d4829c9a386c8072aa83d3f5165c334bbbfaaf4c",
+      "outputSha256": "e3220225bc487aa568ed283b2da3c1fc80df32e81f547448af57ece26567e0eb"
+    },
+    {
+      "file": "UI_XinShou_YinDao_19.lua",
+      "sourceSha256": "b4e3632983c15aa9a9c5d41a624d11a5b4191467264e5932e762f2a0b61c4a1c",
+      "outputSha256": "55c32a90273b77a6a60e83632e9e0c647d222b55231a75610ea1dfeef60c5d98"
+    },
+    {
+      "file": "UI_XinShou_YinDao_2.lua",
+      "sourceSha256": "8d5300ab58b2c46b1d43939e0d2dc1365174e4d51949c7adb47911b53f238238",
+      "outputSha256": "7322b0a24b47f527daf7d8f79f5d1b70f798dc20c7d5b1c14dd7874af4baa37d"
+    },
+    {
+      "file": "UI_XinShou_YinDao_20.lua",
+      "sourceSha256": "231e33c7b21f4cfefdfc170ac3efd20b853369560cca3ecaebee51b067a9c1cb",
+      "outputSha256": "3427cc77a8e29d1cd4afe3808bb588fa65d287a35719493bc774c49316879d7d"
+    },
+    {
+      "file": "UI_XinShou_YinDao_21.lua",
+      "sourceSha256": "6eaf07639ec0d8d41d24371cc9a48ad882ff194586f9928bed686b23ca3fa323",
+      "outputSha256": "85c38820e0a0872643fdc7546975054963492526fdf6542de5e853b13975d79c"
+    },
+    {
+      "file": "UI_XinShou_YinDao_22.lua",
+      "sourceSha256": "bade12aaece7db56799ed2c13d9c7ab3c2f79a6cce62586aaff0c03af57b2398",
+      "outputSha256": "7dea4eb7c0ae2750a9842de8f1a2859604b0e6737d259598ece09bfe7696f2f3"
+    },
+    {
+      "file": "UI_XinShou_YinDao_23.lua",
+      "sourceSha256": "e730097d735d52746b6c0341c891f17735791f2cb5c385ca4aef49f824160273",
+      "outputSha256": "a0ec549a65c65b87fb0c5502c91af057b54c2d8638ef553c29ccbb99bf2e58dc"
+    },
+    {
+      "file": "UI_XinShou_YinDao_24.lua",
+      "sourceSha256": "7aaed4334d3cad5e066343dd0d5e36c3cc39655178fae672cba4158903b1100e",
+      "outputSha256": "e12d64c57653538c83f767e743f79c2dda5f1ca285e424a9be1a62f7321cb0bb"
+    },
+    {
+      "file": "UI_XinShou_YinDao_25.lua",
+      "sourceSha256": "766c728b9847b1d9f682268b2af6364caf538cd460a07e001d7cecc96686aa9d",
+      "outputSha256": "c004106a253461b7e10e5366dfff5ad3bbf9969ac038a34c808bc01a66111ea9"
+    },
+    {
+      "file": "UI_XinShou_YinDao_26.lua",
+      "sourceSha256": "cafb5c538c17ddbff2d7127103ea917aad05c3c83b70635caf918ea8a9c4d042",
+      "outputSha256": "5080dc47eeae4b52257bfc65ebd5421394acc91e5c337d9a5a84d4c841fd7c56"
+    },
+    {
+      "file": "UI_XinShou_YinDao_27.lua",
+      "sourceSha256": "4011ad9fb81afb17a6ab40830bd24a2fcb411ac020d24210c311915d588178a1",
+      "outputSha256": "e1fce39359a840956c7cd4ee1c47389127273ca5229473cfdbdc7c1383cff61f"
+    },
+    {
+      "file": "UI_XinShou_YinDao_28.lua",
+      "sourceSha256": "921d01e163283c77c504428acc778bf7dee63531c6baec2d651dd43a034496f8",
+      "outputSha256": "25254d739f037c7070bfacf230b91a326524e214184f88380535d2dc504fa8f6"
+    },
+    {
+      "file": "UI_XinShou_YinDao_29.lua",
+      "sourceSha256": "1939c9e5d87f1dc6fe85a7c80f2691619b9015bbe5085e306944c91ef118bbb9",
+      "outputSha256": "2100435a905d81963b900301f7838bc310b327825bed055dd81c95c1bfa09d80"
+    },
+    {
+      "file": "UI_XinShou_YinDao_3.lua",
+      "sourceSha256": "e4c393d5d41faf359342834d940bc1bae449747f27d68714aa2f3307be666a0c",
+      "outputSha256": "e1bf443fe65b40176de52216115aa34d127160cb438b525b4288b4d20033721f"
+    },
+    {
+      "file": "UI_XinShou_YinDao_30.lua",
+      "sourceSha256": "deca9adc1f117b5180b44731ea55a0466736511f6fbc8089602fc7a12c4dcd67",
+      "outputSha256": "6d40702dea9194f8aadff2a31eb878dc697b5717a9076e41d5199e5c95a6a340"
+    },
+    {
+      "file": "UI_XinShou_YinDao_31.lua",
+      "sourceSha256": "7ab4032d6be1f082e927d746bbccd61dfd335bc30a92f91e58b3400d03f061df",
+      "outputSha256": "d0a53374d4504722e1c123a15e92c25b46d3e969d76e50c5af1a346bc66d55d2"
+    },
+    {
+      "file": "UI_XinShou_YinDao_32.lua",
+      "sourceSha256": "088125f90da1ccc042ace8c7070c2b4ef7f1dd4a0031f36da76b494f49f141dd",
+      "outputSha256": "7aba3da9ddc1c879ef7af82e74d040530375ad395d762011533a6e63f2f2dbe8"
+    },
+    {
+      "file": "UI_XinShou_YinDao_33.lua",
+      "sourceSha256": "92e9727db6de72047185a66dc2c57feb706923de563bade18c3d9723462bffd7",
+      "outputSha256": "a124bf08425a086e093bf4d099a2e10d8b5272c1015301471f9008711880877b"
+    },
+    {
+      "file": "UI_XinShou_YinDao_34.lua",
+      "sourceSha256": "779ee6e72649819547d7dfad0735eec763ffed8a06100a7aeb6d507b7d8a8c69",
+      "outputSha256": "e0e6688ad7a413847bbe043770ef862058c21da7a117aa4844db17777f8a3bc8"
+    },
+    {
+      "file": "UI_XinShou_YinDao_35.lua",
+      "sourceSha256": "c4743e7ce9daac542dfca7187542926707079e4c3074fd31e41d662182e09ebd",
+      "outputSha256": "f450cb18d59706daffa576287236e177ef886b927718c21131883b2e355c28c9"
+    },
+    {
+      "file": "UI_XinShou_YinDao_36.lua",
+      "sourceSha256": "a678ee3aea93f9e10483ca80806cc1ff07f5d24adc20860c8e3fe61ca1d82bcf",
+      "outputSha256": "8152bd984b0c352d02c3bc1692394672f6735bba87d3bde51b3d958543e91154"
+    },
+    {
+      "file": "UI_XinShou_YinDao_37.lua",
+      "sourceSha256": "65baf1f01f3cd8d2158c25392210ac8aedc86e74723cb1b00e9444d7c71fa562",
+      "outputSha256": "f4268e71904cc8e629de2a8042c68a6b82ddb2e66fd05bded2347436ce4908c4"
+    },
+    {
+      "file": "UI_XinShou_YinDao_38.lua",
+      "sourceSha256": "b21ad1efe40d5cb558f5ecfa0f6fd4603595cee9253ace0116a9e78c824ee744",
+      "outputSha256": "9ff110f98528b55110afa3ff8fb3493fe963b92ebb83e8064db5a2ba8c860f36"
+    },
+    {
+      "file": "UI_XinShou_YinDao_39.lua",
+      "sourceSha256": "36b7d2f41b8add23cc3a467bb48705e122c5e9c950a7b6117d6e9c5ec492e825",
+      "outputSha256": "e12d64c57653538c83f767e743f79c2dda5f1ca285e424a9be1a62f7321cb0bb"
+    },
+    {
+      "file": "UI_XinShou_YinDao_4.lua",
+      "sourceSha256": "1a8ecb9c131b5defe146d15d620d71ff157d74a61a329acf2339ea5cd20b50ab",
+      "outputSha256": "52fa2be1f3fbebcc55e48309f152a60f57c3bcde8eaa32781483091f07efc8fd"
+    },
+    {
+      "file": "UI_XinShou_YinDao_40.lua",
+      "sourceSha256": "cda6dd8c8b3920117850a3771ec877263b0f588c8cca364e9f6c9e0465a701d0",
+      "outputSha256": "fd6160a1f3cea8b54361b2faa99b15ba6b075373b5bdcca9815bc9beaefb971c"
+    },
+    {
+      "file": "UI_XinShou_YinDao_42.lua",
+      "sourceSha256": "b33b41d6de47de7ae26532b504f5b823d7d4f34ca7f160fc737481f3634175b6",
+      "outputSha256": "6fef87bd07aa0c6fc99c8a9025573ebe0e1cb48261a8eeb59dde38f4dcb584e4"
+    },
+    {
+      "file": "UI_XinShou_YinDao_43.lua",
+      "sourceSha256": "bcea3e529ccfcd9fb68d3d4150290cb00a7b8390dd7b333c28b6021a8f849784",
+      "outputSha256": "eda1ae1afaf1f9c99b871779a934e35de32e118cbd83270cd621ad1ca6d23e53"
+    },
+    {
+      "file": "UI_XinShou_YinDao_46.lua",
+      "sourceSha256": "95b3a9112ed337004bb3acbd266467c669781abe8b7baf6c3666c8978688e2af",
+      "outputSha256": "9a2df70ee99b190a251b7b9de3752f9b18b210b1bfa719a04c0287c1bba767ca"
+    },
+    {
+      "file": "UI_XinShou_YinDao_47.lua",
+      "sourceSha256": "216bc4e8070841f0e94d9d14a96491178d5924cce784cc327a2aa02ec0586f42",
+      "outputSha256": "51b772d3443d4507909992239404e09a8f9a7099529c119ec22cba1c4a8af4ba"
+    },
+    {
+      "file": "UI_XinShou_YinDao_5.lua",
+      "sourceSha256": "9211db17ba3a2907e6f0b0bf410db49da36f0547ef010bef8b959d7215896546",
+      "outputSha256": "1010e9e73a49a9e34f6699aa4e1d1334578faed0bff8603f43529c82f33c57d2"
+    },
+    {
+      "file": "UI_XinShou_YinDao_6.lua",
+      "sourceSha256": "4a7f84348fa4dd4d7f2f8ae283068011a00223622ec297284ce854e0ae39870d",
+      "outputSha256": "606c638f227148dfe9338f3629d0cc11d407988ad79dc704506f4637df23e136"
+    },
+    {
+      "file": "UI_XinShou_YinDao_7.lua",
+      "sourceSha256": "5e3da8e56df5dec8ccecc7d09b46111b3479967652c856bc625bcbb5b6b6f0ff",
+      "outputSha256": "20867a842487a9275987807acb2a079681f0a877258db03c53b9b9992cdaf01f"
+    },
+    {
+      "file": "UI_XinShou_YinDao_8.lua",
+      "sourceSha256": "065723e54c90e6d895866c50ba03ceee9bd916e1236aecd7496a89711b982444",
+      "outputSha256": "d61b87c20ac1446014c9526634ab84a6f4240ea77ec91c09463f61cd058abcd7"
+    },
+    {
+      "file": "UI_XinShou_YinDao_9.lua",
+      "sourceSha256": "59bf251df93a26ec7621d52ded45db00faa858956aed3126dd77b9367453aa27",
+      "outputSha256": "f135eb62da829795a3374a2b65dfaa99e6616daf1cb777ab5fe0afb8dd81791b"
+    },
+    {
+      "file": "UI_XinShou_YinDao_arena1.lua",
+      "sourceSha256": "acc9d258f13211aab3ec49ac74f165414f666b545ac6cac988c679752c53a63a",
+      "outputSha256": "5a2ab0d6fa323c4a95a724a7bd3093ce257a9c234694fa68475b2662711a4975"
+    },
+    {
+      "file": "UI_XinShou_YinDao_arena2.lua",
+      "sourceSha256": "8ff4fb02aea28fbccbc65a9c106ac6d2890305a56af7ba2419fad0163ef5b074",
+      "outputSha256": "9d2e634679f58ac0cc3c5af49a9f7ed1f66ed043149f1b13faffc732f3d2967f"
+    },
+    {
+      "file": "UI_XinShou_YinDao_arena3.lua",
+      "sourceSha256": "ab1f6396ba30a0d52287afe4b1e35f4ad0993a70b7bf76306e7621bcfd907340",
+      "outputSha256": "9cf859e9d7a236ad45816d0dbf67c4083292e51907e0b1caedd288a4afa8cfe2"
+    },
+    {
+      "file": "UI_XinShou_YinDao_dragonEgg.lua",
+      "sourceSha256": "749f468539961a87961a0fb274b35a27d101420a72550105dd25d7b50e78a48d",
+      "outputSha256": "d38ad29adafda4f0447b13d223f7a55ed5405affef63e935e50295918a115ab1"
+    },
+    {
+      "file": "UI_XinShou_YinDao_dragonEgg02.lua",
+      "sourceSha256": "97f7396507815fbf3116ecf4d1c5ad7ba78a91a67e903e536f5d5aaf2f3b1f20",
+      "outputSha256": "7eadbba10d5a54c26363c7b4ac7ef3d1ab503775bfae5d6cb25bb2c7f7daf2c2"
+    },
+    {
+      "file": "UI_XinShou_YinDao_dragonEgg03.lua",
+      "sourceSha256": "e623752504e000923a2f445bffe1eb8e2d48b2242ade5632677c0fae14ba95aa",
+      "outputSha256": "986adb3d8debeef8d9012fc1184234b8d1ec8b1a53afb76ec3e610b764f4b813"
+    },
+    {
+      "file": "UI_XinShou_YinDao_dragonEgg04.lua",
+      "sourceSha256": "4244b2482fe7d5f1d034ba15f0629fb12097160ff9c52c7618dcce748dfa89c6",
+      "outputSha256": "480bc42790adff709ce0b968509cac42cc6d9c9c2298d610dd94852efb537b32"
+    },
+    {
+      "file": "UI_XinShou_YinDao_dragonEgg05.lua",
+      "sourceSha256": "e623752504e000923a2f445bffe1eb8e2d48b2242ade5632677c0fae14ba95aa",
+      "outputSha256": "986adb3d8debeef8d9012fc1184234b8d1ec8b1a53afb76ec3e610b764f4b813"
+    },
+    {
+      "file": "UI_XinShou_YinDao_formation.lua",
+      "sourceSha256": "50777314e142e10ef3a55baab2444a8a282edbe25d2447f6b4833fd0291d27d0",
+      "outputSha256": "f782c703ef913dba1ede22861d6a43f28d95a66855752154068a7326a3b27165"
+    },
+    {
+      "file": "UI_XinShou_YinDao_pve.lua",
+      "sourceSha256": "ad9b43f3b3465b5f9a0119f9e882a3509e8651c7ffde1134ecdbf7cdd864cd70",
+      "outputSha256": "9c11f776b2e6b213bd1d6820265cadfe8416237db6ec900a19ef75c5a6c773cf"
+    },
+    {
+      "file": "UI_XinShou_YinDao_pveTip.lua",
+      "sourceSha256": "819a14009304dd2419ca4cbaceac1632b8cc2e466512fc8edcaa98e0ac071da9",
+      "outputSha256": "ab3d80bbeffef1201f5108ef0d7c6d251f4728b5adf08b5e4bfa342c89ed8345"
     },
     {
       "file": "bossdao.lua",
@@ -1002,6 +1277,16 @@
       "outputSha256": "0f8a421442f442bb1eb92ce1e340ba96016984808a6abf437aa50aee9e2d2d73"
     },
     {
+      "file": "item_equipPart.lua",
+      "sourceSha256": "c89a4f903d0425ec7e751a3675313ea07694e5a9714305d8b2ba292c083f66f9",
+      "outputSha256": "a14b96e2c7caaca7f524f45faef0f6fd1e86c373170799ebaa3bd43cc9e30d39"
+    },
+    {
+      "file": "item_equipPart_info.lua",
+      "sourceSha256": "016ddecf87cb666416f29b3b2339f194f0bd259d36286a50a6f8c9325fa845b0",
+      "outputSha256": "5daa03e98082fafe87d942fa0fe2a4700a2341c56fa5184078ce6be9035f055d"
+    },
+    {
       "file": "item_equip_strengthen.lua",
       "sourceSha256": "3604424cc890a59c052a9b65b8c4095be089f300ff371a91a190480810beca5b",
       "outputSha256": "df407ac1218cdf2a72c993a60a377e2f75e48da17e9d3b03602991c6e3381851"
@@ -1035,16 +1320,6 @@
       "file": "item_equiplist_patch.lua",
       "sourceSha256": "c80462b80ef3cd58d22b444374f24e8c3141e5f347753c125eb6297f926f8108",
       "outputSha256": "fe9c4ca1f3c2b3c1cb61952f66596072958f549ab7d8fe61bc950f36483be918"
-    },
-    {
-      "file": "item_equipPart.lua",
-      "sourceSha256": "c89a4f903d0425ec7e751a3675313ea07694e5a9714305d8b2ba292c083f66f9",
-      "outputSha256": "a14b96e2c7caaca7f524f45faef0f6fd1e86c373170799ebaa3bd43cc9e30d39"
-    },
-    {
-      "file": "item_equipPart_info.lua",
-      "sourceSha256": "016ddecf87cb666416f29b3b2339f194f0bd259d36286a50a6f8c9325fa845b0",
-      "outputSha256": "5daa03e98082fafe87d942fa0fe2a4700a2341c56fa5184078ce6be9035f055d"
     },
     {
       "file": "item_fanli.lua",
@@ -1257,14 +1532,14 @@
       "outputSha256": "3ee5f8f9bfb820b84b2005abb417590286f729b1617231d0bdc8b3efe8ccdea7"
     },
     {
-      "file": "item_holyfire_zuo_equip_up.lua",
-      "sourceSha256": "d8a057c125323747ce26bb60d7baa0af1756d4cdb55eac2a8772624d5ef0a9f0",
-      "outputSha256": "cf546b0838e8eb1b3f8bfe605686ab5a7c9c03d476041562127c091f8b0f7837"
-    },
-    {
       "file": "item_holyfire_zuo_equipPart1.lua",
       "sourceSha256": "031fd6c24c0c92c32b110360a078e9bc6f8be76e63c978ae8a48eb0afe61ac00",
       "outputSha256": "6921a68ea04307199b24b7873d4226378d6f5f55990858430307a1f516b74609"
+    },
+    {
+      "file": "item_holyfire_zuo_equip_up.lua",
+      "sourceSha256": "d8a057c125323747ce26bb60d7baa0af1756d4cdb55eac2a8772624d5ef0a9f0",
+      "outputSha256": "cf546b0838e8eb1b3f8bfe605686ab5a7c9c03d476041562127c091f8b0f7837"
     },
     {
       "file": "item_huodongindex.lua",
@@ -1557,29 +1832,19 @@
       "outputSha256": "d2bfadab9af0e4ba9f9f7cb9e035751d8be63127f48b5241462a44b478926335"
     },
     {
-      "file": "item_star_up_you_equip_up.lua",
-      "sourceSha256": "1b7266c57afcaa72e7391c50f904e5c21f561ddbb38e82b286905e40840b39a9",
-      "outputSha256": "21c66ad9ca2a27a1c3d585c64599f63a647ecc6935a8a8c55b80a216cefde895"
-    },
-    {
       "file": "item_star_up_you_equipPart.lua",
       "sourceSha256": "237949bc0d349b1e2c40de84dfa0216db86a1bf31a472bfd7060c2972045180a",
       "outputSha256": "a162e997ab3008af87d41eb025c702763dfb6a6404f696e62f8e62012807c546"
     },
     {
+      "file": "item_star_up_you_equip_up.lua",
+      "sourceSha256": "1b7266c57afcaa72e7391c50f904e5c21f561ddbb38e82b286905e40840b39a9",
+      "outputSha256": "21c66ad9ca2a27a1c3d585c64599f63a647ecc6935a8a8c55b80a216cefde895"
+    },
+    {
       "file": "item_star_up_zuo.lua",
       "sourceSha256": "3bee093e90fe5ffbd31d648c166dbb731e5c5f459bcd77d13cb8d30629529b2d",
       "outputSha256": "789e6cbba0e0c85e1c6769b7f5e78bf11ea94be7502c5b6251540d7728c3f93e"
-    },
-    {
-      "file": "item_star_up_zuo_equip_strengthen.lua",
-      "sourceSha256": "ae7b82026e47225b0ddac448a37af250cf0648f224a6a4622c8802716af26a34",
-      "outputSha256": "78f034be2ea69eb190784354318f5df4e3ffe60876148ebf9e108990ef41e31b"
-    },
-    {
-      "file": "item_star_up_zuo_equip_up.lua",
-      "sourceSha256": "02903f00087770f63de6aef404a4bc57e7bfefe2c0c0b75c52fb0fb88272e2e6",
-      "outputSha256": "d76d4bd1db5ba71fca24803e2d2f968a555f2de1c47e8dd0d0f32f445d0751c3"
     },
     {
       "file": "item_star_up_zuo_equipPart.lua",
@@ -1595,6 +1860,16 @@
       "file": "item_star_up_zuo_equipPart2.lua",
       "sourceSha256": "132f2f611a86d6d631257514c69abbbd8ad3c991e835329c2be1b05d96a82d42",
       "outputSha256": "74d08e2c497cb5f5a29833c2f840d569f1cc9d4e9ee62c153d8ed6af6bf4b5a5"
+    },
+    {
+      "file": "item_star_up_zuo_equip_strengthen.lua",
+      "sourceSha256": "ae7b82026e47225b0ddac448a37af250cf0648f224a6a4622c8802716af26a34",
+      "outputSha256": "78f034be2ea69eb190784354318f5df4e3ffe60876148ebf9e108990ef41e31b"
+    },
+    {
+      "file": "item_star_up_zuo_equip_up.lua",
+      "sourceSha256": "02903f00087770f63de6aef404a4bc57e7bfefe2c0c0b75c52fb0fb88272e2e6",
+      "outputSha256": "d76d4bd1db5ba71fca24803e2d2f968a555f2de1c47e8dd0d0f32f445d0751c3"
     },
     {
       "file": "item_starup_ckb01.lua",
@@ -1727,6 +2002,11 @@
       "outputSha256": "703521ab536c0c59f01420713dff13f7e9f9a72932f12de57f821be83deef1c0"
     },
     {
+      "file": "panel_activity_xianshishenlong_Send.lua",
+      "sourceSha256": "9bb03249f4a0b507417569a37e03b5e501ee09e3e410d51e0a7a9a1df6e42ce2",
+      "outputSha256": "d2df9b74665f9e4e9719f5717dbb145eecccb09d92894df2c7ff726ff9a030fe"
+    },
+    {
       "file": "panel_activity_xianshishenlong_help.lua",
       "sourceSha256": "b872909f9296770e241810ffbc3e6a19afd8b4814ab1895dc4ce9fc266df1cc1",
       "outputSha256": "984496f1eb9e141568e43059b48d845029c1de343f2dec2f381a05e7221f5103"
@@ -1735,11 +2015,6 @@
       "file": "panel_activity_xianshishenlong_reward.lua",
       "sourceSha256": "d4024effd991bdcf085c44dd494bc22e9e75453515fa6c220f6cbe1caaa73adb",
       "outputSha256": "d90d929209b4bacb2e771f16b44db2f0d2c553b5c7452450d6790ca73aad6862"
-    },
-    {
-      "file": "panel_activity_xianshishenlong_Send.lua",
-      "sourceSha256": "9bb03249f4a0b507417569a37e03b5e501ee09e3e410d51e0a7a9a1df6e42ce2",
-      "outputSha256": "d2df9b74665f9e4e9719f5717dbb145eecccb09d92894df2c7ff726ff9a030fe"
     },
     {
       "file": "panel_activity_xinshou.lua",
@@ -2612,9 +2887,9 @@
       "outputSha256": "417c78affc6a5b8768916bef4046fc9cc9fbed3f8cbf6e9f1c41936c4ac77395"
     },
     {
-      "file": "PlunderTree.lua",
-      "sourceSha256": "58b714d7a612b3dfcb8281b93c04ddae288a8471e00d205854f33784b1c11c5b",
-      "outputSha256": "b07349815d14a4de9671f4f04490c7a1ca2951db32353f93fc018dd9bb9742eb"
+      "file": "ui_FuwenSelector.lua",
+      "sourceSha256": "712b1755d1685d828189a9886915bd415c12cdb66d1c09b6b3e055bcf5ee74c5",
+      "outputSha256": "b0939511a17f19d676622458794f5a9341581dbbcc9e86b011d869d4a011f9db"
     },
     {
       "file": "ui_adventure_box.lua",
@@ -2837,6 +3112,11 @@
       "outputSha256": "d23ff2e5a0b501a189df40d32da410aa19192b47fbced76f1d94f1c922623656"
     },
     {
+      "file": "ui_fuwenStatus.lua",
+      "sourceSha256": "fb66e7cf38231a532f1e4c09cabc4d0d352ef8e381ebab1081e44ea4775d9843",
+      "outputSha256": "2957ec80a7f3269c30dbc889ebfab09c301831b889c232f6e1294c3424112003"
+    },
+    {
       "file": "ui_fuwen_info.lua",
       "sourceSha256": "f56097e1b97c8cc457b1d0c23c8db2eb4edf55ef52e6704d3e5e68e1abc53223",
       "outputSha256": "b950b2d3aff7086f9c770c3f344522e0272b7832eb767b1e380f41da0cdd2935"
@@ -2855,16 +3135,6 @@
       "file": "ui_fuwen_search_panel.lua",
       "sourceSha256": "827c621ab5e092b261c46392a07c862ec90f45bfc8706bf869b8153fa44588f6",
       "outputSha256": "a51bc204107c9c1ca954a961b4e97f725b86062122ef31a07df688a2257cc23a"
-    },
-    {
-      "file": "ui_FuwenSelector.lua",
-      "sourceSha256": "712b1755d1685d828189a9886915bd415c12cdb66d1c09b6b3e055bcf5ee74c5",
-      "outputSha256": "b0939511a17f19d676622458794f5a9341581dbbcc9e86b011d869d4a011f9db"
-    },
-    {
-      "file": "ui_fuwenStatus.lua",
-      "sourceSha256": "fb66e7cf38231a532f1e4c09cabc4d0d352ef8e381ebab1081e44ea4775d9843",
-      "outputSha256": "2957ec80a7f3269c30dbc889ebfab09c301831b889c232f6e1294c3424112003"
     },
     {
       "file": "ui_goal.lua",
@@ -2977,6 +3247,11 @@
       "outputSha256": "816d05565a06251c49b833df467ca6e107e78324c032b5d14756f4c9d1950fcd"
     },
     {
+      "file": "ui_scene_9battle_blood.lua",
+      "sourceSha256": "05ee56e2c5542e6b5bf3cdb5bfb039bdf432820afe8689e3269214422f8bb6a1",
+      "outputSha256": "9606bfa1217e269abad5f757cfcb61e45bbc53efe38655f129306dc95fbdaac0"
+    },
+    {
       "file": "ui_scene_bossbattle.lua",
       "sourceSha256": "9cfa0ab86ba26e56b73e675475b34f5e4a0b15e36ce875a26f326e1f86863087",
       "outputSha256": "a7225a74a6fcc6c1b02b991249f9747b3062ca04c1f6bd001494dbc302d1c678"
@@ -3017,6 +3292,11 @@
       "outputSha256": "6a66b8e19ec48eb5927c4812cd12061b3f742ebdcf56769f3b730a8c78f1051c"
     },
     {
+      "file": "ui_warehouse.lua",
+      "sourceSha256": "349d36087990d3549f471f1efa13d9a00ec8cc10428730ad6f575dc6cbf53db8",
+      "outputSha256": "0ce50b6a85dba70cedabe4ec6bd11aa10e85959f31fb6be4fb99318d52b15e07"
+    },
+    {
       "file": "ui_world_boss.lua",
       "sourceSha256": "d872ca149ebc0e47f97bf5625b0f0a4125ac6f098b1ac33161e1c22cec226769",
       "outputSha256": "2ab31ff0d597b24ee14dbcc7600e785d83124cf5da5de8efd9ffdd892bb7e775"
@@ -3025,276 +3305,6 @@
       "file": "ui_xianshixiaofei_panel.lua",
       "sourceSha256": "b3ff3a13f5fb872d0da77d9fa02f2e7947bbda877b2550fd5b769a2d6b47372f",
       "outputSha256": "c0aa352537a808fe35ca8307eb9c46a0069c0675d9d3585de915847768a7683e"
-    },
-    {
-      "file": "UI_XinShou_RuneLottery.lua",
-      "sourceSha256": "9bb413baeae9481410ced3ffd6d6bbbd370cccbba20dde7cd7d7d19d3c886f89",
-      "outputSha256": "f8103d82c746c8b426a68a2753d2e14970800dad1b8eeaf93978a590844b5cf4"
-    },
-    {
-      "file": "UI_XinShou_YinDao_1.lua",
-      "sourceSha256": "13ee027748b1fc8e070dd228a73c3cc68d6712d1e788b43766a6e2396f3a6811",
-      "outputSha256": "a2d8026d288c939315e9ca4df6570f0154c8727cb52cafdbf68c795ab85ba63b"
-    },
-    {
-      "file": "UI_XinShou_YinDao_10.lua",
-      "sourceSha256": "2d6986f619fa4bf6f3fd21782861610b693d7b2db4129deadda2b3420061a7ff",
-      "outputSha256": "70216d5935c4393fa7d7094850e35f79e5fefba603478bcbd6a3576a31d4a9e7"
-    },
-    {
-      "file": "UI_XinShou_YinDao_13.lua",
-      "sourceSha256": "8786e36259b06732cbaab7fbe7356f5a72c4b4718c2ddf6a1ba43b94a5c1e16f",
-      "outputSha256": "d4618a9c5cef9376b9938a432fb719775095fa47b6a3b755120be9340313b751"
-    },
-    {
-      "file": "UI_XinShou_YinDao_14.lua",
-      "sourceSha256": "8bee05158066964194d75c2054978f14e38c5e730710f6b6717f29f88908a339",
-      "outputSha256": "53e04d5a3a6da43565d84471733ad4e0f1131049b4052ce7ed98972c768b06e9"
-    },
-    {
-      "file": "UI_XinShou_YinDao_15.lua",
-      "sourceSha256": "07f940f05012a984f7db459f624a99bd6af4d3cad4e6a09fade191d3fe9de68f",
-      "outputSha256": "bedb28f6179c994bc307c4107edd2074e4bf4e025a3a243cb595458c79b1c2ed"
-    },
-    {
-      "file": "UI_XinShou_YinDao_16.lua",
-      "sourceSha256": "5e83f7c31455b65f57323e289c9ae5cce69413babbe472065e00ced31d1f69f0",
-      "outputSha256": "986ce63fb33ecba176cc57be0841c52e1feb411651067715581364d218347e54"
-    },
-    {
-      "file": "UI_XinShou_YinDao_17.lua",
-      "sourceSha256": "aeaab5064c17bcbe2ed82d39e37c04022ac3182b542f00462f0817223f88cc7f",
-      "outputSha256": "8e421b41f3cebaafb20de9fe0d7752c1f5cd88d435feeb813b4207f1e514abea"
-    },
-    {
-      "file": "UI_XinShou_YinDao_18.lua",
-      "sourceSha256": "3ea55691395565daec2ffce1d4829c9a386c8072aa83d3f5165c334bbbfaaf4c",
-      "outputSha256": "e3220225bc487aa568ed283b2da3c1fc80df32e81f547448af57ece26567e0eb"
-    },
-    {
-      "file": "UI_XinShou_YinDao_19.lua",
-      "sourceSha256": "b4e3632983c15aa9a9c5d41a624d11a5b4191467264e5932e762f2a0b61c4a1c",
-      "outputSha256": "55c32a90273b77a6a60e83632e9e0c647d222b55231a75610ea1dfeef60c5d98"
-    },
-    {
-      "file": "UI_XinShou_YinDao_2.lua",
-      "sourceSha256": "8d5300ab58b2c46b1d43939e0d2dc1365174e4d51949c7adb47911b53f238238",
-      "outputSha256": "7322b0a24b47f527daf7d8f79f5d1b70f798dc20c7d5b1c14dd7874af4baa37d"
-    },
-    {
-      "file": "UI_XinShou_YinDao_20.lua",
-      "sourceSha256": "231e33c7b21f4cfefdfc170ac3efd20b853369560cca3ecaebee51b067a9c1cb",
-      "outputSha256": "3427cc77a8e29d1cd4afe3808bb588fa65d287a35719493bc774c49316879d7d"
-    },
-    {
-      "file": "UI_XinShou_YinDao_21.lua",
-      "sourceSha256": "6eaf07639ec0d8d41d24371cc9a48ad882ff194586f9928bed686b23ca3fa323",
-      "outputSha256": "85c38820e0a0872643fdc7546975054963492526fdf6542de5e853b13975d79c"
-    },
-    {
-      "file": "UI_XinShou_YinDao_22.lua",
-      "sourceSha256": "bade12aaece7db56799ed2c13d9c7ab3c2f79a6cce62586aaff0c03af57b2398",
-      "outputSha256": "7dea4eb7c0ae2750a9842de8f1a2859604b0e6737d259598ece09bfe7696f2f3"
-    },
-    {
-      "file": "UI_XinShou_YinDao_23.lua",
-      "sourceSha256": "e730097d735d52746b6c0341c891f17735791f2cb5c385ca4aef49f824160273",
-      "outputSha256": "a0ec549a65c65b87fb0c5502c91af057b54c2d8638ef553c29ccbb99bf2e58dc"
-    },
-    {
-      "file": "UI_XinShou_YinDao_24.lua",
-      "sourceSha256": "7aaed4334d3cad5e066343dd0d5e36c3cc39655178fae672cba4158903b1100e",
-      "outputSha256": "e12d64c57653538c83f767e743f79c2dda5f1ca285e424a9be1a62f7321cb0bb"
-    },
-    {
-      "file": "UI_XinShou_YinDao_25.lua",
-      "sourceSha256": "766c728b9847b1d9f682268b2af6364caf538cd460a07e001d7cecc96686aa9d",
-      "outputSha256": "c004106a253461b7e10e5366dfff5ad3bbf9969ac038a34c808bc01a66111ea9"
-    },
-    {
-      "file": "UI_XinShou_YinDao_26.lua",
-      "sourceSha256": "cafb5c538c17ddbff2d7127103ea917aad05c3c83b70635caf918ea8a9c4d042",
-      "outputSha256": "5080dc47eeae4b52257bfc65ebd5421394acc91e5c337d9a5a84d4c841fd7c56"
-    },
-    {
-      "file": "UI_XinShou_YinDao_27.lua",
-      "sourceSha256": "4011ad9fb81afb17a6ab40830bd24a2fcb411ac020d24210c311915d588178a1",
-      "outputSha256": "e1fce39359a840956c7cd4ee1c47389127273ca5229473cfdbdc7c1383cff61f"
-    },
-    {
-      "file": "UI_XinShou_YinDao_28.lua",
-      "sourceSha256": "921d01e163283c77c504428acc778bf7dee63531c6baec2d651dd43a034496f8",
-      "outputSha256": "25254d739f037c7070bfacf230b91a326524e214184f88380535d2dc504fa8f6"
-    },
-    {
-      "file": "UI_XinShou_YinDao_29.lua",
-      "sourceSha256": "1939c9e5d87f1dc6fe85a7c80f2691619b9015bbe5085e306944c91ef118bbb9",
-      "outputSha256": "2100435a905d81963b900301f7838bc310b327825bed055dd81c95c1bfa09d80"
-    },
-    {
-      "file": "UI_XinShou_YinDao_3.lua",
-      "sourceSha256": "e4c393d5d41faf359342834d940bc1bae449747f27d68714aa2f3307be666a0c",
-      "outputSha256": "e1bf443fe65b40176de52216115aa34d127160cb438b525b4288b4d20033721f"
-    },
-    {
-      "file": "UI_XinShou_YinDao_30.lua",
-      "sourceSha256": "deca9adc1f117b5180b44731ea55a0466736511f6fbc8089602fc7a12c4dcd67",
-      "outputSha256": "6d40702dea9194f8aadff2a31eb878dc697b5717a9076e41d5199e5c95a6a340"
-    },
-    {
-      "file": "UI_XinShou_YinDao_31.lua",
-      "sourceSha256": "7ab4032d6be1f082e927d746bbccd61dfd335bc30a92f91e58b3400d03f061df",
-      "outputSha256": "d0a53374d4504722e1c123a15e92c25b46d3e969d76e50c5af1a346bc66d55d2"
-    },
-    {
-      "file": "UI_XinShou_YinDao_32.lua",
-      "sourceSha256": "088125f90da1ccc042ace8c7070c2b4ef7f1dd4a0031f36da76b494f49f141dd",
-      "outputSha256": "7aba3da9ddc1c879ef7af82e74d040530375ad395d762011533a6e63f2f2dbe8"
-    },
-    {
-      "file": "UI_XinShou_YinDao_33.lua",
-      "sourceSha256": "92e9727db6de72047185a66dc2c57feb706923de563bade18c3d9723462bffd7",
-      "outputSha256": "a124bf08425a086e093bf4d099a2e10d8b5272c1015301471f9008711880877b"
-    },
-    {
-      "file": "UI_XinShou_YinDao_34.lua",
-      "sourceSha256": "779ee6e72649819547d7dfad0735eec763ffed8a06100a7aeb6d507b7d8a8c69",
-      "outputSha256": "e0e6688ad7a413847bbe043770ef862058c21da7a117aa4844db17777f8a3bc8"
-    },
-    {
-      "file": "UI_XinShou_YinDao_35.lua",
-      "sourceSha256": "c4743e7ce9daac542dfca7187542926707079e4c3074fd31e41d662182e09ebd",
-      "outputSha256": "f450cb18d59706daffa576287236e177ef886b927718c21131883b2e355c28c9"
-    },
-    {
-      "file": "UI_XinShou_YinDao_36.lua",
-      "sourceSha256": "a678ee3aea93f9e10483ca80806cc1ff07f5d24adc20860c8e3fe61ca1d82bcf",
-      "outputSha256": "8152bd984b0c352d02c3bc1692394672f6735bba87d3bde51b3d958543e91154"
-    },
-    {
-      "file": "UI_XinShou_YinDao_37.lua",
-      "sourceSha256": "65baf1f01f3cd8d2158c25392210ac8aedc86e74723cb1b00e9444d7c71fa562",
-      "outputSha256": "f4268e71904cc8e629de2a8042c68a6b82ddb2e66fd05bded2347436ce4908c4"
-    },
-    {
-      "file": "UI_XinShou_YinDao_38.lua",
-      "sourceSha256": "b21ad1efe40d5cb558f5ecfa0f6fd4603595cee9253ace0116a9e78c824ee744",
-      "outputSha256": "9ff110f98528b55110afa3ff8fb3493fe963b92ebb83e8064db5a2ba8c860f36"
-    },
-    {
-      "file": "UI_XinShou_YinDao_39.lua",
-      "sourceSha256": "36b7d2f41b8add23cc3a467bb48705e122c5e9c950a7b6117d6e9c5ec492e825",
-      "outputSha256": "e12d64c57653538c83f767e743f79c2dda5f1ca285e424a9be1a62f7321cb0bb"
-    },
-    {
-      "file": "UI_XinShou_YinDao_4.lua",
-      "sourceSha256": "1a8ecb9c131b5defe146d15d620d71ff157d74a61a329acf2339ea5cd20b50ab",
-      "outputSha256": "52fa2be1f3fbebcc55e48309f152a60f57c3bcde8eaa32781483091f07efc8fd"
-    },
-    {
-      "file": "UI_XinShou_YinDao_40.lua",
-      "sourceSha256": "cda6dd8c8b3920117850a3771ec877263b0f588c8cca364e9f6c9e0465a701d0",
-      "outputSha256": "fd6160a1f3cea8b54361b2faa99b15ba6b075373b5bdcca9815bc9beaefb971c"
-    },
-    {
-      "file": "UI_XinShou_YinDao_42.lua",
-      "sourceSha256": "b33b41d6de47de7ae26532b504f5b823d7d4f34ca7f160fc737481f3634175b6",
-      "outputSha256": "6fef87bd07aa0c6fc99c8a9025573ebe0e1cb48261a8eeb59dde38f4dcb584e4"
-    },
-    {
-      "file": "UI_XinShou_YinDao_43.lua",
-      "sourceSha256": "bcea3e529ccfcd9fb68d3d4150290cb00a7b8390dd7b333c28b6021a8f849784",
-      "outputSha256": "eda1ae1afaf1f9c99b871779a934e35de32e118cbd83270cd621ad1ca6d23e53"
-    },
-    {
-      "file": "UI_XinShou_YinDao_46.lua",
-      "sourceSha256": "95b3a9112ed337004bb3acbd266467c669781abe8b7baf6c3666c8978688e2af",
-      "outputSha256": "9a2df70ee99b190a251b7b9de3752f9b18b210b1bfa719a04c0287c1bba767ca"
-    },
-    {
-      "file": "UI_XinShou_YinDao_47.lua",
-      "sourceSha256": "216bc4e8070841f0e94d9d14a96491178d5924cce784cc327a2aa02ec0586f42",
-      "outputSha256": "51b772d3443d4507909992239404e09a8f9a7099529c119ec22cba1c4a8af4ba"
-    },
-    {
-      "file": "UI_XinShou_YinDao_5.lua",
-      "sourceSha256": "9211db17ba3a2907e6f0b0bf410db49da36f0547ef010bef8b959d7215896546",
-      "outputSha256": "1010e9e73a49a9e34f6699aa4e1d1334578faed0bff8603f43529c82f33c57d2"
-    },
-    {
-      "file": "UI_XinShou_YinDao_6.lua",
-      "sourceSha256": "4a7f84348fa4dd4d7f2f8ae283068011a00223622ec297284ce854e0ae39870d",
-      "outputSha256": "606c638f227148dfe9338f3629d0cc11d407988ad79dc704506f4637df23e136"
-    },
-    {
-      "file": "UI_XinShou_YinDao_7.lua",
-      "sourceSha256": "5e3da8e56df5dec8ccecc7d09b46111b3479967652c856bc625bcbb5b6b6f0ff",
-      "outputSha256": "20867a842487a9275987807acb2a079681f0a877258db03c53b9b9992cdaf01f"
-    },
-    {
-      "file": "UI_XinShou_YinDao_8.lua",
-      "sourceSha256": "065723e54c90e6d895866c50ba03ceee9bd916e1236aecd7496a89711b982444",
-      "outputSha256": "d61b87c20ac1446014c9526634ab84a6f4240ea77ec91c09463f61cd058abcd7"
-    },
-    {
-      "file": "UI_XinShou_YinDao_9.lua",
-      "sourceSha256": "59bf251df93a26ec7621d52ded45db00faa858956aed3126dd77b9367453aa27",
-      "outputSha256": "f135eb62da829795a3374a2b65dfaa99e6616daf1cb777ab5fe0afb8dd81791b"
-    },
-    {
-      "file": "UI_XinShou_YinDao_arena1.lua",
-      "sourceSha256": "acc9d258f13211aab3ec49ac74f165414f666b545ac6cac988c679752c53a63a",
-      "outputSha256": "5a2ab0d6fa323c4a95a724a7bd3093ce257a9c234694fa68475b2662711a4975"
-    },
-    {
-      "file": "UI_XinShou_YinDao_arena2.lua",
-      "sourceSha256": "8ff4fb02aea28fbccbc65a9c106ac6d2890305a56af7ba2419fad0163ef5b074",
-      "outputSha256": "9d2e634679f58ac0cc3c5af49a9f7ed1f66ed043149f1b13faffc732f3d2967f"
-    },
-    {
-      "file": "UI_XinShou_YinDao_arena3.lua",
-      "sourceSha256": "ab1f6396ba30a0d52287afe4b1e35f4ad0993a70b7bf76306e7621bcfd907340",
-      "outputSha256": "9cf859e9d7a236ad45816d0dbf67c4083292e51907e0b1caedd288a4afa8cfe2"
-    },
-    {
-      "file": "UI_XinShou_YinDao_dragonEgg.lua",
-      "sourceSha256": "749f468539961a87961a0fb274b35a27d101420a72550105dd25d7b50e78a48d",
-      "outputSha256": "d38ad29adafda4f0447b13d223f7a55ed5405affef63e935e50295918a115ab1"
-    },
-    {
-      "file": "UI_XinShou_YinDao_dragonEgg02.lua",
-      "sourceSha256": "97f7396507815fbf3116ecf4d1c5ad7ba78a91a67e903e536f5d5aaf2f3b1f20",
-      "outputSha256": "7eadbba10d5a54c26363c7b4ac7ef3d1ab503775bfae5d6cb25bb2c7f7daf2c2"
-    },
-    {
-      "file": "UI_XinShou_YinDao_dragonEgg03.lua",
-      "sourceSha256": "e623752504e000923a2f445bffe1eb8e2d48b2242ade5632677c0fae14ba95aa",
-      "outputSha256": "986adb3d8debeef8d9012fc1184234b8d1ec8b1a53afb76ec3e610b764f4b813"
-    },
-    {
-      "file": "UI_XinShou_YinDao_dragonEgg04.lua",
-      "sourceSha256": "4244b2482fe7d5f1d034ba15f0629fb12097160ff9c52c7618dcce748dfa89c6",
-      "outputSha256": "480bc42790adff709ce0b968509cac42cc6d9c9c2298d610dd94852efb537b32"
-    },
-    {
-      "file": "UI_XinShou_YinDao_dragonEgg05.lua",
-      "sourceSha256": "e623752504e000923a2f445bffe1eb8e2d48b2242ade5632677c0fae14ba95aa",
-      "outputSha256": "986adb3d8debeef8d9012fc1184234b8d1ec8b1a53afb76ec3e610b764f4b813"
-    },
-    {
-      "file": "UI_XinShou_YinDao_formation.lua",
-      "sourceSha256": "50777314e142e10ef3a55baab2444a8a282edbe25d2447f6b4833fd0291d27d0",
-      "outputSha256": "f782c703ef913dba1ede22861d6a43f28d95a66855752154068a7326a3b27165"
-    },
-    {
-      "file": "UI_XinShou_YinDao_pve.lua",
-      "sourceSha256": "ad9b43f3b3465b5f9a0119f9e882a3509e8651c7ffde1134ecdbf7cdd864cd70",
-      "outputSha256": "9c11f776b2e6b213bd1d6820265cadfe8416237db6ec900a19ef75c5a6c773cf"
-    },
-    {
-      "file": "UI_XinShou_YinDao_pveTip.lua",
-      "sourceSha256": "819a14009304dd2419ca4cbaceac1632b8cc2e466512fc8edcaa98e0ac071da9",
-      "outputSha256": "ab3d80bbeffef1201f5108ef0d7c6d251f4728b5adf08b5e4bfa342c89ed8345"
     }
   ],
   "blocked": [
@@ -3313,14 +3323,6 @@
     {
       "file": "ui_new_dragon_rand.lua",
       "reason": "Non-literal text token"
-    },
-    {
-      "file": "ui_scene_9battle_blood.lua",
-      "reason": "Expected return"
-    },
-    {
-      "file": "ui_warehouse.lua",
-      "reason": "Expected return"
     }
   ]
 }
