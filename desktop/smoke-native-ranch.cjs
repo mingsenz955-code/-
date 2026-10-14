@@ -37,6 +37,17 @@ exports.run=async(window,store)=>{
  await click('[data-action=openBreed]');await shot('native-breed');await click('[data-action=chooseParent][data-id="2"][data-value="1"]');assert(await js("document.querySelector('[data-action=breed]').disabled"));await click('[data-action=chooseParent][data-id="3"][data-value="1"]');await click('[data-action=breed]');assert.equal((await state()).breeding.phase,'breeding');await shot('native-breeding-job');
  await advance((await state()).breeding.readyAt+1);await click('[data-action=takeEgg]');await click('[data-action=incubate]');await art();await advance((await state()).incubator.readyAt+1);await click('#modal [data-action=openIncubator]');await art();await click('[data-action=chooseHatchHabitat]');await art();await click('[data-action=hatchNative][data-id="1"]');assert.equal((await state()).stats.hatches,1);assert.equal((await state()).dragons.length,4);assert.equal(await js("document.querySelector('#modal').open"),false);
  await click('[data-action=openOriginal]');await art();assert.equal(await js("document.querySelectorAll('[data-action=acquisition]').length"),90);await click('[data-action=acquisition][data-id="1000"]');await art();await click('#modal [data-action=close]');await click('[data-action=settings]');await art();assert(await js("!!document.querySelector('[data-action=export]')"));await click('#modal [data-action=close]');
+ // 三个货币格（金币/食物/魔晶）在任何窗口尺寸下都要完整渲染：图标、数字、＋ 一个都不能少。
+ for(const [w,h] of [[1000,700],[1440,900],[1707,1019],[2560,800]]){
+  window.setSize(w,h);await wait(600);
+  const broken=await js("[...document.querySelectorAll('.original-hud img')].filter(i=>!i.complete||!i.naturalWidth).map(i=>i.getAttribute('src')).join(',')");
+  assert.equal(broken,'',`every HUD image must load at ${w}x${h}`);
+  assert.equal(await js("document.querySelectorAll('.original-hud [data-action=resourceShopGold]').length"),1,`金币 ＋ missing at ${w}x${h}`);
+  assert.equal(await js("document.querySelectorAll('.original-hud [data-action=resourceShopFood]').length"),1,`食物 ＋ missing at ${w}x${h}`);
+  assert.equal(await js("document.querySelectorAll('.original-hud [data-action=openRecharge]').length"),2,`魔晶 ＋ or 充值 missing at ${w}x${h}`);
+  if(w===1707)await shot('native-hud-1707');
+ }
+ await shot('native-hud-widths');
  window.setSize(1000,700);await click('[data-place-id="1"]');assert(await js("(()=>{const r=document.querySelector('#modal').getBoundingClientRect();return r.width<=innerWidth&&r.height<=innerHeight})()"));assert.deepEqual(errors,[]);
  console.log('PASS native ranch routes: no website chrome/cards; source shop/17 habitats/detail/build/upgrade/move, two source parent lists and breed/egg/incubate/hatch, 90 catalog entries, save UI and resize; isolated clock only');
 };
