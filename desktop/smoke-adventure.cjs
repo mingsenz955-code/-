@@ -33,7 +33,15 @@ exports.run=async(window,store)=>{
  await shot('adventure-map-102-qa.png');
 
  await click('#modal .source-pve-node');
- assert(await js('document.querySelector("#toast").textContent.length>0'),'tapping a node must report the node');
- assert.deepEqual(await store.load().then(loaded=>loaded.state),before,'viewing adventure must not write the save');
+ await wait(800);
+ assert.equal(await js("document.querySelector('#modal').dataset.mode"),'sourceBattle','a node must open the battle screen');
+ assert.equal(await js("document.querySelectorAll('#modal .source-battle-portrait').length"),before.dragons.length,'the left line-up must be the real dragons');
+ assert(await js("document.querySelector('#modal').textContent.includes('基础成长')"),'the baseline power note must be shown');
+ assert(await js("document.querySelector('#modal').textContent.includes('敌方配置未取得')"),'the missing enemy list must be stated, not faked');
+ assert.equal(await js("document.querySelectorAll('#modal .source-battle-portrait').length<=6"),true);
+ await shot('battle-qa.png');
+ await click('#modal [data-action=close]');
+ await wait(500);
+ assert.deepEqual(await store.load().then(loaded=>loaded.state),before,'viewing adventure and battle must not write the save');
  console.log('PASS adventure panel: twenty client nodes per map, source background per map, atlas reuse, node tap and no save writes');
 };

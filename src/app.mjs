@@ -2,6 +2,7 @@ import {openWarehouse,chooseWarehouseDragon} from './warehouse-dialog.mjs';
 import {openEquipDialog,openEquipInfoDialog,openEquipChangeDialog,openEquipSourceDialog} from './equip-dialog.mjs';
 import {openAdventureDialog} from './adventure-dialog.mjs';
 import {openRechargeDialog} from './recharge-dialog.mjs';
+import {openBattleDialog} from './battle-dialog.mjs';
 import {adventureEvent,adventureEventKind} from './adventure.mjs';
 import {equipmentInstance,definitionPart,EQUIPMENT_SLOTS} from './equipment.mjs';
 import {openShop,openHabitatShop,openHabitatInfo,openExpansionShop,openBreed,openIncubator,openCatalog,openNativePaper,nativeButton} from './ranch-dialogs.mjs';
@@ -83,7 +84,7 @@ document.addEventListener('click',async e=>{
   if(type==='openRecharge'){await openRechargeDialog(state);return}
   if(type==='openAdventure'){await openAdventureDialog(state);return}
   if(type==='pveMap'){await openAdventureDialog(state,Number(el.dataset.value));return}
-  if(type==='pveNode'){const node=adventureEvent(Number(el.dataset.id));toast(node?`${node.name} · ${adventureEventKind(node)==='monster'?'怪物关卡':'龙关卡'}（战斗程序尚未实现）`:'找不到这个关卡节点。');return}
+  if(type==='pveNode'){const node=adventureEvent(Number(el.dataset.id));if(!node)throw new Error('找不到这个关卡节点。');await openBattleDialog(state,{nodeId:node.id,node});return}
   if(type==='pveUnverified'){toast('普通与精英关卡的战斗、体力与结算尚未实现。');return}
   if(type==='openWarehouse'){await openWarehouse(state);return}
   if(type==='raffleEggUse'){const next=action(state,'raffleEggHatch',{id});await persist(next);render();toast(state.log[0]);await openIncubator(state);return}

@@ -353,3 +353,10 @@
 - 联动：**召唤卡就是扭蛋券**，所以高级召唤卡直接进 `raffle.tickets['6049']`，充值完就能去抽；其余道具进新增的 `items` 库存。存档升 **v9**（`items`、`recharge.count/lastTier`），旧档迁移补空。
 - 验证：新增 4 项充值测试（六档价格、奖励名解析、免费到账且不动金币/魔晶、券进抽奖、非法库存被拒），合计 **77 项 Node 检查全绿**；隔离档 `--smoke-recharge` 与独立进程 `--verify-recharge` 通过。未改玩家档。
 - 四项现状：①抽奖 ✅ ②冒险 🟡（地图/节点/入口可用，**战斗仍缺"节点→敌人"证据**）③扩建 ✅ ④充值 ✅。目标保持 active。
+
+## 最新检查点 — v0.23 战斗界面（2026-10-14）
+- ②推进：冒险节点点击进入**原版战斗界面** `ui_battlenormal` + `item_battle_touxiang`，与用户实机录像一致 —— 顶部「对」字、双方各六头像与血条、「战斗回合:1/30」、底部双方战斗力与「跳过」（本作显示为「退出」）。
+- 我方六格是**牧场真实龙**（模型 + 等级），战力按客户端数据算：`Dragon_atks`（580 行 / 90 龙 / 品质 1–10）提供 baseAttack/baseDefence/baseLife 与三者的每级成长，按 `updateAttributes` 的式子 `floor(base + (level-1)*quality)` 计算，再用 `getPower` 的基础项 `floor(攻击+防御+血量/3)` 得战力。**暴击、免暴、觉醒、秘宝、符文未实现**，所以这是基线值，已标 policy `offline-power-baseline-v1`。
+- **右侧六格保持为空**：PVE 节点在客户端表里解析不到敌人列表，界面直接写明「敌方配置未取得」，不编敌人也不做结算。
+- 新增 `scripts/export-battle.py`、`assets/original/data/battle.mjs` + provenance、`src/battle.mjs`、`src/battle-dialog.mjs`、`tests/battle.test.mjs` 3 项；合计 **80 项 Node 检查全绿**；`--smoke-adventure` 扩展为「地图 → 节点 → 战斗界面」，且浏览与战斗查看都不写存档。
+- 下一步仍需用户定夺（离线推演战斗，或提供战斗实机以补 `mapevents → 敌人`）；否则可继续按①③④的深度推进其它系统。

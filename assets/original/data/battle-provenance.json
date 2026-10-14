@@ -1,0 +1,27 @@
+{
+  "baseline": "2.9.35-202402271124",
+  "tablesSha256": "63ac9f739c2dcd2ec226212a7037a519c7be8428ed519fd591010db32a463345",
+  "rows": 580,
+  "dragons": 90,
+  "qualities": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "columns": "LibDragonAtksInfo defines all twenty-six columns; the export keeps the baseline growth set.",
+  "evidence": [
+    "DragonElement.updateAttributes computes floor(baseAttack + (level-1)*attackQuality + ...) for attack, with matching defence and life growth (static disassembly in docs/reference/dragon-attributes-disassembly.txt).",
+    "DragonElement.getPower computes floor(attack + defend + maxblood/3 + crit + uncrit + getRunePower())."
+  ],
+  "unverified": [
+    "Crit, uncrit, awakening, treasure and rune terms are not implemented, so a power value here is below the original total.",
+    "Enemy configuration for a PVE node is not resolvable from the exported tables."
+  ]
+}
