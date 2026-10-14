@@ -13773,6 +13773,226 @@
       "width": 1024,
       "height": 768,
       "sha256": "c32c4a072ce825d08bb2995408482aff1491c3c5483525e62f34f32a9b1f7f29"
+    },
+    "effects/eff_choujiangji1.webp": {
+      "archive": "assets/res/Effects/eff_choujiangji1.xml",
+      "texture": "assets/res/Effects/eff_choujiangji1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "592ae2e80dc9e1953f7351e4feaef78d930e5d7278916d0128a1ac9de6cb1ebb"
+    },
+    "effects/eff_choujiangji1.json": {
+      "archive": "assets/res/Effects/eff_choujiangji1.xml",
+      "texture": "assets/res/Effects/eff_choujiangji1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "29f6913adf7bc112f9c3d4d3a0fa0b926317ab7a2987e5ca229ffbace4bd8fb9"
+    },
+    "effects/eff_choujiangji2.webp": {
+      "archive": "assets/res/Effects/eff_choujiangji2.xml",
+      "texture": "assets/res/Effects/eff_choujiangji2.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "ef983632a702d0f5a0dd35755e98f35ac70d86d884d6fffdfe4fa23aebe5d9a5"
+    },
+    "effects/eff_choujiangji2.json": {
+      "archive": "assets/res/Effects/eff_choujiangji2.xml",
+      "texture": "assets/res/Effects/eff_choujiangji2.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "595ed64c517ede8e3902912ce8e221c0e7e0eb2b95be6c9c49d5705b0404bfbd"
+    },
+    "effects/eff_choujiangji3.webp": {
+      "archive": "assets/res/Effects/eff_choujiangji3.xml",
+      "texture": "assets/res/Effects/eff_choujiangji3.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "0d3cd8f2da20d7e420533140fd9beb72f118d685311d38b9e8b87c03bde2ead4"
+    },
+    "effects/eff_choujiangji3.json": {
+      "archive": "assets/res/Effects/eff_choujiangji3.xml",
+      "texture": "assets/res/Effects/eff_choujiangji3.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "17a591ad322f99ee6a1fa7596139ad4ef83d383cbdaa823faf6c00a4272c3ceb"
+    },
+    "ui/ui_lotterydragon_add1.png": {
+      "archive": "assets/res/ui/ui_lotterydragon.plist",
+      "frame": "ui_lotterydragon_add1.png",
+      "texture": "assets/res/ui/ui_lotterydragon.pkm",
+      "width": 35,
+      "height": 32,
+      "sha256": "8c3a796bdd5c601cc8bc00d24f503949b67918b69a31e6791718737446116713"
+    },
+    "ui/ui_lotterydragon_add2.png": {
+      "archive": "assets/res/ui/ui_lotterydragon.plist",
+      "frame": "ui_lotterydragon_add2.png",
+      "texture": "assets/res/ui/ui_lotterydragon.pkm",
+      "width": 35,
+      "height": 32,
+      "sha256": "1d7b9d3d7253d1dc8879c00d5c1485fa89dc693efba266fa8d8bd63f4cc68fdc"
+    },
+    "ui/ui_lotterydragon_bg_chang.png": {
+      "archive": "assets/res/ui/ui_lotterydragon.plist",
+      "frame": "ui_lotterydragon_bg_chang.png",
+      "texture": "assets/res/ui/ui_lotterydragon.pkm",
+      "width": 220,
+      "height": 48,
+      "sha256": "08e465e1f442ab1418a35dfef295c2575685e958481d1c948b1b0d38138b0d7b"
+    },
+    "ui/ui_lotterydragon_bg_da.png": {
+      "archive": "assets/res/ui/ui_lotterydragon.plist",
+      "frame": "ui_lotterydragon_bg_da.png",
+      "texture": "assets/res/ui/ui_lotterydragon.pkm",
+      "width": 330,
+      "height": 48,
+      "sha256": "162c5ed937bbeeb83afade80c59abb27ed71fa18684410b2e82a8e4bc534dd39"
+    },
+    "ui/ui_lotterydragon_bg_duan.png": {
+      "archive": "assets/res/ui/ui_lotterydragon.plist",
+      "frame": "ui_lotterydragon_bg_duan.png",
+      "texture": "assets/res/ui/ui_lotterydragon.pkm",
+      "width": 111,
+      "height": 48,
+      "sha256": "48e18309d2839e91428756034ef6608b7cf8a02184d7a8555bc9964a6c0ace0f"
+    },
+    "ui/ui_lotterydragon_bg_tuo.png": {
+      "archive": "assets/res/ui/ui_lotterydragon.plist",
+      "frame": "ui_lotterydragon_bg_tuo.png",
+      "texture": "assets/res/ui/ui_lotterydragon.pkm",
+      "width": 325,
+      "height": 131,
+      "sha256": "034efac1f3cd985972ddee4acde7176721945e5e72f0ca4128ba0d5f58ffb64f"
+    },
+    "ui/ui_lotterydragon_btn_1.png": {
+      "archive": "assets/res/ui/ui_lotterydragon.plist",
+      "frame": "ui_lotterydragon_btn_1.png",
+      "texture": "assets/res/ui/ui_lotterydragon.pkm",
+      "width": 82,
+      "height": 82,
+      "sha256": "f773c9a51790af5df7639abae34a8852638e3afdaefbc1ec3e762f434a36a535"
+    },
+    "ui/ui_lotterydragon_btn_2.png": {
+      "archive": "assets/res/ui/ui_lotterydragon.plist",
+      "frame": "ui_lotterydragon_btn_2.png",
+      "texture": "assets/res/ui/ui_lotterydragon.pkm",
+      "width": 82,
+      "height": 81,
+      "sha256": "97845898e124c8c68acdc46e5d1099bead6395a0d561ddf88a58d5b41bc295c3"
+    },
+    "ui/ui_lotterydragon_btn_3.png": {
+      "archive": "assets/res/ui/ui_lotterydragon.plist",
+      "frame": "ui_lotterydragon_btn_3.png",
+      "texture": "assets/res/ui/ui_lotterydragon.pkm",
+      "width": 82,
+      "height": 82,
+      "sha256": "9ad71deead87a43e69a749fc9d018f3ace5b3f55ad0d08de006a78997236db1c"
+    },
+    "ui/ui_lotterydragon_btn_4.png": {
+      "archive": "assets/res/ui/ui_lotterydragon.plist",
+      "frame": "ui_lotterydragon_btn_4.png",
+      "texture": "assets/res/ui/ui_lotterydragon.pkm",
+      "width": 82,
+      "height": 81,
+      "sha256": "077303e799b37f8f2ee0bf3f5da8e3c2b4321d606d7e00a7aa4cca82e5761f0a"
+    },
+    "ui/ui_lotterydragon_daijuan1.png": {
+      "archive": "assets/res/ui/ui_lotterydragon.plist",
+      "frame": "ui_lotterydragon_daijuan1.png",
+      "texture": "assets/res/ui/ui_lotterydragon.pkm",
+      "width": 31,
+      "height": 45,
+      "sha256": "75f6e617016627d84e2a27481790571b34f03941fde8c992d94092c8bc478d3a"
+    },
+    "ui/ui_lotterydragon_daijuan1_s.png": {
+      "archive": "assets/res/ui/ui_lotterydragon.plist",
+      "frame": "ui_lotterydragon_daijuan1_s.png",
+      "texture": "assets/res/ui/ui_lotterydragon.pkm",
+      "width": 23,
+      "height": 32,
+      "sha256": "77cef9e58bc95fb588bc6d1d4717510c9239bf4760bf0be1e944cfeed9d03804"
+    },
+    "ui/ui_lotterydragon_daijuan2.png": {
+      "archive": "assets/res/ui/ui_lotterydragon.plist",
+      "frame": "ui_lotterydragon_daijuan2.png",
+      "texture": "assets/res/ui/ui_lotterydragon.pkm",
+      "width": 31,
+      "height": 45,
+      "sha256": "4b2ae5f86645cdfdc339fee86eed2081c7759967e87fc1e50aab4a7da06f7ed2"
+    },
+    "ui/ui_lotterydragon_daijuan2_s.png": {
+      "archive": "assets/res/ui/ui_lotterydragon.plist",
+      "frame": "ui_lotterydragon_daijuan2_s.png",
+      "texture": "assets/res/ui/ui_lotterydragon.pkm",
+      "width": 23,
+      "height": 32,
+      "sha256": "f7e19a4e6ba8e2eef5dc6886d0b2005396535b534bf6734b0962ed39a6ca1b29"
+    },
+    "ui/ui_lotterydragon_daijuan3.png": {
+      "archive": "assets/res/ui/ui_lotterydragon.plist",
+      "frame": "ui_lotterydragon_daijuan3.png",
+      "texture": "assets/res/ui/ui_lotterydragon.pkm",
+      "width": 31,
+      "height": 45,
+      "sha256": "107b9bc0eef7311e9003f872e657b116a00e12b45675b6a8aca08a3e379ae944"
+    },
+    "ui/ui_lotterydragon_daijuan3_s.png": {
+      "archive": "assets/res/ui/ui_lotterydragon.plist",
+      "frame": "ui_lotterydragon_daijuan3_s.png",
+      "texture": "assets/res/ui/ui_lotterydragon.pkm",
+      "width": 23,
+      "height": 32,
+      "sha256": "dd4e1e075d6b53b5ad5ede24a4a1e7227acff94361388812fa1b053f76b4eecf"
+    },
+    "ui/ui_lotterydragon_mojing.png": {
+      "archive": "assets/res/ui/ui_lotterydragon.plist",
+      "frame": "ui_lotterydragon_mojing.png",
+      "texture": "assets/res/ui/ui_lotterydragon.pkm",
+      "width": 36,
+      "height": 48,
+      "sha256": "818b35c360a1642ea2fda05a540cdbdede00f248b654162230ac80e5f47c6cae"
+    },
+    "ui/ui_lotterydragon_mojing_s.png": {
+      "archive": "assets/res/ui/ui_lotterydragon.plist",
+      "frame": "ui_lotterydragon_mojing_s.png",
+      "texture": "assets/res/ui/ui_lotterydragon.pkm",
+      "width": 29,
+      "height": 38,
+      "sha256": "e2c916cfcbd0d4a28eeab4876fcb86fc6f889b4c92b57996baa2b1b36640fed6"
+    },
+    "ui/ui_lotterydragon_title.png": {
+      "archive": "assets/res/ui/ui_lotterydragon.plist",
+      "frame": "ui_lotterydragon_title.png",
+      "texture": "assets/res/ui/ui_lotterydragon.pkm",
+      "width": 494,
+      "height": 58,
+      "sha256": "f7c917cfd7b7bce821d3675b11bcdc3b4f0c8881f1251d45da7475e960363e6f"
+    },
+    "ui/ui_lotterydragon_txt1.png": {
+      "archive": "assets/res/ui/ui_lotterydragon.plist",
+      "frame": "ui_lotterydragon_txt1.png",
+      "texture": "assets/res/ui/ui_lotterydragon.pkm",
+      "width": 302,
+      "height": 57,
+      "sha256": "aefffc301e096d6e497c21f61ff62730d6f03541401f5ebb15e572bbbc4ad744"
+    },
+    "ui/ui_lotterydragon_txt2.png": {
+      "archive": "assets/res/ui/ui_lotterydragon.plist",
+      "frame": "ui_lotterydragon_txt2.png",
+      "texture": "assets/res/ui/ui_lotterydragon.pkm",
+      "width": 302,
+      "height": 57,
+      "sha256": "202b12f9698862ff98c0618314e55d1b38496cff1fa80b7c2b7d3d2746d5d46a"
+    },
+    "ui/ui_lotterydragon_txt3.png": {
+      "archive": "assets/res/ui/ui_lotterydragon.plist",
+      "frame": "ui_lotterydragon_txt3.png",
+      "texture": "assets/res/ui/ui_lotterydragon.pkm",
+      "width": 302,
+      "height": 57,
+      "sha256": "0d60582949650591288b1fb5e2a31194f53dd1ba8b38738180b4e5dd8be75a30"
+    },
+    "ui/ui_bgnew_bg.png": {
+      "archive": "assets/res/ui/ui_bgnew.plist",
+      "frame": "ui_bgnew_bg.png",
+      "texture": "assets/res/ui/ui_bgnew.pkm",
+      "width": 1024,
+      "height": 768,
+      "sha256": "c615ebacf05659a237767d36bfe167c39c15ad5bca7ef905d9e04190de4ac105"
     }
   }
 }

@@ -1,3 +1,4 @@
+import {openRaffleDialog,openRafflePreview,closeRafflePreview} from './raffle-dialog.mjs';
 import {openLotteryOptions,openLotteryDialog,openLotteryPrize,lotteryHelp} from './lottery-dialog.mjs';
 import {lotteryCost} from './lottery.mjs';
 import {openEvolutionDialog} from './evolution-dialog.mjs';
@@ -66,7 +67,10 @@ document.addEventListener('click',async e=>{
   if(type==='collectionFilter'){rememberCollectionScroll();const nextFilter=el.dataset.value;await openCollectionDialog(state,nextFilter);collectionFilter=nextFilter;return}
   if(type==='collectionSelect'){rememberCollectionScroll();selected=id;await openDragonDialog(state,id,{returnToCollection:true});return}
   if(type==='openDragon'){selected=id;closeDialog();await openDragonDialog(state,id);return}
-  if(type==='lotteryOptions'){await openLotteryOptions();return}
+  if(type==='lotteryOptions'){if(new URLSearchParams(window.location.search).get('legacyLottery')==='1')await openLotteryOptions();else await openRaffleDialog(state);return}
+  if(type==='rafflePreview'){await openRafflePreview();return}
+  if(type==='closeRafflePreview'){closeRafflePreview();return}
+  if(type==='raffleUnverified'){toast('后期三档奖池、免费状态与结算仍未核实，本次未扣除资源。');return}
   if(type==='openLottery'){await openLotteryDialog(state,Number(el.dataset.value));return}
   if(type==='returnLottery'){await openLotteryDialog(state,Number($('#modal').dataset.lotteryMode));return}
   if(type==='lotteryPrize'){openLotteryPrize(state,id);return}
@@ -104,7 +108,7 @@ document.addEventListener('change',e=>{if(e.target.id==='preview-stage'){openDra
 document.addEventListener('keydown',async e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='s'){e.preventDefault();if(state&&!busy)try{await persist(state);render();toast('牧场已保存。')}catch(error){toast(error.message)}}});
 async function boot(){try{const loaded=await storage.load();location=loaded.location;state=loaded.state?validate(loaded.state):createGame();selected=state.dragons[0]?.id;if(!loaded.state)await persist(state);else saveStatus=loaded.recovered?'已从备份恢复':'存档已载入';render();if(loaded.recovered)toast('主存档损坏，已载入上一次有效备份。');setInterval(tick,250)}catch(e){$('#app').innerHTML=`<div class="loading"><h1>存档暂时无法载入</h1><p class="error">${escape(e.message)}</p><p>未覆盖任何现有存档。请保留存档文件后检查读写权限或备份。</p></div>`}}
 let breedingVisible;setInterval(()=>{if(!state||busy||drag)return;const visible=state.breeding?.phase==='breeding'&&Date.now()<state.breeding.readyAt;if(breedingVisible!==undefined&&visible!==breedingVisible){if(tab==='ranch')render();if($('#modal').dataset.mode==='sourceDragon')void openDragonDialog(state,Number($('#modal').dataset.dragonId),{returnToCollection:$('#modal').dataset.returnToCollection==='true'});}breedingVisible=visible},500);
-let resizeFrame;window.addEventListener('resize',()=>{cancelAnimationFrame(resizeFrame);resizeFrame=requestAnimationFrame(()=>{if(state&&tab==='ranch')render();if(['sourceDragon','sourceCollection','sourceEvolution','sourceLottery','sourceLotteryOptions'].includes($('#modal').dataset.mode))$('#modal').style.setProperty('--source-scale',Math.min((innerWidth-20)/1024,(innerHeight-20)/768))});});
+let resizeFrame;window.addEventListener('resize',()=>{cancelAnimationFrame(resizeFrame);resizeFrame=requestAnimationFrame(()=>{if(state&&tab==='ranch')render();if(['sourceDragon','sourceCollection','sourceEvolution','sourceLottery','sourceLotteryOptions','sourceRaffle','sourceRafflePreview'].includes($('#modal').dataset.mode))$('#modal').style.setProperty('--source-scale',Math.min((innerWidth-20)/1024,(innerHeight-20)/(['sourceRaffle','sourceRafflePreview'].includes($('#modal').dataset.mode)?770:768)))});});
 await boot();
 
 document.addEventListener('pointerdown',e=>{const el=e.target.closest('[data-place-id]');if(!el||busy||e.button!==0)return;drag={id:Number(el.dataset.placeId),el,x:e.clientX,y:e.clientY,moved:false};el.setPointerCapture(e.pointerId)});
@@ -114,4 +118,4 @@ document.addEventListener('pointercancel',()=>{drag=null;if(state)render()});
 
 document.addEventListener('wheel',e=>{const list=e.target.closest('.source-collection-list,.lottery-pending');if(list&&list.scrollWidth>list.clientWidth&&Math.abs(e.deltaY)>Math.abs(e.deltaX)){list.scrollLeft+=e.deltaY;e.preventDefault()}},{passive:false});
 
-document.querySelector('#modal').addEventListener('cancel',e=>{e.preventDefault();closeDialog()});
+document.querySelector('#modal').addEventListener('cancel',e=>{e.preventDefault();if($('#modal').dataset.mode==='sourceRafflePreview')closeRafflePreview();else closeDialog()});

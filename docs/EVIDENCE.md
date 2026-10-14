@@ -135,3 +135,10 @@
 - Dragonrand43行基础池保留；第7列累计解释和第5/6数量范围是offline-cumulative-v1推断，非已确认服务器算法。原LibDragonRandInfo存在字段偏差，展示随机不是实际开奖。活动/后期翻牌另作系统，不混用基础高级池。
 - 用户8截图/战斗视频为新的原界面证据，版本未知。详见USER-VISUAL-REFERENCE.md、reference/user-visual-references.json；视频只采样16时点，不宣称完整逐帧/结算已核实。
 - ui_RandDragon/ui_dragonrand_bg1补13图，manifest1849，尺寸1260。原ui_main更多图标/邮件/充值已接；右侧活动/字体/完整转盘及奖励页仍不一致。
+
+## E05 v0.12 后期三台扭蛋机版本纠正
+- 已实际观看BV1zM41167SU约13秒三台机与40秒附近升星片段，视频2022-12-03，版本未知。三机、100/900和280/2500、奖品预览/基因中心/免费保底提示可见。不是全程观看，不把其状态当本地初始化。
+- APK原DragonRafflePanelNew.lua/UI/3个eff_choujiangji动画与画面对应。此前DragonRandPanel为另一旧系统；旧Dragonrand43行不能直接解释后期三个池。
+- 原LibraryManager将lib_dragonPreview指向choujiangyulan；DragonRandPreviewInfo三列index/Id/quality，共53行，原五列预览。输入及三个脚本哈希见assets/original/data/raffle-provenance.json；导出脚本可复现。不是概率表。
+- 新增23原UI图和3FX的JSON/WebP，manifest1878。FX30fps两动作，固定联合边界保留相对大小；Canvas数值插值/粒子等差异仍在。
+- 免费/CD/CurCnt来自_dragonRandData，实际开奖通过服务器；新页面不伪造状态、不扣款、不沿用旧表。神圣叠框、仓库完整领取/活动池尚未接入。

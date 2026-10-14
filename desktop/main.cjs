@@ -1,6 +1,7 @@
 const {app,BrowserWindow,ipcMain,dialog,screen}=require('electron');
 const path=require('node:path');
 const fs=require('node:fs/promises');
+const raffleSmoke=process.argv.includes('--smoke-raffle');
 const lotteryDemo=process.argv.includes('--lottery-demo');
 const lotterySmoke=process.argv.includes('--smoke-lottery'),lotteryVerify=process.argv.includes('--verify-lottery');
 const evolutionSmoke=process.argv.includes('--smoke-evolution');
@@ -10,7 +11,7 @@ const modelSmoke=process.argv.includes('--smoke-models');
 const dualSmoke=process.argv.includes('--smoke-dual'),dualVerify=process.argv.includes('--verify-dual');
 const habitatSmoke=process.argv.includes('--smoke-habitats'),habitatVerify=process.argv.includes('--verify-habitats');
 const farmSmoke=process.argv.includes('--smoke-farm-upgrade');
-const smoke=process.argv.includes('--smoke-test')||farmSmoke||habitatSmoke||dualSmoke||modelSmoke||dragonSmoke||collectionSmoke||evolutionSmoke||lotterySmoke,verify=lotteryVerify||collectionVerify||dragonVerify||dualVerify||habitatVerify||process.argv.includes('--smoke-verify');
+const smoke=process.argv.includes('--smoke-test')||farmSmoke||habitatSmoke||dualSmoke||modelSmoke||dragonSmoke||collectionSmoke||evolutionSmoke||lotterySmoke||raffleSmoke,verify=lotteryVerify||collectionVerify||dragonVerify||dualVerify||habitatVerify||process.argv.includes('--smoke-verify');
 const testProfile=process.argv.find(a=>a.startsWith('--test-profile='))?.split('=')[1]||'smoke-profile';
 if(!/^[a-z0-9-]+$/.test(testProfile))throw new Error('Invalid test profile name');
 if(smoke||verify)app.setPath('userData',path.join(__dirname,'..','work',testProfile));
@@ -35,7 +36,7 @@ if(locked)app.whenReady().then(async()=>{
  window=new BrowserWindow({title:'御龙高手 · 云上牧场',width:Math.min(1440,area.width-24),height:Math.min(940,area.height-24),minWidth:Math.min(1000,area.width-24),minHeight:Math.min(650,area.height-24),backgroundColor:'#e7ecd7',autoHideMenuBar:true,show:!smoke&&!verify,webPreferences:{preload:path.join(__dirname,'preload.cjs'),contextIsolation:true,nodeIntegration:false,sandbox:true,backgroundThrottling:false,offscreen:smoke||verify}});
  window.webContents.setWindowOpenHandler(()=>({action:'deny'}));window.webContents.on('will-navigate',e=>e.preventDefault());
  window.once('ready-to-show',()=>{if(!smoke&&!verify)window.show()});
- await window.loadFile(path.join(__dirname,'..','index.html'));
+ await window.loadFile(path.join(__dirname,'..','index.html'),lotterySmoke||lotteryVerify?{query:{legacyLottery:'1'}}:{});
  if(process.argv.includes('--verify-live')){
   for(let i=0;i<60;i++){if(await window.webContents.executeJavaScript("!!document.querySelector('.original-hud')"))break;await new Promise(resolve=>setTimeout(resolve,100))}
   if(!await window.webContents.executeJavaScript("!!document.querySelector('.original-hud')"))throw new Error('Live game did not reach the ranch UI; existing save was not overwritten.');
@@ -46,6 +47,6 @@ if(locked)app.whenReady().then(async()=>{
   await window.webContents.executeJavaScript("document.querySelector('[data-action=showMore]').click();true");await new Promise(resolve=>setTimeout(resolve,200));await window.webContents.executeJavaScript("document.querySelector('[data-action=lotteryOptions]').click();true");await new Promise(resolve=>setTimeout(resolve,800));
   window.setTitle('御龙高手 · 抽奖试玩（独立演示存档）');const shot=path.join(__dirname,'..','work','lottery-demo-live.png');await fs.mkdir(path.dirname(shot),{recursive:true});await fs.writeFile(shot,(await window.webContents.capturePage()).toPNG());console.log('LOTTERY_DEMO_READY '+shot);
  }
- if(smoke||verify){try{const tests=require('./smoke.cjs'); if(lotterySmoke||lotteryVerify)await require('./smoke-lottery.cjs').run(window,store,lotteryVerify);else if(evolutionSmoke)await require('./smoke-evolution.cjs').run(window,store);else if(collectionSmoke||collectionVerify)await require('./smoke-collection.cjs').run(window,store,collectionVerify);else if(dragonSmoke||dragonVerify)await require('./smoke-dragon-dialog.cjs').run(window,store,dragonVerify);else if(modelSmoke)await require('./smoke-models.cjs').run(window);else if(dualSmoke||dualVerify)await require('./smoke-dual.cjs').run(window,store,dualVerify);else if(habitatSmoke||habitatVerify)await require('./smoke-habitats.cjs').run(window,store,habitatVerify);else if(farmSmoke)await tests.runFarmUpgrade(window,store);else await tests.run(window,store,verify);app.exit(0)}catch(error){console.error(error);app.exit(1)}}
+ if(smoke||verify){try{const tests=require('./smoke.cjs'); if(raffleSmoke)await require('./smoke-raffle.cjs').run(window,store);else if(lotterySmoke||lotteryVerify)await require('./smoke-lottery.cjs').run(window,store,lotteryVerify);else if(evolutionSmoke)await require('./smoke-evolution.cjs').run(window,store);else if(collectionSmoke||collectionVerify)await require('./smoke-collection.cjs').run(window,store,collectionVerify);else if(dragonSmoke||dragonVerify)await require('./smoke-dragon-dialog.cjs').run(window,store,dragonVerify);else if(modelSmoke)await require('./smoke-models.cjs').run(window);else if(dualSmoke||dualVerify)await require('./smoke-dual.cjs').run(window,store,dualVerify);else if(habitatSmoke||habitatVerify)await require('./smoke-habitats.cjs').run(window,store,habitatVerify);else if(farmSmoke)await tests.runFarmUpgrade(window,store);else await tests.run(window,store,verify);app.exit(0)}catch(error){console.error(error);app.exit(1)}}
 }).catch(e=>{console.error(e);app.exit(1)});
 app.on('window-all-closed',()=>app.quit());

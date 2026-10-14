@@ -26,3 +26,15 @@ canvas.dragon{display:inline-block;object-fit:contain}.dragon-preview-dialog{wid
 .lottery-option-model{width:320px;height:360px;transform:translate(-50%,-85%)}.lottery-option-model .dragon{width:100%;height:100%}.lottery-notice{position:absolute;bottom:2px;width:100%;text-align:center;font-size:14px;color:white;text-shadow:1px 1px 2px black}.lottery-preview-pool{display:flex;width:830px;height:240px;transform:translate(-50%,-60%);gap:6px;align-items:center}.lottery-preview-pool>div{width:98px;height:200px;text-align:center;color:white;text-shadow:1px 1px 2px black;font-size:14px}.lottery-preview-pool .dragon{width:98px;height:165px}.lottery-pending{position:absolute;left:0;top:0;display:flex;gap:8px;align-items:center;width:1000px;height:110px;transform:translate(-50%,-50%);overflow-x:auto;overflow-y:hidden;scrollbar-color:#9c6b3b #efd4a0;scrollbar-width:thin;pointer-events:auto}.lottery-prize{flex:0 0 90px;width:90px;height:100px;padding:2px;font-size:12px;background:#f4deb1!important}.lottery-prize .dragon,.lottery-prize img{width:70px;height:65px}.lottery-prize span{display:block;white-space:nowrap}.lottery-count{position:absolute;left:30px;bottom:35px;color:white;font-size:17px}.lottery-prize-dialog{max-width:570px}.lottery-prize-dialog>.dragon{display:block;width:280px;height:260px;margin:auto}
 
 .lottery-token-icon{width:48px;height:48px;transform:translate(-50%,-50%)}
+
+.source-raffle-machine{position:absolute;left:0;top:0;pointer-events:none}.source-raffle-dialog .source-artboard{height:770px}
+
+.source-raffle-dialog{height:calc(770px * var(--source-scale))}
+
+.source-raffle-dialog::backdrop{background:#020818;backdrop-filter:none}
+
+.raffle-preview-shade{position:absolute;inset:0;background:#0009;pointer-events:auto}.raffle-preview-layer{position:absolute;inset:0;pointer-events:none}.raffle-preview-list{position:absolute;left:0;top:0;width:685px;height:430px;display:grid;grid-template-columns:repeat(5,137px);grid-auto-rows:165px;overflow-y:auto;transform:translate(-50%,-50%);pointer-events:auto;scrollbar-color:#9c6b3b #efd4a0;scrollbar-width:thin}.raffle-preview-card{position:relative;width:137px;height:165px}.raffle-preview-frame{position:absolute;width:110px;height:110px;transform:translate(-50%,-50%)}.raffle-preview-icon{position:absolute;width:92px;height:92px;object-fit:contain;transform:translate(-50%,-50%)}.raffle-missing-icon{position:absolute;width:100px;transform:translate(-50%,-50%);font-size:16px;text-align:center;color:#7b5735}
+
+.raffle-preview-card .source-label{color:var(--prize-color)!important}
+
+.raffle-preview-list{grid-template-columns:repeat(5,134px);overflow-x:hidden}.raffle-preview-card{width:134px}

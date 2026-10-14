@@ -1,0 +1,35 @@
+{
+  "baseline": "2.9.35-202402271124",
+  "tablesSha256": "63ac9f739c2dcd2ec226212a7037a519c7be8428ed519fd591010db32a463345",
+  "sources": {
+    "ui/dragonraffle/DragonRafflePanelNew.lua": "cbd68131dfdef006214280d3824dd32e8a1072a92608cb692ee84e6b1c796346",
+    "ui/dragonraffle/DragonsPreviewPanel.lua": "418a70322b6df9839732e8f2ce24b9193defcb2edfcd14917d070bdeb3288a8e",
+    "dragon/pconfig/librarys/dragon/DragonRandPreviewInfo.lua": "c8b2fc386045e927ffb36f5bec91cfc0272a1cffe8c90209873833df06fa8d1e"
+  },
+  "previewRows": 53,
+  "previewColumns": [
+    "index",
+    "dragonId",
+    "quality"
+  ],
+  "ticketIds": [
+    6047,
+    6048,
+    6049
+  ],
+  "paidGemPrices": {
+    "middle": [
+      100,
+      900
+    ],
+    "senior": [
+      280,
+      2500
+    ]
+  },
+  "notes": [
+    "Preview membership is not probability or per-machine pool evidence.",
+    "Free state, cooldown and current guaranteed-draw counters are supplied by _dragonRandData. They remain unknown offline.",
+    "Current modern page does not debit resources or sample the unrelated legacy Dragonrand table."
+  ]
+}
