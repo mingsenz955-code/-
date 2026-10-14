@@ -215,3 +215,8 @@
 - work/client-config/dragon/utils/CostUtil.lua明文公式ceil(((time/3600)^0.7)*15)；ui/SpeedUpPanel.lua openBuilding实际使用panel_building_speedup、FinishBuilding、showBuildingXp。实现覆盖建造/升级/商店建筑，实际剩余时间结算一次。
 - 玩家截图证实移动占地格子和建筑比例失配。新实现将碰撞与格子共享等距坐标；真实鼠标输入已核验，而不是只程序调用按钮。
 - 扩建价格表仍采用既有注明的推断列。原服务器各地块坐标/解锁顺序未获得，当前24×24基区、每购买+2行列和草地放大均是离线几何方案，不是原地图证据。不能据此宣称扩建完全一致。
+
+## E05 v0.16.21 原牧场龙行为
+- HabitatDelegate.lua SHA256 fd68a3b860c19fcfdf2322f72d0133be60ff8ad69b777af5e86a55c1f7bfa330，函数0/10/14/17完整静态指令见reference/habitat-dragon-motion-disassembly.txt。x源表×0.4、height公式、building40+54、随机y偏移、view scale0.45、breath2–5/walk5–15/especial循环完成返回有直接证据；没有使用zuobiao节点作为牧场固定驻点。
+- Constants.lua源哈希与字面表PC范围在reference/habitat-motion-table.json。提取器仅允许已有字面表白名单指令，读取21项范围；不执行原字节码。
+- 新场景原点渲染保持0.45源骨骼比例并将脚点放到对应行走平面；大/小龙不再统一适配卡片。骨骼easing/twR等原有渲染差异仍在，移动0.2/回调归一30Hz的速度仍需原实机时序核验。

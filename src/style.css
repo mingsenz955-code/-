@@ -151,3 +151,6 @@ body:has(#modal[open].native-fullscreen){background:#09242e}
 .ranch-world .original-platform>.world-resident .dragon{width:80px;height:90px;margin:0}
 .ranch-world .world-object[data-place-id] .habitat-art{pointer-events:auto;cursor:grab;-webkit-user-drag:none;user-select:none}
 .ranch-world .world-object.is-moving .habitat-art{cursor:grabbing}
+/* Model origin is the source skeletal origin, no fit-to-card offset on the ranch. */
+.ranch-world .original-platform>.world-resident{width:0;height:0}
+.ranch-world .world-resident canvas[data-world-scale]{max-width:none;margin:0}

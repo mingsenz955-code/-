@@ -1,0 +1,321 @@
+SHA256 fd68a3b860c19fcfdf2322f72d0133be60ff8ad69b777af5e86a55c1f7bfa330
+Static Lua 5.1 disassembly. PCs and nested function indexes are zero-based. No code executed.
+
+FUNCTION 0
+CONSTANTS ["super", "ctor", "move_area", "x", "Constants", "DRAGON_MOVE_AREA", "_data", "type", 1, 0.4, 2, 40, "y", "height", 27, 0.5, 54, "_dragonicon_layer", "display", "newNode", "_view", "add", "_dragon_layer", "_collectable", false, "setNoteSkin", "JinBi", "num_dragon", 0, "_dragons", "_dragons_view", "_dragons_icon", "_dragons_cd", "_dragons_state", "_dragons_state_handler", "handler", "onDragonState", "_ticked"]
+0000 GETUPVAL A=3 B=0 C=0
+0001 GETTABLE r3 r3["super"]
+0002 GETTABLE r3 r3["ctor"]
+0003 MOVE A=4 B=0 C=0
+0004 MOVE A=5 B=1 C=0
+0005 MOVE A=6 B=2 C=0
+0006 CALL A=3 B=4 C=1
+0007 NEWTABLE A=3 B=0 C=0
+0008 SETTABLE r0["move_area"] r3
+0009 GETTABLE r3 r0["move_area"]
+0010 NEWTABLE A=4 B=2 C=0
+0011 GETGLOBAL r5 "Constants"
+0012 GETTABLE r5 r5["DRAGON_MOVE_AREA"]
+0013 GETTABLE r6 r0["_data"]
+0014 GETTABLE r6 r6["type"]
+0015 GETTABLE r5 r5[r6]
+0016 GETTABLE r5 r5["x"]
+0017 GETTABLE r5 r5[1]
+0018 MUL r5 r5 0.4
+0019 GETGLOBAL r6 "Constants"
+0020 GETTABLE r6 r6["DRAGON_MOVE_AREA"]
+0021 GETTABLE r7 r0["_data"]
+0022 GETTABLE r7 r7["type"]
+0023 GETTABLE r6 r6[r7]
+0024 GETTABLE r6 r6["x"]
+0025 GETTABLE r6 r6[2]
+0026 MUL r6 r6 0.4
+0027 SETLIST A=4 B=2 C=1
+0028 SETTABLE r3["x"] r4
+0029 GETTABLE r3 r0["_data"]
+0030 GETTABLE r3 r3["type"]
+0031 EQ A=0 r3 40
+0032 JMP A=0 target=41
+0033 GETTABLE r3 r0["move_area"]
+0034 GETTABLE r4 r2["height"]
+0035 ADD r4 r4 1
+0036 MUL r4 r4 27
+0037 MUL r4 r4 0.5
+0038 ADD r4 r4 54
+0039 SETTABLE r3["y"] r4
+0040 JMP A=0 target=47
+0041 GETTABLE r3 r0["move_area"]
+0042 GETTABLE r4 r2["height"]
+0043 ADD r4 r4 1
+0044 MUL r4 r4 27
+0045 MUL r4 r4 0.5
+0046 SETTABLE r3["y"] r4
+0047 GETGLOBAL r3 "display"
+0048 GETTABLE r3 r3["newNode"]
+0049 CALL A=3 B=1 C=2
+0050 SETTABLE r0["_dragonicon_layer"] r3
+0051 GETTABLE r3 r0["_dragonicon_layer"]
+0052 SELF r3 self=r3 method="y"
+0053 GETTABLE r5 r2["height"]
+0054 MUL r5 r5 40
+0055 CALL A=3 B=3 C=1
+0056 GETTABLE r3 r0["_view"]
+0057 SELF r3 self=r3 method="add"
+0058 GETTABLE r5 r0["_dragonicon_layer"]
+0059 CALL A=3 B=3 C=1
+0060 GETGLOBAL r3 "display"
+0061 GETTABLE r3 r3["newNode"]
+0062 CALL A=3 B=1 C=2
+0063 SETTABLE r0["_dragon_layer"] r3
+0064 GETTABLE r3 r0["_view"]
+0065 SELF r3 self=r3 method="add"
+0066 GETTABLE r5 r0["_dragon_layer"]
+0067 CALL A=3 B=3 C=1
+0068 SETTABLE r0["_collectable"] false
+0069 SELF r3 self=r0 method="setNoteSkin"
+0070 LOADK r5 "JinBi"
+0071 CALL A=3 B=3 C=1
+0072 SETTABLE r0["num_dragon"] 0
+0073 NEWTABLE A=3 B=0 C=0
+0074 SETTABLE r0["_dragons"] r3
+0075 NEWTABLE A=3 B=0 C=0
+0076 SETTABLE r0["_dragons_view"] r3
+0077 NEWTABLE A=3 B=0 C=0
+0078 SETTABLE r0["_dragons_icon"] r3
+0079 NEWTABLE A=3 B=0 C=0
+0080 SETTABLE r0["_dragons_cd"] r3
+0081 NEWTABLE A=3 B=0 C=0
+0082 SETTABLE r0["_dragons_state"] r3
+0083 GETGLOBAL r3 "handler"
+0084 MOVE A=4 B=0 C=0
+0085 GETTABLE r5 r0["onDragonState"]
+0086 CALL A=3 B=3 C=2
+0087 SETTABLE r0["_dragons_state_handler"] r3
+0088 SETTABLE r0["_ticked"] false
+0089 RETURN A=0 B=1 C=0
+
+FUNCTION 10
+CONSTANTS ["_dragons_view", "_data", "id", null, "HabitatManager", "haveDragonViweSlot", "addDragnViewCount", "realGraphic", "new", "ACTION_WALK", "math", "random", 0, 1, -1, "move_area", "y", 5, 10, 0.5, "x", 2, "pos", "addTo", "_dragon_layer", 100, "scale", 0.45, "direction"]
+0000 GETTABLE r3 r0["_dragons_view"]
+0001 GETTABLE r4 r1["_data"]
+0002 GETTABLE r4 r4["id"]
+0003 GETTABLE r3 r3[r4]
+0004 EQ A=1 r3 null
+0005 JMP A=0 target=7
+0006 RETURN A=0 B=1 C=0
+0007 GETGLOBAL r3 "HabitatManager"
+0008 GETTABLE r3 r3["haveDragonViweSlot"]
+0009 CALL A=3 B=1 C=2
+0010 TEST A=3 B=0 C=1
+0011 JMP A=0 target=14
+0012 TEST A=2 B=0 C=0
+0013 JMP A=0 target=75
+0014 GETGLOBAL r3 "HabitatManager"
+0015 GETTABLE r3 r3["addDragnViewCount"]
+0016 CALL A=3 B=1 C=1
+0017 SELF r3 self=r1 method="realGraphic"
+0018 LOADBOOL A=5 B=1 C=0
+0019 CALL A=3 B=3 C=2
+0020 GETUPVAL A=4 B=0 C=0
+0021 GETTABLE r4 r4["new"]
+0022 MOVE A=5 B=3 C=0
+0023 GETUPVAL A=6 B=0 C=0
+0024 GETTABLE r6 r6["ACTION_WALK"]
+0025 GETGLOBAL r7 "math"
+0026 GETTABLE r7 r7["random"]
+0027 LOADK r8 0
+0028 LOADK r9 1
+0029 CALL A=7 B=3 C=2
+0030 EQ A=0 r7 0
+0031 JMP A=0 target=35
+0032 LOADK r7 -1
+0033 TEST A=7 B=0 C=1
+0034 JMP A=0 target=36
+0035 LOADK r7 1
+0036 CALL A=4 B=4 C=2
+0037 GETTABLE r5 r0["move_area"]
+0038 GETTABLE r5 r5["y"]
+0039 GETGLOBAL r6 "math"
+0040 GETTABLE r6 r6["random"]
+0041 LOADK r7 1
+0042 LOADK r8 5
+0043 CALL A=6 B=3 C=2
+0044 MUL r6 r6 10
+0045 MUL r6 r6 0.5
+0046 SUB r5 r5 r6
+0047 GETGLOBAL r6 "math"
+0048 GETTABLE r6 r6["random"]
+0049 GETTABLE r7 r0["move_area"]
+0050 GETTABLE r7 r7["x"]
+0051 GETTABLE r7 r7[1]
+0052 GETTABLE r8 r0["move_area"]
+0053 GETTABLE r8 r8["x"]
+0054 GETTABLE r8 r8[2]
+0055 CALL A=6 B=3 C=2
+0056 MOVE A=7 B=5 C=0
+0057 SELF r8 self=r4 method="pos"
+0058 MOVE A=10 B=6 C=0
+0059 MOVE A=11 B=7 C=0
+0060 CALL A=8 B=4 C=2
+0061 SELF r8 self=r8 method="addTo"
+0062 GETTABLE r10 r0["_dragon_layer"]
+0063 SUB r11 100 r5
+0064 CALL A=8 B=4 C=2
+0065 SELF r8 self=r8 method="scale"
+0066 LOADK r10 0.45
+0067 CALL A=8 B=3 C=2
+0068 SELF r8 self=r8 method="direction"
+0069 LOADK r10 1
+0070 CALL A=8 B=3 C=1
+0071 GETTABLE r8 r0["_dragons_view"]
+0072 GETTABLE r9 r1["_data"]
+0073 GETTABLE r9 r9["id"]
+0074 SETTABLE r8[r9] r4
+0075 RETURN A=0 B=1 C=0
+
+FUNCTION 14
+CONSTANTS ["pairs", "_dragons_view", "_dragons_state", "state", "getState", "ACTION_WALK", "time", 0, "direction", "x", "move_area", 1, 2, -1, "toState", "ACTION_BREATH", "math", "random", 0.8, "ACTION_ESPECIAL"]
+0000 GETGLOBAL r2 "pairs"
+0001 GETTABLE r3 r0["_dragons_view"]
+0002 CALL A=2 B=2 C=4
+0003 JMP A=0 target=81
+0004 GETTABLE r7 r0["_dragons_state"]
+0005 GETTABLE r7 r7[r5]
+0006 GETTABLE r8 r7["state"]
+0007 SELF r8 self=r8 method="getState"
+0008 CALL A=8 B=2 C=2
+0009 GETUPVAL A=9 B=0 C=0
+0010 GETTABLE r9 r9["ACTION_WALK"]
+0011 EQ A=0 r8 r9
+0012 JMP A=0 target=53
+0013 GETTABLE r9 r7["time"]
+0014 SUB r9 r9 r1
+0015 SETTABLE r7["time"] r9
+0016 GETTABLE r9 r7["time"]
+0017 LT A=0 0 r9
+0018 JMP A=0 target=46
+0019 GETUPVAL A=9 B=1 C=0
+0020 SELF r10 self=r6 method="direction"
+0021 CALL A=10 B=2 C=2
+0022 MUL r9 r9 r10
+0023 SELF r10 self=r6 method="x"
+0024 CALL A=10 B=2 C=2
+0025 ADD r10 r10 r9
+0026 GETTABLE r11 r0["move_area"]
+0027 GETTABLE r11 r11["x"]
+0028 GETTABLE r11 r11[1]
+0029 LT A=1 r10 r11
+0030 JMP A=0 target=36
+0031 GETTABLE r11 r0["move_area"]
+0032 GETTABLE r11 r11["x"]
+0033 GETTABLE r11 r11[2]
+0034 LT A=0 r11 r10
+0035 JMP A=0 target=42
+0036 SELF r11 self=r6 method="direction"
+0037 SELF r13 self=r6 method="direction"
+0038 CALL A=13 B=2 C=2
+0039 MUL r13 r13 -1
+0040 CALL A=11 B=3 C=1
+0041 SUB r10 r10 r9
+0042 SELF r11 self=r6 method="x"
+0043 MOVE A=13 B=10 C=0
+0044 CALL A=11 B=3 C=1
+0045 JMP A=0 target=81
+0046 GETTABLE r9 r7["state"]
+0047 SELF r9 self=r9 method="toState"
+0048 GETUPVAL A=11 B=0 C=0
+0049 GETTABLE r11 r11["ACTION_BREATH"]
+0050 MOVE A=12 B=5 C=0
+0051 CALL A=9 B=4 C=1
+0052 JMP A=0 target=81
+0053 GETUPVAL A=9 B=0 C=0
+0054 GETTABLE r9 r9["ACTION_BREATH"]
+0055 EQ A=0 r8 r9
+0056 JMP A=0 target=81
+0057 GETTABLE r9 r7["time"]
+0058 SUB r9 r9 r1
+0059 SETTABLE r7["time"] r9
+0060 GETTABLE r9 r7["time"]
+0061 LE A=0 r9 0
+0062 JMP A=0 target=81
+0063 GETGLOBAL r9 "math"
+0064 GETTABLE r9 r9["random"]
+0065 CALL A=9 B=1 C=2
+0066 LT A=0 0.8 r9
+0067 JMP A=0 target=75
+0068 GETTABLE r9 r7["state"]
+0069 SELF r9 self=r9 method="toState"
+0070 GETUPVAL A=11 B=0 C=0
+0071 GETTABLE r11 r11["ACTION_ESPECIAL"]
+0072 MOVE A=12 B=5 C=0
+0073 CALL A=9 B=4 C=1
+0074 JMP A=0 target=81
+0075 GETTABLE r9 r7["state"]
+0076 SELF r9 self=r9 method="toState"
+0077 GETUPVAL A=11 B=0 C=0
+0078 GETTABLE r11 r11["ACTION_WALK"]
+0079 MOVE A=12 B=5 C=0
+0080 CALL A=9 B=4 C=1
+0081 TFORLOOP A=2 B=0 C=2
+0082 JMP A=0 target=4
+0083 RETURN A=0 B=1 C=0
+
+FUNCTION 17
+CONSTANTS ["ACTION_BREATH", "_dragons_state", "time", "math", "random", 2, 5, "_dragons_view", "action", "ACTION_WALK", 15, "ACTION_ESPECIAL", "afterActionComplete", "MovementEvent", "EVENT_LOOP_COMPLETE"]
+0000 GETUPVAL A=4 B=0 C=0
+0001 GETTABLE r4 r4["ACTION_BREATH"]
+0002 EQ A=0 r2 r4
+0003 JMP A=0 target=19
+0004 GETTABLE r4 r0["_dragons_state"]
+0005 GETTABLE r4 r4[r3]
+0006 GETGLOBAL r5 "math"
+0007 GETTABLE r5 r5["random"]
+0008 LOADK r6 2
+0009 LOADK r7 5
+0010 CALL A=5 B=3 C=2
+0011 SETTABLE r4["time"] r5
+0012 GETTABLE r4 r0["_dragons_view"]
+0013 GETTABLE r4 r4[r3]
+0014 SELF r4 self=r4 method="action"
+0015 GETUPVAL A=6 B=0 C=0
+0016 GETTABLE r6 r6["ACTION_BREATH"]
+0017 CALL A=4 B=3 C=1
+0018 JMP A=0 target=54
+0019 GETUPVAL A=4 B=0 C=0
+0020 GETTABLE r4 r4["ACTION_WALK"]
+0021 EQ A=0 r2 r4
+0022 JMP A=0 target=38
+0023 GETTABLE r4 r0["_dragons_state"]
+0024 GETTABLE r4 r4[r3]
+0025 GETGLOBAL r5 "math"
+0026 GETTABLE r5 r5["random"]
+0027 LOADK r6 5
+0028 LOADK r7 15
+0029 CALL A=5 B=3 C=2
+0030 SETTABLE r4["time"] r5
+0031 GETTABLE r4 r0["_dragons_view"]
+0032 GETTABLE r4 r4[r3]
+0033 SELF r4 self=r4 method="action"
+0034 GETUPVAL A=6 B=0 C=0
+0035 GETTABLE r6 r6["ACTION_WALK"]
+0036 CALL A=4 B=3 C=1
+0037 JMP A=0 target=54
+0038 GETUPVAL A=4 B=0 C=0
+0039 GETTABLE r4 r4["ACTION_ESPECIAL"]
+0040 EQ A=0 r2 r4
+0041 JMP A=0 target=54
+0042 GETTABLE r4 r0["_dragons_view"]
+0043 GETTABLE r4 r4[r3]
+0044 SELF r4 self=r4 method="afterActionComplete"
+0045 GETUPVAL A=6 B=0 C=0
+0046 GETTABLE r6 r6["ACTION_ESPECIAL"]
+0047 CLOSURE r7 nested=0
+0048 MOVE A=0 B=0 C=0
+0049 MOVE A=0 B=3 C=0
+0050 GETUPVAL A=0 B=0 C=0
+0051 GETGLOBAL r8 "MovementEvent"
+0052 GETTABLE r8 r8["EVENT_LOOP_COMPLETE"]
+0053 CALL A=4 B=5 C=1
+0054 LOADBOOL A=4 B=1 C=0
+0055 RETURN A=4 B=2 C=0
+0056 RETURN A=0 B=1 C=0

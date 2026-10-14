@@ -1,0 +1,11 @@
+const assert=require('node:assert/strict'),fs=require('node:fs/promises'),path=require('node:path'),wait=ms=>new Promise(r=>setTimeout(r,ms));
+exports.prepare=async store=>{assert.equal((await store.load()).state,null);const {createGame,action}=await import('../src/game.mjs'),{ORIGINAL_LEVELS}=await import('../src/data.mjs');let s=createGame();s.playerXp=ORIGINAL_LEVELS.find(l=>l.level===20).xp_required;s.coins=1e8;s.gems=1000;s.dragons.forEach(d=>d.level=20);s=action(s,'build',{buildingId:40});const h=s.habitats.at(-1);s=action(s,'completeHabitat',{id:h.id},h.job.readyAt);s.dragons.push({id:s.nextId++,species:'original1041',level:20,habitatId:h.id});await store.save(s)};
+exports.run=async(w,store,verify=false)=>{
+ const js=c=>w.webContents.executeJavaScript(c);for(let i=0;i<80;i++){if(await js("document.querySelectorAll('.world-resident canvas[data-model-ready]').length===3"))break;await wait(100)}
+ assert.equal(await js("document.querySelectorAll('.world-resident canvas[data-model-ready]').length"),3);
+ const snapshot=()=>js("[...document.querySelectorAll('.world-resident')].map(e=>({id:e.dataset.motionId,left:parseFloat(e.style.left),top:parseFloat(e.style.top),area:JSON.parse(e.dataset.motionArea),clip:e.querySelector('canvas').dataset.clip,width:parseFloat(e.querySelector('canvas').style.width),error:e.querySelector('canvas').dataset.modelError}))");
+ const first=await snapshot();assert(first.every(v=>!v.error&&v.width>0));assert.equal(first.at(-1).area.y,135);assert(first.at(-1).top<=-56&&first.at(-1).top>=-76,'holy dragon feet stand on its raised platform');
+ const moved=new Set(),walked=new Set();for(let i=0;i<64;i++){await wait(250);const current=await snapshot();for(const v of current){const initial=first.find(f=>f.id===v.id);if(Math.abs(initial.left-v.left)>.1)moved.add(v.id);if(v.clip==='walk')walked.add(v.id);assert(v.left>=v.area.minX&&v.left<=v.area.maxX);assert(!v.error)}}
+ assert(moved.size>=2&&walked.size>=2,'resident models really walk and stay inside source bounds');
+ await fs.writeFile(path.join(__dirname,'..','work','habitat-motion-qa.png'),(await w.webContents.capturePage()).toPNG());console.log('PASS source habitat model scale, raised holy plane, walk clips, displacement and bounds');
+};
