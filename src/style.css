@@ -130,3 +130,24 @@ body:has(#modal[open].native-fullscreen){background:#09242e}
 .formation-slot-add{position:absolute;width:86px;height:86px;transform:translate(-50%,-50%)}
 .equip-enhance-material{position:absolute;width:38px;height:38px;object-fit:contain;transform:translate(-50%,-50%)}
 .source-gem-left{position:absolute;left:calc(50% - 170px);top:calc(50% + 13px);width:0;height:0}.source-gem-right{position:absolute;left:calc(50% + 315px);top:calc(50% + 30px);width:0;height:0}.source-gem-icon{position:absolute;width:96px;height:96px;object-fit:contain;transform:translate(-50%,-50%)}.source-gem-quality{position:absolute;width:42px;height:42px;object-fit:contain;transform:translate(-50%,-50%)}.source-gem-socket{position:absolute;width:90px;height:90px;transform:translate(-50%,-50%);border:0;background:transparent!important;pointer-events:auto;box-shadow:none}.source-gem-socket .source-gem-icon{left:50%;top:50%}.source-gem-inventory{position:absolute;width:354px;height:341px;transform:translate(-50%,-50%);display:grid;grid-template-columns:repeat(3,118px);grid-auto-rows:124px;overflow:auto;pointer-events:auto}.source-gem-cell{position:relative;width:118px;height:124px;padding:0;border:0;background:transparent!important;box-shadow:none}.source-gem-cell.is-selected{outline:3px solid #3af3f2;outline-offset:-12px}
+/* World art, collision and grid now share a 1300x768 coordinate plane. HUD stays fixed. */
+.ranch-world{position:absolute;left:50%;top:50%;width:1300px;height:768px;transform-origin:center;will-change:transform;touch-action:none}
+.ranch-mode .ranch-world .world-objects{position:absolute;inset:0;width:1300px;height:768px;max-width:none;transform:none}
+.ranch-world .original-landscape{position:absolute;inset:0;overflow:visible;pointer-events:none;background:transparent}
+.ranch-world .original-map{width:400%;height:400%;left:-150%;top:-150%;opacity:1;filter:none}
+.ranch-world .original-island{filter:none}
+.ranch-mode .ranch-world .world-object{min-width:0;width:0;height:0;transform:none;overflow:visible}
+.ranch-world .original-platform{position:absolute;margin:0;width:0;height:0;overflow:visible;isolation:auto;z-index:2}
+.ranch-world .habitat-art,.ranch-world .original-building{position:absolute;left:var(--art-x);top:var(--art-y);width:var(--art-w);height:var(--art-h);max-width:none;object-fit:contain;z-index:0;filter:none}
+.ranch-world .original-platform>span{position:relative;top:-65px;display:inline-block}
+.ranch-world .original-platform .dragon{position:relative;width:80px;height:90px;margin:0 -10px;z-index:1}
+.ranch-world .world-object .label{position:absolute;top:24px;left:0;transform:translateX(-50%);white-space:nowrap;font-size:12px;pointer-events:none;opacity:.85}
+.ranch-world .world-object:not(:hover):not(:focus-visible) .label{display:none}
+.ranch-world .world-object.is-moving{outline:none;box-shadow:none;filter:none;z-index:9999!important}
+.ranch-world .placement-tiles{left:0;top:0;z-index:0}
+.ranch-world .placement-tiles img{left:calc(var(--tile-x)*27px - var(--grid-center-x));top:calc(var(--grid-center-y) - var(--tile-y)*13.5px);transform:translate(-50%,-50%)}
+.ranch-world .breeding-parents{position:absolute;left:-60px;top:-120px;display:flex}
+.ranch-world .original-platform>.world-resident{position:absolute;display:block;width:80px;height:90px}
+.ranch-world .original-platform>.world-resident .dragon{width:80px;height:90px;margin:0}
+.ranch-world .world-object[data-place-id] .habitat-art{pointer-events:auto;cursor:grab;-webkit-user-drag:none;user-select:none}
+.ranch-world .world-object.is-moving .habitat-art{cursor:grabbing}

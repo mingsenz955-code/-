@@ -37213,6 +37213,398 @@
       "width": 144,
       "height": 144,
       "sha256": "a19ab69fd159295a00a11e29387fca922f13505dd617401f338296abccdbba55"
+    },
+    "world/0090_kindergarten_1_g_bg.png": {
+      "archive": "assets/res/buildings/0090_kindergarten_1_g.plist",
+      "frame": "0090_kindergarten_1_g_bg.png",
+      "texture": "assets/res/buildings/0090_kindergarten_1_g.png",
+      "width": 500,
+      "height": 439,
+      "sha256": "01b8202e447ace0cf7652c7beb150a5bda4134f9ace5ce853a60b4cd78c23de5"
+    },
+    "world/0080_ultra_breeding_cave_g_bg.png": {
+      "archive": "assets/res/buildings/0080_ultra_breeding_cave_g.plist",
+      "frame": "0080_ultra_breeding_cave_g_bg.png",
+      "texture": "assets/res/buildings/0080_ultra_breeding_cave_g.png",
+      "width": 434,
+      "height": 350,
+      "sha256": "223deadf4fda314bf65bca39082a015619f4e690cc569e51025fbcf01dc70f16"
+    },
+    "world/0003_boost_earth_g_bg.png": {
+      "archive": "assets/res/buildings/0003_boost_earth_g.plist",
+      "frame": "0003_boost_earth_g_bg.png",
+      "texture": "assets/res/buildings/0003_boost_earth_g.png",
+      "width": 276,
+      "height": 230,
+      "sha256": "864d248d954a0fd4abf0850e68d2c0af0fc0920a503642a919b89779b8fcd4cc"
+    },
+    "world/0108_farm2_EvolutionLand_g_s1.png": {
+      "archive": "assets/res/buildings/0108_farm2_EvolutionLand_g.plist",
+      "frame": "0108_farm2_EvolutionLand_g_s1.png",
+      "texture": "assets/res/buildings/0108_farm2_EvolutionLand_g.png",
+      "width": 338,
+      "height": 279,
+      "sha256": "b8180b555e2916c79b394613ce41da9b717dfc547b0b08a528a63eb268349765"
+    },
+    "world/0108_farm2_EvolutionLand_g_s2.png": {
+      "archive": "assets/res/buildings/0108_farm2_EvolutionLand_g.plist",
+      "frame": "0108_farm2_EvolutionLand_g_s2.png",
+      "texture": "assets/res/buildings/0108_farm2_EvolutionLand_g.png",
+      "width": 338,
+      "height": 278,
+      "sha256": "c9949f8d7a6b0de52997c790d5392c83967c5672a3cab344eb8a18d04825e2ba"
+    },
+    "world/0108_farm2_EvolutionLand_g_s3.png": {
+      "archive": "assets/res/buildings/0108_farm2_EvolutionLand_g.plist",
+      "frame": "0108_farm2_EvolutionLand_g_s3.png",
+      "texture": "assets/res/buildings/0108_farm2_EvolutionLand_g.png",
+      "width": 342,
+      "height": 279,
+      "sha256": "60c740d2e1eb1f8899426d19cba25f59b19796aaf3c50765d54c9d36c11030cb"
+    },
+    "world/0004_boost_fire_g_bg.png": {
+      "archive": "assets/res/buildings/0004_boost_fire_g.plist",
+      "frame": "0004_boost_fire_g_bg.png",
+      "texture": "assets/res/buildings/0004_boost_fire_g.png",
+      "width": 259,
+      "height": 208,
+      "sha256": "51f48f2def0a12ae033473d0cee847e48829435ed2d723dfe1e135341d296926"
+    },
+    "world/0009_shrine_g_bg.png": {
+      "archive": "assets/res/buildings/0009_shrine_g.plist",
+      "frame": "0009_shrine_g_bg.png",
+      "texture": "assets/res/buildings/0009_shrine_g.png",
+      "width": 329,
+      "height": 325,
+      "sha256": "69b725d46eb0d304824a66785926b128e39c3009b5d103f9ce5254f08dcec12e"
+    },
+    "world/0007_boost_water_g_bg.png": {
+      "archive": "assets/res/buildings/0007_boost_water_g.plist",
+      "frame": "0007_boost_water_g_bg.png",
+      "texture": "assets/res/buildings/0007_boost_water_g.png",
+      "width": 266,
+      "height": 214,
+      "sha256": "a30c708019ff37293e6e2954cfc2690f3ebc81a441d736c12fb361dab5456265"
+    },
+    "world/0002_boost_plant_g_bg.png": {
+      "archive": "assets/res/buildings/0002_boost_plant_g.plist",
+      "frame": "0002_boost_plant_g_bg.png",
+      "texture": "assets/res/buildings/0002_boost_plant_g.png",
+      "width": 272,
+      "height": 219,
+      "sha256": "948d97445c2d81f640c1efb5ab3cf4ea44b382f45b6b1a0aca1ab646eeea5e1e"
+    },
+    "world/0010_shrine_20_g_bg.png": {
+      "archive": "assets/res/buildings/0010_shrine_20_g.plist",
+      "frame": "0010_shrine_20_g_bg.png",
+      "texture": "assets/res/buildings/0010_shrine_20_g.png",
+      "width": 335,
+      "height": 336,
+      "sha256": "ad2bfb9c0032b69c84e2149f004a45c2a1f967af9ee85f68674f9a4eaa30e1bb"
+    },
+    "world/0006_boost_electric_g_bg.png": {
+      "archive": "assets/res/buildings/0006_boost_electric_g.plist",
+      "frame": "0006_boost_electric_g_bg.png",
+      "texture": "assets/res/buildings/0006_boost_electric_g.png",
+      "width": 259,
+      "height": 242,
+      "sha256": "9f265b6527a3bef2a7bbaac69ce9d0c12917befab5164865f407a3d6dd91232e"
+    },
+    "world/0011_shrine_25_g_bg.png": {
+      "archive": "assets/res/buildings/0011_shrine_25_g.plist",
+      "frame": "0011_shrine_25_g_bg.png",
+      "texture": "assets/res/buildings/0011_shrine_25_g.png",
+      "width": 351,
+      "height": 348,
+      "sha256": "fa6679e5509db172b66f4dc405b883a3f7961ba0dc7d2c680bc35ad1b3201b29"
+    },
+    "world/0005_boost_ice_g_bg.png": {
+      "archive": "assets/res/buildings/0005_boost_ice_g.plist",
+      "frame": "0005_boost_ice_g_bg.png",
+      "texture": "assets/res/buildings/0005_boost_ice_g.png",
+      "width": 272,
+      "height": 225,
+      "sha256": "66374384f075353644595f1d0827ef875c06c79acf639a7caf5215c62cc915f1"
+    },
+    "world/0015_boost_metal_g_bg.png": {
+      "archive": "assets/res/buildings/0015_boost_metal_g.plist",
+      "frame": "0015_boost_metal_g_bg.png",
+      "texture": "assets/res/buildings/0015_boost_metal_g.png",
+      "width": 254,
+      "height": 216,
+      "sha256": "5be4a97f8073af2614bc20033fd906b83d385c3b2bc43bacaecedf4d80ec5314"
+    },
+    "world/0012_shrine_30_g_bg.png": {
+      "archive": "assets/res/buildings/0012_shrine_30_g.plist",
+      "frame": "0012_shrine_30_g_bg.png",
+      "texture": "assets/res/buildings/0012_shrine_30_g.png",
+      "width": 343,
+      "height": 343,
+      "sha256": "173443d4d27ea50b5fa58753339f0cfab8bc86f0260771e0b33062d10838a7ac"
+    },
+    "world/0045_yanshi_1_g_bg.png": {
+      "archive": "assets/res/buildings/0045_yanshi_1_g.plist",
+      "frame": "0045_yanshi_1_g_bg.png",
+      "texture": "assets/res/buildings/0045_yanshi_1_g.png",
+      "width": 130,
+      "height": 95,
+      "sha256": "2f7927da8f6dc10437803f0421179c3b98a373049405e6d8bbdd6e22a2271b15"
+    },
+    "world/0072_tree_1_g_bg.png": {
+      "archive": "assets/res/buildings/0072_tree_1_g.plist",
+      "frame": "0072_tree_1_g_bg.png",
+      "texture": "assets/res/buildings/0072_tree_1_g.png",
+      "width": 107,
+      "height": 101,
+      "sha256": "8a8eed68b0290846290cf369d774841cc6ff93b0298cb5d75ed1a8b0f76afe98"
+    },
+    "world/0066_duorou_young_g_bg.png": {
+      "archive": "assets/res/buildings/0066_duorou_young_g.plist",
+      "frame": "0066_duorou_young_g_bg.png",
+      "texture": "assets/res/buildings/0066_duorou_young_g.png",
+      "width": 80,
+      "height": 59,
+      "sha256": "77a5d9993babecee4607766825dd994ebd70f59465ae35b186147c281dcde149"
+    },
+    "world/0084_stone_little_g_bg.png": {
+      "archive": "assets/res/buildings/0084_stone_little_g.plist",
+      "frame": "0084_stone_little_g_bg.png",
+      "texture": "assets/res/buildings/0084_stone_little_g.png",
+      "width": 69,
+      "height": 54,
+      "sha256": "bea1808967c4e5ff87bc3225696c74087401921b29974fb46f34e1310fa0eddd"
+    },
+    "world/0060_magic_yelloflower_a_g_bg.png": {
+      "archive": "assets/res/buildings/0060_magic_yelloflower_a_g.plist",
+      "frame": "0060_magic_yelloflower_a_g_bg.png",
+      "texture": "assets/res/buildings/0060_magic_yelloflower_a_g.png",
+      "width": 70,
+      "height": 71,
+      "sha256": "bd36bdc8f144365a1ede47f8b5167acab2512c7babf06c1c3776fc0d1d8e7550"
+    },
+    "world/0046_yanshi_2_g_bg.png": {
+      "archive": "assets/res/buildings/0046_yanshi_2_g.plist",
+      "frame": "0046_yanshi_2_g_bg.png",
+      "texture": "assets/res/buildings/0046_yanshi_2_g.png",
+      "width": 170,
+      "height": 132,
+      "sha256": "01c3f0671f437e26d43b96283dcec4220b88cd63abd8951104c657b31782955d"
+    },
+    "world/0047_yanshi_3_g_bg.png": {
+      "archive": "assets/res/buildings/0047_yanshi_3_g.plist",
+      "frame": "0047_yanshi_3_g_bg.png",
+      "texture": "assets/res/buildings/0047_yanshi_3_g.png",
+      "width": 179,
+      "height": 152,
+      "sha256": "3ac51b972b74f51871d94b9ba06194c73a1dc9449c7d16e19a99892050e46f9f"
+    },
+    "world/0061_xianrenzhang_little_g_bg.png": {
+      "archive": "assets/res/buildings/0061_xianrenzhang_little_g.plist",
+      "frame": "0061_xianrenzhang_little_g_bg.png",
+      "texture": "assets/res/buildings/0061_xianrenzhang_little_g.png",
+      "width": 88,
+      "height": 88,
+      "sha256": "b8c250d9807c2d31e4b71441f9eb6fb22ba275fe73c88859a24290bb7eac7d53"
+    },
+    "world/0073_tree_2_g_bg.png": {
+      "archive": "assets/res/buildings/0073_tree_2_g.plist",
+      "frame": "0073_tree_2_g_bg.png",
+      "texture": "assets/res/buildings/0073_tree_2_g.png",
+      "width": 197,
+      "height": 242,
+      "sha256": "7c1d8cd0cc6e632dd602e4cea2a691d74cafb2a450623e07decd377caef970e5"
+    },
+    "world/0085_stone_big_g_bg.png": {
+      "archive": "assets/res/buildings/0085_stone_big_g.plist",
+      "frame": "0085_stone_big_g_bg.png",
+      "texture": "assets/res/buildings/0085_stone_big_g.png",
+      "width": 140,
+      "height": 105,
+      "sha256": "c6ab14b4651cc041ad30152de55d14f95572468d89161ff8197e9ae51347569a"
+    },
+    "world/0062_xianrenzhang_big_g_bg.png": {
+      "archive": "assets/res/buildings/0062_xianrenzhang_big_g.plist",
+      "frame": "0062_xianrenzhang_big_g_bg.png",
+      "texture": "assets/res/buildings/0062_xianrenzhang_big_g.png",
+      "width": 107,
+      "height": 105,
+      "sha256": "b05b3d2fce86c3c8ce967b211a6c8c449dbc2312d0b228564b529ea920c1edef"
+    },
+    "world/0058_hobbit_home_g_bg.png": {
+      "archive": "assets/res/buildings/0058_hobbit_home_g.plist",
+      "frame": "0058_hobbit_home_g_bg.png",
+      "texture": "assets/res/buildings/0058_hobbit_home_g.png",
+      "width": 246,
+      "height": 183,
+      "sha256": "70156773d3a2564d6461f70770790d47a040acc4d4a98507ea29802abe8dbf66"
+    },
+    "world/0067_duorou_old_g_bg.png": {
+      "archive": "assets/res/buildings/0067_duorou_old_g.plist",
+      "frame": "0067_duorou_old_g_bg.png",
+      "texture": "assets/res/buildings/0067_duorou_old_g.png",
+      "width": 80,
+      "height": 59,
+      "sha256": "4fc89d455d6d3f2cc5779bf30e8986e5f89a2b4e489e156f18769c90f98a847e"
+    },
+    "world/0059_fountain_g_bg.png": {
+      "archive": "assets/res/buildings/0059_fountain_g.plist",
+      "frame": "0059_fountain_g_bg.png",
+      "texture": "assets/res/buildings/0059_fountain_g.png",
+      "width": 231,
+      "height": 217,
+      "sha256": "019a98cff13c3a292e9228e69e3fbedb3a30a37bc890784949dd1c3b38a33d49"
+    },
+    "world/0063_xianrenqiu_little_g_bg.png": {
+      "archive": "assets/res/buildings/0063_xianrenqiu_little_g.plist",
+      "frame": "0063_xianrenqiu_little_g_bg.png",
+      "texture": "assets/res/buildings/0063_xianrenqiu_little_g.png",
+      "width": 85,
+      "height": 62,
+      "sha256": "d2719e01a972eca71c7f9cc5de90e3a716fc90d9485a5c4f6a4a96ec5d33ab7f"
+    },
+    "world/0048_mogu_g_bg.png": {
+      "archive": "assets/res/buildings/0048_mogu_g.plist",
+      "frame": "0048_mogu_g_bg.png",
+      "texture": "assets/res/buildings/0048_mogu_g.png",
+      "width": 78,
+      "height": 59,
+      "sha256": "e0e8979e4046f2e719b36a9271ee278ca8f94e56ac216886bc5618dbfb51eb18"
+    },
+    "world/0049_xiaoxianhua_g_bg.png": {
+      "archive": "assets/res/buildings/0049_xiaoxianhua_g.plist",
+      "frame": "0049_xiaoxianhua_g_bg.png",
+      "texture": "assets/res/buildings/0049_xiaoxianhua_g.png",
+      "width": 87,
+      "height": 85,
+      "sha256": "214ec8c8539403472ffbe1f761df81caa68deae11cdfd5ee864956a749e9db11"
+    },
+    "world/0050_maoyanhua_g_bg.png": {
+      "archive": "assets/res/buildings/0050_maoyanhua_g.plist",
+      "frame": "0050_maoyanhua_g_bg.png",
+      "texture": "assets/res/buildings/0050_maoyanhua_g.png",
+      "width": 120,
+      "height": 124,
+      "sha256": "7edfb808dbb61f14ef3e0990c2d603d8b09eb0fa8b8dab0f3b95ec58c3dc23a7"
+    },
+    "world/0064_xianrenqiu_big_g_bg.png": {
+      "archive": "assets/res/buildings/0064_xianrenqiu_big_g.plist",
+      "frame": "0064_xianrenqiu_big_g_bg.png",
+      "texture": "assets/res/buildings/0064_xianrenqiu_big_g.png",
+      "width": 94,
+      "height": 79,
+      "sha256": "549ce92062e73afceefa05eea99b062508fd9a2f2b9e49a0d4b1050f093358eb"
+    },
+    "world/0077_lanhuacong_g_bg.png": {
+      "archive": "assets/res/buildings/0077_lanhuacong_g.plist",
+      "frame": "0077_lanhuacong_g_bg.png",
+      "texture": "assets/res/buildings/0077_lanhuacong_g.png",
+      "width": 115,
+      "height": 94,
+      "sha256": "22a306e2263ac405026a560ee0cf475a960b7cbd8d8c7255a0a74742714a40f7"
+    },
+    "world/0083_caocong_g_bg.png": {
+      "archive": "assets/res/buildings/0083_caocong_g.plist",
+      "frame": "0083_caocong_g_bg.png",
+      "texture": "assets/res/buildings/0083_caocong_g.png",
+      "width": 100,
+      "height": 80,
+      "sha256": "06a5c5295ce44829e6c510bfc42473818208f74114acb14d0185be013d02eab1"
+    },
+    "world/0087_zihuacong_g_bg.png": {
+      "archive": "assets/res/buildings/0087_zihuacong_g.plist",
+      "frame": "0087_zihuacong_g_bg.png",
+      "texture": "assets/res/buildings/0087_zihuacong_g.png",
+      "width": 123,
+      "height": 94,
+      "sha256": "10c3091cd439f1474c0eb02bd47d2d14d3dfadc4931da1afd0ac8b76f45dda03"
+    },
+    "world/0086_shamocaocong_g_bg.png": {
+      "archive": "assets/res/buildings/0086_shamocaocong_g.plist",
+      "frame": "0086_shamocaocong_g_bg.png",
+      "texture": "assets/res/buildings/0086_shamocaocong_g.png",
+      "width": 69,
+      "height": 46,
+      "sha256": "55c26ff22bd582ec0584198480d876aed9be06fa00e9de880b6312e91305a3b3"
+    },
+    "world/0079_xiaodiaoxiang_g_bg.png": {
+      "archive": "assets/res/buildings/0079_xiaodiaoxiang_g.plist",
+      "frame": "0079_xiaodiaoxiang_g_bg.png",
+      "texture": "assets/res/buildings/0079_xiaodiaoxiang_g.png",
+      "width": 227,
+      "height": 230,
+      "sha256": "f02218089b12e9e6c2991a0e905d117b6ba38b1b8e30a4af5c1a415100094580"
+    },
+    "world/0075_zonglvshu_1_g_bg.png": {
+      "archive": "assets/res/buildings/0075_zonglvshu_1_g.plist",
+      "frame": "0075_zonglvshu_1_g_bg.png",
+      "texture": "assets/res/buildings/0075_zonglvshu_1_g.png",
+      "width": 297,
+      "height": 277,
+      "sha256": "f0cc0b04a7f40a6d7d213dad35adf90e1d385dc7e1b53bbe37a99502b711cbaf"
+    },
+    "world/0081_dadiaoxiang_g_bg.png": {
+      "archive": "assets/res/buildings/0081_dadiaoxiang_g.plist",
+      "frame": "0081_dadiaoxiang_g_bg.png",
+      "texture": "assets/res/buildings/0081_dadiaoxiang_g.png",
+      "width": 224,
+      "height": 215,
+      "sha256": "78cf3be863c9116b5ff2b8ac885c4bd81727ea2385c08013ae8e10a98218ff13"
+    },
+    "world/0069_willow_tree_g_bg.png": {
+      "archive": "assets/res/buildings/0069_willow_tree_g.plist",
+      "frame": "0069_willow_tree_g_bg.png",
+      "texture": "assets/res/buildings/0069_willow_tree_g.png",
+      "width": 252,
+      "height": 218,
+      "sha256": "dc0849cc94e2f1e9681e099f0b0f0b878531908115a4dbc1d100cdf0c5490416"
+    },
+    "world/0082_shuzhuang_g_bg.png": {
+      "archive": "assets/res/buildings/0082_shuzhuang_g.plist",
+      "frame": "0082_shuzhuang_g_bg.png",
+      "texture": "assets/res/buildings/0082_shuzhuang_g.png",
+      "width": 66,
+      "height": 49,
+      "sha256": "f33ecfa7b3560c0116e9a53d3ffa172b6f1cc041e71e2fbe18e04b43a514f5c1"
+    },
+    "world/0088_dragon_hedge_g_bg.png": {
+      "archive": "assets/res/buildings/0088_dragon_hedge_g.plist",
+      "frame": "0088_dragon_hedge_g_bg.png",
+      "texture": "assets/res/buildings/0088_dragon_hedge_g.png",
+      "width": 197,
+      "height": 200,
+      "sha256": "59b007e70e35d0d72f23400a02fb72d7a24db7ff221069b4a0bc2360a56dd6a1"
+    },
+    "world/0089_luxury_egg_statue_g_bg.png": {
+      "archive": "assets/res/buildings/0089_luxury_egg_statue_g.plist",
+      "frame": "0089_luxury_egg_statue_g_bg.png",
+      "texture": "assets/res/buildings/0089_luxury_egg_statue_g.png",
+      "width": 167,
+      "height": 173,
+      "sha256": "1eccc68e7d2368f9e4b99e7d819f5438c094d12e2b6c9a4ae126bf93f960452c"
+    },
+    "world/0074_tree_3_g_bg.png": {
+      "archive": "assets/res/buildings/0074_tree_3_g.plist",
+      "frame": "0074_tree_3_g_bg.png",
+      "texture": "assets/res/buildings/0074_tree_3_g.png",
+      "width": 306,
+      "height": 341,
+      "sha256": "d5348a12899340c3be7053389f793430be8c72f501824cbb7f0aef78b2805bd2"
+    },
+    "world/0078_zonglvshu_2_g_bg.png": {
+      "archive": "assets/res/buildings/0078_zonglvshu_2_g.plist",
+      "frame": "0078_zonglvshu_2_g_bg.png",
+      "texture": "assets/res/buildings/0078_zonglvshu_2_g.png",
+      "width": 386,
+      "height": 341,
+      "sha256": "40ccd2ef944eef9e94edaeb576656233bcf158d4028a5dde70de1db66ccf1376"
+    },
+    "world/0076_yanshi_4_g_bg.png": {
+      "archive": "assets/res/buildings/0076_yanshi_4_g.plist",
+      "frame": "0076_yanshi_4_g_bg.png",
+      "texture": "assets/res/buildings/0076_yanshi_4_g.png",
+      "width": 201,
+      "height": 208,
+      "sha256": "0be720978fe18ffb81d90b74a2510bdc417e16e1809a3f652b98a1e3950e84d0"
     }
   }
 }

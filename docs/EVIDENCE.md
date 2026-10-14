@@ -209,3 +209,9 @@
 - NewEquipEnhancePanel函数1静态指令确认enhancedCost×请求次数及强化石/羽翼/水晶分类，全文见reference/equipment-strengthen-disassembly.txt。等级属性/升级目标来自equipinfo；多次实际服务器结算仍缺，离线逐行执行并扣源费用。
 - RuneData/RuneInsertPanel/RuneMixPanel为明文，确认两组各6槽、背包150、同类型按品质覆盖、吞噬未镶嵌低/同品质宝石及eatexp+exp、levelupexp/nextlevel。导出源godfire/fuwen与图集复现脚本export-progression.py，数据哈希见progression-provenance.json。
 - 符文fuwen与宝石godfire为不同系统，当前只接宝石运行时。获取概率和材料来源尚未取得完整服务器证据，不发假奖励。
+
+## E05 v0.16.20 牧场摆放与加速证据
+- work/client-config/dragon/core/isoengine/building/BuildingBaseDelegate.lua：ctor与setSkin明确_skin:scale(0.5)；showTiles使用width×height、TILE_H*(col-raw)/TILE_H*(col+raw)/2，原grid_yellow/grid_red。客户端layout建筑bg位置和原图集自然尺寸导出到data/building-art.mjs，保存layoutSha256，图片哈希见manifest.json。脚本scripts/export-building-art.py可复现64个布局。
+- work/client-config/dragon/utils/CostUtil.lua明文公式ceil(((time/3600)^0.7)*15)；ui/SpeedUpPanel.lua openBuilding实际使用panel_building_speedup、FinishBuilding、showBuildingXp。实现覆盖建造/升级/商店建筑，实际剩余时间结算一次。
+- 玩家截图证实移动占地格子和建筑比例失配。新实现将碰撞与格子共享等距坐标；真实鼠标输入已核验，而不是只程序调用按钮。
+- 扩建价格表仍采用既有注明的推断列。原服务器各地块坐标/解锁顺序未获得，当前24×24基区、每购买+2行列和草地放大均是离线几何方案，不是原地图证据。不能据此宣称扩建完全一致。

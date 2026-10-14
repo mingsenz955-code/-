@@ -13,29 +13,25 @@ export function acceptsSavedResident(h,species){return acceptsDragon(h,species)|
 
 export function habitatLimit(level){return HABITATS_PER_LEVEL[Math.min(level,HABITATS_PER_LEVEL.length)-1]}
 export function habitatPosition(h,index){return h.position??[[41,50],[59,51],[48,66],[67,65],[31,65],[56,39]][index]??[25+(index%7)*8,36+Math.floor(index/7)*9]}
-export const PLACEMENT_GRID={columns:24,rows:14,left:12,right:88,top:18,bottom:82};
-export function snapHabitatPosition(position){
- const g=PLACEMENT_GRID,stepX=(g.right-g.left)/(g.columns-1),stepY=(g.bottom-g.top)/(g.rows-1);
- const column=Math.max(0,Math.min(g.columns-1,Math.round((position[0]-g.left)/stepX))),row=Math.max(0,Math.min(g.rows-1,Math.round((position[1]-g.top)/stepY)));
- return [Math.round((g.left+column*stepX)*100)/100,Math.round((g.top+row*stepY)*100)/100];
-}
-export function habitatGridRect(h,index,position=habitatPosition(h,index)){
- const g=PLACEMENT_GRID,info=habitatInfo(h),stepX=(g.right-g.left)/(g.columns-1),stepY=(g.bottom-g.top)/(g.rows-1),p=snapHabitatPosition(position);
- const column=Math.round((p[0]-g.left)/stepX),row=Math.round((p[1]-g.top)/stepY),width=info.width??5,height=info.height??5;
- return {column,row,width,height};
-}
-export function placementGridRect(info,position){
- const g=PLACEMENT_GRID,stepX=(g.right-g.left)/(g.columns-1),stepY=(g.bottom-g.top)/(g.rows-1),p=snapHabitatPosition(position);
- return {column:Math.round((p[0]-g.left)/stepX),row:Math.round((p[1]-g.top)/stepY),width:info.width??1,height:info.height??1};
-}
-export function canPlaceObject(objects,movingKey,info,position){
- const moving=placementGridRect(info,position),g=PLACEMENT_GRID,bounds=r=>({left:r.column-Math.floor(r.width/2),right:r.column+Math.ceil(r.width/2),top:r.row-Math.floor(r.height/2),bottom:r.row+Math.ceil(r.height/2)}),a=bounds(moving);
+// A fixed world plane: pixels never change when the window or camera changes.
+// Tile pitch comes from BuildingBaseDelegate.showTiles. Island unlock geometry
+// is an offline mapping until the server's plot coordinates can be recovered.
+export const PLACEMENT_GRID={columns:24,rows:24,width:1300,height:768,originX:650,originY:50,tileX:27,tileY:13.5};
+export function placementGrid(plots=0){const extra=Math.max(0,Math.min(96,plots))*2;return {...PLACEMENT_GRID,columns:24+extra,rows:24+extra}}
+export function gridPosition(column,row){const g=PLACEMENT_GRID;return [(g.originX+(column-row)*g.tileX)/g.width*100,(g.originY+(column+row)*g.tileY)/g.height*100]}
+export function gridCoordinates(position){const g=PLACEMENT_GRID,x=(position[0]*g.width/100-g.originX)/g.tileX,y=(position[1]*g.height/100-g.originY)/g.tileY;return {column:Math.round((x+y)/2),row:Math.round((y-x)/2)}}
+export function snapHabitatPosition(position){const {column,row}=gridCoordinates(position);return gridPosition(column,row)}
+export function placementGridRect(info,position){return {...gridCoordinates(position),width:info.width??5,height:info.height??5}}
+export function habitatGridRect(h,index,position=habitatPosition(h,index)){return placementGridRect(habitatInfo(h),position)}
+export function canPlaceObject(objects,movingKey,info,position,plots=0){
+ const g=placementGrid(plots),bounds=r=>({left:r.column-Math.floor(r.width/2),right:r.column+Math.ceil(r.width/2),top:r.row-Math.floor(r.height/2),bottom:r.row+Math.ceil(r.height/2)}),a=bounds(placementGridRect(info,position));
  if(a.left<0||a.top<0||a.right>g.columns||a.bottom>g.rows)return false;
+ // Conservative grass envelope prevents a newly bought building spawning in the
+ // clouds or behind the rocky rim. Existing saves are never repositioned.
+ const scale=1+plots/12,px=position[0]*13,py=position[1]*7.68;
+ if(Math.abs(px-650)>400*scale||py<240||py>240+280*scale)return false;
  return objects.every(o=>{if(o.key===movingKey)return true;const b=bounds(placementGridRect(o.info,o.position));return a.right<=b.left||a.left>=b.right||a.bottom<=b.top||a.top>=b.bottom});
 }
-export function canPlaceHabitat(habitats,id,position){
- const index=habitats.findIndex(h=>h.id===id);if(index<0)return false;const moving=habitatGridRect(habitats[index],index,position),g=PLACEMENT_GRID;
- if(moving.column-Math.floor(moving.width/2)<0||moving.row-Math.floor(moving.height/2)<0||moving.column+Math.ceil(moving.width/2)>g.columns||moving.row+Math.ceil(moving.height/2)>g.rows)return false;
- const bounds=r=>({left:r.column-Math.floor(r.width/2),right:r.column+Math.ceil(r.width/2),top:r.row-Math.floor(r.height/2),bottom:r.row+Math.ceil(r.height/2)}),a=bounds(moving);
- return habitats.every((other,i)=>{if(other.id===id)return true;const b=bounds(habitatGridRect(other,i));return a.right<=b.left||a.left>=b.right||a.bottom<=b.top||a.top>=b.bottom});
-}
+export function canPlaceHabitat(habitats,id,position,plots=0){const h=habitats.find(h=>h.id===id);return !!h&&canPlaceObject(habitats.map((v,i)=>({key:`h:${v.id}`,info:habitatInfo(v),position:habitatPosition(v,i)})),`h:${id}`,habitatInfo(h),position,plots)}
+export function findBuildingPosition(objects,info,plots=0){const g=placementGrid(plots);for(let row=0;row<g.rows;row++)for(let column=0;column<g.columns;column++){const p=gridPosition(column,row);if(canPlaceObject(objects,'new',info,p,plots))return p}return null}
+export const FIXED_BUILDINGS=[{key:'fixed:breed',info:{width:6,height:6},position:[66,31]},{key:'fixed:incubator',info:{width:5,height:5},position:[75,48]},{key:'fixed:farm',info:{width:4,height:4},position:[26,39]}];
