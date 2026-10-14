@@ -107,7 +107,7 @@ test('save validation rejects malformed equipment rows, unknown dragons and repe
 test('v5 saves migrate to v6 with an empty equipment list and untouched ranch data',()=>{
  const old=createGame(T);old.version=5;delete old.equipment;delete old.nextEquipId;
  const migrated=validate(old);
- assert.equal(migrated.version,7);
+ assert.equal(migrated.version,8);
  assert.deepEqual(migrated.equipment,[]);
  assert.equal(migrated.nextEquipId,1);
  assert.deepEqual(migrated.dragons,old.dragons);

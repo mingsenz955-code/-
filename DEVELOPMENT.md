@@ -339,3 +339,10 @@
 - 该表**没有列定义文件**，列含义是从数值本身推断的（金币与等级单调、前四行全零），已在 `expansion-provenance.json` 明确标注为推断；col5 有重复值（多步共享 30），因此**不作为**地块唯一编号。
 - 新增 `scripts/export-expansion.py`、`assets/original/data/expansion.mjs` + provenance、`src/expansion.mjs`、`tests/expansion.test.mjs` 3 项；合计 **71 项 Node 检查全绿**。
 - 下一轮：把扩建接进存档与商店（`ui_shop` 的「扩建」分类目前仍是 unavailable），再回头处理战斗或转④充值。
+
+## 最新检查点 — v0.21 岛屿扩建可用（2026-10-14）
+- ③完成可玩：`ui_shop` 的「扩建」分类不再是灰的，进去是原版 `ui_shop_lv2` + `item_shop` 商品卡，显示下一块地的**原版价格**（首块 4000 金币、需要牧场 Lv.2）与原版浮空岛商品图 `thumbs_store_expansion_island_*`。
+- 规则：存档升 v8，新增 `expansion.plots`；`expandIsland` 按 `expansion_prices` 阶梯校验等级与金币（魔晶 >0 时一并扣），成功后地块 +1。**扩建真的能多建一块栖息地** —— `build` 的上限改为 `habitatLimit(level) + plots`。旧档迁移补 `expansion:{plots:0}`，行为不变。
+- 边界照旧如实标注：该表无列定义文件，列含义为推断，policy 记为 `offline-expansion-inferred-v1`；col5 有重复值，未用作地块编号。
+- 验证：新增 2 项扩建游戏层测试（买地扣款、上限真的提升、二次购买更贵、非法地块数被拒），合计 **73 项 Node 检查全绿**；隔离档 `--smoke-expansion` 与独立进程 `--verify-expansion` 通过（商店入口 → 扩建页 → 原价 4000 → 扣款 → 地块 +1 → 重启保持）。未改玩家档。
+- 下一轮：④充值系统与货币汇率（用户要求暂时免费、点一下就加），或按需回到战斗。
