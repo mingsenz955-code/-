@@ -12,6 +12,11 @@ exports.run=async(window,store)=>{
  const art=async()=>{await wait(300);assert(await js("Array.from(document.querySelectorAll('#modal img')).every(i=>i.complete&&i.naturalWidth>0)"),await js("Array.from(document.querySelectorAll('#modal img')).filter(i=>!i.complete||!i.naturalWidth).map(i=>i.getAttribute('src')).join(',')"));assert(await js("!document.querySelector('.topbar,.left,.right,.stage-content,.card,.footer')"),'Legacy website UI must not exist');};
  const shot=async name=>{await art();await fs.writeFile(path.join(__dirname,'..','work',name+'.png'),(await window.webContents.capturePage()).toPNG())};
  const advance=async at=>{await js(`Date.now=()=>${at};true`);await wait(400)};
+ // gold/food/gem each carry a ＋ button in the client layout; all three must be real buttons now.
+ assert.equal(await js("document.querySelectorAll('.original-hud [data-action=resourceShop]').length"),2,'获取金币 and 获取食物 must reach the resource shop');
+ await click('.original-hud [data-action=openRecharge][aria-label="获取魔晶"]');
+ assert.equal(await js("document.querySelector('#modal').dataset.mode"),'sourceRecharge','the 魔晶 ＋ must open the recharge panel');
+ await click('#modal [data-action=close]');
  await click('[data-place-id="1"]');await shot('native-habitat-info');assert.equal(await js("document.querySelector('#modal').dataset.mode"),'nativeHabitatInfo');await click('#modal [data-action=collect]');assert((await state()).coins>=50777);await click('#modal [data-action=close]');
  await click('[data-action=showMore]');await click('[data-action=openHabitats]');await shot('native-shop');await click('#modal [data-action=habitatShop]');assert.equal(await js("document.querySelectorAll('[data-habitat-offer]').length"),17);await shot('native-habitat-shop');
  await click('[data-action=habitatPurchase][data-id="26"]');await art();const before=(await state()).coins;await click('[data-action=buyHabitat]');const habitat=(await state()).habitats.at(-1);assert.equal(habitat.buildingId,26);assert.equal((await state()).coins,before-100);assert.equal(habitat.job.kind,'build');assert(await js("document.querySelector('[data-action=completeHabitat]').disabled"));

@@ -101,8 +101,9 @@ canvas.dragon{display:inline-block;object-fit:contain}.dragon-preview-dialog{wid
 .source-recharge-card:hover{filter:brightness(1.05)}
 .source-recharge-icon{position:absolute;width:96px;height:96px;transform:translate(-50%,-50%);object-fit:contain;pointer-events:none}
 .source-recharge-status{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:22px;color:#ffe9bf;white-space:nowrap;text-shadow:0 1px 2px #000a}
-/* Award lines are long (three items with names), so the card wraps and shrinks them. */
-.source-recharge-card .source-label[data-source$="give"]{white-space:normal!important;line-height:1.15;font-size:16px!important;text-align:center;transform:translate(-50%,-60%)}
+/* The 再送 line can be wider than the card's own label box, so it may wrap; the alignment
+   itself stays with the layout (flex), never with a transform. */
+.source-recharge-card .source-label[data-source$="give"]{white-space:normal!important;line-height:1.15;font-size:16px!important}
 
 /* 原版战斗界面 ui_battlenormal */
 .source-battle-portrait{position:absolute;width:58px;height:58px;transform:translate(-50%,-50%);pointer-events:none}
