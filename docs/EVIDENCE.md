@@ -117,3 +117,8 @@
 ## E05 本轮额外静态核对
 - DragonUI.lua的已安全读取常量在levelUp更新路径包含Config_LocaleText.lang('#0#/MIN')和rate；APK textnew_cn.json中该键明确译为“#0#/分钟”。喂养页产出已改为数值/分钟，单位文案不再仅凭本地习惯。
 - APK含15套.fnt和同名PNG位图字库，无TTF/OTF/WOFF文件；ui_main只有少数节点显式bmp=1/font，ui_dragon/item_mydragon当前绑定文字大多是普通label。不能据“存在字库”就给全部普通标签换成任意位图字体；动态new text helper及原系统默认字体仍须核对。
+
+## E05 装备与属性静态审计 — v0.8后续
+- EquipInfo.lua明文33列，equipinfo安全读取表6000行、grade=1为60行；六槽定义和30个已取得原图标已逐一核对。第24列price是出售价格，导出命名sellPrice；详细来源/哈希与映射在assets/original/data/equipment-provenance.json。
+- DragonElement.lua静态解析常量/指令，不执行原字节码。审计文本含源SHA256；updateAttributes包含成长、被动及觉醒并继续应用进化/秘宝，getPower读取_data总值并加符文。因此未将基础成长冒充总战斗属性。
+- 后期六槽与旧setEquip四槽重置存在差异；元素校验还有全局_data依赖。实际后期装备调用链、获取与随机结算尚未确认。完整分析与复现见docs/EQUIPMENT.md。

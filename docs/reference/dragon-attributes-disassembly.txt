@@ -1,0 +1,446 @@
+SHA256 558a78516ea4fdf94157c0e569f50a9ab617837548923c1624481eb66ae86880
+Static Lua 5.1 disassembly. PCs and nested function indexes are zero-based. No code executed.
+
+FUNCTION 1
+CONSTANTS ["_data", "LibraryManager", "lib_dragon_atks", "getDragonAtksInfo", "type", "quality", "getEvolutionRate", "getTreasureRate", "baseAttribute", 0, 1, 4, "defaultSkill_", -1, "lib_skill_new", "getInfoById", 3, "DataManager", "_FuwenData", "getFuwenByDragonAndPos", "id", "getBuffID", "buff1ID", "info", "colour", "level", "lib_buff_new", "log", "buffID:%d, buff1ID:%d, colour:%d, level:%d", "ruen", "arg1", "arg2", 2, "getJuexShuxing", "attack", "math", "floor", "baseAttack", "attackQuality", "attactTotal", "defend", "baseDefence", "defenceQuality", "defendTotal", "blood", "baseLife", "lifeQuality", "bloodTotal", "crit", "critTotal", "uncrit", "uncritTotal", "addedAttribute", "maxblood"]
+0000 GETTABLE r1 r0["_data"]
+0001 GETGLOBAL r2 "LibraryManager"
+0002 GETTABLE r2 r2["lib_dragon_atks"]
+0003 SELF r2 self=r2 method="getDragonAtksInfo"
+0004 GETTABLE r4 r1["type"]
+0005 GETTABLE r5 r1["quality"]
+0006 CALL A=2 B=4 C=2
+0007 SELF r3 self=r0 method="getEvolutionRate"
+0008 CALL A=3 B=2 C=2
+0009 SELF r4 self=r0 method="getTreasureRate"
+0010 CALL A=4 B=2 C=2
+0011 NEWTABLE A=5 B=0 C=0
+0012 SETTABLE r0["baseAttribute"] r5
+0013 LOADNIL A=5 B=6 C=0
+0014 LOADK r7 0
+0015 LOADK r8 0
+0016 LOADK r9 0
+0017 LOADK r10 0
+0018 LOADK r11 0
+0019 LOADK r12 1
+0020 LOADK r13 4
+0021 LOADK r14 1
+0022 FORPREP A=12 target=123
+0023 LOADK r16 "defaultSkill_"
+0024 MOVE A=17 B=15 C=0
+0025 CONCAT A=16 B=16 C=17
+0026 GETTABLE r16 r2[r16]
+0027 EQ A=1 r16 -1
+0028 JMP A=0 target=123
+0029 GETGLOBAL r16 "LibraryManager"
+0030 GETTABLE r16 r16["lib_skill_new"]
+0031 SELF r16 self=r16 method="getInfoById"
+0032 LOADK r18 "defaultSkill_"
+0033 MOVE A=19 B=15 C=0
+0034 CONCAT A=18 B=18 C=19
+0035 GETTABLE r18 r2[r18]
+0036 CALL A=16 B=3 C=2
+0037 MOVE A=5 B=16 C=0
+0038 GETTABLE r16 r5["type"]
+0039 EQ A=0 r16 3
+0040 JMP A=0 target=123
+0041 GETGLOBAL r16 "DataManager"
+0042 GETTABLE r16 r16["_FuwenData"]
+0043 GETTABLE r16 r16["getFuwenByDragonAndPos"]
+0044 GETTABLE r17 r0["_data"]
+0045 GETTABLE r17 r17["id"]
+0046 MOVE A=18 B=15 C=0
+0047 CALL A=16 B=3 C=2
+0048 GETUPVAL A=17 B=0 C=0
+0049 GETTABLE r17 r17["getBuffID"]
+0050 GETTABLE r18 r5["buff1ID"]
+0051 TEST A=16 B=0 C=0
+0052 JMP A=0 target=57
+0053 GETTABLE r19 r16["info"]
+0054 GETTABLE r19 r19["colour"]
+0055 TEST A=19 B=0 C=1
+0056 JMP A=0 target=58
+0057 LOADK r19 0
+0058 TEST A=16 B=0 C=0
+0059 JMP A=0 target=64
+0060 GETTABLE r20 r16["info"]
+0061 GETTABLE r20 r20["level"]
+0062 TEST A=20 B=0 C=1
+0063 JMP A=0 target=65
+0064 LOADK r20 0
+0065 CALL A=17 B=4 C=2
+0066 GETGLOBAL r18 "LibraryManager"
+0067 GETTABLE r18 r18["lib_buff_new"]
+0068 SELF r18 self=r18 method="getInfoById"
+0069 MOVE A=20 B=17 C=0
+0070 CALL A=18 B=3 C=2
+0071 MOVE A=6 B=18 C=0
+0072 TEST A=6 B=0 C=1
+0073 JMP A=0 target=94
+0074 GETGLOBAL r18 "log"
+0075 LOADK r19 "buffID:%d, buff1ID:%d, colour:%d, level:%d"
+0076 MOVE A=20 B=17 C=0
+0077 GETTABLE r21 r5["buff1ID"]
+0078 TEST A=16 B=0 C=0
+0079 JMP A=0 target=84
+0080 GETTABLE r22 r16["info"]
+0081 GETTABLE r22 r22["colour"]
+0082 TEST A=22 B=0 C=1
+0083 JMP A=0 target=85
+0084 LOADK r22 0
+0085 TEST A=16 B=0 C=0
+0086 JMP A=0 target=92
+0087 GETGLOBAL r23 "ruen"
+0088 GETTABLE r23 r23["info"]
+0089 GETTABLE r23 r23["level"]
+0090 TEST A=23 B=0 C=1
+0091 JMP A=0 target=93
+0092 LOADK r23 0
+0093 CALL A=18 B=6 C=1
+0094 GETTABLE r18 r6["arg1"]
+0095 EQ A=0 r18 0
+0096 JMP A=0 target=100
+0097 GETTABLE r18 r6["arg2"]
+0098 ADD r7 r7 r18
+0099 JMP A=0 target=123
+0100 GETTABLE r18 r6["arg1"]
+0101 EQ A=0 r18 1
+0102 JMP A=0 target=106
+0103 GETTABLE r18 r6["arg2"]
+0104 ADD r8 r8 r18
+0105 JMP A=0 target=123
+0106 GETTABLE r18 r6["arg1"]
+0107 EQ A=0 r18 2
+0108 JMP A=0 target=112
+0109 GETTABLE r18 r6["arg2"]
+0110 ADD r9 r9 r18
+0111 JMP A=0 target=123
+0112 GETTABLE r18 r6["arg1"]
+0113 EQ A=0 r18 3
+0114 JMP A=0 target=118
+0115 GETTABLE r18 r6["arg2"]
+0116 ADD r10 r10 r18
+0117 JMP A=0 target=123
+0118 GETTABLE r18 r6["arg1"]
+0119 EQ A=0 r18 4
+0120 JMP A=0 target=123
+0121 GETTABLE r18 r6["arg2"]
+0122 ADD r11 r11 r18
+0123 FORLOOP A=12 target=23
+0124 SELF r12 self=r0 method="getJuexShuxing"
+0125 CALL A=12 B=2 C=2
+0126 GETTABLE r13 r0["baseAttribute"]
+0127 GETGLOBAL r14 "math"
+0128 GETTABLE r14 r14["floor"]
+0129 GETTABLE r15 r2["baseAttack"]
+0130 GETTABLE r16 r1["level"]
+0131 SUB r16 r16 1
+0132 GETTABLE r17 r2["attackQuality"]
+0133 MUL r16 r16 r17
+0134 ADD r15 r15 r16
+0135 ADD r15 r15 r7
+0136 GETTABLE r16 r12["attactTotal"]
+0137 ADD r15 r15 r16
+0138 CALL A=14 B=2 C=2
+0139 SETTABLE r13["attack"] r14
+0140 GETTABLE r13 r0["baseAttribute"]
+0141 GETGLOBAL r14 "math"
+0142 GETTABLE r14 r14["floor"]
+0143 GETTABLE r15 r2["baseDefence"]
+0144 GETTABLE r16 r1["level"]
+0145 SUB r16 r16 1
+0146 GETTABLE r17 r2["defenceQuality"]
+0147 MUL r16 r16 r17
+0148 ADD r15 r15 r16
+0149 ADD r15 r15 r8
+0150 GETTABLE r16 r12["defendTotal"]
+0151 ADD r15 r15 r16
+0152 CALL A=14 B=2 C=2
+0153 SETTABLE r13["defend"] r14
+0154 GETTABLE r13 r0["baseAttribute"]
+0155 GETGLOBAL r14 "math"
+0156 GETTABLE r14 r14["floor"]
+0157 GETTABLE r15 r2["baseLife"]
+0158 GETTABLE r16 r1["level"]
+0159 SUB r16 r16 1
+0160 GETTABLE r17 r2["lifeQuality"]
+0161 MUL r16 r16 r17
+0162 ADD r15 r15 r16
+0163 ADD r15 r15 r9
+0164 GETTABLE r16 r12["bloodTotal"]
+0165 ADD r15 r15 r16
+0166 CALL A=14 B=2 C=2
+0167 SETTABLE r13["blood"] r14
+0168 GETTABLE r13 r0["baseAttribute"]
+0169 GETTABLE r14 r12["critTotal"]
+0170 ADD r14 r10 r14
+0171 SETTABLE r13["crit"] r14
+0172 GETTABLE r13 r0["baseAttribute"]
+0173 GETTABLE r14 r12["uncritTotal"]
+0174 ADD r14 r11 r14
+0175 SETTABLE r13["uncrit"] r14
+0176 GETTABLE r13 r0["baseAttribute"]
+0177 GETGLOBAL r14 "math"
+0178 GETTABLE r14 r14["floor"]
+0179 GETTABLE r15 r0["baseAttribute"]
+0180 GETTABLE r15 r15["attack"]
+0181 MUL r15 r15 r3
+0182 CALL A=14 B=2 C=2
+0183 GETGLOBAL r15 "math"
+0184 GETTABLE r15 r15["floor"]
+0185 GETTABLE r16 r0["baseAttribute"]
+0186 GETTABLE r16 r16["attack"]
+0187 MUL r16 r16 r4
+0188 CALL A=15 B=2 C=2
+0189 ADD r14 r14 r15
+0190 SETTABLE r13["attack"] r14
+0191 GETTABLE r13 r0["baseAttribute"]
+0192 GETGLOBAL r14 "math"
+0193 GETTABLE r14 r14["floor"]
+0194 GETTABLE r15 r0["baseAttribute"]
+0195 GETTABLE r15 r15["defend"]
+0196 MUL r15 r15 r3
+0197 CALL A=14 B=2 C=2
+0198 GETGLOBAL r15 "math"
+0199 GETTABLE r15 r15["floor"]
+0200 GETTABLE r16 r0["baseAttribute"]
+0201 GETTABLE r16 r16["defend"]
+0202 MUL r16 r16 r4
+0203 CALL A=15 B=2 C=2
+0204 ADD r14 r14 r15
+0205 SETTABLE r13["defend"] r14
+0206 GETTABLE r13 r0["baseAttribute"]
+0207 GETGLOBAL r14 "math"
+0208 GETTABLE r14 r14["floor"]
+0209 GETTABLE r15 r0["baseAttribute"]
+0210 GETTABLE r15 r15["blood"]
+0211 MUL r15 r15 r3
+0212 CALL A=14 B=2 C=2
+0213 GETGLOBAL r15 "math"
+0214 GETTABLE r15 r15["floor"]
+0215 GETTABLE r16 r0["baseAttribute"]
+0216 GETTABLE r16 r16["blood"]
+0217 MUL r16 r16 r4
+0218 CALL A=15 B=2 C=2
+0219 ADD r14 r14 r15
+0220 SETTABLE r13["blood"] r14
+0221 GETTABLE r13 r0["baseAttribute"]
+0222 GETGLOBAL r14 "math"
+0223 GETTABLE r14 r14["floor"]
+0224 GETTABLE r15 r0["baseAttribute"]
+0225 GETTABLE r15 r15["crit"]
+0226 MUL r15 r15 r3
+0227 CALL A=14 B=2 C=2
+0228 GETGLOBAL r15 "math"
+0229 GETTABLE r15 r15["floor"]
+0230 GETTABLE r16 r0["baseAttribute"]
+0231 GETTABLE r16 r16["crit"]
+0232 MUL r16 r16 r4
+0233 CALL A=15 B=2 C=2
+0234 ADD r14 r14 r15
+0235 SETTABLE r13["crit"] r14
+0236 GETTABLE r13 r0["baseAttribute"]
+0237 GETGLOBAL r14 "math"
+0238 GETTABLE r14 r14["floor"]
+0239 GETTABLE r15 r0["baseAttribute"]
+0240 GETTABLE r15 r15["uncrit"]
+0241 MUL r15 r15 r3
+0242 CALL A=14 B=2 C=2
+0243 GETGLOBAL r15 "math"
+0244 GETTABLE r15 r15["floor"]
+0245 GETTABLE r16 r0["baseAttribute"]
+0246 GETTABLE r16 r16["uncrit"]
+0247 MUL r16 r16 r4
+0248 CALL A=15 B=2 C=2
+0249 ADD r14 r14 r15
+0250 SETTABLE r13["uncrit"] r14
+0251 NEWTABLE A=13 B=0 C=0
+0252 SETTABLE r0["addedAttribute"] r13
+0253 GETTABLE r13 r0["addedAttribute"]
+0254 GETTABLE r14 r1["attack"]
+0255 TEST A=14 B=0 C=1
+0256 JMP A=0 target=258
+0257 LOADK r14 0
+0258 GETTABLE r15 r0["baseAttribute"]
+0259 GETTABLE r15 r15["attack"]
+0260 SUB r14 r14 r15
+0261 SETTABLE r13["attack"] r14
+0262 GETTABLE r13 r0["addedAttribute"]
+0263 GETTABLE r14 r1["defend"]
+0264 TEST A=14 B=0 C=1
+0265 JMP A=0 target=267
+0266 LOADK r14 0
+0267 GETTABLE r15 r0["baseAttribute"]
+0268 GETTABLE r15 r15["defend"]
+0269 SUB r14 r14 r15
+0270 SETTABLE r13["defend"] r14
+0271 GETTABLE r13 r0["addedAttribute"]
+0272 GETTABLE r14 r1["maxblood"]
+0273 TEST A=14 B=0 C=1
+0274 JMP A=0 target=276
+0275 LOADK r14 0
+0276 GETTABLE r15 r0["baseAttribute"]
+0277 GETTABLE r15 r15["blood"]
+0278 SUB r14 r14 r15
+0279 SETTABLE r13["blood"] r14
+0280 GETTABLE r13 r0["addedAttribute"]
+0281 GETTABLE r14 r1["crit"]
+0282 TEST A=14 B=0 C=1
+0283 JMP A=0 target=285
+0284 LOADK r14 0
+0285 GETTABLE r15 r0["baseAttribute"]
+0286 GETTABLE r15 r15["crit"]
+0287 SUB r14 r14 r15
+0288 SETTABLE r13["crit"] r14
+0289 GETTABLE r13 r0["addedAttribute"]
+0290 GETTABLE r14 r1["uncrit"]
+0291 TEST A=14 B=0 C=1
+0292 JMP A=0 target=294
+0293 LOADK r14 0
+0294 GETTABLE r15 r0["baseAttribute"]
+0295 GETTABLE r15 r15["uncrit"]
+0296 SUB r14 r14 r15
+0297 SETTABLE r13["uncrit"] r14
+0298 RETURN A=0 B=1 C=0
+
+FUNCTION 32
+CONSTANTS ["_data", "attack", 0, "defend", "maxblood", "crit", "uncrit", "math", "floor", 3, "getRunePower"]
+0000 GETTABLE r1 r0["_data"]
+0001 GETTABLE r2 r0["_data"]
+0002 GETTABLE r2 r2["attack"]
+0003 TEST A=2 B=0 C=1
+0004 JMP A=0 target=6
+0005 LOADK r2 0
+0006 SETTABLE r1["attack"] r2
+0007 GETTABLE r1 r0["_data"]
+0008 GETTABLE r2 r0["_data"]
+0009 GETTABLE r2 r2["defend"]
+0010 TEST A=2 B=0 C=1
+0011 JMP A=0 target=13
+0012 LOADK r2 0
+0013 SETTABLE r1["defend"] r2
+0014 GETTABLE r1 r0["_data"]
+0015 GETTABLE r2 r0["_data"]
+0016 GETTABLE r2 r2["maxblood"]
+0017 TEST A=2 B=0 C=1
+0018 JMP A=0 target=20
+0019 LOADK r2 0
+0020 SETTABLE r1["maxblood"] r2
+0021 GETTABLE r1 r0["_data"]
+0022 GETTABLE r2 r0["_data"]
+0023 GETTABLE r2 r2["crit"]
+0024 TEST A=2 B=0 C=1
+0025 JMP A=0 target=27
+0026 LOADK r2 0
+0027 SETTABLE r1["crit"] r2
+0028 GETTABLE r1 r0["_data"]
+0029 GETTABLE r2 r0["_data"]
+0030 GETTABLE r2 r2["uncrit"]
+0031 TEST A=2 B=0 C=1
+0032 JMP A=0 target=34
+0033 LOADK r2 0
+0034 SETTABLE r1["uncrit"] r2
+0035 GETGLOBAL r1 "math"
+0036 GETTABLE r1 r1["floor"]
+0037 GETTABLE r2 r0["_data"]
+0038 GETTABLE r2 r2["attack"]
+0039 GETTABLE r3 r0["_data"]
+0040 GETTABLE r3 r3["defend"]
+0041 ADD r2 r2 r3
+0042 GETTABLE r3 r0["_data"]
+0043 GETTABLE r3 r3["maxblood"]
+0044 DIV r3 r3 3
+0045 ADD r2 r2 r3
+0046 GETTABLE r3 r0["_data"]
+0047 GETTABLE r3 r3["crit"]
+0048 ADD r2 r2 r3
+0049 GETTABLE r3 r0["_data"]
+0050 GETTABLE r3 r3["uncrit"]
+0051 ADD r2 r2 r3
+0052 SELF r3 self=r0 method="getRunePower"
+0053 CALL A=3 B=2 C=2
+0054 ADD r2 r2 r3
+0055 TAILCALL A=1 B=2 C=0
+0056 RETURN A=1 B=0 C=0
+0057 RETURN A=0 B=1 C=0
+
+FUNCTION 49
+CONSTANTS [-1, "equip", null]
+0000 EQ A=0 r1 -1
+0001 JMP A=0 target=10
+0002 NEWTABLE A=3 B=4 C=0
+0003 LOADBOOL A=4 B=0 C=0
+0004 LOADBOOL A=5 B=0 C=0
+0005 LOADBOOL A=6 B=0 C=0
+0006 LOADBOOL A=7 B=0 C=0
+0007 SETLIST A=3 B=4 C=1
+0008 SETTABLE r0["equip"] r3
+0009 RETURN A=0 B=1 C=0
+0010 EQ A=0 r2 null
+0011 JMP A=0 target=13
+0012 LOADBOOL A=2 B=0 C=0
+0013 GETTABLE r3 r0["equip"]
+0014 SETTABLE r3[r1] r2
+0015 RETURN A=0 B=1 C=0
+
+FUNCTION 51
+CONSTANTS ["info", "property", 9, "_data", "elementTypeList", "pairs", "DragonElement", "getElementInt"]
+0000 GETTABLE r2 r1["info"]
+0001 GETTABLE r2 r2["property"]
+0002 EQ A=0 r2 9
+0003 JMP A=0 target=6
+0004 LOADBOOL A=2 B=1 C=0
+0005 RETURN A=2 B=2 C=0
+0006 GETGLOBAL r2 "_data"
+0007 GETTABLE r2 r2["elementTypeList"]
+0008 GETGLOBAL r3 "pairs"
+0009 MOVE A=4 B=2 C=0
+0010 CALL A=3 B=2 C=4
+0011 JMP A=0 target=22
+0012 GETTABLE r8 r1["info"]
+0013 GETTABLE r8 r8["property"]
+0014 GETGLOBAL r9 "DragonElement"
+0015 GETTABLE r9 r9["getElementInt"]
+0016 MOVE A=10 B=7 C=0
+0017 CALL A=9 B=2 C=2
+0018 EQ A=0 r8 r9
+0019 JMP A=0 target=22
+0020 LOADBOOL A=8 B=1 C=0
+0021 RETURN A=8 B=2 C=0
+0022 TFORLOOP A=3 B=0 C=2
+0023 JMP A=0 target=12
+0024 LOADBOOL A=3 B=0 C=0
+0025 RETURN A=3 B=2 C=0
+0026 RETURN A=0 B=1 C=0
+
+FUNCTION 59
+CONSTANTS ["_data", "quality", 0, 1, "wakestar", "print", "getAtksInfo..quality:", "LibraryManager", "lib_dragon_atks", "getDragonAtksInfo", "type"]
+0000 GETTABLE r1 r0["_data"]
+0001 GETTABLE r1 r1["quality"]
+0002 EQ A=0 r1 0
+0003 JMP A=0 target=5
+0004 LOADK r1 1
+0005 GETTABLE r2 r0["_data"]
+0006 TEST A=2 B=0 C=0
+0007 JMP A=0 target=15
+0008 GETTABLE r2 r0["_data"]
+0009 GETTABLE r2 r2["wakestar"]
+0010 TEST A=2 B=0 C=0
+0011 JMP A=0 target=15
+0012 GETTABLE r2 r0["_data"]
+0013 GETTABLE r2 r2["wakestar"]
+0014 ADD r1 r1 r2
+0015 GETGLOBAL r2 "print"
+0016 LOADK r3 "getAtksInfo..quality:"
+0017 MOVE A=4 B=1 C=0
+0018 CONCAT A=3 B=3 C=4
+0019 CALL A=2 B=2 C=1
+0020 GETGLOBAL r2 "LibraryManager"
+0021 GETTABLE r2 r2["lib_dragon_atks"]
+0022 SELF r2 self=r2 method="getDragonAtksInfo"
+0023 GETTABLE r4 r0["_data"]
+0024 GETTABLE r4 r4["type"]
+0025 MOVE A=5 B=1 C=0
+0026 TAILCALL A=2 B=4 C=0
+0027 RETURN A=2 B=0 C=0
+0028 RETURN A=0 B=1 C=0
