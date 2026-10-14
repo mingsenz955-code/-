@@ -122,3 +122,10 @@
 - EquipInfo.lua明文33列，equipinfo安全读取表6000行、grade=1为60行；六槽定义和30个已取得原图标已逐一核对。第24列price是出售价格，导出命名sellPrice；详细来源/哈希与映射在assets/original/data/equipment-provenance.json。
 - DragonElement.lua静态解析常量/指令，不执行原字节码。审计文本含源SHA256；updateAttributes包含成长、被动及觉醒并继续应用进化/秘宝，getPower读取_data总值并加符文。因此未将基础成长冒充总战斗属性。
 - 后期六槽与旧setEquip四槽重置存在差异；元素校验还有全局_data依赖。实际后期装备调用链、获取与随机结算尚未确认。完整分析与复现见docs/EQUIPMENT.md。
+
+## E05 v0.9进化条件与逐龙来源
+- ui_dragon_evolution.lua只包含字面表及固定字符串拼接；安全读取器新增字符串CONCAT，未执行原Lua。原布局659个可读，余6个仍拒绝。导出脚本及哈希：scripts/export-evolution.py、assets/original/data/evolution-provenance.json。
+- EvolutionLibrary.lua按quality_phase取首行成本；原UI常量15/25、valueCaps20/50；DseEvolution协议含result/bperfect/总属性，实际成功与进化值增量未核实，因此当前只读条件页。
+- 90条获取途径来自原config_cn_qq.json和coition正权重候选源行。其他来源未核实，不等价真实服务端完整获取图。docs/reference/dragon-acquisition.json还逐条列目录图片/身体模型并标皮肤不完整。
+- ui_PowerUp补22图，资源登记1836；尺寸1247。原left/right缺省坐标已接入，精确原界面/锚点仍需同分辨率实机。
+- 网页补充证据与冒险模式/抽奖视频线索见docs/FULL-FIDELITY-CHECKLIST.md；不混用页游、iOS、Android版本。

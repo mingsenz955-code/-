@@ -1,0 +1,7 @@
+{
+  "layoutSource": "assets/scripts/layout/ui_dragon_evolution.lua",
+  "layoutSha256": "d1c9bd9feb6de686a4cb56fe3729ad85a0bbcd633a94850ac3dcee8fc510737c",
+  "method": "static literal CONCAT only; no Lua execution",
+  "costRows": 10,
+  "note": "Columns 4–6 have not been used as a verified offline success algorithm. Server response controls result."
+}

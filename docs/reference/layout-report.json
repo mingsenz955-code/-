@@ -1,5 +1,5 @@
 {
-  "converted": 658,
+  "converted": 659,
   "files": [
     {
       "file": "0001_incubator.lua",
@@ -2772,6 +2772,11 @@
       "outputSha256": "b1753bdeb8a44e7a0a8674817ee761bdc5d0857c2cb2a174899173cd24e330b7"
     },
     {
+      "file": "ui_dragon_evolution.lua",
+      "sourceSha256": "d1c9bd9feb6de686a4cb56fe3729ad85a0bbcd633a94850ac3dcee8fc510737c",
+      "outputSha256": "8c5a982dd83f58f161c9d9d81eaf92230c4538f93f9bda7fb9b182b884288cea"
+    },
+    {
       "file": "ui_dragon_list.lua",
       "sourceSha256": "fee59db8ecbb5e32922d808c6ead6e02b3ff261eab2093ea3a525b765f9e8d90",
       "outputSha256": "ee68fa1e0c471e2fa719b24a358ce7e555528ab40a363c0e6d9e8bf4f35cd095"
@@ -3300,10 +3305,6 @@
     {
       "file": "ui_battle_fresh.lua",
       "reason": "Non-literal text token"
-    },
-    {
-      "file": "ui_dragon_evolution.lua",
-      "reason": "Non-literal opcode 21 at instruction 28"
     },
     {
       "file": "ui_login_2.lua",

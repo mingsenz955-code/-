@@ -11,4 +11,10 @@ class LiteralReaderTests(unittest.TestCase):
    with self.assertRaises(ValueError):reader['evaluate_text_literal'](text)
  def test_bytecode_calls_are_never_executed(self):
   with self.assertRaisesRegex(ValueError,'Non-literal opcode'):reader['evaluate_literal']({'code':[28],'constants':[]})
+ def test_bytecode_literal_strings_can_be_concatenated_without_calls(self):
+  # LOADK r0 k0; LOADK r1 k1; CONCAT r0 r0 r1; RETURN r0.
+  code=[1,1|(1<<6)|(1<<14),21|(1<<14),30|(2<<23)]
+  self.assertEqual(reader['evaluate_literal']({'code':code,'constants':['#ui_','evolution.png']}),'#ui_evolution.png')
+  with self.assertRaisesRegex(ValueError,'Non-string literal'):
+   reader['evaluate_literal']({'code':code,'constants':['#ui_',{}]})
 if __name__=='__main__':unittest.main()

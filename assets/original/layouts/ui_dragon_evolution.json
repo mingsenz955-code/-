@@ -1,0 +1,726 @@
+{
+  "group": [
+    "ui_PowerUp",
+    "ui_evolution"
+  ],
+  "children": [
+    {
+      "type": "btn",
+      "img_normal": "#ui_common_QuanPing_BG.png"
+    },
+    {
+      "name": "basenode",
+      "type": "node"
+    },
+    {
+      "name": "title_panel",
+      "type": "node",
+      "y": 339,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_common_BiaoTi_Bg_d.png",
+          "x": -1.15,
+          "y": 2
+        },
+        {
+          "type": "label",
+          "text": "ev.Dragon Evolution",
+          "size": 28,
+          "align": "center",
+          "color": 4294967295,
+          "width": 480,
+          "height": 48,
+          "x": -241,
+          "y": -7
+        },
+        {
+          "name": "close",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_GuanBi1.png",
+          "img_down": "#ui_common_btn_GuanBi2.png",
+          "right": 43.9
+        },
+        {
+          "name": "tip",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_tishi1.png",
+          "img_down": "#ui_common_btn_tishi2.png",
+          "right": 140
+        },
+        {
+          "name": "back",
+          "type": "btn",
+          "img_normal": "#ui_common_btn_FanHui1.png",
+          "img_down": "#ui_common_btn_FanHui2.png",
+          "left": 40
+        }
+      ]
+    },
+    {
+      "name": "resources_panel",
+      "type": "node",
+      "x": -2,
+      "y": 261,
+      "children": [
+        {
+          "type": "node",
+          "x": -233,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_shuzikuangcp.png",
+              "scale9": true,
+              "x": -95,
+              "width": 190,
+              "height": 45
+            },
+            {
+              "type": "sprite",
+              "img": "#resource_icon_80_g.png",
+              "width": 60,
+              "height": 60,
+              "x": -90
+            },
+            {
+              "name": "res_string_g",
+              "type": "label",
+              "text": "0",
+              "size": 20,
+              "align": "right",
+              "color": 255,
+              "width": 300,
+              "height": 48,
+              "x": -251,
+              "y": -4
+            },
+            {
+              "name": "buy_gold",
+              "type": "btn",
+              "img_normal": "#ui_main_05.png",
+              "img_down": "#ui_main_05-2.png",
+              "x": 80
+            }
+          ]
+        },
+        {
+          "type": "node",
+          "x": 0,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_shuzikuangcp.png",
+              "scale9": true,
+              "x": -95,
+              "width": 190,
+              "height": 45
+            },
+            {
+              "type": "sprite",
+              "img": "#resource_icon_80_f.png",
+              "width": 60,
+              "height": 60,
+              "x": -90
+            },
+            {
+              "name": "res_string_f",
+              "type": "label",
+              "text": "0",
+              "size": 20,
+              "align": "right",
+              "color": 255,
+              "width": 300,
+              "height": 48,
+              "x": -251,
+              "y": -4
+            },
+            {
+              "name": "buy_food",
+              "type": "btn",
+              "img_normal": "#ui_main_05.png",
+              "img_down": "#ui_main_05-2.png",
+              "x": 80
+            }
+          ]
+        },
+        {
+          "type": "node",
+          "x": 233,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_common_shuzikuangcp.png",
+              "scale9": true,
+              "x": -95,
+              "width": 190,
+              "height": 45
+            },
+            {
+              "type": "sprite",
+              "img": "#resource_icon_80_ef.png",
+              "width": 60,
+              "height": 60,
+              "x": -90
+            },
+            {
+              "name": "res_string_sp",
+              "type": "label",
+              "text": "0",
+              "size": 20,
+              "align": "right",
+              "color": 255,
+              "width": 300,
+              "height": 48,
+              "x": -251,
+              "y": -4
+            },
+            {
+              "name": "buy_fruit",
+              "type": "btn",
+              "img_normal": "#ui_main_05.png",
+              "img_down": "#ui_main_05-2.png",
+              "x": 80
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "left_panel",
+      "type": "node",
+      "x": -200,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_starup_llbg.png",
+          "y": 40
+        },
+        {
+          "name": "dragon_slot",
+          "type": "node",
+          "y": -60
+        },
+        {
+          "name": "dragon_name",
+          "type": "label",
+          "text": "ev.Dragon Name",
+          "align": "center",
+          "color": 2336560127,
+          "size": 20,
+          "width": 200,
+          "height": 32,
+          "x": -100,
+          "y": 203
+        },
+        {
+          "type": "node",
+          "y": -170,
+          "children": [
+            {
+              "type": "sprite",
+              "img": "#ui_main_X_JinDu3.png",
+              "scale9": 1,
+              "width": 302,
+              "height": 28,
+              "x": -151
+            },
+            {
+              "name": "progress_root",
+              "type": "node"
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_main_X_JinDu1.png",
+              "scale9": 1,
+              "width": 302,
+              "height": 28,
+              "x": -151
+            },
+            {
+              "name": "progress_text",
+              "type": "label",
+              "text": "-- / --",
+              "size": 18,
+              "align": "center",
+              "color": 4294967295,
+              "outlineColor": 4278190080,
+              "width": 300,
+              "height": 48,
+              "x": -150,
+              "y": -3
+            }
+          ]
+        },
+        {
+          "type": "node",
+          "y": -230,
+          "children": [
+            {
+              "name": "evolution_btn",
+              "type": "btn",
+              "img_normal": "#ui_evolution_button_1.png",
+              "img_down": "#ui_evolution_button_2.png",
+              "img_disable": "#ui_evolution_button_3.png"
+            },
+            {
+              "name": "evolution_note",
+              "type": "label",
+              "text": "ev.level lock 2",
+              "size": 26,
+              "align": "center",
+              "color": 3923822591,
+              "outlineColor": 4287317267,
+              "width": 300,
+              "height": 48,
+              "x": -150,
+              "y": -30
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_evolution_button_2_txt.png",
+              "y": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "right_panel",
+      "type": "node",
+      "x": 175,
+      "y": -20,
+      "children": [
+        {
+          "type": "sprite",
+          "img": "#ui_dragon_ditu.png",
+          "scale9": 1,
+          "width": 400,
+          "height": 500,
+          "x": -200
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_dragon_zl.png",
+          "x": -122,
+          "y": 178
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_dragon_zr.png",
+          "x": 122,
+          "y": 178
+        },
+        {
+          "name": "evo_rank",
+          "type": "label",
+          "text": "ev.Evolution: Lv.#0#",
+          "size": 24,
+          "align": "center",
+          "color": 2336560127,
+          "width": 300,
+          "height": 40,
+          "x": -150,
+          "y": 173
+        },
+        {
+          "type": "node",
+          "y": 130,
+          "children": [
+            {
+              "type": "label",
+              "text": "ev.Power:",
+              "size": 20,
+              "align": "left",
+              "color": 2336560127,
+              "width": 120,
+              "height": 40,
+              "x": -150
+            },
+            {
+              "name": "power_mk",
+              "type": "sprite",
+              "img": "#ui_evolution_to.png",
+              "x": 54
+            },
+            {
+              "name": "power_oi",
+              "type": "label",
+              "text": "-",
+              "size": 20,
+              "align": "center",
+              "color": 2336560127,
+              "width": 200,
+              "height": 40,
+              "x": -96
+            },
+            {
+              "name": "power_to",
+              "type": "label",
+              "text": "-",
+              "size": 20,
+              "align": "center",
+              "color": 3992977663,
+              "outlineColor": 4278190080,
+              "width": 200,
+              "height": 40,
+              "x": 4
+            }
+          ]
+        },
+        {
+          "type": "node",
+          "y": 95,
+          "children": [
+            {
+              "type": "label",
+              "text": "ev.Healt:",
+              "size": 20,
+              "align": "left",
+              "color": 2336560127,
+              "width": 120,
+              "height": 40,
+              "x": -150
+            },
+            {
+              "name": "health_mk",
+              "type": "sprite",
+              "img": "#ui_evolution_to.png",
+              "x": 54
+            },
+            {
+              "name": "health_oi",
+              "type": "label",
+              "text": "-",
+              "size": 20,
+              "align": "center",
+              "color": 2336560127,
+              "width": 200,
+              "height": 40,
+              "x": -96
+            },
+            {
+              "name": "health_to",
+              "type": "label",
+              "text": "-",
+              "size": 20,
+              "align": "center",
+              "color": 3992977663,
+              "outlineColor": 4278190080,
+              "width": 200,
+              "height": 40,
+              "x": 4
+            }
+          ]
+        },
+        {
+          "type": "node",
+          "y": 60,
+          "children": [
+            {
+              "type": "label",
+              "text": "ev.Attack:",
+              "size": 20,
+              "align": "left",
+              "color": 2336560127,
+              "width": 120,
+              "height": 40,
+              "x": -150
+            },
+            {
+              "name": "attack_mk",
+              "type": "sprite",
+              "img": "#ui_evolution_to.png",
+              "x": 54
+            },
+            {
+              "name": "attack_oi",
+              "type": "label",
+              "text": "-",
+              "size": 20,
+              "align": "center",
+              "color": 2336560127,
+              "width": 200,
+              "height": 40,
+              "x": -96
+            },
+            {
+              "name": "attack_to",
+              "type": "label",
+              "text": "-",
+              "size": 20,
+              "align": "center",
+              "color": 3992977663,
+              "outlineColor": 4278190080,
+              "width": 200,
+              "height": 40,
+              "x": 4
+            }
+          ]
+        },
+        {
+          "type": "node",
+          "y": 25,
+          "children": [
+            {
+              "type": "label",
+              "text": "ev.Defense:",
+              "size": 20,
+              "align": "left",
+              "color": 2336560127,
+              "width": 120,
+              "height": 40,
+              "x": -150
+            },
+            {
+              "name": "defense_mk",
+              "type": "sprite",
+              "img": "#ui_evolution_to.png",
+              "x": 54
+            },
+            {
+              "name": "defense_oi",
+              "type": "label",
+              "text": "-",
+              "size": 20,
+              "align": "center",
+              "color": 2336560127,
+              "width": 200,
+              "height": 40,
+              "x": -96
+            },
+            {
+              "name": "defense_to",
+              "type": "label",
+              "text": "-",
+              "size": 20,
+              "align": "center",
+              "color": 3992977663,
+              "outlineColor": 4278190080,
+              "width": 200,
+              "height": 40,
+              "x": 4
+            }
+          ]
+        },
+        {
+          "type": "node",
+          "y": -10,
+          "children": [
+            {
+              "type": "label",
+              "text": "免爆:",
+              "size": 20,
+              "align": "left",
+              "color": 2336560127,
+              "width": 120,
+              "height": 40,
+              "x": -150
+            },
+            {
+              "name": "uncrit_mk",
+              "type": "sprite",
+              "img": "#ui_evolution_to.png",
+              "x": 54
+            },
+            {
+              "name": "uncrit_oi",
+              "type": "label",
+              "text": "-",
+              "size": 20,
+              "align": "center",
+              "color": 2336560127,
+              "width": 200,
+              "height": 40,
+              "x": -96
+            },
+            {
+              "name": "uncrit_to",
+              "type": "label",
+              "text": "-",
+              "size": 20,
+              "align": "center",
+              "color": 3992977663,
+              "outlineColor": 4278190080,
+              "width": 200,
+              "height": 40,
+              "x": 4
+            }
+          ]
+        },
+        {
+          "type": "node",
+          "y": -45,
+          "children": [
+            {
+              "type": "label",
+              "text": "暴击:",
+              "size": 20,
+              "align": "left",
+              "color": 2336560127,
+              "width": 120,
+              "height": 40,
+              "x": -150
+            },
+            {
+              "name": "crit_mk",
+              "type": "sprite",
+              "img": "#ui_evolution_to.png",
+              "x": 54
+            },
+            {
+              "name": "crit_oi",
+              "type": "label",
+              "text": "-",
+              "size": 20,
+              "align": "center",
+              "color": 2336560127,
+              "width": 200,
+              "height": 40,
+              "x": -96
+            },
+            {
+              "name": "crit_to",
+              "type": "label",
+              "text": "-",
+              "size": 20,
+              "align": "center",
+              "color": 3992977663,
+              "outlineColor": 4278190080,
+              "width": 200,
+              "height": 40,
+              "x": 4
+            }
+          ]
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_dragon_zl.png",
+          "x": -112,
+          "y": -73
+        },
+        {
+          "type": "sprite",
+          "img": "#ui_dragon_zr.png",
+          "x": 112,
+          "y": -73
+        },
+        {
+          "type": "label",
+          "text": "ev.Require:",
+          "size": 24,
+          "align": "center",
+          "color": 2336560127,
+          "width": 300,
+          "height": 40,
+          "x": -150,
+          "y": -78
+        },
+        {
+          "name": "req_1",
+          "type": "node",
+          "x": -100,
+          "y": -150,
+          "children": [
+            {
+              "name": "req_btn_1",
+              "type": "btn",
+              "img_normal": "#ui_common_DaoJuKuang1.png",
+              "alpha": 0
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png"
+            },
+            {
+              "name": "res_slot_1",
+              "type": "node"
+            },
+            {
+              "name": "res_slot_1_txt",
+              "type": "label",
+              "text": "0",
+              "size": 18,
+              "align": "right",
+              "color": 4294967295,
+              "outlineColor": 4278190080,
+              "width": 120,
+              "height": 32,
+              "x": -90,
+              "y": -25
+            }
+          ]
+        },
+        {
+          "name": "req_2",
+          "type": "node",
+          "x": 0,
+          "y": -150,
+          "children": [
+            {
+              "name": "req_btn_2",
+              "type": "btn",
+              "img_normal": "#ui_common_DaoJuKuang1.png",
+              "alpha": 0
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png"
+            },
+            {
+              "name": "res_slot_2",
+              "type": "node"
+            },
+            {
+              "name": "res_slot_2_txt",
+              "type": "label",
+              "text": "0",
+              "size": 18,
+              "align": "right",
+              "color": 4294967295,
+              "outlineColor": 4278190080,
+              "width": 120,
+              "height": 32,
+              "x": -90,
+              "y": -25
+            }
+          ]
+        },
+        {
+          "name": "req_3",
+          "type": "node",
+          "x": 100,
+          "y": -150,
+          "children": [
+            {
+              "name": "req_btn_3",
+              "type": "btn",
+              "img_normal": "#ui_common_DaoJuKuang1.png",
+              "alpha": 0
+            },
+            {
+              "type": "sprite",
+              "img": "#ui_common_DaoJuKuang1.png"
+            },
+            {
+              "name": "res_slot_3",
+              "type": "node"
+            },
+            {
+              "name": "res_slot_3_txt",
+              "type": "label",
+              "text": "0",
+              "size": 18,
+              "align": "right",
+              "color": 4294967295,
+              "outlineColor": 4278190080,
+              "width": 120,
+              "height": 32,
+              "x": -90,
+              "y": -25
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

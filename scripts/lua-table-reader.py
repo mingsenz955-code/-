@@ -40,6 +40,15 @@ def evaluate_literal(fn):
    for i in range(a,b+1):regs[i]=None
    top=max(top,b+1)
   elif op==10:regs[a]={};top=max(top,a+1)
+  elif op==21:
+   # Lua CONCAT used by literal layouts to join fixed texture name prefixes.
+   # Accept strings only: never resolve globals, invoke metamethods or coerce
+   # objects/numbers using unknown runtime behavior.
+   parts=[regs.get(i) for i in range(b,c+1)]
+   if not parts or not all(isinstance(v,str) for v in parts):raise ValueError('Non-string literal concatenation')
+   result=''.join(parts)
+   if len(result)>1000000:raise ValueError('Literal string too large')
+   regs[a]=result;top=max(top,a+1)
   elif op==9:
    if not isinstance(regs.get(a),dict):raise ValueError('SETTABLE target not literal')
    regs[a][rk(b)]=rk(c)

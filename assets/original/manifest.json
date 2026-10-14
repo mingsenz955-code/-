@@ -13493,6 +13493,182 @@
       "width": 73,
       "height": 100,
       "sha256": "b38aa76142a9eaafd820469c1f73b6ce6860038bb7a829451f40625ce581d48e"
+    },
+    "ui/bantou.png": {
+      "archive": "assets/res/ui/ui_PowerUp.plist",
+      "frame": "bantou.png",
+      "texture": "assets/res/ui/ui_PowerUp.pkm",
+      "width": 403,
+      "height": 108,
+      "sha256": "5a1b4f46e1cf3f169d7e26eb47abf41fec92c050a0ed30d37cf0082da1bf5ec2"
+    },
+    "ui/ui_analysis_banner_zlpj.png": {
+      "archive": "assets/res/ui/ui_PowerUp.plist",
+      "frame": "ui_analysis_banner_zlpj.png",
+      "texture": "assets/res/ui/ui_PowerUp.pkm",
+      "width": 216,
+      "height": 523,
+      "sha256": "a8506e5302cf7babe7f7d231aa17937a850758428f66e54bd00f893ffb6f2e42"
+    },
+    "ui/ui_dragon_a0001.png": {
+      "archive": "assets/res/ui/ui_PowerUp.plist",
+      "frame": "ui_dragon_a0001.png",
+      "texture": "assets/res/ui/ui_PowerUp.pkm",
+      "width": 122,
+      "height": 122,
+      "sha256": "ae945c0978ed812c322cd7bc400105d6a3e9c5e3231755076d191cf2f48caa04"
+    },
+    "ui/ui_dragon_a0002.png": {
+      "archive": "assets/res/ui/ui_PowerUp.plist",
+      "frame": "ui_dragon_a0002.png",
+      "texture": "assets/res/ui/ui_PowerUp.pkm",
+      "width": 122,
+      "height": 122,
+      "sha256": "b85372953de699933263996ad1cfca22fcbebe4f99eea2c42ddff1b2324028aa"
+    },
+    "ui/ui_dragon_a0003.png": {
+      "archive": "assets/res/ui/ui_PowerUp.plist",
+      "frame": "ui_dragon_a0003.png",
+      "texture": "assets/res/ui/ui_PowerUp.pkm",
+      "width": 122,
+      "height": 122,
+      "sha256": "b656e0b29364948e9fc48940227cc69e05b8d181b9dac94dc336d7aa3471f760"
+    },
+    "ui/ui_dragon_a0004.png": {
+      "archive": "assets/res/ui/ui_PowerUp.plist",
+      "frame": "ui_dragon_a0004.png",
+      "texture": "assets/res/ui/ui_PowerUp.pkm",
+      "width": 122,
+      "height": 122,
+      "sha256": "42289497a4a59e35199bd1f6a326b87eeecbc7498e2c469074b8138d0085f0ab"
+    },
+    "ui/ui_dragon_a0005.png": {
+      "archive": "assets/res/ui/ui_PowerUp.plist",
+      "frame": "ui_dragon_a0005.png",
+      "texture": "assets/res/ui/ui_PowerUp.pkm",
+      "width": 122,
+      "height": 122,
+      "sha256": "76c645ee750446c1274767a719c4a10fe4ee8ae80fec2881f7467e69ea82cd2d"
+    },
+    "ui/ui_dragon_a0006.png": {
+      "archive": "assets/res/ui/ui_PowerUp.plist",
+      "frame": "ui_dragon_a0006.png",
+      "texture": "assets/res/ui/ui_PowerUp.pkm",
+      "width": 122,
+      "height": 122,
+      "sha256": "3686532ef207964827b0aa3dae8a4da1f90a4311d72b7cc32f481bacc70c3e21"
+    },
+    "ui/ui_starup_2.png": {
+      "archive": "assets/res/ui/ui_PowerUp.plist",
+      "frame": "ui_starup_2.png",
+      "texture": "assets/res/ui/ui_PowerUp.pkm",
+      "width": 390,
+      "height": 57,
+      "sha256": "21307411c372c73638d2b615f954815d60e04c7b50e2a0efc95f1f1df3bc31ed"
+    },
+    "ui/ui_starup_3.png": {
+      "archive": "assets/res/ui/ui_PowerUp.plist",
+      "frame": "ui_starup_3.png",
+      "texture": "assets/res/ui/ui_PowerUp.pkm",
+      "width": 390,
+      "height": 57,
+      "sha256": "0318b71d6205a28db117ae90b152a5e1c1ebc924041a8f115b360608bd8abad7"
+    },
+    "ui/ui_starup_exclamation.png": {
+      "archive": "assets/res/ui/ui_PowerUp.plist",
+      "frame": "ui_starup_exclamation.png",
+      "texture": "assets/res/ui/ui_PowerUp.pkm",
+      "width": 24,
+      "height": 38,
+      "sha256": "292c3a6967720b1c30fd0d7a53db7079e072612f302df0c9fef67e46e56e453e"
+    },
+    "ui/ui_starup_jiantou.png": {
+      "archive": "assets/res/ui/ui_PowerUp.plist",
+      "frame": "ui_starup_jiantou.png",
+      "texture": "assets/res/ui/ui_PowerUp.pkm",
+      "width": 45,
+      "height": 30,
+      "sha256": "12221193b9aa95fcc58d7f344f40cdb04b7beff9593af2b0f7ba5500d92271a3"
+    },
+    "ui/ui_starup_llbg.png": {
+      "archive": "assets/res/ui/ui_PowerUp.plist",
+      "frame": "ui_starup_llbg.png",
+      "texture": "assets/res/ui/ui_PowerUp.pkm",
+      "width": 309,
+      "height": 388,
+      "sha256": "55d71af363feceb9d88f76332ecc7f404fc00ce061e0ac8de126405b32b87252"
+    },
+    "ui/ui_starup_qhl1.png": {
+      "archive": "assets/res/ui/ui_PowerUp.plist",
+      "frame": "ui_starup_qhl1.png",
+      "texture": "assets/res/ui/ui_PowerUp.pkm",
+      "width": 410,
+      "height": 380,
+      "sha256": "36943b47ceb543f2e641f5b12a6b177a3cdcdb51a01b77fcbc6b4d8c960f3aef"
+    },
+    "ui/ui_starup_qhl2.png": {
+      "archive": "assets/res/ui/ui_PowerUp.plist",
+      "frame": "ui_starup_qhl2.png",
+      "texture": "assets/res/ui/ui_PowerUp.pkm",
+      "width": 410,
+      "height": 380,
+      "sha256": "c74b4bd91e2a2bd47d11313d74e089ae4280500ca10c5165bae8b55a69e59c90"
+    },
+    "ui/ui_starup_sxl.png": {
+      "archive": "assets/res/ui/ui_PowerUp.plist",
+      "frame": "ui_starup_sxl.png",
+      "texture": "assets/res/ui/ui_PowerUp.pkm",
+      "width": 410,
+      "height": 380,
+      "sha256": "1f180e22d3997736a37d795868442b531b668729ea77457b8965855a88acbea2"
+    },
+    "ui/ui_starup_zb1.png": {
+      "archive": "assets/res/ui/ui_PowerUp.plist",
+      "frame": "ui_starup_zb1.png",
+      "texture": "assets/res/ui/ui_PowerUp.pkm",
+      "width": 105,
+      "height": 105,
+      "sha256": "3209281d54b2f6342559cc799f1538c58f2b8c530e18f95a2b60ee96808a6eb8"
+    },
+    "ui/ui_starup_zb2.png": {
+      "archive": "assets/res/ui/ui_PowerUp.plist",
+      "frame": "ui_starup_zb2.png",
+      "texture": "assets/res/ui/ui_PowerUp.pkm",
+      "width": 105,
+      "height": 105,
+      "sha256": "87343fcb35b13326e537fb7a6532a1a95a2b91a138e59e80ed8ea0a7f8a41331"
+    },
+    "ui/ui_starup_zb3.png": {
+      "archive": "assets/res/ui/ui_PowerUp.plist",
+      "frame": "ui_starup_zb3.png",
+      "texture": "assets/res/ui/ui_PowerUp.pkm",
+      "width": 105,
+      "height": 105,
+      "sha256": "b1fb46f2de4dbe452c8ee10e46d8471852323376f327fc8a4ac403b2868c553a"
+    },
+    "ui/ui_starup_zb4.png": {
+      "archive": "assets/res/ui/ui_PowerUp.plist",
+      "frame": "ui_starup_zb4.png",
+      "texture": "assets/res/ui/ui_PowerUp.pkm",
+      "width": 105,
+      "height": 105,
+      "sha256": "ff271f4b3ea70bf88b64f68dc152570b5872341e085280c7ab37bee09936ae1e"
+    },
+    "ui/ui_starup_zb6.png": {
+      "archive": "assets/res/ui/ui_PowerUp.plist",
+      "frame": "ui_starup_zb6.png",
+      "texture": "assets/res/ui/ui_PowerUp.pkm",
+      "width": 105,
+      "height": 105,
+      "sha256": "57a90c8ca2d8b9bf6caf42338fed140e2be00176de75ef4bc33b9fa4c41b3c76"
+    },
+    "ui/ui_starup_zb5.png": {
+      "archive": "assets/res/ui/ui_PowerUp.plist",
+      "frame": "ui_starup_zb5.png",
+      "texture": "assets/res/ui/ui_PowerUp.pkm",
+      "width": 105,
+      "height": 105,
+      "sha256": "6e3a9cc390dfc8a795306ef8ad457ba43897e58e3db77c89ef315d6912e6223d"
     }
   }
 }

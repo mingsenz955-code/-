@@ -1,0 +1,10 @@
+import fs from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import MODELS from '../assets/original/models/index.mjs';
+import CATALOG from '../assets/original/catalog.mjs';
+import {dragonAcquisition} from '../src/acquisition.mjs';
+const root=new URL('../',import.meta.url);
+const table=await fs.readFile(new URL('assets/original/data/tables.json',root));
+const report={baseline:'Android 2.9.35 / resources 202402271124',tablesSha256:createHash('sha256').update(table).digest('hex'),notes:['Shop fields come from config_cn_qq.json. Other-version and server store availability are unverified.','Breeding means a positive-weight candidate in an enabled coition source row, not guaranteed acquisition.','Lottery, historical events, adventure drops and other rewards remain unverified per dragon.'],dragons:CATALOG.map(dragon=>({...dragonAcquisition(dragon.id),catalogImages:dragon.images.map((image,stage)=>({stage,image})),bodyModels:[1,2,3].map(stage=>({stage,source:MODELS[dragon.base+'_'+stage]??null})),skinAudit:'incomplete'}))};
+await fs.writeFile(new URL('docs/reference/dragon-acquisition.json',root),JSON.stringify(report,null,2)+'\n');
+console.log('Acquisition evidence exported for '+report.dragons.length+' dragons.');
