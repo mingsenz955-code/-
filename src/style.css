@@ -42,7 +42,7 @@ canvas.dragon{display:inline-block;object-fit:contain}.dragon-preview-dialog{wid
 .hud-activity-caption{font-size:20px;-webkit-text-stroke:2px #674b2e}
 
 /* Native game screens share the client's source layout and image controls. */
-.native-ranch-dialog::backdrop{background:#07191bcc;backdrop-filter:none}.native-fullscreen::backdrop{background:#09242e}.native-fullscreen .source-artboard{background:url('../assets/original/ui/ui_bgnew_bg.png') center/100% 100% no-repeat}
+.native-ranch-dialog::backdrop{background:#07191bcc;backdrop-filter:none}.native-fullscreen::backdrop{background:#09242e!important}.native-fullscreen .source-artboard{background:url('../assets/original/ui/ui_bgnew_bg.png') center/100% 100% no-repeat}
 .native-item-art{position:absolute;width:190px;height:180px;object-fit:contain;transform:translate(-50%,-50%)}.native-cost-icon{position:absolute;width:32px;height:32px;object-fit:contain;transform:translate(-50%,-50%)}
 .native-category-label{position:absolute;transform:translate(-50%,-50%);font-size:30px;font-weight:bold;white-space:nowrap;color:#fff0c8;text-shadow:0 2px 2px #54301b}
 .native-shop-list{position:absolute;width:1024px;height:515px;transform:translate(-50%,-50%);display:flex;gap:18px;padding:14px 20px;overflow-x:auto;overflow-y:hidden;pointer-events:auto;scrollbar-color:#9c6b3b #efd4a0}.native-shop-card{position:relative;flex:0 0 326px;height:468px}.native-shop-card .source-label[data-source=shuoming]{white-space:normal;line-height:1.3}
@@ -113,6 +113,10 @@ canvas.dragon{display:inline-block;object-fit:contain}.dragon-preview-dialog{wid
 /* .native-shop-card keeps its own 326x468 frame; at full size one section plus its heading is
    taller than the scroll area and clipped 购买, so the resource rows scale it down instead. */
 .native-resource-row .native-shop-card{zoom:.84}
+/* 原版的全屏面板整块盖住主界面。以前遮罩是半透明的，主 HUD 会透出来，而面板内容又刚好
+   压住其中的元素——食物格就只剩下一条底板和一个点不动的加号。 */
+body:has(#modal[open].native-fullscreen) .original-hud{visibility:hidden!important}
+body:has(#modal[open].native-fullscreen){background:#09242e}
 
 /* 原版战斗界面 ui_battlenormal */
 .source-battle-portrait{position:absolute;width:58px;height:58px;transform:translate(-50%,-50%);pointer-events:none}
