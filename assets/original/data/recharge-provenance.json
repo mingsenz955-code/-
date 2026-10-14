@@ -1,11 +1,26 @@
 {
   "baseline": "2.9.35-202402271124",
   "tablesSha256": "1408d684c2a6530668a8ed4816ad1697d579077fed5d02b887d06f035395e750",
-  "tierCount": 6,
-  "columns": "LibDanbichongzhiInfo defines all seventeen columns; nothing here is inferred.",
-  "priceRelation": "costYuan is the yuan price and androidCost/iosCost are exactly ten times it on every row.",
-  "notes": [
-    "These are the client's single-purchase recharge tiers. The real payment path is not implemented and must not be.",
-    "Award names come from the client items table plus textnew_cn; one award (1074suipian) has no translation entry and keeps its internal key."
+  "productCount": 6,
+  "columnSource": {
+    "treasure_items": "LibTreasureInfo.lua names every column; none is inferred. (`irestype` is not a column: the library assigns the literal \"魔晶\".)",
+    "danchong": "LibDanbichongzhiInfo.lua names all seventeen columns; none is inferred.",
+    "vip": "VipInfo.lua: arr[1] id, arr[2] needExp (累计充值魔晶)."
+  },
+  "panelEvidence": [
+    "ui/vip/VipStoreRender.lua: num = data.amount..\" 魔晶\", price = \"¥\"..(data.price/10), give = \"再送\"..amount..\"魔晶\" on a first purchase and \"再送\"..rebate..\"魔晶\" afterwards.",
+    "TreasureLibrary:getTreasureByPlatform keeps shoptype == 2 and platform == 1 (android) / 2 (ios); the six android rows are 95, 96, 97, 98, 99, 100.",
+    "layout/panel_recharge.lua shows \"再充值 [魔晶] 魔晶，即可成为 VIPn\", i.e. the bar counts recharged 魔晶.",
+    "layout/item_recharge_data.lua carries num (魔晶 amount), give (再送), price (元) and the 首充 badge, matching VipStoreRender field for field."
+  ],
+  "crossCheck": [
+    "payment/StoreController.productForAn: ipricefen 500/3000/5000/10000/20000/50000 (= 5..500 元), icount 50/300/500/1000/2000/5000, iback 0/15/40/120/360/1250 - identical to this table.",
+    "payment/StoreController.productForIOS: icount 60/300/980/1980/3280/6480 for 6..648 元, the ios rows of the same table.",
+    "vip needExp 50/300/1000/3000/5000/10000/... 魔晶 lines up with the 5/30/100/... 元 tiers at ten 魔晶 per 元."
+  ],
+  "unverified": [
+    "Whether the server counts a 首充 double or a 再送 rebate towards 累计充值魔晶 is not proven; this build counts every 魔晶 delivered to the account.",
+    "The real payment path is deliberately not implemented; no money can move in this build.",
+    "每日秒杀/月卡 products (iid 103/104/105/106) exist in the client but are not part of the recharge panel list."
   ]
 }

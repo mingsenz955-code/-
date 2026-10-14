@@ -4,14 +4,15 @@ import {habitatDefinition,habitatInfo,acceptsDragon,habitatLimit} from './habita
 import {EQUIPMENT_INSTANCE_ID,equipmentDefinition,definitionPart,equipmentInstance,equipmentOfDragon,equipmentInPart,equipmentLabel} from './equipment.mjs';
 import {RAFFLE_POLICY,RAFFLE_CAPACITY,RAFFLE_GUARANTEE_DRAWS,raffleMachine,raffleCost,sampleRaffle,advanceRaffleCounter} from './raffle.mjs';
 import {EXPANSION_POLICY,EXPANSION_PAID_STEPS,nextExpansion} from './expansion.mjs';
-import {rechargeTier,isTicketAward} from './recharge.mjs';
+import {rechargeProduct,rechargeDelivery,rechargeProductIds} from './recharge.mjs';
+import {resourceShopRow,EVOLUTION_FRUIT_ITEM_ID} from './resource-shop.mjs';
 const fail = message => {throw new Error(message)};
 const number = (v,min=0,max=Number.MAX_SAFE_INTEGER) => Number.isSafeInteger(v)&&v>=min&&v<=max;
 export function createGame(now=Date.now()) {
- return {version:9,lottery:{normalTokens:0,advancedTokens:0,draws:0,pending:[]},raffle:{tickets:{},counters:{junior:0,mid:0,senior:0},pending:[]},expansion:{plots:0},items:{},recharge:{count:0,lastTier:0},equipment:[],nextEquipId:1,coins:1200,food:400,gems:0,playerXp:0,nextId:4,updatedAt:now,habitats:[{id:1,name:'晨曦栖息地',lastCollected:now}],dragons:[{id:2,species:'ember',level:1,habitatId:1},{id:3,species:'leaf',level:1,habitatId:1}],farm:null,nest:null,breeding:null,incubator:null,stats:{harvests:0,hatches:0,feeds:0},log:['欢迎来到云上牧场。种下第一份龙粮吧。']};
+ return {version:10,lottery:{normalTokens:0,advancedTokens:0,draws:0,pending:[]},raffle:{tickets:{},counters:{junior:0,mid:0,senior:0},pending:[]},expansion:{plots:0},items:{},recharge:{count:0,lastTier:0,totalGems:0,doubled:[]},equipment:[],nextEquipId:1,coins:1200,food:400,gems:0,playerXp:0,nextId:4,updatedAt:now,habitats:[{id:1,name:'晨曦栖息地',lastCollected:now}],dragons:[{id:2,species:'ember',level:1,habitatId:1},{id:3,species:'leaf',level:1,habitatId:1}],farm:null,nest:null,breeding:null,incubator:null,stats:{harvests:0,hatches:0,feeds:0},log:['欢迎来到云上牧场。种下第一份龙粮吧。']};
 }
 export function validate(s) {
- if(!s||![1,2,3,4,5,6,7,8,9].includes(s.version)) fail('存档版本不受支持，请保留原文件。');
+ if(!s||![1,2,3,4,5,6,7,8,9,10].includes(s.version)) fail('存档版本不受支持，请保留原文件。');
  s=structuredClone(s);if(s.gems===undefined)s.gems=0;if(s.playerXp===undefined)s.playerXp=0;
  if(s.version<4){if(s.nest){if(s.breeding||s.incubator)fail('旧存档繁殖任务冲突。');if(s.nest.phase==='hatching')s.incubator=s.nest;else s.breeding=s.nest;}s.nest=null;}
  if(s.nest!==null)fail('旧繁殖任务未迁移。');
@@ -24,6 +25,8 @@ export function validate(s) {
  s.expansion??={plots:0};
  if(s.version<9){s.items??={};s.recharge??={count:0,lastTier:0};}
  s.items??={};s.recharge??={count:0,lastTier:0};
+ if(s.version<10){s.recharge.totalGems??=0;s.recharge.doubled??=[];}
+ s.recharge.totalGems??=0;s.recharge.doubled??=[];
  if(!number(s.coins)||!number(s.food)||!number(s.nextId,1)||!number(s.updatedAt)) fail('存档资源或时间无效。');
  if(s.gems!==undefined&&!number(s.gems)||s.playerXp!==undefined&&!number(s.playerXp))fail('牧场经验或魔晶无效。');
  if(!Array.isArray(s.dragons)||s.dragons.length<2||s.dragons.length>1000||!Array.isArray(s.habitats)||s.habitats.length<1||s.habitats.length>1000) fail('存档牧场无效。');
@@ -46,6 +49,9 @@ export function validate(s) {
  if(!s.items||typeof s.items!=='object'||Array.isArray(s.items))fail('道具库存无效。');
  for(const [key,value] of Object.entries(s.items))if(!/^[0-9]+$/.test(key)||!number(value,0,1e9))fail('道具库存记录无效。');
  if(!s.recharge||!number(s.recharge.count,0,1e9)||!number(s.recharge.lastTier,0,1e9))fail('充值记录无效。');
+ if(!number(s.recharge.totalGems,0,1e15))fail('累计充值魔晶无效。');
+ if(!Array.isArray(s.recharge.doubled)||s.recharge.doubled.length>rechargeProductIds().length||new Set(s.recharge.doubled).size!==s.recharge.doubled.length)fail('首充双倍记录无效。');
+ for(const id of s.recharge.doubled)if(!rechargeProduct(id))fail('首充双倍记录包含未知档位。');
  if(!Array.isArray(s.equipment)||s.equipment.length>2000||!number(s.nextEquipId,1,1e6))fail('装备库存无效。');
  const equipped=new Set(),equipmentIds=new Set();
  for(const item of s.equipment){
@@ -67,7 +73,7 @@ export function validate(s) {
  for(const [job,phases] of [[s.breeding,['breeding','egg']],[s.incubator,['hatching']]]){if(job===null)continue;const n=job;if(n?.startedAt!==undefined&&(!number(n.startedAt)||n.startedAt>n.readyAt))fail('繁殖起始时间无效。');if(n?.hatchMs!==undefined&&!number(n.hatchMs,0,365*86400000))fail('孵化时间无效。');if(!n||!phases.includes(n.phase)||!Object.hasOwn(SPECIES,n.species)||!number(n.readyAt))fail('繁殖或孵化数据无效。');if(n.source==='raffle'){if(!Array.isArray(n.parents)||n.parents.length)fail('扭蛋龙蛋不应带亲代。')}else if(!Array.isArray(n.parents)||n.parents.length!==2||n.parents[0]===n.parents[1]||!n.parents.every(id=>s.dragons.some(d=>d.id===id)))fail('繁殖或孵化数据无效。');}
  if(!s.stats||!['harvests','hatches','feeds'].every(k=>number(s.stats[k]))) fail('统计数据无效。');
  if(!Array.isArray(s.log)||s.log.length>12||!s.log.every(x=>typeof x==='string'&&x.length<=200))fail('日志数据无效。');
- return {...structuredClone(s),version:9};
+ return {...structuredClone(s),version:10};
 }
 export function dragonRate(d){const species=SPECIES[d.species];if(!species.originalId)return species.income*d.level*60;return d.level<=10?species.coinStart+species.coinAdded*(d.level-1):species.coinStart+species.coinAdded*9+Math.floor(species.coinAdded*(d.level-10)/2)}
 function rawIncome(s,h,now){const cap=habitatInfo(h).maxGold*60000;let units=Math.round((h.storedCoins??0)*60000);const start=Math.min(now,h.lastCollected);for(const d of s.dragons.filter(d=>d.habitatId===h.id)){let elapsed=Math.max(0,now-start);const n=s.breeding;if(n?.phase==='breeding'&&n.parents.includes(d.id)){const breedStart=n.startedAt??n.readyAt-(SPECIES[n.species].breedingMs??RULES.breedMs);elapsed-=Math.max(0,Math.min(now,n.readyAt)-Math.max(start,breedStart));}units=Math.min(cap,units+Math.min(cap,Math.max(0,elapsed)*dragonRate(d)));}return Math.min(cap,units)/60000}
@@ -112,7 +118,8 @@ export function action(state,type,payload={},now=Date.now(),random=Math.random) 
  case 'raffleDraw': {const mode=payload.mode,count=payload.count,machine=raffleMachine(mode)||fail('请选择扭蛋机档位。');if(!Number.isSafeInteger(count)||![1,10].includes(count))fail('请选择单抽或十连。');if(s.raffle.pending.length+count>RAFFLE_CAPACITY)fail('仓库待领取栏已满，请先处理已有龙蛋。');const cost=raffleCost(s.raffle,mode,count);spend('gems',cost.gems);if(cost.tickets)s.raffle.tickets[cost.ticketKey]=(s.raffle.tickets[cost.ticketKey]??0)-cost.tickets;for(let i=0;i<count;i++){const counter=s.raffle.counters[mode]??0,guarantee=machine.guarantee!==null&&counter+1>=RAFFLE_GUARANTEE_DRAWS,result=sampleRaffle(mode,random,{guarantee});s.raffle.pending.push({id:s.nextId++,...result});s.raffle.counters[mode]=advanceRaffleCounter(counter,result,{free:cost.free})}message=`${machine.name}扭蛋机抽取 ${count} 次，龙蛋已放入仓库。`;break;}
  case 'raffleEggHatch': {if(s.incubator)fail('育龙塔正在孵化，请先安置当前幼龙。');const prize=s.raffle.pending.find(entry=>entry.id===payload.id)||fail('找不到这枚龙蛋。');const species=speciesKey(prize.dragonId),info=SPECIES[species];if(!info?.originalId||!info.hatchingMs)fail('该龙的原版孵化时长尚未取得。');s.incubator={phase:'hatching',species,parents:[],startedAt:now,readyAt:now+info.hatchingMs,hatchMs:info.hatchingMs,source:'raffle'};s.raffle.pending=s.raffle.pending.filter(entry=>entry.id!==prize.id);message=`${info.name}龙蛋已送入育龙塔。`;break;}
  case 'expandIsland': {const step=nextExpansion(s.expansion.plots)||fail('原版扩建阶梯已到尽头，没有更多地块。');if(playerProgress(s).level<step.minLevel)fail(`扩建需要牧场等级 ${step.minLevel}。`);spend('coins',step.coins);if(step.gems>0)spend('gems',step.gems);s.expansion.plots++;message=`岛屿扩建完成，已有 ${s.expansion.plots} 块扩建地。`;break;}
- case 'recharge': {const tier=rechargeTier(payload.tierId)||fail('找不到这个充值档位。');for(const award of tier.awards){if(award.type===1)s.coins+=award.num;else if(award.type===2)s.food+=award.num;else if(award.type===3)s.gems+=award.num;else if(isTicketAward(award))s.raffle.tickets[String(award.id)]=(s.raffle.tickets[String(award.id)]??0)+award.num;else s.items[award.id]=(s.items[award.id]??0)+award.num}s.recharge.count++;s.recharge.lastTier=tier.id;message=`充值测试：${tier.costYuan} 元档已到账（未实际扣款）。`;break;}
+ case 'recharge': {const product=rechargeProduct(payload.tierId)||fail('找不到这个充值档位。');const firstPurchase=!s.recharge.doubled.includes(product.id),delivery=rechargeDelivery(product,{firstPurchase});s.gems+=delivery.gems;if(firstPurchase)s.recharge.doubled.push(product.id);s.recharge.count++;s.recharge.lastTier=product.id;s.recharge.totalGems+=delivery.gems;message=`充值测试：${product.priceYuan} 元档到账 ${delivery.gems} 魔晶（含${firstPurchase?'首充双倍':'再送'} ${delivery.gift}，未实际扣款）。`;break;}
+ case 'buyResource': {const row=resourceShopRow(payload.id)||fail('这个商品尚未开放。');spend('gems',row.priceGems);if(row.type==='g')s.coins+=row.amount;else if(row.type==='f')s.food+=row.amount;else if(row.type==='ef')s.items[EVOLUTION_FRUIT_ITEM_ID]=(s.items[EVOLUTION_FRUIT_ITEM_ID]??0)+row.amount;else fail('该商品的发放类型尚未支持。');message=`花 ${row.priceGems} 魔晶买到${row.name}。`;break;}
  default: fail('未知操作。');
  }
  s.updatedAt=now;s.log.unshift(message);s.log=s.log.slice(0,12);return validate(s);

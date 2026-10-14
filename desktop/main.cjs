@@ -38,6 +38,7 @@ if(locked)app.whenReady().then(async()=>{
  if(equipSmoke)await require('./smoke-equip.cjs').prepare(store);
  if(raffleSmoke)await require('./smoke-raffle.cjs').prepare(store);
  if(expansionSmoke)await require('./smoke-expansion.cjs').prepare(store);
+ if(rechargeSmoke)await require('./smoke-recharge.cjs').prepare(store);
  if(farmSmoke)await require('./smoke.cjs').prepareFarmProfile(store);
  ipcMain.handle('save:load',()=>store.load());
  ipcMain.handle('save:write',(_e,s)=>store.save(s));

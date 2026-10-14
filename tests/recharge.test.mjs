@@ -3,56 +3,103 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {createGame,validate,action} from '../src/game.mjs';
-import {RECHARGE_TIERS,RECHARGE_TEST_MODE,RECHARGE_NOTICE,rechargeTier,rechargeTierIds,isTicketAward} from '../src/recharge.mjs';
-import {ORIGINAL_RECHARGE_TIERS} from '../assets/original/data/recharge.mjs';
+import {RECHARGE_PRODUCTS,RECHARGE_POLICY,RECHARGE_TEST_MODE,RECHARGE_NOTICE,rechargeProduct,rechargeProductIds,rechargeDelivery,vipProgress,SINGLE_RECHARGE_TIERS} from '../src/recharge.mjs';
+import {ORIGINAL_RECHARGE_PRODUCTS,ORIGINAL_SINGLE_RECHARGE_TIERS,ORIGINAL_VIP_LEVELS} from '../assets/original/data/recharge.mjs';
 const T=1800000000000;
+const TREASURE_COLUMNS=['id','name','amount','costtype','price','rebate','rebateMultiple','type','display_order','badge','abtest_a','abtest_b','abtest_c','abtest_d','xid','enable','des','shoptype','platform','img','iszhekou','zhekouIcon'];
 
-test('the recharge export keeps all six client tiers and their prices',async()=>{
+test('the recharge export keeps the six client 魔晶 products with their own prices and rebates',async()=>{
  const bytes=await fs.readFile(new URL('../assets/original/data/tables.json',import.meta.url));
  const tables=JSON.parse(bytes),report=JSON.parse(await fs.readFile(new URL('../assets/original/data/recharge-provenance.json',import.meta.url),'utf8'));
  assert.equal(createHash('sha256').update(bytes).digest('hex'),report.tablesSha256);
- assert.equal(ORIGINAL_RECHARGE_TIERS.length,tables.danchong.length);
- assert.deepEqual(rechargeTierIds(),[1,2,3,4,5,6]);
- assert.deepEqual(RECHARGE_TIERS.map(tier=>tier.costYuan),[5,30,50,100,200,500]);
- assert.equal(rechargeTier(1).costIOS,6,'the first tier costs six on iOS');
- assert.equal(rechargeTier(99),null);
+ assert.equal(report.productCount,6);
+ assert.equal(ORIGINAL_RECHARGE_PRODUCTS.length,6);
+ assert.deepEqual(RECHARGE_PRODUCTS.map(product=>product.gems),[50,300,500,1000,2000,5000]);
+ assert.deepEqual(RECHARGE_PRODUCTS.map(product=>product.priceYuan),[5,30,50,100,200,500]);
+ assert.deepEqual(RECHARGE_PRODUCTS.map(product=>product.rebate),[0,15,40,120,360,1250]);
+ // Every product must be the client's own row: shoptype 2, android platform 1, paid in 元.
+ const rows=new Map(tables.treasure_items.map(row=>[row[0],Object.fromEntries(TREASURE_COLUMNS.map((key,index)=>[key,row[index]]))]));
+ for(const product of RECHARGE_PRODUCTS){
+  const row=rows.get(product.id);
+  assert(row,'product '+product.id+' must exist in the client table');
+  assert.equal(row.amount,product.gems);
+  assert.equal(row.price,product.priceJiao);
+  assert.equal(row.rebate,product.rebate);
+  assert.equal(row.costtype,'r','recharge products are paid in 元');
+  assert.equal(row.shoptype,2);
+  assert.equal(row.platform,1,'the panel shows the android list');
+  assert.equal(row.name,product.name);
+ }
+ assert.equal(rechargeProduct(999),null,'an unknown tier has no product');
+ assert.equal(rechargeProduct(11),null,'the ios duplicate row is not part of the android list');
+ assert.deepEqual(rechargeProductIds(),[95,96,97,98,99,100]);
+ assert.equal(RECHARGE_POLICY,'original-recharge-products-v1');
  assert.equal(RECHARGE_TEST_MODE,true);
  assert.match(RECHARGE_NOTICE,/不进行任何真实扣款/);
 });
 
-test('every tier carries real award names resolved from the client tables',()=>{
- assert.deepEqual(rechargeTier(1).awards.map(award=>award.name),['1074suipian','神圣果实','培养丹']);
- assert.equal(rechargeTier(1).awards[2].num,100);
- assert.equal(rechargeTier(6).awards.at(-1).name,'高级召唤卡');
- assert(RECHARGE_TIERS.every(tier=>tier.awards.length>0));
- assert(isTicketAward({id:6049}));
- assert(!isTicketAward({id:7015}));
+test('the 单笔充值 activity tiers stay separate from the recharge panel',()=>{
+ // pcf/danchong hands out its own gift on top of the 魔晶 the account received; conflating the two
+ // is what made the earlier build hand out fruit instead of 魔晶.
+ assert.equal(ORIGINAL_SINGLE_RECHARGE_TIERS.length,6);
+ assert.deepEqual(SINGLE_RECHARGE_TIERS.map(tier=>tier.costYuan),[5,30,50,100,200,500]);
+ assert.deepEqual(SINGLE_RECHARGE_TIERS.map(tier=>tier.gems),[50,300,500,1000,2000,5000]);
+ assert.deepEqual(SINGLE_RECHARGE_TIERS[0].awards.map(award=>award.name),['1074suipian','神圣果实','培养丹']);
+ assert.equal(SINGLE_RECHARGE_TIERS[0].awards[2].num,100);
+ assert(RECHARGE_PRODUCTS.every(product=>product.awards===undefined),'recharge products carry no awards of their own');
 });
 
-test('a test recharge grants the awards for free and tickets reach the raffle save',()=>{
+test('a first purchase doubles the tier and later purchases add the client rebate',()=>{
+ const first=rechargeDelivery(rechargeProduct(95),{firstPurchase:true});
+ assert.deepEqual(first,{gems:100,gift:50,firstPurchase:true});
+ const later=rechargeDelivery(rechargeProduct(95),{firstPurchase:false});
+ assert.deepEqual(later,{gems:50,gift:0,firstPurchase:false});
+ assert.deepEqual(rechargeDelivery(rechargeProduct(96),{firstPurchase:false}),{gems:315,gift:15,firstPurchase:false});
+});
+
+test('a test recharge credits 魔晶, tracks the total and never touches gold or food',()=>{
  let s=createGame(T);
- const coinsBefore=s.coins,gemsBefore=s.gems,foodBefore=s.food;
- s=action(s,'recharge',{tierId:6},T);
- assert.equal(s.coins,coinsBefore,'a test recharge must not move gold');
- assert.equal(s.gems,gemsBefore,'a test recharge must not move gems');
- assert.equal(s.food,foodBefore);
- assert.equal(s.raffle.tickets['6049'],1,'the 高级召唤卡 is the senior raffle ticket');
- assert.equal(s.items[7015],10);
- assert.equal(s.items[50002],2);
+ const coinsBefore=s.coins,foodBefore=s.food;
+ s=action(s,'recharge',{tierId:95},T);
+ assert.equal(s.gems,100,'the first purchase of a tier arrives doubled');
  assert.equal(s.recharge.count,1);
- assert.equal(s.recharge.lastTier,6);
- s=action(s,'recharge',{tierId:6},T);
- assert.equal(s.raffle.tickets['6049'],2,'repeating a tier stacks its awards');
- assert.equal(s.items[7015],20);
- assert.equal(s.recharge.count,2);
- assert.throws(()=>action(s,'recharge',{tierId:99},T),/找不到这个充值档位/);
+ assert.equal(s.recharge.lastTier,95);
+ assert.equal(s.recharge.totalGems,100);
+ assert.deepEqual(s.recharge.doubled,[95]);
+ s=action(s,'recharge',{tierId:95},T);
+ assert.equal(s.gems,150,'a repeated purchase only adds the tier rebate');
+ assert.equal(s.recharge.totalGems,150);
+ s=action(s,'recharge',{tierId:100},T);
+ assert.equal(s.gems,10150,'the 500 元 tier delivers 5000 魔晶 plus its first-purchase double on top of the 150 already credited');
+ assert.equal(s.recharge.totalGems,10150);
+ assert.equal(s.coins,coinsBefore);
+ assert.equal(s.food,foodBefore);
+ assert.throws(()=>action(s,'recharge',{tierId:11},T),/找不到这个充值档位/);
 });
 
-test('save validation rejects malformed item bags and recharge records',()=>{
- const badBag=createGame(T);badBag.items={abc:1};
- assert.throws(()=>validate(badBag),/道具库存/);
- const badCount=createGame(T);badCount.items={7015:-1};
- assert.throws(()=>validate(badCount),/道具库存记录无效/);
- const badRecharge=createGame(T);badRecharge.recharge={count:-1,lastTier:0};
- assert.throws(()=>validate(badRecharge),/充值记录无效/);
+test('the vip bar counts 累计充值魔晶 from the client needExp column',()=>{
+ assert.deepEqual(ORIGINAL_VIP_LEVELS.slice(0,4),[{level:0,needExp:0},{level:1,needExp:50},{level:2,needExp:300},{level:3,needExp:1000}]);
+ assert.deepEqual(vipProgress(0),{level:0,total:0,next:{level:1,needExp:50},remaining:50,percent:0});
+ assert.equal(vipProgress(49).level,0);
+ assert.deepEqual({level:vipProgress(50).level,remaining:vipProgress(50).remaining},{level:1,remaining:250});
+ assert.equal(vipProgress(300).level,2);
+ assert.equal(vipProgress(100000).next,null);
+ assert.equal(vipProgress(100000).percent,100);
+});
+
+test('save validation migrates v9 recharge records and rejects malformed ones',()=>{
+ const old=createGame(T);
+ old.version=9;old.recharge={count:2,lastTier:96};delete old.recharge.totalGems;delete old.recharge.doubled;
+ const before=JSON.stringify(old),migrated=validate(old);
+ assert.equal(JSON.stringify(old),before,'migration must not touch the loaded file');
+ assert.equal(migrated.version,10);
+ assert.deepEqual(migrated.recharge,{count:2,lastTier:96,totalGems:0,doubled:[]});
+ const badCount=createGame(T);badCount.recharge={count:-1,lastTier:0,totalGems:0,doubled:[]};
+ assert.throws(()=>validate(badCount),/充值记录无效/);
+ const badTotal=createGame(T);badTotal.recharge={count:0,lastTier:0,totalGems:-5,doubled:[]};
+ assert.throws(()=>validate(badTotal),/累计充值魔晶无效/);
+ const badDoubled=createGame(T);badDoubled.recharge={count:0,lastTier:0,totalGems:0,doubled:[95,95]};
+ assert.throws(()=>validate(badDoubled),/首充双倍记录无效/);
+ const badId=createGame(T);badId.recharge={count:0,lastTier:0,totalGems:0,doubled:[11]};
+ assert.throws(()=>validate(badId),/首充双倍记录包含未知档位/);
 });

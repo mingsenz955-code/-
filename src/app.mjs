@@ -1,11 +1,12 @@
 import {openWarehouse,chooseWarehouseDragon} from './warehouse-dialog.mjs';
 import {openEquipDialog,openEquipInfoDialog,openEquipChangeDialog,openEquipSourceDialog} from './equip-dialog.mjs';
 import {openAdventureDialog} from './adventure-dialog.mjs';
-import {openRechargeDialog} from './recharge-dialog.mjs';
+import {openRechargeDialog,openVipThresholds} from './recharge-dialog.mjs';
+import {resourceShopRow} from './resource-shop.mjs';
 import {openBattleDialog} from './battle-dialog.mjs';
 import {adventureEvent,adventureEventKind} from './adventure.mjs';
 import {equipmentInstance,definitionPart,EQUIPMENT_SLOTS} from './equipment.mjs';
-import {openShop,openHabitatShop,openHabitatInfo,openExpansionShop,openBreed,openIncubator,openCatalog,openNativePaper,nativeButton} from './ranch-dialogs.mjs';
+import {openShop,openHabitatShop,openHabitatInfo,openExpansionShop,openResourceShop,openBreed,openIncubator,openCatalog,openNativePaper,nativeButton} from './ranch-dialogs.mjs';
 import {openRaffleDialog,openRafflePreview,closeRafflePreview} from './raffle-dialog.mjs';
 import {openLotteryOptions,openLotteryDialog,openLotteryPrize,lotteryHelp} from './lottery-dialog.mjs';
 import {lotteryCost} from './lottery.mjs';
@@ -82,6 +83,9 @@ document.addEventListener('click',async e=>{
   if(type==='equipTab'){toast(el.dataset.value==='frag'?'装备碎片尚未接入，当前只有装备列表。':'当前已显示未装备的装备。');return}
   if(type==='unverifiedEquip'){toast('装备的更换、强化、升星与原版获取来源尚未实现。');return}
   if(type==='openRecharge'){await openRechargeDialog(state);return}
+  if(type==='rechargeVip'){await openVipThresholds(state);return}
+  if(type==='resourceShop'){await openResourceShop(state);return}
+  if(type==='buyResource'){const offer=resourceShopRow(id);if(!offer){toast('这个商品尚未开放。');return}if(state.gems<offer.priceGems){toast(`魔晶不足，还差 ${offer.priceGems-state.gems} 魔晶。`);await openRechargeDialog(state);return}const next=action(state,'buyResource',{id});await persist(next);render();await openResourceShop(state);toast(state.log[0]);return}
   if(type==='openAdventure'){await openAdventureDialog(state);return}
   if(type==='pveMap'){await openAdventureDialog(state,Number(el.dataset.value));return}
   if(type==='pveNode'){const node=adventureEvent(Number(el.dataset.id));if(!node)throw new Error('找不到这个关卡节点。');await openBattleDialog(state,{nodeId:node.id,node});return}

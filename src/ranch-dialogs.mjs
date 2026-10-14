@@ -4,6 +4,7 @@ import CATALOG from '../assets/original/catalog.mjs';
 import {playerProgress,income,isBreedingParent,dragonRate} from './game.mjs';
 import {ORIGINAL_HABITATS,habitatInfo,habitatDefinition,habitatLimit,acceptsDragon} from './habitats.mjs';
 import {EXPANSION_POLICY,nextExpansion} from './expansion.mjs';
+import {RESOURCE_SHOP_OFFERS,RESOURCE_SHOP_TYPES} from './resource-shop.mjs';
 import {dragonArt,eggArt} from './art.mjs';
 const layouts=new Map();
 export const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -20,7 +21,7 @@ export async function openNativePaper(title,body,mode='nativePaper'){
 }
 export async function openShop(state){
  const l=await sourceLayout('ui_shop'),labels={longdan:'龙蛋',jianzhu:'建筑',zhuangshi:'装饰品',longchao:'龙巢',kuojian:'扩建',ziyuan:'资源'},actions={close:{type:'close',label:'关闭商店'}},slots={};
- for(const [key,label] of Object.entries(labels)){actions[key+'/btn']={type:key==='longchao'?'habitatShop':key==='kuojian'?'expansionShop':'unavailable',label};slots[key+'/con_name']=`<span class="native-category-label">${label}</span>`}
+ for(const [key,label] of Object.entries(labels)){actions[key+'/btn']={type:key==='longchao'?'habitatShop':key==='kuojian'?'expansionShop':key==='ziyuan'?'resourceShop':'unavailable',label};slots[key+'/con_name']=`<span class="native-category-label">${label}</span>`}
  showSource('nativeShop',renderSourceLayout(l,{values:{txt_name:'商城'},slots,actions}),'native-fullscreen');
 }
 export async function openExpansionShop(state){
@@ -29,6 +30,18 @@ export async function openExpansionShop(state){
  const art=`assets/original/ui/thumbs_store_expansion_island_${Math.min(2+(plots%3),4)}.png`;
  const card=step?`<article class="native-shop-card" data-expansion-plot="${step.index}">${renderSourceLayout(item,{values:{txt_name:`扩建第 ${plots+1} 块地`,shuoming:`需要牧场 Lv.${step.minLevel}　金币 ${step.coins.toLocaleString('zh-CN')}${step.gems>0?`　魔晶 ${step.gems}`:''}`,txt_shuliang:plots,weijiesuo_shuzi:`${step.minLevel} 级解锁`,tx_name:'',tx_power:''},hidden:new Set(['huangzuan',...(locked?['goumai_shuzi']:['weijiesuo'])]),actions:{'goumai_shuzi/btn':{type:'expandIsland',label:'扩建'}},slots:{con_img:`<img class="native-item-art" src="${art}" alt="">`,con_cost:`<img class="native-cost-icon" src="assets/original/ui/${step.gems>0?'ui_main_08.png':'ui_main_06.png'}" alt="">`}})}</article>`:'';
  showSource('nativeExpansion',renderSourceLayout(l,{values:{txt_name:'扩建',txt_JinBi:state.coins.toLocaleString('zh-CN'),txt_MoJing:state.gems,txt_LongHun:'—'},hidden:new Set(['longzuleixing']),actions:{close:{type:'close',label:'关闭'},fanhui:{type:'openHabitats',label:'返回商店'}},slots:{huadong:card?`<div class="native-shop-list">${card}</div>`:'<div class="native-warehouse-empty">原版扩建阶梯已经到头</div>'}}),'native-fullscreen');
+}
+export async function openResourceShop(state){
+ const [l,item]=await Promise.all([sourceLayout('ui_shop_lv2'),sourceLayout('item_shop')]);
+ // ui/ResourceShopPanel.lua sells these rows for 魔晶; amounts, prices and the 折扣 badges are
+ // the client's own values. Rows whose reward has no system in this offline build stay off sale.
+ const cards=RESOURCE_SHOP_OFFERS.map((row,index)=>{
+  const art=image(`assets/original/ui/resource_icon_80_${row.type}.png`);
+  const slots={con_img:art,con_cost:image('assets/original/ui/ui_main_08.png','native-cost-icon')};
+  if(row.zhekouIcon)slots.con_zhekou=image(`assets/original/ui/ui_zhekou_${row.zhekouIcon}.png`,'native-cost-icon');
+  return `<article class="native-shop-card" data-resource-offer="${row.id}" data-offer-index="${index}">${renderSourceLayout(item,{values:{txt_name:row.name,shuoming:`${RESOURCE_SHOP_TYPES[row.type]} ${row.amount.toLocaleString('zh-CN')}`,txt_shuliang:row.priceGems,'goumai_shuzi/buy_txt':'购买',weijiesuo_shuzi:`${row.priceGems} 魔晶`,tx_name:'',tx_power:''},hidden:new Set(['huangzuan','weijiesuo','shuxing1','shuxing2','shuxing3','pinzhi']),actions:{'goumai_shuzi/btn':{type:'buyResource',id:row.id,label:`购买${row.name}`}},slots})}</article>`;
+ }).join('');
+ showSource('nativeResourceShop',renderSourceLayout(l,{values:{txt_name:'资源',txt_JinBi:state.coins.toLocaleString('zh-CN'),txt_MoJing:state.gems,txt_LongHun:'—'},hidden:new Set(['longzuleixing']),actions:{close:{type:'close',label:'关闭'},fanhui:{type:'openHabitats',label:'返回商店'}},slots:{huadong:`<div class="native-shop-list">${cards}</div>`}}),'native-fullscreen');
 }
 export async function openHabitatShop(state,{moveDragon=null,hatch=false}={}){
  const [l,item]=await Promise.all([sourceLayout('ui_shop_lv2'),sourceLayout('item_shop')]),level=playerProgress(state).level;
