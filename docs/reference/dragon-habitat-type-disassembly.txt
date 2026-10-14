@@ -1,0 +1,120 @@
+SHA256 558a78516ea4fdf94157c0e569f50a9ab617837548923c1624481eb66ae86880
+Static Lua 5.1 disassembly. PCs and nested function indexes are zero-based. No code executed.
+
+FUNCTION 26
+CONSTANTS ["isLegen", "ipairs", "elementList", "table", "insert", "l"]
+0000 GETTABLE r1 r0["isLegen"]
+0001 TEST A=1 B=0 C=0
+0002 JMP A=0 target=22
+0003 NEWTABLE A=1 B=0 C=0
+0004 GETGLOBAL r2 "ipairs"
+0005 GETTABLE r3 r0["elementList"]
+0006 CALL A=2 B=2 C=4
+0007 JMP A=0 target=13
+0008 GETGLOBAL r7 "table"
+0009 GETTABLE r7 r7["insert"]
+0010 MOVE A=8 B=1 C=0
+0011 MOVE A=9 B=6 C=0
+0012 CALL A=7 B=3 C=1
+0013 TFORLOOP A=2 B=0 C=2
+0014 JMP A=0 target=8
+0015 GETGLOBAL r2 "table"
+0016 GETTABLE r2 r2["insert"]
+0017 MOVE A=3 B=1 C=0
+0018 LOADK r4 "l"
+0019 CALL A=2 B=3 C=1
+0020 RETURN A=1 B=2 C=0
+0021 JMP A=0 target=24
+0022 GETTABLE r1 r0["elementList"]
+0023 RETURN A=1 B=2 C=0
+0024 RETURN A=0 B=1 C=0
+
+FUNCTION 2
+CONSTANTS ["CONFIG_CN_QQ", "getItemInfoByID", "type", null, "log", "DragonElement initialize Error! DragonType: ", "DragonElement", "super", "ctor", "in_store", "1", "new_item", "isLegen", "legen", 1, "isOverLord", "overlord", "sell_price", "g", "elementList", "attributes", "_speed", 0.002, "hatched", true, "state", "STATE_IDLE", "_data", "_info", "BREEDING_OPPOSITES", "equip", "warpos", 0, "pairs", "data", "breed_oposite", "quality", "updateAttributes", "checkWarpos"]
+0000 GETGLOBAL r2 "CONFIG_CN_QQ"
+0001 GETTABLE r2 r2["getItemInfoByID"]
+0002 GETTABLE r3 r1["type"]
+0003 CALL A=2 B=2 C=2
+0004 EQ A=0 r2 null
+0005 JMP A=0 target=12
+0006 GETGLOBAL r3 "log"
+0007 LOADK r4 "DragonElement initialize Error! DragonType: "
+0008 GETTABLE r5 r1["type"]
+0009 CONCAT A=4 B=4 C=5
+0010 CALL A=3 B=2 C=1
+0011 RETURN A=0 B=1 C=0
+0012 GETGLOBAL r3 "DragonElement"
+0013 GETTABLE r3 r3["super"]
+0014 GETTABLE r3 r3["ctor"]
+0015 MOVE A=4 B=0 C=0
+0016 MOVE A=5 B=2 C=0
+0017 CALL A=3 B=3 C=1
+0018 GETTABLE r3 r2["in_store"]
+0019 EQ A=1 r3 "1"
+0020 JMP A=0 target=22
+0021 LOADBOOL A=3 B=0 C=1
+0022 LOADBOOL A=3 B=1 C=0
+0023 SETTABLE r0["in_store"] r3
+0024 GETTABLE r3 r2["new_item"]
+0025 EQ A=1 r3 "1"
+0026 JMP A=0 target=28
+0027 LOADBOOL A=3 B=0 C=1
+0028 LOADBOOL A=3 B=1 C=0
+0029 SETTABLE r0["new_item"] r3
+0030 GETTABLE r3 r2["legen"]
+0031 EQ A=1 r3 1
+0032 JMP A=0 target=34
+0033 LOADBOOL A=3 B=0 C=1
+0034 LOADBOOL A=3 B=1 C=0
+0035 SETTABLE r0["isLegen"] r3
+0036 GETTABLE r3 r2["overlord"]
+0037 EQ A=1 r3 1
+0038 JMP A=0 target=40
+0039 LOADBOOL A=3 B=0 C=1
+0040 LOADBOOL A=3 B=1 C=0
+0041 SETTABLE r0["isOverLord"] r3
+0042 GETTABLE r3 r2["sell_price"]
+0043 GETTABLE r3 r3["g"]
+0044 SETTABLE r0["sell_price"] r3
+0045 GETTABLE r3 r2["attributes"]
+0046 SETTABLE r0["elementList"] r3
+0047 SETTABLE r0["_speed"] 0.002
+0048 SETTABLE r0["hatched"] true
+0049 GETGLOBAL r3 "DragonElement"
+0050 GETTABLE r3 r3["STATE_IDLE"]
+0051 SETTABLE r0["state"] r3
+0052 SETTABLE r0["_data"] r1
+0053 SETTABLE r0["_info"] r2
+0054 NEWTABLE A=3 B=0 C=0
+0055 SETTABLE r0["BREEDING_OPPOSITES"] r3
+0056 NEWTABLE A=3 B=4 C=0
+0057 LOADBOOL A=4 B=0 C=0
+0058 LOADBOOL A=5 B=0 C=0
+0059 LOADBOOL A=6 B=0 C=0
+0060 LOADBOOL A=7 B=0 C=0
+0061 SETLIST A=3 B=4 C=1
+0062 SETTABLE r0["equip"] r3
+0063 SETTABLE r0["warpos"] 0
+0064 GETGLOBAL r3 "pairs"
+0065 GETGLOBAL r4 "CONFIG_CN_QQ"
+0066 GETTABLE r4 r4["data"]
+0067 GETTABLE r4 r4["breed_oposite"]
+0068 CALL A=3 B=2 C=4
+0069 JMP A=0 target=74
+0070 GETTABLE r8 r0["BREEDING_OPPOSITES"]
+0071 SETTABLE r8[r6] r7
+0072 GETTABLE r8 r0["BREEDING_OPPOSITES"]
+0073 SETTABLE r8[r7] r6
+0074 TFORLOOP A=3 B=0 C=2
+0075 JMP A=0 target=70
+0076 GETTABLE r3 r1["quality"]
+0077 TEST A=3 B=0 C=0
+0078 JMP A=0 target=84
+0079 GETTABLE r3 r1["quality"]
+0080 LT A=0 0 r3
+0081 JMP A=0 target=84
+0082 SELF r3 self=r0 method="updateAttributes"
+0083 CALL A=3 B=2 C=1
+0084 SELF r3 self=r0 method="checkWarpos"
+0085 CALL A=3 B=2 C=1
+0086 RETURN A=0 B=1 C=0

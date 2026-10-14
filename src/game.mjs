@@ -1,7 +1,7 @@
 import {formationError} from './formation.mjs';
 import {LOTTERY_POLICY,LOTTERY_CAPACITY,lotteryRow,lotteryCost,sampleLottery} from './lottery.mjs';
 import {SPECIES, RULES, RECIPES, ORIGINAL_CROPS, ORIGINAL_LEVELS, ORIGINAL_FARMS, breedingOptions, speciesKey} from './data.mjs';
-import {habitatDefinition,habitatInfo,acceptsDragon,habitatLimit,habitatPosition,snapHabitatPosition,canPlaceHabitat,canPlaceObject} from './habitats.mjs';
+import {habitatDefinition,habitatInfo,acceptsDragon,acceptsSavedResident,habitatLimit,habitatPosition,snapHabitatPosition,canPlaceHabitat,canPlaceObject} from './habitats.mjs';
 import {structureDefinition,structureInfo,structurePosition} from './structures.mjs';
 import {configuredLineup,lineupPower,battleRequirement,battleReward,OFFLINE_BATTLE_POLICY} from './battle.mjs';
 import {adventureEvent,ADVENTURE_LEVEL_COUNT} from './adventure.mjs';
@@ -49,7 +49,7 @@ export function validate(s) {
  if(!Array.isArray(s.formation)||s.formation.length>6||new Set(s.formation).size!==s.formation.length||!s.formation.every(id=>s.dragons.some(d=>d.id===id)))fail('出战阵容无效。');
  if(!s.adventure||!s.adventure.cleared||typeof s.adventure.cleared!=='object'||Array.isArray(s.adventure.cleared)||!number(s.adventure.energy,0,10)||!number(s.adventure.energyAt)||s.adventure.policy!==OFFLINE_BATTLE_POLICY)fail('冒险进度无效。');
  for(const [nodeId,stars] of Object.entries(s.adventure.cleared)){if(!/^\d+$/.test(nodeId)||!adventureEvent(Number(nodeId))||!number(stars,1,3))fail('冒险关卡记录无效。');}
- for(const d of s.dragons)if(!acceptsDragon(s.habitats.find(h=>h.id===d.habitatId),d.species))fail('龙与栖息地属性不匹配。');
+ for(const d of s.dragons)if(!acceptsSavedResident(s.habitats.find(h=>h.id===d.habitatId),d.species))fail('龙与栖息地属性不匹配。');
  const lottery=s.lottery;if(!lottery||!number(lottery.normalTokens)||!number(lottery.advancedTokens)||!number(lottery.draws)||!Array.isArray(lottery.pending)||lottery.pending.length>LOTTERY_CAPACITY||lottery.draws<lottery.pending.length)fail('抽奖存档无效。');
  for(const prize of lottery.pending){const row=lotteryRow(prize.sourceRow);if(!row||!number(prize.id,1)||ids.has(prize.id)||prize.mode!==row.mode||prize.type!==row.type||prize.itemId!==row.itemId||prize.policy!==LOTTERY_POLICY||!number(prize.amount,row.min,row.max)||prize.type===16&&!SPECIES[speciesKey(prize.itemId)])fail('抽奖奖励记录无效。');ids.add(prize.id);}
  const raffle=s.raffle;if(!raffle||!raffle.tickets||typeof raffle.tickets!=='object'||Array.isArray(raffle.tickets)||!raffle.counters||!Array.isArray(raffle.pending)||raffle.pending.length>RAFFLE_CAPACITY)fail('扭蛋机存档无效。');

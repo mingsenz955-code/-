@@ -16,3 +16,24 @@ test('per-element storage caps and upgrade retain residents and fractional store
 test('source limits include construction sites and source hidden legendary type is blocked',()=>{assert.equal(habitatLimit(1),1);assert.equal(habitatLimit(8),7);assert.throws(()=>action(createGame(T),'build',{buildingId:28},T),/数量上限/);assert.throws(()=>action(fixture(),'build',{buildingId:41},T),/未在原版商店/);assert.throws(()=>action(fixture(),'build',{buildingId:36},T),/等级 16/);let s=fixture(2);s=action(s,'build',{buildingId:28},T);assert.throws(()=>action(s,'build',{buildingId:26},T),/数量上限/)});
 test('legendary construction debits gems and rejects insufficient gems without mutation',()=>{let s=fixture();s.gems=99;const before=structuredClone(s);assert.throws(()=>action(s,'build',{buildingId:40},T),/魔晶不足/);assert.deepEqual(s,before);s.gems=100;s=action(s,'build',{buildingId:40},T);assert.equal(s.gems,0);assert.equal(s.habitats.at(-1).job.readyAt,T+7200000)});
 test('placement snaps to source-style cells, rejects collisions and persists',()=>{let s=fixture(),position=snapHabitatPosition([35.25,61.5]);assert(canPlaceHabitat(s.habitats,1,position));s=action(s,'placeHabitat',{id:1,position:[35.25,61.5]},T);assert.deepEqual(validate(JSON.parse(JSON.stringify(s))).habitats[0].position,position);s=build(s,26);const second=s.habitats.at(-1);assert.throws(()=>action(s,'placeHabitat',{id:second.id,position},s.updatedAt),/重叠/);for(const change of [h=>h.position=[NaN,55],h=>h.position=[55],h=>h.buildingId=999,h=>h.job={kind:'upgrade',targetId:27,startedAt:T,readyAt:T+1000}]){const bad=structuredClone(s);change(bad.habitats[0]);assert.throws(()=>validate(bad))}});
+test('source legen flag allows every holy/ancient dragon into the 100-gem habitat',()=>{
+ const marked=Object.entries(SPECIES).filter(([,d])=>d.isLegendHabitat);assert(marked.length>=16);
+ for(const [species] of marked){assert(acceptsDragon({buildingId:40},species),species);assert(!acceptsDragon({buildingId:28},species),species);assert(!acceptsDragon({buildingId:40,job:{kind:'build'}},species))}
+ assert(acceptsDragon({buildingId:40},'original1052'),'ordinary l-element crystal dragon remains supported');
+ assert(!acceptsDragon({buildingId:40},'ember'),'basic fire dragon is not made legendary by this fix');
+});
+test('holy move and ancient hatch use source eligibility, capacity and restart-compatible save',()=>{
+ let s=build(fixture(),40);const habitat=s.habitats.at(-1);
+ s.dragons.push({id:s.nextId++,species:'original1072',level:7,habitatId:1});const holy=s.dragons.at(-1);
+ s=action(s,'move',{id:holy.id,habitatId:habitat.id},s.updatedAt);
+ s.incubator={phase:'hatching',species:'original1206',parents:[],source:'raffle',readyAt:s.updatedAt};
+ assert.throws(()=>action(s,'hatch',{habitatId:habitat.id},s.updatedAt),/已满/);
+ s=action(s,'move',{id:holy.id,habitatId:1},s.updatedAt);
+ s=action(s,'hatch',{habitatId:habitat.id},s.updatedAt);
+ const restored=validate(JSON.parse(JSON.stringify(s)));assert.equal(restored.dragons.at(-1).species,'original1206');assert.equal(restored.dragons.at(-1).habitatId,habitat.id);assert.equal(restored.incubator,null);
+});
+test('pre-fix holy residents in elemental habitats stay readable without reopening wrong placement',()=>{
+ const s=fixture();s.habitats.push({id:4,buildingId:34,name:'电巢',lastCollected:T});s.dragons.push({id:5,species:'original1072',level:7,habitatId:4});s.nextId=6;
+ assert.equal(validate(JSON.parse(JSON.stringify(s))).dragons.at(-1).habitatId,4);
+ assert(!acceptsDragon(s.habitats[1],'original1072'));
+});

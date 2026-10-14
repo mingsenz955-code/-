@@ -200,3 +200,7 @@
 - FormationInfoPanel.lua静态检查实际加载ui_formation_info，左侧六阵位采用item_big_touxiang；FormationDragonListPanel.lua明文实际加载ui_dragon_list、按主属性筛选，操作1新增/2替换/3下阵。
 - NewFormationPanel.lua明文按extended.position分组，并按queuePriority排序挂到ui_formation_new的sky/earth源节点，动作breathinbattle。本轮遵循这些源规则。
 - 装备已知定义atk/def/hp按现有装备所有者累加到基础战斗属性，原getPower基础项继续attack+defend+life/3；未把未知随机、星级或符文数值加入。
+
+## E05 v0.16.18 神圣龙巢分类
+- DragonElement.lua构造器函数2将isLegen设置为config.legen==1，函数26 getFullType对标记龙补l；Base.lua函数57显示getFullType匹配龙巢element_type，且isLegen额外要求巢为l。两份静态反汇编和源SHA256保存至reference/dragon-habitat-type-disassembly.txt与habitat-acceptance-disassembly.txt。
+- catalog.original.legen覆盖16条神圣/远古龙，包含extended.isLegend=0的神圣中国龙，因此不能用扩展表isLegend或品质色简单替代。building40原售价100魔晶、element_type=l、capacity=1、建造7200秒不变。

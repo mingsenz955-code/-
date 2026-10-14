@@ -1,0 +1,158 @@
+SHA256 2e49418576b4d2902610a9dbd2dc6c9bf6a2e5fccf1294b92434c643b4923655
+Static Lua 5.1 disassembly. PCs and nested function indexes are zero-based. No code executed.
+
+FUNCTION 57
+CONSTANTS ["getFullType", "log", "targetHabitat : ", "tostring", "Gui", "state", "Constants", "GAME_MODE_MOVEDRAGON", "ipairs", "Base", "Iso", "habitats", "table", "indexOf", "_info", "element_type", -1, "status", "STATUS_NORNAL", "isLegen", "l", "DragonManager", "hasRoom", "showGuide", "kindergarten", "level", 1, null, "mapMode", "MAP_MODE_DRAGONMOVE", "TutorialManager", "model", "lookatBuilding", "moveDragonFinish"]
+0000 LOADBOOL A=4 B=0 C=0
+0001 SELF r5 self=r0 method="getFullType"
+0002 CALL A=5 B=2 C=2
+0003 GETGLOBAL r6 "log"
+0004 LOADK r7 "targetHabitat : "
+0005 GETGLOBAL r8 "tostring"
+0006 MOVE A=9 B=3 C=0
+0007 CALL A=8 B=2 C=2
+0008 CONCAT A=7 B=7 C=8
+0009 CALL A=6 B=2 C=1
+0010 SETUPVAL A=1 B=0 C=0
+0011 SETUPVAL A=2 B=1 C=0
+0012 GETGLOBAL r6 "Gui"
+0013 GETTABLE r6 r6["state"]
+0014 GETGLOBAL r7 "Constants"
+0015 GETTABLE r7 r7["GAME_MODE_MOVEDRAGON"]
+0016 CALL A=6 B=2 C=1
+0017 GETGLOBAL r6 "ipairs"
+0018 GETGLOBAL r7 "Base"
+0019 GETTABLE r7 r7["Iso"]
+0020 GETTABLE r7 r7["habitats"]
+0021 CALL A=6 B=2 C=4
+0022 JMP A=0 target=75
+0023 GETGLOBAL r11 "table"
+0024 GETTABLE r11 r11["indexOf"]
+0025 MOVE A=12 B=5 C=0
+0026 GETTABLE r13 r10["_info"]
+0027 GETTABLE r13 r13["element_type"]
+0028 CALL A=11 B=3 C=2
+0029 EQ A=1 r11 -1
+0030 JMP A=0 target=75
+0031 SELF r11 self=r10 method="status"
+0032 CALL A=11 B=2 C=2
+0033 GETUPVAL A=12 B=2 C=0
+0034 GETTABLE r12 r12["STATUS_NORNAL"]
+0035 EQ A=0 r11 r12
+0036 JMP A=0 target=75
+0037 GETTABLE r11 r0["isLegen"]
+0038 TEST A=11 B=0 C=0
+0039 JMP A=0 target=60
+0040 GETTABLE r11 r10["_info"]
+0041 GETTABLE r11 r11["element_type"]
+0042 EQ A=0 r11 "l"
+0043 JMP A=0 target=75
+0044 GETGLOBAL r11 "DragonManager"
+0045 GETTABLE r11 r11["hasRoom"]
+0046 MOVE A=12 B=10 C=0
+0047 CALL A=11 B=2 C=2
+0048 TEST A=4 B=0 C=1
+0049 JMP A=0 target=51
+0050 MOVE A=4 B=11 C=0
+0051 LOADBOOL A=12 B=0 C=0
+0052 TEST A=11 B=0 C=0
+0053 JMP A=0 target=75
+0054 LOADBOOL A=12 B=1 C=0
+0055 SELF r13 self=r10 method="showGuide"
+0056 GETGLOBAL r15 "hasRoom"
+0057 CALL A=13 B=3 C=1
+0058 MOVE A=3 B=10 C=0
+0059 JMP A=0 target=75
+0060 GETGLOBAL r11 "DragonManager"
+0061 GETTABLE r11 r11["hasRoom"]
+0062 MOVE A=12 B=10 C=0
+0063 CALL A=11 B=2 C=2
+0064 TEST A=4 B=0 C=1
+0065 JMP A=0 target=67
+0066 MOVE A=4 B=11 C=0
+0067 LOADBOOL A=12 B=0 C=0
+0068 TEST A=11 B=0 C=0
+0069 JMP A=0 target=75
+0070 LOADBOOL A=12 B=1 C=0
+0071 SELF r13 self=r10 method="showGuide"
+0072 MOVE A=15 B=11 C=0
+0073 CALL A=13 B=3 C=1
+0074 MOVE A=3 B=10 C=0
+0075 TFORLOOP A=6 B=0 C=2
+0076 JMP A=0 target=23
+0077 GETGLOBAL r6 "Base"
+0078 GETTABLE r6 r6["Iso"]
+0079 GETTABLE r6 r6["kindergarten"]
+0080 TEST A=6 B=0 C=0
+0081 JMP A=0 target=122
+0082 GETGLOBAL r6 "Base"
+0083 GETTABLE r6 r6["Iso"]
+0084 GETTABLE r6 r6["kindergarten"]
+0085 SELF r6 self=r6 method="status"
+0086 CALL A=6 B=2 C=2
+0087 GETUPVAL A=7 B=2 C=0
+0088 GETTABLE r7 r7["STATUS_NORNAL"]
+0089 EQ A=0 r6 r7
+0090 JMP A=0 target=122
+0091 SELF r6 self=r0 method="level"
+0092 CALL A=6 B=2 C=2
+0093 LE A=0 r6 1
+0094 JMP A=0 target=122
+0095 GETGLOBAL r6 "Base"
+0096 GETTABLE r6 r6["Iso"]
+0097 GETTABLE r6 r6["kindergarten"]
+0098 SELF r6 self=r6 method="showGuide"
+0099 CALL A=6 B=2 C=1
+0100 TEST A=4 B=0 C=1
+0101 JMP A=0 target=109
+0102 GETGLOBAL r6 "DragonManager"
+0103 GETTABLE r6 r6["hasRoom"]
+0104 GETGLOBAL r7 "Base"
+0105 GETTABLE r7 r7["Iso"]
+0106 GETTABLE r7 r7["kindergarten"]
+0107 CALL A=6 B=2 C=2
+0108 MOVE A=4 B=6 C=0
+0109 EQ A=0 r3 null
+0110 JMP A=0 target=122
+0111 GETGLOBAL r6 "DragonManager"
+0112 GETTABLE r6 r6["hasRoom"]
+0113 GETGLOBAL r7 "Base"
+0114 GETTABLE r7 r7["Iso"]
+0115 GETTABLE r7 r7["kindergarten"]
+0116 CALL A=6 B=2 C=2
+0117 TEST A=6 B=0 C=0
+0118 JMP A=0 target=122
+0119 GETGLOBAL r6 "Base"
+0120 GETTABLE r6 r6["Iso"]
+0121 GETTABLE r3 r6["kindergarten"]
+0122 TEST A=4 B=0 C=0
+0123 JMP A=0 target=140
+0124 SETUPVAL A=0 B=3 C=0
+0125 GETGLOBAL r6 "Base"
+0126 GETGLOBAL r7 "Base"
+0127 GETTABLE r7 r7["MAP_MODE_DRAGONMOVE"]
+0128 SETTABLE r6["mapMode"] r7
+0129 GETGLOBAL r6 "TutorialManager"
+0130 GETTABLE r6 r6["model"]
+0131 TEST A=6 B=0 C=1
+0132 JMP A=0 target=149
+0133 EQ A=1 r3 null
+0134 JMP A=0 target=149
+0135 GETGLOBAL r6 "Base"
+0136 GETTABLE r6 r6["lookatBuilding"]
+0137 MOVE A=7 B=3 C=0
+0138 CALL A=6 B=2 C=1
+0139 JMP A=0 target=149
+0140 GETGLOBAL r6 "Base"
+0141 GETTABLE r6 r6["moveDragonFinish"]
+0142 CALL A=6 B=1 C=1
+0143 CLOSURE r6 nested=0
+0144 GETUPVAL A=0 B=1 C=0
+0145 GETUPVAL A=0 B=0 C=0
+0146 GETUPVAL A=7 B=4 C=0
+0147 MOVE A=8 B=0 C=0
+0148 CALL A=7 B=2 C=1
+0149 MOVE A=6 B=4 C=0
+0150 MOVE A=7 B=3 C=0
+0151 RETURN A=6 B=3 C=0
+0152 RETURN A=0 B=1 C=0
