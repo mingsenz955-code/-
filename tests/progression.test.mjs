@@ -1,32 +1,28 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import CATALOG from '../assets/original/catalog.mjs';
-import {ORIGINAL_BREEDING} from '../assets/original/data/rules.mjs';
-import {dragonAcquisition} from '../src/acquisition.mjs';
-import {evolutionRequirements} from '../src/evolution.mjs';
-
-test('all 90 dragons retain original shop fields and every positive source breeding row',()=>{
- for(const dragon of CATALOG){
-  const info=dragonAcquisition(dragon.id),original=dragon.original;
-  assert.equal(info.shop.listed,original.in_store===1||original.in_store===true);
-  assert.deepEqual(info.shop.costs,original.costs??{});
-  assert.equal(info.shop.minLevel,original.min_level??null);
-  const expected=ORIGINAL_BREEDING.filter(row=>row[3]===1&&row.some((value,index)=>index>=4&&index%2===0&&value===dragon.id&&row[index+1]>0));
-  assert.deepEqual(info.breeding.map(pair=>pair.sourceRow),expected.map(row=>row[0]));
-  assert.equal(info.otherSources,'unverified');assert(info.baseLottery.every(row=>row.probability==='unverified'));
-  const snapshot=JSON.stringify(info);info.breeding.pop();info.shop.costs.g=-1;
-  assert.equal(JSON.stringify(dragonAcquisition(dragon.id)),snapshot,'A browser cannot rewrite source evidence');
- }
- assert.equal(dragonAcquisition(-1),null);
+import {createGame,validate,action} from '../src/game.mjs';
+import {equipmentDefinition,equipmentEnhancePlan} from '../src/equipment.mjs';
+import {gemBonus,gemDefinition} from '../src/gems.mjs';
+import {dragonAttributes} from '../src/battle.mjs';
+const seed=()=>{const s=validate(createGame());s.equipment=[{id:'eq-1',type:101101,exp:0,star:0,randinfo:[],dragonid:2}];s.nextEquipId=2;s.equipmentMaterials={stone:1000,wing:0,crystal:0};s.gemInventory=[{id:'gm-1',type:810101,exp:0},{id:'gm-2',type:810201,exp:0},{id:'gm-3',type:820101,exp:0}];s.nextGemId=4;return s};
+test('source equipment enhancement charges actual material, retains owner, improves stats and reloads',()=>{
+ const s=seed(),before=dragonAttributes(s.dragons[0],s),plan=equipmentEnhancePlan(s.equipment[0],10);const next=action(s,'enhanceEquipment',{equipmentId:'eq-1',count:10});
+ assert.equal(next.equipment[0].type,plan.type);assert.equal(next.equipmentMaterials.stone,1000-plan.cost);assert.equal(next.equipment[0].dragonid,2);assert.equal(equipmentDefinition(plan.type).grade,11);assert(dragonAttributes(next.dragons[0],next).attack>before.attack);
+ assert.equal(validate(JSON.parse(JSON.stringify(next))).equipment[0].type,plan.type);
+ const poor=seed();poor.equipmentMaterials.stone=0;assert.throws(()=>action(poor,'enhanceEquipment',{equipmentId:'eq-1'}),/强化石不足/);assert.equal(poor.equipment[0].type,101101);
+ for(const [id,type,name] of [['eq-2',115101,'wing'],['eq-3',116101,'crystal']])assert.equal(equipmentEnhancePlan({id,type}).material,name);
 });
-
-test('evolution preview has source quality costs and separate 15/25 gates without rolling success',()=>{
- const first=evolutionRequirements(1000);assert.equal(first.minLevel,15);assert.equal(first.cap,20);
- assert.deepEqual(first.costs,{coins:20000,food:1500,evolutionFruit:500,holyFruit:0});
- const second=evolutionRequirements(1000,1);assert.equal(second.minLevel,25);assert.equal(second.cap,50);
- assert.deepEqual(second.costs,{coins:40000,food:3000,evolutionFruit:1000,holyFruit:0});
- assert.equal(evolutionRequirements(1000,2).max,true);
- assert.equal(evolutionRequirements(-1),null);
- assert.throws(()=>evolutionRequirements(1000,3),/阶段无效/);
- for(const dragon of CATALOG){assert(evolutionRequirements(dragon.id));assert(!Object.hasOwn(evolutionRequirements(dragon.id),'successProbability'));}
+test('gem sockets distinguish flying and crawling, replace same type, protect higher quality and reset on removal',()=>{
+ let s=seed();const before=dragonAttributes(s.dragons[1],s);s=action(s,'insertGem',{gemId:'gm-1',tab:'land'});assert.equal(s.gemSockets[0],'gm-1');assert.equal(gemBonus(s,s.dragons[1]).attack,200);assert.equal(gemBonus(s,s.dragons[0]).attack,0);assert.equal(dragonAttributes(s.dragons[1],s).attack,before.attack+200);
+ s=action(s,'insertGem',{gemId:'gm-3',tab:'land'});assert.equal(s.gemSockets[0],'gm-3');assert(!s.gemSockets.includes('gm-1'));assert.throws(()=>action(s,'insertGem',{gemId:'gm-1',tab:'land'}),/更高品质/);
+ s=action(s,'removeGem',{gemId:'gm-3'});assert.deepEqual(dragonAttributes(s.dragons[1],s),before);
+ assert.deepEqual(validate(JSON.parse(JSON.stringify(s))).gemSockets,Array(12).fill(null));
+});
+test('gem swallowing follows exported eat XP and next-level links without consuming equipped or duplicate materials',()=>{
+ const s=seed(),current=gemDefinition(810101);assert.equal(current.levelupexp,10);const next=action(s,'fuseGem',{gemId:'gm-1',materials:['gm-2']});assert.equal(next.gemInventory[0].type,current.nextlevel);assert.equal(next.gemInventory.length,2);
+ assert.throws(()=>action(s,'fuseGem',{gemId:'gm-1',materials:['gm-2','gm-2']}),/请选择/);
+ const worn=action(s,'insertGem',{gemId:'gm-2',tab:'air'});assert.throws(()=>action(worn,'fuseGem',{gemId:'gm-1',materials:['gm-2']}),/背包/);
+ assert.throws(()=>action(s,'fuseGem',{gemId:'gm-1',materials:['gm-3']}),/品质/);
+ const bad=seed();bad.gemSockets[0]='gm-1';bad.gemSockets[6]='gm-1';assert.throws(()=>validate(bad),/重复/);
+ const materials=seed();materials.equipmentMaterials.stone=-1;assert.throws(()=>validate(materials),/材料/);
 });

@@ -5,7 +5,7 @@ import {renderSourceLayout} from './source-layout.mjs';
 import {sourceLayout,showSource,esc} from './ranch-dialogs.mjs';
 import {dragonArt} from './art.mjs';
 import CATALOG from '../assets/original/catalog.mjs';
-import {EQUIPMENT_SLOTS_LAYOUT,EQUIPMENT_PROPERTIES,equipmentDefinition,equipmentIcon,equipmentEmptyIcon,equipmentGradeText,equipmentOfDragon,equipmentInPart,equipmentBonus,equipmentLabel,definitionPart} from './equipment.mjs';
+import {EQUIPMENT_SLOTS_LAYOUT,EQUIPMENT_PROPERTIES,equipmentDefinition,equipmentIcon,equipmentEmptyIcon,equipmentGradeText,equipmentOfDragon,equipmentInPart,equipmentBonus,equipmentLabel,definitionPart,equipmentEnhancePlan,EQUIPMENT_MATERIAL_NAMES} from './equipment.mjs';
 
 const PART_LABELS=['武器','鳞片','龙骨','龙角','羽翼','皇冠'];
 const QUALITY_LABELS=['','白','绿','蓝','紫','橙'];
@@ -57,10 +57,10 @@ export async function openEquipDialog(state,dragonId,{returnToDragon=false,forma
  values['right/dragong_info/lv/level']=String(dragon.level);
  // dragong_info owns the attribute rows. Only equipment definition totals are known
  // offline, so critical/resist/power stay blank instead of being invented.
- const base=dragonAttributes(dragon);
- values['right/dragong_info/hp/num']=String((base?.life??0)+bonus.hp);
- values['right/dragong_info/atk/num']=String((base?.attack??0)+bonus.atk);
- values['right/dragong_info/def/num']=String((base?.defend??0)+bonus.def);
+ const base=dragonAttributes(dragon,state);
+ values['right/dragong_info/hp/num']=String(base?.life??0);
+ values['right/dragong_info/atk/num']=String(base?.attack??0);
+ values['right/dragong_info/def/num']=String(base?.defend??0);
  values['right/dragong_info/critical/num']='—';
  values['right/dragong_info/resist/num']='—';
  values['right/dragong_info/power/num']=String(dragonPower(dragon,state)??'—');
@@ -124,10 +124,10 @@ export async function openEquipInfoDialog(state,equipmentId,{dragonId=null}={}){
   close:{type:owner?'openEquip':'close',id:owner?.id,label:'返回阵容'},
   'btn_xiexia/btn':instance.dragonid?{type:'unwearEquipment',id:equipmentId,label:'卸下'}:{type:'unverifiedEquip',label:'尚未穿戴'},
   'btn_genghuan/btn':{type:'equipChange',id:definition.part,label:'更换'},
-  'btn_qianghua/btn':{type:'unverifiedEquip',label:'强化'},
+  'btn_qianghua/btn':{type:'openEquipEnhance',id:equipmentId,label:'强化'},
   'btn_upstar/btn':{type:'unverifiedEquip',label:'升星'},
  };
- const disabled=new Set(['btn_qianghua/btn','btn_upstar/btn',...(!instance.dragonid?['btn_xiexia/btn']:[])]);
+ const disabled=new Set(['btn_upstar/btn',...(!instance.dragonid?['btn_xiexia/btn']:[])]);
  const d=showSource('sourceEquipInfo',renderSourceLayout(layout,{values,hidden,actions,disabled,slots:{icon_long:`<img class="source-equip-icon" src="${equipmentIcon(definition)}" alt="">`}})
   +`<div class="source-equip-notes"><p>品质 ${QUALITY_LABELS[definition.quality]}　部位 ${PART_LABELS[definition.part]}　系别 ${EQUIPMENT_PROPERTIES[definition.property]??'—'}　${owner?`所属 ${esc(SPECIES[owner.species].name)}`:'未穿戴'}${instance.star?`　星级 ${instance.star}`:''}</p>`
   +'<p>星级（equipinfostar）与随机属性（equipinforand）的结算规则尚未核实，未计入属性；强化与升星保持未开放。</p></div>');
@@ -140,4 +140,16 @@ export async function openEquipSourceDialog(){
  const layout=await sourceLayout('panel_formation_equip_info');
  showSource('sourceEquipFrom',renderSourceLayout(layout,{values:{tx_name:'装备来源',tx_lv:''},hidden:new Set(['add','xiangkuang','icon_long','shuxing1','shuxing2','shuxing3','pingding','item1','item2','item3','item4','item5']),actions:{close:{type:'close',label:'关闭装备来源'},'btn_down/btn':{type:'unverifiedEquip',label:'获得更多装备'}}})
   +'<div class="source-equip-notes"><p>原版三种来源：宝箱抽取、龙境仙踪（PvE 关卡掉落）、活动获得；探险宝箱表 tanxian_baoxiang 已确认产出装备与装备碎片。三者都尚未实现，因此当前不会发放任何装备。</p></div>');
+}
+export async function openEquipEnhanceDialog(state,equipmentId){
+ const instance=(state.equipment??[]).find(v=>v.id===equipmentId);if(!instance)throw new Error('找不到这件装备。');
+ const layout=await sourceLayout('panel_formation_equip_strengthen'),info=equipmentDefinition(instance.type),material=info.part===4?'wing':info.part===5?'crystal':'stone',icon=material==='wing'?'resource_icon_80_yuyi.png':material==='crystal'?'resource_icon_80_shuijing.png':'shangcheng_huobi_qhs.png';
+ let plan=null;try{plan=equipmentEnhancePlan(instance)}catch{}
+ const values={tx_name:'装备强化',zhuangbei_name:info.name,tx_lv:equipmentGradeText(info),'qianghua/txt_name':'强化','qianghuaall/txt_name':'强化10次',expense_txt:'消耗：',expense_num:plan?String(plan.cost):'已达最高等级',txt_ShiWu:String(state.equipmentMaterials?.[material]??0)},slots={},hidden=new Set();
+ const attrs=[['攻击','atk'],['生命','hp'],['防御','def'],['暴击','resist'],['免暴','antResist']].filter(([,key])=>info[key]||(plan?.definition[key]??0));
+ for(let i=1;i<=3;i++){const row=attrs[i-1],key=`shuxing/shuxing${i}`;if(!row){hidden.add(key);continue}values[`${key}/miaoshu`]=`${row[0]}：`;values[`${key}/shuzi`]=String(info[row[1]]);values[`${key}/fujia`]=String(plan?.definition[row[1]]??info[row[1]])}
+ slots.icon_long=`<img class="source-equip-icon" src="${equipmentIcon(info)}" alt="">`;
+ for(const key of ['node_showicon','node_costiicon'])slots[key]=`<img class="equip-enhance-material" src="assets/original/ui/${icon}" alt="${EQUIPMENT_MATERIAL_NAMES[material]}">`;
+ const disabled=new Set(!plan?['qianghua/btn','qianghuaall/btn']:[]);
+ const d=showSource('sourceEquipEnhance',renderSourceLayout(layout,{values,slots,hidden,disabled,actions:{close:{type:'openEquipInfo',id:equipmentId,label:'返回装备'},'qianghua/btn':{type:'enhanceEquipment',id:equipmentId,value:'1',label:'强化'},'qianghuaall/btn':{type:'enhanceEquipment',id:equipmentId,value:'10',label:'强化10次'}}}));d.dataset.equipmentId=equipmentId;
 }

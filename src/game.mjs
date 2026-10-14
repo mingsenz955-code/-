@@ -1,3 +1,4 @@
+import {validateGems,gemItem,gemSocket,gemInsertIndex,gemFusionPlan} from './gems.mjs';
 import {formationError} from './formation.mjs';
 import {LOTTERY_POLICY,LOTTERY_CAPACITY,lotteryRow,lotteryCost,sampleLottery} from './lottery.mjs';
 import {SPECIES, RULES, RECIPES, ORIGINAL_CROPS, ORIGINAL_LEVELS, ORIGINAL_FARMS, breedingOptions, speciesKey} from './data.mjs';
@@ -5,7 +6,7 @@ import {habitatDefinition,habitatInfo,acceptsDragon,acceptsSavedResident,habitat
 import {structureDefinition,structureInfo,structurePosition} from './structures.mjs';
 import {configuredLineup,lineupPower,battleRequirement,battleReward,OFFLINE_BATTLE_POLICY} from './battle.mjs';
 import {adventureEvent,ADVENTURE_LEVEL_COUNT} from './adventure.mjs';
-import {EQUIPMENT_INSTANCE_ID,equipmentDefinition,definitionPart,equipmentInstance,equipmentOfDragon,equipmentInPart,equipmentLabel} from './equipment.mjs';
+import {EQUIPMENT_INSTANCE_ID,equipmentDefinition,definitionPart,equipmentInstance,equipmentOfDragon,equipmentInPart,equipmentLabel,equipmentEnhancePlan,EQUIPMENT_MATERIAL_NAMES} from './equipment.mjs';
 import {RAFFLE_POLICY,RAFFLE_CAPACITY,RAFFLE_GUARANTEE_DRAWS,raffleMachine,raffleCost,sampleRaffle,advanceRaffleCounter} from './raffle.mjs';
 import {EXPANSION_POLICY,EXPANSION_PAID_STEPS,nextExpansion} from './expansion.mjs';
 import {rechargeProduct,rechargeDelivery,rechargeProductIds} from './recharge.mjs';
@@ -13,7 +14,7 @@ import {resourceShopRow,EVOLUTION_FRUIT_ITEM_ID} from './resource-shop.mjs';
 const fail = message => {throw new Error(message)};
 const number = (v,min=0,max=Number.MAX_SAFE_INTEGER) => Number.isSafeInteger(v)&&v>=min&&v<=max;
 export function createGame(now=Date.now()) {
- return {version:12,structures:[],formation:[2,3],adventure:{cleared:{},energy:10,energyAt:now,policy:OFFLINE_BATTLE_POLICY},lottery:{normalTokens:0,advancedTokens:0,draws:0,pending:[]},raffle:{tickets:{},counters:{junior:0,mid:0,senior:0},pending:[]},expansion:{plots:0},items:{},recharge:{count:0,lastTier:0,totalGems:0,doubled:[]},equipment:[],nextEquipId:1,coins:1200,food:400,gems:0,playerXp:0,nextId:4,updatedAt:now,habitats:[{id:1,name:'晨曦栖息地',lastCollected:now}],dragons:[{id:2,species:'ember',level:1,habitatId:1},{id:3,species:'leaf',level:1,habitatId:1}],farm:null,nest:null,breeding:null,incubator:null,stats:{harvests:0,hatches:0,feeds:0},log:['欢迎来到云上牧场。种下第一份龙粮吧。']};
+ return {version:12,equipmentMaterials:{stone:0,wing:0,crystal:0},gemInventory:[],gemSockets:Array(12).fill(null),nextGemId:1,structures:[],formation:[2,3],adventure:{cleared:{},energy:10,energyAt:now,policy:OFFLINE_BATTLE_POLICY},lottery:{normalTokens:0,advancedTokens:0,draws:0,pending:[]},raffle:{tickets:{},counters:{junior:0,mid:0,senior:0},pending:[]},expansion:{plots:0},items:{},recharge:{count:0,lastTier:0,totalGems:0,doubled:[]},equipment:[],nextEquipId:1,coins:1200,food:400,gems:0,playerXp:0,nextId:4,updatedAt:now,habitats:[{id:1,name:'晨曦栖息地',lastCollected:now}],dragons:[{id:2,species:'ember',level:1,habitatId:1},{id:3,species:'leaf',level:1,habitatId:1}],farm:null,nest:null,breeding:null,incubator:null,stats:{harvests:0,hatches:0,feeds:0},log:['欢迎来到云上牧场。种下第一份龙粮吧。']};
 }
 export function validate(s) {
  if(!s||![1,2,3,4,5,6,7,8,9,10,11,12].includes(s.version)) fail('存档版本不受支持，请保留原文件。');
@@ -23,6 +24,9 @@ export function validate(s) {
  s.breeding??=null;s.incubator??=null;if(s.version<5)s.lottery??={normalTokens:0,advancedTokens:0,draws:0,pending:[]};
  if(s.version<6){s.equipment??=[];s.nextEquipId??=1;}
  s.equipment??=[];s.nextEquipId??=1;
+ validateGems(s);
+ s.equipmentMaterials??={stone:0,wing:0,crystal:0};
+ for(const key of ['stone','wing','crystal'])if(!number(s.equipmentMaterials[key],0,1e9))fail('装备强化材料无效。');
  if(s.version<7)s.raffle??={tickets:{},counters:{junior:0,mid:0,senior:0},pending:[]};
  s.raffle??={tickets:{},counters:{junior:0,mid:0,senior:0},pending:[]};
  if(s.version<8)s.expansion??={plots:0};
@@ -139,6 +143,10 @@ export function action(state,type,payload={},now=Date.now(),random=Math.random) 
  case 'hatch': {if(!s.incubator||now<s.incubator.readyAt)fail('龙蛋尚未孵化。');const h=s.habitats.find(h=>h.id===payload.habitatId)||fail('请选择栖息地。');if(!acceptsDragon(h,s.incubator.species))fail('该栖息地尚未完工或不适合幼龙的属性。');if(s.dragons.filter(d=>d.habitatId===h.id).length>=habitatInfo(h).capacity)fail('栖息地已满，请先建造新栖息地。');settle(h);s.dragons.push({id:s.nextId++,species:s.incubator.species,level:1,habitatId:h.id});s.incubator=null;s.stats.hatches++;message='新生幼龙加入牧场！';break;}
  case 'sellIncubator': {if(!s.incubator||now<s.incubator.readyAt)fail('龙蛋尚未孵化，不能出售幼龙。');const name=SPECIES[s.incubator.species].name,gold=dragonSellGold(s.incubator.species);s.coins+=gold;s.incubator=null;message=`出售${name}，获得 ${gold} 金币。`;break;}
  case 'wearEquipment': {const target=dragon(payload.id),item=equipmentInstance(s,payload.equipmentId)||fail('找不到这件装备。');if(item.dragonid)fail('这件装备已经穿在龙身上。');const definition=equipmentDefinition(item.type);const existing=equipmentInPart(equipmentOfDragon(s,target.id),definition.part);if(existing)fail(`该部位已装备${equipmentLabel(existing)}，请先卸下。`);item.dragonid=target.id;message=`${SPECIES[target.species].name} 装备了${equipmentLabel(item)}。`;break;}
+ case 'insertGem': {const index=gemInsertIndex(s,payload.gemId,payload.tab),old=gemSocket(s,payload.gemId);if(old>=0)s.gemSockets[old]=null;s.gemSockets[index]=payload.gemId;message='宝石已镶嵌，祭坛属性已生效。';break;}
+ case 'removeGem': {const index=gemSocket(s,payload.gemId);if(index<0)fail('宝石不在祭坛中。');if(s.gemInventory.length-s.gemSockets.filter(Boolean).length>=150)fail('宝石背包已满，无法卸下。');s.gemSockets[index]=null;message='宝石已卸下。';break;}
+ case 'fuseGem': {const plan=gemFusionPlan(s,payload.gemId,payload.materials),item=gemItem(s,payload.gemId);item.type=plan.type;item.exp=plan.exp;s.gemInventory=s.gemInventory.filter(v=>!payload.materials.includes(v.id));message='宝石吞噬完成，属性已更新。';break;}
+ case 'enhanceEquipment': {const item=equipmentInstance(s,payload.equipmentId)||fail('找不到这件装备。'),plan=equipmentEnhancePlan(item,payload.count??1);if(s.equipmentMaterials[plan.material]<plan.cost)fail(`${EQUIPMENT_MATERIAL_NAMES[plan.material]}不足，需要 ${plan.cost}，现有 ${s.equipmentMaterials[plan.material]}。`);s.equipmentMaterials[plan.material]-=plan.cost;item.type=plan.type;message=`${equipmentLabel(item)}强化完成，消耗 ${plan.cost} ${EQUIPMENT_MATERIAL_NAMES[plan.material]}。`;break;}
  case 'unwearEquipment': {const item=equipmentInstance(s,payload.equipmentId)||fail('找不到这件装备。');if(!item.dragonid)fail('这件装备没有穿在龙身上。');const owner=s.dragons.find(d=>d.id===item.dragonid);item.dragonid=0;message=`已卸下${equipmentLabel(item)}${owner?`（${SPECIES[owner.species].name}）`:''}。`;break;}
  case 'raffleDraw': {const mode=payload.mode,count=payload.count,machine=raffleMachine(mode)||fail('请选择扭蛋机档位。');if(!Number.isSafeInteger(count)||![1,10].includes(count))fail('请选择单抽或十连。');if(s.raffle.pending.length+count>RAFFLE_CAPACITY)fail('仓库待领取栏已满，请先处理已有龙蛋。');const cost=raffleCost(s.raffle,mode,count);spend('gems',cost.gems);if(cost.tickets)s.raffle.tickets[cost.ticketKey]=(s.raffle.tickets[cost.ticketKey]??0)-cost.tickets;for(let i=0;i<count;i++){const counter=s.raffle.counters[mode]??0,guarantee=machine.guarantee!==null&&counter+1>=RAFFLE_GUARANTEE_DRAWS,result=sampleRaffle(mode,random,{guarantee});s.raffle.pending.push({id:s.nextId++,...result});s.raffle.counters[mode]=advanceRaffleCounter(counter,result,{free:cost.free})}message=`${machine.name}扭蛋机抽取 ${count} 次，龙蛋已放入仓库。`;break;}
  case 'raffleEggHatch': {if(s.incubator)fail('育龙塔正在孵化，请先安置当前幼龙。');const prize=s.raffle.pending.find(entry=>entry.id===payload.id)||fail('找不到这枚龙蛋。');const species=speciesKey(prize.dragonId),info=SPECIES[species];if(!info?.originalId||!info.hatchingMs)fail('该龙的原版孵化时长尚未取得。');s.incubator={phase:'hatching',species,parents:[],startedAt:now,readyAt:now+info.hatchingMs,hatchMs:info.hatchingMs,source:'raffle'};s.raffle.pending=s.raffle.pending.filter(entry=>entry.id!==prize.id);message=`${info.name}龙蛋已送入育龙塔。`;break;}

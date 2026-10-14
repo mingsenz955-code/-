@@ -1,0 +1,50 @@
+{
+  "tablesSha256": "1408d684c2a6530668a8ed4816ad1697d579077fed5d02b887d06f035395e750",
+  "gems": 360,
+  "runes": 246,
+  "gemColumns": [
+    "id",
+    "quality",
+    "type",
+    "attack",
+    "defend",
+    "blood",
+    "crit",
+    "uncrit",
+    "anti",
+    "unanti",
+    "eatexp",
+    "levelupexp",
+    "nextlevel",
+    "dismantleID",
+    "exChangeNeednum",
+    "name",
+    "icon",
+    "des",
+    "level",
+    "visible"
+  ],
+  "runeColumns": [
+    "id",
+    "quality",
+    "equipType",
+    "level",
+    "needExp",
+    "offerExp",
+    "levelUpID",
+    "exchangeID",
+    "exchangeNum",
+    "name",
+    "image",
+    "desc",
+    "exchangeVisible"
+  ],
+  "schemas": [
+    "dragon/pconfig/librarys/holyfire/LibHolyFireInfo.lua",
+    "dragon/pconfig/librarys/fuwen/LibFuwenInfo.lua"
+  ],
+  "unknown": [
+    "Server drop probabilities and actual acquisition responses",
+    "Server fusion settlement timing"
+  ]
+}

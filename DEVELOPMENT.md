@@ -460,3 +460,13 @@
 - 同一eligibility覆盖育龙塔孵化、幼龙安置、移动和选择页，神圣龙错误目的地显示需要神圣系龙巢。旧档已存在于匹配战斗元素巢的神圣龙保留并能读档，新移动/安置按源规则限制，未搬动或删除玩家的龙。
 - 验证：100项Node检查通过，包括全16条标记龙、普通l属性龙、容量/施工、真实move/hatch与旧档兼容；Electron隔离档点击神圣龙迁入、满巢拒绝、迁出腾位、远古火凤凰孵化入住、保存及独立重启通过。正式玩家档未用于测试。
 - 功能状态如实保留：布阵与装备穿脱/基础战力已可用，符文、宝石、装备强化/升星仍未完成，不把四系统称为已完成。
+
+## 最新检查点 — v0.16.19 装备强化与宝石祭坛运行时（2026-10-15）
+- 核实用户容量疑问：普通大型元素巢4条；原100魔晶神圣/传奇巢capacity均1，保持原值。
+- 原NewEquipEnhancePanel读取nextGradeID/enhancedCost，part0–3使用stonemoney、part4用wing、part5用crystal，现接原强化窗口与1/10次按钮。费用逐级读取源表、原子扣料、保留装备实例ID/所有者/星级，属性和队伍战力同步。10连末级不足10步按实际剩余步数，服务端结算不可核实，记离线顺序应用源等级表。
+- 导出原godfire360行与fuwen246行及原godfireicon图集。宝石ui_rune+item_rune_left/right、item_holyfire_info与panel_holyfire接原祭坛、背包、详情与吞噬页。按照RuneData明文规则：飞/爬各6槽、同类型替换、低品质不能覆盖高品质、未镶嵌背包150容量、吞噬低/同品质未镶嵌宝石，按eatexp+已有exp与nextlevel链升级。
+- 已镶嵌祭坛attack/defend/blood/crit/uncrit加入对应position的龙，装备和阵容显示一致。anti/unanti保留源定义但原战报演算尚未实现对应效果。
+- 存档兼容：v12添加可缺省的equipmentMaterials、gemInventory/gemSockets/nextGemId字段，缺省空库存和0材料，不向玩家发放测试物品。测试注入只在隔离档。符文仅导出数据，尚未接操作，不宣称完成。
+- 验证：全套Node通过；Electron隔离档真实点击单次/10次强化、扣材料、祭坛镶嵌、吞噬升级、保存和独立重启通过；截图work/equipment-enhance-qa.png、gem-altar-qa.png、gem-upgraded-qa.png已人工查看。
+- 尚缺：完整装备/宝石/材料正常获取、装备升星和随机词条、符文操作、宝石获取/兑换/抽取及原粒子。正常玩家如果空库存/0材料，不能仅凭新入口体验完整成长链，此缺口不能隐瞒。
+- 用户新增建筑需求：先保存本检查点，继续原SpeedUpPanel.openBuilding加速、扩建可摆放面积、源建筑模型/占地比例。扩建当前只有计数提升，没有实际扩展格子空间，是下一修复项。

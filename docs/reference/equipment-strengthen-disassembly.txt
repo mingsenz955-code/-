@@ -1,0 +1,97 @@
+SHA256 c786e5785de7c8324d1fb23a256574ba5274ddae3faf633e8d814c7ae4358efa
+Static Lua 5.1 disassembly. PCs and nested function indexes are zero-based. No code executed.
+
+FUNCTION 1
+CONSTANTS [1, "info", "part", 4, 5, "PlayerManager", "iWing", "iCrystal", "enhancedCost", "Gui", "floatText", "所需羽翼不足", "所需水晶不足", "nextGradeID", -1, "已达到最高等级", "DataManager", "getUserData", "stonemoney", "强化石不足"]
+0000 TEST A=0 B=0 C=1
+0001 JMP A=0 target=3
+0002 LOADK r0 1
+0003 GETUPVAL A=1 B=0 C=0
+0004 GETTABLE r1 r1["info"]
+0005 GETTABLE r1 r1["part"]
+0006 EQ A=1 r1 4
+0007 JMP A=0 target=13
+0008 GETUPVAL A=1 B=0 C=0
+0009 GETTABLE r1 r1["info"]
+0010 GETTABLE r1 r1["part"]
+0011 EQ A=0 r1 5
+0012 JMP A=0 target=62
+0013 GETUPVAL A=1 B=0 C=0
+0014 GETTABLE r1 r1["info"]
+0015 GETTABLE r1 r1["part"]
+0016 EQ A=0 r1 4
+0017 JMP A=0 target=23
+0018 GETGLOBAL r1 "PlayerManager"
+0019 GETTABLE r1 r1["iWing"]
+0020 CALL A=1 B=1 C=2
+0021 TEST A=1 B=0 C=1
+0022 JMP A=0 target=26
+0023 GETGLOBAL r1 "PlayerManager"
+0024 GETTABLE r1 r1["iCrystal"]
+0025 CALL A=1 B=1 C=2
+0026 GETUPVAL A=2 B=0 C=0
+0027 GETTABLE r2 r2["info"]
+0028 GETTABLE r2 r2["enhancedCost"]
+0029 MUL r2 r2 r0
+0030 LT A=0 r1 r2
+0031 JMP A=0 target=48
+0032 GETUPVAL A=3 B=0 C=0
+0033 GETTABLE r3 r3["info"]
+0034 GETTABLE r3 r3["part"]
+0035 EQ A=0 r3 4
+0036 JMP A=0 target=42
+0037 GETGLOBAL r3 "Gui"
+0038 GETTABLE r3 r3["floatText"]
+0039 LOADK r4 "所需羽翼不足"
+0040 CALL A=3 B=2 C=1
+0041 JMP A=0 target=46
+0042 GETGLOBAL r3 "Gui"
+0043 GETTABLE r3 r3["floatText"]
+0044 LOADK r4 "所需水晶不足"
+0045 CALL A=3 B=2 C=1
+0046 LOADBOOL A=3 B=0 C=0
+0047 RETURN A=3 B=2 C=0
+0048 GETUPVAL A=3 B=0 C=0
+0049 GETTABLE r3 r3["info"]
+0050 GETTABLE r3 r3["nextGradeID"]
+0051 EQ A=0 r3 -1
+0052 JMP A=0 target=59
+0053 GETGLOBAL r3 "Gui"
+0054 GETTABLE r3 r3["floatText"]
+0055 LOADK r4 "已达到最高等级"
+0056 CALL A=3 B=2 C=1
+0057 LOADBOOL A=3 B=0 C=0
+0058 RETURN A=3 B=2 C=0
+0059 LOADBOOL A=3 B=1 C=0
+0060 RETURN A=3 B=2 C=0
+0061 JMP A=0 target=91
+0062 GETGLOBAL r1 "DataManager"
+0063 GETTABLE r1 r1["getUserData"]
+0064 CALL A=1 B=1 C=2
+0065 GETTABLE r1 r1["stonemoney"]
+0066 GETUPVAL A=2 B=0 C=0
+0067 GETTABLE r2 r2["info"]
+0068 GETTABLE r2 r2["enhancedCost"]
+0069 MUL r2 r2 r0
+0070 LT A=0 r1 r2
+0071 JMP A=0 target=78
+0072 GETGLOBAL r3 "Gui"
+0073 GETTABLE r3 r3["floatText"]
+0074 LOADK r4 "强化石不足"
+0075 CALL A=3 B=2 C=1
+0076 LOADBOOL A=3 B=0 C=0
+0077 RETURN A=3 B=2 C=0
+0078 GETUPVAL A=3 B=0 C=0
+0079 GETTABLE r3 r3["info"]
+0080 GETTABLE r3 r3["nextGradeID"]
+0081 EQ A=0 r3 -1
+0082 JMP A=0 target=89
+0083 GETGLOBAL r3 "Gui"
+0084 GETTABLE r3 r3["floatText"]
+0085 LOADK r4 "已达到最高等级"
+0086 CALL A=3 B=2 C=1
+0087 LOADBOOL A=3 B=0 C=0
+0088 RETURN A=3 B=2 C=0
+0089 LOADBOOL A=3 B=1 C=0
+0090 RETURN A=3 B=2 C=0
+0091 RETURN A=0 B=1 C=0

@@ -1,3 +1,4 @@
+import {gemBonus} from './gems.mjs';
 import {equipmentBonus,equipmentOfDragon} from './equipment.mjs';
 import {ORIGINAL_DRAGON_ATK} from '../assets/original/data/battle.mjs';
 import {SPECIES} from './data.mjs';
@@ -23,16 +24,17 @@ export function dragonAttributes(dragon,state=null){
  const row=dragonCombatRow(species.originalId,species.quality);
  if(!row)return null;
  const level=Math.max(1,dragon.level??1);
+ const gems=state?gemBonus(state,dragon):{attack:0,defend:0,blood:0,crit:0,uncrit:0};
  const bonus=state?equipmentBonus(equipmentOfDragon(state,dragon.id)):{atk:0,def:0,hp:0};
- const attack=Math.floor(row.baseAttack+(level-1)*row.attackQuality)+bonus.atk;
- const defend=Math.floor(row.baseDefence+(level-1)*row.defenceQuality)+bonus.def;
- const life=Math.floor(row.baseLife+(level-1)*row.lifeQuality)+bonus.hp;
- return {attack,defend,life,quality:species.quality};
+ const attack=Math.floor(row.baseAttack+(level-1)*row.attackQuality)+bonus.atk+gems.attack;
+ const defend=Math.floor(row.baseDefence+(level-1)*row.defenceQuality)+bonus.def+gems.defend;
+ const life=Math.floor(row.baseLife+(level-1)*row.lifeQuality)+bonus.hp+gems.blood;
+ return {attack,defend,life,crit:gems.crit,uncrit:gems.uncrit,quality:species.quality};
 }
 
 export function dragonPower(dragon,state=null){
  const stats=dragonAttributes(dragon,state);
- return stats?Math.floor(stats.attack+stats.defend+stats.life/3):null;
+ return stats?Math.floor(stats.attack+stats.defend+stats.life/3+stats.crit+stats.uncrit):null;
 }
 
 // The client shows six slots per side; a ranch with fewer dragons simply leaves slots empty.

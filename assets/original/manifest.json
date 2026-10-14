@@ -36413,6 +36413,806 @@
       "texture": "assets/res/skills/magic_base1.pkm",
       "conversion": "static numeric source skeleton and all clips; easing pending comparison",
       "sha256": "ecb0d438a6fefcd069190515690aff8c80f039da24bc98382666fc7e37b81bb8"
+    },
+    "ui/gem0011.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0011.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "919e43ea21eb93c6b12a3485e786ed277c6236680d42ec99d2b1217c6f3a91bb"
+    },
+    "ui/gem0011_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0011_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "30b4e45710baa9a6690d4a3c9aab35b2ae4fb9475d38b07c86e48d04c45c4465"
+    },
+    "ui/gem0012.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0012.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "457992d8d38746e058744f58ab157554418d8fdffbda63b0bfc3cf40791e268c"
+    },
+    "ui/gem0012_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0012_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "97105c1f6c82011d378c01502012ee18d0157096bd61ccb49d46da71a4d972b5"
+    },
+    "ui/gem0013.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0013.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "e23767c5e8282503a97f71227fa6aada9fcbc582fe02dabbcc858f643c215db5"
+    },
+    "ui/gem0013_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0013_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "e1ffdf1c250635c21f5b4921b54b35094f1c1211a909a581a57ec0a1b80125a5"
+    },
+    "ui/gem0014.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0014.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "40b8cd764bbd9b5155db53c00662bc13d8c39244e34fa0297cee14fdcee5ec69"
+    },
+    "ui/gem0014_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0014_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "20852b7653b6c16f3ea8a1fce8bd8080aeeafb2ca2414f3cf24725fe8507fa75"
+    },
+    "ui/gem0015.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0015.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "28065581b73bc5585624a67cf9597472da239f4d6a99715f4042501f30e72760"
+    },
+    "ui/gem0015_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0015_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "b069ae712afd660489ae174b082f14304b08e8d9eb629db5718ac72128ea0c9a"
+    },
+    "ui/gem0021.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0021.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "26fd3f985d3c29805e85310e4f34a845a1d031d4f0126f5a4341ea0830395cd7"
+    },
+    "ui/gem0021_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0021_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "73373f66e8fe7bf3ce8d609af0444af470a5745ccd3d677f219cad94674ebd57"
+    },
+    "ui/gem0022.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0022.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "19c5309a6b352e5b597c671e6841ee36c45baafb7c5fcb50bd39433e35dd09ea"
+    },
+    "ui/gem0022_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0022_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "626bf77703bcc88ba2f8d5fd3eaba1f095bebd4b46a6ad31fa35b176355fdcb9"
+    },
+    "ui/gem0023.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0023.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "5b2122dc1428066333de9f28393ab21cf3aaca1dbc226c7f51653cd8f9094909"
+    },
+    "ui/gem0023_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0023_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "84cab5a066152d3c890850a3faf8f8e3d2b90422a9f60f82058c8b324895282b"
+    },
+    "ui/gem0024.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0024.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "162518fdea8794843be52964ec58a53379c8d644e217f0c10622bbaf3cc2ea24"
+    },
+    "ui/gem0024_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0024_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "3a7d2e808878dfa555d4cdc38d9341f0f207800e887e68fcf5f1b9566c17f720"
+    },
+    "ui/gem0025.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0025.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "75d08b4fee9f7346093b412c632b83951241364c653c45a9dba08122ef8fc890"
+    },
+    "ui/gem0025_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0025_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "aba9ddde438314d2f6d4ed970e5a0d92184e0f47883e62ccf0f1c5c600640d62"
+    },
+    "ui/gem0031.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0031.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "496ab85ec97611fc55ec0adced31de6a4f7d6d0d55b6e37527113d7378ef4c1b"
+    },
+    "ui/gem0031_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0031_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "9b85067e72a59ba200f68f45fc1ce3e647c3e634693dd381f1f517e805ecc518"
+    },
+    "ui/gem0032.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0032.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "a7709f322f7e06bc62b0a7e1557f1f553c26662f9b12edee044987519caff87f"
+    },
+    "ui/gem0032_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0032_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "5076d443a64e076ebc82df429c1daf5c38507bcb70c72b2b403ce9d91fb501b2"
+    },
+    "ui/gem0033.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0033.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "963661daa162ae6dc20910a5ab99b5c1568c16465ccc1d62dcf24512cb2c5bed"
+    },
+    "ui/gem0033_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0033_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "20543da39c451191a9475a0e67b09a72eeb54274fbb871f3fef180e2b0778a00"
+    },
+    "ui/gem0034.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0034.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "d9de01092ad3bc675ca07eba9b300b33d07e4fa41d3527c2cdac23805098c3fa"
+    },
+    "ui/gem0034_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0034_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "1637161477ef74c5354067a2f9223db82ce2764a7d0123f45a3511b696ede40f"
+    },
+    "ui/gem0035.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0035.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "2b356fe07c1171c5e48022495cea11b28bfc5db8fd97fb6f60cbaf85258be690"
+    },
+    "ui/gem0035_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0035_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "e3327d9e68424feef6f4b8568f9dac0d33aedc20b6a7e565a6a33a7343c30bfd"
+    },
+    "ui/gem0041.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0041.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "a57e54fae33a2980acf6a4a584a7e672ceb5e45c9c123a18d6de2fbb02c98ce2"
+    },
+    "ui/gem0041_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0041_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "dbc72c780c5ac5accb6f294a8c09a9dc48ee7fb2d2893bf842d73faa9eadfee7"
+    },
+    "ui/gem0042.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0042.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "e6b2718724920b43ef0fed1652f89fbacda7463524490239132b75680639b2af"
+    },
+    "ui/gem0042_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0042_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "7d6acde139def37725b636e207bc1df51f7129f9923f6c9270d211a0a3c579e8"
+    },
+    "ui/gem0043.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0043.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "b3296f1705872b3c1ad31c4f68bb37c305d093ee75f2db78ab92e5ec567d4b8e"
+    },
+    "ui/gem0043_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0043_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "23f8b62455a7aad273ed917bdf8e1e14b132d54cf97e6ed5bf828bbe301057fa"
+    },
+    "ui/gem0044.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0044.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "cd8f8788010e336f07b655f4e56ae1a1539772b9d0d80eaf88ff41db61bcc9f5"
+    },
+    "ui/gem0044_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0044_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "e436aae906aaf9fcfa04f087236797c4bb5e3eb5a63f9621dd6fec6c49ba980c"
+    },
+    "ui/gem0045.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0045.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "6cf1d629f87e4e8ac46073acd85bdcca914f8335229ddb6cebdf2f718930ae35"
+    },
+    "ui/gem0045_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0045_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "a86fc2b2244e899a1e550c77828f0443ec5e8217c98b3c99b27e98c45be28eb8"
+    },
+    "ui/gem0051.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0051.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "ee18dfef3828012aabe086cfa5fd2094aea7324129f2db14cba5a8c772808eff"
+    },
+    "ui/gem0051_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0051_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "40de208f3e1f24ade0a29c280b231d56d7aa5f73ece16ffc41803b129cd4c00d"
+    },
+    "ui/gem0052.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0052.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "9865215760b513b18aad8dc5ba5927562ba2579ea720b28795c3a0cb2481e3da"
+    },
+    "ui/gem0052_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0052_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "0729eaab7c3c53a86c108d763774ac12c10602ee9c34f6bb27c2aed63cfe711c"
+    },
+    "ui/gem0053.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0053.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "af52a8508b5624305fbb5b162e170c083a64fb90b3f8e41dd0d8141264c36342"
+    },
+    "ui/gem0053_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0053_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "adaca8c11bbce4d207bcbcb7eeaa19c20c530a7a9bf3f817204e23ee77a948e6"
+    },
+    "ui/gem0054.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0054.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "1874a2e5bea1a3ac88a02ee35c382dca90911c60a28738d0618378a72fb9cf72"
+    },
+    "ui/gem0054_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0054_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "ea1c80f2b481f32fb8f80433c95ff886ca50e230158685060209cdef708979a2"
+    },
+    "ui/gem0055.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0055.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "4f13f7032e17d018aa1cc06495451186a2d63f50081555b4bf37422f68b50858"
+    },
+    "ui/gem0055_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0055_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "e44dcdec41b4fae49e1e4b6a73bb466df0952441ab3ed2170153e446f730c878"
+    },
+    "ui/gem0061.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0061.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "a93ee63ebafdaa6c281551e1265a7b9913d893507993a06113af697c80aa5e9c"
+    },
+    "ui/gem0061_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0061_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "21ab56576aee0c6105dc667ce355a72a5f05759d9b27bb4fd90c8ceca7678ca6"
+    },
+    "ui/gem0062.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0062.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "68ad4100f62dbef91ee58361941fa1efb27bf826613ca60d47af6a035c0db9bc"
+    },
+    "ui/gem0062_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0062_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "deb236929054b59ca84b743d0b941151c3505ec21a6503d62f7eac8d35af256a"
+    },
+    "ui/gem0063.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0063.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "91013ba33394e01bbdbc092f6fc84a094ecb2df849d221e8be38161be73fa777"
+    },
+    "ui/gem0063_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0063_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "ff757ea59f735d0fcca9fd191c79996261f9617427890f7144de545228afd329"
+    },
+    "ui/gem0064.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0064.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "f229e4c8da356c5f6c32946007c04c256748e13a0808d719afc854fd49ceba2d"
+    },
+    "ui/gem0064_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0064_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "6a817a4a5f8adbf1eb7f84b6805007ec6020ca65ebbbef9e3a1570037ee22e53"
+    },
+    "ui/gem0065.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0065.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "f5c10099e6f3446c66ceece591257fec60cdc3970f655781f27716b51fd25f50"
+    },
+    "ui/gem0065_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0065_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "c8e5b18f908feb63b5014e8d22251383e278f30b4cb59dd25682f5ae163d203c"
+    },
+    "ui/gem0071.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0071.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "1410919cc895ea0d3e2b9e9b61265b3e7fffc11827d8f0612a7395fd1a63ece9"
+    },
+    "ui/gem0071_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0071_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "efb8543c4c7c9bc3ffba29e4cdd754b529d242501b84731e9f8300fda78c99e5"
+    },
+    "ui/gem0072.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0072.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "4ec9fce3f9977a322139ce0c1695e3acb6dfb53ea01af194352ad3b8ce536057"
+    },
+    "ui/gem0072_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0072_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "bba6db75e14bfd22fac1dc90240c73477d5692470a295c2f9f6eec3eab0fa0f6"
+    },
+    "ui/gem0073.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0073.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "c865ee7022d15b0bf2af348e50850fe8d7b9e20ff73ba1f1bf85d5fdb4505587"
+    },
+    "ui/gem0073_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0073_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "93fee297126e2a21009b73cb3063f9d1c55462c9ab16e3aaf33de813b8149679"
+    },
+    "ui/gem0074.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0074.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "ad7a234a3b3f424a6513f5541db1e7a6cf7129dad87db5a5bbe02fade13f0c64"
+    },
+    "ui/gem0074_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0074_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "89842be8ee9a2796d156b1e0a796446158016203a92055da3ee566d7e755f1d1"
+    },
+    "ui/gem0075.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0075.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "d8b6f063b464d669f4d29a57a35a91d77c1a5ecea0421dc8207083834374530e"
+    },
+    "ui/gem0075_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0075_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "fe76e792aa8d5610e2732fc43c96116a2c84a24b2efdffe9e3b2e0d6231b062f"
+    },
+    "ui/gem0081.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0081.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "c43cadd2f05cda8b2693eb7894690b6d2ab52fb1e9932d18ba142b0ebd120c82"
+    },
+    "ui/gem0081_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0081_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "534615b5702eb2d99090a7d9ead496d575d89cf405da7505dc7cad11149a4350"
+    },
+    "ui/gem0082.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0082.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "4fb2ce276fc348ce0e74eb10ad820627acc180d2b93731327523596a9a018618"
+    },
+    "ui/gem0082_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0082_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "f2d5d8904285d560a1c31a3da1bcd0a45665680a7ba70daf33b88b7326f0e1d9"
+    },
+    "ui/gem0083.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0083.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "21b6d2985364bad8ed4c28a66eb2f6ea3f0365edc98d8cbbfc1e66326c924a45"
+    },
+    "ui/gem0083_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0083_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "dd0fe7fef6c2ba2fc28dc7b017370652d41e21d3c060e70e8f25b4ee6111de77"
+    },
+    "ui/gem0084.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0084.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "bbeae5e5a0a124922c671beb52998970befaaea36ed42493dd95e9c8a79f4f0d"
+    },
+    "ui/gem0084_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0084_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "2017e60f185d058738192869f7b5ef74537bfb23adf7dc9b8fcd7b2e681665dc"
+    },
+    "ui/gem0085.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0085.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "a0efa39ed8c13488aab6cf6ff15ef0b56d873e6cd668ce841c1abaf9f4ea73dd"
+    },
+    "ui/gem0085_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0085_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "ab5a8a73f85bbbb772d3bfe418e3222fd36ec3e1451bc47d81759ae8414b0bc9"
+    },
+    "ui/gem0091.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0091.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "7e2c099970caee32baa090e2f06456242b7bf38145eca1a57398a64094a14be5"
+    },
+    "ui/gem0091_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0091_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "9943c1682c613471f484950c9732dc226b054a930af11095a79917cdf0ef6595"
+    },
+    "ui/gem0092.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0092.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "a0f2e15754d8b87d414eec5dfabaf4406a4e6bc64f24dbc251ecde42bd199a26"
+    },
+    "ui/gem0092_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0092_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "ef74a7d9c15cab10f4eb0d6b0a49dd8f5bf726432a7e455fec51bc2feb843039"
+    },
+    "ui/gem0093.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0093.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "75962afec055fce27fe8fc54e1ca0558c214b302cba9d08fe49bab84a8ef93a7"
+    },
+    "ui/gem0093_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0093_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "a82c52eeb57ea0f9b783c886822a94c13a10ea7ce69d80ceefba5f50e969d836"
+    },
+    "ui/gem0094.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0094.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "08252cee2f28aedb7778b4080b4c14719861dca3901af953d5d6f50433dfa34e"
+    },
+    "ui/gem0094_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0094_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "a6be59fd5320cb04f33e20e75aaad307562792f488d9134de4b4cab7130358d3"
+    },
+    "ui/gem0095.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0095.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "4935608f02515cc97bcde7ea0a05ae04b2ea678e95a7a383882be281e59ee10f"
+    },
+    "ui/gem0095_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0095_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "8910988e3c138784d6e3ef9f54d1043b3d4142a445564f150e37e77aad573a99"
+    },
+    "ui/gem0101.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0101.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "c3db4c75aa551a902eade8d97ce6f53546eee3ddeb675709366c7baf31f770e7"
+    },
+    "ui/gem0101_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0101_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "5493aa333f77c021eada6e8c37bbc8a23a0cbdafb7cc7d371771da083d3f1fe6"
+    },
+    "ui/gem0102.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0102.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "b5532ee4137c21674e3f0a068dcc78d7b52fd1405f34ccf1c0b5033b55c5917f"
+    },
+    "ui/gem0102_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0102_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "44d7561b18a3a94bed244e25376c7db6aa27ac9b6efb38225453e2c6f6dd9d48"
+    },
+    "ui/gem0103.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0103.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "9c90f834d772f0a15a98018cdd2c5156286b5c543c4b70e969ccdecbbf8b4f8e"
+    },
+    "ui/gem0103_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0103_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "09d7ac5e221f4db5f57cb6bd254876d778a1b555640682f36541767ab1da90bb"
+    },
+    "ui/gem0104.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0104.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "e6c8e5f614f76bde8f9c8bff3b43045d0581aef4025c0fae88b4b72953759ace"
+    },
+    "ui/gem0104_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0104_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "57435b321313fe1ade4949229b345827e8c7f1e714a159909d6ef9f5c7173a2d"
+    },
+    "ui/gem0105.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0105.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 84,
+      "height": 84,
+      "sha256": "e6758bc976f6b2bea2bc74e85f8aeaeb96e7940a51a51e890ff3ede02168557d"
+    },
+    "ui/gem0105_b.png": {
+      "archive": "assets/res/godfireicon/godfireicon.plist",
+      "frame": "gem0105_b.png",
+      "texture": "assets/res/godfireicon/godfireicon.pkm",
+      "width": 144,
+      "height": 144,
+      "sha256": "a19ab69fd159295a00a11e29387fca922f13505dd617401f338296abccdbba55"
     }
   }
 }

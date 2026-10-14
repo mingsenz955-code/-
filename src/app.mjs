@@ -1,5 +1,6 @@
+import {openGemDialog,openGemInfo,openGemUpgrade} from './gem-dialog.mjs';
 import {openWarehouse,chooseWarehouseDragon} from './warehouse-dialog.mjs';
-import {openEquipDialog,openEquipInfoDialog,openEquipChangeDialog,openEquipSourceDialog} from './equip-dialog.mjs';
+import {openEquipDialog,openEquipInfoDialog,openEquipChangeDialog,openEquipSourceDialog,openEquipEnhanceDialog} from './equip-dialog.mjs';
 import {openAdventureDialog} from './adventure-dialog.mjs';
 import {openRechargeDialog,openVipThresholds} from './recharge-dialog.mjs';
 import {resourceShopRow} from './resource-shop.mjs';
@@ -91,13 +92,15 @@ document.addEventListener('click',async e=>{
   if(type==='dragonMove'){selected=id;await openHabitatShop(state,{moveDragon:state.dragons.find(d=>d.id===id)});return}
   if(type==='returnMoveDragon'){await openDragonDialog(state,id);return}
   if(type==='openEquip'){await openEquipDialog(state,Number.isSafeInteger(id)&&state.dragons.some(d=>d.id===id)?id:selected,{returnToDragon:false});return}
+  if(type==='openEquipEnhance'){await openEquipEnhanceDialog(state,el.dataset.id);return}
+  if(type==='enhanceEquipment'){await persist(action(state,'enhanceEquipment',{equipmentId:el.dataset.id,count:Number(el.dataset.value)}));render();await openEquipEnhanceDialog(state,el.dataset.id);toast(state.log[0]);return}
   if(type==='openEquipInfo'){await openEquipInfoDialog(state,el.dataset.id,{dragonId:Number($('#modal').dataset.dragonId)||null});return}
   if(type==='equipChange'){await openEquipChangeDialog(state,Number($('#modal').dataset.dragonId),el.dataset.id);return}
   if(type==='equipSource'){await openEquipSourceDialog();return}
   if(type==='equipSelect'){const d=$('#modal');d.dataset.selectedEquipment=el.dataset.id;await openEquipDialog(state,Number(d.dataset.dragonId));return}
   if(type==='wearEquipSelected'){const d=$('#modal'),dragonId=Number(d.dataset.dragonId),equipmentId=d.dataset.selectedEquipment;if(!equipmentId){toast('请先在右侧选中一件未装备的装备。');return}const item=equipmentInstance(state,equipmentId);if(!item){toast('找不到这件装备。');return}const part=definitionPart(item);if(part!==Number(el.dataset.value)){toast(`这件装备属于${EQUIPMENT_SLOTS[part]??'未知'}部位，请点对应槽位。`);return}const next=action(state,'wearEquipment',{id:dragonId,equipmentId});await persist(next);render();delete d.dataset.selectedEquipment;await openEquipDialog(state,dragonId);toast(state.log[0]);return}
   if(type==='equipTab'){toast(el.dataset.value==='frag'?'装备碎片尚未接入，当前只有装备列表。':'当前已显示未装备的装备。');return}
-  if(type==='unverifiedEquip'){toast('装备的更换、强化、升星与原版获取来源尚未实现。');return}
+  if(type==='unverifiedEquip'){toast('装备升星、一键装备与完整获取途径仍在开发。');return}
   if(type==='openRecharge'){await openRechargeDialog(state);return}
   if(type==='rechargeVip'){await openVipThresholds(state);return}
   if(type==='resourceShop'){await openResourceShop(state);return}
@@ -105,6 +108,11 @@ document.addEventListener('click',async e=>{
   if(type==='resourceShopFood'){await openResourceShop(state,{type:'f'});return}
   if(type==='buyResource'){const offer=resourceShopRow(id);if(!offer){toast('这个商品尚未开放。');return}const kind=$('#modal')?.dataset.resourceKind||null;if(state.gems<offer.priceGems){toast(`魔晶不足，还差 ${offer.priceGems-state.gems} 魔晶。`);await openRechargeDialog(state);return}const next=action(state,'buyResource',{id});await persist(next);render();await openResourceShop(state,{type:kind});toast(state.log[0]);return}
   if(type==='openAdventure'){await openAdventureDialog(state);return}
+  if(type==='openGems'||type==='gemTab'){await openGemDialog(state,el.dataset.value||'land');return}
+  if(type==='gemInfo'){await openGemInfo(state,el.dataset.id,$('#modal').dataset.gemTab||'land');return}
+  if(type==='gemUpgrade'){await openGemUpgrade(state,el.dataset.id,$('#modal').dataset.gemTab||'land');return}
+  if(type==='gemFeedSelect'){el.classList.toggle('is-selected');return}
+  if(['insertGem','removeGem','fuseGem'].includes(type)){const tab=$('#modal').dataset.gemTab||'land',materials=Array.from($('#modal').querySelectorAll('.gem-feed-list .is-selected')).map(v=>v.dataset.id);await persist(action(state,type,{gemId:el.dataset.id,tab,materials}));render();await openGemDialog(state,tab);toast(state.log[0]);return}
   if(type==='openFormation'){await openFormationDialog(state);return}
   if(type==='formationSlot'){await openFormationDialog(state,id);return}
   if(type==='formationPick'){await openFormationPicker(state,id);return}

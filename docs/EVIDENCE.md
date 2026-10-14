@@ -204,3 +204,8 @@
 ## E05 v0.16.18 神圣龙巢分类
 - DragonElement.lua构造器函数2将isLegen设置为config.legen==1，函数26 getFullType对标记龙补l；Base.lua函数57显示getFullType匹配龙巢element_type，且isLegen额外要求巢为l。两份静态反汇编和源SHA256保存至reference/dragon-habitat-type-disassembly.txt与habitat-acceptance-disassembly.txt。
 - catalog.original.legen覆盖16条神圣/远古龙，包含extended.isLegend=0的神圣中国龙，因此不能用扩展表isLegend或品质色简单替代。building40原售价100魔晶、element_type=l、capacity=1、建造7200秒不变。
+
+## E05 v0.16.19 强化与宝石
+- NewEquipEnhancePanel函数1静态指令确认enhancedCost×请求次数及强化石/羽翼/水晶分类，全文见reference/equipment-strengthen-disassembly.txt。等级属性/升级目标来自equipinfo；多次实际服务器结算仍缺，离线逐行执行并扣源费用。
+- RuneData/RuneInsertPanel/RuneMixPanel为明文，确认两组各6槽、背包150、同类型按品质覆盖、吞噬未镶嵌低/同品质宝石及eatexp+exp、levelupexp/nextlevel。导出源godfire/fuwen与图集复现脚本export-progression.py，数据哈希见progression-provenance.json。
+- 符文fuwen与宝石godfire为不同系统，当前只接宝石运行时。获取概率和材料来源尚未取得完整服务器证据，不发假奖励。

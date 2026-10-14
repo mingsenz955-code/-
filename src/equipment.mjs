@@ -81,3 +81,12 @@ export function equipmentLabel(instance){
  const definition=equipmentDefinition(instance?.type);
  return definition?`${definition.name}${definition.grade>1?` +${definition.grade-1}`:''}`:'';
 }
+export const EQUIPMENT_MATERIAL_NAMES={stone:'强化石',wing:'羽翼',crystal:'水晶'};
+export function equipmentEnhancePlan(instance,count=1){
+ if(![1,10].includes(count))throw new Error('强化次数无效。');
+ let info=equipmentDefinition(instance?.type);if(!info)throw new Error('找不到这件装备。');
+ const material=info.part===4?'wing':info.part===5?'crystal':'stone';let cost=0,steps=0;
+ for(let i=0;i<count;i++){const next=equipmentUpgradeTarget(info.id);if(!next)break;cost+=info.enhancedCost;info=next;steps++;}
+ if(!steps)throw new Error('已达到最高强化等级。');
+ return {type:info.id,material,cost,steps,definition:info};
+}

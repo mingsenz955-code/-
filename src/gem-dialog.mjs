@@ -1,0 +1,27 @@
+import {sourceLayout,showSource,esc} from './ranch-dialogs.mjs';
+import {renderSourceLayout} from './source-layout.mjs';
+import {gemItem,gemDefinition,gemSocket,gemBonus,GEM_ATTRS} from './gems.mjs';
+const picture=d=>`<img class="source-gem-icon" src="assets/original/ui/${d.icon}.png" alt="${esc(d.name)}">`;
+function cell(layout,item,action='gemInfo'){const d=gemDefinition(item.type);return `<button class="source-gem-cell" data-action="${action}" data-id="${item.id}" aria-label="${esc(d.name)} Lv${d.level}">${renderSourceLayout(layout,{values:{tx_lv:`Lv${d.level}`,txt_num:''},hidden:new Set(['selected','add']),slots:{icon_long:picture(d),xiangkuang:`<img class="source-gem-icon" src="assets/original/ui/ui_daojukuang_DaoJuKuang${d.quality}.png" alt="">`}})}</button>`}
+export async function openGemDialog(state,tab='land'){
+ const [layout,left,right,card]=await Promise.all(['ui_rune','item_rune_left','item_rune_right','item_big_touxiang'].map(sourceLayout)),values={},slots={},bonus=gemBonus(state,{species:tab==='air'?'ember':'leaf'}),start=tab==='air'?6:0;
+ const leftValues={'hint_buff':'', 'hint_hp/num':bonus.blood,'hint_atk/num':bonus.attack,'hint_def/num':bonus.defend,'hint_critical/num':bonus.crit,'hint_resist/num':bonus.uncrit,'hint_power/num':Math.floor(bonus.attack+bonus.defend+bonus.blood/3+bonus.crit+bonus.uncrit)};
+ for(let i=1;i<=6;i++){const item=gemItem(state,state.gemSockets[start+i-1]),d=item?gemDefinition(item.type):null;slots[`bg_six/icon${i}/icon`]=item?`<button class="source-gem-socket" data-action="gemInfo" data-id="${item.id}">${picture(d)}</button>`:'';leftValues[`bg_six/icon${i}/level`]=d?String(d.level):'';if(!item)slots[`bg_six/icon${i}/level_bg`]=''}
+ const loose=state.gemInventory.filter(v=>gemSocket(state,v.id)<0),leftHtml=renderSourceLayout(left,{values:leftValues,slots,hidden:new Set([tab==='air'?'bg_earth':'bg_sky']),checked:new Set([tab==='air'?'btn_sky/btn':'btn_earth/btn']),actions:{'btn_sky/btn':{type:'gemTab',value:'air',label:'飞行祭坛'},'btn_earth/btn':{type:'gemTab',value:'land',label:'爬行祭坛'}}});
+ const rightHtml=renderSourceLayout(right,{values:{shuliang:`${loose.length}/150`,xuanze_miaoshu:'点击宝石进行操作','guanbi/txt_name':'获取宝石'},slots:{huadong_xiao:`<div class="source-gem-inventory">${loose.map(v=>cell(card,v)).join('')}</div>`}});
+ const d=showSource('sourceGems',renderSourceLayout(layout,{values:{txt_name:'祭坛镶嵌'},actions:{close:{type:'close',label:'关闭宝石'}}})+`<div class="source-gem-left">${leftHtml}</div><div class="source-gem-right">${rightHtml}</div>`);d.dataset.gemTab=tab;
+}
+export async function openGemInfo(state,id,tab='land'){
+ const item=gemItem(state,id),info=gemDefinition(item?.type);if(!info)throw new Error('找不到这颗宝石。');
+ const layout=await sourceLayout('item_holyfire_info'),attrs=Object.entries(GEM_ATTRS).filter(([k])=>info[k]>0),values={title:'宝石信息',tx_name:info.name,tx_level:`Lv${info.level}`,'shuxing1/miaoshu':'品质：','pingding/miaoshu':'战斗力：','pingding/shuzi':Math.floor(info.attack+info.defend+info.blood/3+info.crit+info.uncrit),'jindu/txt_shuzi':`${item.exp}/${info.levelupexp}`,'btn_zhuangbei/txt_name':'镶嵌','btn_xiexia/txt_name':'卸下','btn_shengji/txt_name':'升级'},hidden=new Set([gemSocket(state,id)>=0?'btn_zhuangbei':'btn_xiexia']);
+ for(let i=0;i<2;i++){const row=attrs[i],key=`shuxing${i+2}`;if(!row){hidden.add(key);continue}values[`${key}/miaoshu`]=row[1]+'：';values[`${key}/shuzi`]='+'+info[row[0]]}
+ const d=showSource('sourceGemInfo',renderSourceLayout(layout,{values,hidden,slots:{icon:picture(info),'shuxing1/biaoji':`<img class="source-gem-quality" src="assets/original/ui/ui_pinzhi_${['','d','c','b','a','s'][info.quality]}.png" alt="">`},actions:{close:{type:'gemTab',value:tab,label:'返回祭坛'},'btn_zhuangbei/btn':{type:'insertGem',id,label:'镶嵌宝石'},'btn_xiexia/btn':{type:'removeGem',id,label:'卸下宝石'},'btn_shengji/btn':{type:'gemUpgrade',id,label:'升级宝石'}}}));d.dataset.gemTab=tab;
+}
+export async function openGemUpgrade(state,id,tab='land'){
+ const item=gemItem(state,id),info=gemDefinition(item?.type);if(!info)throw new Error('找不到这颗宝石。');
+ const [layout,card]=await Promise.all(['panel_holyfire','item_big_touxiang'].map(sourceLayout)),values={title:'宝石升级',tx_name:info.name,'tx_level/level':`Lv${info.level}`,'tx_level/levelup':'','xuanze_miaoshu':'选择要吞噬的宝石','quanxuan/miaoshu':'','jindu/txt_shuzi':`${item.exp}/${info.levelupexp}`,'btn_shengji/txt_name':'吞噬升级','pingding/miaoshu':'战斗力：','pingding/shuzi':Math.floor(info.attack+info.defend+info.blood/3+info.crit+info.uncrit)},slots={icon:picture(info)},hidden=new Set(['quanxuan','tx_level/hint_levelup','pingding/hint_levelup','pingding/shuzi_levelup']);
+ const attrs=Object.entries(GEM_ATTRS).filter(([key])=>info[key]>0);
+ for(let i=0;i<2;i++){const row=attrs[i],key=`shuxing${i+2}`;if(!row){hidden.add(key);continue}values[`${key}/miaoshu`]=row[1]+'：';values[`${key}/shuzi`]='+'+info[row[0]];hidden.add(`${key}/hint_levelup`);hidden.add(`${key}/shuzi_levelup`)}
+ const choices=state.gemInventory.filter(v=>v.id!==id&&gemSocket(state,v.id)<0&&gemDefinition(v.type).quality<=info.quality);slots.huadong_xiao=`<div class="source-gem-inventory gem-feed-list">${choices.map(v=>cell(card,v,'gemFeedSelect')).join('')}</div>`;
+ const d=showSource('sourceGemUpgrade',renderSourceLayout(layout,{values,slots,hidden,actions:{close:{type:'gemInfo',id,label:'返回宝石'},'btn_shengji/btn':{type:'fuseGem',id,label:'吞噬选中宝石'}}}));d.dataset.gemTab=tab;
+}
