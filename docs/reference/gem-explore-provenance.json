@@ -1,0 +1,22 @@
+{
+  "tablesSha256": "1408d684c2a6530668a8ed4816ad1697d579077fed5d02b887d06f035395e750",
+  "sources": {
+    "ui/rune/RuneLotteryPanel.lua": "bae0aab6b2539e0cf6bc9ff27a02a646761a050e409b9739ebb1e1ff3d3d6a23",
+    "ui/rune/RuneLotteryEffectPanel.lua": "259e2cb32625aa1ef595d703b789f672d0655a0b642529db712184ce344ff2a6",
+    "dragon/data/clientdatas/RuneData.lua": "2ee998a4d381118e8b4133e8042eb2eec1046041a250241ca05595630995e449"
+  },
+  "policy": "offline-source-weighted-gem-v1",
+  "directEvidence": [
+    "RuneData costs20/200,80/720,200/1800; CDs600/86400/259200; capacity150",
+    "RuneLotteryPanel free low count display5, token-first mixed ten cost, server getRune type0/1/2",
+    "ui_rune_lottery + item_rune_lottery world y=-50; result panel_rune_lottery_effect",
+    "Middle/high ten-draw source labels guarantee blue/purple"
+  ],
+  "unverified": [
+    "9000001/2/3 mapped to low/normal/high by matching quality ranges, not proven server mapping",
+    "randgive fifth column interpreted as weight; each candidate pool sums1000000",
+    "Ten guarantee implemented by conditional weighted final draw, original server guarantee algorithm unknown",
+    "Offline initial free cooldown ready; five low freebies reset UTC+8 midnight; server initial/daily boundary unknown",
+    "Dragon ball normal earning and server dynamic pool overrides remain missing"
+  ]
+}

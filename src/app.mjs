@@ -1,3 +1,4 @@
+import {openGemExplore,openGemExploreResult} from './gem-explore-dialog.mjs';
 import {openRuneHunt,openShenfuDialog} from './rune-hunt-dialog.mjs';
 import {openRuneSelector,openRuneInfo,openRuneUpgrade,refreshRunePreview} from './rune-dialog.mjs';
 import {habitatMotionArea,startHabitatMotion} from './habitat-motion.mjs';
@@ -59,7 +60,7 @@ async function showAcquisition(id){const info=dragonAcquisition(id);if(!info)ret
 function render(){
  tab='ranch';$('#app').innerHTML=`<div class="app ranch-mode"><main class="main"><section class="scene" aria-label="牧场主区域">${ranch()}${originalHud(state,{expanded:moreExpanded})}</section></main></div>`;applyCamera();tick();
 }
-function tick(){const modal=$('#modal');if(!busy&&modal?.open&&modal.dataset.mode==='sourceShenfu'&&Number(modal.dataset.freeReady)>0&&Date.now()>=Number(modal.dataset.freeReady)){delete modal.dataset.freeReady;void openShenfuDialog(state)}document.querySelectorAll('[data-timer]').forEach(el=>el.textContent=time(Number(el.dataset.timer)));document.querySelectorAll('[data-ready]').forEach(el=>el.disabled=busy||Date.now()<Number(el.dataset.ready));document.querySelectorAll('[data-income]').forEach(el=>{const h=state.habitats.find(h=>h.id===Number(el.dataset.income));if(h)el.textContent=fmt(income(state,h))})}
+function tick(){const modal=$('#modal');if(!busy&&modal?.open&&modal.dataset.mode==='sourceGemExplore'&&Number(modal.dataset.freeReady)>0&&Date.now()>=Number(modal.dataset.freeReady)){delete modal.dataset.freeReady;void openGemExplore(state)}if(!busy&&modal?.open&&modal.dataset.mode==='sourceShenfu'&&Number(modal.dataset.freeReady)>0&&Date.now()>=Number(modal.dataset.freeReady)){delete modal.dataset.freeReady;void openShenfuDialog(state)}document.querySelectorAll('[data-timer]').forEach(el=>el.textContent=time(Number(el.dataset.timer)));document.querySelectorAll('[data-ready]').forEach(el=>el.disabled=busy||Date.now()<Number(el.dataset.ready));document.querySelectorAll('[data-income]').forEach(el=>{const h=state.habitats.find(h=>h.id===Number(el.dataset.income));if(h)el.textContent=fmt(income(state,h))})}
 async function persist(next){busy=true;saveStatus='正在保存…';if($('#save-status'))$('#save-status').textContent=saveStatus;try{await storage.save(next);state=next;saveStatus=`已保存 · ${new Date().toLocaleTimeString('zh-CN')}`;}catch(e){saveStatus='保存失败 · 请重试';throw e}finally{busy=false}}
 function closeDialog(){const d=$('#modal');d.close();d.className='';delete d.dataset.mode;delete d.dataset.returnToCollection;}
 async function showSettings(){const version=await window.ranch?.version?.().catch(()=>null);await openNativePaper('本地存档',`<p>御龙高手 <b>v${version??'未知'}</b>　操作后自动保存</p><div class="native-save-actions">${nativeButton('立即保存','save')}${nativeButton('导出存档','export')}${nativeButton('导入存档','import')}</div>`,'nativeSettings')}
@@ -129,6 +130,8 @@ document.addEventListener('click',async e=>{
   if(type==='resourceShopFood'){await openResourceShop(state,{type:'f'});return}
   if(type==='buyResource'){const offer=resourceShopRow(id);if(!offer){toast('这个商品尚未开放。');return}const kind=$('#modal')?.dataset.resourceKind||null;if(state.gems<offer.priceGems){toast(`魔晶不足，还差 ${offer.priceGems-state.gems} 魔晶。`);await openRechargeDialog(state);return}const next=action(state,'buyResource',{id});await persist(next);render();await openResourceShop(state,{type:kind});toast(state.log[0]);return}
   if(type==='openAdventure'){await openAdventureDialog(state);return}
+  if(type==='openGemExplore'){await openGemExplore(state);return}
+  if(type==='exploreGem'){const [mode,count]=el.dataset.value.split(':');await persist(action(state,type,{mode,count:Number(count)}));render();await openGemExploreResult(state,state.gemInventory.slice(-Number(count)),mode,Number(count));toast(state.log[0]);return}
   if(type==='openGems'||type==='gemTab'){await openGemDialog(state,el.dataset.value||'land');return}
   if(type==='gemInfo'){await openGemInfo(state,el.dataset.id,$('#modal').dataset.gemTab||'land');return}
   if(type==='gemUpgrade'){await openGemUpgrade(state,el.dataset.id,$('#modal').dataset.gemTab||'land');return}

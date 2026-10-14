@@ -1,0 +1,23 @@
+import UI_SIZES from '../assets/original/data/ui-sizes.mjs';
+import {sourceLayout,showSource,esc} from './ranch-dialogs.mjs';
+import {renderSourceLayout} from './source-layout.mjs';
+import {GEM_EXPLORE_MODES,gemExplorePlan,gemExploreStatus} from './gem-explore.mjs';
+import {gemDefinition} from './gems.mjs';
+const img=src=>`<img class="source-hunt-money" src="assets/original/ui/${src}.png" alt="">`;
+export async function openGemExplore(state){
+ const [layout,center]=await Promise.all(['ui_rune_lottery','item_rune_lottery'].map(sourceLayout)),h=gemExploreStatus(state),values={txt_name:'探索宝石','dragonball/diji':h.balls.low,'dragonball/zhongji':h.balls.normal,'dragonball/gaoji':h.balls.high,'mojing/num':state.gems},cv={'xiangqian/miaoshu':'镶嵌宝石'},actions={'xiangqian/btn':{type:'openGems',label:'镶嵌宝石'}},slots={},hidden=new Set(['txt1']);
+ for(const [mode,key] of [['low','chuji'],['normal','zhongji'],['high','gaoji']]){
+  const def=GEM_EXPLORE_MODES[mode],now=Date.now(),ready=h.last[mode]===null?0:h.last[mode]+def.cd*1000,free=(mode!=='low'||h.lowFree>0)&&now>ready;
+  cv[key+'/title_text']=def.name;cv[key+'/hint_free/miaoshu']='免费次数：';cv[key+'/hint_free/num']=`${h.lowFree}/5`;cv[key+'/hint_finish']='今日免费次数已用完';cv[key+'/hint_text']='免费抽取';cv[key+'/hint_time/miaoshu']='免费倒计时';cv[key+'/hint_time/num']='';
+  cv[key+'/hint_text2/miaoshu']='十连抽必得';cv[key+'/hint_text2/num']=mode==='normal'?'蓝色宝石':'紫色宝石';
+  if(mode==='low'){if(!free)hidden.add(key+'/hint_free');if(h.lowFree>0)hidden.add(key+'/hint_finish');if(free||h.lowFree===0)hidden.add(key+'/hint_time')}else{if(!free)hidden.add(key+'/hint_text');if(free)hidden.add(key+'/hint_time')}
+  if(!free&&ready>now)slots[key+'/hint_time/num']=`<span class="source-gem-countdown" data-timer="${ready}"></span>`;
+  for(const count of [1,10]){const n=count===1?'one':'ten';let plan;try{plan=gemExplorePlan(state,mode,count)}catch{plan={free:count===1&&free,balls:mode==='low'?(count===1?20:200):Math.min(count,h.balls[mode]),gems:mode==='low'?0:h.balls[mode]===0?(count===1?def.one:def.ten):Math.max(0,count-h.balls[mode])*def.one}}
+   cv[`${key}/${n}/num`]=plan.free?'免费':plan.gems&&plan.balls?`${plan.balls}+${plan.gems}`:plan.gems||plan.balls;cv[`${key}/${n}/btn_${n}/miaoshu`]=count===1?'探索一次':'探索十次';actions[`${key}/${n}/btn_${n}/btn`]={type:'exploreGem',value:`${mode}:${count}`,label:`${def.name}${count}次`};slots[`${key}/${n}/icon`]=img(plan.gems?'ui_lottery_08':mode==='low'?'ui_lottery_46':mode==='normal'?'ui_lottery_47':'ui_lottery_48');
+  }
+ }
+ // Client adds item_rune_lottery at world y=-50; normalize its root size first.
+ center.width=1024;center.height=768;
+ const dialog=showSource('sourceGemExplore',renderSourceLayout(layout,{values,actions:{close:{type:'openGems',label:'返回祭坛'}}})+`<div class="source-gem-explore-center">${renderSourceLayout(center,{values:cv,slots,hidden,actions})}</div>`,'native-fullscreen');const times=Object.entries(GEM_EXPLORE_MODES).filter(([k,v])=>(k!=='low'||h.lowFree>0)&&h.last[k]!==null&&h.last[k]+v.cd*1000>=Date.now()).map(([k,v])=>h.last[k]+v.cd*1000+1);if(times.length)dialog.dataset.freeReady=Math.min(...times);else delete dialog.dataset.freeReady;
+}
+export async function openGemExploreResult(state,items,mode,count){const layout=await sourceLayout('panel_rune_lottery_effect'),h=gemExploreStatus(state),def=GEM_EXPLORE_MODES[mode],balls=mode==='low'?(count===1?def.one:def.ten):Math.min(count,h.balls[mode]),gems=mode==='low'?0:balls===0?(count===1?def.one:def.ten):(count-balls)*def.one;showSource('sourceGemExploreResult',renderSourceLayout(layout,{values:{'quit/num':gems&&balls?`${balls}+${gems}`:gems||balls,'quit/btn_too/miaoshu':count===1?'再探一次':'再探十次','quit/btn_yes/miaoshu':'确认'},slots:{'quit/icon':img(gems?'ui_lottery_08':mode==='low'?'ui_lottery_46':mode==='normal'?'ui_lottery_47':'ui_lottery_48')},actions:{'quit/btn_too/btn':{type:'exploreGem',value:`${mode}:${count}`,label:'再次探索'},'quit/btn_yes/btn':{type:'openGemExplore',label:'确认'}}})+`<div class="source-gem-source-results">${items.map((v,i)=>{const d=gemDefinition(v.type),x=items.length===1?0:i%5*125-250,y=items.length===1?0:80-Math.floor(i/5)*150,icon=d.icon+'_b.png',size=UI_SIZES[icon]??[100,100];return `<button style="left:${512+x}px;top:${384-y}px" data-action="gemInfo" data-id="${v.id}" aria-label="${esc(d.name)}"><img class="gem-result-icon" style="width:${size[0]}px;height:${size[1]}px" src="assets/original/ui/${icon}" alt="${esc(d.name)}"><img class="gem-result-quality" src="assets/original/ui/ui_pinzhi_${['','d','c','b','a','s'][d.quality]}.png" alt=""><span>${esc(d.name)}</span></button>`}).join('')}</div>`,'native-fullscreen')}

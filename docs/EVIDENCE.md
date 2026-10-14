@@ -232,3 +232,8 @@
 - shenfu-purchase-disassembly.txt确认免费3次、freecnt+1冷却、paid buycnt+4价格、五次buycnt+4..+8逐档相加及每次150；fuwen-npc-disassembly.txt确认余额不足/待拾取20上限与NPC点亮显示。FuwenPanel.initialize函数1 PC143–146会覆盖node_head为(-40,35)，不是保留layout初始坐标。
 - 五randgive池各合计1000000、86行、观察到数量列全为1/1。第五列权重、suc为点亮百分比、下一NPC推进/消耗与日界仍是离线解释，服务器行为不能从表合计推成完全核实。没有把这些抽样声明为原服务器概率。
 - 实机UI及保存验收从空货币/空符文起步，正常免费领取/寻访/拾取/装备路径实际完成；测试龙与固定RNG只在隔离档，正式玩家未发测试物品。
+
+## E05 v0.16.24 宝石探索证据
+- 原RuneData.lua明文常量CD_LOW/NORMAL/HIGH=600/86400/259200、COST_LOW20/200、NORMAL80/720、HIGH200/1800；RuneLotteryPanel _canLottery确认容量优先、免费单抽、令牌优先和不足10令牌按单价补差。原服务端getRune接收type0/1/2与次数，没有直接给出randgive组。
+- item_rune_lottery客户端附加y=-50；结果图使用RuneData.getRuneIconRes(big=true)的_b；RuneLotteryEffectPanel结果单抽(0,0)，十抽x=((index-1)%5)*125-250、y=80-floor((index-1)/5)*150、名字(15,-55)、品质(-35,-55)。已使用这些原坐标/图，尚缺原粒子和落下动画。
+- 9000001/2/3为明确注明的候选池映射。三池各50行且合计1000000，品质范围与三扇门吻合属于推断依据，不能据此当服务器已验证。source hash/150原行和全部政策边界在reference/gem-explore-provenance.json，scripts/export-gem-explore.py可复现。
