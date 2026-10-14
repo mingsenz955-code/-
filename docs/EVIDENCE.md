@@ -226,3 +226,9 @@
 - reference/fuwen-upgrade-disassembly.txt：候选仅排除目标及dragonid!=0，offerExp增量；needExp/levelUpID连续升级。材料已有exp没有加到吞噬预览，不能沿用宝石算法。
 - reference/fuwen-skill-extension-disassembly.txt、fuwen-skill-level-schema.txt及fuwen-power-disassembly.txt确认品质2–6三元组、level-1增量、1/2槽addPower入战力及3/4槽addPower=0。源表哈希嵌入rune-skills.mjs，export-rune-skills.py复现。
 - 原ui_FuwenSelector/ui_fuwen_info/ui_fuwen_levelup_panel与thumbs_fuwen图标用于操作页。原HUD寻访入口与完整getDes文案尚缺，暂不称整个界面流程一致；测试库存只存在隔离档。
+
+## E05 v0.16.23 符文寻访与神符
+- LibFuwenDiaoluoInfo静态常量列为id/name/costType/costID/costNum/suc/dropID；LibShenfuInfo为id/cd/costType/costNum/awardType/awardID/awardNum。原NPC五档成本与神符53档表保存在data/rune-hunt.mjs，export-rune-hunt.py复现，源表哈希和未知项见reference/rune-hunt-provenance.json。
+- shenfu-purchase-disassembly.txt确认免费3次、freecnt+1冷却、paid buycnt+4价格、五次buycnt+4..+8逐档相加及每次150；fuwen-npc-disassembly.txt确认余额不足/待拾取20上限与NPC点亮显示。FuwenPanel.initialize函数1 PC143–146会覆盖node_head为(-40,35)，不是保留layout初始坐标。
+- 五randgive池各合计1000000、86行、观察到数量列全为1/1。第五列权重、suc为点亮百分比、下一NPC推进/消耗与日界仍是离线解释，服务器行为不能从表合计推成完全核实。没有把这些抽样声明为原服务器概率。
+- 实机UI及保存验收从空货币/空符文起步，正常免费领取/寻访/拾取/装备路径实际完成；测试龙与固定RNG只在隔离档，正式玩家未发测试物品。

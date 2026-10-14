@@ -1,0 +1,18 @@
+{
+  "tablesSha256": "1408d684c2a6530668a8ed4816ad1697d579077fed5d02b887d06f035395e750",
+  "npcs": 5,
+  "dropRows": 86,
+  "purchaseRows": 53,
+  "directEvidence": [
+    "LibFuwenDiaoluoInfo columns; LibShenfuInfo columns",
+    "GetShenfuPanel freecnt<3, freecnt+1 cooldown, buycnt+4 price, buycnt+4..+8 five-price sum",
+    "FuwenPanel pending max20 and NPC costs, source NPC names and images"
+  ],
+  "offlinePolicy": "offline-source-weighted-fuwen-v1",
+  "unverified": [
+    "randgive column5 interpreted as weight (each source pool sums to 1000000); 6/7 interpreted as amount bounds (all observed entries1/1)",
+    "NPC suc interpreted as percent chance of lighting the next NPC; selected higher NPC lights consumed each draw",
+    "Daily counters reset at local UTC+8 midnight; server boundary unknown",
+    "Server RNG/roll correlation, responses, event overrides and dynamic pool differences"
+  ]
+}

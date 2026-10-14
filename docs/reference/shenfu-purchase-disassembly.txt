@@ -1,0 +1,262 @@
+SHA256 9df77fbc46814aaf013c10357423d299b8e90a7ced5e94ebaaf033cbc60fd446
+Static Lua 5.1 disassembly. PCs and nested function indexes are zero-based. No code executed.
+
+FUNCTION 1
+CONSTANTS [null, 1, "pkg", "type", 0, "log", "Shenfu Data Back:", "type:%d, ret:%d, buycount:%d, freecnt:%d, lasttime:%s, curtime:%s", "ret", "buycnt", "freecnt", "os", "date", "%c", "lasttime", "WorldTimer", "getCurrentServerTime", "updateCash", "SocketSender", "dceFuwenGet", "Gui", "showToast", "成功购买到", "getcnt", "个神符", "购买失败:", 3, "LibraryManager", "lib_shenfu", "getInfoById", "math", "min", 4, "maxNum", "cd", "print", "CD剩余时间:", "CD时间:", "shenfuInfo.costNum:", "costNum", "pkg.freecnt:", "removeTF", "layout", "getChild", "txt_freetime", "node_1cost", "txt_cost", "setString", "免费", "txt1", "hide", "", "cost1", "addTF", "handler", "onDataBack", "show", 8, "node_5cost", "cost5", "node_btn_5", "txt_on", "购买五次", "tf", "每次可以购买到|c0xc4551aFF", "awardNum", "|c0x000000FF个神符"]
+0000 EQ A=1 r1 null
+0001 JMP A=0 target=5
+0002 GETTABLE r2 r1[1]
+0003 EQ A=1 r2 null
+0004 JMP A=0 target=7
+0005 GETTABLE r1 r0["pkg"]
+0006 SETTABLE r1["type"] 0
+0007 GETGLOBAL r2 "log"
+0008 LOADK r3 "Shenfu Data Back:"
+0009 CALL A=2 B=2 C=1
+0010 GETGLOBAL r2 "log"
+0011 LOADK r3 "type:%d, ret:%d, buycount:%d, freecnt:%d, lasttime:%s, curtime:%s"
+0012 GETTABLE r4 r1["type"]
+0013 GETTABLE r5 r1["ret"]
+0014 GETTABLE r6 r1["buycnt"]
+0015 GETTABLE r7 r1["freecnt"]
+0016 GETGLOBAL r8 "os"
+0017 GETTABLE r8 r8["date"]
+0018 LOADK r9 "%c"
+0019 GETTABLE r10 r1["lasttime"]
+0020 CALL A=8 B=3 C=2
+0021 GETGLOBAL r9 "os"
+0022 GETTABLE r9 r9["date"]
+0023 LOADK r10 "%c"
+0024 GETGLOBAL r11 "WorldTimer"
+0025 GETTABLE r11 r11["getCurrentServerTime"]
+0026 CALL A=11 B=1 C=0
+0027 CALL A=9 B=0 C=0
+0028 CALL A=2 B=0 C=1
+0029 SETTABLE r0["pkg"] r1
+0030 GETTABLE r2 r1["type"]
+0031 LT A=0 0 r2
+0032 JMP A=0 target=57
+0033 GETTABLE r2 r1["ret"]
+0034 LE A=0 0 r2
+0035 JMP A=0 target=51
+0036 GETTABLE r2 r0["updateCash"]
+0037 CALL A=2 B=1 C=1
+0038 GETGLOBAL r2 "SocketSender"
+0039 GETTABLE r2 r2["dceFuwenGet"]
+0040 LOADK r3 0
+0041 LOADK r4 0
+0042 CALL A=2 B=3 C=1
+0043 GETGLOBAL r2 "Gui"
+0044 GETTABLE r2 r2["showToast"]
+0045 LOADK r3 "成功购买到"
+0046 GETTABLE r4 r1["getcnt"]
+0047 LOADK r5 "个神符"
+0048 CONCAT A=3 B=3 C=5
+0049 CALL A=2 B=2 C=1
+0050 JMP A=0 target=57
+0051 GETGLOBAL r2 "Gui"
+0052 GETTABLE r2 r2["showToast"]
+0053 LOADK r3 "购买失败:"
+0054 GETTABLE r4 r1["ret"]
+0055 CONCAT A=3 B=3 C=4
+0056 CALL A=2 B=2 C=1
+0057 LOADNIL A=2 B=2 C=0
+0058 GETTABLE r3 r1["freecnt"]
+0059 LT A=0 r3 3
+0060 JMP A=0 target=69
+0061 GETGLOBAL r3 "LibraryManager"
+0062 GETTABLE r3 r3["lib_shenfu"]
+0063 SELF r3 self=r3 method="getInfoById"
+0064 GETTABLE r5 r1["freecnt"]
+0065 ADD r5 r5 1
+0066 CALL A=3 B=3 C=2
+0067 MOVE A=2 B=3 C=0
+0068 JMP A=0 target=80
+0069 GETGLOBAL r3 "LibraryManager"
+0070 GETTABLE r3 r3["lib_shenfu"]
+0071 SELF r3 self=r3 method="getInfoById"
+0072 GETGLOBAL r5 "math"
+0073 GETTABLE r5 r5["min"]
+0074 GETTABLE r6 r1["buycnt"]
+0075 ADD r6 r6 4
+0076 GETTABLE r7 r0["maxNum"]
+0077 CALL A=5 B=3 C=0
+0078 CALL A=3 B=0 C=2
+0079 MOVE A=2 B=3 C=0
+0080 GETTABLE r3 r2["cd"]
+0081 GETTABLE r4 r1["lasttime"]
+0082 ADD r3 r3 r4
+0083 GETGLOBAL r4 "WorldTimer"
+0084 GETTABLE r4 r4["getCurrentServerTime"]
+0085 CALL A=4 B=1 C=2
+0086 SUB r3 r3 r4
+0087 GETGLOBAL r4 "print"
+0088 LOADK r5 "CD剩余时间:"
+0089 MOVE A=6 B=3 C=0
+0090 LOADK r7 "CD时间:"
+0091 GETTABLE r8 r2["cd"]
+0092 GETGLOBAL r9 "WorldTimer"
+0093 GETTABLE r9 r9["getCurrentServerTime"]
+0094 CALL A=9 B=1 C=2
+0095 GETTABLE r10 r1["lasttime"]
+0096 CALL A=4 B=7 C=1
+0097 GETGLOBAL r4 "print"
+0098 LOADK r5 "shenfuInfo.costNum:"
+0099 GETTABLE r6 r2["costNum"]
+0100 LOADK r7 "pkg.freecnt:"
+0101 GETTABLE r8 r1["freecnt"]
+0102 CALL A=4 B=5 C=1
+0103 GETUPVAL A=4 B=0 C=0
+0104 GETTABLE r4 r4["removeTF"]
+0105 GETTABLE r5 r0["layout"]
+0106 GETTABLE r5 r5["getChild"]
+0107 LOADK r6 "txt_freetime"
+0108 CALL A=5 B=2 C=0
+0109 CALL A=4 B=0 C=1
+0110 GETTABLE r4 r1["freecnt"]
+0111 LT A=0 r4 3
+0112 JMP A=0 target=184
+0113 LE A=0 r3 0
+0114 JMP A=0 target=140
+0115 GETTABLE r4 r0["layout"]
+0116 GETTABLE r4 r4["getChild"]
+0117 LOADK r5 "node_1cost"
+0118 CALL A=4 B=2 C=2
+0119 GETTABLE r4 r4["getChild"]
+0120 LOADK r5 "txt_cost"
+0121 CALL A=4 B=2 C=2
+0122 SELF r4 self=r4 method="setString"
+0123 LOADK r6 "免费"
+0124 CALL A=4 B=3 C=1
+0125 GETTABLE r4 r0["layout"]
+0126 GETTABLE r4 r4["getChild"]
+0127 LOADK r5 "txt1"
+0128 CALL A=4 B=2 C=2
+0129 SELF r4 self=r4 method="hide"
+0130 CALL A=4 B=2 C=1
+0131 GETTABLE r4 r0["layout"]
+0132 GETTABLE r4 r4["getChild"]
+0133 LOADK r5 "txt_freetime"
+0134 CALL A=4 B=2 C=2
+0135 SELF r4 self=r4 method="setString"
+0136 LOADK r6 ""
+0137 CALL A=4 B=3 C=1
+0138 SETTABLE r0["cost1"] 0
+0139 JMP A=0 target=209
+0140 GETUPVAL A=4 B=0 C=0
+0141 GETTABLE r4 r4["addTF"]
+0142 GETTABLE r5 r0["layout"]
+0143 GETTABLE r5 r5["getChild"]
+0144 LOADK r6 "txt_freetime"
+0145 CALL A=5 B=2 C=2
+0146 GETTABLE r6 r1["lasttime"]
+0147 GETTABLE r7 r2["cd"]
+0148 ADD r6 r6 r7
+0149 GETGLOBAL r7 "handler"
+0150 MOVE A=8 B=0 C=0
+0151 GETTABLE r9 r0["onDataBack"]
+0152 CALL A=7 B=3 C=0
+0153 CALL A=4 B=0 C=1
+0154 GETGLOBAL r4 "LibraryManager"
+0155 GETTABLE r4 r4["lib_shenfu"]
+0156 SELF r4 self=r4 method="getInfoById"
+0157 GETGLOBAL r6 "math"
+0158 GETTABLE r6 r6["min"]
+0159 GETTABLE r7 r1["buycnt"]
+0160 ADD r7 r7 4
+0161 GETTABLE r8 r0["maxNum"]
+0162 CALL A=6 B=3 C=0
+0163 CALL A=4 B=0 C=2
+0164 MOVE A=2 B=4 C=0
+0165 GETTABLE r4 r0["layout"]
+0166 GETTABLE r4 r4["getChild"]
+0167 LOADK r5 "node_1cost"
+0168 CALL A=4 B=2 C=2
+0169 GETTABLE r4 r4["getChild"]
+0170 LOADK r5 "txt_cost"
+0171 CALL A=4 B=2 C=2
+0172 SELF r4 self=r4 method="setString"
+0173 GETTABLE r6 r2["costNum"]
+0174 CALL A=4 B=3 C=1
+0175 GETTABLE r4 r0["layout"]
+0176 GETTABLE r4 r4["getChild"]
+0177 LOADK r5 "txt1"
+0178 CALL A=4 B=2 C=2
+0179 SELF r4 self=r4 method="show"
+0180 CALL A=4 B=2 C=1
+0181 GETTABLE r4 r2["costNum"]
+0182 SETTABLE r0["cost1"] r4
+0183 JMP A=0 target=209
+0184 GETTABLE r4 r0["layout"]
+0185 GETTABLE r4 r4["getChild"]
+0186 LOADK r5 "txt1"
+0187 CALL A=4 B=2 C=2
+0188 SELF r4 self=r4 method="hide"
+0189 CALL A=4 B=2 C=1
+0190 GETTABLE r4 r0["layout"]
+0191 GETTABLE r4 r4["getChild"]
+0192 LOADK r5 "txt_freetime"
+0193 CALL A=4 B=2 C=2
+0194 SELF r4 self=r4 method="setString"
+0195 LOADK r6 ""
+0196 CALL A=4 B=3 C=1
+0197 GETTABLE r4 r0["layout"]
+0198 GETTABLE r4 r4["getChild"]
+0199 LOADK r5 "node_1cost"
+0200 CALL A=4 B=2 C=2
+0201 GETTABLE r4 r4["getChild"]
+0202 LOADK r5 "txt_cost"
+0203 CALL A=4 B=2 C=2
+0204 SELF r4 self=r4 method="setString"
+0205 GETTABLE r6 r2["costNum"]
+0206 CALL A=4 B=3 C=1
+0207 GETTABLE r4 r2["costNum"]
+0208 SETTABLE r0["cost1"] r4
+0209 LOADK r4 0
+0210 GETTABLE r5 r1["buycnt"]
+0211 ADD r5 r5 4
+0212 GETTABLE r6 r1["buycnt"]
+0213 ADD r6 r6 8
+0214 LOADK r7 1
+0215 FORPREP A=5 target=227
+0216 GETGLOBAL r9 "LibraryManager"
+0217 GETTABLE r9 r9["lib_shenfu"]
+0218 SELF r9 self=r9 method="getInfoById"
+0219 GETGLOBAL r11 "math"
+0220 GETTABLE r11 r11["min"]
+0221 MOVE A=12 B=8 C=0
+0222 GETTABLE r13 r0["maxNum"]
+0223 CALL A=11 B=3 C=0
+0224 CALL A=9 B=0 C=2
+0225 GETTABLE r9 r9["costNum"]
+0226 ADD r4 r4 r9
+0227 FORLOOP A=5 target=216
+0228 GETTABLE r5 r0["layout"]
+0229 GETTABLE r5 r5["getChild"]
+0230 LOADK r6 "node_5cost"
+0231 CALL A=5 B=2 C=2
+0232 GETTABLE r5 r5["getChild"]
+0233 LOADK r6 "txt_cost"
+0234 CALL A=5 B=2 C=2
+0235 SELF r5 self=r5 method="setString"
+0236 MOVE A=7 B=4 C=0
+0237 CALL A=5 B=3 C=1
+0238 SETTABLE r0["cost5"] r4
+0239 GETTABLE r5 r0["layout"]
+0240 GETTABLE r5 r5["getChild"]
+0241 LOADK r6 "node_btn_5"
+0242 CALL A=5 B=2 C=2
+0243 GETTABLE r5 r5["getChild"]
+0244 LOADK r6 "txt_on"
+0245 CALL A=5 B=2 C=2
+0246 SELF r5 self=r5 method="setString"
+0247 LOADK r7 "购买五次"
+0248 CALL A=5 B=3 C=1
+0249 GETTABLE r5 r0["tf"]
+0250 SELF r5 self=r5 method="setString"
+0251 LOADK r7 "每次可以购买到|c0xc4551aFF"
+0252 GETTABLE r8 r2["awardNum"]
+0253 LOADK r9 "|c0x000000FF个神符"
+0254 CONCAT A=7 B=7 C=9
+0255 CALL A=5 B=3 C=1
+0256 RETURN A=0 B=1 C=0
