@@ -41,6 +41,7 @@ if(locked)app.whenReady().then(async()=>{
  if(raffleSmoke)await require('./smoke-raffle.cjs').prepare(store);
  if(expansionSmoke)await require('./smoke-expansion.cjs').prepare(store);
  if(rechargeSmoke)await require('./smoke-recharge.cjs').prepare(store);
+ if(adventureSmoke)await require('./smoke-adventure.cjs').prepare(store);
  if(farmSmoke)await require('./smoke.cjs').prepareFarmProfile(store);
  ipcMain.handle('app:version',()=>app.getVersion());
  ipcMain.handle('save:load',()=>store.load());

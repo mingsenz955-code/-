@@ -51,7 +51,7 @@ test('shop decorations buy, place, collide, sell and persist',()=>{
  s=action(s,'sellStructure',{id},T);assert.equal(s.structures.length,0);assert.equal(s.coins,9500);
 });
 test('formation and offline adventure battle form a saved playable loop',()=>{
- let s=createGame(T);s=action(s,'setFormation',{ids:[3,2]},T);assert.deepEqual(s.formation,[3,2]);assert.throws(()=>action(s,'battleResolve',{nodeId:100102},T),/前一关/);
+ let s=createGame(T);s.dragons.forEach(d=>d.level=20);s=action(s,'setFormation',{ids:[3,2]},T);assert.deepEqual(s.formation,[3,2]);assert.throws(()=>action(s,'battleResolve',{nodeId:100102},T),/前一关/);
  const before={coins:s.coins,food:s.food};s=action(s,'battleResolve',{nodeId:100101},T);assert.equal(s.adventure.energy,9);assert(s.adventure.cleared['100101']>=1);assert(s.coins>before.coins);assert(s.food>before.food);assert.equal(s.adventure.lastBattle.policy,'offline-adventure-balance-v1');
  s=validate(JSON.parse(JSON.stringify(s)));assert.deepEqual(s.formation,[3,2]);assert.equal(s.adventure.cleared['100101']>=1,true);
 });
@@ -77,3 +77,4 @@ test('v1 migration preserves resources, old dragons and in-progress legacy crops
 test('original farm upgrade gates, timer and crop tier persist across saves',()=>{
  let s=createGame(T);assert.throws(()=>action(s,'upgradeFarm',{},T),/等级 8/);s.playerXp=ORIGINAL_LEVELS.find(l=>l.level===8).xp_required;s.coins=50000;s=action(s,'upgradeFarm',{},T);assert.equal(s.coins,25000);assert.equal(s.farmUpgrade.readyAt,T+10000);assert.throws(()=>action(s,'plant',{},T),/正在升级/);assert.throws(()=>action(s,'completeFarmUpgrade',{},T+1),/尚未完成/);s=validate(JSON.parse(JSON.stringify(s)));s=action(s,'completeFarmUpgrade',{},T+10000);assert.equal(s.farmBuildingId,17);assert.equal(unlockedCrops(s).length,6);s=action(s,'plant',{cropId:4},T+10000);assert.equal(s.farm.cropId,4);
 });
+

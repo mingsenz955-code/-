@@ -1,6 +1,7 @@
 import {ORIGINAL_DRAGON_ATK} from '../assets/original/data/battle.mjs';
 import {SPECIES} from './data.mjs';
 import {ORIGINAL_ADVENTURE_LEVELS} from '../assets/original/data/adventure.mjs';
+import {ORIGINAL_OFFLINE_ENEMY_GROUPS} from '../assets/original/data/enemies.mjs';
 
 // Baseline combat values only. The client's own attribute update and getPower are known from
 // static disassembly (see docs/reference/dragon-attributes-disassembly.txt):
@@ -43,6 +44,7 @@ export function lineupPower(dragons){
 }
 export const OFFLINE_BATTLE_POLICY='offline-adventure-balance-v1';
 const levelIdOfEvent=nodeId=>(Math.floor(nodeId/100)-900)*1000+nodeId%100;
-export function battleRequirement(nodeId){const index=ORIGINAL_ADVENTURE_LEVELS.findIndex(row=>row[0]===levelIdOfEvent(nodeId));return index<0?null:Math.floor(800*(1+index*.055))}
+export function battleEnemyGroup(nodeId){const index=ORIGINAL_ADVENTURE_LEVELS.findIndex(row=>row[0]===levelIdOfEvent(nodeId));if(index<0)return null;const group=ORIGINAL_OFFLINE_ENEMY_GROUPS[Math.min(index,ORIGINAL_OFFLINE_ENEMY_GROUPS.length-1)];return {...group,monsters:group.monsters.map(monster=>{const species=Object.entries(SPECIES).find(([,value])=>value.originalId===monster.dragonId)?.[0]??null;return {...monster,species}})}}
+export function battleRequirement(nodeId){const power=battleEnemyGroup(nodeId)?.power;return power==null?null:Math.floor(power*.4)}
 export function battleReward(nodeId){const index=ORIGINAL_ADVENTURE_LEVELS.findIndex(row=>row[0]===levelIdOfEvent(nodeId));return index<0?null:{coins:150+index*20,food:10+Math.floor(index/20)*5}}
 export function configuredLineup(state){const ids=state.formation?.length?state.formation:state.dragons.slice(0,BATTLE_SLOTS).map(d=>d.id);return ids.map(id=>state.dragons.find(d=>d.id===id)).filter(Boolean).slice(0,BATTLE_SLOTS)}
