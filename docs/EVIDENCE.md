@@ -142,3 +142,7 @@
 - 原LibraryManager将lib_dragonPreview指向choujiangyulan；DragonRandPreviewInfo三列index/Id/quality，共53行，原五列预览。输入及三个脚本哈希见assets/original/data/raffle-provenance.json；导出脚本可复现。不是概率表。
 - 新增23原UI图和3FX的JSON/WebP，manifest1878。FX30fps两动作，固定联合边界保留相对大小；Canvas数值插值/粒子等差异仍在。
 - 免费/CD/CurCnt来自_dragonRandData，实际开奖通过服务器；新页面不伪造状态、不扣款、不沿用旧表。神圣叠框、仓库完整领取/活动池尚未接入。
+
+## E05 v0.13 主界面入口与运行时布局边界
+- 原ui_main act_btn包含首充/福利/活动/大富翁；使用其原图与源坐标，不新增假活动奖励。首充等原图已含中文，避免重复标签。
+- LayoutLoader静态指令确认边缘字段优先于x/y、双边扩展尺寸、btn/普通节点锚点差别。BottomUI/ModulesPanel/MorePanel动态重排更多。当前仅改静态图标仍不足证明一比一；审计文件在work，仅数据解析无原代码执行。

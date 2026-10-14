@@ -4,7 +4,10 @@ exports.run=async(window,store)=>{
  const js=code=>window.webContents.executeJavaScript(code),state=async()=>(await store.load()).state;
  for(let i=0;i<80;i++){if(await js("!!document.querySelector('.original-hud')"))break;await wait(100)}
  const click=async selector=>{assert(await js(`(()=>{const e=document.querySelector(${JSON.stringify(selector)});return e&&!e.disabled&&e.getBoundingClientRect().height>0})()`),selector);await js(`document.querySelector(${JSON.stringify(selector)}).click();true`);await wait(300)};
- assert(await js("!document.querySelector('[data-tab=roadmap]')&&!document.body.textContent.includes('复刻进度')"));const before=await state();await click('[data-place-id="1"] [data-action=openDragon][data-id="2"]');await click('#modal [data-action=openEvolution]');await wait(700);
+ assert(await js("!document.querySelector('[data-tab=roadmap]')&&!document.body.textContent.includes('复刻进度')"));for(const name of ['首充','福利中心','限时活动','大富翁'])assert(await js(`!!document.querySelector('.original-hud [aria-label="${name}"]')`));
+ assert(await js("Array.from(document.querySelectorAll('.original-hud img')).every(i=>i.complete&&i.naturalWidth>0)"));
+ await wait(350);await fs.writeFile(path.join(__dirname,'..','work','main-activities-qa.png'),(await window.webContents.capturePage()).toPNG());
+ const before=await state();await click('[data-place-id="1"] [data-action=openDragon][data-id="2"]');await click('#modal [data-action=openEvolution]');await wait(700);
  assert(await js("document.querySelector('#modal').dataset.mode==='sourceEvolution'"));
  assert(await js("Array.from(document.querySelectorAll('#modal img')).every(i=>i.complete&&i.naturalWidth>0)"),'Original evolution image missing');
  assert(await js("document.querySelector('#modal canvas').dataset.modelReady==='true'"));

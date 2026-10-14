@@ -38,3 +38,5 @@ canvas.dragon{display:inline-block;object-fit:contain}.dragon-preview-dialog{wid
 .raffle-preview-card .source-label{color:var(--prize-color)!important}
 
 .raffle-preview-list{grid-template-columns:repeat(5,134px);overflow-x:hidden}.raffle-preview-card{width:134px}
+
+.hud-activity-caption{font-size:20px;-webkit-text-stroke:2px #674b2e}
