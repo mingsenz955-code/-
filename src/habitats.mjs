@@ -18,6 +18,15 @@ export function habitatGridRect(h,index,position=habitatPosition(h,index)){
  const column=Math.round((p[0]-g.left)/stepX),row=Math.round((p[1]-g.top)/stepY),width=info.width??5,height=info.height??5;
  return {column,row,width,height};
 }
+export function placementGridRect(info,position){
+ const g=PLACEMENT_GRID,stepX=(g.right-g.left)/(g.columns-1),stepY=(g.bottom-g.top)/(g.rows-1),p=snapHabitatPosition(position);
+ return {column:Math.round((p[0]-g.left)/stepX),row:Math.round((p[1]-g.top)/stepY),width:info.width??1,height:info.height??1};
+}
+export function canPlaceObject(objects,movingKey,info,position){
+ const moving=placementGridRect(info,position),g=PLACEMENT_GRID,bounds=r=>({left:r.column-Math.floor(r.width/2),right:r.column+Math.ceil(r.width/2),top:r.row-Math.floor(r.height/2),bottom:r.row+Math.ceil(r.height/2)}),a=bounds(moving);
+ if(a.left<0||a.top<0||a.right>g.columns||a.bottom>g.rows)return false;
+ return objects.every(o=>{if(o.key===movingKey)return true;const b=bounds(placementGridRect(o.info,o.position));return a.right<=b.left||a.left>=b.right||a.bottom<=b.top||a.top>=b.bottom});
+}
 export function canPlaceHabitat(habitats,id,position){
  const index=habitats.findIndex(h=>h.id===id);if(index<0)return false;const moving=habitatGridRect(habitats[index],index,position),g=PLACEMENT_GRID;
  if(moving.column-Math.floor(moving.width/2)<0||moving.row-Math.floor(moving.height/2)<0||moving.column+Math.ceil(moving.width/2)>g.columns||moving.row+Math.ceil(moving.height/2)>g.rows)return false;

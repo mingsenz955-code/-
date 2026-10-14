@@ -1,6 +1,7 @@
 import {LOTTERY_POLICY,LOTTERY_CAPACITY,lotteryRow,lotteryCost,sampleLottery} from './lottery.mjs';
 import {SPECIES, RULES, RECIPES, ORIGINAL_CROPS, ORIGINAL_LEVELS, ORIGINAL_FARMS, breedingOptions, speciesKey} from './data.mjs';
-import {habitatDefinition,habitatInfo,acceptsDragon,habitatLimit,snapHabitatPosition,canPlaceHabitat} from './habitats.mjs';
+import {habitatDefinition,habitatInfo,acceptsDragon,habitatLimit,habitatPosition,snapHabitatPosition,canPlaceHabitat,canPlaceObject} from './habitats.mjs';
+import {structureDefinition,structureInfo,structurePosition} from './structures.mjs';
 import {EQUIPMENT_INSTANCE_ID,equipmentDefinition,definitionPart,equipmentInstance,equipmentOfDragon,equipmentInPart,equipmentLabel} from './equipment.mjs';
 import {RAFFLE_POLICY,RAFFLE_CAPACITY,RAFFLE_GUARANTEE_DRAWS,raffleMachine,raffleCost,sampleRaffle,advanceRaffleCounter} from './raffle.mjs';
 import {EXPANSION_POLICY,EXPANSION_PAID_STEPS,nextExpansion} from './expansion.mjs';
@@ -9,10 +10,10 @@ import {resourceShopRow,EVOLUTION_FRUIT_ITEM_ID} from './resource-shop.mjs';
 const fail = message => {throw new Error(message)};
 const number = (v,min=0,max=Number.MAX_SAFE_INTEGER) => Number.isSafeInteger(v)&&v>=min&&v<=max;
 export function createGame(now=Date.now()) {
- return {version:10,lottery:{normalTokens:0,advancedTokens:0,draws:0,pending:[]},raffle:{tickets:{},counters:{junior:0,mid:0,senior:0},pending:[]},expansion:{plots:0},items:{},recharge:{count:0,lastTier:0,totalGems:0,doubled:[]},equipment:[],nextEquipId:1,coins:1200,food:400,gems:0,playerXp:0,nextId:4,updatedAt:now,habitats:[{id:1,name:'晨曦栖息地',lastCollected:now}],dragons:[{id:2,species:'ember',level:1,habitatId:1},{id:3,species:'leaf',level:1,habitatId:1}],farm:null,nest:null,breeding:null,incubator:null,stats:{harvests:0,hatches:0,feeds:0},log:['欢迎来到云上牧场。种下第一份龙粮吧。']};
+ return {version:11,structures:[],lottery:{normalTokens:0,advancedTokens:0,draws:0,pending:[]},raffle:{tickets:{},counters:{junior:0,mid:0,senior:0},pending:[]},expansion:{plots:0},items:{},recharge:{count:0,lastTier:0,totalGems:0,doubled:[]},equipment:[],nextEquipId:1,coins:1200,food:400,gems:0,playerXp:0,nextId:4,updatedAt:now,habitats:[{id:1,name:'晨曦栖息地',lastCollected:now}],dragons:[{id:2,species:'ember',level:1,habitatId:1},{id:3,species:'leaf',level:1,habitatId:1}],farm:null,nest:null,breeding:null,incubator:null,stats:{harvests:0,hatches:0,feeds:0},log:['欢迎来到云上牧场。种下第一份龙粮吧。']};
 }
 export function validate(s) {
- if(!s||![1,2,3,4,5,6,7,8,9,10].includes(s.version)) fail('存档版本不受支持，请保留原文件。');
+ if(!s||![1,2,3,4,5,6,7,8,9,10,11].includes(s.version)) fail('存档版本不受支持，请保留原文件。');
  s=structuredClone(s);if(s.gems===undefined)s.gems=0;if(s.playerXp===undefined)s.playerXp=0;
  if(s.version<4){if(s.nest){if(s.breeding||s.incubator)fail('旧存档繁殖任务冲突。');if(s.nest.phase==='hatching')s.incubator=s.nest;else s.breeding=s.nest;}s.nest=null;}
  if(s.nest!==null)fail('旧繁殖任务未迁移。');
@@ -26,6 +27,8 @@ export function validate(s) {
  if(s.version<9){s.items??={};s.recharge??={count:0,lastTier:0};}
  s.items??={};s.recharge??={count:0,lastTier:0};
  if(s.version<10){s.recharge.totalGems??=0;s.recharge.doubled??=[];}
+ if(s.version<11)s.structures??=[];
+ s.structures??=[];
  s.recharge.totalGems??=0;s.recharge.doubled??=[];
  if(!number(s.coins)||!number(s.food)||!number(s.nextId,1)||!number(s.updatedAt)) fail('存档资源或时间无效。');
  if(s.gems!==undefined&&!number(s.gems)||s.playerXp!==undefined&&!number(s.playerXp))fail('牧场经验或魔晶无效。');
@@ -36,6 +39,8 @@ export function validate(s) {
   if(h.position!==undefined&&(!Array.isArray(h.position)||h.position.length!==2||!h.position.every(v=>Number.isFinite(v)&&v>=10&&v<=90)))fail('栖息地位置无效。');
   if(h.job!==undefined&&h.job!==null){const j=h.job,target=habitatDefinition(j.targetId);if(!target||!['build','upgrade'].includes(j.kind)||!number(j.startedAt)||!number(j.readyAt)||j.readyAt<j.startedAt||j.kind==='build'&&j.targetId!==h.buildingId||j.kind==='upgrade'&&target.id!==habitatInfo(h).upgrades_to)fail('栖息地建造计时无效。');}
  }
+ if(!Array.isArray(s.structures)||s.structures.length>1000)fail('建筑存档无效。');
+ for(const structure of s.structures){const info=structureInfo(structure);if(!number(structure.id,1)||ids.has(structure.id)||!info)fail('建筑记录无效。');ids.add(structure.id);if(!Array.isArray(structure.position)||structure.position.length!==2||!structure.position.every(Number.isFinite))fail('建筑位置无效。');if(structure.readyAt!==undefined&&!number(structure.readyAt))fail('建筑计时无效。');}
  for(const d of s.dragons){if(!number(d.id,1)||ids.has(d.id)||!Object.hasOwn(SPECIES,d.species)||!number(d.level,1,RULES.maxLevel)||!s.habitats.some(h=>h.id===d.habitatId)) fail('龙数据无效。');ids.add(d.id);}
  for(const d of s.dragons)if(!acceptsDragon(s.habitats.find(h=>h.id===d.habitatId),d.species))fail('龙与栖息地属性不匹配。');
  const lottery=s.lottery;if(!lottery||!number(lottery.normalTokens)||!number(lottery.advancedTokens)||!number(lottery.draws)||!Array.isArray(lottery.pending)||lottery.pending.length>LOTTERY_CAPACITY||lottery.draws<lottery.pending.length)fail('抽奖存档无效。');
@@ -73,7 +78,7 @@ export function validate(s) {
  for(const [job,phases] of [[s.breeding,['breeding','egg']],[s.incubator,['hatching']]]){if(job===null)continue;const n=job;if(n?.startedAt!==undefined&&(!number(n.startedAt)||n.startedAt>n.readyAt))fail('繁殖起始时间无效。');if(n?.hatchMs!==undefined&&!number(n.hatchMs,0,365*86400000))fail('孵化时间无效。');if(!n||!phases.includes(n.phase)||!Object.hasOwn(SPECIES,n.species)||!number(n.readyAt))fail('繁殖或孵化数据无效。');if(n.source==='raffle'){if(!Array.isArray(n.parents)||n.parents.length)fail('扭蛋龙蛋不应带亲代。')}else if(!Array.isArray(n.parents)||n.parents.length!==2||n.parents[0]===n.parents[1]||!n.parents.every(id=>s.dragons.some(d=>d.id===id)))fail('繁殖或孵化数据无效。');}
  if(!s.stats||!['harvests','hatches','feeds'].every(k=>number(s.stats[k]))) fail('统计数据无效。');
  if(!Array.isArray(s.log)||s.log.length>12||!s.log.every(x=>typeof x==='string'&&x.length<=200))fail('日志数据无效。');
- return {...structuredClone(s),version:10};
+ return {...structuredClone(s),version:11};
 }
 export function dragonRate(d){const species=SPECIES[d.species];if(!species.originalId)return species.income*d.level*60;return d.level<=10?species.coinStart+species.coinAdded*(d.level-1):species.coinStart+species.coinAdded*9+Math.floor(species.coinAdded*(d.level-10)/2)}
 function rawIncome(s,h,now){const cap=habitatInfo(h).maxGold*60000;let units=Math.round((h.storedCoins??0)*60000);const start=Math.min(now,h.lastCollected);for(const d of s.dragons.filter(d=>d.habitatId===h.id)){let elapsed=Math.max(0,now-start);const n=s.breeding;if(n?.phase==='breeding'&&n.parents.includes(d.id)){const breedStart=n.startedAt??n.readyAt-(SPECIES[n.species].breedingMs??RULES.breedMs);elapsed-=Math.max(0,Math.min(now,n.readyAt)-Math.max(start,breedStart));}units=Math.min(cap,units+Math.min(cap,Math.max(0,elapsed)*dragonRate(d)));}return Math.min(cap,units)/60000}
@@ -90,6 +95,7 @@ export function action(state,type,payload={},now=Date.now(),random=Math.random) 
  const s=validate(state); now=Math.max(now,s.updatedAt); let message='';
  const spend=(key,cost)=>{if(s[key]<cost)fail(key==='coins'?'金币不足。':key==='gems'?'魔晶不足。':'龙粮不足，请先种植并收获。');s[key]-=cost;};
  const payBuilding=target=>{for(const [unit,cost] of Object.entries(target.costs)){const key={g:'coins',c:'gems',f:'food'}[unit];if(!key)fail('该建筑资源类型尚未支持。');spend(key,cost);}};
+ const placeables=()=>[...s.habitats.map((h,i)=>({key:`h:${h.id}`,info:habitatInfo(h),position:habitatPosition(h,i)})),...s.structures.map((o,i)=>({key:`s:${o.id}`,info:structureInfo(o),position:structurePosition(o,i)}))];
  const dragon=id=>s.dragons.find(d=>d.id===id)||fail('找不到这只龙。');
  const settle=h=>{h.storedCoins=rawIncome(s,h,now);h.lastCollected=now;};
  switch(type){
@@ -107,7 +113,11 @@ export function action(state,type,payload={},now=Date.now(),random=Math.random) 
  case 'build': {const target=habitatDefinition(payload.buildingId??28)||fail('请选择栖息地类型。');if(!target.in_store)fail('该栖息地未在原版商店开放。');if(playerProgress(s).level<target.min_level)fail(`建造需要牧场等级 ${target.min_level}。`);if(s.habitats.length>=habitatLimit(playerProgress(s).level)+(s.expansion?.plots??0))fail('已达到当前牧场等级的栖息地数量上限，可在商店的扩建里买地。');payBuilding(target);s.habitats.push({id:s.nextId++,buildingId:target.id,name:target.nameCN,lastCollected:now,job:{kind:'build',targetId:target.id,startedAt:now,readyAt:now+target.build_time*1000}});message=`${target.nameCN}开始建造。`;break;}
  case 'upgradeHabitat': {const h=s.habitats.find(h=>h.id===payload.id)||fail('栖息地不存在。');if(h.job)fail('栖息地正在施工。');const target=habitatDefinition(habitatInfo(h).upgrades_to)||fail('该栖息地没有可用升级。');if(playerProgress(s).level<target.min_level)fail(`升级需要牧场等级 ${target.min_level}。`);payBuilding(target);settle(h);h.job={kind:'upgrade',targetId:target.id,startedAt:now,readyAt:now+target.build_time*1000};message=`${h.name}开始升级。`;break;}
  case 'completeHabitat': {const h=s.habitats.find(h=>h.id===payload.id)||fail('栖息地不存在。');if(!h.job||now<h.job.readyAt)fail('栖息地施工尚未完成。');settle(h);const target=habitatDefinition(h.job.targetId);h.buildingId=target.id;h.name=target.nameCN;h.job=null;h.lastCollected=now;awardPlayerXp(s,target.xp);message=`${h.name}施工完成。`;break;}
- case 'placeHabitat': {const h=s.habitats.find(h=>h.id===payload.id)||fail('栖息地不存在。');if(!Array.isArray(payload.position)||payload.position.length!==2||!payload.position.every(Number.isFinite))fail('请选择岛内位置。');const position=snapHabitatPosition(payload.position);if(!canPlaceHabitat(s.habitats,h.id,position))fail('这里与其他建筑重叠或超出可用地块。');h.position=position;message='建筑已按地块位置保存。';break;}
+ case 'placeHabitat': {const h=s.habitats.find(h=>h.id===payload.id)||fail('栖息地不存在。');if(!Array.isArray(payload.position)||payload.position.length!==2||!payload.position.every(Number.isFinite))fail('请选择岛内位置。');const position=snapHabitatPosition(payload.position);if(!canPlaceObject(placeables(),`h:${h.id}`,habitatInfo(h),position))fail('这里与其他建筑重叠或超出可用地块。');h.position=position;message='建筑已按地块位置保存。';break;}
+ case 'buyStructure': {const target=structureDefinition(payload.itemId)||fail('该商品不是可摆放建筑。');if(playerProgress(s).level<target.min_level)fail(`购买需要牧场等级 ${target.min_level}。`);payBuilding(target);const key=`s:${s.nextId}`,objects=placeables();let position=null;for(let row=1;row<14&&!position;row++)for(let column=1;column<24&&!position;column++){const candidate=snapHabitatPosition([12+column*3.31,18+row*4.92]);if(canPlaceObject(objects,key,target,candidate))position=candidate;}if(!position)fail('岛上没有足够的连续空格。');s.structures.push({id:s.nextId++,itemId:target.id,position,...(target.build_time?{readyAt:now+target.build_time*1000}:{})});message=`${target.nameCN}已购买，请确认摆放位置。`;break;}
+ case 'placeStructure': {const structure=s.structures.find(o=>o.id===payload.id)||fail('建筑不存在。'),info=structureInfo(structure);if(!Array.isArray(payload.position)||payload.position.length!==2||!payload.position.every(Number.isFinite))fail('请选择岛内位置。');const position=snapHabitatPosition(payload.position);if(!canPlaceObject(placeables(),`s:${structure.id}`,info,position))fail('这里与其他建筑重叠或超出可用地块。');structure.position=position;message=`${info.nameCN}已按地块位置保存。`;break;}
+ case 'completeStructure': {const structure=s.structures.find(o=>o.id===payload.id)||fail('建筑不存在。'),info=structureInfo(structure);if(!structure.readyAt||now<structure.readyAt)fail('建筑施工尚未完成。');delete structure.readyAt;awardPlayerXp(s,info.xp??0);message=`${info.nameCN}施工完成。`;break;}
+ case 'sellStructure': {const index=s.structures.findIndex(o=>o.id===payload.id);if(index<0)fail('建筑不存在。');const structure=s.structures[index],info=structureInfo(structure),gold=info.sell_price?.g;if(!number(gold))fail('该建筑没有可核实的出售价格。');s.structures.splice(index,1);s.coins+=gold;message=`已出售${info.nameCN}，获得 ${gold} 金币。`;break;}
  case 'move': {const d=dragon(payload.id);if(isBreedingParent(s,d.id,now))fail('亲代正在培育山，请等待繁殖完成。');const h=s.habitats.find(h=>h.id===payload.habitatId)||fail('目标栖息地不存在。');if(d.habitatId===h.id)fail('已经住在这里。');if(!acceptsDragon(h,d.species))fail('该栖息地尚未完工或不适合这只龙的属性。');if(s.dragons.filter(x=>x.habitatId===h.id).length>=habitatInfo(h).capacity)fail('目标栖息地已满。');settle(s.habitats.find(x=>x.id===d.habitatId));settle(h);d.habitatId=h.id;message='已迁入新栖息地。';break;}
  case 'breed': {if(s.breeding)fail('培育山正在使用，请先将龙蛋转入育龙塔。');const a=dragon(payload.a),b=dragon(payload.b);if(a.id===b.id)fail('请选择两只不同的龙。');if(a.level<RULES.breedMinLevel||b.level<RULES.breedMinLevel)fail('两只亲代都需要达到 4 级。');const options=breedingOptions(a.species,b.species);let offspring,breedMs=RULES.breedMs,hatchMs=RULES.hatchMs;
  if(options){if(!options.length)fail('客户端配方表中，这组龙无法繁殖。');const value=random();if(!Number.isFinite(value)||value<0||value>=1)fail('随机值无效。');let roll=value*options.reduce((sum,o)=>sum+o.weight,0);offspring=options.at(-1).species;for(const option of options){roll-=option.weight;if(roll<0){offspring=option.species;break}}breedMs=SPECIES[offspring].breedingMs;hatchMs=SPECIES[offspring].hatchingMs;}
