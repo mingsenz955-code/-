@@ -332,3 +332,10 @@
 - **`panel_pve` 引用的 11 个 frame 在该 APK 中不存在**（遍历全部图集与 plist 确认）：`ui_bg_960_640bg`、`ui_common_bg_t_0..5`、`ui_common_btn_fanye_l/r_1`、`ui_common_biaoqian_01/02`、`ui_pve_title2`。界面改为加载失败即隐藏，底板用同源 `ui_common_DiBan_YangBiZhi.png` 兜底并记录，不拿生成图冒充。
 - 隔离档 `--smoke-adventure` 通过：20 节点、地图背景随地图切换、节点点击、浏览不写存档。68 项 Node 检查全绿；证据见 `docs/ADVENTURE.md`。
 - 仍缺：战斗结算、体力、星级、宝箱与奖励（服务器权威）。下一轮决定战斗做到什么程度（离线推演并标注 policy，或先做扫荡式结算）。
+
+## 最新检查点 — v0.20 战斗证据链缺口与扩建价格（2026-10-14）
+- ②的战斗：布局（`ui_battlenormal` + `item_battle_touxiang`）与数值表（`Dragon_atks` 580 行、`monster` 9976 行）都齐，`getPower` 公式也有反汇编证据。**但 `mapevents` 指向敌人那一步没闭合**：节点 col3 每节点唯一、col4 仅 65 个值，都不命中 `Boss` id（1..30），而 `Boss` 用管道串直接列怪物 id；缺的接续表不在已导出的 214 张 pcf 里。因此战斗只做到"界面可复刻"，**敌人配置不猜、数值不编**，战斗仍未实现。详见 `docs/ADVENTURE.md`。
+- ③扩建：找到 `expansion_prices`（100 行）= 扩建价格阶梯，前 4 行免费（初始地块），其后金币 4000 → 940000、等级门槛 2 → 100、魔晶含 -1「不需要」。客户端另有 `islandtop/bottom/left/right` 布局（各含 entry 与 lock，上方 9 道锁）、`island*_g_entry/btn` 图与商店的 `thumbs_store_expansion_island_2/3/4`，证实原版确实有四周扩建。
+- 该表**没有列定义文件**，列含义是从数值本身推断的（金币与等级单调、前四行全零），已在 `expansion-provenance.json` 明确标注为推断；col5 有重复值（多步共享 30），因此**不作为**地块唯一编号。
+- 新增 `scripts/export-expansion.py`、`assets/original/data/expansion.mjs` + provenance、`src/expansion.mjs`、`tests/expansion.test.mjs` 3 项；合计 **71 项 Node 检查全绿**。
+- 下一轮：把扩建接进存档与商店（`ui_shop` 的「扩建」分类目前仍是 unavailable），再回头处理战斗或转④充值。

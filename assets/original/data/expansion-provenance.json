@@ -1,0 +1,22 @@
+{
+  "baseline": "2.9.35-202402271124",
+  "tablesSha256": "63ac9f739c2dcd2ec226212a7037a519c7be8428ed519fd591010db32a463345",
+  "rows": 100,
+  "stepsWithCost": 94,
+  "inferredColumns": {
+    "1": "row index",
+    "2": "required ranch level (rises 2 -> 100 and stops at the level cap)",
+    "3": "gold price (rises 4000 -> 370000, never decreases)",
+    "4": "gem price (small integers 0..50, non-decreasing)",
+    "5": "plot number (1..N, the expansion slot the client unlocks)"
+  },
+  "evidence": [
+    "Columns 3 and 2 are monotonically non-decreasing across the whole table, which is what a price and a level gate look like.",
+    "The first four rows are all zero and carry plot 0, i.e. the starting island the player already owns.",
+    "The client ships islandtop/islandbottom/islandleft/islandright layouts with an entry sprite, lock sprites (nine on the top side) and islandtop_g_top_btn, plus thumbs_store_expansion_island_2/3/4 in the shop atlas, which is the expansion feature this table prices."
+  ],
+  "unverified": [
+    "The literal column meanings are not proven by any client column definition and must not be presented as the original rule.",
+    "Whether the server consumes this table unchanged, and how plots map onto ui_mapland_land<N> art, is unknown."
+  ]
+}

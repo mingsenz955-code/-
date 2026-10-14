@@ -46,3 +46,13 @@
 **导入策略变更**：`scripts/import-original-assets.py` 由手写白名单改为**全量导入** `assets/res/ui/*.plist`（152 个图集，外加 7 张 `pve_map`）。手写列表已两次漏图（`ui_formationinfo`、`ui_common_bg_t_*`），全量后登记 4427 条、`assets/original/ui` 3832 个文件；同时修复图集内 `.jpg` 条目无法以 RGBA 保存导致整批中断的问题。
 
 **进度仍是服务器权威**：节点一律按中性状态绘制，不伪造通关/星级/宝箱。战斗、体力与结算未实现。
+
+## 战斗取证（v0.20）
+
+战斗布局已在客户端找到：`ui_battlenormal`（1024×768）含 `left1..left6`／`right1..right6`，每位带头像挂载点、`ui_battle_xuetiao1/2` 血条与 `ui_battle_dengji` 等级底板，另有 `leftstage`／`rightstage` 战场台；头像项布局为 `item_battle_touxiang`。用户提供的 37.9 秒战斗录像与之一致：双方各六头像带血条、"战斗回合:1/30"、底部双方战斗力与"跳过"、金色伤害数字。
+
+数值侧有据：`Dragon_atks`（580 行，`LibDragonAtksInfo` 列映射完整 —— baseAttack／baseDefence／baseLife／attackQuality／defenceQuality／lifeQuality／critical／resilience…）与 `monster`（9976 行，同样含攻/防/血）；`DragonElement.getPower` 的式子 `attack+defend+maxblood/3+crit+uncrit+rune` 已有静态反汇编证据。
+
+**缺的一环**：`mapevents` 指向敌人那一步没有闭合。节点行的 col3 是每节点唯一值（30001…）、col4 只有 65 个值（5000020…），两者都不命中 `Boss` 的 id（1..30）；而 `Boss` 表自己用管道串直接列出怪物 id（`"10000|10001|…"`）。缺的正是把这些值接起来的那张表，它不在已导出的 pcf 214 张里。
+
+**结论**：战斗界面可以复刻，但"某个节点打哪些敌人"无法证明，所以战斗**尚未实现**，不猜敌人配置也不编数值。
