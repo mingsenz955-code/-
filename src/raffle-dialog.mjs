@@ -1,5 +1,6 @@
 import CATALOG from '../assets/original/catalog.mjs';
 import {RAFFLE_PREVIEW_ROWS} from '../assets/original/data/raffle.mjs';
+import {RAFFLE_GUARANTEE_DRAWS} from './raffle.mjs';
 import EFFECTS from '../assets/original/effects/index.mjs';
 import {renderSourceLayout} from './source-layout.mjs';
 let layoutPromise,previewPromise,itemPromise;
@@ -10,12 +11,16 @@ export async function openRaffleDialog(state){
  layoutPromise??=fetch('assets/original/layouts/ui_lottery_dragon.json').then(r=>r.json());
  const layout=structuredClone(await layoutPromise),dialog=document.querySelector('#modal');if(dialog.open)dialog.close();
  dialog.className='source-dragon-dialog source-raffle-dialog';dialog.dataset.mode='sourceRaffle';
- const slots={},values={txt_name:'扭蛋机','btn_yulan/txt_name':'奖品预览','btn_jiyin/txt_name':'基因中心','ziyuan_daijuan/num_chuji':'—','ziyuan_daijuan/num_zhongji':'—','ziyuan_daijuan/num_gaoji':'—','ziyuan_mojing/num_mojing':state.gems,'chuji/money/num_one':'1','chuji/money/num_ten':'10','zhongji/money/num_one':'100','zhongji/money/num_ten':'900','gaoji/money/num_one':'280','gaoji/money/num_ten':'2500','zhongji/Countdown/num':'?','gaoji/Countdown/num':'?','chuji/free':'','zhongji/free':'','gaoji/free':''};
+ // Ticket counts, the 必得紫/橙 countdown and the junior 0/10 prices come from the save
+ // and from the machine definitions; free state and cooldown remain server-side.
+ const tickets=state.raffle?.tickets??{},counters=state.raffle?.counters??{},held=id=>String(tickets[id]??0);
+ const slots={},values={txt_name:'扭蛋机','btn_yulan/txt_name':'奖品预览','btn_jiyin/txt_name':'基因中心','ziyuan_daijuan/num_chuji':held(6047),'ziyuan_daijuan/num_zhongji':held(6048),'ziyuan_daijuan/num_gaoji':held(6049),'ziyuan_mojing/num_mojing':state.gems,'chuji/money/num_one':'0','chuji/money/num_ten':'10','zhongji/money/num_one':'100','zhongji/money/num_ten':'900','gaoji/money/num_one':'280','gaoji/money/num_ten':'2500','zhongji/Countdown/num':String(RAFFLE_GUARANTEE_DRAWS-(counters.mid??0)),'gaoji/Countdown/num':String(RAFFLE_GUARANTEE_DRAWS-(counters.senior??0)),'chuji/free':'','zhongji/free':'','gaoji/free':''};
  const actions={close:{type:'close',label:'关闭扭蛋机'},'btn_yulan/btn':{type:'rafflePreview',label:'奖品预览'},'btn_jiyin/btn':{type:'raffleUnverified',label:'基因中心'}};
  for(const [i,node] of ['chuji','zhongji','gaoji'].entries()){
   const key='eff_choujiangji'+(i+1),bounds=EFFECTS[key].bounds,w=bounds[2]-bounds[0],h=bounds[3]-bounds[1];
   slots[`${node}/bg_eff_choujiangji${i+1}`]=`<canvas class="source-raffle-machine" width="${w}" height="${h}" data-model="${key}" data-clip="1" data-native-size="true" style="width:${w}px;height:${h}px;transform:translate(${bounds[0]}px,${bounds[1]}px)" aria-label="${['初级','中级','高级'][i]}扭蛋机"></canvas>`;
-  for(const count of ['one','ten'])actions[`${node}/${count}/btn`]={type:'raffleUnverified',label:`${['初级','中级','高级'][i]}抽${count==='one'?1:10}次`};
+  // Machine keys here match the client's own junior/mid/senior naming in the save.
+  for(const [suffix,count] of [['one',1],['ten',10]])actions[`${node}/${suffix}/btn`]={type:'raffleDraw',value:`${['junior','mid','senior'][i]}:${count}`,label:`${['初级','中级','高级'][i]}抽${count}次`};
  }
  // Original code swaps the middle/high currency sprites to gems with no tickets.
  for(const node of layout.children)if(['zhongji','gaoji'].includes(node.name))for(const group of node.children??[])if(group.name==='money')for(const image of group.children??[])if(image.name?.startsWith('daijuan_'))image.img='#ui_lotterydragon_mojing.png';

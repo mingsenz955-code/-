@@ -5,6 +5,7 @@ import {openShop,openHabitatShop,openHabitatInfo,openBreed,openIncubator,openCat
 import {openRaffleDialog,openRafflePreview,closeRafflePreview} from './raffle-dialog.mjs';
 import {openLotteryOptions,openLotteryDialog,openLotteryPrize,lotteryHelp} from './lottery-dialog.mjs';
 import {lotteryCost} from './lottery.mjs';
+import {raffleCost} from './raffle.mjs';
 import {openEvolutionDialog} from './evolution-dialog.mjs';
 import {dragonAcquisition,sourceDragonName} from './acquisition.mjs';
 import {EVOLUTION_TEXT} from '../assets/original/data/evolution.mjs';
@@ -56,7 +57,8 @@ document.addEventListener('click',async e=>{
   if(type==='lotteryOptions'){if(new URLSearchParams(window.location.search).get('legacyLottery')==='1')await openLotteryOptions();else await openRaffleDialog(state);return}
   if(type==='rafflePreview'){await openRafflePreview();return}
   if(type==='closeRafflePreview'){closeRafflePreview();return}
-  if(type==='raffleUnverified'){toast('后期三档奖池、免费状态与结算仍未核实，本次未扣除资源。');return}
+  if(type==='raffleDraw'){const [mode,count]=String(el.dataset.value).split(':'),amount=Number(count),cost=raffleCost(state.raffle,mode,amount);if(cost.gems>0&&!confirm(`本次消耗 ${cost.tickets} 张抽奖券及 ${cost.gems} 魔晶，继续吗？`))return;const next=action(state,'raffleDraw',{mode,count:amount});await persist(next);render();await openRaffleDialog(state);toast(state.log[0]);return}
+  if(type==='raffleUnverified'){toast('基因中心尚未接入。');return}
   if(type==='openLottery'){await openLotteryDialog(state,Number(el.dataset.value));return}
   if(type==='returnLottery'){await openLotteryDialog(state,Number($('#modal').dataset.lotteryMode));return}
   if(type==='lotteryPrize'){openLotteryPrize(state,id);return}
@@ -76,6 +78,7 @@ document.addEventListener('click',async e=>{
   if(type==='equipTab'){toast(el.dataset.value==='frag'?'装备碎片尚未接入，当前只有装备列表。':'当前已显示未装备的装备。');return}
   if(type==='unverifiedEquip'){toast('装备的更换、强化、升星与原版获取来源尚未实现。');return}
   if(type==='openWarehouse'){await openWarehouse(state);return}
+  if(type==='raffleEggUse'){const next=action(state,'raffleEggHatch',{id});await persist(next);render();toast(state.log[0]);await openIncubator(state);return}
   if(type==='warehouseFilter'){await openWarehouse(state,el.dataset.value);return}
   if(type==='warehouseChooseDragon'){await chooseWarehouseDragon(state,id);return}
   if(type==='habitatShop'){await openHabitatShop(state);return}

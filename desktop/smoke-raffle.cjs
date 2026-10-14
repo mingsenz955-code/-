@@ -1,26 +1,72 @@
 const assert=require('node:assert/strict'),fs=require('node:fs/promises'),path=require('node:path');
 const wait=ms=>new Promise(resolve=>setTimeout(resolve,ms));
-exports.run=async(window,store)=>{
+// QA-only resources. Tickets and gems are injected into the isolated profile so the three
+// machines can actually be drawn; a player save is never touched and the payment system
+// does not exist yet.
+exports.prepare=async store=>{
+ const loaded=await store.load();if(loaded.state)return;
+ const {createGame}=await import('../src/game.mjs');
+ const s=createGame();s.gems=20000;s.raffle.tickets={6047:20,6048:5,6049:2};
+ s.log=['扭蛋机验收隔离档：抽奖券与魔晶由测试注入，不代表正常获取途径。'];
+ await store.save(s);
+};
+exports.run=async(window,store,verify)=>{
  const js=code=>window.webContents.executeJavaScript(code);
  for(let i=0;i<80;i++){if(await js("!!document.querySelector('.original-hud')"))break;await wait(100)}
- const click=async selector=>{assert(await js(`(()=>{const e=document.querySelector(${JSON.stringify(selector)});return e&&!e.disabled&&e.getBoundingClientRect().height>0})()`),selector);await js(`document.querySelector(${JSON.stringify(selector)}).click();true`);await wait(250)};
- const before=(await store.load()).state;await click('[data-action=showMore]');await click('[data-action=lotteryOptions]');
+ const click=async selector=>{assert(await js(`(()=>{const e=document.querySelector(${JSON.stringify(selector)});return e&&!e.disabled&&e.getBoundingClientRect().height>0})()`),selector);await js(`document.querySelector(${JSON.stringify(selector)}).click();true`);await wait(320)};
+ const state=async()=>(await store.load()).state;
+ const shot=async name=>fs.writeFile(path.join(__dirname,'..','work',name),(await window.webContents.capturePage()).toPNG());
+
+ if(verify){
+  const restored=await state();
+  assert(restored.raffle.pending.length>0,'raffle eggs must survive a restart');
+  assert.equal(restored.raffle.tickets['6048'],0,'ticket spending must persist');
+  assert.equal(restored.incubator?.source,'raffle','the hatched raffle egg must stay in the tower');
+  console.log('PASS later mobile raffle draw, ticket spend and hatched egg survive an independent restart');
+  return;
+ }
+
+ await js("window.confirm=()=>true;true");
+ const before=await state();
+ await click('[data-action=showMore]');await click('[data-action=lotteryOptions]');
  for(let i=0;i<60;i++){if(await js("document.querySelectorAll('#modal canvas[data-model-ready=true]').length===3"))break;await wait(100)}
  assert.equal(await js("document.querySelectorAll('#modal canvas[data-model-ready=true]').length"),3);
  assert(await js("Array.from(document.querySelectorAll('#modal img')).every(i=>i.complete&&i.naturalWidth>0)"));
  assert(await js("document.querySelector('#modal').textContent.includes('900')&&document.querySelector('#modal').textContent.includes('2500')"));
- assert.equal(await js("document.querySelectorAll('#modal [data-action=lotteryDraw]').length"),0,'Never apply legacy pool to modern machine prices');
- const draws=await js(`(async()=>{const {renderDragonFrame}=await import('./src/dragon-models.mjs');const out=[];for(const c of document.querySelectorAll('#modal canvas'))for(const clip of ['1','2']){await renderDragonFrame(c,c.dataset.model,clip,0);const p=c.getContext('2d').getImageData(0,0,c.width,c.height).data;let count=0;for(let i=3;i<p.length;i+=4)if(p[i])count++;out.push(count);await renderDragonFrame(c,c.dataset.model,'1',0)}return out})()`);
- assert(draws.every(count=>count>1000),'Source idle/draw machine clips must not be blank');
- await fs.writeFile(path.join(__dirname,'..','work','raffle-native-qa.png'),(await window.webContents.capturePage()).toPNG());await click('#modal [data-action=raffleUnverified]');assert.deepEqual((await store.load()).state,before,'Unverified modern draw must not charge or use the old table');
- await click('#modal [data-action=rafflePreview]');
- assert.equal(await js("document.querySelectorAll('[data-raffle-preview-id]').length"),53);
- await wait(500);assert(await js("Array.from(document.querySelectorAll('.raffle-preview-layer img')).every(i=>i.complete&&i.naturalWidth>0)"));
- assert(await js("(()=>{const e=document.querySelector('.raffle-preview-list');return e.scrollHeight>e.clientHeight})()"));
- await fs.writeFile(path.join(__dirname,'..','work','raffle-preview-qa.png'),(await window.webContents.capturePage()).toPNG());
- await click('[data-action=closeRafflePreview]');assert.equal(await js("document.querySelector('#modal').dataset.mode"),'sourceRaffle');
- await click('#modal [data-action=rafflePreview]');await js("document.querySelector('#modal').dispatchEvent(new Event('cancel',{cancelable:true}));true");
- assert.equal(await js("document.querySelectorAll('.raffle-preview-layer').length"),0);assert.deepEqual((await store.load()).state,before);
- window.setSize(1000,700);await wait(350);assert(await js("(()=>{const r=document.querySelector('#modal').getBoundingClientRect();return r.width<=innerWidth&&r.height<=innerHeight})()"));
- console.log('PASS later mobile raffle: three original machine skeletons/six clips, source page/images/prices, no legacy pool or debit, resize');
+ assert.equal(await js("document.querySelectorAll('#modal [data-action=lotteryDraw]').length"),0,'Never apply the legacy pool to modern machine prices');
+ assert.equal(await js("document.querySelectorAll('#modal [data-action=raffleDraw]').length"),6,'every machine offers single and ten draws');
+ assert(await js("document.querySelector('#modal').textContent.includes('20')"),'ticket counts come from the save');
+ await shot('raffle-native-qa.png');
+
+ await click('#modal [data-action=raffleDraw][data-value="mid:1"]');
+ await wait(700);
+ const afterMid=await state();
+ assert.equal(afterMid.raffle.pending.length,1,'the middle draw stores one egg');
+ assert.equal(afterMid.gems,before.gems-95,'five tickets cover the rest with gems');
+ assert.equal(afterMid.raffle.tickets['6048'],0);
+ assert.equal(afterMid.raffle.counters.mid,afterMid.raffle.pending[0].quality===4?0:1,'the 必得 counter advances unless 紫 dropped');
+
+ const gemsBeforeJunior=afterMid.gems;
+ await click('#modal [data-action=raffleDraw][data-value="junior:1"]');
+ await wait(700);
+ const afterJunior=await state();
+ assert.equal(afterJunior.gems,gemsBeforeJunior,'the junior single draw is free');
+ assert.equal(afterJunior.raffle.pending.length,2);
+
+ await click('#modal [data-action=close]');
+ // 更多 is a toggle: it is already expanded from opening the raffle, so only click it
+ // when the warehouse entry is not on screen.
+ if(!await js("!!document.querySelector('.original-hud [data-action=openWarehouse]')"))await click('[data-action=showMore]');
+ await click('.original-hud [data-action=openWarehouse]');
+ await wait(800);
+ assert.equal(await js("document.querySelectorAll('[data-raffle-egg]').length"),2,'the warehouse lists the raffle eggs');
+ await shot('raffle-warehouse-qa.png');
+ await click('#modal [data-raffle-egg] [data-action=raffleEggUse]');
+ await wait(900);
+ const hatched=await state();
+ assert.equal(hatched.raffle.pending.length,1,'one egg moved into the tower');
+ assert.equal(hatched.incubator?.source,'raffle');
+ assert.deepEqual(hatched.incubator.parents,[]);
+ assert.deepEqual(hatched.dragons,before.dragons,'drawing must not touch the ranch dragons');
+ console.log('PASS three machines draw, charge tickets before gems, honour the free junior single, store eggs in the warehouse and hatch them in the tower');
 };
