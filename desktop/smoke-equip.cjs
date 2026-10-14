@@ -20,7 +20,7 @@ exports.run=async(window,store,verify)=>{
  const js=code=>window.webContents.executeJavaScript(code),state=async()=>(await store.load()).state;
  for(let i=0;i<80;i++){if(await js("!!document.querySelector('.original-hud')"))break;await wait(100)}
  const click=async selector=>{assert(await js(`(()=>{const e=document.querySelector(${JSON.stringify(selector)});return e&&!e.disabled&&e.getBoundingClientRect().height>0})()`),selector);await js(`document.querySelector(${JSON.stringify(selector)}).click();true`);await wait(420)};
- const openPanel=async()=>{await click('[data-action=showMore]');await click('.original-hud [data-action=openEquip]');await wait(800);assert.equal(await js("document.querySelector('#modal').dataset.mode"),'sourceEquip')};
+ const openPanel=async()=>{await click('[data-action=showMore]');await click('.original-hud [data-action=openEquipmentBag]');await click('#modal [data-action=openEquip]');await wait(800);assert.equal(await js("document.querySelector('#modal').dataset.mode"),'sourceEquip')};
  const shot=async name=>fs.writeFile(path.join(__dirname,'..','work',name),(await window.webContents.capturePage()).toPNG());
 
  if(verify){

@@ -4,11 +4,11 @@ ui/ResourceShopPanel.lua builds every card from LibraryManager.lib_treasure (pcf
 and shouts "not enough gems" when the player cannot pay, so this category is paid in 魔晶. Its
 columns come from LibTreasureInfo.lua (twenty-three named columns, see export-recharge.py).
 costtype 'c' is 魔晶 - the same letter the habitat and expansion tables use for 魔晶 - and
-type 'g'/'f'/'ef' are 金币/食物/进化果实.
+type 'g'/'f'/'ef' are 金币/食物/进化果实; l1/l2 are 中/高级龙珠.
 
 Only rows the client itself leaves enabled (enable ~= 0) and that pay in 魔晶 are exported. The
 game's own resource shop shows the ones this build can actually deliver; the remaining rows
-(强化石, 保护符, 龙珠, 培养丹, 龙魂, 觉醒石, 宝箱, 玫瑰花 ...) are still listed here so the
+(强化石, 保护符, 培养丹, 龙魂, 觉醒石, 宝箱, 玫瑰花 ...) are still listed here so the
 evidence is complete.
 """
 from pathlib import Path
@@ -38,7 +38,7 @@ for row in tables['treasure_items']:
 rows.sort(key=lambda row: row['id'])
 text = 'export const ORIGINAL_RESOURCE_SHOP=' + json.dumps(rows, ensure_ascii=False) + ';\n'
 (ROOT / 'assets/original/data/resource-shop.mjs').write_bytes(text.encode('utf8'))
-resources = [row for row in rows if row['type'] in ('g', 'f', 'ef')]
+resources = [row for row in rows if row['type'] in ('g', 'f', 'ef', 'l1', 'l2')]
 report = {
     'baseline': '2.9.35-202402271124',
     'tablesSha256': hashlib.sha256(raw).hexdigest(),

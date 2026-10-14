@@ -1,0 +1,23 @@
+{
+  "baseline": "2.9.35-202402271124",
+  "policy": "offline-source-decompose-preview-v1",
+  "sourceSha256": {
+    "ui/strengthen/NewDecomposeList.lua": "d5302316b8b314e744ab4d5f93fc5991a919169e860a0118ce4c7ae0ee0ffbbe",
+    "ui/strengthen/NewDecomposeItem.lua": "27233b606b14a734440154cf5370ce13ad07cfec2b78b61e54408dd24dc1d14f",
+    "ui/strengthen/EquipStrengthenGroupPanel.lua": "809e864a3d907d29c1b5390fed2039911ae626685357ce61a5a6ae2e049d074c"
+  },
+  "directEvidence": [
+    "NewDecomposeList function13 sums info.decomposePkgID directly: part4 wing,part5 crystal,others stone",
+    "All equipinfo decomposeCost values0; no source cost invented",
+    "Original selection card item_equiplist_equip_decompose and list item_equiplist_decompose; source confirmation ApplyOrCancelPanel",
+    "Source group wrapper ui_tab_group; native equipment/decomposition original icon art reused",
+    "treasure_items enabled l1/l2 rows111/112 deliver5 balls for120/300 gems; disabled es/yy/sj offers remain excluded"
+  ],
+  "differences": [
+    "Client filters equipment on battle dragons; offline build protects ALL worn equipment until explicitly removed",
+    "Server decomposition response unavailable; offline settlement applies client quoted quantities",
+    "Top group tab placement and labels assembled from source group140px geometry and icons, still require matching footage verification",
+    "Equipment drops/boxes/fragments remain unfinished; this feature does not give players equipment to hide the missing source",
+    "Equipment star and random traits, original sounds/particles not complete"
+  ]
+}

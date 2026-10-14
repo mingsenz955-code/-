@@ -44,13 +44,13 @@ export async function openResourceShop(state,{type=null}={}){
  // ui/ResourceShopPanel.lua sells these rows for 魔晶; amounts, prices and the 折扣 badges are
  // the client's own values. Rows whose reward has no system in this offline build stay off sale.
  // 金币 / 食物 / 进化果实 are kept in separate sections instead of one mixed list: a currency ＋
- // opens the shop on its own kind, and the shop's 资源 category shows all three sections.
- const kinds=type?[type]:['g','f','ef'];
+ // opens the shop on its own kind, and the shop's 资源 category shows all supported sections.
+ const kinds=type?[type]:Object.keys(RESOURCE_SHOP_TYPES);
  const sections=kinds.map(kind=>{
   const offers=RESOURCE_SHOP_OFFERS.filter(row=>row.type===kind);
   if(!offers.length)return '';
   const cards=offers.map(row=>{
-   const slots={con_img:image(`assets/original/ui/resource_icon_80_${row.type}.png`),con_cost:image('assets/original/ui/ui_main_08.png','native-cost-icon')};
+   const slots={con_img:image(`assets/original/ui/${row.type==='l1'?'ui_lottery_47':row.type==='l2'?'ui_lottery_48':'resource_icon_80_'+row.type}.png`),con_cost:image('assets/original/ui/ui_main_08.png','native-cost-icon')};
    if(row.zhekouIcon)slots.con_zhekou=image(`assets/original/ui/ui_zhekou_${row.zhekouIcon}.png`,'native-cost-icon');
    return `<article class="native-shop-card" data-resource-offer="${row.id}" data-resource-kind="${row.type}">${renderSourceLayout(item,{values:{txt_name:row.name,shuoming:`${RESOURCE_SHOP_TYPES[row.type]} ${row.amount.toLocaleString('zh-CN')}`,txt_shuliang:row.priceGems,'goumai_shuzi/buy_txt':'购买',weijiesuo_shuzi:`${row.priceGems} 魔晶`,tx_name:'',tx_power:''},hidden:new Set(['huangzuan','weijiesuo','shuxing1','shuxing2','shuxing3','pinzhi']),actions:{'goumai_shuzi/btn':{type:'buyResource',id:row.id,label:`购买${row.name}`}},slots})}</article>`;
   }).join('');

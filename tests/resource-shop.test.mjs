@@ -14,7 +14,7 @@ test('the resource shop export is the client treasure table, paid in 魔晶',asy
  assert.equal(createHash('sha256').update(bytes).digest('hex'),report.tablesSha256);
  assert.equal(RESOURCE_SHOP_POLICY,report.policy);
  assert.equal(ORIGINAL_RESOURCE_SHOP.length,report.rows);
- assert.equal(report.resourceRows,12);
+ assert.equal(report.resourceRows,14);
  const rows=new Map(tables.treasure_items.map(row=>[row[0],Object.fromEntries(TREASURE_COLUMNS.map((key,index)=>[key,row[index]]))]));
  for(const row of ORIGINAL_RESOURCE_SHOP){
   const source=rows.get(row.id);
@@ -25,8 +25,8 @@ test('the resource shop export is the client treasure table, paid in 魔晶',asy
   assert.equal(source.price,row.priceGems);
   assert.equal(source.type,row.type);
  }
- assert.equal(RESOURCE_SHOP_OFFERS.length,12,'this build only sells the deliverable resource rows');
- assert.deepEqual(Object.keys(RESOURCE_SHOP_TYPES),['g','f','ef']);
+ assert.equal(RESOURCE_SHOP_OFFERS.length,14,'this build only sells the deliverable resource rows');
+ assert.deepEqual(Object.keys(RESOURCE_SHOP_TYPES),['g','f','ef','l1','l2']);
  assert.equal(resourceShopOffersOfType('g').length,4);
  assert.equal(resourceShopOffersOfType('f').length,4);
  assert.equal(resourceShopOffersOfType('ef').length,4);
@@ -34,6 +34,7 @@ test('the resource shop export is the client treasure table, paid in 魔晶',asy
   ['少量金币',150000,75],['中量金币',400000,150],['大量金币',1000000,300],['超量金币',2000000,500],
   ['少量食物',10000,75],['中量食物',30000,150],['大量食物',80000,300],['超量食物',150000,500],
   ['少量进化果实',800,75],['中量进化果实',2200,150],['大量进化果实',5000,300],['超量进化果实',10000,500],
+  ['中级龙珠',5,120],['高级龙珠',5,300],
  ]);
  assert.equal(resourceShopRow(86),null,'a 强化石 row is in the client table but not on sale here');
 });

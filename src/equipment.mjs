@@ -82,6 +82,12 @@ export function equipmentLabel(instance){
  return definition?`${definition.name}${definition.grade>1?` +${definition.grade-1}`:''}`:'';
 }
 export const EQUIPMENT_MATERIAL_NAMES={stone:'强化石',wing:'羽翼',crystal:'水晶'};
+export function equipmentDecomposePlan(state,ids){
+ if(!Array.isArray(ids)||!ids.length||new Set(ids).size!==ids.length)throw Error('请选择要分解的装备。');
+ const materials={stone:0,wing:0,crystal:0};
+ for(const id of ids){const item=equipmentInstance(state,id),info=equipmentDefinition(item?.type);if(!item||!info)throw Error('找不到要分解的装备。');if(item.dragonid)throw Error('请先卸下装备再分解。');if(!Number.isSafeInteger(info.decomposePkgID)||info.decomposePkgID<=0)throw Error('该装备没有可核实的分解产物。');materials[info.part===4?'wing':info.part===5?'crystal':'stone']+=info.decomposePkgID}
+ return materials;
+}
 export function equipmentEnhancePlan(instance,count=1){
  if(![1,10].includes(count))throw new Error('强化次数无效。');
  let info=equipmentDefinition(instance?.type);if(!info)throw new Error('找不到这件装备。');

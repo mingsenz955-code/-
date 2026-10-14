@@ -1,0 +1,217 @@
+SHA256 d5302316b8b314e744ab4d5f93fc5991a919169e860a0118ce4c7ae0ee0ffbbe
+Static Lua 5.1 disassembly. PCs and nested function indexes are zero-based. No code executed.
+
+FUNCTION 4
+CONSTANTS ["dataList", 0, "table", "remove", 1, "DataManager", "getSortedEquipList", "bottomTab", "formationData", "onBattleDragon", "insert", "equipList", null, "new", "layout", "getChild", "huadong", "require", "ui.strengthen.NewDecomposeItem", "preline", "gap", 5, "direct", "DIRECT_X", "resetData", "num", "setString", "selectList"]
+0000 GETTABLE r1 r0["dataList"]
+0001 LEN A=1 B=1 C=0
+0002 LT A=0 0 r1
+0003 JMP A=0 target=10
+0004 GETGLOBAL r1 "table"
+0005 GETTABLE r1 r1["remove"]
+0006 GETTABLE r2 r0["dataList"]
+0007 LOADK r3 1
+0008 CALL A=1 B=3 C=1
+0009 JMP A=0 target=0
+0010 GETGLOBAL r1 "DataManager"
+0011 GETTABLE r1 r1["getSortedEquipList"]
+0012 GETTABLE r2 r0["bottomTab"]
+0013 CALL A=1 B=2 C=2
+0014 LOADK r2 1
+0015 LEN A=3 B=1 C=0
+0016 LOADK r4 1
+0017 FORPREP A=2 target=31
+0018 GETGLOBAL r6 "DataManager"
+0019 GETTABLE r6 r6["formationData"]
+0020 CALL A=6 B=1 C=2
+0021 GETTABLE r6 r6["onBattleDragon"]
+0022 GETTABLE r7 r1[r5]
+0023 CALL A=6 B=2 C=2
+0024 TEST A=6 B=0 C=1
+0025 JMP A=0 target=31
+0026 GETGLOBAL r6 "table"
+0027 GETTABLE r6 r6["insert"]
+0028 GETTABLE r7 r0["dataList"]
+0029 GETTABLE r8 r1[r5]
+0030 CALL A=6 B=3 C=1
+0031 FORLOOP A=2 target=18
+0032 GETTABLE r2 r0["equipList"]
+0033 EQ A=0 r2 null
+0034 JMP A=0 target=54
+0035 GETUPVAL A=2 B=0 C=0
+0036 GETTABLE r2 r2["new"]
+0037 GETTABLE r3 r0["layout"]
+0038 GETTABLE r3 r3["getChild"]
+0039 LOADK r4 "huadong"
+0040 CALL A=3 B=2 C=2
+0041 GETTABLE r4 r0["dataList"]
+0042 GETGLOBAL r5 "require"
+0043 LOADK r6 "ui.strengthen.NewDecomposeItem"
+0044 CALL A=5 B=2 C=2
+0045 NEWTABLE A=6 B=0 C=3
+0046 SETTABLE r6["preline"] 1
+0047 SETTABLE r6["gap"] 5
+0048 GETUPVAL A=7 B=0 C=0
+0049 GETTABLE r7 r7["DIRECT_X"]
+0050 SETTABLE r6["direct"] r7
+0051 CALL A=2 B=5 C=2
+0052 SETTABLE r0["equipList"] r2
+0053 JMP A=0 target=58
+0054 GETTABLE r2 r0["equipList"]
+0055 SELF r2 self=r2 method="resetData"
+0056 GETTABLE r4 r0["dataList"]
+0057 CALL A=2 B=3 C=1
+0058 GETTABLE r2 r0["layout"]
+0059 GETTABLE r2 r2["getChild"]
+0060 LOADK r3 "num"
+0061 CALL A=2 B=2 C=2
+0062 SELF r2 self=r2 method="setString"
+0063 GETTABLE r4 r0["selectList"]
+0064 LEN A=4 B=4 C=0
+0065 CALL A=2 B=3 C=1
+0066 RETURN A=0 B=1 C=0
+
+FUNCTION 13
+CONSTANTS ["selectList", 0, 1, "info", "part", 4, "decomposePkgID", 5, "", "个强化石", "个羽翼", "个水晶", "open", "Config_LocaleText", "lang", "是否要分解这些装备？分解后你将获得", "apply_txt", "分解"]
+0000 GETTABLE r1 r0["selectList"]
+0001 LEN A=1 B=1 C=0
+0002 EQ A=0 r1 0
+0003 JMP A=0 target=5
+0004 RETURN A=0 B=1 C=0
+0005 LOADK r1 0
+0006 LOADK r2 0
+0007 LOADK r3 0
+0008 LOADK r4 1
+0009 GETTABLE r5 r0["selectList"]
+0010 LEN A=5 B=5 C=0
+0011 LOADK r6 1
+0012 FORPREP A=4 target=42
+0013 GETTABLE r8 r0["selectList"]
+0014 GETTABLE r8 r8[r7]
+0015 GETTABLE r8 r8["info"]
+0016 GETTABLE r8 r8["part"]
+0017 EQ A=0 r8 4
+0018 JMP A=0 target=25
+0019 GETTABLE r8 r0["selectList"]
+0020 GETTABLE r8 r8[r7]
+0021 GETTABLE r8 r8["info"]
+0022 GETTABLE r8 r8["decomposePkgID"]
+0023 ADD r2 r2 r8
+0024 JMP A=0 target=42
+0025 GETTABLE r8 r0["selectList"]
+0026 GETTABLE r8 r8[r7]
+0027 GETTABLE r8 r8["info"]
+0028 GETTABLE r8 r8["part"]
+0029 EQ A=0 r8 5
+0030 JMP A=0 target=37
+0031 GETTABLE r8 r0["selectList"]
+0032 GETTABLE r8 r8[r7]
+0033 GETTABLE r8 r8["info"]
+0034 GETTABLE r8 r8["decomposePkgID"]
+0035 ADD r3 r3 r8
+0036 JMP A=0 target=42
+0037 GETTABLE r8 r0["selectList"]
+0038 GETTABLE r8 r8[r7]
+0039 GETTABLE r8 r8["info"]
+0040 GETTABLE r8 r8["decomposePkgID"]
+0041 ADD r1 r1 r8
+0042 FORLOOP A=4 target=13
+0043 LOADK r4 ""
+0044 LT A=0 0 r1
+0045 JMP A=0 target=50
+0046 MOVE A=5 B=4 C=0
+0047 MOVE A=6 B=1 C=0
+0048 LOADK r7 "个强化石"
+0049 CONCAT A=4 B=5 C=7
+0050 LT A=0 0 r2
+0051 JMP A=0 target=56
+0052 MOVE A=5 B=4 C=0
+0053 MOVE A=6 B=2 C=0
+0054 LOADK r7 "个羽翼"
+0055 CONCAT A=4 B=5 C=7
+0056 LT A=0 0 r3
+0057 JMP A=0 target=62
+0058 MOVE A=5 B=4 C=0
+0059 MOVE A=6 B=3 C=0
+0060 LOADK r7 "个水晶"
+0061 CONCAT A=4 B=5 C=7
+0062 GETUPVAL A=5 B=0 C=0
+0063 GETTABLE r5 r5["open"]
+0064 GETGLOBAL r6 "Config_LocaleText"
+0065 GETTABLE r6 r6["lang"]
+0066 LOADK r7 "是否要分解这些装备？分解后你将获得"
+0067 MOVE A=8 B=4 C=0
+0068 CONCAT A=7 B=7 C=8
+0069 CALL A=6 B=2 C=2
+0070 CLOSURE r7 nested=0
+0071 MOVE A=0 B=0 C=0
+0072 LOADNIL A=8 B=8 C=0
+0073 NEWTABLE A=9 B=0 C=1
+0074 SETTABLE r9["apply_txt"] "分解"
+0075 CALL A=5 B=5 C=1
+0076 RETURN A=0 B=1 C=0
+
+FUNCTION 14
+CONSTANTS ["print", "分解返回", "result", "num", 1, 2, 3, "分解得到", 0, "", "个强化石", "个水晶", "个羽翼", "Gui", "floatText", "分解成功, 获得", "cleanSelectList", "refreshItem", "分解失败："]
+0000 GETGLOBAL r2 "print"
+0001 LOADK r3 "分解返回"
+0002 GETTABLE r4 r1["result"]
+0003 CALL A=2 B=3 C=1
+0004 GETGLOBAL r2 "print"
+0005 GETTABLE r3 r1["num"]
+0006 GETTABLE r3 r3[1]
+0007 GETTABLE r4 r1["num"]
+0008 GETTABLE r4 r4[2]
+0009 GETTABLE r5 r1["num"]
+0010 GETTABLE r5 r5[3]
+0011 LOADK r6 "分解得到"
+0012 CALL A=2 B=5 C=1
+0013 GETTABLE r2 r1["result"]
+0014 EQ A=0 r2 0
+0015 JMP A=0 target=55
+0016 LOADK r2 ""
+0017 GETTABLE r3 r1["num"]
+0018 GETTABLE r3 r3[1]
+0019 LT A=0 0 r3
+0020 JMP A=0 target=26
+0021 MOVE A=3 B=2 C=0
+0022 GETTABLE r4 r1["num"]
+0023 GETTABLE r4 r4[1]
+0024 LOADK r5 "个强化石"
+0025 CONCAT A=2 B=3 C=5
+0026 GETTABLE r3 r1["num"]
+0027 GETTABLE r3 r3[2]
+0028 LT A=0 0 r3
+0029 JMP A=0 target=35
+0030 MOVE A=3 B=2 C=0
+0031 GETTABLE r4 r1["num"]
+0032 GETTABLE r4 r4[2]
+0033 LOADK r5 "个水晶"
+0034 CONCAT A=2 B=3 C=5
+0035 GETTABLE r3 r1["num"]
+0036 GETTABLE r3 r3[3]
+0037 LT A=0 0 r3
+0038 JMP A=0 target=44
+0039 MOVE A=3 B=2 C=0
+0040 GETTABLE r4 r1["num"]
+0041 GETTABLE r4 r4[3]
+0042 LOADK r5 "个羽翼"
+0043 CONCAT A=2 B=3 C=5
+0044 GETGLOBAL r3 "Gui"
+0045 GETTABLE r3 r3["floatText"]
+0046 LOADK r4 "分解成功, 获得"
+0047 MOVE A=5 B=2 C=0
+0048 CONCAT A=4 B=4 C=5
+0049 CALL A=3 B=2 C=1
+0050 SELF r3 self=r0 method="cleanSelectList"
+0051 CALL A=3 B=2 C=1
+0052 SELF r3 self=r0 method="refreshItem"
+0053 CALL A=3 B=2 C=1
+0054 JMP A=0 target=61
+0055 GETGLOBAL r2 "Gui"
+0056 GETTABLE r2 r2["floatText"]
+0057 LOADK r3 "分解失败："
+0058 GETTABLE r4 r1["result"]
+0059 CONCAT A=3 B=3 C=4
+0060 CALL A=2 B=2 C=1
+0061 RETURN A=0 B=1 C=0

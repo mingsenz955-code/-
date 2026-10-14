@@ -1,3 +1,4 @@
+import {openEquipmentBag,confirmEquipmentDecompose} from './equip-bag-dialog.mjs';
 import {openGemExplore,openGemExploreResult} from './gem-explore-dialog.mjs';
 import {openRuneHunt,openShenfuDialog} from './rune-hunt-dialog.mjs';
 import {openRuneSelector,openRuneInfo,openRuneUpgrade,refreshRunePreview} from './rune-dialog.mjs';
@@ -113,9 +114,15 @@ document.addEventListener('click',async e=>{
   if(type==='acquisition'){await showAcquisition(id);return}
   if(type==='dragonMove'){selected=id;await openHabitatShop(state,{moveDragon:state.dragons.find(d=>d.id===id)});return}
   if(type==='returnMoveDragon'){await openDragonDialog(state,id);return}
+  if(type==='openEquipmentBag'){await openEquipmentBag(state,el.dataset.value);return}
+  if(type==='equipmentBagFilter'){const part=Number(el.dataset.value);const icons=[['ui_equip_c0010.png','ui_equip_a0010.png'],['ui_equip_c0011.png','ui_equip_a0011.png'],['ui_equip_c0013.png','ui_equip_a0013.png'],['ui_equip_c0012.png','ui_equip_a0012.png'],['ui_equip_c0014.png','ui_equip_a0014.png'],['ui_equip_yi1.png','ui_equip_yi2.png'],['ui_equip_guan1.png','ui_equip_guan2.png']];document.querySelectorAll('[data-action=equipmentBagFilter]').forEach(b=>{const active=Number(b.dataset.value)===part;b.setAttribute('aria-pressed',String(active));b.querySelector('img').src='assets/original/ui/'+icons[Number(b.dataset.value)+1][active?0:1]});document.querySelectorAll('.source-bag-equipment').forEach(e=>e.hidden=part>=0&&definitionPart(equipmentInstance(state,e.dataset.id))!==part);return}
+  if(type==='selectDecomposeEquipment'||type==='selectAllDecomposeEquipment'){const modal=$('#modal'),current=(modal.dataset.selectedEquipmentIds||'').split(',').filter(Boolean),ids=type==='selectAllDecomposeEquipment'?(current.length===state.equipment.filter(e=>!e.dragonid).length?[]:state.equipment.filter(e=>!e.dragonid).map(e=>e.id)):current.includes(el.dataset.id)?current.filter(id=>id!==el.dataset.id):[...current,el.dataset.id];await openEquipmentBag(state,'decompose',ids);return}
+  if(type==='confirmDecomposeEquipment'){await confirmEquipmentDecompose(state,($('#modal').dataset.selectedEquipmentIds||'').split(',').filter(Boolean));return}
+  if(type==='cancelDecomposeEquipment'){await openEquipmentBag(state,'decompose',($('#modal').dataset.selectedEquipmentIds||'').split(',').filter(Boolean));return}
+  if(type==='decomposeEquipment'){await persist(action(state,type,{ids:($('#modal').dataset.selectedEquipmentIds||'').split(',').filter(Boolean)}));render();await openEquipmentBag(state,'decompose');toast(state.log[0]);return}
   if(type==='openEquip'){await openEquipDialog(state,Number.isSafeInteger(id)&&state.dragons.some(d=>d.id===id)?id:selected,{returnToDragon:false});return}
-  if(type==='openEquipEnhance'){await openEquipEnhanceDialog(state,el.dataset.id);return}
-  if(type==='enhanceEquipment'){await persist(action(state,'enhanceEquipment',{equipmentId:el.dataset.id,count:Number(el.dataset.value)}));render();await openEquipEnhanceDialog(state,el.dataset.id);toast(state.log[0]);return}
+  if(type==='openEquipEnhance'){await openEquipEnhanceDialog(state,el.dataset.id,{returnToBag:$('#modal').dataset.mode==='sourceEquipmentBag'});return}
+  if(type==='enhanceEquipment'){const returnToBag=$('#modal').dataset.returnToBag==='true';await persist(action(state,'enhanceEquipment',{equipmentId:el.dataset.id,count:Number(el.dataset.value)}));render();await openEquipEnhanceDialog(state,el.dataset.id,{returnToBag});toast(state.log[0]);return}
   if(type==='openEquipInfo'){await openEquipInfoDialog(state,el.dataset.id,{dragonId:Number($('#modal').dataset.dragonId)||null});return}
   if(type==='equipChange'){await openEquipChangeDialog(state,Number($('#modal').dataset.dragonId),el.dataset.id);return}
   if(type==='equipSource'){await openEquipSourceDialog();return}

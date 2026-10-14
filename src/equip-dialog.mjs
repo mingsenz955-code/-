@@ -131,7 +131,7 @@ export async function openEquipInfoDialog(state,equipmentId,{dragonId=null}={}){
  const disabled=new Set(['btn_upstar/btn',...(!instance.dragonid?['btn_xiexia/btn']:[])]);
  const d=showSource('sourceEquipInfo',renderSourceLayout(layout,{values,hidden,actions,disabled,slots:{icon_long:`<img class="source-equip-icon" src="${equipmentIcon(definition)}" alt="">`}})
   +`<div class="source-equip-notes"><p>品质 ${QUALITY_LABELS[definition.quality]}　部位 ${PART_LABELS[definition.part]}　系别 ${EQUIPMENT_PROPERTIES[definition.property]??'—'}　${owner?`所属 ${esc(SPECIES[owner.species].name)}`:'未穿戴'}${instance.star?`　星级 ${instance.star}`:''}</p>`
-  +'<p>星级（equipinfostar）与随机属性（equipinforand）的结算规则尚未核实，未计入属性；强化与升星保持未开放。</p></div>');
+  +'</div>');
  d.dataset.equipmentId=equipmentId;if(owner)d.dataset.dragonId=String(owner.id);d.dataset.equipPart=String(definition.part);
 }
 
@@ -142,7 +142,7 @@ export async function openEquipSourceDialog(){
  showSource('sourceEquipFrom',renderSourceLayout(layout,{values:{tx_name:'装备来源',tx_lv:''},hidden:new Set(['add','xiangkuang','icon_long','shuxing1','shuxing2','shuxing3','pingding','item1','item2','item3','item4','item5']),actions:{close:{type:'close',label:'关闭装备来源'},'btn_down/btn':{type:'unverifiedEquip',label:'获得更多装备'}}})
   +'<div class="source-equip-notes"><p>原版三种来源：宝箱抽取、龙境仙踪（PvE 关卡掉落）、活动获得；探险宝箱表 tanxian_baoxiang 已确认产出装备与装备碎片。三者都尚未实现，因此当前不会发放任何装备。</p></div>');
 }
-export async function openEquipEnhanceDialog(state,equipmentId){
+export async function openEquipEnhanceDialog(state,equipmentId,{returnToBag=false}={}){
  const instance=(state.equipment??[]).find(v=>v.id===equipmentId);if(!instance)throw new Error('找不到这件装备。');
  const layout=await sourceLayout('panel_formation_equip_strengthen'),info=equipmentDefinition(instance.type),material=info.part===4?'wing':info.part===5?'crystal':'stone',icon=material==='wing'?'resource_icon_80_yuyi.png':material==='crystal'?'resource_icon_80_shuijing.png':'shangcheng_huobi_qhs.png';
  let plan=null;try{plan=equipmentEnhancePlan(instance)}catch{}
@@ -152,5 +152,5 @@ export async function openEquipEnhanceDialog(state,equipmentId){
  slots.icon_long=`<img class="source-equip-icon" src="${equipmentIcon(info)}" alt="">`;
  for(const key of ['node_showicon','node_costiicon'])slots[key]=`<img class="equip-enhance-material" src="assets/original/ui/${icon}" alt="${EQUIPMENT_MATERIAL_NAMES[material]}">`;
  const disabled=new Set(!plan?['qianghua/btn','qianghuaall/btn']:[]);
- const d=showSource('sourceEquipEnhance',renderSourceLayout(layout,{values,slots,hidden,disabled,actions:{close:{type:'openEquipInfo',id:equipmentId,label:'返回装备'},'qianghua/btn':{type:'enhanceEquipment',id:equipmentId,value:'1',label:'强化'},'qianghuaall/btn':{type:'enhanceEquipment',id:equipmentId,value:'10',label:'强化10次'}}}));d.dataset.equipmentId=equipmentId;
+ const d=showSource('sourceEquipEnhance',renderSourceLayout(layout,{values,slots,hidden,disabled,actions:{close:{type:returnToBag?'openEquipmentBag':'openEquipInfo',id:equipmentId,label:'返回装备'},'qianghua/btn':{type:'enhanceEquipment',id:equipmentId,value:'1',label:'强化'},'qianghuaall/btn':{type:'enhanceEquipment',id:equipmentId,value:'10',label:'强化10次'}}}));d.dataset.equipmentId=equipmentId;d.dataset.returnToBag=String(returnToBag);
 }
