@@ -13,7 +13,7 @@ test('all 90 dragons retain original shop fields and every positive source breed
   assert.equal(info.shop.minLevel,original.min_level??null);
   const expected=ORIGINAL_BREEDING.filter(row=>row[3]===1&&row.some((value,index)=>index>=4&&index%2===0&&value===dragon.id&&row[index+1]>0));
   assert.deepEqual(info.breeding.map(pair=>pair.sourceRow),expected.map(row=>row[0]));
-  assert.equal(info.otherSources,'unverified');
+  assert.equal(info.otherSources,'unverified');assert(info.baseLottery.every(row=>row.probability==='unverified'));
   const snapshot=JSON.stringify(info);info.breeding.pop();info.shop.costs.g=-1;
   assert.equal(JSON.stringify(dragonAcquisition(dragon.id)),snapshot,'A browser cannot rewrite source evidence');
  }

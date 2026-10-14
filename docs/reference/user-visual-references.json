@@ -1,0 +1,78 @@
+{
+  "providedDate": "2026-10-14",
+  "version": "unverified; keep separate from Android 2.9.35 baseline",
+  "files": [
+    {
+      "file": "1-照片-1.jpg",
+      "sha256": "9e0536f0c81e21267490558971532bd15c43968622761250d615bccc21415ee7",
+      "kind": "user-reference"
+    },
+    {
+      "file": "2-照片-2.jpg",
+      "sha256": "89aa6c8c8712730ff1167dc2275f730c914eaaecb9279b48fb0038899bc69813",
+      "kind": "user-reference"
+    },
+    {
+      "file": "3-照片-3.jpg",
+      "sha256": "655e2c16a1275cfafead62661a078df9fd2e696da11c22d68577f43a371d251c",
+      "kind": "user-reference"
+    },
+    {
+      "file": "4-照片-4.jpg",
+      "sha256": "9edebe6bf74654a794ed0c93e9f6c132135a88aada8ec1b92b8ff0b953b4d461",
+      "kind": "user-reference"
+    },
+    {
+      "file": "5-照片-5.jpg",
+      "sha256": "c3474cb16eb00eeba641828c51edaad12f8978af4a92f7105c1436e0c74cfb86",
+      "kind": "user-reference"
+    },
+    {
+      "file": "6-照片-6.jpg",
+      "sha256": "090adc4327933439bfe3abd518899490d1a1441c364bc2b38e9c986c9c4ad874",
+      "kind": "user-reference"
+    },
+    {
+      "file": "7-照片-7.jpg",
+      "sha256": "2c5462f45f5909454224b624d1cd28879f895c2d475f5a34d25243244b996bd8",
+      "kind": "user-reference"
+    },
+    {
+      "file": "8-照片-8.jpg",
+      "sha256": "ae40debb5bf8b7bc2b6d23fd5530d315ccfcdc580311bf5d071b06d9ba203681",
+      "kind": "user-reference"
+    },
+    {
+      "file": "1-v1e00fgi0000dapcoqvog65ged1eo1gg.mp4",
+      "sha256": "431a2c9e3815316b6632cb35d3d26933bdd5f15d3d99af285a509596d95e0c25",
+      "kind": "user-reference"
+    }
+  ],
+  "videoMetadata": {
+    "fps": 60.0,
+    "frames": 2272,
+    "durationSeconds": 37.86666666666667,
+    "width": 1556,
+    "height": 720
+  },
+  "videoViewedSamplesSeconds": [
+    0.0,
+    2.367,
+    4.733,
+    7.1,
+    9.467,
+    11.833,
+    14.2,
+    16.567,
+    18.933,
+    21.3,
+    23.667,
+    26.033,
+    28.4,
+    30.767,
+    33.133,
+    35.5
+  ],
+  "gameViewport": "approx 16:9 inside phone recording; black bars, status bar, watermark and outro are not game UI",
+  "note": "Original attachments remain unchanged. Frame samples are analysis intermediates, not game artwork."
+}

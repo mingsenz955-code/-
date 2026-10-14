@@ -13669,6 +13669,110 @@
       "width": 105,
       "height": 105,
       "sha256": "6e3a9cc390dfc8a795306ef8ad457ba43897e58e3db77c89ef315d6912e6223d"
+    },
+    "ui/ui_dragonrand_bg2.png": {
+      "archive": "assets/res/ui/ui_RandDragon.plist",
+      "frame": "ui_dragonrand_bg2.png",
+      "texture": "assets/res/ui/ui_RandDragon.pkm",
+      "width": 1024,
+      "height": 768,
+      "sha256": "d9b0c04565cfdadca7c1341620871de86fa70bb3ee4407c9b64fb80ef3184bb8"
+    },
+    "ui/ui_dragonrand_bg3.png": {
+      "archive": "assets/res/ui/ui_RandDragon.plist",
+      "frame": "ui_dragonrand_bg3.png",
+      "texture": "assets/res/ui/ui_RandDragon.pkm",
+      "width": 450,
+      "height": 600,
+      "sha256": "a725e32e062a6ee70d0cd654ee226e6be9f5b2af2e3336258b653c577d843951"
+    },
+    "ui/ui_dragonrand_eff01.png": {
+      "archive": "assets/res/ui/ui_RandDragon.plist",
+      "frame": "ui_dragonrand_eff01.png",
+      "texture": "assets/res/ui/ui_RandDragon.pkm",
+      "width": 388,
+      "height": 388,
+      "sha256": "1ff0bf64c32b70dbec4bd0a40877df378165956582980da2b90fda832cee11ef"
+    },
+    "ui/ui_dragonrand_eff02.png": {
+      "archive": "assets/res/ui/ui_RandDragon.plist",
+      "frame": "ui_dragonrand_eff02.png",
+      "texture": "assets/res/ui/ui_RandDragon.pkm",
+      "width": 270,
+      "height": 270,
+      "sha256": "d3c76ce993c4d7cd37f45e3a4b4d8be6f12eed9734538ae9b573cec8f9e54bce"
+    },
+    "ui/ui_dragonrand_eff03.png": {
+      "archive": "assets/res/ui/ui_RandDragon.plist",
+      "frame": "ui_dragonrand_eff03.png",
+      "texture": "assets/res/ui/ui_RandDragon.pkm",
+      "width": 388,
+      "height": 388,
+      "sha256": "e523cd55e59c2c554a37b8bcecabd6c24d05cd5fe360febed73bc71448bc8b12"
+    },
+    "ui/ui_dragonrand_eff04.png": {
+      "archive": "assets/res/ui/ui_RandDragon.plist",
+      "frame": "ui_dragonrand_eff04.png",
+      "texture": "assets/res/ui/ui_RandDragon.pkm",
+      "width": 270,
+      "height": 270,
+      "sha256": "07eb81f47fe71d4823c053dbb35f8659731145e6fabe7e89b7cf4cecdd057582"
+    },
+    "ui/ui_dragonrand_g1.png": {
+      "archive": "assets/res/ui/ui_RandDragon.plist",
+      "frame": "ui_dragonrand_g1.png",
+      "texture": "assets/res/ui/ui_RandDragon.pkm",
+      "width": 90,
+      "height": 110,
+      "sha256": "2bea0659bd4a233cf1c20207814d847194bdb06d123757a247b9fdc34e93a763"
+    },
+    "ui/ui_dragonrand_g2.png": {
+      "archive": "assets/res/ui/ui_RandDragon.plist",
+      "frame": "ui_dragonrand_g2.png",
+      "texture": "assets/res/ui/ui_RandDragon.pkm",
+      "width": 90,
+      "height": 110,
+      "sha256": "190e810a2d23318ebf23e3ca2289a6dbb08085ae26e116c82e2b8bd644b1ec0c"
+    },
+    "ui/ui_dragonrand_gezi.png": {
+      "archive": "assets/res/ui/ui_RandDragon.plist",
+      "frame": "ui_dragonrand_gezi.png",
+      "texture": "assets/res/ui/ui_RandDragon.pkm",
+      "width": 85,
+      "height": 85,
+      "sha256": "8ed3d4a3b66ea1124945a0c76ccc7b4bece4bbd66580caae71056d918a368bca"
+    },
+    "ui/ui_dragonrand_jiejie1.png": {
+      "archive": "assets/res/ui/ui_RandDragon.plist",
+      "frame": "ui_dragonrand_jiejie1.png",
+      "texture": "assets/res/ui/ui_RandDragon.pkm",
+      "width": 910,
+      "height": 320,
+      "sha256": "d931b0fecbd47e50910177b03aa7c1d62137489816bad25cc29cdcca9752c30b"
+    },
+    "ui/ui_dragonrand_jiejie2.png": {
+      "archive": "assets/res/ui/ui_RandDragon.plist",
+      "frame": "ui_dragonrand_jiejie2.png",
+      "texture": "assets/res/ui/ui_RandDragon.pkm",
+      "width": 910,
+      "height": 320,
+      "sha256": "27095c4174b4612c4d8eec39b4f05bde38c20878b62b13c86eba4f6d51c3b256"
+    },
+    "ui/ui_dragonrand_taizi.png": {
+      "archive": "assets/res/ui/ui_RandDragon.plist",
+      "frame": "ui_dragonrand_taizi.png",
+      "texture": "assets/res/ui/ui_RandDragon.pkm",
+      "width": 150,
+      "height": 80,
+      "sha256": "34b96a5fa8d43bed508bba570c0c5a164714071f59bbe110d9a8b346d30dfa0a"
+    },
+    "ui/ui_dragonrand_bg1.png": {
+      "archive": "assets/res/ui/ui_dragonrand_bg1.plist",
+      "frame": "ui_dragonrand_bg1.png",
+      "texture": "assets/res/ui/ui_dragonrand_bg1.pkm",
+      "width": 1024,
+      "height": 768,
+      "sha256": "c32c4a072ce825d08bb2995408482aff1491c3c5483525e62f34f32a9b1f7f29"
     }
   }
 }

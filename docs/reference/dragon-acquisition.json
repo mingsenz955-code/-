@@ -4,7 +4,7 @@
   "notes": [
     "Shop fields come from config_cn_qq.json. Other-version and server store availability are unverified.",
     "Breeding means a positive-weight candidate in an enabled coition source row, not guaranteed acquisition.",
-    "Lottery, historical events, adventure drops and other rewards remain unverified per dragon."
+    "Base lottery source membership is listed; probabilities remain unverified. Historical events, adventure drops and other rewards remain unverified per dragon."
   ],
   "dragons": [
     {
@@ -13676,6 +13676,7 @@
           ]
         }
       ],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -18505,6 +18506,18 @@
             1201,
             1056
           ]
+        }
+      ],
+      "baseLottery": [
+        {
+          "mode": 1,
+          "sourceRow": 3,
+          "probability": "unverified"
+        },
+        {
+          "mode": 2,
+          "sourceRow": 31,
+          "probability": "unverified"
         }
       ],
       "otherSources": "unverified",
@@ -23415,6 +23428,7 @@
           ]
         }
       ],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -24051,6 +24065,13 @@
             1200,
             1059
           ]
+        }
+      ],
+      "baseLottery": [
+        {
+          "mode": 2,
+          "sourceRow": 18,
+          "probability": "unverified"
         }
       ],
       "otherSources": "unverified",
@@ -29491,6 +29512,18 @@
             1201,
             1100
           ]
+        }
+      ],
+      "baseLottery": [
+        {
+          "mode": 1,
+          "sourceRow": 8,
+          "probability": "unverified"
+        },
+        {
+          "mode": 2,
+          "sourceRow": 36,
+          "probability": "unverified"
         }
       ],
       "otherSources": "unverified",
@@ -35220,6 +35253,18 @@
           ]
         }
       ],
+      "baseLottery": [
+        {
+          "mode": 1,
+          "sourceRow": 11,
+          "probability": "unverified"
+        },
+        {
+          "mode": 2,
+          "sourceRow": 39,
+          "probability": "unverified"
+        }
+      ],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -39022,6 +39067,7 @@
           ]
         }
       ],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -39667,6 +39713,7 @@
           ]
         }
       ],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -44372,6 +44419,18 @@
           ]
         }
       ],
+      "baseLottery": [
+        {
+          "mode": 1,
+          "sourceRow": 9,
+          "probability": "unverified"
+        },
+        {
+          "mode": 2,
+          "sourceRow": 37,
+          "probability": "unverified"
+        }
+      ],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -49007,6 +49066,7 @@
           ]
         }
       ],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -54102,6 +54162,18 @@
             1201,
             1062
           ]
+        }
+      ],
+      "baseLottery": [
+        {
+          "mode": 1,
+          "sourceRow": 6,
+          "probability": "unverified"
+        },
+        {
+          "mode": 2,
+          "sourceRow": 34,
+          "probability": "unverified"
         }
       ],
       "otherSources": "unverified",
@@ -69666,6 +69738,7 @@
           ]
         }
       ],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -75526,6 +75599,7 @@
           ]
         }
       ],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -76225,6 +76299,13 @@
             1092,
             1064
           ]
+        }
+      ],
+      "baseLottery": [
+        {
+          "mode": 2,
+          "sourceRow": 19,
+          "probability": "unverified"
         }
       ],
       "otherSources": "unverified",
@@ -81366,6 +81447,7 @@
           ]
         }
       ],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -86097,6 +86179,13 @@
             1201,
             1063
           ]
+        }
+      ],
+      "baseLottery": [
+        {
+          "mode": 2,
+          "sourceRow": 27,
+          "probability": "unverified"
         }
       ],
       "otherSources": "unverified",
@@ -92155,6 +92244,18 @@
           ]
         }
       ],
+      "baseLottery": [
+        {
+          "mode": 1,
+          "sourceRow": 12,
+          "probability": "unverified"
+        },
+        {
+          "mode": 2,
+          "sourceRow": 40,
+          "probability": "unverified"
+        }
+      ],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -97147,6 +97248,7 @@
           ]
         }
       ],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -102307,6 +102409,7 @@
           ]
         }
       ],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -107551,6 +107654,7 @@
           ]
         }
       ],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -121699,6 +121803,7 @@
           ]
         }
       ],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -125480,6 +125585,7 @@
           ]
         }
       ],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -130101,6 +130207,18 @@
           ]
         }
       ],
+      "baseLottery": [
+        {
+          "mode": 1,
+          "sourceRow": 14,
+          "probability": "unverified"
+        },
+        {
+          "mode": 2,
+          "sourceRow": 42,
+          "probability": "unverified"
+        }
+      ],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -130758,6 +130876,13 @@
             1201,
             1070
           ]
+        }
+      ],
+      "baseLottery": [
+        {
+          "mode": 2,
+          "sourceRow": 20,
+          "probability": "unverified"
         }
       ],
       "otherSources": "unverified",
@@ -135801,6 +135926,7 @@
           ]
         }
       ],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -140240,6 +140366,7 @@
           ]
         }
       ],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -153947,6 +154074,7 @@
           ]
         }
       ],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -159002,6 +159130,7 @@
           ]
         }
       ],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -163903,6 +164032,7 @@
           ]
         }
       ],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -177267,6 +177397,7 @@
           ]
         }
       ],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -182376,6 +182507,13 @@
             1201,
             1072
           ]
+        }
+      ],
+      "baseLottery": [
+        {
+          "mode": 2,
+          "sourceRow": 25,
+          "probability": "unverified"
         }
       ],
       "otherSources": "unverified",
@@ -197177,6 +197315,7 @@
           ]
         }
       ],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -210569,6 +210708,7 @@
           ]
         }
       ],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -223233,6 +223373,7 @@
           ]
         }
       ],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -223317,6 +223458,13 @@
         "minLevel": null
       },
       "breeding": [],
+      "baseLottery": [
+        {
+          "mode": 2,
+          "sourceRow": 23,
+          "probability": "unverified"
+        }
+      ],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -227868,6 +228016,7 @@
           ]
         }
       ],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -233077,6 +233226,18 @@
           ]
         }
       ],
+      "baseLottery": [
+        {
+          "mode": 1,
+          "sourceRow": 13,
+          "probability": "unverified"
+        },
+        {
+          "mode": 2,
+          "sourceRow": 41,
+          "probability": "unverified"
+        }
+      ],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -233161,6 +233322,7 @@
         "minLevel": null
       },
       "breeding": [],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -239012,6 +239174,18 @@
           ]
         }
       ],
+      "baseLottery": [
+        {
+          "mode": 1,
+          "sourceRow": 15,
+          "probability": "unverified"
+        },
+        {
+          "mode": 2,
+          "sourceRow": 43,
+          "probability": "unverified"
+        }
+      ],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -244151,6 +244325,13 @@
           ]
         }
       ],
+      "baseLottery": [
+        {
+          "mode": 2,
+          "sourceRow": 28,
+          "probability": "unverified"
+        }
+      ],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -249207,6 +249388,7 @@
           ]
         }
       ],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -254318,6 +254500,7 @@
           ]
         }
       ],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -254975,6 +255158,13 @@
             1201,
             1070
           ]
+        }
+      ],
+      "baseLottery": [
+        {
+          "mode": 2,
+          "sourceRow": 21,
+          "probability": "unverified"
         }
       ],
       "otherSources": "unverified",
@@ -259598,6 +259788,7 @@
           ]
         }
       ],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -260243,6 +260434,7 @@
           ]
         }
       ],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -260327,6 +260519,7 @@
         "minLevel": null
       },
       "breeding": [],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -260373,6 +260566,7 @@
         "minLevel": null
       },
       "breeding": [],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -260419,6 +260613,7 @@
         "minLevel": null
       },
       "breeding": [],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -265373,6 +265568,18 @@
           ]
         }
       ],
+      "baseLottery": [
+        {
+          "mode": 1,
+          "sourceRow": 4,
+          "probability": "unverified"
+        },
+        {
+          "mode": 2,
+          "sourceRow": 32,
+          "probability": "unverified"
+        }
+      ],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -270204,6 +270411,7 @@
           ]
         }
       ],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -276260,6 +276468,7 @@
           ]
         }
       ],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -281987,6 +282196,7 @@
           ]
         }
       ],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -287427,6 +287637,18 @@
           ]
         }
       ],
+      "baseLottery": [
+        {
+          "mode": 1,
+          "sourceRow": 7,
+          "probability": "unverified"
+        },
+        {
+          "mode": 2,
+          "sourceRow": 35,
+          "probability": "unverified"
+        }
+      ],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -292671,6 +292893,18 @@
           ]
         }
       ],
+      "baseLottery": [
+        {
+          "mode": 1,
+          "sourceRow": 5,
+          "probability": "unverified"
+        },
+        {
+          "mode": 2,
+          "sourceRow": 33,
+          "probability": "unverified"
+        }
+      ],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -297376,6 +297610,7 @@
           ]
         }
       ],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -302473,6 +302708,7 @@
           ]
         }
       ],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -307206,6 +307442,7 @@
           ]
         }
       ],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -312415,6 +312652,7 @@
           ]
         }
       ],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -317323,6 +317561,13 @@
           ]
         }
       ],
+      "baseLottery": [
+        {
+          "mode": 2,
+          "sourceRow": 26,
+          "probability": "unverified"
+        }
+      ],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -322224,6 +322469,18 @@
           ]
         }
       ],
+      "baseLottery": [
+        {
+          "mode": 1,
+          "sourceRow": 10,
+          "probability": "unverified"
+        },
+        {
+          "mode": 2,
+          "sourceRow": 38,
+          "probability": "unverified"
+        }
+      ],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -326857,6 +327114,13 @@
             1201,
             1067
           ]
+        }
+      ],
+      "baseLottery": [
+        {
+          "mode": 2,
+          "sourceRow": 29,
+          "probability": "unverified"
         }
       ],
       "otherSources": "unverified",
@@ -332019,6 +332283,7 @@
           ]
         }
       ],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -337060,6 +337325,13 @@
           ]
         }
       ],
+      "baseLottery": [
+        {
+          "mode": 2,
+          "sourceRow": 30,
+          "probability": "unverified"
+        }
+      ],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -341611,6 +341883,7 @@
           ]
         }
       ],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -341695,6 +341968,13 @@
         "minLevel": null
       },
       "breeding": [],
+      "baseLottery": [
+        {
+          "mode": 2,
+          "sourceRow": 22,
+          "probability": "unverified"
+        }
+      ],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -341779,6 +342059,7 @@
         "minLevel": null
       },
       "breeding": [],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -341863,6 +342144,13 @@
         "minLevel": null
       },
       "breeding": [],
+      "baseLottery": [
+        {
+          "mode": 2,
+          "sourceRow": 24,
+          "probability": "unverified"
+        }
+      ],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -341947,6 +342235,7 @@
         "minLevel": null
       },
       "breeding": [],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -342031,6 +342320,7 @@
         "minLevel": null
       },
       "breeding": [],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -342115,6 +342405,7 @@
         "minLevel": null
       },
       "breeding": [],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -342199,6 +342490,7 @@
         "minLevel": null
       },
       "breeding": [],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -342283,6 +342575,7 @@
         "minLevel": null
       },
       "breeding": [],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -342367,6 +342660,7 @@
         "minLevel": null
       },
       "breeding": [],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -342451,6 +342745,7 @@
         "minLevel": null
       },
       "breeding": [],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -342535,6 +342830,7 @@
         "minLevel": null
       },
       "breeding": [],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -342621,6 +342917,7 @@
         "minLevel": null
       },
       "breeding": [],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -342705,6 +343002,7 @@
         "minLevel": null
       },
       "breeding": [],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -342789,6 +343087,7 @@
         "minLevel": null
       },
       "breeding": [],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -342873,6 +343172,7 @@
         "minLevel": null
       },
       "breeding": [],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -342957,6 +343257,7 @@
         "minLevel": null
       },
       "breeding": [],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -343041,6 +343342,7 @@
         "minLevel": null
       },
       "breeding": [],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -343125,6 +343427,7 @@
         "minLevel": null
       },
       "breeding": [],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -343209,6 +343512,7 @@
         "minLevel": null
       },
       "breeding": [],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -343293,6 +343597,7 @@
         "minLevel": null
       },
       "breeding": [],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -343377,6 +343682,7 @@
         "minLevel": null
       },
       "breeding": [],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -343461,6 +343767,7 @@
         "minLevel": null
       },
       "breeding": [],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -343545,6 +343852,7 @@
         "minLevel": null
       },
       "breeding": [],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -343629,6 +343937,7 @@
         "minLevel": null
       },
       "breeding": [],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -343713,6 +344022,7 @@
         "minLevel": null
       },
       "breeding": [],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {
@@ -343797,6 +344107,7 @@
         "minLevel": null
       },
       "breeding": [],
+      "baseLottery": [],
       "otherSources": "unverified",
       "catalogImages": [
         {

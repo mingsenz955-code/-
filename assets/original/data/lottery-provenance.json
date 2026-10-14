@@ -1,0 +1,23 @@
+{
+  "baseline": "2.9.35-202402271124",
+  "tablesSha256": "63ac9f739c2dcd2ec226212a7037a519c7be8428ed519fd591010db32a463345",
+  "sourceSha256": {
+    "ui/DragonRandPanel.lua": "f02425b6557864c368b0703f416558144c16dcfb85e6fb332ca41ccc793136aa",
+    "ui/RandDragonPanel.lua": "0f32f8e9c686a67a8ae459977f7a55498becebd52c85522516f26494f102e13f",
+    "dragon/pconfig/librarys/dragonrand/LibDragonRandInfo.lua": "b20077dab53b07dc71b384f9f8e0d37f7f9bbb8e2e803ea01b075ca4879cdee1",
+    "dragon/pconfig/librarys/dragonrand/DragonRandLibrary.lua": "e8b89534f01ecc48b9420362db4dec64039e6e019206bd471673f08317bee537"
+  },
+  "rawRows": 43,
+  "verifiedClientRules": {
+    "normalCost": 30,
+    "advancedCost": 80,
+    "tenTimesMultiplier": 10,
+    "pendingCapacity": 30,
+    "ticketShortageGemRatio": 1
+  },
+  "offlinePolicy": "offline-cumulative-v1",
+  "unverified": [
+    "Original LibDragonRandInfo maps nummax to column 5 and weight to column 6; raw column 7 increases to 100000. The offline sampler interprets column 7 as cumulative thresholds and columns 5/6 as quantity bounds. These are explicit local inferences, not verified server probabilities or quantities.",
+    "No free draw, cooldown, pity, event pool, ticket acquisition or event rewards have been invented."
+  ]
+}

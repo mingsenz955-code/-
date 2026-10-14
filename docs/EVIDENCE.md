@@ -129,3 +129,9 @@
 - 90条获取途径来自原config_cn_qq.json和coition正权重候选源行。其他来源未核实，不等价真实服务端完整获取图。docs/reference/dragon-acquisition.json还逐条列目录图片/身体模型并标皮肤不完整。
 - ui_PowerUp补22图，资源登记1836；尺寸1247。原left/right缺省坐标已接入，精确原界面/锚点仍需同分辨率实机。
 - 网页补充证据与冒险模式/抽奖视频线索见docs/FULL-FIDELITY-CHECKLIST.md；不混用页游、iOS、Android版本。
+
+## E05 基础抽奖与用户实机证据 — v0.10/v0.11
+- DragonRandPanel明文确认普通30/高级80、十连×10、对应票券优先/不足魔晶补齐和待领取30格；RandDragonPanel确认抽中龙直接Lv1安置。代码哈希见lottery-provenance。
+- Dragonrand43行基础池保留；第7列累计解释和第5/6数量范围是offline-cumulative-v1推断，非已确认服务器算法。原LibDragonRandInfo存在字段偏差，展示随机不是实际开奖。活动/后期翻牌另作系统，不混用基础高级池。
+- 用户8截图/战斗视频为新的原界面证据，版本未知。详见USER-VISUAL-REFERENCE.md、reference/user-visual-references.json；视频只采样16时点，不宣称完整逐帧/结算已核实。
+- ui_RandDragon/ui_dragonrand_bg1补13图，manifest1849，尺寸1260。原ui_main更多图标/邮件/充值已接；右侧活动/字体/完整转盘及奖励页仍不一致。
