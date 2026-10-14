@@ -16377,6 +16377,222 @@
       "width": 44,
       "height": 44,
       "sha256": "746017ebe8699a946cb29cd2184e0273138212693862d3fb49274a16425f7ab7"
+    },
+    "ui/ui_formationinfo_bg1.png": {
+      "archive": "assets/res/ui/ui_formationinfo.plist",
+      "frame": "ui_formationinfo_bg1.png",
+      "texture": "assets/res/ui/ui_formationinfo.pkm",
+      "width": 164,
+      "height": 636,
+      "sha256": "e4c6e75d2666ba88233e78261a319bc3a6e0c39241792c197489a44c40ffbacf"
+    },
+    "ui/ui_formationinfo_bg2.png": {
+      "archive": "assets/res/ui/ui_formationinfo.plist",
+      "frame": "ui_formationinfo_bg2.png",
+      "texture": "assets/res/ui/ui_formationinfo.pkm",
+      "width": 667,
+      "height": 50,
+      "sha256": "cc904fbfc4f5f1ab1f7279d538aea64b47dda9760e7d273364d7db66aa90099f"
+    },
+    "ui/ui_formationinfo_bg3.png": {
+      "archive": "assets/res/ui/ui_formationinfo.plist",
+      "frame": "ui_formationinfo_bg3.png",
+      "texture": "assets/res/ui/ui_formationinfo.pkm",
+      "width": 661,
+      "height": 281,
+      "sha256": "595e0a0a2b79b6d6728594dac476fb78c37dd5742805d24640ab538d437f4d85"
+    },
+    "ui/ui_formationinfo_hint01.png": {
+      "archive": "assets/res/ui/ui_formationinfo.plist",
+      "frame": "ui_formationinfo_hint01.png",
+      "texture": "assets/res/ui/ui_formationinfo.pkm",
+      "width": 25,
+      "height": 27,
+      "sha256": "d6a1d064b29734ed452c0232d4338d83a1b21bc0a75f4c044044765206ac3faa"
+    },
+    "ui/ui_formationinfo_hint_down.png": {
+      "archive": "assets/res/ui/ui_formationinfo.plist",
+      "frame": "ui_formationinfo_hint_down.png",
+      "texture": "assets/res/ui/ui_formationinfo.pkm",
+      "width": 42,
+      "height": 29,
+      "sha256": "2f10aa87b68c25aa58a93751c0685d2fe407beb83ac6339ca2e249513fe7717f"
+    },
+    "ui/ui_formationinfo_hint_up.png": {
+      "archive": "assets/res/ui/ui_formationinfo.plist",
+      "frame": "ui_formationinfo_hint_up.png",
+      "texture": "assets/res/ui/ui_formationinfo.pkm",
+      "width": 42,
+      "height": 29,
+      "sha256": "ef5081c25808194e41dc05136a0f7b6f6306cdecf1466181db451bd7156bf74a"
+    },
+    "ui/ui_formationinfo_lvbg.png": {
+      "archive": "assets/res/ui/ui_formationinfo.plist",
+      "frame": "ui_formationinfo_lvbg.png",
+      "texture": "assets/res/ui/ui_formationinfo.pkm",
+      "width": 47,
+      "height": 51,
+      "sha256": "81e2b676726b0f9547c50db62166e7f2d317b73217d0c6179ecb58de45fb8c76"
+    },
+    "ui/ui_formationinfo_type_atk_small.png": {
+      "archive": "assets/res/ui/ui_formationinfo.plist",
+      "frame": "ui_formationinfo_type_atk_small.png",
+      "texture": "assets/res/ui/ui_formationinfo.pkm",
+      "width": 44,
+      "height": 44,
+      "sha256": "2687c71f8d8b9d9454d540e4766df26ced65d61d10c25c86c98e7dd9bdc07404"
+    },
+    "ui/ui_formationinfo_type_def_small.png": {
+      "archive": "assets/res/ui/ui_formationinfo.plist",
+      "frame": "ui_formationinfo_type_def_small.png",
+      "texture": "assets/res/ui/ui_formationinfo.pkm",
+      "width": 44,
+      "height": 44,
+      "sha256": "ae62e12f5a0f42d92b005e55525c427b4cc52d1e3b46542f3e69fa6bb658b035"
+    },
+    "ui/ui_formationinfo_type_land.png": {
+      "archive": "assets/res/ui/ui_formationinfo.plist",
+      "frame": "ui_formationinfo_type_land.png",
+      "texture": "assets/res/ui/ui_formationinfo.pkm",
+      "width": 52,
+      "height": 52,
+      "sha256": "a0f06a92d947250a8ee49fbea81b5d48e9437652daff349dc7ebf73fa8371702"
+    },
+    "ui/ui_formationinfo_type_land_small.png": {
+      "archive": "assets/res/ui/ui_formationinfo.plist",
+      "frame": "ui_formationinfo_type_land_small.png",
+      "texture": "assets/res/ui/ui_formationinfo.pkm",
+      "width": 44,
+      "height": 44,
+      "sha256": "77f687aa585962b9507851b695f87ba426d697ac8914017dce6c76152e653dd4"
+    },
+    "ui/ui_formationinfo_type_sky.png": {
+      "archive": "assets/res/ui/ui_formationinfo.plist",
+      "frame": "ui_formationinfo_type_sky.png",
+      "texture": "assets/res/ui/ui_formationinfo.pkm",
+      "width": 52,
+      "height": 52,
+      "sha256": "326c16937931a37bc8e5a1d0d62427ae3a12bcdc4efe14c404c05e7310c48df0"
+    },
+    "ui/ui_formationinfo_type_sky_small.png": {
+      "archive": "assets/res/ui/ui_formationinfo.plist",
+      "frame": "ui_formationinfo_type_sky_small.png",
+      "texture": "assets/res/ui/ui_formationinfo.pkm",
+      "width": 44,
+      "height": 44,
+      "sha256": "e5a91e3b16d1c36022cb0cedf0798f14e2957701754a8a76b8beb15db65e10ed"
+    },
+    "ui/ui_formationinfo_x0001.png": {
+      "archive": "assets/res/ui/ui_formationinfo.plist",
+      "frame": "ui_formationinfo_x0001.png",
+      "texture": "assets/res/ui/ui_formationinfo.pkm",
+      "width": 29,
+      "height": 29,
+      "sha256": "541ae8ea4b3e2dcfd53601f918cafed6c430f72a6c766faf0afe691cd2124327"
+    },
+    "ui/ui_formationinfo_x0002.png": {
+      "archive": "assets/res/ui/ui_formationinfo.plist",
+      "frame": "ui_formationinfo_x0002.png",
+      "texture": "assets/res/ui/ui_formationinfo.pkm",
+      "width": 29,
+      "height": 29,
+      "sha256": "dcc6120ebbf41a729493f5f0a25485a41d9366e1835309fac7add31b5cceb279"
+    },
+    "ui/ui_formationinfo_x0003.png": {
+      "archive": "assets/res/ui/ui_formationinfo.plist",
+      "frame": "ui_formationinfo_x0003.png",
+      "texture": "assets/res/ui/ui_formationinfo.pkm",
+      "width": 29,
+      "height": 29,
+      "sha256": "e56cb88dd8c0d740658767668177f73947ce58abe2e2ae072ae590be300dc107"
+    },
+    "ui/ui_formationinfo_x0004.png": {
+      "archive": "assets/res/ui/ui_formationinfo.plist",
+      "frame": "ui_formationinfo_x0004.png",
+      "texture": "assets/res/ui/ui_formationinfo.pkm",
+      "width": 29,
+      "height": 29,
+      "sha256": "cedab380a3db3d5d2c0758c973b32af60602c668c4511a9d8c42a6f4f6da8b79"
+    },
+    "ui/ui_formationinfo_x0005.png": {
+      "archive": "assets/res/ui/ui_formationinfo.plist",
+      "frame": "ui_formationinfo_x0005.png",
+      "texture": "assets/res/ui/ui_formationinfo.pkm",
+      "width": 29,
+      "height": 29,
+      "sha256": "5f22992b3129eb111896510758cc2e4f0b452fb345a219572d8e1e8682a07493"
+    },
+    "ui/ui_formationinfo_x0006.png": {
+      "archive": "assets/res/ui/ui_formationinfo.plist",
+      "frame": "ui_formationinfo_x0006.png",
+      "texture": "assets/res/ui/ui_formationinfo.pkm",
+      "width": 29,
+      "height": 29,
+      "sha256": "a825117f937f44d1f05b4a3503267d21211fe85021bfa3ae59e06de8023892ee"
+    },
+    "ui/ui_formationinfo_zhuangbeibg.png": {
+      "archive": "assets/res/ui/ui_formationinfo.plist",
+      "frame": "ui_formationinfo_zhuangbeibg.png",
+      "texture": "assets/res/ui/ui_formationinfo.pkm",
+      "width": 767,
+      "height": 159,
+      "sha256": "3ae75dc70c5d859a66b1bb82622e7af7968c98919bb720b6e647a8f5f70a6de0"
+    },
+    "ui/ui_equipformation_bg9.png": {
+      "archive": "assets/res/ui/ui_equipformation.plist",
+      "frame": "ui_equipformation_bg9.png",
+      "texture": "assets/res/ui/ui_equipformation.pkm",
+      "width": 150,
+      "height": 150,
+      "sha256": "179e0187ab841ad0e025359b1b7c46f7f539111c2d5715441bd1a3cb2a7e1474"
+    },
+    "ui/ui_equipformation_box.png": {
+      "archive": "assets/res/ui/ui_equipformation.plist",
+      "frame": "ui_equipformation_box.png",
+      "texture": "assets/res/ui/ui_equipformation.pkm",
+      "width": 100,
+      "height": 100,
+      "sha256": "aba4e46d6cb8e9c621ec9b49020e89b5b024cc5347c2790a5a4f62dc90448ac1"
+    },
+    "ui/ui_equipformation_dizuo.png": {
+      "archive": "assets/res/ui/ui_equipformation.plist",
+      "frame": "ui_equipformation_dizuo.png",
+      "texture": "assets/res/ui/ui_equipformation.pkm",
+      "width": 760,
+      "height": 85,
+      "sha256": "403907308ea15d9680e20578819b84d67599fb8949e18b6fc39984361c80d9f5"
+    },
+    "ui/ui_equipformation_huodong.png": {
+      "archive": "assets/res/ui/ui_equipformation.plist",
+      "frame": "ui_equipformation_huodong.png",
+      "texture": "assets/res/ui/ui_equipformation.pkm",
+      "width": 94,
+      "height": 94,
+      "sha256": "53ceb2506da803f66e87edeeee918ecb93e0223f12ccce124faf89601cf7c17a"
+    },
+    "ui/ui_equipformation_jiantoushang.png": {
+      "archive": "assets/res/ui/ui_equipformation.plist",
+      "frame": "ui_equipformation_jiantoushang.png",
+      "texture": "assets/res/ui/ui_equipformation.pkm",
+      "width": 89,
+      "height": 55,
+      "sha256": "1d736cc093d3775374b6709c4700d74e81e73f4302be0feaa2cc55e6c3dab669"
+    },
+    "ui/ui_equipformation_jiantouxia.png": {
+      "archive": "assets/res/ui/ui_equipformation.plist",
+      "frame": "ui_equipformation_jiantouxia.png",
+      "texture": "assets/res/ui/ui_equipformation.pkm",
+      "width": 89,
+      "height": 55,
+      "sha256": "9af591f3b66b05058a1b2d69a49353ba5c154aa76361d7928db53e1545ec829e"
+    },
+    "ui/ui_equipformation_long.png": {
+      "archive": "assets/res/ui/ui_equipformation.plist",
+      "frame": "ui_equipformation_long.png",
+      "texture": "assets/res/ui/ui_equipformation.pkm",
+      "width": 100,
+      "height": 100,
+      "sha256": "b3afe01a44ca0b6b1182572ea6428a0b954016d9953d506fe2bd82bb4639fe8e"
     }
   }
 }

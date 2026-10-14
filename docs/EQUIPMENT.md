@@ -44,3 +44,19 @@
 - FormationEquipPanel.lua源SHA256 6b2c2157eeb74b948f854fbb93c1dd2a7562fd0c1356daf2714a3fd57ef82d42。panel_equip_info取DataManager.getEquipByID、实例grade/star和curAtk/curHp/curDef/curUnCrit/curCrit；星属性来自lib_equipStarInfo。不能把定义基础值冒充穿戴后实例属性。
 - EquipPanel空槽提示通过原Locale键You can obtain the equipment in the Dragon Wildland；须继续核对对应龙境/野外模式的原掉落，再接装备获取，不凭这句提示编造关卡/概率或免费装备。
 - 本轮只完成此调用链补证，没有新增装备库存/穿脱/战斗属性功能。优先真实来源和玩家实例，再穿脱/养成；旧四槽DragonElement分支不能替代此后期流程。
+
+## v0.16 实机对照：装备住在「阵容」页，而且是六个槽
+
+用户要求先看原版实际画面再动手。本轮据此纠正了上一轮自行拼装的装备界面。实机证据：B站《【龙之牧场（育龙高手）】喜提小龙哥和前两件紫装》（BV1kV4y157K，Century洛龙兰，2022-10-07），逐帧抓取后与客户端静态布局逐节点对照。
+
+- 装备主界面是 **`ui_formation_info`（标题「阵容」）**，不是早期四槽的 `item_equipPart`。它含 `equip1`~`equip6` 六个槽，每槽有 `anon`(道具框)/`quality`/`icon`/`star`/`txt_name`(槽下装备名)/`txt_num`(图标上强化等级)/`hint`/`biaoji_pinzhi`。
+- 六槽从左到右的 x 顺序是 `equip5, equip1, equip2, equip3, equip4, equip6`。实机画面里第一个空槽显示 `ui_starup_zb5.png`（翅膀），其余依次是幽灵龙爪、邪风龙鳞、诅咒龙骨、残酷龙角、珍珠皇冠，即**部位 4,0,1,2,3,5**，六个部位齐全。
+- 空槽部位图：武器 `zb1`、鳞片 `zb2`、龙骨 `zb4`、龙角 `zb3`、羽翼 `zb5`、皇冠 `zb6`。zb5、zb6 已肉眼确认为翅膀与皇冠。
+- 穿戴流程：点空槽进入 **`ui_formation_equip_change`（装备更换）**，卡片是 **`item_formation_equip_change`**（`tx_name`/`icon_long`/`node_star`/`tx_lv`/`shuxing1~3`/`pingding`/`hint`「装备于XX龙」/`biaoji`「已装备」/`btn_zhuangbei`）。列表只给该部位且未被其他龙穿着的装备。
+- 强化入口是 **`panel_formation_equip_strengthen`（装备强化）**：实机画面为「暗影之翼-D」，显示「防御 1014>>>1049」「暴击 506>>>523」、消耗 22、按钮「强化」「强化10次」。
+- 龙信息卡 `dragong_info` 自带属性节点 `hp`/`atk`/`def`/`critical`/`resist`（各含 `miaoshu`+`num`）与 `power`（战斗力），另有 `text_type`/`type_sky`/`type_land` 系别。上一轮自行添加的属性块是错的，已删除。
+- 左侧龙列表、`上阵/飞行龙/爬行龙` 统计、`阵型`/`更换龙`/`一键装备`/`详情` 都是原布局已有节点。注意布局的 label 查找会回退到节点名，因此页面标题 `txt_name` 会覆盖所有按钮文字，每个 `txt_name` 必须显式赋值。
+
+仍未接入：技能行（`skill1~4`）、系别数据、一键装备规则、强化与升星结算、装备实际获取。属性只累计装备定义基础值，**不是**原版战斗总属性。
+
+`scripts/import-original-assets.py` 的图集白名单此前没有 `ui_formationinfo` 与 `ui_equipformation`，所以 `ui_formationinfo_*`（含 `lvbg`、`zhuangbeibg`、`type_land`、`type_sky`）从未导入；本轮补入，登记数 2176 → 2203。

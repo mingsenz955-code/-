@@ -1,17 +1,20 @@
 import {LOTTERY_POLICY,LOTTERY_CAPACITY,lotteryRow,lotteryCost,sampleLottery} from './lottery.mjs';
 import {SPECIES, RULES, RECIPES, ORIGINAL_CROPS, ORIGINAL_LEVELS, ORIGINAL_FARMS, breedingOptions, speciesKey} from './data.mjs';
 import {habitatDefinition,habitatInfo,acceptsDragon,habitatLimit} from './habitats.mjs';
+import {EQUIPMENT_INSTANCE_ID,equipmentDefinition,definitionPart,equipmentInstance,equipmentOfDragon,equipmentInPart,equipmentLabel} from './equipment.mjs';
 const fail = message => {throw new Error(message)};
 const number = (v,min=0,max=Number.MAX_SAFE_INTEGER) => Number.isSafeInteger(v)&&v>=min&&v<=max;
 export function createGame(now=Date.now()) {
- return {version:5,lottery:{normalTokens:0,advancedTokens:0,draws:0,pending:[]},coins:1200,food:400,gems:0,playerXp:0,nextId:4,updatedAt:now,habitats:[{id:1,name:'晨曦栖息地',lastCollected:now}],dragons:[{id:2,species:'ember',level:1,habitatId:1},{id:3,species:'leaf',level:1,habitatId:1}],farm:null,nest:null,breeding:null,incubator:null,stats:{harvests:0,hatches:0,feeds:0},log:['欢迎来到云上牧场。种下第一份龙粮吧。']};
+ return {version:6,lottery:{normalTokens:0,advancedTokens:0,draws:0,pending:[]},equipment:[],nextEquipId:1,coins:1200,food:400,gems:0,playerXp:0,nextId:4,updatedAt:now,habitats:[{id:1,name:'晨曦栖息地',lastCollected:now}],dragons:[{id:2,species:'ember',level:1,habitatId:1},{id:3,species:'leaf',level:1,habitatId:1}],farm:null,nest:null,breeding:null,incubator:null,stats:{harvests:0,hatches:0,feeds:0},log:['欢迎来到云上牧场。种下第一份龙粮吧。']};
 }
 export function validate(s) {
- if(!s||![1,2,3,4,5].includes(s.version)) fail('存档版本不受支持，请保留原文件。');
+ if(!s||![1,2,3,4,5,6].includes(s.version)) fail('存档版本不受支持，请保留原文件。');
  s=structuredClone(s);if(s.gems===undefined)s.gems=0;if(s.playerXp===undefined)s.playerXp=0;
  if(s.version<4){if(s.nest){if(s.breeding||s.incubator)fail('旧存档繁殖任务冲突。');if(s.nest.phase==='hatching')s.incubator=s.nest;else s.breeding=s.nest;}s.nest=null;}
  if(s.nest!==null)fail('旧繁殖任务未迁移。');
  s.breeding??=null;s.incubator??=null;if(s.version<5)s.lottery??={normalTokens:0,advancedTokens:0,draws:0,pending:[]};
+ if(s.version<6){s.equipment??=[];s.nextEquipId??=1;}
+ s.equipment??=[];s.nextEquipId??=1;
  if(!number(s.coins)||!number(s.food)||!number(s.nextId,1)||!number(s.updatedAt)) fail('存档资源或时间无效。');
  if(s.gems!==undefined&&!number(s.gems)||s.playerXp!==undefined&&!number(s.playerXp))fail('牧场经验或魔晶无效。');
  if(!Array.isArray(s.dragons)||s.dragons.length<2||s.dragons.length>1000||!Array.isArray(s.habitats)||s.habitats.length<1||s.habitats.length>1000) fail('存档牧场无效。');
@@ -26,6 +29,19 @@ export function validate(s) {
  const lottery=s.lottery;if(!lottery||!number(lottery.normalTokens)||!number(lottery.advancedTokens)||!number(lottery.draws)||!Array.isArray(lottery.pending)||lottery.pending.length>LOTTERY_CAPACITY||lottery.draws<lottery.pending.length)fail('抽奖存档无效。');
  for(const prize of lottery.pending){const row=lotteryRow(prize.sourceRow);if(!row||!number(prize.id,1)||ids.has(prize.id)||prize.mode!==row.mode||prize.type!==row.type||prize.itemId!==row.itemId||prize.policy!==LOTTERY_POLICY||!number(prize.amount,row.min,row.max)||prize.type===16&&!SPECIES[speciesKey(prize.itemId)])fail('抽奖奖励记录无效。');ids.add(prize.id);}
  if(s.nextId<=Math.max(...ids)) fail('存档编号冲突。');
+ if(!Array.isArray(s.equipment)||s.equipment.length>2000||!number(s.nextEquipId,1,1e6))fail('装备库存无效。');
+ const equipped=new Set(),equipmentIds=new Set();
+ for(const item of s.equipment){
+  if(!item||typeof item.id!=='string'||!EQUIPMENT_INSTANCE_ID.test(item.id)||equipmentIds.has(item.id))fail('装备实例编号无效或重复。');
+  equipmentIds.add(item.id);
+  const serial=Number(item.id.slice(3));
+  if(serial>=s.nextEquipId)fail('装备实例编号与计数器不一致。');
+  const definition=equipmentDefinition(item.type);if(!definition)fail('装备定义编号无效。');
+  if(!number(item.exp,0,1e9)||!number(item.star,0,5)||!Array.isArray(item.randinfo)||item.randinfo.length>8)fail('装备实例数值无效。');
+  for(const trait of item.randinfo)if(!trait||!number(trait.traitid,1))fail('装备随机属性无效。');
+  if(!number(item.dragonid))fail('装备所属龙编号无效。');
+  if(item.dragonid){if(!s.dragons.some(d=>d.id===item.dragonid))fail('装备所属的龙不存在。');const key=item.dragonid+':'+definitionPart(item);if(equipped.has(key))fail('同一部位不能同时装备两件装备。');equipped.add(key);}
+ }
  for(const h of s.habitats)if(s.dragons.filter(d=>d.habitatId===h.id).length>habitatInfo(h).capacity)fail('栖息地超过容量。');
  if(s.dragons.some(d=>d.feedsInLevel!==undefined&&!number(d.feedsInLevel,0,3)))fail('喂养进度无效。');
  if(s.farmBuildingId!==undefined&&![16,17,18].includes(s.farmBuildingId))fail('农场等级无效。');
@@ -34,7 +50,7 @@ export function validate(s) {
  for(const [job,phases] of [[s.breeding,['breeding','egg']],[s.incubator,['hatching']]]){if(job===null)continue;const n=job;if(n?.startedAt!==undefined&&(!number(n.startedAt)||n.startedAt>n.readyAt))fail('繁殖起始时间无效。');if(n?.hatchMs!==undefined&&!number(n.hatchMs,0,365*86400000))fail('孵化时间无效。');if(!n||!phases.includes(n.phase)||!Object.hasOwn(SPECIES,n.species)||!number(n.readyAt)||!Array.isArray(n.parents)||n.parents.length!==2||n.parents[0]===n.parents[1]||!n.parents.every(id=>s.dragons.some(d=>d.id===id)))fail('繁殖或孵化数据无效。');}
  if(!s.stats||!['harvests','hatches','feeds'].every(k=>number(s.stats[k]))) fail('统计数据无效。');
  if(!Array.isArray(s.log)||s.log.length>12||!s.log.every(x=>typeof x==='string'&&x.length<=200))fail('日志数据无效。');
- return {...structuredClone(s),version:5};
+ return {...structuredClone(s),version:6};
 }
 export function dragonRate(d){const species=SPECIES[d.species];if(!species.originalId)return species.income*d.level*60;return d.level<=10?species.coinStart+species.coinAdded*(d.level-1):species.coinStart+species.coinAdded*9+Math.floor(species.coinAdded*(d.level-10)/2)}
 function rawIncome(s,h,now){const cap=habitatInfo(h).maxGold*60000;let units=Math.round((h.storedCoins??0)*60000);const start=Math.min(now,h.lastCollected);for(const d of s.dragons.filter(d=>d.habitatId===h.id)){let elapsed=Math.max(0,now-start);const n=s.breeding;if(n?.phase==='breeding'&&n.parents.includes(d.id)){const breedStart=n.startedAt??n.readyAt-(SPECIES[n.species].breedingMs??RULES.breedMs);elapsed-=Math.max(0,Math.min(now,n.readyAt)-Math.max(start,breedStart));}units=Math.min(cap,units+Math.min(cap,Math.max(0,elapsed)*dragonRate(d)));}return Math.min(cap,units)/60000}
@@ -74,6 +90,8 @@ export function action(state,type,payload={},now=Date.now(),random=Math.random) 
  case 'takeEgg': if(!s.breeding||s.breeding.phase!=='breeding'||now<s.breeding.readyAt)fail('繁殖尚未完成。');s.habitats.filter(h=>s.dragons.some(d=>s.breeding.parents.includes(d.id)&&d.habitatId===h.id)).forEach(settle);s.breeding.phase='egg';message='龙蛋已准备好，可转入育龙塔。';break;
  case 'incubate': if(!s.breeding||s.breeding.phase!=='egg')fail('没有待孵化龙蛋。');if(s.incubator)fail('育龙塔正在孵化，请先安置当前幼龙。');s.incubator={...s.breeding,phase:'hatching',startedAt:now,readyAt:now+(s.breeding.hatchMs??RULES.hatchMs)};s.breeding=null;message='龙蛋转入育龙塔开始孵化，培育山可以继续繁殖。';break;
  case 'hatch': {if(!s.incubator||now<s.incubator.readyAt)fail('龙蛋尚未孵化。');const h=s.habitats.find(h=>h.id===payload.habitatId)||fail('请选择栖息地。');if(!acceptsDragon(h,s.incubator.species))fail('该栖息地尚未完工或不适合幼龙的属性。');if(s.dragons.filter(d=>d.habitatId===h.id).length>=habitatInfo(h).capacity)fail('栖息地已满，请先建造新栖息地。');settle(h);s.dragons.push({id:s.nextId++,species:s.incubator.species,level:1,habitatId:h.id});s.incubator=null;s.stats.hatches++;message='新生幼龙加入牧场！';break;}
+ case 'wearEquipment': {const target=dragon(payload.id),item=equipmentInstance(s,payload.equipmentId)||fail('找不到这件装备。');if(item.dragonid)fail('这件装备已经穿在龙身上。');const definition=equipmentDefinition(item.type);const existing=equipmentInPart(equipmentOfDragon(s,target.id),definition.part);if(existing)fail(`该部位已装备${equipmentLabel(existing)}，请先卸下。`);item.dragonid=target.id;message=`${SPECIES[target.species].name} 装备了${equipmentLabel(item)}。`;break;}
+ case 'unwearEquipment': {const item=equipmentInstance(s,payload.equipmentId)||fail('找不到这件装备。');if(!item.dragonid)fail('这件装备没有穿在龙身上。');const owner=s.dragons.find(d=>d.id===item.dragonid);item.dragonid=0;message=`已卸下${equipmentLabel(item)}${owner?`（${SPECIES[owner.species].name}）`:''}。`;break;}
  default: fail('未知操作。');
  }
  s.updatedAt=now;s.log.unshift(message);s.log=s.log.slice(0,12);return validate(s);

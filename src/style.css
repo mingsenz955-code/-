@@ -60,3 +60,26 @@ canvas.dragon{display:inline-block;object-fit:contain}.dragon-preview-dialog{wid
 .native-crop-list{height:480px}.native-farm-upgrade{top:650px}
 
 .native-warehouse-empty{position:absolute;transform:translate(-50%,-50%);width:800px;text-align:center;color:#ffe9bf;font-size:27px}.native-resident:focus-visible{outline:2px solid #c8a35e;outline-offset:1px}
+
+/* 原版装备界面：ui_formation_info（阵容六槽）、ui_formation_equip_change、panel_equip_info */
+.source-equip-slot{position:absolute;width:110px;height:110px;transform:translate(-50%,-50%);padding:0;border:0;background:transparent!important;box-shadow:none;pointer-events:auto;display:flex;align-items:center;justify-content:center}
+.source-equip-slot img{width:96px;height:96px;object-fit:contain;pointer-events:none}
+.source-equip-slot:hover{transform:translate(-50%,-50%) scale(1.04)}
+.source-equip-slot-empty img{width:78px;height:78px;opacity:.9}
+.source-equip-stars{position:absolute;transform:translate(-50%,-50%);font-size:15px;color:#f4c542;letter-spacing:1px;white-space:nowrap;pointer-events:none}
+.source-equip-model{width:260px;height:240px;transform:translate(-50%,-62%);pointer-events:none}
+.source-equip-model .dragon{width:100%;height:100%}
+.source-equip-stats{position:absolute;left:150px;top:-155px;display:flex;flex-direction:column;gap:5px;font-size:21px;color:#4e3828;white-space:nowrap;pointer-events:none;text-align:left}
+.source-equip-lvbg{position:absolute;width:47px;height:51px;transform:translate(-50%,-50%);pointer-events:none}
+.source-equip-lvnum{position:absolute;transform:translate(-50%,-50%);font-size:23px;font-weight:bold;color:#fff6d8;text-shadow:0 1px 2px #000a;pointer-events:none}
+.source-equip-dragonlist{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:120px;height:500px;display:flex;flex-direction:column;gap:6px;overflow-y:auto;overflow-x:hidden;pointer-events:auto;scrollbar-color:#9c6b3b #efd4a0;scrollbar-width:thin}
+.source-equip-dragon{position:relative;flex:0 0 100px;width:100px;height:100px;padding:0;border:0;border-radius:0;background:transparent!important;box-shadow:none}
+.source-equip-dragon.is-active{filter:drop-shadow(0 0 7px #ffd97a)}
+.source-equip-portrait{position:absolute;width:85px;height:85px;transform:translate(-50%,-50%);object-fit:contain;pointer-events:none}
+.source-equip-portrait-missing{position:absolute;transform:translate(-50%,-50%);font-size:15px;color:#8b6a48;pointer-events:none}
+.source-equip-icon{position:absolute;width:85px;height:85px;transform:translate(-50%,-50%);object-fit:contain;pointer-events:none}
+.source-equip-change-list{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:1010px;height:505px;display:grid;grid-template-columns:repeat(3,291px);justify-content:center;align-content:start;gap:8px;overflow-y:auto;pointer-events:auto;scrollbar-color:#9c6b3b #efd4a0;scrollbar-width:thin}
+.source-equip-change-card{position:relative;width:291px;height:461px}
+.source-equip-placeholder{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:22px;color:#6d4830}
+.source-equip-notes{position:absolute;left:50%;bottom:4px;transform:translateX(-50%);width:940px;margin:0;display:flex;flex-direction:column;gap:2px;text-align:center;pointer-events:none}
+.source-equip-notes p{margin:0;font-size:15px;line-height:1.35;color:#ffe9bf;text-shadow:0 1px 2px #000a}
