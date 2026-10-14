@@ -19,7 +19,7 @@ exports.run=async(window,store)=>{
  window.setSize(1000,700);await wait(300);assert(await js("(()=>{const r=document.querySelector('#modal').getBoundingClientRect();return r.width<=innerWidth&&r.height<=innerHeight})()"));
  await click('#modal [data-action=returnFromEvolution]');assert(await js("document.querySelector('#modal').dataset.mode==='sourceDragon'"));await click('#modal [data-action=close]');
  await click('[data-action=showMore]');assert(await js("!document.querySelector('#modal').open&&document.querySelector('.original-hud [data-action=lotteryOptions]')&&document.querySelector('.original-hud [data-action=openMyDragons]')"),'More must be the native icon dock');await fs.writeFile(path.join(__dirname,'..','work','main-menu-qa.png'),(await window.webContents.capturePage()).toPNG());await click('[data-action=openOriginal]');assert.equal(await js("document.querySelectorAll('[data-action=acquisition]').length"),90);await click('[data-action=acquisition][data-id="1000"]');
- assert(await js("document.querySelector('#modal').textContent.includes('繁殖候选')&&document.querySelector('#modal').textContent.includes('待核实')"));
+ assert(await js("document.querySelector('#modal').textContent.includes('繁殖')&&document.querySelector('#modal').textContent.includes('待确认')"));
  await fs.writeFile(path.join(__dirname,'..','work','acquisition-qa.png'),(await window.webContents.capturePage()).toPNG());
  assert.deepEqual(await state(),before,'Preview must not consume resources or write progression');
  console.log('PASS evolution source preview/art/model/translation/return/resize and 90 acquisition entries; no gameplay/save mutation');

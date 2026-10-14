@@ -36,7 +36,7 @@ def unpack(base,folder):
   canvas=Image.new('RGBA',(sw,sh));canvas.paste(tile,(color[0],color[1]))
   safe=Path(key).name;dest=OUT/folder/safe;dest.parent.mkdir(parents=True,exist_ok=True);canvas.save(dest,optimize=True)
   manifest['assets'][folder+'/'+safe]={'archive':base+'.plist','frame':key,'texture':base+('.png' if base+'.png' in names else '.pkm'),'width':sw,'height':sh,'sha256':hashlib.file_digest(dest.open('rb'),'sha256').hexdigest()}
-for name in ['ui_lotterydragon','ui_bgnew','ui_RandDragon','ui_dragonrand_bg1','ui_PowerUp','ui_ButtonProp','ui_evolution','ui_star','ui_daojukuang','ui_mydragon','ui_FunctionIcons1','ui_FunctionIcons2','ui_FramesNormal','ui_FramesAlpha','ui_ButtonNormal','ui_activitybutton','ui_Book','ui_Breed','thumbs_dragon','thumbs_egg','thumbs_equip','ui_AttributeIcon','ui_Map','ui_mapland','ui_mapshadow','ui_Plant','ui_egg','ui_world','ui_entrance','ui_mail']:
+for name in ['ui_dragontype','ui_booknew','thumbs_store','ui_shop','ui_breednew','ui_pinzhi','ui_lotterydragon','ui_bgnew','ui_RandDragon','ui_dragonrand_bg1','ui_PowerUp','ui_ButtonProp','ui_evolution','ui_star','ui_daojukuang','ui_mydragon','ui_FunctionIcons1','ui_FunctionIcons2','ui_FramesNormal','ui_FramesAlpha','ui_ButtonNormal','ui_activitybutton','ui_Book','ui_Breed','thumbs_dragon','thumbs_egg','thumbs_equip','ui_AttributeIcon','ui_Map','ui_mapland','ui_mapshadow','ui_Plant','ui_egg','ui_world','ui_entrance','ui_mail']:
  base='assets/res/ui/'+name
  if base+'.plist' in names:unpack(base,'ui')
 habitat_atlases=[g.split('/')[-1] for p in (OUT/'layouts').glob('00*_habitat_*.json') for g in json.loads(p.read_text(encoding='utf8'))['group']]

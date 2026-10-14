@@ -13993,6 +13993,2390 @@
       "width": 1024,
       "height": 768,
       "sha256": "c615ebacf05659a237767d36bfe167c39c15ad5bca7ef905d9e04190de4ac105"
+    },
+    "ui/ui_breednew_bq1.png": {
+      "archive": "assets/res/ui/ui_breednew.plist",
+      "frame": "ui_breednew_bq1.png",
+      "texture": "assets/res/ui/ui_breednew.pkm",
+      "width": 210,
+      "height": 57,
+      "sha256": "fe3d58dddbee649b4e0d3f07e0124afee5346be8697331bb6b701e6f39109a25"
+    },
+    "ui/ui_breednew_bq2.png": {
+      "archive": "assets/res/ui/ui_breednew.plist",
+      "frame": "ui_breednew_bq2.png",
+      "texture": "assets/res/ui/ui_breednew.pkm",
+      "width": 210,
+      "height": 57,
+      "sha256": "bbc2ea7f523e01aa00b5c388dad9ea4f79ba6e268ae3a17b30a452df43cfddbc"
+    },
+    "ui/ui_breednew_by.png": {
+      "archive": "assets/res/ui/ui_breednew.plist",
+      "frame": "ui_breednew_by.png",
+      "texture": "assets/res/ui/ui_breednew.pkm",
+      "width": 63,
+      "height": 63,
+      "sha256": "92a06dfd0533fdd64a9ee30bef577696524a467def076474f18cae31bede24cf"
+    },
+    "ui/ui_breednew_clock.png": {
+      "archive": "assets/res/ui/ui_breednew.plist",
+      "frame": "ui_breednew_clock.png",
+      "texture": "assets/res/ui/ui_breednew.pkm",
+      "width": 43,
+      "height": 42,
+      "sha256": "a30979609fafe300b251a7526065fe793ea689196de73fec75a931f7040f79dd"
+    },
+    "ui/ui_breednew_d1.png": {
+      "archive": "assets/res/ui/ui_breednew.plist",
+      "frame": "ui_breednew_d1.png",
+      "texture": "assets/res/ui/ui_breednew.pkm",
+      "width": 334,
+      "height": 130,
+      "sha256": "c1b1614af6fe6582ec6f7cb3d4b25d3b90d7c3b5902e507b1e1a7dcf311f95d8"
+    },
+    "ui/ui_breednew_d2.png": {
+      "archive": "assets/res/ui/ui_breednew.plist",
+      "frame": "ui_breednew_d2.png",
+      "texture": "assets/res/ui/ui_breednew.pkm",
+      "width": 334,
+      "height": 130,
+      "sha256": "e803be7067b07b09239150afaffb4b583769734bebb8f1ccc1389a28c7f214ed"
+    },
+    "ui/ui_breednew_d3.png": {
+      "archive": "assets/res/ui/ui_breednew.plist",
+      "frame": "ui_breednew_d3.png",
+      "texture": "assets/res/ui/ui_breednew.pkm",
+      "width": 334,
+      "height": 130,
+      "sha256": "c396dabba548617c58e4d1b197b67feae54aac9fcd980bcd4dd23ed0e1b095fe"
+    },
+    "ui/ui_breednew_dage.png": {
+      "archive": "assets/res/ui/ui_breednew.plist",
+      "frame": "ui_breednew_dage.png",
+      "texture": "assets/res/ui/ui_breednew.pkm",
+      "width": 100,
+      "height": 100,
+      "sha256": "e030241ccbbeeb3e0af7586430f06e66f89bfe77e45d617a34538df63848ddab"
+    },
+    "ui/ui_breednew_dage1.png": {
+      "archive": "assets/res/ui/ui_breednew.plist",
+      "frame": "ui_breednew_dage1.png",
+      "texture": "assets/res/ui/ui_breednew.pkm",
+      "width": 100,
+      "height": 100,
+      "sha256": "49b5dbdfcf1f2f80def9e79946c8c7c870c338267460de17a3b4117c7da14107"
+    },
+    "ui/ui_breednew_pyd52.png": {
+      "archive": "assets/res/ui/ui_breednew.plist",
+      "frame": "ui_breednew_pyd52.png",
+      "texture": "assets/res/ui/ui_breednew.pkm",
+      "width": 53,
+      "height": 52,
+      "sha256": "0af94095d9b195ce90705c05a61dc8a0a240763f691c9342f3b0ef1f640fd067"
+    },
+    "ui/ui_breednew_tiao1.png": {
+      "archive": "assets/res/ui/ui_breednew.plist",
+      "frame": "ui_breednew_tiao1.png",
+      "texture": "assets/res/ui/ui_breednew.pkm",
+      "width": 341,
+      "height": 41,
+      "sha256": "2b1b60608cf3d4e796a3690d4b04ba5779c095ac0ac8980b5123826d9fcb8cf0"
+    },
+    "ui/ui_breednew_tiao2.png": {
+      "archive": "assets/res/ui/ui_breednew.plist",
+      "frame": "ui_breednew_tiao2.png",
+      "texture": "assets/res/ui/ui_breednew.pkm",
+      "width": 272,
+      "height": 46,
+      "sha256": "5a68afc91ea9e381422033b281edbaac4dbbb8c3b6eb93b3b8c20f3f0d48e075"
+    },
+    "ui/ui_breednew_weizhi.png": {
+      "archive": "assets/res/ui/ui_breednew.plist",
+      "frame": "ui_breednew_weizhi.png",
+      "texture": "assets/res/ui/ui_breednew.pkm",
+      "width": 74,
+      "height": 74,
+      "sha256": "3445e69c1638d694afba0fb69541cd1bbb6d7d6cf18bd92234a2f133901b7f74"
+    },
+    "ui/ui_pinzhi_a.png": {
+      "archive": "assets/res/ui/ui_pinzhi.plist",
+      "frame": "ui_pinzhi_a.png",
+      "texture": "assets/res/ui/ui_pinzhi.pkm",
+      "width": 29,
+      "height": 29,
+      "sha256": "2dfbe8514b4d4d4935532561e2a650c954a74b47183f1efaa638b9ceaf5ea0c7"
+    },
+    "ui/ui_pinzhi_b.png": {
+      "archive": "assets/res/ui/ui_pinzhi.plist",
+      "frame": "ui_pinzhi_b.png",
+      "texture": "assets/res/ui/ui_pinzhi.pkm",
+      "width": 27,
+      "height": 29,
+      "sha256": "0981da92c1cd2313709a4ca64db8a2f7debb0a222923de99b9d4d803a1f58f26"
+    },
+    "ui/ui_pinzhi_c.png": {
+      "archive": "assets/res/ui/ui_pinzhi.plist",
+      "frame": "ui_pinzhi_c.png",
+      "texture": "assets/res/ui/ui_pinzhi.pkm",
+      "width": 26,
+      "height": 30,
+      "sha256": "383a779e35015fa0fec05e5fa38d963ce6ca5e72a2ab4238980c153a2dda314f"
+    },
+    "ui/ui_pinzhi_d.png": {
+      "archive": "assets/res/ui/ui_pinzhi.plist",
+      "frame": "ui_pinzhi_d.png",
+      "texture": "assets/res/ui/ui_pinzhi.pkm",
+      "width": 30,
+      "height": 29,
+      "sha256": "4eca07f7d8eced56c2ad22007396d0934317504aed4ed0d52aab9b31d716c6e5"
+    },
+    "ui/ui_pinzhi_jiantou.png": {
+      "archive": "assets/res/ui/ui_pinzhi.plist",
+      "frame": "ui_pinzhi_jiantou.png",
+      "texture": "assets/res/ui/ui_pinzhi.pkm",
+      "width": 18,
+      "height": 20,
+      "sha256": "f55626f3186e26abc6c3cd575419eafb7a513381401d5ac5775aeed55c8d62b8"
+    },
+    "ui/ui_pinzhi_lv.png": {
+      "archive": "assets/res/ui/ui_pinzhi.plist",
+      "frame": "ui_pinzhi_lv.png",
+      "texture": "assets/res/ui/ui_pinzhi.pkm",
+      "width": 56,
+      "height": 25,
+      "sha256": "dbd0102a2dc0922959daacf2e545e2bd54462fddaecd61b6d3392e11ca3af5c3"
+    },
+    "ui/ui_pinzhi_s.png": {
+      "archive": "assets/res/ui/ui_pinzhi.plist",
+      "frame": "ui_pinzhi_s.png",
+      "texture": "assets/res/ui/ui_pinzhi.pkm",
+      "width": 24,
+      "height": 30,
+      "sha256": "6eb70e1616f5a4b91826cd071757486a88db0308c558dc6c56db38f5724bb0bd"
+    },
+    "ui/ui_pinzhi_skill_beidong.png": {
+      "archive": "assets/res/ui/ui_pinzhi.plist",
+      "frame": "ui_pinzhi_skill_beidong.png",
+      "texture": "assets/res/ui/ui_pinzhi.pkm",
+      "width": 31,
+      "height": 32,
+      "sha256": "4038e617054b714ac71e0994968865f41ee35bbd809e0f4cdf41419ddcc76bf0"
+    },
+    "ui/ui_pinzhi_skill_dandu.png": {
+      "archive": "assets/res/ui/ui_pinzhi.plist",
+      "frame": "ui_pinzhi_skill_dandu.png",
+      "texture": "assets/res/ui/ui_pinzhi.pkm",
+      "width": 30,
+      "height": 33,
+      "sha256": "493fbec678ca7eca30358c8ff013d58fcf0b250ebacec371a4552ed0ab45d78b"
+    },
+    "ui/ui_pinzhi_skill_fuzhu.png": {
+      "archive": "assets/res/ui/ui_pinzhi.plist",
+      "frame": "ui_pinzhi_skill_fuzhu.png",
+      "texture": "assets/res/ui/ui_pinzhi.pkm",
+      "width": 30,
+      "height": 32,
+      "sha256": "45cae30b26c95887b072516108678b58ff99a6b1005b3a054e60a33397a1f4ca"
+    },
+    "ui/ui_pinzhi_skill_qunti.png": {
+      "archive": "assets/res/ui/ui_pinzhi.plist",
+      "frame": "ui_pinzhi_skill_qunti.png",
+      "texture": "assets/res/ui/ui_pinzhi.pkm",
+      "width": 31,
+      "height": 32,
+      "sha256": "f6ea9b60650d467fc7ac915c24fa60666ffd274fb8de10238e28440fb351f994"
+    },
+    "ui/ui_pinzhi_small_a.png": {
+      "archive": "assets/res/ui/ui_pinzhi.plist",
+      "frame": "ui_pinzhi_small_a.png",
+      "texture": "assets/res/ui/ui_pinzhi.pkm",
+      "width": 30,
+      "height": 30,
+      "sha256": "b9fd0b3f18c9f17f02c6bc7ff9a2ad2aea03ea7fb7edef7c5ef9dc76a14574ae"
+    },
+    "ui/ui_pinzhi_small_b.png": {
+      "archive": "assets/res/ui/ui_pinzhi.plist",
+      "frame": "ui_pinzhi_small_b.png",
+      "texture": "assets/res/ui/ui_pinzhi.pkm",
+      "width": 30,
+      "height": 30,
+      "sha256": "667c07049b8ee9b22b80d467664b8116f9b3405d33c21ff23d586944c878d647"
+    },
+    "ui/ui_pinzhi_small_c.png": {
+      "archive": "assets/res/ui/ui_pinzhi.plist",
+      "frame": "ui_pinzhi_small_c.png",
+      "texture": "assets/res/ui/ui_pinzhi.pkm",
+      "width": 30,
+      "height": 30,
+      "sha256": "592258cd88b7b0d982474b34a64023acfac5b1a86ca75d229afbddaae8d4c863"
+    },
+    "ui/ui_pinzhi_small_d.png": {
+      "archive": "assets/res/ui/ui_pinzhi.plist",
+      "frame": "ui_pinzhi_small_d.png",
+      "texture": "assets/res/ui/ui_pinzhi.pkm",
+      "width": 30,
+      "height": 30,
+      "sha256": "3a61d5a2bc89b799a35714871f974321a91c18609af4a63c30d3256580cdbf53"
+    },
+    "ui/ui_pinzhi_small_s.png": {
+      "archive": "assets/res/ui/ui_pinzhi.plist",
+      "frame": "ui_pinzhi_small_s.png",
+      "texture": "assets/res/ui/ui_pinzhi.pkm",
+      "width": 30,
+      "height": 30,
+      "sha256": "f980e778a8260eeb128f828c9e7c5803aa1ddacee25ce06234a5d385fad6de30"
+    },
+    "ui/ui_pinzhi_t_1.png": {
+      "archive": "assets/res/ui/ui_pinzhi.plist",
+      "frame": "ui_pinzhi_t_1.png",
+      "texture": "assets/res/ui/ui_pinzhi.pkm",
+      "width": 32,
+      "height": 32,
+      "sha256": "01ea560119da209d4c4291954180506d2f38edbe714d4e6c00f67828ab6c4661"
+    },
+    "ui/ui_pinzhi_t_2.png": {
+      "archive": "assets/res/ui/ui_pinzhi.plist",
+      "frame": "ui_pinzhi_t_2.png",
+      "texture": "assets/res/ui/ui_pinzhi.pkm",
+      "width": 35,
+      "height": 32,
+      "sha256": "f407cafc8d75ab78abecb7431cc0e6ca19ca41546d4cb9a6f44dd1004292b930"
+    },
+    "ui/ui_pinzhi_t_3.png": {
+      "archive": "assets/res/ui/ui_pinzhi.plist",
+      "frame": "ui_pinzhi_t_3.png",
+      "texture": "assets/res/ui/ui_pinzhi.pkm",
+      "width": 34,
+      "height": 32,
+      "sha256": "947a9de785541cb028fffa239022cdd9121d7facf7f2e06eadb8bfe717e27b63"
+    },
+    "ui/ui_pinzhi_t_4.png": {
+      "archive": "assets/res/ui/ui_pinzhi.plist",
+      "frame": "ui_pinzhi_t_4.png",
+      "texture": "assets/res/ui/ui_pinzhi.pkm",
+      "width": 35,
+      "height": 32,
+      "sha256": "4cca12b1a1fbdd0e35ac9d8b598e41cc1c7f456d9e30bf0f5cdd2f8a9e9d5bd1"
+    },
+    "ui/ui_pinzhi_t_5.png": {
+      "archive": "assets/res/ui/ui_pinzhi.plist",
+      "frame": "ui_pinzhi_t_5.png",
+      "texture": "assets/res/ui/ui_pinzhi.pkm",
+      "width": 33,
+      "height": 32,
+      "sha256": "f571cc16c27037aee77ebdf4f4a10e459bbf42e7ff5a3f938b05eec1f00cb456"
+    },
+    "ui/thumbs_store_0001_incubator.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0001_incubator.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 172,
+      "height": 138,
+      "sha256": "e2df8b1473c540cfa95e434d2a47e00882f89ab1eb0ecbce4879ef9d7a5dacf2"
+    },
+    "ui/thumbs_store_0002_boost_plant.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0002_boost_plant.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 136,
+      "height": 110,
+      "sha256": "730a81176549cfa9f93fd47a54c12cb591d1bb555070cbf560ce1aacbc262923"
+    },
+    "ui/thumbs_store_0003_boost_earth.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0003_boost_earth.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 138,
+      "height": 116,
+      "sha256": "ae7d00ce57a2cecb0d3b4e11057fae271945f1e1a1e6994a58d430f70ecc6a2d"
+    },
+    "ui/thumbs_store_0004_boost_fire.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0004_boost_fire.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 130,
+      "height": 104,
+      "sha256": "081c2cc626b7ce04c9d3349c38d780089fb350411d8fd42723bdb93ccbe75950"
+    },
+    "ui/thumbs_store_0005_boost_ice.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0005_boost_ice.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 136,
+      "height": 113,
+      "sha256": "fc5e778f4dc57ab554348ec7c6bb0b920c45f28bbd706504c362c586b5a70982"
+    },
+    "ui/thumbs_store_0006_boost_electric.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0006_boost_electric.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 130,
+      "height": 122,
+      "sha256": "79d5a94d7eb72d0f44199e48c69c2ff792669244bfa27ce8c620b6465a44ba3b"
+    },
+    "ui/thumbs_store_0007_boost_water.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0007_boost_water.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 134,
+      "height": 108,
+      "sha256": "f904baa7b9ce19522d8f440186dc2ca05b6c5e664646ee4ced3b1e087078c2bc"
+    },
+    "ui/thumbs_store_0008_boost_dark.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0008_boost_dark.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 124,
+      "height": 98,
+      "sha256": "bb8080c2decf3bdcf86af61c5106e30029a70e94be43353b86760ae55005c984"
+    },
+    "ui/thumbs_store_0009_shrine.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0009_shrine.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 157,
+      "height": 156,
+      "sha256": "4a65dfc3564b321e07b19b123e04df2ddbd06b03045ff1e078255f6340bcdc6e"
+    },
+    "ui/thumbs_store_0010_shrine_20.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0010_shrine_20.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 160,
+      "height": 160,
+      "sha256": "64c532404db35a62d0ae08d39addd81737cb37394769a4f1fbaa89b6747ee00e"
+    },
+    "ui/thumbs_store_0011_shrine_25.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0011_shrine_25.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 167,
+      "height": 166,
+      "sha256": "6bc8381146d9cef375191fba27b86c3784b4e2a5c7d5ad334647764996086b24"
+    },
+    "ui/thumbs_store_0012_shrine_30.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0012_shrine_30.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 164,
+      "height": 164,
+      "sha256": "62e3211a7a200d22be2462d7197ad4590ba7f34459196645f628d138dacba709"
+    },
+    "ui/thumbs_store_0014_boost_legend.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0014_boost_legend.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 117,
+      "height": 95,
+      "sha256": "ae32fdd083785155c818f721f58eb94c37072dea78ecbf3b4440f709f49d2635"
+    },
+    "ui/thumbs_store_0015_boost_metal.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0015_boost_metal.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 128,
+      "height": 108,
+      "sha256": "fafe034ece99f3d2450e1132523d033448760bfaced19313f378b3a0fa6f5636"
+    },
+    "ui/thumbs_store_0016_farm_1.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0016_farm_1.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 172,
+      "height": 114,
+      "sha256": "07fea2857b8a9f3a03c1735becd5def2e154baf988f368f112e620412393356b"
+    },
+    "ui/thumbs_store_0017_farm_2.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0017_farm_2.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 172,
+      "height": 114,
+      "sha256": "b283980d177f9a9d1cebfe55ba466dad0f9e5adccb9f29e06f29159b945de31e"
+    },
+    "ui/thumbs_store_0019_breeding_cave_a.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0019_breeding_cave_a.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 176,
+      "height": 126,
+      "sha256": "c6685839ed3966ac18df5d08cbda408b56f12c1d218a88ac3bdbd7fc891aa672"
+    },
+    "ui/thumbs_store_0024_habitat_plant_1.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0024_habitat_plant_1.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 177,
+      "height": 142,
+      "sha256": "72c20be06b9801ef46300a627f26719c0be6efd5f7a6473d477b9cff9692cd9a"
+    },
+    "ui/thumbs_store_0025_habitat_plant_2.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0025_habitat_plant_2.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 179,
+      "height": 146,
+      "sha256": "c24fb272dea14e19444f13f6c55a0b3705e06ade7eb4c9444a4e7318a326ab69"
+    },
+    "ui/thumbs_store_0026_habitat_earth_1.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0026_habitat_earth_1.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 179,
+      "height": 115,
+      "sha256": "cf83f1312df7a67716e3c72d0609c199237f82f5aa1388d28a8933db4ff0a121"
+    },
+    "ui/thumbs_store_0027_habitat_earth_2.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0027_habitat_earth_2.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 180,
+      "height": 118,
+      "sha256": "fabff94249959802941df44e1810ab5989157d470744ba39bfc3e4d7280f2792"
+    },
+    "ui/thumbs_store_0028_habitat_fire_a_1.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0028_habitat_fire_a_1.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 179,
+      "height": 120,
+      "sha256": "429d754f5f7e42c16a3cc5b8f1073772e283cd013bda51125e68c2f6fbb43ead"
+    },
+    "ui/thumbs_store_0029_habitat_fire_a_2.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0029_habitat_fire_a_2.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 179,
+      "height": 125,
+      "sha256": "3766f5f5f690b4253f620e004263067f1073c173ec6dea6ad9a5a43fa9571352"
+    },
+    "ui/thumbs_store_0030_habitat_water_a_1.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0030_habitat_water_a_1.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 186,
+      "height": 109,
+      "sha256": "3570b8ed47c79f5c563d4e6669e6bd5a7d3ecf8c6120e0733ea7d36c3b031ff2"
+    },
+    "ui/thumbs_store_0031_habitat_water_a_2.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0031_habitat_water_a_2.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 183,
+      "height": 118,
+      "sha256": "dcf1fdb1dd3c3189ce2ca52fb41c157321fdb458b816c3c05ef615a3e63ceb9c"
+    },
+    "ui/thumbs_store_0032_habitat_ice_1.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0032_habitat_ice_1.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 180,
+      "height": 128,
+      "sha256": "09094392bca3dbfdb302108c62683c45f883666d8f3dfb9b0c744124fdae12a3"
+    },
+    "ui/thumbs_store_0033_habitat_ice_2.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0033_habitat_ice_2.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 180,
+      "height": 135,
+      "sha256": "f760e4fa085992f06e0a1a1fd4b65728662820a494f9c5c541c6ae511ecf4d98"
+    },
+    "ui/thumbs_store_0034_habitat_electric_a_1.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0034_habitat_electric_a_1.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 175,
+      "height": 124,
+      "sha256": "6ce79c77aa4fe93c901f97846976749ac6e9903eb506dfec90ef541277c9eb2a"
+    },
+    "ui/thumbs_store_0035_habitat_electric_b_2.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0035_habitat_electric_b_2.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 185,
+      "height": 138,
+      "sha256": "27a41f17427ebd4416e52175c35a08d3013175229eefbae62a21cea08d859540"
+    },
+    "ui/thumbs_store_0036_habitat_metal_1.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0036_habitat_metal_1.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 182,
+      "height": 135,
+      "sha256": "cd933b177325067c21b0879d7030bf61ea3768b0dcda12f5b671169bfed71f7d"
+    },
+    "ui/thumbs_store_0037_habitat_metal_2.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0037_habitat_metal_2.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 181,
+      "height": 140,
+      "sha256": "b9da7c82e4691bbce8cd325f0342aa6eb29569b8da9f4033a1aabcb3e724c643"
+    },
+    "ui/thumbs_store_0038_habitat_dark_1.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0038_habitat_dark_1.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 180,
+      "height": 130,
+      "sha256": "3d9d5d7cdbddd8f1946f32771e102c2ae365c490971fc0bb20659ed8470a3008"
+    },
+    "ui/thumbs_store_0039_habitat_dark_2.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0039_habitat_dark_2.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 182,
+      "height": 132,
+      "sha256": "ce4fefcae37e1ad83dadef340b9ae874e8f17d7da1ced94ddc4590fccc059ad9"
+    },
+    "ui/thumbs_store_0040_habitat_legend_a.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0040_habitat_legend_a.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 182,
+      "height": 165,
+      "sha256": "2a2df89df8020abeca57ee5fd5bb717012e27de210c675077560d7742d13042e"
+    },
+    "ui/thumbs_store_0041_habitat_legend_b.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0041_habitat_legend_b.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 179,
+      "height": 150,
+      "sha256": "c9f002837861fe863c26467c57c6845eb3d9a387ba7ac8423eb4d374edd2e893"
+    },
+    "ui/thumbs_store_0045_yanshi_1.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0045_yanshi_1.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 66,
+      "height": 48,
+      "sha256": "a96f8f9f04071216fb93dbe9f63797dc286fd46eec2d7bbef18040c71ffe2992"
+    },
+    "ui/thumbs_store_0046_yanshi_2.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0046_yanshi_2.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 86,
+      "height": 67,
+      "sha256": "69211770071b5143ca69ee6e52bba8c7c3660ec79eb86c9f6704968703888a36"
+    },
+    "ui/thumbs_store_0047_yanshi_3.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0047_yanshi_3.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 90,
+      "height": 77,
+      "sha256": "4e1f13dc28568345861e0b681a573910fc36be3685b62cbcc8e0fe6c310ba6ff"
+    },
+    "ui/thumbs_store_0048_mogu.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0048_mogu.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 78,
+      "height": 59,
+      "sha256": "d932ba892796d0755d34bf281e80605b77ced0a6c76e7d69bd588da4f5df6a31"
+    },
+    "ui/thumbs_store_0049_xiaoxianhua.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0049_xiaoxianhua.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 87,
+      "height": 85,
+      "sha256": "931cd8a181ba46651d0cbea63aec4950b9e6d598891e0980acdbfd9d4567e6ac"
+    },
+    "ui/thumbs_store_0050_maoyanhua.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0050_maoyanhua.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 120,
+      "height": 124,
+      "sha256": "6a4305112d3fed5e09ed4dd0ff9e799b9344d66b942fccfdaf362683fa5585f9"
+    },
+    "ui/thumbs_store_0055_incubator_2.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0055_incubator_2.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 171,
+      "height": 142,
+      "sha256": "287be1d39c2c417c87c1bd72fbeae8c3cae10c7ef73d7f5ee8cbac7666f3f8c3"
+    },
+    "ui/thumbs_store_0056_incubator_3.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0056_incubator_3.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 180,
+      "height": 139,
+      "sha256": "f9f61eaf4cda1564865833ec731a03c09aa34d89c1b31691a912ccd61e98c7ae"
+    },
+    "ui/thumbs_store_0057_incubator_4.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0057_incubator_4.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 181,
+      "height": 153,
+      "sha256": "e95c31f8fd9c6c92ba4c426a521c47f07610067377ff322eaa84d41b431bc6a8"
+    },
+    "ui/thumbs_store_0058_hobbit_home.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0058_hobbit_home.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 163,
+      "height": 122,
+      "sha256": "c90a1cce5d5640186f73c27372546ac2e83194d3a07e8fed46c8dcc0ec5d032a"
+    },
+    "ui/thumbs_store_0059_fountain.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0059_fountain.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 162,
+      "height": 153,
+      "sha256": "776099873476847b60656b7a16b5045bca8853cc23405f9d6737c38f6065df02"
+    },
+    "ui/thumbs_store_0060_magic_yelloflower_a.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0060_magic_yelloflower_a.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 45,
+      "height": 45,
+      "sha256": "788a1f5a998bd0136f68ea4478b83f83aa8df610f571af81b59f10b9da355c89"
+    },
+    "ui/thumbs_store_0061_xianrenzhang_little.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0061_xianrenzhang_little.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 48,
+      "height": 49,
+      "sha256": "57aa304f49c5c518d71ae97c5817ca8523c86106f4bcdf4e7c0b24291bd96147"
+    },
+    "ui/thumbs_store_0062_xianrenzhang_big.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0062_xianrenzhang_big.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 57,
+      "height": 56,
+      "sha256": "916c396812bbcfa75a685cb7cbf0b98b2b2fa0159808327fdad7db4f58112b79"
+    },
+    "ui/thumbs_store_0063_xianrenqiu_little.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0063_xianrenqiu_little.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 47,
+      "height": 35,
+      "sha256": "0061c9eb15b34efe50ee07f993259b8b5dbf926093bebc9e7a83decb3c2b68cc"
+    },
+    "ui/thumbs_store_0064_xianrenqiu_big.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0064_xianrenqiu_big.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 54,
+      "height": 46,
+      "sha256": "9c0ef17a563470986ed5270036cfa89a0c8e8771b80916a31df15785d58a0b49"
+    },
+    "ui/thumbs_store_0066_duorou_young.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0066_duorou_young.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 45,
+      "height": 34,
+      "sha256": "b68971e4494354e7e29f43fcdba8681085d76fbca0b0693b2cd55c56dd71a490"
+    },
+    "ui/thumbs_store_0067_duorou_old.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0067_duorou_old.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 45,
+      "height": 33,
+      "sha256": "62a61a262472ecbc847a353cb0cffffec286481ab5c411a792ff04ed14c11582"
+    },
+    "ui/thumbs_store_0068_old_pond.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0068_old_pond.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 116,
+      "height": 70,
+      "sha256": "be27637ff0b19970b8574a334233be055f6f2ff417166c58bb2d4ea092baa383"
+    },
+    "ui/thumbs_store_0069_willow_tree.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0069_willow_tree.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 153,
+      "height": 133,
+      "sha256": "f82a4ae65cc6f1bb87f9742db55bd3b6e86aa8d78700598a7206e35a760e36ca"
+    },
+    "ui/thumbs_store_0072_tree_1.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0072_tree_1.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 57,
+      "height": 54,
+      "sha256": "21dae785bb80e01a54387b546da4926632ef5fcfd2bb0c409279e8fe3e1e131a"
+    },
+    "ui/thumbs_store_0073_tree_2.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0073_tree_2.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 118,
+      "height": 120,
+      "sha256": "31d0859e2e62f679b56d67c9b92a261f6c4d6476650d3a0401a8de3a68d71ece"
+    },
+    "ui/thumbs_store_0074_tree_3.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0074_tree_3.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 179,
+      "height": 152,
+      "sha256": "225bebf25e4ad149d90711f98c5fbf8c0720975e5f7eaed3beb6697e41959d29"
+    },
+    "ui/thumbs_store_0075_zonglvshu_1.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0075_zonglvshu_1.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 145,
+      "height": 136,
+      "sha256": "093f9ca0b80fcc5298af17f235ed7d1de283018d7f4c26a9b7281e131790d146"
+    },
+    "ui/thumbs_store_0076_yanshi_4.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0076_yanshi_4.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 101,
+      "height": 105,
+      "sha256": "63bd9a8ee520b9953d02af26fba1546c530d595f490ebd3ab48dba40048a0ff2"
+    },
+    "ui/thumbs_store_0077_lanhuacong.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0077_lanhuacong.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 115,
+      "height": 94,
+      "sha256": "76adf8bd636418dd6afebcbe9f1a19e5623e2fcae19ac9dda7eba38b8d2a917f"
+    },
+    "ui/thumbs_store_0078_zonglvshu_2.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0078_zonglvshu_2.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 182,
+      "height": 161,
+      "sha256": "7a11bc191c702d6e68c641d08a2efed69782da5b34a45557291b3d7e3aad7288"
+    },
+    "ui/thumbs_store_0079_xiaodiaoxiang.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0079_xiaodiaoxiang.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 148,
+      "height": 150,
+      "sha256": "e69c6fdbb3f0060f26b99d022133b5deac956a189abdd81662349a88012c8d6e"
+    },
+    "ui/thumbs_store_0080_ultra_breeding_cave.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0080_ultra_breeding_cave.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 182,
+      "height": 147,
+      "sha256": "b6a8951e227a042c9216569ba9b62db3730e5fbad28e0e8401c53c15448ca1af"
+    },
+    "ui/thumbs_store_0081_dadiaoxiang.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0081_dadiaoxiang.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 162,
+      "height": 156,
+      "sha256": "e2546dca603221ded8d92fb559aea1e5bde3aaa1b2018a2bf69c21f27407ca61"
+    },
+    "ui/thumbs_store_0082_shuzhuang.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0082_shuzhuang.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 44,
+      "height": 33,
+      "sha256": "c2f92ef07810a5520092faa24e03140d90118e81949fc6b5dba8467c1f34c6db"
+    },
+    "ui/thumbs_store_0083_caocong.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0083_caocong.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 53,
+      "height": 44,
+      "sha256": "7510acf387ab007b819d883f533722c63fb0f59d32b326a1549d8a9824c1fd34"
+    },
+    "ui/thumbs_store_0084_stone_little.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0084_stone_little.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 47,
+      "height": 36,
+      "sha256": "5d4ad6612c56955ca6f91f7805202ef9f2b0d1a715e7c471c764d09df234ec7e"
+    },
+    "ui/thumbs_store_0085_stone_big.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0085_stone_big.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 70,
+      "height": 53,
+      "sha256": "b914af7c4f416e8ef5805193f80582281d1d957d0a3962ee9e9675c3f85d1e98"
+    },
+    "ui/thumbs_store_0086_shamocaocong.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0086_shamocaocong.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 42,
+      "height": 27,
+      "sha256": "6deb5b8627b3fbe1d058595a885674b046f5abc805c666ade8fb1ebdb0fdfe53"
+    },
+    "ui/thumbs_store_0087_zihuacong.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0087_zihuacong.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 123,
+      "height": 94,
+      "sha256": "0ca33033e8a999c2ddf0e190e5147f3178858489e56f1039421f082b490962b1"
+    },
+    "ui/thumbs_store_0088_dragon_hedge.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0088_dragon_hedge.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 148,
+      "height": 150,
+      "sha256": "ef11d0865882e63f417afa4441279e7b2f894df37e5451f957698b7867d70406"
+    },
+    "ui/thumbs_store_0089_luxury_egg_statue.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0089_luxury_egg_statue.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 151,
+      "height": 156,
+      "sha256": "e587775b893cf2feaf0499367dbc45e8681485c9dd6cab32459029e6a1f7bd04"
+    },
+    "ui/thumbs_store_0090_kindergarten_1.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0090_kindergarten_1.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 170,
+      "height": 149,
+      "sha256": "e11659593500c57814f58807f009d9b2de140d8ba66a0fded0c699fd34d6bde8"
+    },
+    "ui/thumbs_store_0108_farm2_EvolutionLand.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_0108_farm2_EvolutionLand.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 171,
+      "height": 140,
+      "sha256": "b79c211ec698692ef7322b3160584827661750ba4a6fda4acddc4ae32bf502e9"
+    },
+    "ui/thumbs_store_1003_dragon_gummy_b_0.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_1003_dragon_gummy_b_0.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "fe697aefaf2c02eafde21e19f443b748fd20104e09de2e383192f4cc8e4aaf5c"
+    },
+    "ui/thumbs_store_1006_dragon_zombie_a_0.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_1006_dragon_zombie_a_0.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "b661b56802cf0ca1d205cc36f1d4f9a19dfe880415f24297395887708d2f87af"
+    },
+    "ui/thumbs_store_1007_dragon_petroleum_a_0.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_1007_dragon_petroleum_a_0.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "842d6075822c3fc5cc97fc4460ecca6266de8c2f19950ce05f9aa7fb2559c12b"
+    },
+    "ui/thumbs_store_1013_dragon_armadillo_a_0.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_1013_dragon_armadillo_a_0.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "30e32926aaf41815ac8ba1f5c3c1425a82523e688e03f70bf9be16203a99f013"
+    },
+    "ui/thumbs_store_1018_dragon_hedgehog_a_0.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_1018_dragon_hedgehog_a_0.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "a8ef592dc7fc35bf730e9ef13cffc223eaa64a3e3f6c0d0cf0b93bd8467464e1"
+    },
+    "ui/thumbs_store_1021_dragon_neon_b_0.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_1021_dragon_neon_b_0.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "90972c40d7ef74368a9fe31e5f8f4a6badbfa130d960bb203bc8c0d4646c1e6c"
+    },
+    "ui/thumbs_store_1023_dragon_cool_fire_a_0.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_1023_dragon_cool_fire_a_0.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "5eecd355a1168e29fbcf23903c8299c088ba1f744a57013b6a1f09b301d14cee"
+    },
+    "ui/thumbs_store_1025_dragon_penguin_a_0.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_1025_dragon_penguin_a_0.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "25ecfa97fa2c9117e31f86055b3cdfbd410189e56bcafd6378ac7f1b15831f02"
+    },
+    "ui/thumbs_store_1028_dragon_carnivore_b_0.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_1028_dragon_carnivore_b_0.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "36e51b8fb8d7c347ee042b9cec24b11a76510cbe3acabb9b5befe11efb3fb38a"
+    },
+    "ui/thumbs_store_1040_dragon_dark_b_0.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_1040_dragon_dark_b_0.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "729508ddda9760dd0303d73c97dc6edaaf6728d8389ad0342c1b3ddc9a8233ae"
+    },
+    "ui/thumbs_store_1041_dragon_legend_b_0.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_1041_dragon_legend_b_0.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "339d90bd8f594a1482e80d6185996f92db4600112a92dd9aff8ec5a8c0d17dc2"
+    },
+    "ui/thumbs_store_1042_dragon_vampire_a_0.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_1042_dragon_vampire_a_0.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "c04079c609135c92d36116fe8d045a229ee8cbc0c0b47e608467b22b249058b3"
+    },
+    "ui/thumbs_store_1047_dragon_rattlesnake_a_0.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_1047_dragon_rattlesnake_a_0.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "5be5063ebfb9fb49b79b6085c8d836b6977dc27444cf2f849acf691ab8fd6d25"
+    },
+    "ui/thumbs_store_1049_dragon_soccer_a_0.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_1049_dragon_soccer_a_0.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "974ed433b48f1393faf4b7764e4875e43ce131c7f05c3c631a6e2b8083182f85"
+    },
+    "ui/thumbs_store_1051_dragon_pirate_a_0.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_1051_dragon_pirate_a_0.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "f5b2ba1618de261828bd327a938e9f8072ec991720d2125e2a50a5a3040835f3"
+    },
+    "ui/thumbs_store_1068_dragon_venom_0.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_1068_dragon_venom_0.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "b686068ebe7438359d769666b9859ae7581a7a5826f456d598d560be3675ce76"
+    },
+    "ui/thumbs_store_1070_dragon_darkfire_0.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_1070_dragon_darkfire_0.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "23b052f9e162976a60d39cdb365c95a0bb2e3f1b92ed3361cda66f6ec2ca2ced"
+    },
+    "ui/thumbs_store_1073_dragon_brucelee_b_0.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_1073_dragon_brucelee_b_0.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "f0a392c8ef43181b98e5c9336f0abd0a01808bcbb40f890243d181cfe752e281"
+    },
+    "ui/thumbs_store_1074_dragon_darkfire_0.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_1074_dragon_darkfire_0.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "3beda6e8f14932a0fb10ae2958c74a1ffcd922eb8f7f6764ccf90e17268a3a3b"
+    },
+    "ui/thumbs_store_1075_dragon_xiaomage_0.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_1075_dragon_xiaomage_0.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "afe96a6b3ee7a35d3be52375f0f09c62f29229a5b0c70110b4cc355572db41bc"
+    },
+    "ui/thumbs_store_1076_dragon_skeleton_0.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_1076_dragon_skeleton_0.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "5aa7b067002ac1fa2429096d3ec7c03bbfe32f896f21460aa97631b44932041d"
+    },
+    "ui/thumbs_store_1092_dargon_legendfire_b_0.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_1092_dargon_legendfire_b_0.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "ff1a5a396f94d01f809f9156163189b7a954f60d904cfdff1fef1a26d92a30fc"
+    },
+    "ui/thumbs_store_1093_dragon_sheep_0.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_1093_dragon_sheep_0.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "2c80c7377cac8f8da67b881ca045c6dd42c91248f8e464eb74a7ba69543c78eb"
+    },
+    "ui/thumbs_store_1100_dragon_cat_0.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_1100_dragon_cat_0.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "e1130ce83f9021a6a784a0ca20b34df7370175fa3d999d70d59f98c4720741ee"
+    },
+    "ui/thumbs_store_1200_dragon_kuanglong_0.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_1200_dragon_kuanglong_0.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "d69d5329a1ce9280ff9b9fec66c13a5d9c17433567ed6311706be3ada7c2f9a6"
+    },
+    "ui/thumbs_store_7027_EvolutionFood_01.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_7027_EvolutionFood_01.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "dee74b822b962b5b1e378e8ccea211a24783b70d935417e65ecffd959f5b6110"
+    },
+    "ui/thumbs_store_7028_TopEvolutionFood_01.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_7028_TopEvolutionFood_01.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "54b2054556a774c0bf66ac13f25252988d819ae0416b55e2084f574255dd5a2e"
+    },
+    "ui/thumbs_store_MiBaoLv1.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_MiBaoLv1.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "5aac46ecfba4207e5a818a435e26c26af2c59b3d971b8862d3125ad97bf23483"
+    },
+    "ui/thumbs_store_MiBaoLv2.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_MiBaoLv2.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "c914829f7cdd926a8555d8efbe75eeb4dd5448243d57c113fe63e1a0beb72de7"
+    },
+    "ui/thumbs_store_MiBaoLv3.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_MiBaoLv3.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "0c1e10095b8d59b5bd03d49ed2e9028e17739d8e8958a658969c5393f8485d2f"
+    },
+    "ui/thumbs_store_box006.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_box006.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 75,
+      "height": 75,
+      "sha256": "9b0b130c2e303abfd12c1a0cfe5aa97590f229012c245b100757b5799022ee49"
+    },
+    "ui/thumbs_store_box_chengzhang.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_box_chengzhang.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 156,
+      "height": 168,
+      "sha256": "5a3a7008f0589f488907d8e0acd51df0d4153abcf152b2e8865c67e7e89d37ce"
+    },
+    "ui/thumbs_store_box_k1.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_box_k1.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 151,
+      "height": 153,
+      "sha256": "4be9c74eb1a8e7ea53902911ed3169d8adf77b1cbdfda3b583d6a77424ed865c"
+    },
+    "ui/thumbs_store_box_k10.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_box_k10.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 148,
+      "height": 149,
+      "sha256": "eb386f67f22d847a85dc72ae831a59a177910c8e891aa2acc0b7825d4160e022"
+    },
+    "ui/thumbs_store_box_k11.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_box_k11.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 148,
+      "height": 150,
+      "sha256": "57234b6e805f3ff292fe54335f0fce6e131cc0bc7c293fdc80a11120ad9bfac3"
+    },
+    "ui/thumbs_store_box_k12.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_box_k12.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 152,
+      "height": 153,
+      "sha256": "745db2dc550ba7b678174f9dada43f9af385e4b53dcdee0da16f302f427f150a"
+    },
+    "ui/thumbs_store_box_k13.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_box_k13.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 151,
+      "height": 153,
+      "sha256": "d1d3ddf1d3a9635d8d2b52ef5d0a1d4770154aeab60d6342b58388b2adfac8c5"
+    },
+    "ui/thumbs_store_box_k14.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_box_k14.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 152,
+      "height": 153,
+      "sha256": "5c74cb890b68d519d10ef2d4cc8c8f05fc8fe5339db2729ecd43968156b2cc14"
+    },
+    "ui/thumbs_store_box_k2.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_box_k2.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 148,
+      "height": 150,
+      "sha256": "3252d4e6d7564bb0bc2074e8a4bf3eb68e214899448068466bb5205801ed4938"
+    },
+    "ui/thumbs_store_box_k3.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_box_k3.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 152,
+      "height": 153,
+      "sha256": "e106d626afe0fb7676d3191349b85e2f727af06ccd29840d307f461894eca7b5"
+    },
+    "ui/thumbs_store_box_k4.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_box_k4.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 152,
+      "height": 153,
+      "sha256": "d92a0b98e59fd999876cf44502b895ee93599a4790eefa8286c0c389aff09122"
+    },
+    "ui/thumbs_store_box_k5.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_box_k5.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 148,
+      "height": 149,
+      "sha256": "00a625c8ccd30a65facdb2fbcaa3cff05e5a2cd64495470a7d5df0823358e5c2"
+    },
+    "ui/thumbs_store_box_k6.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_box_k6.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 148,
+      "height": 150,
+      "sha256": "66cf72cd67d6c9c85271c2e280fb42c8ec037ce4f30e69c03d4d884c1a147305"
+    },
+    "ui/thumbs_store_box_k7.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_box_k7.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 152,
+      "height": 153,
+      "sha256": "76b3e26d4e250c398e50cef1b4b5d1158ac0dc7e3aa184996ba0d144a0240a13"
+    },
+    "ui/thumbs_store_box_k8.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_box_k8.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 151,
+      "height": 153,
+      "sha256": "dd11c76b878ed3fb62fb021b4bdd3e9253d1f005afe6538298bc10094581e29e"
+    },
+    "ui/thumbs_store_box_k9.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_box_k9.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 152,
+      "height": 153,
+      "sha256": "a2a9436e647b49455aaf2b5f95883684ef5261912b3486e0a5167bfe27726fcd"
+    },
+    "ui/thumbs_store_box_peiyang.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_box_peiyang.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 166,
+      "height": 166,
+      "sha256": "f75420c812318487ef6d5e68e9d9e94d480df4974c02dad7120cd123449e1de5"
+    },
+    "ui/thumbs_store_box_qianghua.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_box_qianghua.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 159,
+      "height": 162,
+      "sha256": "41254df9a532b275d0429aeb36d26caf6b87501ecb6f1ce959cd583ec74fb392"
+    },
+    "ui/thumbs_store_buluobox.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_buluobox.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 90,
+      "height": 90,
+      "sha256": "fc9a62fea97c0fde6d392ab572932ac7050cb943e3bcd0d277a7c77262f48cad"
+    },
+    "ui/thumbs_store_buluokey.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_buluokey.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 90,
+      "height": 90,
+      "sha256": "5b5bfe8ab05da03fc1425527297439ac21cc42e48b3b3690a6fbea1ff64dccc1"
+    },
+    "ui/thumbs_store_equipSuipianbao_3_0.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_equipSuipianbao_3_0.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 65,
+      "height": 65,
+      "sha256": "da5fd231e95a72b98196e66b3e0e60df126771fd32d83ef0d594b7362e308d36"
+    },
+    "ui/thumbs_store_equipbaoxiang_1_0.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_equipbaoxiang_1_0.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 65,
+      "height": 65,
+      "sha256": "2bffa63f4304ab66eebdfa0726b28a68da46680dfa2c4fa6ac13b2df3bb53ba2"
+    },
+    "ui/thumbs_store_expansion_cash.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_expansion_cash.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "8390c3ddddb123bad9cd8b9667318d2fb2da0ac1ad3fff21c6a14f081c17a30d"
+    },
+    "ui/thumbs_store_expansion_gold.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_expansion_gold.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "a75133f1edee1878e064cbe5ffb1feb3c17827965229636c89d42d80c1adee5f"
+    },
+    "ui/thumbs_store_expansion_island_2.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_expansion_island_2.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "ede01a4b27ae419dc35efe60be6ca70134113fec09e1b3d5fb704c3f4cef7bd7"
+    },
+    "ui/thumbs_store_expansion_island_3.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_expansion_island_3.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "83009497b80ff3d8620245f1a969e6fbde2fee1037790ccac339a7c1532ee538"
+    },
+    "ui/thumbs_store_expansion_island_4.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_expansion_island_4.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "ae016e43204c1a6c80454d61da6e12d465e568e95372799ee1d2815455ce4181"
+    },
+    "ui/thumbs_store_gaojisuipian.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_gaojisuipian.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 155,
+      "height": 162,
+      "sha256": "ba57392b02e710e0ef78489482175977a32a7fcfe5f3e5bde3f83b6b5a4881cb"
+    },
+    "ui/thumbs_store_haohuasuipian.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_haohuasuipian.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 155,
+      "height": 162,
+      "sha256": "7a18c9bedab194f8ea8785ae2769ba8d0b7e50fa98e1420f086b2f60338c4d68"
+    },
+    "ui/thumbs_store_huangshilongsuipian.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_huangshilongsuipian.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "7293a3d53d94c7e0492a7ef5dc507c16d9f1962e2a9139539287f192fbac66c5"
+    },
+    "ui/thumbs_store_huozhong_01.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_huozhong_01.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "4d7432ab0c868617c04f0e211513ad5b8f0654504c05729d618d7472f8c85ca0"
+    },
+    "ui/thumbs_store_lingzhubox.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_lingzhubox.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 90,
+      "height": 90,
+      "sha256": "f233258b688751c3951ba61b796c93dcb532a50a37079ca992b8f0992e51f639"
+    },
+    "ui/thumbs_store_lingzhukey.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_lingzhukey.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 90,
+      "height": 90,
+      "sha256": "ca1d1fa78ae6235464b80ec60dfc1b43b55e4cb745893d63b8548b3a4c16bf27"
+    },
+    "ui/thumbs_store_search_item_6010.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_search_item_6010.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 50,
+      "height": 50,
+      "sha256": "c53a9ce5b80eb84c8b637f3d4bfe236f27686054cf05087d502073640c9231b8"
+    },
+    "ui/thumbs_store_search_item_6011.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_search_item_6011.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 50,
+      "height": 50,
+      "sha256": "d7513c33d6a1b6525efddba6475da6be1e465e7d8791bc63c28c3a3fa87ccb5c"
+    },
+    "ui/thumbs_store_search_item_6012.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_search_item_6012.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 50,
+      "height": 50,
+      "sha256": "2d2467f8ac7a243c12e7840f73663d54587af9d2614026865b208b5f48ccc0b0"
+    },
+    "ui/thumbs_store_search_item_6063.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_search_item_6063.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "4651bdc3d0f6c5da967d803ffcefef7653b4e324e686938a320c97a03ea75f1f"
+    },
+    "ui/thumbs_store_search_item_6064.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_search_item_6064.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "4968be4a400784fb56be934baabaf385cf76e80cf1a55cab4640fb25d3b95e0f"
+    },
+    "ui/thumbs_store_treasure_item_1.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_treasure_item_1.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "c7260603c98ed9d4405e140898a29d84734af7e18fc2ff4d624e4339d5dab076"
+    },
+    "ui/thumbs_store_treasure_item_10.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_treasure_item_10.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "a8969fcf6f53956778e6a71271046ece92266a68f281e55d39bb142fa27df9b4"
+    },
+    "ui/thumbs_store_treasure_item_107.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_treasure_item_107.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "e9e46757f26f33c2dbced3bb24fdb773e4af64067717c93de35b18aa5abf901a"
+    },
+    "ui/thumbs_store_treasure_item_108.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_treasure_item_108.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "1aba09558220d5fbdbd63472e55d3f802c8c68172966b6cb917367fcedb14381"
+    },
+    "ui/thumbs_store_treasure_item_109.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_treasure_item_109.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "e15ecb105d330ec0650e1ffe8a7e161e71e3385eff635b395389c9d4da5eb98a"
+    },
+    "ui/thumbs_store_treasure_item_11.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_treasure_item_11.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 126,
+      "height": 128,
+      "sha256": "cc9389f580e7e6bae14fd15d0062e4348372de1f5d28661b7951e54f14d96642"
+    },
+    "ui/thumbs_store_treasure_item_112.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_treasure_item_112.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 126,
+      "height": 128,
+      "sha256": "1c06240275a2398c1c00405b81fba2a86c13baebcb657383d1cb989c8e567402"
+    },
+    "ui/thumbs_store_treasure_item_113.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_treasure_item_113.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "309a389c485be23d07d2a94d9aa6fc58635817f21b9fb6cb4359e25edc60f193"
+    },
+    "ui/thumbs_store_treasure_item_110.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_treasure_item_110.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "d90cdb2a12509c341f20aa11920e4707dd8af3ec6c43b3bd9c2fedcf5a24bc25"
+    },
+    "ui/thumbs_store_treasure_item_111.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_treasure_item_111.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 126,
+      "height": 128,
+      "sha256": "56eb26329b5864a56b5b85179048bfdff578f29d551a1c54b901490c0d546404"
+    },
+    "ui/thumbs_store_treasure_item_114.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_treasure_item_114.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "ae40f3fb50e8a42a51fc268a5f25af2d5ab7bc2bc4702b9167e0339dc1025477"
+    },
+    "ui/thumbs_store_treasure_item_12.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_treasure_item_12.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "c48ec1bea79363a25400f3f9e85c92abcf6539b5cc9973c144f7fe06a65931c2"
+    },
+    "ui/thumbs_store_treasure_item_13.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_treasure_item_13.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "ebe23e048eac8126addc35cb6e8328ae6ba6066174d4590b57cb3e9661fabe55"
+    },
+    "ui/thumbs_store_treasure_item_14.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_treasure_item_14.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "e396b104ec425addc4272e41f05b00e485e354d42bb63504845400adf520ec16"
+    },
+    "ui/thumbs_store_treasure_item_15.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_treasure_item_15.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "a96bb61f5f3b355bb1c1c4f6d0adbfffaf349c0d90bb263c2347394a073de308"
+    },
+    "ui/thumbs_store_treasure_item_2.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_treasure_item_2.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "6b8d7f405602bf9cd8120f7a35fc4cc622c3e6afee55870413d294da6d1ac123"
+    },
+    "ui/thumbs_store_treasure_item_3.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_treasure_item_3.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "c991c48f46fdc370b76e7a1a5cd945de43ba09385eb14062a87861292c9f898b"
+    },
+    "ui/thumbs_store_treasure_item_4.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_treasure_item_4.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "694c104e17a0450b60c4f7c07996f55273d8ac0c21eb99465eef99a2b3fb77c9"
+    },
+    "ui/thumbs_store_treasure_item_5.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_treasure_item_5.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "fdb3033071bc59daebe30533adcdfe08910d539a625c855f1719707c46208db1"
+    },
+    "ui/thumbs_store_treasure_item_6.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_treasure_item_6.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "528bb1582af29b55e150ddbbc22e1161e4c48e913430d3ea92e803314fafeaea"
+    },
+    "ui/thumbs_store_treasure_item_7.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_treasure_item_7.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "50c8a82d28ce840dc77b73e86ad60bf644811cd366e5b9137d6b9c8ffc8a8de8"
+    },
+    "ui/thumbs_store_treasure_item_76.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_treasure_item_76.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "517b8616b964eb0ab612b2397bc2d009fcdbb9cb91e20227e058f84b94826309"
+    },
+    "ui/thumbs_store_treasure_item_77.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_treasure_item_77.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "c56e457780f48c1b124ca5a7eaca8def3c7993d68f78ce7534cbc40c3820cbb0"
+    },
+    "ui/thumbs_store_treasure_item_78.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_treasure_item_78.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "a1e1d267c558d4a9e502c5c14f8eb1ff29f3187c26b57fbb747e625fb38fe57f"
+    },
+    "ui/thumbs_store_treasure_item_79.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_treasure_item_79.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "de0125c043199d5b50ee6010c68215c92ffb78a12e4f76b283588861a3e259b5"
+    },
+    "ui/thumbs_store_treasure_item_8.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_treasure_item_8.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "46163ea5d0815dadb2299395902575421d59dac11069aa92884288dcdd64ab2e"
+    },
+    "ui/thumbs_store_treasure_item_80.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_treasure_item_80.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "d1c7107d51925c300004c1ac8986853116bb8829cffe2111042dcf3bfe7646e4"
+    },
+    "ui/thumbs_store_treasure_item_81.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_treasure_item_81.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "bf657e2fb1137dc653e0779c792bc007f50de256024483538dc3cab9895ed9d2"
+    },
+    "ui/thumbs_store_treasure_item_82.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_treasure_item_82.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "87887d6c7ed775fa6b09e8811a545876c214ec855611176a1c849dbaa177788a"
+    },
+    "ui/thumbs_store_treasure_item_83.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_treasure_item_83.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "97d25ff0a544a396540dbf26882bc5f9f586ab3d0cd382ab70212d19ba9d0d9d"
+    },
+    "ui/thumbs_store_treasure_item_84.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_treasure_item_84.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "f3210d7aa0302735577a178aac6be77a99ef8d94c2c0833b1407dfddf6f0e68a"
+    },
+    "ui/thumbs_store_treasure_item_85.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_treasure_item_85.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "2047f07b6407ca957f95c8c9342a1d05a57e7a856008abe821ab1b5eda9d772d"
+    },
+    "ui/thumbs_store_treasure_item_9.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_treasure_item_9.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 202,
+      "height": 202,
+      "sha256": "6aea09f90704b31543912ac40e34bdde76ea1e89bb8c5436c43c274315fe34b0"
+    },
+    "ui/thumbs_store_treasure_item_mj0001.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_treasure_item_mj0001.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 105,
+      "height": 139,
+      "sha256": "c0043341f4d8f9fd5d85dda249dee537919cc46b570538b719f8ae791643d4dd"
+    },
+    "ui/thumbs_store_treasure_item_mj0002.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_treasure_item_mj0002.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 130,
+      "height": 140,
+      "sha256": "21cbd619a3bca075fc2b51dfd97ff80f5e6289949f93f3f948064d27ac997b30"
+    },
+    "ui/thumbs_store_treasure_item_mj0003.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_treasure_item_mj0003.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 141,
+      "height": 161,
+      "sha256": "231233e03a93a9cfa6c4f4509338c82167ccd954698c087582625ecfd5af9698"
+    },
+    "ui/thumbs_store_treasure_item_mj0004.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_treasure_item_mj0004.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 150,
+      "height": 158,
+      "sha256": "232203bda3e09507ec5dec823554e20496b1b6def1680c54870c19c40ba5c7bd"
+    },
+    "ui/thumbs_store_treasure_item_mj0005.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_treasure_item_mj0005.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 148,
+      "height": 150,
+      "sha256": "cc36a67a9f7af3969163803cdad55635fe78008ade53db882028054e0c0d4971"
+    },
+    "ui/thumbs_store_treasure_item_mj0006.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "thumbs_store_treasure_item_mj0006.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 166,
+      "height": 154,
+      "sha256": "4c7cfaa716d0333dbf501ef8b352cdefa68023e4431350d1250ea2d90732de4b"
+    },
+    "ui/ui_shop_fenlei0001-2.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "ui_shop_fenlei0001-2.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 200,
+      "height": 200,
+      "sha256": "9842530059259ab51004a43c4ed9666ddffc0e91b421e69eff26e091c2e4cb23"
+    },
+    "ui/ui_shop_fenlei0001.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "ui_shop_fenlei0001.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 200,
+      "height": 200,
+      "sha256": "512024b65a8899a3ac83b0b0b092962397f299035907d9697c675c72487a7102"
+    },
+    "ui/ui_shop_fenlei0002-2.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "ui_shop_fenlei0002-2.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 200,
+      "height": 200,
+      "sha256": "bc95f30f6ece4cb12649a940b1a37f30eff4545e6c1cd98681ff81d7c82951eb"
+    },
+    "ui/ui_shop_fenlei0002.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "ui_shop_fenlei0002.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 200,
+      "height": 200,
+      "sha256": "4b219401e945811db46a56f18de8a5861e2bfc86271fbf218cc5abeadc5952b1"
+    },
+    "ui/ui_shop_fenlei0003-2.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "ui_shop_fenlei0003-2.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 200,
+      "height": 200,
+      "sha256": "a74d385294cc6adc025898ec0a80160ff5986ec295f73f0c48dd4c920dbed6c4"
+    },
+    "ui/ui_shop_fenlei0003.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "ui_shop_fenlei0003.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 200,
+      "height": 200,
+      "sha256": "c6303a7d933470338f2e9852e3c90eb8fbc80937940d8a225ee670389e97786c"
+    },
+    "ui/ui_shop_fenlei0004-2.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "ui_shop_fenlei0004-2.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 200,
+      "height": 200,
+      "sha256": "cc74e7a258c884a9daf1c1c205ba277865a5dced46770f16fb0b5572aacfb529"
+    },
+    "ui/ui_shop_fenlei0004.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "ui_shop_fenlei0004.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 200,
+      "height": 200,
+      "sha256": "03cca8bcaf1adfc15896cdad463ca19f9eaebbc66417c6013923f5b4f5fd8865"
+    },
+    "ui/ui_shop_fenlei0005-2.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "ui_shop_fenlei0005-2.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 200,
+      "height": 200,
+      "sha256": "706bf68913e5df9fcb5b3fbbb2a93f3a5047167997d7a15fc8a3a2f083faa281"
+    },
+    "ui/ui_shop_fenlei0005.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "ui_shop_fenlei0005.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 200,
+      "height": 200,
+      "sha256": "e3ac4100fd09c774f228b46c5460784bfd3c6eeb806e41f77b34586872c10438"
+    },
+    "ui/ui_shop_fenlei0006-2.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "ui_shop_fenlei0006-2.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 200,
+      "height": 200,
+      "sha256": "cfd5ef910819e11b51b5148c69a2bde389b9e65430b6a5e1a087752e13b359f0"
+    },
+    "ui/ui_shop_fenlei0006.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "ui_shop_fenlei0006.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 200,
+      "height": 200,
+      "sha256": "7850e591cebaa56fc392fd0754e928144cd315b5431a7cd9a5aa65fab45826d8"
+    },
+    "ui/ui_shop_hz.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "ui_shop_hz.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 141,
+      "height": 70,
+      "sha256": "a3fe5179a15c9790da790883d2552e26a35ab0c8c6dd41f4db79b1dfe2f04d13"
+    },
+    "ui/ui_shop_js.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "ui_shop_js.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 186,
+      "height": 84,
+      "sha256": "be92aa32cc078db296e11de3c1068342c77d5492fa499b9f6b3edbaa0a5d9402"
+    },
+    "ui/ui_shop_new.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "ui_shop_new.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 105,
+      "height": 62,
+      "sha256": "872362781ac38da1fe1b7f930b687605e10b5b614e3433737b44357414a75e8e"
+    },
+    "ui/ui_shop_payback_12.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "ui_shop_payback_12.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 68,
+      "height": 72,
+      "sha256": "b71e2345f8a4721d4383d15544835f2208671128660d49514e5b4df57d4ebf46"
+    },
+    "ui/ui_shop_payback_18.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "ui_shop_payback_18.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 68,
+      "height": 72,
+      "sha256": "b5cce40d4e0908dbaacaec1644a21f8209c7ebef6634fc53b54a28adca5c808c"
+    },
+    "ui/ui_shop_payback_25.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "ui_shop_payback_25.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 68,
+      "height": 72,
+      "sha256": "257d9ace8057d2a56bad241cc9047e27b30d2f98d1e33c251b8005121bb7fc89"
+    },
+    "ui/ui_shop_payback_5.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "ui_shop_payback_5.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 68,
+      "height": 72,
+      "sha256": "e7b82e8ae45ce18e083ed64342cc5180521b3161dddec957d558f25fff4f2076"
+    },
+    "ui/ui_shop_payback_8.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "ui_shop_payback_8.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 68,
+      "height": 72,
+      "sha256": "30b1e77f566d8465e063e03636dac4d9697817e14efbe93018cdafc7a96822b8"
+    },
+    "ui/ui_shop_payback_w.png": {
+      "archive": "assets/res/ui/thumbs_store.plist",
+      "frame": "ui_shop_payback_w.png",
+      "texture": "assets/res/ui/thumbs_store.pkm",
+      "width": 81,
+      "height": 56,
+      "sha256": "3bd265dcbcc91ad8f1818e9fc0032009df84a00c13c159f0c42a2265547f6de6"
+    },
+    "ui/ui_booknew_bg2.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_bg2.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 978,
+      "height": 65,
+      "sha256": "2d5b8a0ff414b9286e5e1251e62e716c1d8010a9d6bffcb643afd897eed753ee"
+    },
+    "ui/ui_booknew_bg3.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_bg3.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 467,
+      "height": 474,
+      "sha256": "907bdb013ab6f046ebfcb51b6dab2d938c51040fa84599169acd66ab99241cab"
+    },
+    "ui/ui_booknew_bg_name.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_bg_name.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 139,
+      "height": 29,
+      "sha256": "39f4ac06c31f8c6665b726ef4e56ce25e30f52f52149dfe7f01c8bf5a4bceaf6"
+    },
+    "ui/ui_booknew_ckb1.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_ckb1.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 172,
+      "height": 66,
+      "sha256": "c87081baf84ed7e6af37c6975bf968a4ab98b363942e7bb4fb0929e4b7db6995"
+    },
+    "ui/ui_booknew_ckb2.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_ckb2.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 172,
+      "height": 66,
+      "sha256": "cd10a51f54054c50c6fd2fdcd6cc1278396153ddef710f2ffe239e924b086828"
+    },
+    "ui/ui_booknew_d1.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_d1.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 10,
+      "height": 10,
+      "sha256": "3c20885063012cfb3c163494de066c53a799b6f8107eb4cce7e9e3c8abaf300e"
+    },
+    "ui/ui_booknew_d2.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_d2.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 10,
+      "height": 10,
+      "sha256": "72a67d61c8d3f8e3ec3ca15f69f087c1cadf002e08c5723a52c9ea2044916330"
+    },
+    "ui/ui_booknew_da1.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_da1.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 254,
+      "height": 25,
+      "sha256": "5cfbf236ed39f8e1a2a8857b0904abae57df06bc169881e0d3d46ffa8f3cd57a"
+    },
+    "ui/ui_booknew_dabg.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_dabg.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 875,
+      "height": 641,
+      "sha256": "89fa3d031ca58e492caa354784329c0a61d8fe886a7df4432af45cfa929afabf"
+    },
+    "ui/ui_booknew_duandaizise.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_duandaizise.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 631,
+      "height": 107,
+      "sha256": "6de5248f319a69a792371a8f473740f452f0e9d4066db6f22cb5f67e76d69da9"
+    },
+    "ui/ui_booknew_exp.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_exp.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 24,
+      "height": 25,
+      "sha256": "980f9a4fe6f182d0726396511bbefe0d6af4b4813eed597ba75bc730f0e8573f"
+    },
+    "ui/ui_booknew_exp_diban.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_exp_diban.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 256,
+      "height": 27,
+      "sha256": "df52ece216c2b4d0237c5ce814560c673af132dfc30fc306e9734a9fd06b914f"
+    },
+    "ui/ui_booknew_exp_tianchong.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_exp_tianchong.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 254,
+      "height": 25,
+      "sha256": "5cfbf236ed39f8e1a2a8857b0904abae57df06bc169881e0d3d46ffa8f3cd57a"
+    },
+    "ui/ui_booknew_light.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_light.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 520,
+      "height": 495,
+      "sha256": "7e01a9e2b5e87df3cb6f9cb646ec398312329bb1b6cc98e6f940987fcfc9efc7"
+    },
+    "ui/ui_booknew_lock.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_lock.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 140,
+      "height": 140,
+      "sha256": "0f9c66c369e95780535c592d21f110f0e94cd1be625af7ef5711f444a367ebb1"
+    },
+    "ui/ui_booknew_new.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_new.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 51,
+      "height": 37,
+      "sha256": "cb106d03a7d8328db7efda43af4a76b88d1e62da95b5d1659988541729e9096a"
+    },
+    "ui/ui_booknew_pinzhi1.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_pinzhi1.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 978,
+      "height": 59,
+      "sha256": "93f44e099ea3832843c8dbdf4684c4daee64d7a5e4332e64981188eb0c039e1a"
+    },
+    "ui/ui_booknew_pinzhi2.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_pinzhi2.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 978,
+      "height": 59,
+      "sha256": "e761caa5630b82e714c6301f85bff73cea2c7d35c6b041dab90be51e3c03ec06"
+    },
+    "ui/ui_booknew_pinzhi3.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_pinzhi3.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 978,
+      "height": 59,
+      "sha256": "d234cde154abb51615c345ed8b2af2a00306edf7bb46edbc93eddbcefa1d5c87"
+    },
+    "ui/ui_booknew_pinzhi4.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_pinzhi4.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 978,
+      "height": 59,
+      "sha256": "8a07548b13ec69a3f5df52a37fc0816ec1363a5a4543154f1d5290d76094cae6"
+    },
+    "ui/ui_booknew_pinzhi5.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_pinzhi5.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 978,
+      "height": 59,
+      "sha256": "3b24639c69a9ed390d65a3efcb5c3b81044165bc49744f811e4444fef2b5421f"
+    },
+    "ui/ui_booknew_skill_bg.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_skill_bg.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 83,
+      "height": 82,
+      "sha256": "225401b5a5fe6ae56e3b5af7bb9c703251ed2a14cba6749b74a28a3ec8fc5ff4"
+    },
+    "ui/ui_booknew_small_exp_diban.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_small_exp_diban.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 226,
+      "height": 27,
+      "sha256": "a9b4caccbe2e0208880043363b6a0f33434561b1702a346a6b1a2d0e3dbdea7e"
+    },
+    "ui/ui_booknew_small_exp_tianchong.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_small_exp_tianchong.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 224,
+      "height": 25,
+      "sha256": "058a6ea00c69af336e7845d09ad3610e164d9dd65a725affb34be52e13b0b678"
+    },
+    "ui/ui_booknew_text_jiesuo.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_text_jiesuo.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 282,
+      "height": 51,
+      "sha256": "6ee58b01f80c8e46f0cb7672e574145da7ccfbbce4a94be24848d78bc49cf1c6"
+    },
+    "ui/ui_booknew_text_xinchenghao.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_text_xinchenghao.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 329,
+      "height": 51,
+      "sha256": "cdb503eba3e14d95ec5123624fdbaf2333ac2856961ca9e90f111fc29602a524"
+    },
+    "ui/ui_booknew_toux_1.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_toux_1.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 142,
+      "height": 142,
+      "sha256": "e968f4e575a4b449d0c73cf5ccef654af68a4e162f67a8dc326534c67a515401"
+    },
+    "ui/ui_booknew_toux_2.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_toux_2.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 142,
+      "height": 142,
+      "sha256": "81ff4b0c17a347abefccdfa6e63df30433f1423889af96aa851a17baca666695"
+    },
+    "ui/ui_booknew_toux_3.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_toux_3.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 142,
+      "height": 142,
+      "sha256": "45c25fef4e3b272b5125f4c12908e906491b59ba0484bb14b9ccadf1041c94c5"
+    },
+    "ui/ui_booknew_toux_4.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_toux_4.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 142,
+      "height": 142,
+      "sha256": "384ab20287eb12bafbe50c4652a7f5a6925639dd42d478d41aa05df54829e5e4"
+    },
+    "ui/ui_booknew_toux_5.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_toux_5.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 142,
+      "height": 142,
+      "sha256": "9482585e0f4cce8187049472350be4a254dfbf1cdf831acbba1c235e699f140a"
+    },
+    "ui/ui_booknew_toux_g.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_toux_g.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 161,
+      "height": 165,
+      "sha256": "fb4c0267dc558d7564495b6cc5c4594214d8a934625373a663865da94a8a6197"
+    },
+    "ui/ui_booknew_toux_s.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_toux_s.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 161,
+      "height": 165,
+      "sha256": "0a62f8e21ab318afbb575a492c066292919a0bc05a57b61a4df582b0f90b950f"
+    },
+    "ui/ui_booknew_txt_btn.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_txt_btn.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 33,
+      "height": 35,
+      "sha256": "0a65325ce87534350b272d2d17fc42465fefb77dc18f4efd086e700a2971d927"
+    },
+    "ui/ui_booknew_txt_pinzhi1.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_txt_pinzhi1.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 95,
+      "height": 35,
+      "sha256": "de4f60dec51bc9d535de0d818959d141f187bf1c750f9bd17d4b720529f5ea5a"
+    },
+    "ui/ui_booknew_txt_pinzhi2.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_txt_pinzhi2.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 95,
+      "height": 35,
+      "sha256": "28c6de55b40a0259127a92c60065e7d6976b628205972256a478b8173719cc1e"
+    },
+    "ui/ui_booknew_txt_pinzhi3.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_txt_pinzhi3.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 95,
+      "height": 35,
+      "sha256": "ddf373643617dd5f6f9a093106bb42e4069d558040df565a84c401056125d43c"
+    },
+    "ui/ui_booknew_txt_pinzhi4.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_txt_pinzhi4.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 95,
+      "height": 35,
+      "sha256": "c1d39e3ba94384df0b0bfafb88888f9b459fcdfdc5b0832c38bea6237438590d"
+    },
+    "ui/ui_booknew_txt_pinzhi5.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_txt_pinzhi5.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 95,
+      "height": 36,
+      "sha256": "e85dece26eb91105e355de3459ab0b92b405212f24591c86dcf1bdc6198795c5"
+    },
+    "ui/ui_booknew_type_land.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_type_land.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 52,
+      "height": 52,
+      "sha256": "e39e51b85d208ce63e2c03ad7604b130ede3b94537d2890c92bd6cd5834fed61"
+    },
+    "ui/ui_booknew_type_sky.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_type_sky.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 52,
+      "height": 52,
+      "sha256": "dd53096b1f78d1f75340f694d65e1bac85229f62633e56e447a587e241cf40bc"
+    },
+    "ui/ui_booknew_weizhi.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_weizhi.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 50,
+      "height": 50,
+      "sha256": "a6711ae0c09d4cd6c734d52b513b78a696b99a3011f874b96738b8ebe89f17a6"
+    },
+    "ui/ui_booknew_xiao1.png": {
+      "archive": "assets/res/ui/ui_booknew.plist",
+      "frame": "ui_booknew_xiao1.png",
+      "texture": "assets/res/ui/ui_booknew.pkm",
+      "width": 224,
+      "height": 25,
+      "sha256": "058a6ea00c69af336e7845d09ad3610e164d9dd65a725affb34be52e13b0b678"
+    },
+    "ui/ui_dragontype_DaoJuKuang1.png": {
+      "archive": "assets/res/ui/ui_dragontype.plist",
+      "frame": "ui_dragontype_DaoJuKuang1.png",
+      "texture": "assets/res/ui/ui_dragontype.pkm",
+      "width": 210,
+      "height": 210,
+      "sha256": "a9a590b8415ff4752fe4c98bd7e17c317dc55a879b0ea3ed423600bcdd7236d6"
+    },
+    "ui/ui_dragontype_DaoJuKuang2.png": {
+      "archive": "assets/res/ui/ui_dragontype.plist",
+      "frame": "ui_dragontype_DaoJuKuang2.png",
+      "texture": "assets/res/ui/ui_dragontype.pkm",
+      "width": 210,
+      "height": 210,
+      "sha256": "840cac851102b1d356bc87efe3d3ec99b79c9e1fb762f7ab44dec6bf554737e5"
+    },
+    "ui/ui_dragontype_DaoJuKuang3.png": {
+      "archive": "assets/res/ui/ui_dragontype.plist",
+      "frame": "ui_dragontype_DaoJuKuang3.png",
+      "texture": "assets/res/ui/ui_dragontype.pkm",
+      "width": 210,
+      "height": 210,
+      "sha256": "19fcc66cbec861aea26b4397dce2021fe1e2cc8027e627917f672af8dd6f0f05"
+    },
+    "ui/ui_dragontype_DaoJuKuang4.png": {
+      "archive": "assets/res/ui/ui_dragontype.plist",
+      "frame": "ui_dragontype_DaoJuKuang4.png",
+      "texture": "assets/res/ui/ui_dragontype.pkm",
+      "width": 210,
+      "height": 210,
+      "sha256": "d4eed3bdf4d77b764e4f172bf795dda2924fcdff2eb47389003d88efa0b456a8"
+    },
+    "ui/ui_dragontype_DaoJuKuang5.png": {
+      "archive": "assets/res/ui/ui_dragontype.plist",
+      "frame": "ui_dragontype_DaoJuKuang5.png",
+      "texture": "assets/res/ui/ui_dragontype.pkm",
+      "width": 210,
+      "height": 210,
+      "sha256": "2b789be3b646ad35b47cb7374d61a110f26bf4ddd51e20aa689786b755e0da06"
+    },
+    "ui/ui_dragontype_DaoJuKuang5p.png": {
+      "archive": "assets/res/ui/ui_dragontype.plist",
+      "frame": "ui_dragontype_DaoJuKuang5p.png",
+      "texture": "assets/res/ui/ui_dragontype.pkm",
+      "width": 206,
+      "height": 114,
+      "sha256": "1780fd3281dd966afa0e4144f622f21549116c3c82c746f0f2340214f04df09b"
+    },
+    "ui/ui_dragontype_atk_small.png": {
+      "archive": "assets/res/ui/ui_dragontype.plist",
+      "frame": "ui_dragontype_atk_small.png",
+      "texture": "assets/res/ui/ui_dragontype.pkm",
+      "width": 44,
+      "height": 44,
+      "sha256": "9c6bd989b8ef705613d15e970a4626ca245df282f6e2b1aa030b16ea6df23aa2"
+    },
+    "ui/ui_dragontype_bg.png": {
+      "archive": "assets/res/ui/ui_dragontype.plist",
+      "frame": "ui_dragontype_bg.png",
+      "texture": "assets/res/ui/ui_dragontype.pkm",
+      "width": 135,
+      "height": 38,
+      "sha256": "5c85b0ec36cc47e8f7112f18ca04064acbdbd97795f8d6ee764030d5919de1f4"
+    },
+    "ui/ui_dragontype_def_small.png": {
+      "archive": "assets/res/ui/ui_dragontype.plist",
+      "frame": "ui_dragontype_def_small.png",
+      "texture": "assets/res/ui/ui_dragontype.pkm",
+      "width": 44,
+      "height": 44,
+      "sha256": "2cea297ac840097000533466b9795c8481db2d742bf5a179e98df6dc3b9d9d8c"
+    },
+    "ui/ui_dragontype_land.png": {
+      "archive": "assets/res/ui/ui_dragontype.plist",
+      "frame": "ui_dragontype_land.png",
+      "texture": "assets/res/ui/ui_dragontype.pkm",
+      "width": 52,
+      "height": 52,
+      "sha256": "739b67ddbff113fb28b7d9dda8bcca0157644182ac2cd7d2cd83cdbeee62ff2d"
+    },
+    "ui/ui_dragontype_land_small.png": {
+      "archive": "assets/res/ui/ui_dragontype.plist",
+      "frame": "ui_dragontype_land_small.png",
+      "texture": "assets/res/ui/ui_dragontype.pkm",
+      "width": 44,
+      "height": 44,
+      "sha256": "77f687aa585962b9507851b695f87ba426d697ac8914017dce6c76152e653dd4"
+    },
+    "ui/ui_dragontype_pizhi1.png": {
+      "archive": "assets/res/ui/ui_dragontype.plist",
+      "frame": "ui_dragontype_pizhi1.png",
+      "texture": "assets/res/ui/ui_dragontype.pkm",
+      "width": 38,
+      "height": 38,
+      "sha256": "787016c17eb04d12b5f627390c9a6e337b01f9642696548272a60e85d2109141"
+    },
+    "ui/ui_dragontype_pizhi2.png": {
+      "archive": "assets/res/ui/ui_dragontype.plist",
+      "frame": "ui_dragontype_pizhi2.png",
+      "texture": "assets/res/ui/ui_dragontype.pkm",
+      "width": 42,
+      "height": 39,
+      "sha256": "15f921008eea96edb3fac9877a1c949fe68ea4ab05b86565ec06afe6749b9147"
+    },
+    "ui/ui_dragontype_pizhi3.png": {
+      "archive": "assets/res/ui/ui_dragontype.plist",
+      "frame": "ui_dragontype_pizhi3.png",
+      "texture": "assets/res/ui/ui_dragontype.pkm",
+      "width": 40,
+      "height": 39,
+      "sha256": "34cccab3fc482932bb230dc3191d3b6e2433e664889652e7eb0b26a2b00cdf13"
+    },
+    "ui/ui_dragontype_pizhi4.png": {
+      "archive": "assets/res/ui/ui_dragontype.plist",
+      "frame": "ui_dragontype_pizhi4.png",
+      "texture": "assets/res/ui/ui_dragontype.pkm",
+      "width": 41,
+      "height": 39,
+      "sha256": "3ba3a127b2a3087c312dfbf34535194b65ff7099088d029c27a0f00cc52b7667"
+    },
+    "ui/ui_dragontype_pizhi5.png": {
+      "archive": "assets/res/ui/ui_dragontype.plist",
+      "frame": "ui_dragontype_pizhi5.png",
+      "texture": "assets/res/ui/ui_dragontype.pkm",
+      "width": 39,
+      "height": 39,
+      "sha256": "0ebd4ae21c51052ca09efccb8d02f9eb81a575e2d62f9da9ede448833b3f7139"
+    },
+    "ui/ui_dragontype_sky.png": {
+      "archive": "assets/res/ui/ui_dragontype.plist",
+      "frame": "ui_dragontype_sky.png",
+      "texture": "assets/res/ui/ui_dragontype.pkm",
+      "width": 52,
+      "height": 52,
+      "sha256": "200825739cc22e1f5cfdf3535cb9a8e0c25f4fa340c17c77e48ad2c353cb656f"
+    },
+    "ui/ui_dragontype_sky_small.png": {
+      "archive": "assets/res/ui/ui_dragontype.plist",
+      "frame": "ui_dragontype_sky_small.png",
+      "texture": "assets/res/ui/ui_dragontype.pkm",
+      "width": 44,
+      "height": 44,
+      "sha256": "746017ebe8699a946cb29cd2184e0273138212693862d3fb49274a16425f7ab7"
     }
   }
 }

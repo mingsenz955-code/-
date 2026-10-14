@@ -146,3 +146,8 @@
 ## E05 v0.13 主界面入口与运行时布局边界
 - 原ui_main act_btn包含首充/福利/活动/大富翁；使用其原图与源坐标，不新增假活动奖励。首充等原图已含中文，避免重复标签。
 - LayoutLoader静态指令确认边缘字段优先于x/y、双边扩展尺寸、btn/普通节点锚点差别。BottomUI/ModulesPanel/MorePanel动态重排更多。当前仅改静态图标仍不足证明一比一；审计文件在work，仅数据解析无原代码执行。
+
+## E05 v0.14 原牧场操作页面
+- 用户提供旧网页栖息地管理截图并明确禁止旧界面；删除运行时三栏/网页管理与图鉴，全部入口留在原牧场底图和原窗口。
+- 原ShopPanel明文ui_shop六分类、PlantsPanel明文panel_zhongzhi_info/item_zhongzhi；PokedexPanel/PokedexItem明文ui_book_new/item_book_show、六列gap7。图鉴加成来自服务端pokedexData，仍留未知。
+- 新原图集与thumbs_store补齐，manifest2176、UI尺寸1581。龙巢、种植、选亲代、繁殖中、育龙塔/幼龙/图鉴均使用对应原布局；详尽适配差异见UI-PARITY.md。
