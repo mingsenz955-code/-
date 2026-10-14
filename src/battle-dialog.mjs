@@ -25,7 +25,7 @@ export async function openBattleDialog(state,{nodeId=null}={}){
   slots[`${key}/icon`]=`<div class="source-battle-portrait" data-portrait="${team}${index-1}"><img class="battle-portrait-art" src="${`assets/original/ui/ui_bookdragon_${sp.original}_1.png`}" alt="${sp.name}"><img class="battle-portrait-border" src="assets/original/ui/ui_battle_txk60_${Math.min(5,sp.quality??1)}.png" alt=""><img class="battle-dead-mark" src="assets/original/ui/ui_battle_zhenwang.png" alt="阵亡"></div>`;
  }
  values['round/num']=`1/${BATTLE_ROUND_LIMIT}`;values['skip/miaoshu']='退出';
- values.power_left=String(lineupPower(lineup));values.power_right=String(battleRequirement(nodeId)??'');
+ values.power_left=String(lineupPower(lineup,state));values.power_right=String(battleRequirement(nodeId)??'');
  const allyPositions=teamPositions(lineup),enemyPositions=teamPositions(enemies);
  const stage=`<div class="battle-stage" aria-label="自动战斗">${lineup.map((d,i)=>fighter(d,'ally',i,allyPositions)).join('')}${enemies.filter(d=>d.species).map((d,i)=>fighter(d,'enemy',i,enemyPositions)).join('')}<div class="battle-fx-layer"></div></div>`;
  const d=showSource('sourceBattle',renderSourceLayout(layout,{values,slots,hidden,actions:{'skip/btn':{type:'close',label:'退出战斗'}}})+stage,'source-battle-dialog');
@@ -42,7 +42,7 @@ async function damageNumber(layer,value,x,y){glyphs??=await fetch('assets/origin
 export async function playBattleAnimation(state,nodeId,result){
  const d=document.querySelector('#modal'),run=d.dataset.battleRun,layer=d.querySelector('.battle-fx-layer');
  const live=()=>d.open&&d.dataset.mode==='sourceBattle'&&d.dataset.battleRun===run;
- const make=(item,side,index)=>({item,side,index,el:d.querySelector(`[data-unit="${side}${index}"]`),stats:side==='ally'?dragonAttributes(item):{attack:item.attack,defend:item.defend,life:item.life},hp:100});
+ const make=(item,side,index)=>({item,side,index,el:d.querySelector(`[data-unit="${side}${index}"]`),stats:side==='ally'?dragonAttributes(item,state):{attack:item.attack,defend:item.defend,life:item.life},hp:100});
  const allies=configuredLineup(state).map((v,i)=>make(v,'ally',i)),enemies=battleEnemyGroup(nodeId).monsters.filter(v=>v.species).map((v,i)=>make(v,'enemy',i));
  const allyPositions=teamPositions(allies.map(v=>v.item)),enemyPositions=teamPositions(enemies.map(v=>v.item));
  const winners=result.won?allies:enemies,losers=result.won?enemies:allies;

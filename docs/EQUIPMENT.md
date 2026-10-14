@@ -60,3 +60,6 @@
 仍未接入：技能行（`skill1~4`）、系别数据、一键装备规则、强化与升星结算、装备实际获取。属性只累计装备定义基础值，**不是**原版战斗总属性。
 
 `scripts/import-original-assets.py` 的图集白名单此前没有 `ui_formationinfo` 与 `ui_equipformation`，所以 `ui_formationinfo_*`（含 `lvbg`、`zhuangbeibg`、`type_land`、`type_sky`）从未导入；本轮补入，登记数 2176 → 2203。
+
+## v0.16.17 更新
+左侧布阵现有六阵位、原加号/选择龙卡、更换和下阵；分类和同种限制采用FormationData原指令规则。装备定义atk/def/hp已连到基础战斗属性和离线结算，不再只显示装备自身加成。强化、升星、随机词条、技能、符文与宝石仍未实现；一键装备仍不可用，正常装备获取尚未闭合。

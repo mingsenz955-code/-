@@ -23,7 +23,8 @@ import {storage} from './storage.mjs';
 import {openCollectionDialog,rememberCollectionScroll} from './collection-dialog.mjs';
 import {openDragonDialog} from './dragon-dialog.mjs';
 import {openFarmDialog} from './farm-dialog.mjs';
-import {openFormationDialog} from './formation-dialog.mjs';
+import {openFormationDialog,openFormationPicker,openFormationPreview} from './formation-dialog.mjs';
+import {formationReplacement} from './formation.mjs';
 import {startDragonModels,DRAGON_MODELS} from './dragon-models.mjs';
 import {originalHud} from './original-hud.mjs';
 let drag;
@@ -105,7 +106,11 @@ document.addEventListener('click',async e=>{
   if(type==='buyResource'){const offer=resourceShopRow(id);if(!offer){toast('这个商品尚未开放。');return}const kind=$('#modal')?.dataset.resourceKind||null;if(state.gems<offer.priceGems){toast(`魔晶不足，还差 ${offer.priceGems-state.gems} 魔晶。`);await openRechargeDialog(state);return}const next=action(state,'buyResource',{id});await persist(next);render();await openResourceShop(state,{type:kind});toast(state.log[0]);return}
   if(type==='openAdventure'){await openAdventureDialog(state);return}
   if(type==='openFormation'){await openFormationDialog(state);return}
-  if(type==='saveFormation'){const ids=Array.from(document.querySelectorAll('[data-formation-dragon]:checked')).map(input=>Number(input.value));const next=action(state,'setFormation',{ids});await persist(next);render();await openFormationDialog(state);toast(state.log[0]);return}
+  if(type==='formationSlot'){await openFormationDialog(state,id);return}
+  if(type==='formationPick'){await openFormationPicker(state,id);return}
+  if(type==='formationFilter'){await openFormationPicker(state,Number($('#modal').dataset.formationSlot),el.dataset.value);return}
+  if(type==='formationPreview'){await openFormationPreview(state);return}
+  if(type==='formationEnlist'||type==='formationRemove'){const slot=Number($('#modal').dataset.formationSlot),ids=formationReplacement(state,slot,type==='formationRemove'?null:id);await persist(action(state,'setFormation',{ids}));render();await openFormationDialog(state,Math.min(slot,Math.max(0,ids.length-1)));toast(state.log[0]);return}
   if(type==='pveMap'){await openAdventureDialog(state,Number(el.dataset.value));return}
   if(type==='pveNode'){const node=adventureEvent(id);if(!node)throw new Error('找不到这个关卡节点。');const next=action(state,'battleResolve',{nodeId:id});await openBattleDialog(state,{nodeId:id});busy=true;let completed;try{completed=await playBattleAnimation(state,id,next.adventure.lastBattle)}finally{busy=false}if(!completed)return;await persist(next);closeDialog();render();await openAdventureDialog(state);toast(state.log[0]);return}
   if(type==='pveUnverified'){toast('普通与精英关卡的战斗、体力与结算尚未实现。');return}

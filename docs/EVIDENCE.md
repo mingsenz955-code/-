@@ -194,3 +194,9 @@
 - PvePanel.lua第64行实际调用layout.ui_battle_chuangguan_guanka；后续afterPageChange分别设置txt_name、star_num，体力独立，不是旧panel_pve叠加标题。现用实际布局及其原图，撤下旧缺图兜底纸卷。
 - PveRender.lua第28–29行加载mapInfo.layoutName并向basenode添加map_N.jpg，未缩放为layout.width/height。节点采用源坐标，背景保留原1366x768，按视口裁切。
 - PveRender小节点使用point1未到达/point2当前/point3已通过；大节点未通关隐藏星星，通过后ui_pve_s4填充。现按此规则展示本地进度。
+
+## E05 v0.16.17 原客户端布阵证据
+- FormationData.lua函数10静态反汇编明确出现level<7返回-1、相同_info.id返回-2、position为1且数量>=4返回-3、position为0且数量>=4返回-4；替换时检查旧龙分类。全文与源SHA256在reference/formation-enlist-disassembly.txt，未执行字节码。
+- FormationInfoPanel.lua静态检查实际加载ui_formation_info，左侧六阵位采用item_big_touxiang；FormationDragonListPanel.lua明文实际加载ui_dragon_list、按主属性筛选，操作1新增/2替换/3下阵。
+- NewFormationPanel.lua明文按extended.position分组，并按queuePriority排序挂到ui_formation_new的sky/earth源节点，动作breathinbattle。本轮遵循这些源规则。
+- 装备已知定义atk/def/hp按现有装备所有者累加到基础战斗属性，原getPower基础项继续attack+defend+life/3；未把未知随机、星级或符文数值加入。

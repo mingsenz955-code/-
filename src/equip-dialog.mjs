@@ -1,3 +1,5 @@
+import {formationCounts} from './formation.mjs';
+import {dragonAttributes,dragonPower,configuredLineup} from './battle.mjs';
 import {SPECIES} from './data.mjs';
 import {renderSourceLayout} from './source-layout.mjs';
 import {sourceLayout,showSource,esc} from './ranch-dialogs.mjs';
@@ -27,7 +29,7 @@ function dragonCell(layout,dragon,active){
 // Original 阵容 page (ui_formation_info). It is where the shipped client shows a dragon's
 // six equipment slots plus its four skill slots; the left column is the owned-dragon
 // list and the middle card is the dragon itself.
-export async function openEquipDialog(state,dragonId,{returnToDragon=false}={}){
+export async function openEquipDialog(state,dragonId,{returnToDragon=false,formation=false,slot=0}={}){
  const dragon=state.dragons.find(d=>d.id===dragonId)??state.dragons[0];
  if(!dragon)throw new Error('牧场里还没有可以查看的龙。');
  const [layout,listItem]=await Promise.all([sourceLayout('ui_formation_info'),sourceLayout('item_star_up_touxiang_dengji')]);
@@ -55,12 +57,13 @@ export async function openEquipDialog(state,dragonId,{returnToDragon=false}={}){
  values['right/dragong_info/lv/level']=String(dragon.level);
  // dragong_info owns the attribute rows. Only equipment definition totals are known
  // offline, so critical/resist/power stay blank instead of being invented.
- values['right/dragong_info/hp/num']=String(bonus.hp);
- values['right/dragong_info/atk/num']=String(bonus.atk);
- values['right/dragong_info/def/num']=String(bonus.def);
+ const base=dragonAttributes(dragon);
+ values['right/dragong_info/hp/num']=String((base?.life??0)+bonus.hp);
+ values['right/dragong_info/atk/num']=String((base?.attack??0)+bonus.atk);
+ values['right/dragong_info/def/num']=String((base?.defend??0)+bonus.def);
  values['right/dragong_info/critical/num']='—';
  values['right/dragong_info/resist/num']='—';
- values['right/dragong_info/power/num']='—';
+ values['right/dragong_info/power/num']=String(dragonPower(dragon,state)??'—');
  slots['left/huadong']=`<div class="source-equip-dragonlist">${state.dragons.map(d=>dragonCell(listItem,d,d.id===dragon.id)).join('')}</div>`;
  values['left/tx_team_num']='—';values['left/tx_shy_num']='—';values['left/tx_land_num']='—';
  actions.close={type:'close',label:'关闭阵容'};
@@ -68,7 +71,18 @@ export async function openEquipDialog(state,dragonId,{returnToDragon=false}={}){
  actions['right/change/btn']={type:'unverifiedEquip',label:'更换龙'};
  actions['right/equip/btn']={type:'unverifiedEquip',label:'一键装备'};
  actions['right/dragong_info/btn_xiangqing/btn']={type:'openDragon',id:dragon.id,label:'详情'};
- const d=showSource('sourceEquip',renderSourceLayout(layout,{values,slots,actions,hidden}));
+ if(formation){
+  const lineup=configuredLineup(state),count=formationCounts(lineup),cell=await sourceLayout('item_big_touxiang');
+  values['left/tx_team']='队伍';values['left/tx_sky']='飞行龙';values['left/tx_land']='爬行龙';
+  values['left/tx_team_num']=`${lineup.length}/6`;values['left/tx_shy_num']=`${count.sky}/4`;values['left/tx_land_num']=`${count.land}/4`;
+  const cells=Array.from({length:6},(_,i)=>{const unit=lineup[i],sp=unit?SPECIES[unit.species]:null;return `<button class="source-formation-slot" data-action="${unit?'formationSlot':'formationPick'}" data-id="${i}" aria-label="阵位${i+1}${unit?' '+sp.name:' 添加龙'}">${renderSourceLayout(cell,{values:{tx_lv:unit?`Lv.${unit.level}`:'',txt_num:''},hidden:new Set([...(i!==slot?['selected']:[]),...(unit?['add']:['lvbg','tx_lv'])]),slots:{icon_long:unit?`<img class="formation-slot-portrait" src="assets/original/ui/ui_bookdragon_${sp.original}_1.png" alt="${sp.name}">`:'<img class="formation-slot-add" src="assets/original/ui/ui_daojukuang_kong2.png" alt="添加龙">'}})}</button>`}).join('');
+  slots['left/huadong']=`<div class="source-formation-slots">${cells}</div>`;
+  actions['right/change/btn']={type:'formationPick',id:slot,label:'更换龙'};
+  actions['left/btn_formation/btn']={type:'formationPreview',label:'阵型'};
+ }
+ const d=showSource(formation?'sourceFormation':'sourceEquip',renderSourceLayout(layout,{values,slots,actions,hidden}));
+ d.dataset.formationSlot=String(slot);
+
  d.dataset.dragonId=String(dragon.id);d.dataset.returnToDragon=String(returnToDragon);
 }
 
