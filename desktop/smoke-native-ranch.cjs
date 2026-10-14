@@ -13,12 +13,24 @@ exports.run=async(window,store)=>{
  const shot=async name=>{await art();await fs.writeFile(path.join(__dirname,'..','work',name+'.png'),(await window.webContents.capturePage()).toPNG())};
  const advance=async at=>{await js(`Date.now=()=>${at};true`);await wait(400)};
  // gold/food/gem each carry a ＋ button in the client layout; all three must be real buttons now.
- assert.equal(await js("document.querySelectorAll('.original-hud [data-action=resourceShop]').length"),2,'获取金币 and 获取食物 must reach the resource shop');
+ assert.equal(await js("document.querySelectorAll('.original-hud [data-action=resourceShopGold],.original-hud [data-action=resourceShopFood]').length"),2,'获取金币 and 获取食物 must each reach their own 资源 section');
  await click('.original-hud [data-action=openRecharge][aria-label="获取魔晶"]');
  assert.equal(await js("document.querySelector('#modal').dataset.mode"),'sourceRecharge','the 魔晶 ＋ must open the recharge panel');
  await click('#modal [data-action=close]');
  await click('[data-place-id="1"]');await shot('native-habitat-info');assert.equal(await js("document.querySelector('#modal').dataset.mode"),'nativeHabitatInfo');await click('#modal [data-action=collect]');assert((await state()).coins>=50777);await click('#modal [data-action=close]');
- await click('[data-action=showMore]');await click('[data-action=openHabitats]');await shot('native-shop');await click('#modal [data-action=habitatShop]');assert.equal(await js("document.querySelectorAll('[data-habitat-offer]').length"),17);await shot('native-habitat-shop');
+ await click('[data-action=showMore]');await click('[data-action=openHabitats]');await shot('native-shop');
+ // 资源: the three kinds live in their own sections, and a currency ＋ opens only its own kind.
+ await click('#modal [data-action=resourceShop]');
+ assert.equal(await js("document.querySelectorAll('#modal [data-resource-section]').length"),3,'the 资源 category must not mix 金币, 食物 and 进化果实');
+ assert.equal(await js("document.querySelector('#modal [data-resource-section]').dataset.resourceSection"),'g','金币 comes first');
+ await shot('native-resource-shop');
+ await click('#modal [data-action=close]');
+ await click('.original-hud [data-action=resourceShopGold]');
+ assert.equal(await js("document.querySelectorAll('#modal [data-resource-section]').length"),1,'the 金币 ＋ must open 金币 only');
+ assert.equal(await js("document.querySelector('#modal [data-resource-section]').dataset.resourceSection"),'g');
+ await shot('native-resource-shop-gold');
+ await click('#modal [data-action=close]');
+ await click('[data-action=openHabitats]');await click('#modal [data-action=habitatShop]');assert.equal(await js("document.querySelectorAll('[data-habitat-offer]').length"),17);await shot('native-habitat-shop');
  await click('[data-action=habitatPurchase][data-id="26"]');await art();const before=(await state()).coins;await click('[data-action=buyHabitat]');const habitat=(await state()).habitats.at(-1);assert.equal(habitat.buildingId,26);assert.equal((await state()).coins,before-100);assert.equal(habitat.job.kind,'build');assert(await js("document.querySelector('[data-action=completeHabitat]').disabled"));
  await advance(habitat.job.readyAt+1);await click('[data-action=completeHabitat]');await click('[data-action=upgradeHabitat]');assert.equal((await state()).habitats.at(-1).job.kind,'upgrade');await advance((await state()).habitats.at(-1).job.readyAt+1);await click('[data-action=completeHabitat]');assert.equal((await state()).habitats.at(-1).buildingId,27);await click('#modal [data-action=close]');
  await click('[data-action=openMyDragons]');await click('.source-dragon-card[data-id="4"]');await click('[data-action=dragonMove]');await art();await click(`[data-action=moveNative][data-id="${habitat.id}"]`);assert.equal((await state()).dragons.find(d=>d.id===4).habitatId,habitat.id);await click('#modal [data-action=close]');

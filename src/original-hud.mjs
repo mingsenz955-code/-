@@ -6,7 +6,7 @@ const ACTIONS={btn_RenWU:'showTasks',btn_pickAll:'collectAll',btn_GengDuo:'showM
  // The three ＋ buttons inside gold/food/gem carry no action in the client table. 魔晶 opens the
  // recharge panel; 金币 and 食物 open the shop's 资源 category, which is the client's own 魔晶
  // sink for those two resources. That mapping is a decision, not a recovered rule.
- btn_JinBi:'resourceShop',btn_ShiWu:'resourceShop',btn_MoJing:'openRecharge'};
+ btn_JinBi:'resourceShopGold',btn_ShiWu:'resourceShopFood',btn_MoJing:'openRecharge'};
 // Coordinates and dimensions below come directly from the client's ui_main table.
 // Font rasterization and anchor adaptation still require comparison at matching resolution.
 export function originalHud(state,{expanded=false}={}){

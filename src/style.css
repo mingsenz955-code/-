@@ -105,6 +105,15 @@ canvas.dragon{display:inline-block;object-fit:contain}.dragon-preview-dialog{wid
    itself stays with the layout (flex), never with a transform. */
 .source-recharge-card .source-label[data-source$="give"]{white-space:normal!important;line-height:1.15;font-size:16px!important}
 
+/* 商店「资源」：金币 / 食物 / 进化果实 各自成段，不再混在一个列表里 */
+.native-resource-groups{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:948px;height:470px;overflow-y:auto;overflow-x:hidden;pointer-events:auto;scrollbar-color:#9c6b3b #efd4a0;scrollbar-width:thin}
+.native-resource-group{margin:0 0 10px}
+.native-resource-heading{position:sticky;top:0;z-index:1;margin:0 0 6px;padding:4px 12px;font-size:20px;font-weight:bold;color:#6b4423;background:#f1dcae;border:1px solid #c19a5f;border-radius:6px}
+.native-resource-row{display:flex;gap:14px;overflow-x:auto;overflow-y:hidden;padding-bottom:6px;scrollbar-color:#9c6b3b #efd4a0;scrollbar-width:thin}
+/* .native-shop-card keeps its own 326x468 frame; at full size one section plus its heading is
+   taller than the scroll area and clipped 购买, so the resource rows scale it down instead. */
+.native-resource-row .native-shop-card{zoom:.84}
+
 /* 原版战斗界面 ui_battlenormal */
 .source-battle-portrait{position:absolute;width:58px;height:58px;transform:translate(-50%,-50%);pointer-events:none}
 .source-battle-portrait .dragon{width:100%;height:100%}

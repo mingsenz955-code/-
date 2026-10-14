@@ -85,7 +85,9 @@ document.addEventListener('click',async e=>{
   if(type==='openRecharge'){await openRechargeDialog(state);return}
   if(type==='rechargeVip'){await openVipThresholds(state);return}
   if(type==='resourceShop'){await openResourceShop(state);return}
-  if(type==='buyResource'){const offer=resourceShopRow(id);if(!offer){toast('这个商品尚未开放。');return}if(state.gems<offer.priceGems){toast(`魔晶不足，还差 ${offer.priceGems-state.gems} 魔晶。`);await openRechargeDialog(state);return}const next=action(state,'buyResource',{id});await persist(next);render();await openResourceShop(state);toast(state.log[0]);return}
+  if(type==='resourceShopGold'){await openResourceShop(state,{type:'g'});return}
+  if(type==='resourceShopFood'){await openResourceShop(state,{type:'f'});return}
+  if(type==='buyResource'){const offer=resourceShopRow(id);if(!offer){toast('这个商品尚未开放。');return}const kind=$('#modal')?.dataset.resourceKind||null;if(state.gems<offer.priceGems){toast(`魔晶不足，还差 ${offer.priceGems-state.gems} 魔晶。`);await openRechargeDialog(state);return}const next=action(state,'buyResource',{id});await persist(next);render();await openResourceShop(state,{type:kind});toast(state.log[0]);return}
   if(type==='openAdventure'){await openAdventureDialog(state);return}
   if(type==='pveMap'){await openAdventureDialog(state,Number(el.dataset.value));return}
   if(type==='pveNode'){const node=adventureEvent(Number(el.dataset.id));if(!node)throw new Error('找不到这个关卡节点。');await openBattleDialog(state,{nodeId:node.id,node});return}
