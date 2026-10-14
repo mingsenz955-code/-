@@ -141,6 +141,6 @@ document.addEventListener('pointermove',e=>{if(!drag)return;if(Math.hypot(e.clie
 document.addEventListener('pointerup',async()=>{const ended=drag;drag=null;if(!ended?.moved)return;suppressHabitatClick=true;setTimeout(()=>{suppressHabitatClick=false},500);try{await persist(action(state,'placeHabitat',{id:ended.id,position:ended.position}));render();toast('栖息地位置已保存。')}catch(e){render();toast(e.message)}});
 document.addEventListener('pointercancel',()=>{drag=null;if(state)render()});
 
-document.addEventListener('wheel',e=>{const list=e.target.closest('.source-collection-list,.lottery-pending,.native-shop-list');if(list&&list.scrollWidth>list.clientWidth&&Math.abs(e.deltaY)>Math.abs(e.deltaX)){list.scrollLeft+=e.deltaY;e.preventDefault()}},{passive:false});
+document.addEventListener('wheel',e=>{const h=e.target.closest('.source-collection-list,.lottery-pending,.native-shop-list,.native-resource-row');if(h&&h.scrollWidth>h.clientWidth&&Math.abs(e.deltaY)>Math.abs(e.deltaX)){h.scrollLeft+=e.deltaY;e.preventDefault();return}const v=e.target.closest('.native-resource-groups');if(v&&v.scrollHeight>v.clientHeight){v.scrollTop+=e.deltaY;e.preventDefault()}},{passive:false});
 
 document.querySelector('#modal').addEventListener('cancel',e=>{e.preventDefault();if($('#modal').dataset.mode==='sourceRafflePreview')closeRafflePreview();else closeDialog()});
