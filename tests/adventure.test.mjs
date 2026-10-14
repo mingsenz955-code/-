@@ -2,7 +2,7 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {createHash} from 'node:crypto';
-import {ADVENTURE_MAP_IDS,adventureMap,adventureMapDetail,adventureMapNodes,adventureEvent,adventureMapName,adventureEventKind} from '../src/adventure.mjs';
+import {ADVENTURE_MAP_IDS,adventureMap,adventureMapDetail,adventureMapNodes,adventureEvent,adventureMapName,adventureEventKind,adventureLevel,adventureLevelsOf,adventureLevelKindName,ADVENTURE_LEVEL_COUNT} from '../src/adventure.mjs';
 
 test('adventure export keeps every source row and records how the chain was proven',async()=>{
  const bytes=await fs.readFile(new URL('../assets/original/data/tables.json',import.meta.url));
@@ -48,4 +48,28 @@ test('every node is either a monster fight or a dragon node, four dragons per ma
  assert.equal(all.filter(node=>adventureEventKind(node)==='dragon').length,80);
  for(const id of ADVENTURE_MAP_IDS)assert.equal(adventureMapNodes(id).filter(node=>adventureEventKind(node)==='dragon').length,4);
  assert.equal(adventureEventKind(null),'unknown');
+});
+
+test('map_level is the 龙境仙踪 level table and its chain matches mapevents',async()=>{
+ const {ORIGINAL_ADVENTURE_LEVELS}=await import('../assets/original/data/adventure.mjs');
+ assert.equal(ADVENTURE_LEVEL_COUNT,400);
+ assert.equal(ORIGINAL_ADVENTURE_LEVELS.length,400);
+ const first=adventureLevel(101001);
+ assert.deepEqual(first,{id:101001,mapId:101,kind:1,prev:-1,next:101002,order:1,fragmentId:30001,dropGroup:5000020,note:''});
+ assert.equal(adventureLevel(999999),null);
+ // Its previous/next columns describe the same chain mapevents does.
+ for(const row of ORIGINAL_ADVENTURE_LEVELS){
+  if(row[7]!==-1)assert(adventureLevel(row[7]),`level ${row[0]} next must exist`);
+  if(row[6]!==-1)assert(adventureLevel(row[6]),`level ${row[0]} prev must exist`);
+ }
+ for(const id of ADVENTURE_MAP_IDS)assert.equal(adventureLevelsOf(id).length,20,`map ${id} must have 20 levels`);
+});
+
+test('level kinds cover every map with the client 普通/精英 split',()=>{
+ const kinds=new Map();
+ for(const row of ADVENTURE_MAP_IDS.flatMap(id=>adventureLevelsOf(id)))kinds.set(row.kind,(kinds.get(row.kind)??0)+1);
+ assert.deepEqual([...kinds.entries()].sort((a,b)=>a[0]-b[0]),[[1,280],[2,80],[3,20],[6,20]]);
+ assert.equal(adventureLevelKindName(1),'普通');
+ assert.equal(adventureLevelKindName(2),'精英');
+ assert.equal(adventureLevelKindName(3),'类型 3','unproven kinds must not be given a real name');
 });

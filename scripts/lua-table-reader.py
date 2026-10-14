@@ -118,6 +118,10 @@ def evaluate_text_literal(text):
     if not isinstance(result,dict) or not isinstance(key,(str,int)) or key not in result:raise ValueError('Unknown literal table key')
     result=result[key]
    return result
+  # Shipped data tables sometimes write a bare word where a string key belongs
+  # (map_level has `juqing018`). An unresolved identifier is read as that literal string;
+  # every other unknown token still fails, so nothing is guessed.
+  if token and re.fullmatch(r'[A-Za-z_][A-Za-z_0-9]*',token):return token
   raise ValueError('Non-literal value '+str(token))
  def product():
   result=atom()
@@ -146,7 +150,20 @@ if __name__=='__main__':
  for path in sorted((ROOT/'work/client-config/pcf').glob('*.lua')):
   try:
    raw=path.read_bytes();literal=evaluate_literal(parse(path)) if raw.startswith(b'\x1bLua') else evaluate_text_literal(raw.decode('utf-8-sig'));value=normalize(literal);(out/(path.stem+'.json')).write_text(json.dumps(value,ensure_ascii=False,indent=2),encoding='utf8');report.append({'file':path.name,'status':'literal-table-read','rows':len(value) if isinstance(value,(list,dict)) else 0})
-  except Exception as e:report.append({'file':path.name,'status':'not-converted','reason':str(e)})
+  except Exception as e:
+   # Some shipped text tables write a bare identifier where a string key belongs
+   # (map_level has `juqing018`). Quote identifiers sitting in value position and retry
+   # once. nil/true/false stay literals, so no value is invented.
+   note=str(e)
+   try:
+    if raw.startswith(b'\x1bLua'):raise e
+    import re
+    text=raw.decode('utf-8-sig')
+    patched=re.sub(r'([,{]\s*)([A-Za-z_][A-Za-z_0-9]*)(\s*[,}])',lambda m:m.group(1)+(m.group(2) if m.group(2) in ('nil','true','false') else '"%s"'%m.group(2))+m.group(3),text)
+    value=normalize(evaluate_text_literal(patched))
+    (out/(path.stem+'.json')).write_text(json.dumps(value,ensure_ascii=False,indent=2),encoding='utf8')
+    report.append({'file':path.name,'status':'literal-table-read','rows':len(value) if isinstance(value,(list,dict)) else 0,'repaired':note})
+   except Exception as retry:report.append({'file':path.name,'status':'not-converted','reason':note,'retry':str(retry)})
  (ROOT/'docs/reference/config-table-report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf8')
  print('Literal tables converted:',sum(x['status']=='literal-table-read' for x in report),'of',len(report))
  print('Unconverted:',[(x['file'],x.get('reason')) for x in report if x['status']!='literal-table-read'][:12])

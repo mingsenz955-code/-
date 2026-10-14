@@ -1,4 +1,4 @@
-import {ORIGINAL_ADVENTURE_MAPS,ORIGINAL_ADVENTURE_MAP_DETAILS,ORIGINAL_ADVENTURE_EVENTS} from '../assets/original/data/adventure.mjs';
+import {ORIGINAL_ADVENTURE_MAPS,ORIGINAL_ADVENTURE_MAP_DETAILS,ORIGINAL_ADVENTURE_EVENTS,ORIGINAL_ADVENTURE_LEVELS} from '../assets/original/data/adventure.mjs';
 
 // Client-side static evidence only. Player progress, owned stars, chest state and fight
 // results come from the server: PVEData.lua calls SocketSender.getPveMapInfo() and reads
@@ -30,3 +30,16 @@ export function adventureMapName(id){return details.get(id)?.name??''}
 // A node kind is either the literal 'monster' or a dragon body-atlas name, which is what
 // separates the 320 regular fight nodes from the 80 dragon nodes (4 per map).
 export function adventureEventKind(node){return node?.kind==='monster'?'monster':node?'dragon':'unknown'}
+
+// map_level is the 龙境仙踪 level table: one row per node with the map id, an event type,
+// its own previous/next, the in-map order, and the same 30001+ and 5000020 values mapevents
+// uses. Only the columns with evidence are read; the last column carries a locale key such as
+// longjingxianzongdiyizhangdisanjiemiaoshu.
+const levels=new Map(ORIGINAL_ADVENTURE_LEVELS.map(row=>[row[0],Object.freeze({id:row[0],mapId:row[1],kind:row[2],prev:row[6],next:row[7],order:row[8],fragmentId:row[9],dropGroup:row[10],note:row[25]??''})]));
+
+export function adventureLevel(nodeId){return levels.get(nodeId)??null}
+export function adventureLevelsOf(mapId){return ORIGINAL_ADVENTURE_LEVELS.filter(row=>row[1]===mapId).map(row=>levels.get(row[0]))}
+// Kinds 1 and 2 line up with the client's own 普通/精英 buttons on panel_pve. Types 3 and 6
+// appear once per map and have no proven meaning, so they keep a neutral label.
+export function adventureLevelKindName(kind){return {1:'普通',2:'精英'}[kind]??`类型 ${kind}`}
+export const ADVENTURE_LEVEL_COUNT=ORIGINAL_ADVENTURE_LEVELS.length;

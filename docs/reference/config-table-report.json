@@ -567,7 +567,8 @@
   {
     "file": "jinquanlibao.lua",
     "status": "not-converted",
-    "reason": "Non-literal text token"
+    "reason": "Non-literal text token",
+    "retry": "Non-literal text token"
   },
   {
     "file": "Jiyin_duihuan.lua",
@@ -631,8 +632,8 @@
   },
   {
     "file": "map_level.lua",
-    "status": "not-converted",
-    "reason": "Non-literal value juqing018"
+    "status": "literal-table-read",
+    "rows": 400
   },
   {
     "file": "mapevents.lua",

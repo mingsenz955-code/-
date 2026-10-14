@@ -360,3 +360,12 @@
 - **右侧六格保持为空**：PVE 节点在客户端表里解析不到敌人列表，界面直接写明「敌方配置未取得」，不编敌人也不做结算。
 - 新增 `scripts/export-battle.py`、`assets/original/data/battle.mjs` + provenance、`src/battle.mjs`、`src/battle-dialog.mjs`、`tests/battle.test.mjs` 3 项；合计 **80 项 Node 检查全绿**；`--smoke-adventure` 扩展为「地图 → 节点 → 战斗界面」，且浏览与战斗查看都不写存档。
 - 下一步仍需用户定夺（离线推演战斗，或提供战斗实机以补 `mapevents → 敌人`）；否则可继续按①③④的深度推进其它系统。
+
+## 最新检查点 — v0.24 补出龙境仙踪关卡表（2026-10-14）
+- 上一轮定位到的 `map_level.lua`（龙境仙踪关卡表）已导出。**它本来一直是文本 Lua、结构完整，是我的读取器因为一行里有个没加引号的 `juqing018` 就整张表拒读**。
+- 修了两处：①文本解析器在值位置遇到无法解析的裸标识符时，按字面字符串读取（其它未知 token 依旧报错，不猜）；②重试时保留 `nil/true/false` 关键字。中途我自己的重试把 `nil` 替换成了空串、造出一堆 `, ,`，已修正。结果 **213/214 张表导出**（仅剩 `jinquanlibao.lua`），`tables.json` 现含 `map_level` 400 行。
+- 关卡表带出的结构：每节点一行，含地图 id、**事件类型**、前后节点、图内序号 1..20、碎片奖励 id（30001+）与掉落组（`randgive` 的 5000020），末列是 `longjingxianzongdiyizhangdisanjiemiaoshu` 这类文本 key。类型分布 **每图 14 普通 + 4 精英 + 1 + 1**（合计 280/80/20/20），其中 1/2 与 `panel_pve` 的「普通／精英」按钮对应，3/6 无可证含义因此只给中性标签。
+- 顺带确认：`Dragon_computer_array_nine`（3483 行）是**怪物组合包**，每包 6–9 只怪，其 12383 个怪物 id 中有 11203 个存在于 `monster` 表（该表列为系别／位置／等级／攻防血）。
+- **敌人链仍未闭合**：`map_level` 与 `mapevents` 的**任何一列都不携带怪包 id**，所以"这个节点打哪几只怪"在客户端表里依然无法证明。我一度以为 `mapevents` 命中了九怪包，但那是因为怪包 id 只有 1..3483、任何小整数都会命中，属于假阳性，已排除。战斗依旧不做结算、不编敌人。
+- `map_level` 已并入冒险数据导出（`ORIGINAL_ADVENTURE_LEVELS`）与 `src/adventure.mjs`（`adventureLevel`／`adventureLevelsOf`／`adventureLevelKindName`），新增 2 项测试；另刷新了因 `tables.json` 变更而过期的 6 份 provenance 哈希。合计 **82 项 Node 检查全绿**。
+- 下一轮：继续①③④方向深化，或按用户指示处理战斗。

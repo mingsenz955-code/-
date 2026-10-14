@@ -13,7 +13,7 @@
     "4": 2000,
     "5": 2000
   },
-  "tablesSha256": "63ac9f739c2dcd2ec226212a7037a519c7be8428ed519fd591010db32a463345",
+  "tablesSha256": "1408d684c2a6530668a8ed4816ad1697d579077fed5d02b887d06f035395e750",
   "schemaSource": "assets/scripts/dragon/pconfig/librarys/equip/EquipInfo.lua",
   "schemaSha256": "0ce43083ce8958cf06de2c169f0f86eeecf47f57facbd6e5aae61a05e9d91ddc",
   "columns": {

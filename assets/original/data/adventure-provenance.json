@@ -1,20 +1,25 @@
 {
   "baseline": "2.9.35-202402271124",
-  "tablesSha256": "63ac9f739c2dcd2ec226212a7037a519c7be8428ed519fd591010db32a463345",
+  "tablesSha256": "1408d684c2a6530668a8ed4816ad1697d579077fed5d02b887d06f035395e750",
   "mapRows": 20,
   "mapDetailRows": 20,
   "eventRows": 400,
+  "levelRows": 400,
   "chain": {
     "forwardLinksResolve": 400,
     "backwardLinksResolve": 400,
-    "note": "Columns 5 and 6 are the previous/next node and are self-consistent across every exported row, which is the evidence for reading them as a chain."
+    "levelChainResolve": 41,
+    "note": "Columns 5 and 6 of mapevents are the previous/next node and resolve for every exported row, which is the evidence for reading them as a chain. map_level carries the same node ids with its own previous/next columns and the same 30001+ and 5000020 values, which is why it is the level table for 龙境仙踪."
   },
   "proven": [
     "map column 1 is the map id, column 2 the level requirement and column 6 the total star count (12), matching the live 20-stage map screenshot.",
-    "mapevents column 1 is the node id, column 8 the node name, column 13 the event kind (monster/...), columns 5/6 the chain."
+    "mapevents column 1 is the node id, column 8 the node name, column 13 the event kind (monster/...), columns 5/6 the chain.",
+    "map_level has one row per node with map id, event type, previous/next, an in-map order 1..20, the same 30001+ and 5000020 values mapevents uses, and a text key such as longjingxianzongdiyizhangdisanjiemiaoshu.",
+    "Dragon_computer_array_nine packs six to nine monster ids per row and 11203 of its 12383 ids exist in the monster table, whose columns are element, position, level and the attack/defence/life triple."
   ],
   "unverified": [
     "Remaining column meanings are not proven and must not be guessed.",
+    "The link from a level node to the monster pack it fights is NOT in the exported tables: no column of map_level or mapevents carries a pack id, so enemy configuration stays unproven and is not invented.",
     "Player progress, owned stars, chest state and fight results come from the server.",
     "Battle simulation itself is not implemented."
   ]
