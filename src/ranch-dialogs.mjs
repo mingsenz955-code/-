@@ -6,6 +6,7 @@ import {ORIGINAL_HABITATS,habitatInfo,habitatDefinition,habitatLimit,acceptsDrag
 import {EXPANSION_POLICY,nextExpansion} from './expansion.mjs';
 import {RESOURCE_SHOP_OFFERS,RESOURCE_SHOP_TYPES} from './resource-shop.mjs';
 import {dragonArt,eggArt} from './art.mjs';
+import {ORIGINAL_SHOP_ITEMS} from '../assets/original/data/shop.mjs';
 const layouts=new Map();
 export const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const duration=seconds=>seconds>=3600?`${Math.floor(seconds/3600)}小时${Math.floor(seconds%3600/60)}分`:seconds>=60?`${Math.floor(seconds/60)}分${seconds%60}秒`:`${seconds}秒`;
@@ -21,9 +22,15 @@ export async function openNativePaper(title,body,mode='nativePaper'){
 }
 export async function openShop(state){
  const l=await sourceLayout('ui_shop'),labels={longdan:'龙蛋',jianzhu:'建筑',zhuangshi:'装饰品',longchao:'龙巢',kuojian:'扩建',ziyuan:'资源'},actions={close:{type:'close',label:'关闭商店'}},slots={};
- for(const [key,label] of Object.entries(labels)){actions[key+'/btn']={type:key==='longchao'?'habitatShop':key==='kuojian'?'expansionShop':key==='ziyuan'?'resourceShop':'unavailable',label};slots[key+'/con_name']=`<span class="native-category-label">${label}</span>`}
+ for(const [key,label] of Object.entries(labels)){actions[key+'/btn']={type:key==='longchao'?'habitatShop':key==='kuojian'?'expansionShop':key==='ziyuan'?'resourceShop':key==='longdan'?'originalShopCategory':key==='jianzhu'?'originalShopCategory':key==='zhuangshi'?'originalShopCategory':'unavailable',value:{longdan:'eggs',jianzhu:'buildings',zhuangshi:'decorations'}[key],label};slots[key+'/con_name']=`<span class="native-category-label">${label}</span>`}
  showSource('nativeShop',renderSourceLayout(l,{values:{txt_name:'商城'},slots,actions}),'native-fullscreen');
 }
+export async function openOriginalShopCategory(state,category){
+ const [l,item]=await Promise.all([sourceLayout('ui_shop_lv2'),sourceLayout('item_shop')]),titles={eggs:'龙蛋',buildings:'建筑',decorations:'装饰品'},level=playerProgress(state).level;
+ const cards=ORIGINAL_SHOP_ITEMS.filter(row=>row.category===category).map(row=>{const costs=Object.entries(row.costs).map(([unit,value])=>`${value.toLocaleString('zh-CN')} ${{g:'金币',c:'魔晶',f:'龙粮'}[unit]??unit}`).join('、'),locked=Number.isFinite(row.min_level)&&level<row.min_level;return `<article class="native-shop-card" data-original-shop-item="${row.id}">${renderSourceLayout(item,{values:{txt_name:row.nameCN,shuoming:`${costs}　${row.min_level?`牧场Lv.${row.min_level}`:'商店龙蛋'}`,txt_shuliang:'',weijiesuo_shuzi:`${row.min_level??'—'} 级解锁`,tx_name:'',tx_power:'','goumai_shuzi/txt_name':'详情'},hidden:new Set([...(locked?['goumai_shuzi']:['weijiesuo']),...(row.costs.c?['jinbi']:['huangzuan'])]),actions:{'goumai_shuzi/btn':{type:'originalShopInfo',id:row.id,label:`查看${row.nameCN}`}},slots:{con_img:row.thumbnail?image(row.thumbnail):'<span class="source-shop-missing">原图待取得</span>',con_cost:image(`assets/original/ui/${row.costs.c?'ui_main_08.png':'ui_main_06.png'}`,'native-cost-icon')}})}</article>`}).join('');
+ return showSource('nativeOriginalShop',renderSourceLayout(l,{values:{txt_name:titles[category]??'商城',txt_JinBi:state.coins.toLocaleString('zh-CN'),txt_MoJing:state.gems,txt_LongHun:'—'},hidden:new Set(['longzuleixing']),actions:{close:{type:'close',label:'关闭'},fanhui:{type:'openHabitats',label:'返回商店'}},slots:{huadong:`<div class="native-shop-list">${cards}</div>`}}),'native-fullscreen');
+}
+export async function openOriginalShopInfo(id){const row=ORIGINAL_SHOP_ITEMS.find(item=>item.id===id);if(!row)return;const costs=Object.entries(row.costs).map(([unit,value])=>`${value.toLocaleString('zh-CN')} ${{g:'金币',c:'魔晶',f:'龙粮'}[unit]??unit}`).join('、');return openNativePaper(row.nameCN,`${row.thumbnail?`<img class="native-shop-info-art" src="${row.thumbnail}" alt="">`:''}<p>售价：${costs}</p><p>出售：${row.sell_price?.g?.toLocaleString('zh-CN')??'—'} 金币</p>${row.width?`<p>占地：${row.width} × ${row.height} 格</p>`:''}${row.build_time!==undefined?`<p>建造时间：${duration(row.build_time)}</p>`:''}`,'nativeOriginalShopInfo')}
 export async function openExpansionShop(state){
  const [l,item]=await Promise.all([sourceLayout('ui_shop_lv2'),sourceLayout('item_shop')]);
  const plots=state.expansion?.plots??0,step=nextExpansion(plots),level=playerProgress(state).level,locked=step?level<step.minLevel:true;

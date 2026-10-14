@@ -6,7 +6,7 @@ import {resourceShopRow} from './resource-shop.mjs';
 import {openBattleDialog} from './battle-dialog.mjs';
 import {adventureEvent,adventureEventKind} from './adventure.mjs';
 import {equipmentInstance,definitionPart,EQUIPMENT_SLOTS} from './equipment.mjs';
-import {openShop,openHabitatShop,openHabitatInfo,openExpansionShop,openResourceShop,openBreed,openIncubator,openCatalog,openNativePaper,nativeButton} from './ranch-dialogs.mjs';
+import {openShop,openHabitatShop,openHabitatInfo,openExpansionShop,openResourceShop,openOriginalShopCategory,openOriginalShopInfo,openBreed,openIncubator,openCatalog,openNativePaper,nativeButton} from './ranch-dialogs.mjs';
 import {openRaffleDialog,openRafflePreview,closeRafflePreview,playRaffleDraw,openRaffleResult} from './raffle-dialog.mjs';
 import {openLotteryOptions,openLotteryDialog,openLotteryPrize,lotteryHelp} from './lottery-dialog.mjs';
 import {lotteryCost} from './lottery.mjs';
@@ -16,7 +16,7 @@ import {dragonAcquisition,sourceDragonName} from './acquisition.mjs';
 import {EVOLUTION_TEXT} from '../assets/original/data/evolution.mjs';
 import {SPECIES,speciesKey} from './data.mjs';
 import {createGame,validate,action,income,farmInfo,playerProgress,isBreedingParent,incubatorSpeedCost,dragonSellGold} from './game.mjs';
-import {habitatInfo,habitatLimit,habitatPosition} from './habitats.mjs';
+import {habitatInfo,habitatLimit,habitatPosition,snapHabitatPosition,canPlaceHabitat} from './habitats.mjs';
 import {dragonArt,sceneArt,eggArt} from './art.mjs';
 import {storage} from './storage.mjs';
 import {openCollectionDialog,rememberCollectionScroll} from './collection-dialog.mjs';
@@ -34,6 +34,8 @@ const fmt=n=>n.toLocaleString('zh-CN');
 const duration=ms=>{const n=Math.max(0,Math.ceil(ms/1000));return n>=3600?`${Math.floor(n/3600)}时 ${Math.floor(n%3600/60)}分 ${n%60}秒`:n>=60?`${Math.floor(n/60)}分 ${n%60}秒`:`${n} 秒`};
 const time=at=>at>Date.now()?duration(at-Date.now()):'已完成';
 const button=(label,act,attrs='',cls='primary')=>`<button class="${cls}" data-action="${act}" ${attrs}>${label}</button>`;
+function placementTiles(h,valid=true){const info=habitatInfo(h),tiles=[];for(let row=0;row<(info.height??5);row++)for(let column=0;column<(info.width??5);column++)tiles.push(`<img src="assets/original/ui/grid_${valid?'yellow':'red'}.png" style="--tile-x:${column-row};--tile-y:${column+row}" alt="">`);return `<span class="placement-tiles ${valid?'valid':'invalid'}">${tiles.join('')}</span>`}
+function showMoveControls(){document.querySelector('.placement-controls')?.remove();document.querySelector('.scene')?.insertAdjacentHTML('beforeend',`<div class="placement-controls">${nativeButton('取消','cancelBuildingMove')}${nativeButton('确定','confirmBuildingMove')}</div>`)}
 startDragonModels();
 function toast(message){$('#toast').textContent=message;$('#toast').classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').classList.remove('show'),3500)}
 function timer(at){return `<span data-timer="${at}">${time(at)}</span>`}
@@ -55,12 +57,16 @@ document.addEventListener('click',async e=>{
  if(el.dataset.tab){closeDialog();if(el.dataset.tab==='habitats')await openHabitatShop(state);else if(el.dataset.tab==='breeding')await openBreed(state);else if(el.dataset.tab==='dragons')await openCollectionDialog(state,collectionFilter);else render();return}
  let type=el.dataset.action;const id=Number(el.dataset.id);
  try{
+  if(type==='cancelBuildingMove'){drag=null;render();toast('已取消移动。');return}
+  if(type==='confirmBuildingMove'){if(!drag?.position)return;if(!drag.valid){toast('红色地块不能摆放建筑。');return}const ended=drag;drag=null;await persist(action(state,'placeHabitat',{id:ended.id,position:ended.position}));render();toast('建筑已按地块摆放。');return}
   if(type==='openMyDragons'||type==='returnCollection'){closeDialog();await openCollectionDialog(state,collectionFilter);return}
   if(type==='collectionFilter'){rememberCollectionScroll();const nextFilter=el.dataset.value;await openCollectionDialog(state,nextFilter);collectionFilter=nextFilter;return}
   if(type==='collectionSelect'){rememberCollectionScroll();selected=id;await openDragonDialog(state,id,{returnToCollection:true});return}
   if(type==='openDragon'){selected=id;closeDialog();await openDragonDialog(state,id);return}
   if(type==='lotteryOptions'){if(new URLSearchParams(window.location.search).get('legacyLottery')==='1')await openLotteryOptions();else await openRaffleDialog(state);return}
   if(type==='rafflePreview'){await openRafflePreview();return}
+  if(type==='originalShopCategory'){await openOriginalShopCategory(state,el.dataset.value);return}
+  if(type==='originalShopInfo'){await openOriginalShopInfo(id);return}
   if(type==='closeRafflePreview'){closeRafflePreview();return}
   if(type==='raffleAgain'){const value=el.dataset.value;await openRaffleDialog(state);const target=Array.from($('#modal').querySelectorAll('[data-action=raffleDraw]')).find(node=>node.dataset.value===value);target?.click();return}
   if(type==='returnRaffle'){await openRaffleDialog(state);return}
@@ -142,10 +148,10 @@ let breedingVisible;setInterval(()=>{if(!state||busy||drag)return;const visible=
 let resizeFrame;window.addEventListener('resize',()=>{cancelAnimationFrame(resizeFrame);resizeFrame=requestAnimationFrame(()=>{if(state&&tab==='ranch')render();if($('#modal').classList.contains('native-ranch-dialog')||['sourceDragon','sourceCollection','sourceEvolution','sourceLottery','sourceLotteryOptions','sourceRaffle','sourceRafflePreview'].includes($('#modal').dataset.mode))$('#modal').style.setProperty('--source-scale',Math.min((innerWidth-20)/1024,(innerHeight-20)/(['sourceRaffle','sourceRafflePreview'].includes($('#modal').dataset.mode)?770:768)))});});
 await boot();
 
-document.addEventListener('pointerdown',e=>{const el=e.target.closest('[data-place-id]');if(!el||busy||e.button!==0)return;drag={id:Number(el.dataset.placeId),el,x:e.clientX,y:e.clientY,moved:false};el.setPointerCapture(e.pointerId)});
-document.addEventListener('pointermove',e=>{if(!drag)return;if(Math.hypot(e.clientX-drag.x,e.clientY-drag.y)<8&&!drag.moved)return;drag.moved=true;const r=drag.el.parentElement.getBoundingClientRect();drag.position=[Math.round(Math.max(10,Math.min(90,(e.clientX-r.left)/r.width*100))*100)/100,Math.round(Math.max(10,Math.min(90,(e.clientY-r.top)/r.height*100))*100)/100];drag.el.style.left=drag.position[0]+'%';drag.el.style.top=drag.position[1]+'%'});
-document.addEventListener('pointerup',async()=>{const ended=drag;drag=null;if(!ended?.moved)return;suppressHabitatClick=true;setTimeout(()=>{suppressHabitatClick=false},500);try{await persist(action(state,'placeHabitat',{id:ended.id,position:ended.position}));render();toast('栖息地位置已保存。')}catch(e){render();toast(e.message)}});
-document.addEventListener('pointercancel',()=>{drag=null;if(state)render()});
+document.addEventListener('pointerdown',e=>{const el=e.target.closest('[data-place-id]');if(!el||busy||e.button!==0||drag)return;const id=Number(el.dataset.placeId),h=state.habitats.find(x=>x.id===id);drag={id,el,x:e.clientX,y:e.clientY,moved:false,dragging:true,position:habitatPosition(h,state.habitats.indexOf(h)),valid:true};el.setPointerCapture(e.pointerId)});
+document.addEventListener('pointermove',e=>{if(!drag?.dragging)return;if(Math.hypot(e.clientX-drag.x,e.clientY-drag.y)<8&&!drag.moved)return;drag.moved=true;const r=drag.el.parentElement.getBoundingClientRect(),h=state.habitats.find(x=>x.id===drag.id);drag.position=snapHabitatPosition([(e.clientX-r.left)/r.width*100,(e.clientY-r.top)/r.height*100]);drag.valid=canPlaceHabitat(state.habitats,drag.id,drag.position);drag.el.style.left=drag.position[0]+'%';drag.el.style.top=drag.position[1]+'%';drag.el.classList.add('is-moving');drag.el.querySelector('.placement-tiles')?.remove();drag.el.insertAdjacentHTML('afterbegin',placementTiles(h,drag.valid));showMoveControls()});
+document.addEventListener('pointerup',()=>{if(!drag?.dragging)return;drag.dragging=false;if(!drag.moved){drag=null;return}suppressHabitatClick=true;setTimeout(()=>{suppressHabitatClick=false},500)});
+document.addEventListener('pointercancel',()=>{if(drag?.dragging){drag=null;if(state)render()}});
 
 document.addEventListener('wheel',e=>{const h=e.target.closest('.source-collection-list,.lottery-pending,.native-shop-list,.native-resource-row');if(h&&h.scrollWidth>h.clientWidth&&Math.abs(e.deltaY)>Math.abs(e.deltaX)){h.scrollLeft+=e.deltaY;e.preventDefault();return}const v=e.target.closest('.native-resource-groups');if(v&&v.scrollHeight>v.clientHeight){v.scrollTop+=e.deltaY;e.preventDefault()}},{passive:false});
 

@@ -1,0 +1,14 @@
+{
+  "source": "assets/res/config/config_cn_qq.json",
+  "sourceSha256": "7d69be417d224b5daf6ca818566c38b9bceeb205e1e689c8719a5a7b6a8953dd",
+  "translationSource": "assets/res/config/textnew_cn.json",
+  "translationSha256": "daef1e0e586154ffba7d8ce860049008d729978d602acc207a4694fcfd37021c",
+  "items": 115,
+  "counts": {
+    "buildings": 18,
+    "decorations": 33,
+    "eggs": 47,
+    "habitats": 17
+  },
+  "note": "Only in_store=1 client rows. Export proves catalogue fields, not online purchase responses or building gameplay."
+}

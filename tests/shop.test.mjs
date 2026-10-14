@@ -1,0 +1,4 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs/promises';
+import {ORIGINAL_SHOP_ITEMS} from '../assets/original/data/shop.mjs';
+test('client shop export covers every visible egg, habitat, building and decoration row',()=>{const count=kind=>ORIGINAL_SHOP_ITEMS.filter(row=>row.category===kind).length;assert.deepEqual({eggs:count('eggs'),habitats:count('habitats'),buildings:count('buildings'),decorations:count('decorations')},{eggs:47,habitats:17,buildings:18,decorations:33});assert(ORIGINAL_SHOP_ITEMS.every(row=>row.id&&row.nameCN&&row.costs&&Object.hasOwn(row,'sell_price')));assert.equal(ORIGINAL_SHOP_ITEMS.find(row=>row.id===80).sell_price,null)});
+test('every exported non-dragon shop row has its original thumbnail',async()=>{for(const row of ORIGINAL_SHOP_ITEMS.filter(row=>row.category!=='eggs')){assert(row.thumbnail,`${row.id} ${row.nameCN}`);await fs.access(new URL('../'+row.thumbnail,import.meta.url))}});

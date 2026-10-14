@@ -172,3 +172,7 @@
 - `work/client-config/dragon/utils/CostUtil.lua` 的 `speedUpCost(time)` 返回 `math.ceil(math.pow(time / 3600, 0.7) * 15)`；`SpeedUpPanel.openEgg` 用剩余秒数显示该费用、扣除魔晶并立即完成孵化。运行时与测试使用同一函数，避免界面与结算价格漂移。
 - `work/client-config/ui/RandDragonPanel.lua` 的出售路径取 `self.info_.sell_price.g`。运行时从已静态导出的每龙 `sell_price.g` 读取金币；没有该字段的龙拒绝出售，不补造价格。
 - 客户端证据能证明抽中龙出售价格，尚不能证明后期服务器允许仓库龙蛋在孵化前出售；本地仓库按钮是用户要求下的离线适配，结算价格仍沿用该龙源配置。
+
+## E05 v0.16.10 地块与商城
+- `BuildingBaseDelegate.showTiles` 直接读取建筑 `width/height`，按行列创建 `width × height` 个格，源图为 `grid_yellow.png` 和 `grid_red.png`；格子坐标使用27像素半菱形投影。`BuildingMoveConfirmPanel` 调用 `moveBuildingCancel/moveBuildingConfirm` 并显示取消、确定两键。
+- `assets/res/config/config_cn_qq.json` 共404项；筛选 `in_store=1` 后商城相关115项：47龙蛋、17龙巢、18建筑、33装饰。导出脚本、字段和两个源文件哈希见 `assets/original/data/shop-provenance.json`。
