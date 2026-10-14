@@ -1,7 +1,7 @@
 import {renderSourceLayout} from './source-layout.mjs';
 import {SPECIES,breedingOptions} from './data.mjs';
 import CATALOG from '../assets/original/catalog.mjs';
-import {playerProgress,income,isBreedingParent,dragonRate} from './game.mjs';
+import {playerProgress,income,isBreedingParent,dragonRate,incubatorSpeedCost} from './game.mjs';
 import {ORIGINAL_HABITATS,habitatInfo,habitatDefinition,habitatLimit,acceptsDragon} from './habitats.mjs';
 import {EXPANSION_POLICY,nextExpansion} from './expansion.mjs';
 import {RESOURCE_SHOP_OFFERS,RESOURCE_SHOP_TYPES} from './resource-shop.mjs';
@@ -92,10 +92,10 @@ async function openBreedingJob(state){
 export async function openIncubator(state){
  const i=state.incubator;
  if(!i){const l=await sourceLayout('panel_yulongta_info');return showSource('nativeIncubator',renderSourceLayout(l,{values:{txt_name:'初级育龙塔',shuzi_fuhua:'1',fuhua_shangxian:'孵化上限',miaoshu:'说明',neirong:'育龙塔空闲。将培育山的龙蛋转入这里进行孵化。',hint_vip:'',shuzi:'','btn_FangRuLongChao/txt_name':'前往培育山'},hidden:new Set(['weijiesuo','gold_bg','con_cost','exp']),actions:{btn_GuanBiXiao:{type:'close',label:'关闭育龙塔'},'btn_FangRuLongChao/btn':{type:'openBreed',label:'前往培育山'}},slots:{con_img:image('assets/original/world/0001_incubator_g_bg.png')}}))}
- if(Date.now()<i.readyAt){const l=await sourceLayout('panel_building_speedup');const d=showSource('nativeIncubator',renderSourceLayout(l,{values:{txt_name:'初级育龙塔',txt_tishi:'孵化中',txt_duixiang:'',huafei_t:'',huafei:'','btn_PeiYu/txt_name':'查看幼龙'},actions:{btn_GuanBiXiao:{type:'close',label:'关闭育龙塔'},'btn_PeiYu/btn':{type:'openIncubator',label:'查看幼龙'}},disabled:new Set(['btn_PeiYu/btn']),slots:{con:`<div class="native-timed-art">${eggArt(i.species)}</div><span class="native-timed-label">剩余时间　${timer(i.readyAt)}</span>`}}));d.querySelector('[data-action=openIncubator]').dataset.ready=i.readyAt;return d}
+ if(Date.now()<i.readyAt){const l=await sourceLayout('panel_building_speedup'),cost=incubatorSpeedCost(i.readyAt);return showSource('nativeIncubator',renderSourceLayout(l,{values:{txt_name:'初级育龙塔',txt_tishi:'孵化中',txt_duixiang:SPECIES[i.species].name,huafei_t:'立即完成需要',huafei:String(cost),'btn_PeiYu/txt_name':'立即完成'},actions:{btn_GuanBiXiao:{type:'close',label:'关闭育龙塔'},'btn_PeiYu/btn':{type:'speedIncubator',label:`花费${cost}魔晶立即完成`}},slots:{con:`<div class="native-timed-art">${eggArt(i.species)}</div><span class="native-timed-label">剩余时间　${timer(i.readyAt)}</span>`}}))}
  const l=await sourceLayout('panel_hatch'),sp=SPECIES[i.species],slots={con_img:`<div class="native-hatch-dragon">${dragonArt(i.species,'',1)}</div>`};
  for(let n=1;n<=3;n++)slots['img_type'+n]=sp.attributes?.[n-1]?image(`assets/original/ui/shangcheng_long_shuxing_${sp.attributes[n-1]}.png`,'native-cost-icon'):'';
- return showSource('nativeHatch',renderSourceLayout(l,{values:{txt_name:sp.name,type_text:sp.element,chanliang:'产量',tx_rate:`${dragonRate({species:i.species,level:1})}/分钟`,shuxing:'属性',power_miaoshu:'战斗力',power:'—',shuoming:'请选择幼龙入住的龙巢',txt_jineng:'技能','btn_FangRuLongChao/txt_name':'放入龙巢','btn_ChuShou/txt_name':'出售'},hidden:new Set(['type_sky','type_land']),actions:{btn_GuanBiXiao:{type:'close',label:'关闭幼龙信息'},'btn_FangRuLongChao/btn':{type:'chooseHatchHabitat',label:'放入龙巢'}},slots}));
+ return showSource('nativeHatch',renderSourceLayout(l,{values:{txt_name:sp.name,type_text:sp.element,chanliang:'产量',tx_rate:`${dragonRate({species:i.species,level:1})}/分钟`,shuxing:'属性',power_miaoshu:'战斗力',power:'—',shuoming:'请选择幼龙入住的龙巢',txt_jineng:'技能','btn_FangRuLongChao/txt_name':'放入龙巢','btn_ChuShou/txt_name':'出售'},hidden:new Set(['type_sky','type_land']),actions:{btn_GuanBiXiao:{type:'close',label:'关闭幼龙信息'},'btn_FangRuLongChao/btn':{type:'chooseHatchHabitat',label:'放入龙巢'},'btn_ChuShou/btn':{type:'sellIncubator',label:`出售${sp.name}`}},slots}));
 }
 export async function openCatalog(state,filter='all'){
  const [l,item]=await Promise.all([sourceLayout('ui_book_new'),sourceLayout('item_book_show')]);

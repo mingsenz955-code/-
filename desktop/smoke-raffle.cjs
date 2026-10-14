@@ -19,10 +19,11 @@ exports.run=async(window,store,verify)=>{
 
  if(verify){
   const restored=await state();
-  assert(restored.raffle.pending.length>0,'raffle eggs must survive a restart');
+  assert.equal(restored.raffle.pending.length,0,'sold raffle eggs must stay removed after restart');
   assert.equal(restored.raffle.tickets['6048'],4,'ticket spending must persist');
-  assert.equal(restored.incubator?.source,'raffle','the hatched raffle egg must stay in the tower');
-  console.log('PASS later mobile raffle draw, ticket spend and hatched egg survive an independent restart');
+  assert.equal(restored.incubator,null,'a sold hatched dragon must not return after restart');
+  assert(restored.log.some(line=>line.includes('出售')),'sale record must survive restart');
+  console.log('PASS raffle ticket spend, egg sale, hatch acceleration and hatched-dragon sale survive an independent restart');
   return;
  }
 
@@ -69,12 +70,19 @@ exports.run=async(window,store,verify)=>{
  await wait(800);
  assert.equal(await js("document.querySelectorAll('[data-raffle-egg]').length"),2,'the warehouse lists the raffle eggs');
  await shot('raffle-warehouse-qa.png');
+ const beforeSale=await state(),soldEgg=beforeSale.raffle.pending[0];
+ const {dragonSellGold}=await import('../src/game.mjs');const {SPECIES}=await import('../src/data.mjs');
+ const soldSpecies=Object.keys(SPECIES).find(key=>SPECIES[key].originalId===soldEgg.dragonId),eggGold=dragonSellGold(soldSpecies);
+ await click(`#modal [data-raffle-egg="${soldEgg.id}"] [data-action=sellRaffleEgg]`);
+ const afterEggSale=await state();assert.equal(afterEggSale.raffle.pending.length,1);assert.equal(afterEggSale.coins,beforeSale.coins+eggGold,'warehouse egg sale uses the source dragon price');
  await click('#modal [data-raffle-egg] [data-action=raffleEggUse]');
- await wait(900);
- const hatched=await state();
- assert.equal(hatched.raffle.pending.length,1,'one egg moved into the tower');
- assert.equal(hatched.incubator?.source,'raffle');
- assert.deepEqual(hatched.incubator.parents,[]);
- assert.deepEqual(hatched.dragons,before.dragons,'drawing must not touch the ranch dragons');
- console.log('PASS three machines draw, charge tickets before gems, honour the free junior single, store eggs in the warehouse and hatch them in the tower');
+ await wait(500);
+ const incubating=await state();assert.equal(incubating.raffle.pending.length,0,'the remaining egg moved into the tower');assert.equal(incubating.incubator?.source,'raffle');assert.deepEqual(incubating.incubator.parents,[]);
+ const {incubatorSpeedCost}=await import('../src/game.mjs'),speedCost=incubatorSpeedCost(incubating.incubator.readyAt),gemsBeforeSpeed=incubating.gems;
+ assert.equal(await js("document.querySelector('#modal').dataset.mode"),'nativeIncubator');assert(await js("!!document.querySelector('#modal [data-action=speedIncubator]')"));
+ await shot('incubator-speedup-qa.png');await click('#modal [data-action=speedIncubator]');
+ const accelerated=await state();assert.equal(accelerated.gems,gemsBeforeSpeed-speedCost);assert(accelerated.incubator.readyAt<=Date.now());assert(await js("!!document.querySelector('#modal [data-action=sellIncubator]')"));
+ const hatchGold=dragonSellGold(accelerated.incubator.species),coinsBeforeHatchSale=accelerated.coins;await shot('incubator-sell-qa.png');await click('#modal [data-action=sellIncubator]');
+ const sold=await state();assert.equal(sold.incubator,null);assert.equal(sold.coins,coinsBeforeHatchSale+hatchGold);assert.deepEqual(sold.dragons,before.dragons,'selling eggs or the hatched dragon must not touch ranch dragons');
+ console.log('PASS three machines draw, exact ticket charging, warehouse egg sale, source-formula hatch acceleration and hatched-dragon sale');
 };

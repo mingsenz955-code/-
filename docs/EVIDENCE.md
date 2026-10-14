@@ -167,3 +167,8 @@
 - `DragonRaffleEffectPanel.lua` 明确加载 `layout.panel_dragon_lottery_effect`；单枚坐标为(0,0)，多枚坐标为 `((index-1)%5)*125-250` 与 `-floor((index-1)/5)*150+80`，龙名在蛋下55像素。结果页现直接复用该布局、原标题与原蛋图。
 - 原响应路径先播放机台动作，`CCDelayTime:create(1.0)` 后打开结果页；运行时同步为1000ms。结果在动画前已持久化，这是离线防重复抽取处理。
 - 原页还创建 `particle/cj_gaoji.plist` 并按品质执行额外效果；当前未导出该粒子运行时，不把CSS逐枚出现动画称为原粒子效果。
+
+## E05 v0.16.9 孵化加速与出售
+- `work/client-config/dragon/utils/CostUtil.lua` 的 `speedUpCost(time)` 返回 `math.ceil(math.pow(time / 3600, 0.7) * 15)`；`SpeedUpPanel.openEgg` 用剩余秒数显示该费用、扣除魔晶并立即完成孵化。运行时与测试使用同一函数，避免界面与结算价格漂移。
+- `work/client-config/ui/RandDragonPanel.lua` 的出售路径取 `self.info_.sell_price.g`。运行时从已静态导出的每龙 `sell_price.g` 读取金币；没有该字段的龙拒绝出售，不补造价格。
+- 客户端证据能证明抽中龙出售价格，尚不能证明后期服务器允许仓库龙蛋在孵化前出售；本地仓库按钮是用户要求下的离线适配，结算价格仍沿用该龙源配置。

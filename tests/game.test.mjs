@@ -1,5 +1,5 @@
 import {test} from 'node:test';import assert from 'node:assert/strict';
-import {createGame,validate,action,income,playerProgress,unlockedCrops} from '../src/game.mjs';import {RULES,SPECIES,ORIGINAL_LEVELS} from '../src/data.mjs';
+import {createGame,validate,action,income,playerProgress,unlockedCrops,incubatorSpeedCost,dragonSellGold} from '../src/game.mjs';import {RULES,SPECIES,ORIGINAL_LEVELS} from '../src/data.mjs';
 const T=1800000000000;
 test('complete ranch → feed → breed → hatch → serialized restore',()=>{
  let s=createGame(T);s=action(s,'plant',{},T);assert.throws(()=>action(s,'harvest',{},T+1),/未成熟/);
@@ -24,6 +24,13 @@ test('original minute income, storage cap and feeding settle without auto-collec
 test('capacity failure retains ready egg; new habitat allows hatching',()=>{
  let s=createGame(T);s.dragons.push({id:4,species:'tide',level:1,habitatId:1});s.nextId=5;s.incubator={phase:'hatching',species:'bloom',parents:[2,3],readyAt:T};
  assert.throws(()=>action(s,'hatch',{habitatId:1},T),/已满/);assert.equal(s.incubator.phase,'hatching');s.playerXp=ORIGINAL_LEVELS.find(l=>l.level===2).xp_required;s=action(s,'build',{buildingId:28},T);s=action(s,'completeHabitat',{id:5},T+10000);s.incubator.species='ember';s=action(s,'hatch',{habitatId:5},T+10000);assert.equal(s.dragons.length,4);
+});
+test('source hatch acceleration formula and configured dragon sale are transactional',()=>{
+ const ready=T+48*3600000,cost=Math.ceil((48**.7)*15);assert.equal(incubatorSpeedCost(ready,T),cost);assert.equal(incubatorSpeedCost(T,T),0);
+ let s=createGame(T);s.gems=cost;s.incubator={phase:'hatching',species:'ember',parents:[],source:'raffle',startedAt:T,readyAt:ready,hatchMs:48*3600000};
+ s=action(s,'speedIncubator',{},T);assert.equal(s.gems,0);assert.equal(s.incubator.readyAt,T);
+ const gold=dragonSellGold('ember'),coins=s.coins;s=action(s,'sellIncubator',{},T);assert.equal(s.incubator,null);assert.equal(s.coins,coins+gold);assert.equal(s.stats.hatches,0);
+ const poor=createGame(T);poor.incubator={phase:'hatching',species:'ember',parents:[],source:'raffle',startedAt:T,readyAt:ready,hatchMs:48*3600000};const before=structuredClone(poor);assert.throws(()=>action(poor,'speedIncubator',{},T),/魔晶不足/);assert.deepEqual(poor,before);
 });
 test('save rejects future version, duplicate ids, bad species, malformed jobs and overcapacity',()=>{
  for(const mutate of [s=>s.version=11,s=>s.coins=-1,s=>s.dragons[0].species='unknown',s=>s.dragons[0].id=1,s=>s.nextId=2,s=>s.farm={readyAt:'bad'},s=>s.breeding={phase:'oops'},s=>s.log=['x'.repeat(201)]]){const s=createGame(T);mutate(s);assert.throws(()=>validate(s))}
