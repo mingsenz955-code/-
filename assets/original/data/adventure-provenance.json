@@ -1,0 +1,21 @@
+{
+  "baseline": "2.9.35-202402271124",
+  "tablesSha256": "63ac9f739c2dcd2ec226212a7037a519c7be8428ed519fd591010db32a463345",
+  "mapRows": 20,
+  "mapDetailRows": 20,
+  "eventRows": 400,
+  "chain": {
+    "forwardLinksResolve": 400,
+    "backwardLinksResolve": 400,
+    "note": "Columns 5 and 6 are the previous/next node and are self-consistent across every exported row, which is the evidence for reading them as a chain."
+  },
+  "proven": [
+    "map column 1 is the map id, column 2 the level requirement and column 6 the total star count (12), matching the live 20-stage map screenshot.",
+    "mapevents column 1 is the node id, column 8 the node name, column 13 the event kind (monster/...), columns 5/6 the chain."
+  ],
+  "unverified": [
+    "Remaining column meanings are not proven and must not be guessed.",
+    "Player progress, owned stars, chest state and fight results come from the server.",
+    "Battle simulation itself is not implemented."
+  ]
+}

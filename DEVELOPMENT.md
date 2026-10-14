@@ -318,3 +318,10 @@
 - 验证：新增 `tests/raffle.test.mjs` 6 项，合计 65 项 Node 检查全绿；Electron 隔离档 `--smoke-raffle` 与独立进程 `--verify-raffle` 通过（先扣券再扣魔晶、初级免费、保底计数、入仓库、送塔、重启保持）。未改玩家档。
 - 未实现：免费次数与冷却（实机约 2 小时倒计时）、基因中心、开奖动画与粒子、服务器真实概率。
 - 下一步按用户顺序做②冒险模式。
+
+## 最新检查点 — v0.18 冒险模式数据定位（2026-10-14）
+- ②冒险模式本轮完成数据取证。`PVEData.lua` 用 `SocketSender.getPveMapInfo()` 取玩家进度，所以进度/星数/奖励在服务器；客户端只有静态表。
+- 关键纠正：一直去找 pve/tollgate/chapters，但 pcf 里根本没有这些表体（只有用于推导列映射的 `*Info.lua` 字节码）。真正带数据的是 `map`（20 行）、`maps`（20 行，中文名与剧情布局）、`mapevents`（400 行节点）、`monster`（9976）。
+- 已证明结构：20 图 × 20 节点；400 行第 5/6 列前后链**全部自洽**；节点表地图列减 900 可完全复现地图 id 列表；400 节点是**贯穿 20 图的一条长链**（仅 1 个无前驱、1 个无后继）；节点类型 `monster` 320 + 龙 80（每图 16+4）。`map` 第 6 列总星数 12，与用户实机第 20 关「12/12」吻合。
+- 新增 `scripts/export-adventure.py`、`assets/original/data/adventure.mjs` + provenance、`src/adventure.mjs`、`tests/adventure.test.mjs` 3 项；合计 68 项 Node 检查全绿。证据与已实现/未实现边界见 `docs/ADVENTURE.md`。
+- 未做：战斗结算、体力、星级、宝箱与奖励（服务器权威且战斗程序未实现），以及冒险界面。下一轮先做地图与节点界面，再决定战斗做到什么程度。
