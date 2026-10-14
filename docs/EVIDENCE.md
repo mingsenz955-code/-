@@ -220,3 +220,9 @@
 - HabitatDelegate.lua SHA256 fd68a3b860c19fcfdf2322f72d0133be60ff8ad69b777af5e86a55c1f7bfa330，函数0/10/14/17完整静态指令见reference/habitat-dragon-motion-disassembly.txt。x源表×0.4、height公式、building40+54、随机y偏移、view scale0.45、breath2–5/walk5–15/especial循环完成返回有直接证据；没有使用zuobiao节点作为牧场固定驻点。
 - Constants.lua源哈希与字面表PC范围在reference/habitat-motion-table.json。提取器仅允许已有字面表白名单指令，读取21项范围；不执行原字节码。
 - 新场景原点渲染保持0.45源骨骼比例并将脚点放到对应行走平面；大/小龙不再统一适配卡片。骨骼easing/twR等原有渲染差异仍在，移动0.2/回调归一30Hz的速度仍需原实机时序核验。
+
+## E05 v0.16.22 符文证据
+- reference/fuwen-ownership-disassembly.txt：FuwenData按dragonid和equipType管理四槽；reference/fuwen-target-skill-disassembly.txt按defaultSkill_N选择龙对应技能。FuwenSelector原绿色品质门槛已核对。
+- reference/fuwen-upgrade-disassembly.txt：候选仅排除目标及dragonid!=0，offerExp增量；needExp/levelUpID连续升级。材料已有exp没有加到吞噬预览，不能沿用宝石算法。
+- reference/fuwen-skill-extension-disassembly.txt、fuwen-skill-level-schema.txt及fuwen-power-disassembly.txt确认品质2–6三元组、level-1增量、1/2槽addPower入战力及3/4槽addPower=0。源表哈希嵌入rune-skills.mjs，export-rune-skills.py复现。
+- 原ui_FuwenSelector/ui_fuwen_info/ui_fuwen_levelup_panel与thumbs_fuwen图标用于操作页。原HUD寻访入口与完整getDes文案尚缺，暂不称整个界面流程一致；测试库存只存在隔离档。

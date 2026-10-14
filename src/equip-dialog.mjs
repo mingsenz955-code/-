@@ -1,3 +1,4 @@
+import {runeOfDragon,runeDefinition,runeIcon,runeSkill} from './runes.mjs';
 import {formationCounts} from './formation.mjs';
 import {dragonAttributes,dragonPower,configuredLineup} from './battle.mjs';
 import {SPECIES} from './data.mjs';
@@ -42,8 +43,8 @@ export async function openEquipDialog(state,dragonId,{returnToDragon=false,forma
   slots['right/'+node+'/icon']=slotContent(instance,part);
   slots['right/'+node+'/star']=instance&&instance.star?`<span class="source-equip-stars">${stars(instance.star)}</span>`:'';
  }
- // The client's own skill row stays visible but empty: skills are outside this pass.
- for(let i=1;i<=4;i++){values['right/skill'+i+'/txt_name']='';values['right/skill'+i+'/txt_num']='';slots['right/skill'+i+'/icon']=''}
+ // Four source skill slots now open their corresponding rune inventory.
+ for(let i=1;i<=4;i++){const item=runeOfDragon(state,dragon.id,i),def=runeDefinition(item?.type),skill=runeSkill(dragon,def,i);values['right/skill'+i+'/txt_name']=skill?.name??'';values['right/skill'+i+'/txt_num']=def?'+'+def.level:'';slots['right/skill'+i+'/icon']=`<button class="source-rune-slot" data-action="${item?'runeInfo':'runeSelector'}" data-id="${item?item.id:dragon.id}" data-value="${i}" aria-label="${esc(skill?.name??'符文槽'+i)}">${def&&runeIcon(def)?`<img src="${runeIcon(def)}" alt="">`:'<img src="assets/original/ui/ui_daojukuang_kong2.png" alt="镶嵌符文">'}</button>`}
  // Every txt_name must be set explicitly: the layout's label lookup falls back to the
  // node name, so the page title would otherwise overwrite each button caption.
  values['right/dragong_info/text_dragong_name']=species.name;

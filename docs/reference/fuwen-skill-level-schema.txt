@@ -1,0 +1,35 @@
+SHA256 ed49ce03dbbb95752fce27fdede9cfeb5ea6c9a667d279394867ea5ac34f435c
+Static Lua 5.1 disassembly. PCs and nested function indexes are zero-based. No code executed.
+
+FUNCTION 0
+CONSTANTS ["id", 1, 2, 14, 3, "rune_", "_ratio", "_value", "_power"]
+0000 GETTABLE r2 r1[1]
+0001 SETTABLE r0["id"] r2
+0002 LOADK r2 2
+0003 LOADK r3 2
+0004 LOADK r4 14
+0005 LOADK r5 3
+0006 FORPREP A=3 target=28
+0007 LOADK r7 "rune_"
+0008 MOVE A=8 B=2 C=0
+0009 LOADK r9 "_ratio"
+0010 CONCAT A=7 B=7 C=9
+0011 GETTABLE r8 r1[r6]
+0012 SETTABLE r0[r7] r8
+0013 LOADK r7 "rune_"
+0014 MOVE A=8 B=2 C=0
+0015 LOADK r9 "_value"
+0016 CONCAT A=7 B=7 C=9
+0017 ADD r8 r6 1
+0018 GETTABLE r8 r1[r8]
+0019 SETTABLE r0[r7] r8
+0020 LOADK r7 "rune_"
+0021 MOVE A=8 B=2 C=0
+0022 LOADK r9 "_power"
+0023 CONCAT A=7 B=7 C=9
+0024 ADD r8 r6 2
+0025 GETTABLE r8 r1[r8]
+0026 SETTABLE r0[r7] r8
+0027 ADD r2 r2 1
+0028 FORLOOP A=3 target=7
+0029 RETURN A=0 B=1 C=0

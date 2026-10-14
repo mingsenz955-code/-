@@ -1,0 +1,169 @@
+SHA256 59bea7c6f0a3d7f700e9c1e6999678b3755166f54ad720b3c3ab6cf21dc8e4c3
+Static Lua 5.1 disassembly. PCs and nested function indexes are zero-based. No code executed.
+
+FUNCTION 3
+CONSTANTS ["pkg", "fuwenlist", "ipairs", "dragonid", 0, "LibraryManager", "lib_fuwen", "getInfoById", "type", "equipType", "data", "info"]
+0000 NEWTABLE A=1 B=0 C=0
+0001 SETUPVAL A=1 B=0 C=0
+0002 GETUPVAL A=1 B=1 C=0
+0003 SETTABLE r1["pkg"] r0
+0004 GETTABLE r1 r0["fuwenlist"]
+0005 LEN A=1 B=1 C=0
+0006 SETUPVAL A=1 B=2 C=0
+0007 GETGLOBAL r1 "ipairs"
+0008 GETTABLE r2 r0["fuwenlist"]
+0009 CALL A=1 B=2 C=4
+0010 JMP A=0 target=36
+0011 GETTABLE r6 r5["dragonid"]
+0012 LT A=0 0 r6
+0013 JMP A=0 target=36
+0014 GETGLOBAL r6 "LibraryManager"
+0015 GETTABLE r6 r6["lib_fuwen"]
+0016 SELF r6 self=r6 method="getInfoById"
+0017 GETTABLE r8 r5["type"]
+0018 CALL A=6 B=3 C=2
+0019 GETUPVAL A=7 B=0 C=0
+0020 GETTABLE r8 r5["dragonid"]
+0021 GETUPVAL A=9 B=0 C=0
+0022 GETTABLE r10 r5["dragonid"]
+0023 GETTABLE r9 r9[r10]
+0024 TEST A=9 B=0 C=1
+0025 JMP A=0 target=27
+0026 NEWTABLE A=9 B=0 C=0
+0027 SETTABLE r7[r8] r9
+0028 GETUPVAL A=7 B=0 C=0
+0029 GETTABLE r8 r5["dragonid"]
+0030 GETTABLE r7 r7[r8]
+0031 GETTABLE r8 r6["equipType"]
+0032 NEWTABLE A=9 B=0 C=2
+0033 SETTABLE r9["data"] r5
+0034 SETTABLE r9["info"] r6
+0035 SETTABLE r7[r8] r9
+0036 TFORLOOP A=1 B=0 C=2
+0037 JMP A=0 target=11
+0038 RETURN A=0 B=1 C=0
+
+FUNCTION 4
+CONSTANTS [1, 4, "print", "装备/脱下符文", "type", "fuwentype:", "fuwentype", "dragonid", "fuwenid", 0, -1, "ipairs", "pkg", "fuwenlist", "id", "", "LibraryManager", "lib_fuwen", "getInfoById", "equipType", "data", "info", null, "-1", "龙不存在", "-2", "不能镶嵌到这个位置", "-3", "符文不存在", "-4", "-5", "此品质的符文不能镶嵌到这", "-11", "符文背包已满", "-12", "该符文已装备到另一只龙", "Gui", "showToast", "tostring"]
+0000 LOADK r1 1
+0001 LOADK r2 4
+0002 LOADK r3 1
+0003 FORPREP A=1 target=120
+0004 GETGLOBAL r5 "print"
+0005 MOVE A=6 B=4 C=0
+0006 LOADK r7 "装备/脱下符文"
+0007 GETTABLE r8 r0["type"]
+0008 CONCAT A=7 B=7 C=8
+0009 LOADK r8 "fuwentype:"
+0010 GETTABLE r9 r0["fuwentype"]
+0011 GETTABLE r9 r9[r4]
+0012 CONCAT A=8 B=8 C=9
+0013 GETTABLE r9 r0["dragonid"]
+0014 GETTABLE r10 r0["fuwenid"]
+0015 GETTABLE r10 r10[r4]
+0016 CALL A=5 B=6 C=1
+0017 GETTABLE r5 r0["fuwentype"]
+0018 GETTABLE r5 r5[r4]
+0019 TEST A=5 B=0 C=0
+0020 JMP A=0 target=120
+0021 GETTABLE r5 r0["fuwentype"]
+0022 GETTABLE r5 r5[r4]
+0023 LT A=0 0 r5
+0024 JMP A=0 target=100
+0025 LOADK r5 -1
+0026 GETGLOBAL r6 "ipairs"
+0027 GETUPVAL A=7 B=0 C=0
+0028 GETTABLE r7 r7["pkg"]
+0029 GETTABLE r7 r7["fuwenlist"]
+0030 CALL A=6 B=2 C=4
+0031 JMP A=0 target=41
+0032 GETTABLE r11 r10["id"]
+0033 LOADK r12 ""
+0034 CONCAT A=11 B=11 C=12
+0035 GETTABLE r12 r0["fuwenid"]
+0036 GETTABLE r12 r12[r4]
+0037 EQ A=0 r11 r12
+0038 JMP A=0 target=41
+0039 MOVE A=5 B=9 C=0
+0040 JMP A=0 target=43
+0041 TFORLOOP A=6 B=0 C=2
+0042 JMP A=0 target=32
+0043 GETGLOBAL r6 "LibraryManager"
+0044 GETTABLE r6 r6["lib_fuwen"]
+0045 SELF r6 self=r6 method="getInfoById"
+0046 GETTABLE r8 r0["fuwentype"]
+0047 GETTABLE r8 r8[r4]
+0048 CALL A=6 B=3 C=2
+0049 GETTABLE r7 r0["type"]
+0050 EQ A=0 r7 1
+0051 JMP A=0 target=82
+0052 LT A=0 0 r5
+0053 JMP A=0 target=60
+0054 GETUPVAL A=7 B=0 C=0
+0055 GETTABLE r7 r7["pkg"]
+0056 GETTABLE r7 r7["fuwenlist"]
+0057 GETTABLE r7 r7[r5]
+0058 GETTABLE r8 r0["dragonid"]
+0059 SETTABLE r7["dragonid"] r8
+0060 GETUPVAL A=7 B=1 C=0
+0061 GETTABLE r8 r0["dragonid"]
+0062 GETUPVAL A=9 B=1 C=0
+0063 GETTABLE r10 r0["dragonid"]
+0064 GETTABLE r9 r9[r10]
+0065 TEST A=9 B=0 C=1
+0066 JMP A=0 target=68
+0067 NEWTABLE A=9 B=0 C=0
+0068 SETTABLE r7[r8] r9
+0069 GETUPVAL A=7 B=1 C=0
+0070 GETTABLE r8 r0["dragonid"]
+0071 GETTABLE r7 r7[r8]
+0072 GETTABLE r8 r6["equipType"]
+0073 NEWTABLE A=9 B=0 C=2
+0074 GETUPVAL A=10 B=0 C=0
+0075 GETTABLE r10 r10["pkg"]
+0076 GETTABLE r10 r10["fuwenlist"]
+0077 GETTABLE r10 r10[r5]
+0078 SETTABLE r9["data"] r10
+0079 SETTABLE r9["info"] r6
+0080 SETTABLE r7[r8] r9
+0081 JMP A=0 target=120
+0082 LT A=0 0 r5
+0083 JMP A=0 target=89
+0084 GETUPVAL A=7 B=0 C=0
+0085 GETTABLE r7 r7["pkg"]
+0086 GETTABLE r7 r7["fuwenlist"]
+0087 GETTABLE r7 r7[r5]
+0088 SETTABLE r7["dragonid"] 0
+0089 GETUPVAL A=7 B=1 C=0
+0090 GETTABLE r8 r0["dragonid"]
+0091 GETTABLE r7 r7[r8]
+0092 TEST A=7 B=0 C=0
+0093 JMP A=0 target=120
+0094 GETUPVAL A=7 B=1 C=0
+0095 GETTABLE r8 r0["dragonid"]
+0096 GETTABLE r7 r7[r8]
+0097 GETTABLE r8 r6["equipType"]
+0098 SETTABLE r7[r8] null
+0099 JMP A=0 target=120
+0100 GETTABLE r5 r0["fuwentype"]
+0101 GETTABLE r5 r5[r4]
+0102 LT A=0 r5 0
+0103 JMP A=0 target=120
+0104 NEWTABLE A=5 B=0 C=7
+0105 SETTABLE r5["-1"] "龙不存在"
+0106 SETTABLE r5["-2"] "不能镶嵌到这个位置"
+0107 SETTABLE r5["-3"] "符文不存在"
+0108 SETTABLE r5["-4"] "不能镶嵌到这个位置"
+0109 SETTABLE r5["-5"] "此品质的符文不能镶嵌到这"
+0110 SETTABLE r5["-11"] "符文背包已满"
+0111 SETTABLE r5["-12"] "该符文已装备到另一只龙"
+0112 GETGLOBAL r6 "Gui"
+0113 GETTABLE r6 r6["showToast"]
+0114 GETGLOBAL r7 "tostring"
+0115 GETTABLE r8 r0["fuwentype"]
+0116 GETTABLE r8 r8[r4]
+0117 GETTABLE r8 r5[r8]
+0118 CALL A=7 B=2 C=0
+0119 CALL A=6 B=0 C=1
+0120 FORLOOP A=1 target=4
+0121 RETURN A=0 B=1 C=0

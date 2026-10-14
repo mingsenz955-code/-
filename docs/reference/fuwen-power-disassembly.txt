@@ -1,0 +1,42 @@
+SHA256 558a78516ea4fdf94157c0e569f50a9ab617837548923c1624481eb66ae86880
+Static Lua 5.1 disassembly. PCs and nested function indexes are zero-based. No code executed.
+
+FUNCTION 33
+CONSTANTS [0, "LibraryManager", "lib_fuwen", "getSkills", "ipairs", "DataManager", "_FuwenData", "getFuwenByDragonAndPos", "_data", "id", "extendInfo", "getExtendInfo", "info", "quality", "level", "equipType", "addPower"]
+0000 LOADK r1 0
+0001 GETGLOBAL r2 "LibraryManager"
+0002 GETTABLE r2 r2["lib_fuwen"]
+0003 SELF r3 self=r0 method="getSkills"
+0004 CALL A=3 B=2 C=2
+0005 GETGLOBAL r4 "ipairs"
+0006 MOVE A=5 B=3 C=0
+0007 CALL A=4 B=2 C=4
+0008 JMP A=0 target=33
+0009 GETGLOBAL r9 "DataManager"
+0010 GETTABLE r9 r9["_FuwenData"]
+0011 GETTABLE r9 r9["getFuwenByDragonAndPos"]
+0012 GETTABLE r10 r0["_data"]
+0013 GETTABLE r10 r10["id"]
+0014 MOVE A=11 B=7 C=0
+0015 CALL A=9 B=3 C=2
+0016 TEST A=9 B=0 C=0
+0017 JMP A=0 target=33
+0018 GETUPVAL A=10 B=0 C=0
+0019 GETTABLE r10 r10["getExtendInfo"]
+0020 GETTABLE r11 r3[r7]
+0021 GETTABLE r11 r11["id"]
+0022 GETTABLE r12 r9["info"]
+0023 GETTABLE r12 r12["quality"]
+0024 GETTABLE r13 r9["info"]
+0025 GETTABLE r13 r13["level"]
+0026 GETTABLE r14 r9["info"]
+0027 GETTABLE r14 r14["equipType"]
+0028 CALL A=10 B=5 C=2
+0029 SETGLOBAL r10 "extendInfo"
+0030 GETGLOBAL r10 "extendInfo"
+0031 GETTABLE r10 r10["addPower"]
+0032 ADD r1 r1 r10
+0033 TFORLOOP A=4 B=0 C=2
+0034 JMP A=0 target=9
+0035 RETURN A=1 B=2 C=0
+0036 RETURN A=0 B=1 C=0

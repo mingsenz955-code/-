@@ -1,0 +1,259 @@
+SHA256 dff9b0a47f79a24e9d8b845f1a2720d8a46e1b7cd91dce3d519133a8b883b632
+Static Lua 5.1 disassembly. PCs and nested function indexes are zero-based. No code executed.
+
+FUNCTION 3
+CONSTANTS ["appendExp", "fuwenObj", "info", "needExp", "levelUpID", 0, "LibraryManager", "lib_fuwen", "getInfoById", 100]
+0000 GETTABLE r1 r0["appendExp"]
+0001 GETTABLE r2 r0["fuwenObj"]
+0002 GETTABLE r2 r2["info"]
+0003 GETTABLE r3 r2["needExp"]
+0004 LE A=0 r3 r1
+0005 JMP A=0 target=18
+0006 GETTABLE r3 r2["levelUpID"]
+0007 LT A=0 0 r3
+0008 JMP A=0 target=18
+0009 GETTABLE r3 r2["needExp"]
+0010 SUB r1 r1 r3
+0011 GETGLOBAL r3 "LibraryManager"
+0012 GETTABLE r3 r3["lib_fuwen"]
+0013 SELF r3 self=r3 method="getInfoById"
+0014 GETTABLE r5 r2["levelUpID"]
+0015 CALL A=3 B=3 C=2
+0016 MOVE A=2 B=3 C=0
+0017 JMP A=0 target=3
+0018 GETTABLE r3 r2["needExp"]
+0019 DIV r3 r1 r3
+0020 MUL r3 r3 100
+0021 MOVE A=4 B=2 C=0
+0022 MOVE A=5 B=1 C=0
+0023 RETURN A=3 B=4 C=0
+0024 RETURN A=0 B=1 C=0
+
+FUNCTION 4
+CONSTANTS ["pkg", "DataManager", "_FuwenData", null, "ipairs", "fuwenlist", "id", "fuwenObj", "data", "LibraryManager", "lib_fuwen", "getInfoById", "type", "info", "dragonid", 0, "table", "insert", "sort", "sortFunc", "selectNum", "selectArr", "list", "resetData", "new", "layout", "getChild", "huadong", "preline", 3, "target", "tiptf", "setString", "没有可以使用的符文", "", "appendExp", "exp", "txt_name", "name", "txt_lv", "+", "level", "node_progress", "txt_percent", "needExp", -1, "max", "/", "progressBar", "setPercentage", 100, "progressBarNext", "lastIconType", "getItemData2", 29, "getItemImage", "node_showitem", "image", "removeAllChildren", "add"]
+0000 GETGLOBAL r1 "DataManager"
+0001 GETTABLE r1 r1["_FuwenData"]
+0002 GETTABLE r1 r1["pkg"]
+0003 SETTABLE r0["pkg"] r1
+0004 GETTABLE r1 r0["pkg"]
+0005 EQ A=0 r1 null
+0006 JMP A=0 target=8
+0007 RETURN A=0 B=1 C=0
+0008 GETGLOBAL r1 "ipairs"
+0009 GETTABLE r2 r0["pkg"]
+0010 GETTABLE r2 r2["fuwenlist"]
+0011 CALL A=1 B=2 C=4
+0012 JMP A=0 target=29
+0013 GETTABLE r6 r5["id"]
+0014 GETTABLE r7 r0["fuwenObj"]
+0015 GETTABLE r7 r7["data"]
+0016 GETTABLE r7 r7["id"]
+0017 EQ A=0 r6 r7
+0018 JMP A=0 target=29
+0019 GETGLOBAL r6 "LibraryManager"
+0020 GETTABLE r6 r6["lib_fuwen"]
+0021 SELF r6 self=r6 method="getInfoById"
+0022 GETTABLE r8 r5["type"]
+0023 CALL A=6 B=3 C=2
+0024 NEWTABLE A=7 B=0 C=2
+0025 SETTABLE r7["info"] r6
+0026 SETTABLE r7["data"] r5
+0027 SETTABLE r0["fuwenObj"] r7
+0028 JMP A=0 target=31
+0029 TFORLOOP A=1 B=0 C=2
+0030 JMP A=0 target=13
+0031 NEWTABLE A=1 B=0 C=0
+0032 GETGLOBAL r2 "ipairs"
+0033 GETTABLE r3 r0["pkg"]
+0034 GETTABLE r3 r3["fuwenlist"]
+0035 CALL A=2 B=2 C=4
+0036 JMP A=0 target=58
+0037 GETTABLE r7 r6["dragonid"]
+0038 EQ A=0 r7 0
+0039 JMP A=0 target=58
+0040 GETTABLE r7 r6["id"]
+0041 GETTABLE r8 r0["fuwenObj"]
+0042 GETTABLE r8 r8["data"]
+0043 GETTABLE r8 r8["id"]
+0044 EQ A=1 r7 r8
+0045 JMP A=0 target=58
+0046 GETGLOBAL r7 "LibraryManager"
+0047 GETTABLE r7 r7["lib_fuwen"]
+0048 SELF r7 self=r7 method="getInfoById"
+0049 GETTABLE r9 r6["type"]
+0050 CALL A=7 B=3 C=2
+0051 GETGLOBAL r8 "table"
+0052 GETTABLE r8 r8["insert"]
+0053 MOVE A=9 B=1 C=0
+0054 NEWTABLE A=10 B=0 C=2
+0055 SETTABLE r10["info"] r7
+0056 SETTABLE r10["data"] r6
+0057 CALL A=8 B=3 C=1
+0058 TFORLOOP A=2 B=0 C=2
+0059 JMP A=0 target=37
+0060 GETGLOBAL r2 "table"
+0061 GETTABLE r2 r2["sort"]
+0062 MOVE A=3 B=1 C=0
+0063 GETGLOBAL r4 "DataManager"
+0064 GETTABLE r4 r4["_FuwenData"]
+0065 GETTABLE r4 r4["sortFunc"]
+0066 CALL A=2 B=3 C=1
+0067 SETTABLE r0["selectNum"] 0
+0068 NEWTABLE A=2 B=0 C=0
+0069 SETTABLE r0["selectArr"] r2
+0070 GETTABLE r2 r0["list"]
+0071 TEST A=2 B=0 C=0
+0072 JMP A=0 target=78
+0073 GETTABLE r2 r0["list"]
+0074 SELF r2 self=r2 method="resetData"
+0075 MOVE A=4 B=1 C=0
+0076 CALL A=2 B=3 C=1
+0077 JMP A=0 target=93
+0078 GETUPVAL A=2 B=0 C=0
+0079 GETTABLE r2 r2["new"]
+0080 GETTABLE r3 r0["layout"]
+0081 GETTABLE r3 r3["getChild"]
+0082 LOADK r4 "huadong"
+0083 CALL A=3 B=2 C=2
+0084 MOVE A=4 B=1 C=0
+0085 GETUPVAL A=5 B=1 C=0
+0086 NEWTABLE A=6 B=0 C=2
+0087 SETTABLE r6["preline"] 3
+0088 SETTABLE r6["target"] r0
+0089 CALL A=2 B=5 C=2
+0090 SETTABLE r0["list"] r2
+0091 GETTABLE r2 r0["list"]
+0092 SETTABLE r2["target"] r0
+0093 LEN A=2 B=1 C=0
+0094 EQ A=0 r2 0
+0095 JMP A=0 target=101
+0096 GETTABLE r2 r0["tiptf"]
+0097 SELF r2 self=r2 method="setString"
+0098 LOADK r4 "没有可以使用的符文"
+0099 CALL A=2 B=3 C=1
+0100 JMP A=0 target=105
+0101 GETTABLE r2 r0["tiptf"]
+0102 SELF r2 self=r2 method="setString"
+0103 LOADK r4 ""
+0104 CALL A=2 B=3 C=1
+0105 GETTABLE r2 r0["fuwenObj"]
+0106 GETTABLE r2 r2["data"]
+0107 GETTABLE r2 r2["exp"]
+0108 SETTABLE r0["appendExp"] r2
+0109 GETTABLE r2 r0["layout"]
+0110 GETTABLE r2 r2["getChild"]
+0111 LOADK r3 "txt_name"
+0112 CALL A=2 B=2 C=2
+0113 SELF r2 self=r2 method="setString"
+0114 GETTABLE r4 r0["fuwenObj"]
+0115 GETTABLE r4 r4["info"]
+0116 GETTABLE r4 r4["name"]
+0117 CALL A=2 B=3 C=1
+0118 GETTABLE r2 r0["layout"]
+0119 GETTABLE r2 r2["getChild"]
+0120 LOADK r3 "txt_lv"
+0121 CALL A=2 B=2 C=2
+0122 SELF r2 self=r2 method="setString"
+0123 LOADK r4 "+"
+0124 GETTABLE r5 r0["fuwenObj"]
+0125 GETTABLE r5 r5["info"]
+0126 GETTABLE r5 r5["level"]
+0127 CONCAT A=4 B=4 C=5
+0128 CALL A=2 B=3 C=1
+0129 GETTABLE r2 r0["layout"]
+0130 GETTABLE r2 r2["getChild"]
+0131 LOADK r3 "node_progress"
+0132 CALL A=2 B=2 C=2
+0133 GETTABLE r2 r2["getChild"]
+0134 LOADK r3 "txt_percent"
+0135 CALL A=2 B=2 C=2
+0136 SELF r2 self=r2 method="setString"
+0137 GETTABLE r4 r0["fuwenObj"]
+0138 GETTABLE r4 r4["info"]
+0139 GETTABLE r4 r4["needExp"]
+0140 EQ A=0 r4 -1
+0141 JMP A=0 target=145
+0142 LOADK r4 "max"
+0143 TEST A=4 B=0 C=1
+0144 JMP A=0 target=153
+0145 GETTABLE r4 r0["fuwenObj"]
+0146 GETTABLE r4 r4["data"]
+0147 GETTABLE r4 r4["exp"]
+0148 LOADK r5 "/"
+0149 GETTABLE r6 r0["fuwenObj"]
+0150 GETTABLE r6 r6["info"]
+0151 GETTABLE r6 r6["needExp"]
+0152 CONCAT A=4 B=4 C=6
+0153 CALL A=2 B=3 C=1
+0154 GETTABLE r2 r0["fuwenObj"]
+0155 GETTABLE r2 r2["info"]
+0156 GETTABLE r2 r2["needExp"]
+0157 EQ A=0 r2 -1
+0158 JMP A=0 target=164
+0159 GETTABLE r2 r0["progressBar"]
+0160 SELF r2 self=r2 method="setPercentage"
+0161 LOADK r4 0
+0162 CALL A=2 B=3 C=1
+0163 JMP A=0 target=184
+0164 GETTABLE r2 r0["progressBar"]
+0165 SELF r2 self=r2 method="setPercentage"
+0166 GETTABLE r4 r0["fuwenObj"]
+0167 GETTABLE r4 r4["data"]
+0168 GETTABLE r4 r4["exp"]
+0169 GETTABLE r5 r0["fuwenObj"]
+0170 GETTABLE r5 r5["info"]
+0171 GETTABLE r5 r5["needExp"]
+0172 DIV r4 r4 r5
+0173 MUL r4 r4 100
+0174 CALL A=2 B=3 C=1
+0175 GETTABLE r2 r0["progressBarNext"]
+0176 SELF r2 self=r2 method="setPercentage"
+0177 GETTABLE r4 r0["appendExp"]
+0178 GETTABLE r5 r0["fuwenObj"]
+0179 GETTABLE r5 r5["info"]
+0180 GETTABLE r5 r5["needExp"]
+0181 DIV r4 r4 r5
+0182 MUL r4 r4 100
+0183 CALL A=2 B=3 C=1
+0184 GETTABLE r2 r0["lastIconType"]
+0185 GETTABLE r3 r0["fuwenObj"]
+0186 GETTABLE r3 r3["data"]
+0187 GETTABLE r3 r3["type"]
+0188 EQ A=1 r2 r3
+0189 JMP A=0 target=225
+0190 GETTABLE r2 r0["fuwenObj"]
+0191 GETTABLE r2 r2["data"]
+0192 GETTABLE r2 r2["type"]
+0193 SETTABLE r0["lastIconType"] r2
+0194 GETUPVAL A=2 B=2 C=0
+0195 GETTABLE r2 r2["getItemData2"]
+0196 LOADK r3 29
+0197 GETTABLE r4 r0["fuwenObj"]
+0198 GETTABLE r4 r4["data"]
+0199 GETTABLE r4 r4["type"]
+0200 LOADK r5 0
+0201 CALL A=2 B=4 C=2
+0202 GETUPVAL A=3 B=2 C=0
+0203 GETTABLE r3 r3["getItemImage"]
+0204 MOVE A=4 B=2 C=0
+0205 CALL A=3 B=2 C=2
+0206 GETTABLE r4 r0["layout"]
+0207 GETTABLE r4 r4["getChild"]
+0208 LOADK r5 "node_showitem"
+0209 CALL A=4 B=2 C=2
+0210 GETTABLE r4 r4["getChild"]
+0211 LOADK r5 "image"
+0212 CALL A=4 B=2 C=2
+0213 SELF r4 self=r4 method="removeAllChildren"
+0214 CALL A=4 B=2 C=1
+0215 GETTABLE r4 r0["layout"]
+0216 GETTABLE r4 r4["getChild"]
+0217 LOADK r5 "node_showitem"
+0218 CALL A=4 B=2 C=2
+0219 GETTABLE r4 r4["getChild"]
+0220 LOADK r5 "image"
+0221 CALL A=4 B=2 C=2
+0222 SELF r4 self=r4 method="add"
+0223 MOVE A=6 B=3 C=0
+0224 CALL A=4 B=3 C=1
+0225 RETURN A=0 B=1 C=0

@@ -1,3 +1,4 @@
+import {runePower} from './runes.mjs';
 import {gemBonus} from './gems.mjs';
 import {equipmentBonus,equipmentOfDragon} from './equipment.mjs';
 import {ORIGINAL_DRAGON_ATK} from '../assets/original/data/battle.mjs';
@@ -34,7 +35,7 @@ export function dragonAttributes(dragon,state=null){
 
 export function dragonPower(dragon,state=null){
  const stats=dragonAttributes(dragon,state);
- return stats?Math.floor(stats.attack+stats.defend+stats.life/3+stats.crit+stats.uncrit):null;
+ return stats?Math.floor(stats.attack+stats.defend+stats.life/3+stats.crit+stats.uncrit+(state?runePower(state,dragon):0)):null;
 }
 
 // The client shows six slots per side; a ranch with fewer dragons simply leaves slots empty.

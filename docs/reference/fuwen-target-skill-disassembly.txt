@@ -1,0 +1,26 @@
+SHA256 2101c3b6d19e3162dad7b9f204b9a5eee48a7c7c398c603f2e5f9975549abcf2
+Static Lua 5.1 disassembly. PCs and nested function indexes are zero-based. No code executed.
+
+FUNCTION 8
+CONSTANTS ["curDragonElement", "getAtksInfo", "defaultSkill_", "equipType", 0, "getExtendInfo", "quality", "level"]
+0000 GETTABLE r2 r0["curDragonElement"]
+0001 CALL A=2 B=1 C=2
+0002 SELF r3 self=r2 method="getAtksInfo"
+0003 CALL A=3 B=2 C=2
+0004 LOADK r4 "defaultSkill_"
+0005 GETTABLE r5 r1["equipType"]
+0006 CONCAT A=4 B=4 C=5
+0007 GETTABLE r4 r3[r4]
+0008 LT A=0 0 r4
+0009 JMP A=0 target=18
+0010 GETUPVAL A=5 B=0 C=0
+0011 GETTABLE r5 r5["getExtendInfo"]
+0012 MOVE A=6 B=4 C=0
+0013 GETTABLE r7 r1["quality"]
+0014 GETTABLE r8 r1["level"]
+0015 GETTABLE r9 r1["equipType"]
+0016 CALL A=5 B=5 C=2
+0017 RETURN A=5 B=2 C=0
+0018 LOADNIL A=5 B=5 C=0
+0019 RETURN A=5 B=2 C=0
+0020 RETURN A=0 B=1 C=0

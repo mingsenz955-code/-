@@ -1,3 +1,4 @@
+import {openRuneSelector,openRuneInfo,openRuneUpgrade,refreshRunePreview} from './rune-dialog.mjs';
 import {habitatMotionArea,startHabitatMotion} from './habitat-motion.mjs';
 import BUILDING_ART from '../assets/original/data/building-art.mjs';
 import {zoomCameraAt} from './ranch-camera.mjs';
@@ -70,6 +71,13 @@ document.addEventListener('click',async e=>{
  if(el.dataset.tab){closeDialog();if(el.dataset.tab==='habitats')await openHabitatShop(state);else if(el.dataset.tab==='breeding')await openBreed(state);else if(el.dataset.tab==='dragons')await openCollectionDialog(state,collectionFilter);else render();return}
  let type=el.dataset.action;const id=Number(el.dataset.id);
  try{
+  if(type==='openRunes'){await openEquipDialog(state,selected);return}
+  if(type==='runeSelector'){await openRuneSelector(state,id,Number(el.dataset.value));return}
+  if(type==='runeInfo'){await openRuneInfo(state,Number($('#modal').dataset.dragonId),el.dataset.id);return}
+  if(type==='runeUpgrade'){await openRuneUpgrade(state,Number($('#modal').dataset.dragonId),el.dataset.id);return}
+  if(type==='runeFeedSelect'){el.classList.toggle('is-selected');refreshRunePreview(state);return}
+  if(type==='runeSelectAll'){const cells=[...$('#modal').querySelectorAll('.source-rune-feed .source-rune-cell')],all=cells.every(c=>c.classList.contains('is-selected'));cells.forEach(c=>c.classList.toggle('is-selected',!all));refreshRunePreview(state);return}
+  if(['wearRune','unwearRune','upgradeRune'].includes(type)){const dragonId=Number($('#modal').dataset.dragonId),materials=[...$('#modal').querySelectorAll('.source-rune-feed .is-selected')].map(e=>e.dataset.id);await persist(action(state,type,{id:dragonId,runeId:el.dataset.id,materials}));render();if(type==='upgradeRune')await openRuneInfo(state,dragonId,el.dataset.id);else await openEquipDialog(state,dragonId);toast(state.log[0]);return}
   if(type==='openBuildingSpeed'){await openBuildingSpeedDialog(state,el.dataset.kind,id);tick();return}
   if(type==='speedBuilding'){const kind=el.dataset.kind;await persist(action(state,'speedBuilding',{kind,id}));closeDialog();render();toast(state.log[0]);return}
   if(type==='cancelBuildingMove'){drag=null;render();toast('已取消移动。');return}

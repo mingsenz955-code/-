@@ -1,0 +1,97 @@
+SHA256 dfb87a9ad397a27552dc7b7d1ba87c5cf933d745bc6cd0dd32a272f487b291ab
+Static Lua 5.1 disassembly. PCs and nested function indexes are zero-based. No code executed.
+
+FUNCTION 0
+CONSTANTS ["LibraryManager", "lib_skill_new", "getInfoById", 0, 1, "string", "format", "%d%d%02d%d", "extendInfoCache", null, "lib_runeColour", "runeColour", "lib_runeLevel", "runeLevel", "clone", "damageVector", "getRatio", "damageValue", "getValue", 2, "addPower", "getPower", "addPowerDisplay"]
+0000 GETGLOBAL r4 "LibraryManager"
+0001 GETTABLE r4 r4["lib_skill_new"]
+0002 SELF r4 self=r4 method="getInfoById"
+0003 MOVE A=6 B=0 C=0
+0004 CALL A=4 B=3 C=2
+0005 TEST A=1 B=0 C=1
+0006 JMP A=0 target=8
+0007 LOADK r1 0
+0008 TEST A=2 B=0 C=1
+0009 JMP A=0 target=11
+0010 LOADK r2 1
+0011 TEST A=3 B=0 C=1
+0012 JMP A=0 target=14
+0013 LOADK r3 1
+0014 LT A=0 r1 1
+0015 JMP A=0 target=17
+0016 RETURN A=4 B=2 C=0
+0017 GETGLOBAL r5 "string"
+0018 GETTABLE r5 r5["format"]
+0019 LOADK r6 "%d%d%02d%d"
+0020 MOVE A=7 B=0 C=0
+0021 MOVE A=8 B=1 C=0
+0022 MOVE A=9 B=2 C=0
+0023 MOVE A=10 B=3 C=0
+0024 CALL A=5 B=6 C=2
+0025 GETUPVAL A=6 B=0 C=0
+0026 GETTABLE r6 r6["extendInfoCache"]
+0027 GETTABLE r6 r6[r5]
+0028 EQ A=0 r6 null
+0029 JMP A=0 target=90
+0030 GETGLOBAL r7 "LibraryManager"
+0031 GETTABLE r7 r7["lib_runeColour"]
+0032 SELF r7 self=r7 method="getInfoById"
+0033 GETTABLE r9 r4["runeColour"]
+0034 CALL A=7 B=3 C=2
+0035 GETGLOBAL r8 "LibraryManager"
+0036 GETTABLE r8 r8["lib_runeLevel"]
+0037 SELF r8 self=r8 method="getInfoById"
+0038 GETTABLE r10 r4["runeLevel"]
+0039 CALL A=8 B=3 C=2
+0040 SUB r9 r2 1
+0041 GETGLOBAL r10 "clone"
+0042 MOVE A=11 B=4 C=0
+0043 CALL A=10 B=2 C=2
+0044 MOVE A=6 B=10 C=0
+0045 SELF r10 self=r7 method="getRatio"
+0046 MOVE A=12 B=1 C=0
+0047 CALL A=10 B=3 C=2
+0048 SELF r11 self=r8 method="getRatio"
+0049 MOVE A=13 B=1 C=0
+0050 CALL A=11 B=3 C=2
+0051 MUL r11 r9 r11
+0052 ADD r10 r10 r11
+0053 SETTABLE r6["damageVector"] r10
+0054 SELF r10 self=r7 method="getValue"
+0055 MOVE A=12 B=1 C=0
+0056 CALL A=10 B=3 C=2
+0057 SELF r11 self=r8 method="getValue"
+0058 MOVE A=13 B=1 C=0
+0059 CALL A=11 B=3 C=2
+0060 MUL r11 r9 r11
+0061 ADD r10 r10 r11
+0062 SETTABLE r6["damageValue"] r10
+0063 EQ A=1 r3 1
+0064 JMP A=0 target=67
+0065 EQ A=0 r3 2
+0066 JMP A=0 target=77
+0067 SELF r10 self=r7 method="getPower"
+0068 MOVE A=12 B=1 C=0
+0069 CALL A=10 B=3 C=2
+0070 SELF r11 self=r8 method="getPower"
+0071 MOVE A=13 B=1 C=0
+0072 CALL A=11 B=3 C=2
+0073 MUL r11 r9 r11
+0074 ADD r10 r10 r11
+0075 SETTABLE r6["addPower"] r10
+0076 JMP A=0 target=87
+0077 SETTABLE r6["addPower"] 0
+0078 SELF r10 self=r7 method="getPower"
+0079 MOVE A=12 B=1 C=0
+0080 CALL A=10 B=3 C=2
+0081 SELF r11 self=r8 method="getPower"
+0082 MOVE A=13 B=1 C=0
+0083 CALL A=11 B=3 C=2
+0084 MUL r11 r9 r11
+0085 ADD r10 r10 r11
+0086 SETTABLE r6["addPowerDisplay"] r10
+0087 GETUPVAL A=10 B=0 C=0
+0088 GETTABLE r10 r10["extendInfoCache"]
+0089 SETTABLE r10[r5] r6
+0090 RETURN A=6 B=2 C=0
+0091 RETURN A=0 B=1 C=0
