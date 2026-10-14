@@ -67,7 +67,7 @@ def normalize(value):
   if value and all(isinstance(k,int) for k in value) and sorted(value)==list(range(1,len(value)+1)):return [normalize(value[k]) for k in range(1,len(value)+1)]
   return {str(k):normalize(v) for k,v in value.items()}
  return value
-def evaluate_text_literal(text):
+def evaluate_text_literal(text, *, allowed_bare_identifiers=frozenset()):
  pattern=re.compile(r'''\s+|--\[\[.*?\]\]|--[^\r\n]*|\[\[.*?\]\]|"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|(?:0x[0-9a-fA-F]+|\d+(?:\.\d*)?(?:[eE][+-]?\d+)?)|[A-Za-z_][A-Za-z_0-9]*|[{}\[\],;=+*/()\-]''',re.S)
  tokens=[];pos=0
  for m in pattern.finditer(text):
@@ -121,7 +121,7 @@ def evaluate_text_literal(text):
   # Shipped data tables sometimes write a bare word where a string key belongs
   # (map_level has `juqing018`). An unresolved identifier is read as that literal string;
   # every other unknown token still fails, so nothing is guessed.
-  if token and re.fullmatch(r'[A-Za-z_][A-Za-z_0-9]*',token):return token
+  if token in allowed_bare_identifiers:return token
   raise ValueError('Non-literal value '+str(token))
  def product():
   result=atom()
@@ -151,18 +151,14 @@ if __name__=='__main__':
   try:
    raw=path.read_bytes();literal=evaluate_literal(parse(path)) if raw.startswith(b'\x1bLua') else evaluate_text_literal(raw.decode('utf-8-sig'));value=normalize(literal);(out/(path.stem+'.json')).write_text(json.dumps(value,ensure_ascii=False,indent=2),encoding='utf8');report.append({'file':path.name,'status':'literal-table-read','rows':len(value) if isinstance(value,(list,dict)) else 0})
   except Exception as e:
-   # Some shipped text tables write a bare identifier where a string key belongs
-   # (map_level has `juqing018`). Quote identifiers sitting in value position and retry
-   # once. nil/true/false stay literals, so no value is invented.
    note=str(e)
    try:
-    if raw.startswith(b'\x1bLua'):raise e
-    import re
-    text=raw.decode('utf-8-sig')
-    patched=re.sub(r'([,{]\s*)([A-Za-z_][A-Za-z_0-9]*)(\s*[,}])',lambda m:m.group(1)+(m.group(2) if m.group(2) in ('nil','true','false') else '"%s"'%m.group(2))+m.group(3),text)
-    value=normalize(evaluate_text_literal(patched))
+    # Only this exact known source typo is treated as data. General unknown
+    # identifiers, globals and malformed code continue to fail closed.
+    if path.name!='map_level.lua' or raw.startswith(b'\x1bLua'):raise e
+    value=normalize(evaluate_text_literal(raw.decode('utf-8-sig'),allowed_bare_identifiers=frozenset({'juqing018'})))
     (out/(path.stem+'.json')).write_text(json.dumps(value,ensure_ascii=False,indent=2),encoding='utf8')
-    report.append({'file':path.name,'status':'literal-table-read','rows':len(value) if isinstance(value,(list,dict)) else 0,'repaired':note})
+    report.append({'file':path.name,'status':'literal-table-read','rows':len(value),'repaired':note,'allowedBareIdentifiers':['juqing018']})
    except Exception as retry:report.append({'file':path.name,'status':'not-converted','reason':note,'retry':str(retry)})
  (ROOT/'docs/reference/config-table-report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf8')
  print('Literal tables converted:',sum(x['status']=='literal-table-read' for x in report),'of',len(report))

@@ -32,9 +32,9 @@ test('the guaranteed draw lands on 紫 or 橙 and the counter follows the on-scr
 });
 
 test('cost spends tickets first and tops up with gems',()=>{
- assert.deepEqual(raffleCost({tickets:{6048:30}},'mid',1),{tickets:30,gems:70,total:100,ticketKey:'6048',free:false});
+ assert.deepEqual(raffleCost({tickets:{6048:30}},'mid',1),{tickets:1,gems:0,total:100,ticketKey:'6048',free:false});
  assert.deepEqual(raffleCost({tickets:{}},'junior',1),{tickets:0,gems:0,total:0,ticketKey:'6047',free:true});
- assert.deepEqual(raffleCost({tickets:{6049:3000}},'senior',10),{tickets:2500,gems:0,total:2500,ticketKey:'6049',free:false});
+ assert.deepEqual(raffleCost({tickets:{6049:3000}},'senior',10),{tickets:10,gems:0,total:2500,ticketKey:'6049',free:false});
  assert.throws(()=>raffleCost({tickets:{}},'mid',5),/单抽或十连/);
 });
 
@@ -71,4 +71,17 @@ test('raffle eggs hatch through the incubator and malformed rows are rejected',(
  assert.throws(()=>validate(badPolicy));
  const wrongPool=createGame(T);wrongPool.raffle.pending=[{id:99,policy:RAFFLE_POLICY,machine:'junior',dragonId:1008,quality:5,previewIndex:1}];wrongPool.nextId=100;
  assert.throws(()=>validate(wrongPool),/奖池不符/);
+});
+
+test('cards replace draw counts and mixed quotes do not debit gem-equivalent cards',()=>{
+ assert.equal(raffleCost({tickets:{6048:5}},'mid',10).gems,500);
+ assert.equal(raffleCost({tickets:{}},'mid',10).gems,900);
+ assert.equal(raffleCost({tickets:{6049:2}},'senior',10).gems,2240);
+ assert.throws(()=>raffleCost({tickets:{6047:9}},'junior',10),/10张召唤卡/);
+ let s=createGame(T);s.raffle.tickets={6048:5,6049:12};s.gems=0;
+ s=action(s,'raffleDraw',{mode:'mid',count:1},T,()=>0);
+ assert.equal(s.raffle.tickets['6048'],4);assert.equal(s.gems,0);
+ s=action(s,'raffleDraw',{mode:'senior',count:10},T,()=>0);
+ assert.equal(s.raffle.tickets['6049'],2);assert.equal(s.gems,0);
+ const before=structuredClone(s);assert.throws(()=>action(s,'raffleDraw',{mode:'mid',count:10},T,()=>0),/魔晶不足/);assert.deepEqual(s,before);
 });

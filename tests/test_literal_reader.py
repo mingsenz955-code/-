@@ -21,6 +21,11 @@ class LiteralReaderTests(unittest.TestCase):
  def test_literal_table_index_cannot_lookup_globals_call_or_mutate(self):
   for text in ['local a={1} return a[unknown]','local a={1} return a[2]','local a={1} a[1]=2 return a','local a={1} return a[os.execute("x")]','local a={1} return a[1]()']:
    with self.assertRaises(ValueError):reader['evaluate_text_literal'](text)
+ def test_one_explicit_source_typo_does_not_enable_other_identifiers(self):
+  read=reader['evaluate_text_literal'];allow=frozenset({'juqing018'})
+  self.assertEqual(reader['normalize'](read('return {juqing018,nil,true,false}',allowed_bare_identifiers=allow)),['juqing018',None,True,False])
+  for text in ['return {otherName}','local a=unknown return a','return juqing018()']:
+   with self.assertRaises(ValueError):read(text,allowed_bare_identifiers=allow)
  def test_bytecode_calls_are_never_executed(self):
   with self.assertRaisesRegex(ValueError,'Non-literal opcode'):reader['evaluate_literal']({'code':[28],'constants':[]})
  def test_bytecode_literal_strings_can_be_concatenated_without_calls(self):

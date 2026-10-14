@@ -7,7 +7,7 @@ import {openBattleDialog} from './battle-dialog.mjs';
 import {adventureEvent,adventureEventKind} from './adventure.mjs';
 import {equipmentInstance,definitionPart,EQUIPMENT_SLOTS} from './equipment.mjs';
 import {openShop,openHabitatShop,openHabitatInfo,openExpansionShop,openResourceShop,openBreed,openIncubator,openCatalog,openNativePaper,nativeButton} from './ranch-dialogs.mjs';
-import {openRaffleDialog,openRafflePreview,closeRafflePreview} from './raffle-dialog.mjs';
+import {openRaffleDialog,openRafflePreview,closeRafflePreview,playRaffleDraw} from './raffle-dialog.mjs';
 import {openLotteryOptions,openLotteryDialog,openLotteryPrize,lotteryHelp} from './lottery-dialog.mjs';
 import {lotteryCost} from './lottery.mjs';
 import {raffleCost} from './raffle.mjs';
@@ -62,7 +62,7 @@ document.addEventListener('click',async e=>{
   if(type==='lotteryOptions'){if(new URLSearchParams(window.location.search).get('legacyLottery')==='1')await openLotteryOptions();else await openRaffleDialog(state);return}
   if(type==='rafflePreview'){await openRafflePreview();return}
   if(type==='closeRafflePreview'){closeRafflePreview();return}
-  if(type==='raffleDraw'){const [mode,count]=String(el.dataset.value).split(':'),amount=Number(count),cost=raffleCost(state.raffle,mode,amount);if(cost.gems>0&&!confirm(`本次消耗 ${cost.tickets} 张抽奖券及 ${cost.gems} 魔晶，继续吗？`))return;const next=action(state,'raffleDraw',{mode,count:amount});await persist(next);render();await openRaffleDialog(state);toast(state.log[0]);return}
+  if(type==='raffleDraw'){const [mode,count]=String(el.dataset.value).split(':'),amount=Number(count),cost=raffleCost(state.raffle,mode,amount);if(cost.gems>0&&!confirm(`本次消耗 ${cost.tickets} 张抽奖券及 ${cost.gems} 魔晶，继续吗？`))return;const next=action(state,'raffleDraw',{mode,count:amount});await persist(next);busy=true;let keepDialog=false;try{keepDialog=await playRaffleDraw(mode)}finally{busy=false}render();if(keepDialog)await openRaffleDialog(state);toast(state.log[0]);return}
   if(type==='raffleUnverified'){toast('基因中心尚未接入。');return}
   if(type==='openLottery'){await openLotteryDialog(state,Number(el.dataset.value));return}
   if(type==='returnLottery'){await openLotteryDialog(state,Number($('#modal').dataset.lotteryMode));return}

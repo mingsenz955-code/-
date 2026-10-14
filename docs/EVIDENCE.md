@@ -156,3 +156,9 @@
 - ui_warehouse原文本仅local颜色与layout；静态字面绑定安全读取，无原代码执行。原血战布局dragonY字面数组索引亦已安全读取，现661布局、4拒绝；哈希见layout-report。
 - StorePanel使用ui_warehouse/item_warehouse、六类筛选；龙使用路径createEgg与育龙塔容量限制。当前仓库仅兼容旧抽奖pending，旧直接安置与后期龙蛋流程明确分开。
 - 原后期装备实例/穿脱/来源提示审计见EQUIPMENT.md新增段，未伪造装备或总属性。
+
+## E05 v0.16.7 抽奖券与开奖动作复核
+- `work/client-config/ui/dragonraffle/DragonRafflePanelNew.lua` 的三个按钮分别使用券6047/6048/6049；中级/高级有券时按钮数量为1/10，券数为0时显示100/900、280/2500魔晶。确认弹窗按缺少抽数乘单抽cash计算，证明券是“每抽一张”，不是魔晶等值余额。
+- 同客户端资源 `eff_choujiangji1/2/3` 均为30fps，动作2为32帧；运行时现用该动作作为三机开奖段，动作结束回动作1待机。保存先于动画，避免关闭页面后重复开奖。
+- 服务器仍决定真实结果、免费/CD与部分折扣；当前 `offline-raffle-preview-v1` 只使用客户端53条预览和显式离线权重，不作为服务器概率证据。
+- `map_level.lua` 的裸标识符例外严格限定为已见的 `juqing018`。新增拒绝测试证明其它未知标识符、全局与调用不会被静态读取器接受。

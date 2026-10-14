@@ -38,8 +38,14 @@ export function raffleCost(raffle,key,count){
  if(!machine||![1,10].includes(count))throw new Error('请选择扭蛋机与单抽或十连。');
  const total=count===1?machine.single:machine.ten;
  const held=raffle?.tickets?.[machine.ticket]??0;
- const tickets=Math.min(held,total);
- return {tickets,gems:total-tickets,total,ticketKey:String(machine.ticket),free:total===0};
+ const free=key==='junior'&&count===1; // Existing offline free-single policy, not a verified cooldown.
+ const tickets=free?0:Math.min(held,count),missing=count-tickets;
+ if(key==='junior'&&!free&&missing>0)throw new Error('初级十连需要10张召唤卡。');
+ // One card replaces one draw. The client's mixed-card confirmation quotes
+ // missing * single price; a wholly paid ten-draw uses the displayed ten price.
+ // Mixed-card server discounts remain unverified and are documented separately.
+ const gems=free||missing===0?0:tickets===0?total:missing*machine.single;
+ return {tickets,gems,total,ticketKey:String(machine.ticket),free};
 }
 
 export function sampleRaffle(key,random=Math.random,{guarantee=false}={}){

@@ -20,7 +20,7 @@ exports.run=async(window,store,verify)=>{
  if(verify){
   const restored=await state();
   assert(restored.raffle.pending.length>0,'raffle eggs must survive a restart');
-  assert.equal(restored.raffle.tickets['6048'],0,'ticket spending must persist');
+  assert.equal(restored.raffle.tickets['6048'],4,'ticket spending must persist');
   assert.equal(restored.incubator?.source,'raffle','the hatched raffle egg must stay in the tower');
   console.log('PASS later mobile raffle draw, ticket spend and hatched egg survive an independent restart');
   return;
@@ -32,23 +32,25 @@ exports.run=async(window,store,verify)=>{
  for(let i=0;i<60;i++){if(await js("document.querySelectorAll('#modal canvas[data-model-ready=true]').length===3"))break;await wait(100)}
  assert.equal(await js("document.querySelectorAll('#modal canvas[data-model-ready=true]').length"),3);
  assert(await js("Array.from(document.querySelectorAll('#modal img')).every(i=>i.complete&&i.naturalWidth>0)"));
- assert(await js("document.querySelector('#modal').textContent.includes('900')&&document.querySelector('#modal').textContent.includes('2500')"));
+ assert.equal(await js("document.querySelectorAll('#modal img[src$=\"ui_lotterydragon_daijuan2.png\"]').length"),3,'middle buttons and balance use the original ticket icon while tickets remain');
+ assert.equal(await js("document.querySelectorAll('#modal img[src$=\"ui_lotterydragon_daijuan3.png\"]').length"),3,'senior buttons and balance use the original ticket icon while tickets remain');
  assert.equal(await js("document.querySelectorAll('#modal [data-action=lotteryDraw]').length"),0,'Never apply the legacy pool to modern machine prices');
  assert.equal(await js("document.querySelectorAll('#modal [data-action=raffleDraw]').length"),6,'every machine offers single and ten draws');
  assert(await js("document.querySelector('#modal').textContent.includes('20')"),'ticket counts come from the save');
  await shot('raffle-native-qa.png');
 
  await click('#modal [data-action=raffleDraw][data-value="mid:1"]');
- await wait(700);
+ await wait(1350);
  const afterMid=await state();
  assert.equal(afterMid.raffle.pending.length,1,'the middle draw stores one egg');
- assert.equal(afterMid.gems,before.gems-95,'five tickets cover the rest with gems');
- assert.equal(afterMid.raffle.tickets['6048'],0);
+ assert.equal(afterMid.gems,before.gems,'one card pays for one draw');
+ assert.equal(afterMid.raffle.tickets['6048'],4);
  assert.equal(afterMid.raffle.counters.mid,afterMid.raffle.pending[0].quality===4?0:1,'the 必得 counter advances unless 紫 dropped');
+ assert.equal(await js("document.querySelector('#modal canvas[data-model=eff_choujiangji2]').dataset.clip"),'1','the source draw animation returns to idle');
 
  const gemsBeforeJunior=afterMid.gems;
  await click('#modal [data-action=raffleDraw][data-value="junior:1"]');
- await wait(700);
+ await wait(1350);
  const afterJunior=await state();
  assert.equal(afterJunior.gems,gemsBeforeJunior,'the junior single draw is free');
  assert.equal(afterJunior.raffle.pending.length,2);

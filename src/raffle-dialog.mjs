@@ -14,7 +14,7 @@ export async function openRaffleDialog(state){
  // Ticket counts, the 必得紫/橙 countdown and the junior 0/10 prices come from the save
  // and from the machine definitions; free state and cooldown remain server-side.
  const tickets=state.raffle?.tickets??{},counters=state.raffle?.counters??{},held=id=>String(tickets[id]??0);
- const slots={},values={txt_name:'扭蛋机','btn_yulan/txt_name':'奖品预览','btn_jiyin/txt_name':'基因中心','ziyuan_daijuan/num_chuji':held(6047),'ziyuan_daijuan/num_zhongji':held(6048),'ziyuan_daijuan/num_gaoji':held(6049),'ziyuan_mojing/num_mojing':state.gems,'chuji/money/num_one':'0','chuji/money/num_ten':'10','zhongji/money/num_one':'100','zhongji/money/num_ten':'900','gaoji/money/num_one':'280','gaoji/money/num_ten':'2500','zhongji/Countdown/num':String(RAFFLE_GUARANTEE_DRAWS-(counters.mid??0)),'gaoji/Countdown/num':String(RAFFLE_GUARANTEE_DRAWS-(counters.senior??0)),'chuji/free':'','zhongji/free':'','gaoji/free':''};
+ const slots={},values={txt_name:'扭蛋机','btn_yulan/txt_name':'奖品预览','btn_jiyin/txt_name':'基因中心','ziyuan_daijuan/num_chuji':held(6047),'ziyuan_daijuan/num_zhongji':held(6048),'ziyuan_daijuan/num_gaoji':held(6049),'ziyuan_mojing/num_mojing':state.gems,'chuji/money/num_one':'0','chuji/money/num_ten':'10','zhongji/money/num_one':(tickets[6048]??0)>0?'1':'100','zhongji/money/num_ten':(tickets[6048]??0)>0?'10':'900','gaoji/money/num_one':(tickets[6049]??0)>0?'1':'280','gaoji/money/num_ten':(tickets[6049]??0)>0?'10':'2500','zhongji/Countdown/num':String(RAFFLE_GUARANTEE_DRAWS-(counters.mid??0)),'gaoji/Countdown/num':String(RAFFLE_GUARANTEE_DRAWS-(counters.senior??0)),'chuji/free':'','zhongji/free':'','gaoji/free':''};
  const actions={close:{type:'close',label:'关闭扭蛋机'},'btn_yulan/btn':{type:'rafflePreview',label:'奖品预览'},'btn_jiyin/btn':{type:'raffleUnverified',label:'基因中心'}};
  for(const [i,node] of ['chuji','zhongji','gaoji'].entries()){
   const key='eff_choujiangji'+(i+1),bounds=EFFECTS[key].bounds,w=bounds[2]-bounds[0],h=bounds[3]-bounds[1];
@@ -22,10 +22,21 @@ export async function openRaffleDialog(state){
   // Machine keys here match the client's own junior/mid/senior naming in the save.
   for(const [suffix,count] of [['one',1],['ten',10]])actions[`${node}/${suffix}/btn`]={type:'raffleDraw',value:`${['junior','mid','senior'][i]}:${count}`,label:`${['初级','中级','高级'][i]}抽${count}次`};
  }
- // Original code swaps the middle/high currency sprites to gems with no tickets.
- for(const node of layout.children)if(['zhongji','gaoji'].includes(node.name))for(const group of node.children??[])if(group.name==='money')for(const image of group.children??[])if(image.name?.startsWith('daijuan_'))image.img='#ui_lotterydragon_mojing.png';
+ // The client shows ticket icons and 1/10 while any matching tickets remain.
+ // With no ticket it swaps the same two positions to gems and shows 100/900 or 280/2500.
+ for(const node of layout.children)if((node.name==='zhongji'&&(tickets[6048]??0)===0)||(node.name==='gaoji'&&(tickets[6049]??0)===0))for(const group of node.children??[])if(group.name==='money')for(const image of group.children??[])if(image.name?.startsWith('daijuan_'))image.img='#ui_lotterydragon_mojing.png';
  const scale=Math.min((innerWidth-20)/1024,(innerHeight-20)/770);dialog.style.setProperty('--source-scale',scale);
  dialog.innerHTML=`<div class="source-artboard">${renderSourceLayout(layout,{values,slots,actions,hidden:new Set(['txt1','zhongji/money/mojing_one','zhongji/money/mojing_ten','gaoji/money/mojing_one','gaoji/money/mojing_ten'])})}</div>`;dialog.showModal();
+}
+
+export async function playRaffleDraw(mode){
+ const index={junior:1,mid:2,senior:3}[mode],dialog=document.querySelector('#modal');
+ const canvas=dialog?.querySelector(`canvas[data-model="eff_choujiangji${index}"]`);if(!canvas)return false;
+ let duration=1100;
+ try{const response=await fetch(EFFECTS[`eff_choujiangji${index}`].data),model=await response.json(),clip=model.clips?.['2'];if(clip?.frames&&model.fps)duration=Math.ceil(clip.frames/model.fps*1000)+60}catch{}
+ canvas.dataset.clip='2';canvas.dataset.replay=String(Number(canvas.dataset.replay??0)+1);
+ if(matchMedia('(prefers-reduced-motion: reduce)').matches){canvas.dataset.clip='1';return dialog.open&&canvas.isConnected}
+ return new Promise(resolve=>{const started=performance.now();const finish=kept=>{if(canvas.isConnected){canvas.dataset.clip='1';canvas.dataset.replay=String(Number(canvas.dataset.replay??0)+1)}resolve(kept)};const frame=now=>{if(!dialog.open||!canvas.isConnected)return finish(false);if(now-started>=duration)return finish(true);requestAnimationFrame(frame)};requestAnimationFrame(frame)});
 }
 
 export async function openRafflePreview(){
