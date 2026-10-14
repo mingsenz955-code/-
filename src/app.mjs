@@ -3,7 +3,7 @@ import {openEquipDialog,openEquipInfoDialog,openEquipChangeDialog,openEquipSourc
 import {openAdventureDialog} from './adventure-dialog.mjs';
 import {openRechargeDialog,openVipThresholds} from './recharge-dialog.mjs';
 import {resourceShopRow} from './resource-shop.mjs';
-import {openBattleDialog} from './battle-dialog.mjs';
+import {openBattleDialog,playBattleAnimation} from './battle-dialog.mjs';
 import {adventureEvent,adventureEventKind} from './adventure.mjs';
 import {equipmentInstance,definitionPart,EQUIPMENT_SLOTS} from './equipment.mjs';
 import {openShop,openHabitatShop,openHabitatInfo,openExpansionShop,openResourceShop,openOriginalShopCategory,openOriginalShopInfo,openStructureInfo,openBreed,openIncubator,openCatalog,openNativePaper,nativeButton} from './ranch-dialogs.mjs';
@@ -57,7 +57,7 @@ const clipNames={breath:'呼吸',walk:'步行',especial:'特殊动作',combat:'�
 function openDragonPreview(id,stage){closeDialog();const d=state.dragons.find(d=>d.id===id);if(!d)return;stage??=d.level<4?1:d.level<7?2:3;const sp=SPECIES[d.species],key=`${sp.original}_${stage}`,model=DRAGON_MODELS[key],dialog=$('#modal');const content=`<label>成长阶段</label><select id="preview-stage" data-id="${id}">${[1,2,3].map(i=>`<option value="${i}" ${stage===i?'selected':''}>${['','幼年','成长','成年'][i]}</option>`).join('')}</select>${model?`<canvas class="dragon model-preview" width="900" height="900" data-model="${key}" data-clip="breath" role="img" aria-label="${sp.name}"></canvas><label>动作</label><select id="preview-clip">${model.clips.map(c=>`<option value="${c}" ${c==='breath'?'selected':''}>${clipNames[c]??c}</option>`).join('')}</select>${button('重播动作','replayDragon','','gold')}`:'<p>该阶段原版模型尚未取得。</p>'}`;void openNativePaper(sp.name,content,'nativeModelPreview')}
 document.addEventListener('click',async e=>{
  if(suppressHabitatClick&&e.target.closest('[data-place-id]')){suppressHabitatClick=false;return}
- const el=e.target.closest('[data-tab],[data-action]');if(!el||busy||el.disabled)return;
+ const el=e.target.closest('[data-tab],[data-action]');if(!el||(busy&&el.dataset.action!='close')||el.disabled)return;
  if(el.dataset.tab){closeDialog();if(el.dataset.tab==='habitats')await openHabitatShop(state);else if(el.dataset.tab==='breeding')await openBreed(state);else if(el.dataset.tab==='dragons')await openCollectionDialog(state,collectionFilter);else render();return}
  let type=el.dataset.action;const id=Number(el.dataset.id);
  try{
@@ -107,8 +107,7 @@ document.addEventListener('click',async e=>{
   if(type==='openFormation'){await openFormationDialog(state);return}
   if(type==='saveFormation'){const ids=Array.from(document.querySelectorAll('[data-formation-dragon]:checked')).map(input=>Number(input.value));const next=action(state,'setFormation',{ids});await persist(next);render();await openFormationDialog(state);toast(state.log[0]);return}
   if(type==='pveMap'){await openAdventureDialog(state,Number(el.dataset.value));return}
-  if(type==='pveNode'){const node=adventureEvent(Number(el.dataset.id));if(!node)throw new Error('找不到这个关卡节点。');await openBattleDialog(state,{nodeId:node.id,node});return}
-  if(type==='battleStart'){const node=adventureEvent(id);if(!node)throw new Error('找不到这个关卡节点。');const next=action(state,'battleResolve',{nodeId:id});await persist(next);render();await openBattleDialog(state,{nodeId:id,node});toast(state.log[0]);return}
+  if(type==='pveNode'){const node=adventureEvent(id);if(!node)throw new Error('找不到这个关卡节点。');const next=action(state,'battleResolve',{nodeId:id});await openBattleDialog(state,{nodeId:id});busy=true;let completed;try{completed=await playBattleAnimation(state,id,next.adventure.lastBattle)}finally{busy=false}if(!completed)return;await persist(next);closeDialog();render();await openAdventureDialog(state);toast(state.log[0]);return}
   if(type==='pveUnverified'){toast('普通与精英关卡的战斗、体力与结算尚未实现。');return}
   if(type==='openWarehouse'){await openWarehouse(state);return}
   if(type==='raffleEggUse'){const next=action(state,'raffleEggHatch',{id});await persist(next);render();toast(state.log[0]);await openIncubator(state);return}

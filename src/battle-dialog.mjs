@@ -1,38 +1,67 @@
 import {renderSourceLayout} from './source-layout.mjs';
-import {sourceLayout,showSource,esc} from './ranch-dialogs.mjs';
+import {sourceLayout,showSource} from './ranch-dialogs.mjs';
 import {dragonArt} from './art.mjs';
 import {SPECIES} from './data.mjs';
-import {BATTLE_SLOTS,BATTLE_ROUND_LIMIT,BATTLE_POLICY,dragonAttributes,dragonPower,lineupPower,configuredLineup,battleRequirement,battleReward,battleEnemyGroup} from './battle.mjs';
-
-// The client's own battle layout (ui_battlenormal) with its own slot portrait (item_battle_touxiang).
-// The left line-up is the player's real dragons and their baseline power. The exported client
-// never resolves a PVE node to an enemy list, so the right side uses anonymous silhouettes and
-// an explicitly labelled offline power requirement rather than invented species.
-export async function openBattleDialog(state,{nodeId=null,node=null}={}){
- const [layout,portrait]=await Promise.all([sourceLayout('ui_battlenormal'),sourceLayout('item_battle_touxiang')]);
- const lineup=configuredLineup(state),enemyGroup=battleEnemyGroup(nodeId),enemies=enemyGroup?.monsters??[],required=battleRequirement(nodeId),reward=battleReward(nodeId),last=state.adventure?.lastBattle?.nodeId===nodeId?state.adventure.lastBattle:null;
- const values={},slots={};
- for(let index=1;index<=BATTLE_SLOTS;index++){
-  const dragon=lineup[index-1],enemy=enemies[index-1];
-  for(const side of ['left','right']){
-   const key=`${side}${index}`;
-   values[`${key}/lv`]=`${side==='left'&&dragon?`Lv.${dragon.level}`:side==='right'&&enemy?`Lv.${enemy.level}`:''}`;
-   slots[`${key}/icon`]=side==='left'&&dragon?`<div class="source-battle-portrait battle-unit ally">${dragonArt(dragon.species,'',dragon.level)}</div>`:side==='right'&&enemy?`<div class="source-battle-portrait battle-unit enemy">${enemy.species?dragonArt(enemy.species,'',enemy.level):`<span class="source-battle-enemy">${enemy.dragonId}</span>`}</div>`:'';
-  }
+import EFFECTS from '../assets/original/effects/index.mjs';
+import MODELS from '../assets/original/models/index.mjs';
+import CATALOG from '../assets/original/catalog.mjs';
+import {BATTLE_SLOTS,BATTLE_ROUND_LIMIT,dragonAttributes,lineupPower,configuredLineup,battleRequirement,battleEnemyGroup} from './battle.mjs';
+const wait=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+let activeRun=0;
+const origins=new Map(CATALOG.map(v=>[v.id,v.original]));
+function teamPositions(team){let sky=0,land=0;return team.map(item=>{const source=origins.get(SPECIES[item.species]?.originalId),flying=source?.flying_level>0&&item.level>=source.flying_level;const index=flying?sky++:land++;return [110+index*100,flying?220+(index%2)*20:390]})}
+function fighter(item,side,index,positions){const [x,y]=positions[index];return `<div class="battle-fighter ${side}" data-unit="${side}${index}" style="left:${side==='ally'?x:1024-x}px;top:${y}px">${dragonArt(item.species,'',item.level).replace('data-clip="breath"','data-clip="breathinbattle"')}<span class="battle-unit-hp"><i></i></span></div>`}
+export async function openBattleDialog(state,{nodeId=null}={}){
+ const layout=await sourceLayout('ui_battlenormal');
+ layout.height=576;
+ for(const n of layout.children){if(n.name==='bg')n.height=576;if(n.y>200)n.y-=96;else if(n.y< -200)n.y+=96;}
+ const lineup=configuredLineup(state),enemies=battleEnemyGroup(nodeId)?.monsters??[],values={},slots={},hidden=new Set(['top_bg']);
+ for(let index=1;index<=BATTLE_SLOTS;index++)for(const side of ['left','right']){
+  const item=(side==='left'?lineup:enemies)[index-1],key=`${side}${index}`,team=side==='left'?'ally':'enemy';
+  values[`${key}/lv`]=item?`Lv.${item.level}`:'';
+  if(!item){hidden.add(key);continue}
+  slots[`${key}/hp`]=`<img data-source="${key}/hp" class="battle-top-hp" src="assets/original/ui/ui_battle_xuetiao2.png" alt="">`;
+  const sp=SPECIES[item.species];
+  slots[`${key}/icon`]=`<div class="source-battle-portrait" data-portrait="${team}${index-1}"><img class="battle-portrait-art" src="${`assets/original/ui/ui_bookdragon_${sp.original}_1.png`}" alt="${sp.name}"><img class="battle-portrait-border" src="assets/original/ui/ui_battle_txk60_${Math.min(5,sp.quality??1)}.png" alt=""><img class="battle-dead-mark" src="assets/original/ui/ui_battle_zhenwang.png" alt="阵亡"></div>`;
  }
- values['round/num']=`1/${BATTLE_ROUND_LIMIT}`;
- values['skip/miaoshu']='退出';
- slots.power_left=`<span class="source-battle-power">${lineupPower(lineup)}</span>`;
- slots.power_right=`<span class="source-battle-power">${required??'—'}</span>`;
- const rows=lineup.map(dragon=>{const stats=dragonAttributes(dragon);return `<li>${esc(SPECIES[dragon.species]?.name??dragon.species)} Lv.${dragon.level}　${stats?`攻 ${stats.attack}　防 ${stats.defend}　血 ${stats.life}　战力 ${dragonPower(dragon)}`:'基础战斗属性尚未取得'}</li>`}).join('');
- const stage=`<div class="battle-stage">${lineup.map((dragon,index)=>`<div class="battle-fighter ally slot-${index+1}">${dragonArt(dragon.species,'',dragon.level)}<i></i></div>`).join('')}${enemies.map((enemy,index)=>`<div class="battle-fighter enemy slot-${index+1}">${enemy.species?dragonArt(enemy.species,'',enemy.level):`<span>${enemy.dragonId}</span>`}<i></i></div>`).join('')}<b class="battle-projectile"></b></div>`;
- const actions={close:{type:'close',label:'退出战斗'},'skip/btn':{type:'close',label:'退出战斗'}};
- const d=showSource('sourceBattle',renderSourceLayout(layout,{values,slots,actions})+stage
-  +`<div class="source-battle-panel"><p class="source-battle-title">${node?esc(node.name):'战斗准备'}${nodeId?`（节点 ${nodeId}）`:''}</p>`
-  +`<ul class="source-battle-list">${rows||'<li>牧场里还没有可以出战的龙。</li>'}</ul>`
-  +`<p>体力：${state.adventure?.energy??0}/10　建议战力：${required??'—'}　奖励：${reward?`${reward.coins}金币、${reward.food}龙粮`:'—'}</p>`
-  +(last?`<p class="${last.won?'success':'error'}">${last.won?`胜利 · ${last.stars}星`:'战斗失败'}　我方 ${last.power} / 敌方 ${last.required}</p>`:'')
-  +`<div class="native-save-actions"><button class="primary" data-action="openFormation">布阵</button><button class="primary" data-action="battleStart" data-id="${nodeId}">开始战斗</button></div>`
-  +`<p class="source-battle-note">敌方使用客户端怪物表与怪物组合包 ${enemyGroup?.sourceGroup??'—'} 的真实龙模型、等级和属性。节点到组合包的服务器映射缺失，因此关卡按组合包战力递增顺序离线配对；奖励仍采用明确标记的离线规则。</p></div>`);
- d.dataset.battleNode=nodeId?String(nodeId):'';
+ values['round/num']=`1/${BATTLE_ROUND_LIMIT}`;values['skip/miaoshu']='退出';
+ values.power_left=String(lineupPower(lineup));values.power_right=String(battleRequirement(nodeId)??'');
+ const allyPositions=teamPositions(lineup),enemyPositions=teamPositions(enemies);
+ const stage=`<div class="battle-stage" aria-label="自动战斗">${lineup.map((d,i)=>fighter(d,'ally',i,allyPositions)).join('')}${enemies.filter(d=>d.species).map((d,i)=>fighter(d,'enemy',i,enemyPositions)).join('')}<div class="battle-fx-layer"></div></div>`;
+ const d=showSource('sourceBattle',renderSourceLayout(layout,{values,slots,hidden,actions:{'skip/btn':{type:'close',label:'退出战斗'}}})+stage,'source-battle-dialog');
+ d.style.setProperty('--source-scale',Math.min((innerWidth-20)/1024,(innerHeight-20)/576));
+ d.dataset.battleNode=String(nodeId);d.dataset.battleRun=String(++activeRun);
+ return d;
+}
+function clip(el,name){const c=el.querySelector('canvas[data-model]');if(c){const clips=MODELS[c.dataset.model]?.clips??[];c.dataset.clip=clips.includes(name)?name:clips.includes('breathinbattle')?'breathinbattle':'breath';c.dataset.replay=String((+c.dataset.replay||0)+1)}}
+function effect(layer,key,name,x,y,flip=false){const entry=EFFECTS[key];if(!entry)return null;const canvas=document.createElement('canvas');canvas.width=400;canvas.height=400;canvas.className='battle-source-effect';canvas.dataset.model=key;canvas.dataset.clip=entry.clips.includes(name)?name:entry.clips[0];canvas.style.cssText=`left:${x}px;top:${y}px;${flip?'scale:-1 1;':''}`;layer.append(canvas);return canvas}
+let glyphs;
+async function damageNumber(layer,value,x,y){glyphs??=await fetch('assets/original/fonts/red_50.json').then(r=>r.json());const number=document.createElement('span');number.className='battle-damage';number.style.cssText=`left:${x}px;top:${y}px`;number.setAttribute('aria-label',String(value));for(const char of String(value)){const g=glyphs[char];if(!g)continue;const digit=document.createElement('i');digit.style.cssText=`width:${g.width}px;height:${g.height}px;background-position:-${g.x}px -${g.y}px;margin-right:${g.xadvance-g.width}px`;number.append(digit)}layer.append(number);setTimeout(()=>number.remove(),1000)}
+// Source assets are preserved. Targeting and damage remain offline presentation
+// of the existing balance result until authoritative server combat data is available.
+export async function playBattleAnimation(state,nodeId,result){
+ const d=document.querySelector('#modal'),run=d.dataset.battleRun,layer=d.querySelector('.battle-fx-layer');
+ const live=()=>d.open&&d.dataset.mode==='sourceBattle'&&d.dataset.battleRun===run;
+ const make=(item,side,index)=>({item,side,index,el:d.querySelector(`[data-unit="${side}${index}"]`),stats:side==='ally'?dragonAttributes(item):{attack:item.attack,defend:item.defend,life:item.life},hp:100});
+ const allies=configuredLineup(state).map((v,i)=>make(v,'ally',i)),enemies=battleEnemyGroup(nodeId).monsters.filter(v=>v.species).map((v,i)=>make(v,'enemy',i));
+ const allyPositions=teamPositions(allies.map(v=>v.item)),enemyPositions=teamPositions(enemies.map(v=>v.item));
+ const winners=result.won?allies:enemies,losers=result.won?enemies:allies;
+ const setHp=(u,hp)=>{u.hp=hp;u.el.style.setProperty('--hp',`${hp}%`);const key=`${u.side==='ally'?'left':'right'}${u.index+1}/hp`,bar=d.querySelector(`[data-source="${key}"]`);if(bar)bar.style.clipPath=`inset(0 ${100-hp}% 0 0)`;if(hp<=0){clip(u.el,'dead');u.el.classList.add('is-dead');d.querySelector(`[data-portrait="${u.side}${u.index}"]`)?.classList.add('is-dead')}};
+ await wait(600);
+ for(let turn=0;turn<losers.length*2&&live();turn++){
+  const finishing=turn%2===1,target=finishing?losers[Math.floor(turn/2)]:winners[turn%winners.length],attacker=finishing?winners[turn%winners.length]:losers[Math.floor(turn/2)];
+  const round=d.querySelector('[data-source="round/num"]');if(round)round.textContent=`${Math.floor(turn/6)+1}/${BATTLE_ROUND_LIMIT}`;
+  const [ax,ay]=(attacker.side==='ally'?allyPositions:enemyPositions)[attacker.index],[tx,ty]=(target.side==='ally'?allyPositions:enemyPositions)[target.index],x=attacker.side==='ally'?ax:1024-ax,targetX=target.side==='ally'?tx:1024-tx;
+  const magic=turn%3===2,key=`${magic?'magic':'attack'}_${SPECIES[attacker.item.species].originalId}`;
+  clip(attacker.el,magic?'magic':'landattack');attacker.el.classList.add('is-attacking');
+  const missile=effect(layer,key,'bullistic',x,ay,attacker.side==='enemy');
+  if(missile)missile.animate([{left:`${x}px`,top:`${ay}px`},{left:`${targetX}px`,top:`${ty}px`}],{duration:550,fill:'forwards'});
+  await wait(550);if(!live()){missile?.remove();return false}missile?.remove();
+  const explosion=EFFECTS[key]?.clips.find(v=>v.startsWith('bomb'));const blast=explosion?effect(layer,key,explosion,targetX,ty):null;
+  clip(target.el,'hurt');target.el.classList.add('is-hit');
+  const damage=finishing?Math.max(1,Math.floor((target.stats?.life??1)*target.hp/100)):Math.max(1,Math.floor((attacker.stats?.attack??1)*.4));
+  await damageNumber(layer,damage,targetX,ty-75);setHp(target,finishing?0:Math.max(30,target.hp-10));
+  await wait(550);blast?.remove();target.el.classList.remove('is-hit');attacker.el.classList.remove('is-attacking');clip(attacker.el,'breathinbattle');if(target.hp>0)clip(target.el,'breathinbattle');
+ }
+ await wait(500);return live();
 }

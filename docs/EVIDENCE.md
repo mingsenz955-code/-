@@ -184,3 +184,8 @@
 ## E05 v0.16.14 布阵规则与敌方模型
 - 公开旧版玩法资料与客户端阵容布局共同支持：Lv.7以上可上阵、总数6、飞行/爬行各不超过4，使用左侧加号与更换龙流程。该资料版本较旧，后期2.9.35规则仍需实机逐项复核。
 - 敌方显示直接读取客户端`monster`中的龙ID/等级/攻防血与`Dragon_computer_array_nine`六至九怪组合；关卡到组合的服务端映射缺失，离线版按组合战力顺序配对，不能称原关卡敌队。
+
+## E05 v0.16.15 用户录像纠错
+- 用户视频关键帧实际复查：1.6s无中央资料面板；13.2s彩色旋涡；16.5s白色冲击与橙红描边数字。战斗画面移除所有中央开发说明与通用CSS蓝球。
+- 原APK的assets/res/skills/下169套attack_/magic_ XML+atlas已静态导出，直接播放bullistic与bomb动作；fonts/red_50原位图数字用于伤害。scripts/import-battle-effects.py可复现，manifest含转换产物哈希。
+- BattleField.lua为明文，已确认使用Warrior/BulletNormal/BulletLightning/BulletChain/FloatingText，事件来自battleData；BattleUI.lua是字节码，已静态检查其飞行/地面坐标和setDragonsPos调用存在。完整坐标/事件/伤害/技能调度尚未复刻，当前播放为离线结果的表现过程。

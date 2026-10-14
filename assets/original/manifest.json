@@ -34385,6 +34385,2034 @@
       "width": 542,
       "height": 542,
       "sha256": "824310f42de7c5a0e59416ec2c69d85605ee4bad82befa417c53680b128c7689"
+    },
+    "effects/attack_1000.webp": {
+      "archive": "assets/res/skills/attack_1000.xml",
+      "texture": "assets/res/skills/attack_1000.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "ffd8abe4cc3041f3ba831dba953f47f793781a7bb98ef2589363204648ea9531"
+    },
+    "effects/attack_1000.json": {
+      "archive": "assets/res/skills/attack_1000.xml",
+      "texture": "assets/res/skills/attack_1000.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "5d2271f3c41b34092a9a55f1ba666986151b43b47dcaf9418dbcc5f1e3d2ea93"
+    },
+    "effects/attack_1001.webp": {
+      "archive": "assets/res/skills/attack_1001.xml",
+      "texture": "assets/res/skills/attack_1001.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "9efd1c0fc1f300910045e2e8bf82ed378a57699130994f80e3a4705130380e4e"
+    },
+    "effects/attack_1001.json": {
+      "archive": "assets/res/skills/attack_1001.xml",
+      "texture": "assets/res/skills/attack_1001.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "1acd261d730173d5d9fe2542c3ab7c096618eee18119893a0d370cbfa0f42324"
+    },
+    "effects/attack_1002.webp": {
+      "archive": "assets/res/skills/attack_1002.xml",
+      "texture": "assets/res/skills/attack_1002.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "cc4809b3b1db1945572bd31621fa7da962dc37a469b8380538789284781e4b15"
+    },
+    "effects/attack_1002.json": {
+      "archive": "assets/res/skills/attack_1002.xml",
+      "texture": "assets/res/skills/attack_1002.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "7c8c1fe2c95c2cce7790f6f03d302b760cfe6011ae614d5b601a670d75f27e5d"
+    },
+    "effects/attack_1003.webp": {
+      "archive": "assets/res/skills/attack_1003.xml",
+      "texture": "assets/res/skills/attack_1003.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "3261905c4e29228b84e3990a0d63613f26feb627e3b823377ee9534391e23fb7"
+    },
+    "effects/attack_1003.json": {
+      "archive": "assets/res/skills/attack_1003.xml",
+      "texture": "assets/res/skills/attack_1003.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "5d45c26f2352bf05bf065f5cb8f5be113e11916e79e1456515b86cd75f5a695c"
+    },
+    "effects/attack_1004.webp": {
+      "archive": "assets/res/skills/attack_1004.xml",
+      "texture": "assets/res/skills/attack_1004.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "5a9321d1e94ea7f73a117ffd0ac35c428881a62660373f0fcb79de76977a2879"
+    },
+    "effects/attack_1004.json": {
+      "archive": "assets/res/skills/attack_1004.xml",
+      "texture": "assets/res/skills/attack_1004.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "1e2d79b58933f85636ae48186172091ea770d12b4835d8d6144fa45030c20003"
+    },
+    "effects/attack_1005.webp": {
+      "archive": "assets/res/skills/attack_1005.xml",
+      "texture": "assets/res/skills/attack_1005.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "55d37b9a33eaf09b14d24e6921aa358233894f340bf164405bf078731e3c10ef"
+    },
+    "effects/attack_1005.json": {
+      "archive": "assets/res/skills/attack_1005.xml",
+      "texture": "assets/res/skills/attack_1005.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "b092076dd02fd9206f604e4b471653bfdae1a11b19c570cf0c8458b68e825269"
+    },
+    "effects/attack_1006.webp": {
+      "archive": "assets/res/skills/attack_1006.xml",
+      "texture": "assets/res/skills/attack_1006.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "81267d1988b834a43c1d70fc8280cd1670f719b0a0b2dd2e140a69bc54498e76"
+    },
+    "effects/attack_1006.json": {
+      "archive": "assets/res/skills/attack_1006.xml",
+      "texture": "assets/res/skills/attack_1006.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "3e4af2ce743f1eff78c5b69c511697a69c12b3c80c2625c54e99ee2c4983f125"
+    },
+    "effects/attack_1007.webp": {
+      "archive": "assets/res/skills/attack_1007.xml",
+      "texture": "assets/res/skills/attack_1007.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "6199b1e14a424bccf94feaed5b6173d156a5cbeb646c8c1b86610d9b579ef474"
+    },
+    "effects/attack_1007.json": {
+      "archive": "assets/res/skills/attack_1007.xml",
+      "texture": "assets/res/skills/attack_1007.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "e3f1e05dcc04d53f25bfd0332a2b15b39a5672195ade421e6a1f0581220c29a7"
+    },
+    "effects/attack_1008.webp": {
+      "archive": "assets/res/skills/attack_1008.xml",
+      "texture": "assets/res/skills/attack_1008.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "da2c023ed998a4945de030dbc872000f22c924f644e9ed203da43c71d8cf771b"
+    },
+    "effects/attack_1008.json": {
+      "archive": "assets/res/skills/attack_1008.xml",
+      "texture": "assets/res/skills/attack_1008.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "f4ed185b016fa9be0aefc4ad9002257ce16af526c2ff721113e961ae9201f993"
+    },
+    "effects/attack_1009.webp": {
+      "archive": "assets/res/skills/attack_1009.xml",
+      "texture": "assets/res/skills/attack_1009.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "3b60d21b47e810b127077aa0b33cb85e5282ab8ec9213950563b426899e76479"
+    },
+    "effects/attack_1009.json": {
+      "archive": "assets/res/skills/attack_1009.xml",
+      "texture": "assets/res/skills/attack_1009.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "68274490817928f846fccd44905e0bc75e0c120cea4082dab0672bc84b6b747e"
+    },
+    "effects/attack_1010.webp": {
+      "archive": "assets/res/skills/attack_1010.xml",
+      "texture": "assets/res/skills/attack_1010.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "72506c203c3d3ba8dfc4f03402f5667c5b0b81f26e0078bd7d70cc30976b8958"
+    },
+    "effects/attack_1010.json": {
+      "archive": "assets/res/skills/attack_1010.xml",
+      "texture": "assets/res/skills/attack_1010.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "0e5ba71862cb94dfc16ddb815f0be2cefc6d737742333e0cf1ef7e2ac2ea1a46"
+    },
+    "effects/attack_1011.webp": {
+      "archive": "assets/res/skills/attack_1011.xml",
+      "texture": "assets/res/skills/attack_1011.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "7d0c476ef09e6b35276c664580a8d0089f040c58ed516dcfdc7ad61e0e605f69"
+    },
+    "effects/attack_1011.json": {
+      "archive": "assets/res/skills/attack_1011.xml",
+      "texture": "assets/res/skills/attack_1011.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "4d137de6dd296a8b3a990996cd5a87bbe100586a48bdce64c153bed64308951f"
+    },
+    "effects/attack_1012.webp": {
+      "archive": "assets/res/skills/attack_1012.xml",
+      "texture": "assets/res/skills/attack_1012.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "5b4e806acac2614eac9361df4349c3af857be6f90976d71bc84dd284165c1c42"
+    },
+    "effects/attack_1012.json": {
+      "archive": "assets/res/skills/attack_1012.xml",
+      "texture": "assets/res/skills/attack_1012.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "e1e47fc2492205d17479a1536c5456ca55f342b7de45528f19ae5da3ec03348b"
+    },
+    "effects/attack_1013.webp": {
+      "archive": "assets/res/skills/attack_1013.xml",
+      "texture": "assets/res/skills/attack_1013.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "be5ed63818cbda8832d1d40f944a6c9d6004a5ea397b3e7858979e0780127f28"
+    },
+    "effects/attack_1013.json": {
+      "archive": "assets/res/skills/attack_1013.xml",
+      "texture": "assets/res/skills/attack_1013.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "e87eeb4b247cce6fe6c960b3db2a8c7c42673acff234b2216f79300f4e2e2855"
+    },
+    "effects/attack_1014.webp": {
+      "archive": "assets/res/skills/attack_1014.xml",
+      "texture": "assets/res/skills/attack_1014.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "26eb766e0ae5e95e3263e4213bb487bae0581e5998acdfaa8ca32af5bb39e20f"
+    },
+    "effects/attack_1014.json": {
+      "archive": "assets/res/skills/attack_1014.xml",
+      "texture": "assets/res/skills/attack_1014.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "7a53c362f1542a7d2edbc589a21f7a8474028bfb637d8d879f06a0d0f2fce750"
+    },
+    "effects/attack_1015.webp": {
+      "archive": "assets/res/skills/attack_1015.xml",
+      "texture": "assets/res/skills/attack_1015.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "e5394e2337ce1a5a33c186e49178252d1ac50e4058a7bf92915124f1ac1c57fc"
+    },
+    "effects/attack_1015.json": {
+      "archive": "assets/res/skills/attack_1015.xml",
+      "texture": "assets/res/skills/attack_1015.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "77ba2120a62a55456b74aa19b74ee0ad0d4b33460fb7c56dcb5ea8269ed83397"
+    },
+    "effects/attack_1016.webp": {
+      "archive": "assets/res/skills/attack_1016.xml",
+      "texture": "assets/res/skills/attack_1016.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "cd3c8e026046fc549a69ec5f01d50a733dfee3f1cd3579c9a956492555a43859"
+    },
+    "effects/attack_1016.json": {
+      "archive": "assets/res/skills/attack_1016.xml",
+      "texture": "assets/res/skills/attack_1016.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "39986a7fcc7df44f5eff59847d06e38fc207acd75aee9a033a61ec1804d38307"
+    },
+    "effects/attack_1017.webp": {
+      "archive": "assets/res/skills/attack_1017.xml",
+      "texture": "assets/res/skills/attack_1017.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "aac2b64e4a66f875ce86b5296c3bb3e1977fab1d17d5347c357e944b45a54898"
+    },
+    "effects/attack_1017.json": {
+      "archive": "assets/res/skills/attack_1017.xml",
+      "texture": "assets/res/skills/attack_1017.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "14877df1b30639dd45fbe7a0532f12f5bb08345aec9a1bc6e08b42d69964c258"
+    },
+    "effects/attack_1018.webp": {
+      "archive": "assets/res/skills/attack_1018.xml",
+      "texture": "assets/res/skills/attack_1018.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "893d53d30f1b573a9e3dc23c5ca42753adefcd3f1a2d94004fecb56ef26801c1"
+    },
+    "effects/attack_1018.json": {
+      "archive": "assets/res/skills/attack_1018.xml",
+      "texture": "assets/res/skills/attack_1018.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "9e2b7a93481697a56bf985ea4e35ec09cffdfefb399c77318c437b3920919f10"
+    },
+    "effects/attack_1019.webp": {
+      "archive": "assets/res/skills/attack_1019.xml",
+      "texture": "assets/res/skills/attack_1019.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "da4aabb44e27196838f9ddc8495dd6131fbf6f847c9edfb729c77e9b82817b19"
+    },
+    "effects/attack_1019.json": {
+      "archive": "assets/res/skills/attack_1019.xml",
+      "texture": "assets/res/skills/attack_1019.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "07d1293bd41097d00206dd458f0993f6da53dce10029a7b61fd3bcb43a66892b"
+    },
+    "effects/attack_1020.webp": {
+      "archive": "assets/res/skills/attack_1020.xml",
+      "texture": "assets/res/skills/attack_1020.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "be0dbf125aeb7514944c32aaa42e1d50b3108b3771667315211b5c42a4659c3f"
+    },
+    "effects/attack_1020.json": {
+      "archive": "assets/res/skills/attack_1020.xml",
+      "texture": "assets/res/skills/attack_1020.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "5d768fd43f085945fd29d88ed3e1904a2b82189bf4cd845854316242cdba75ff"
+    },
+    "effects/attack_1021.webp": {
+      "archive": "assets/res/skills/attack_1021.xml",
+      "texture": "assets/res/skills/attack_1021.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "81c047cb92fe8a72a27aab43da230f2cea35e6f4a7e1147154a33d8bea61e2b7"
+    },
+    "effects/attack_1021.json": {
+      "archive": "assets/res/skills/attack_1021.xml",
+      "texture": "assets/res/skills/attack_1021.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "b41950e9420924fbe2a51b32f39979f760b6d7b747eeddb5e6aaa2afd3f1aa9f"
+    },
+    "effects/attack_1022.webp": {
+      "archive": "assets/res/skills/attack_1022.xml",
+      "texture": "assets/res/skills/attack_1022.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "1d97477eea765229e9e7163c10350ad86372b4f40a811d6c2fc52a540bdb7a3b"
+    },
+    "effects/attack_1022.json": {
+      "archive": "assets/res/skills/attack_1022.xml",
+      "texture": "assets/res/skills/attack_1022.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "a3c6feb4fdcaeebf13db78f5ed4f69736bb9b9ca5b3784f3c1cc21fd58a1e7fb"
+    },
+    "effects/attack_1023.webp": {
+      "archive": "assets/res/skills/attack_1023.xml",
+      "texture": "assets/res/skills/attack_1023.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "3eb5d043abdd12b1483944258d4c72b03576882c8470a18093b9b079c1586e6d"
+    },
+    "effects/attack_1023.json": {
+      "archive": "assets/res/skills/attack_1023.xml",
+      "texture": "assets/res/skills/attack_1023.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "f87252936cf7d72af24499043c1010c0c0b7721e134f675a18586fa48dc74f08"
+    },
+    "effects/attack_1024.webp": {
+      "archive": "assets/res/skills/attack_1024.xml",
+      "texture": "assets/res/skills/attack_1024.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "35985530d22ebaf5e8df9544aacb9aa403d2bcadc53af004d5a39a54f1347bea"
+    },
+    "effects/attack_1024.json": {
+      "archive": "assets/res/skills/attack_1024.xml",
+      "texture": "assets/res/skills/attack_1024.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "09d9eec2c09e2e926a4e498a1de885db6d631ce80d081d644fb1d741fc29efd1"
+    },
+    "effects/attack_1025.webp": {
+      "archive": "assets/res/skills/attack_1025.xml",
+      "texture": "assets/res/skills/attack_1025.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "9ac2a0eabbe9858924da9f57fedd0e3adf8f2e95a45aa68d66778f9d54514ff7"
+    },
+    "effects/attack_1025.json": {
+      "archive": "assets/res/skills/attack_1025.xml",
+      "texture": "assets/res/skills/attack_1025.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "885aa6de217e9edfaf32dcc02a61a87175176ef676157e94f4f95fa0e0561a01"
+    },
+    "effects/attack_1026.webp": {
+      "archive": "assets/res/skills/attack_1026.xml",
+      "texture": "assets/res/skills/attack_1026.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "2c1966b8898b51cc6d607eb2e5b4881b42d265be1ee3c00fede7845d919fa3f5"
+    },
+    "effects/attack_1026.json": {
+      "archive": "assets/res/skills/attack_1026.xml",
+      "texture": "assets/res/skills/attack_1026.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "3c16d452053bde7d08f072a3a23075f3fc6dfe4e3650f469c828b8a90b2206e7"
+    },
+    "effects/attack_1028.webp": {
+      "archive": "assets/res/skills/attack_1028.xml",
+      "texture": "assets/res/skills/attack_1028.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "16e961ed021c2c7fe9c92f1f3a3304617986c96c7b6d36a07de9ce391b316f21"
+    },
+    "effects/attack_1028.json": {
+      "archive": "assets/res/skills/attack_1028.xml",
+      "texture": "assets/res/skills/attack_1028.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "0244e7da4be178035e053969296f22c98952dcc3b74016ca3492c96fdcee50c1"
+    },
+    "effects/attack_1029.webp": {
+      "archive": "assets/res/skills/attack_1029.xml",
+      "texture": "assets/res/skills/attack_1029.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "5d0e0ea1b790ce7c52ddfce1d8f81c6e130270d092e321ca153ee01cc34e2b07"
+    },
+    "effects/attack_1029.json": {
+      "archive": "assets/res/skills/attack_1029.xml",
+      "texture": "assets/res/skills/attack_1029.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "e11ae12fd69b9397e84b2828a7c0f2d2a956957c2e58b06b3b5c10721b1be97e"
+    },
+    "effects/attack_1031.webp": {
+      "archive": "assets/res/skills/attack_1031.xml",
+      "texture": "assets/res/skills/attack_1031.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "081bc8bc339aa05295c30a64abb4628c9279297411b55e66a390620ebaf01ed1"
+    },
+    "effects/attack_1031.json": {
+      "archive": "assets/res/skills/attack_1031.xml",
+      "texture": "assets/res/skills/attack_1031.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "d4b867139519813ba1ddeb131857a6e0801834d48ead76ed4cbd6ea172a5d209"
+    },
+    "effects/attack_1032.webp": {
+      "archive": "assets/res/skills/attack_1032.xml",
+      "texture": "assets/res/skills/attack_1032.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "678c7683324f0af46dec5aacdb2d9e8e11d207f8f003eead56687c1b7a5ff69b"
+    },
+    "effects/attack_1032.json": {
+      "archive": "assets/res/skills/attack_1032.xml",
+      "texture": "assets/res/skills/attack_1032.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "a2e9c413c54376222a6c5c2df26281fb7168c8356e5ae93ea6f99db7b109b572"
+    },
+    "effects/attack_1033.webp": {
+      "archive": "assets/res/skills/attack_1033.xml",
+      "texture": "assets/res/skills/attack_1033.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "884e1a675de544caa4c1c6de10449b8da3e2811745e14a081bcd775011d37f33"
+    },
+    "effects/attack_1033.json": {
+      "archive": "assets/res/skills/attack_1033.xml",
+      "texture": "assets/res/skills/attack_1033.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "6ba4489f65326e6ae03fb0ae5e68db65b8199efbd330f0a88c3d86f92140af02"
+    },
+    "effects/attack_1039.webp": {
+      "archive": "assets/res/skills/attack_1039.xml",
+      "texture": "assets/res/skills/attack_1039.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "701cec931707e47ff5e45a4878c95a94c258afeef5fdd2b7e013c18f9943ae9a"
+    },
+    "effects/attack_1039.json": {
+      "archive": "assets/res/skills/attack_1039.xml",
+      "texture": "assets/res/skills/attack_1039.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "121f2dbcf5131f7e867991d4d3a34538507d3b0d58f3aaa7947d1bd2442c3b89"
+    },
+    "effects/attack_1040.webp": {
+      "archive": "assets/res/skills/attack_1040.xml",
+      "texture": "assets/res/skills/attack_1040.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "f639fd758f3a221efbcf5bcdeff25df8903b73683cace35281da1469c5722248"
+    },
+    "effects/attack_1040.json": {
+      "archive": "assets/res/skills/attack_1040.xml",
+      "texture": "assets/res/skills/attack_1040.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "5e21e76740e68a088f160cfda6733d6aeca101abf68cbf0e67f977bcfd972ea3"
+    },
+    "effects/attack_1041.webp": {
+      "archive": "assets/res/skills/attack_1041.xml",
+      "texture": "assets/res/skills/attack_1041.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "cd3704fbfbdc12c9671ce9cb63a1a7625d006cfd138f817b4490f993f9a58b64"
+    },
+    "effects/attack_1041.json": {
+      "archive": "assets/res/skills/attack_1041.xml",
+      "texture": "assets/res/skills/attack_1041.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "e500c12d82f65d41edb0615550490fae487fbdaa7d5edc8a5b8d2dbcfc30c11e"
+    },
+    "effects/attack_1041_4.webp": {
+      "archive": "assets/res/skills/attack_1041_4.xml",
+      "texture": "assets/res/skills/attack_1041_4.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "cd3704fbfbdc12c9671ce9cb63a1a7625d006cfd138f817b4490f993f9a58b64"
+    },
+    "effects/attack_1041_4.json": {
+      "archive": "assets/res/skills/attack_1041_4.xml",
+      "texture": "assets/res/skills/attack_1041_4.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "13ab38d906c7355c3b214fa1cfec94b7de794424d56febfe4f79b43b35040c8d"
+    },
+    "effects/attack_1042.webp": {
+      "archive": "assets/res/skills/attack_1042.xml",
+      "texture": "assets/res/skills/attack_1042.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "6e90e00804deeec25a54558625d6bbe564e2ec936361c095cc746b7073bd7e39"
+    },
+    "effects/attack_1042.json": {
+      "archive": "assets/res/skills/attack_1042.xml",
+      "texture": "assets/res/skills/attack_1042.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "2db98d4cf6c3409071b2545cf97b679ce394b775d6e702f75fe6da90fe7c1616"
+    },
+    "effects/attack_1043.webp": {
+      "archive": "assets/res/skills/attack_1043.xml",
+      "texture": "assets/res/skills/attack_1043.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "fca2e19f9db552492b6ad859757ce432f1dd35ce3095bb93f940191318ad0c45"
+    },
+    "effects/attack_1043.json": {
+      "archive": "assets/res/skills/attack_1043.xml",
+      "texture": "assets/res/skills/attack_1043.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "ac4dbeb907832e73207680ee6740134ce1d0c222292afa5f24b27eee833ed0fc"
+    },
+    "effects/attack_1045.webp": {
+      "archive": "assets/res/skills/attack_1045.xml",
+      "texture": "assets/res/skills/attack_1045.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "b7fe582d1bdd5de094ac92e3b74821e363f88c89184766e70209f33ee32505cf"
+    },
+    "effects/attack_1045.json": {
+      "archive": "assets/res/skills/attack_1045.xml",
+      "texture": "assets/res/skills/attack_1045.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "d087b496846ae234f3fbce1b0b284867367b823801acbadcd913648d0d117ef8"
+    },
+    "effects/attack_1046.webp": {
+      "archive": "assets/res/skills/attack_1046.xml",
+      "texture": "assets/res/skills/attack_1046.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "29bdb8cc5441086781f9867f764b51cbc6057199b943a83f146d96e2c902084f"
+    },
+    "effects/attack_1046.json": {
+      "archive": "assets/res/skills/attack_1046.xml",
+      "texture": "assets/res/skills/attack_1046.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "52da545245f818d2e5cd6f63b685cb70f5561e17558bffb607d2a8519f591ded"
+    },
+    "effects/attack_1047.webp": {
+      "archive": "assets/res/skills/attack_1047.xml",
+      "texture": "assets/res/skills/attack_1047.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "1379a30b0fc1929039c5b9031f7ed9a41bfd5442699aae124817bcc029069e80"
+    },
+    "effects/attack_1047.json": {
+      "archive": "assets/res/skills/attack_1047.xml",
+      "texture": "assets/res/skills/attack_1047.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "a2264b5c4567dd0748dacd668abeb0de1cccc90dcfc088ae6a7c778e3c5d2c22"
+    },
+    "effects/attack_1048.webp": {
+      "archive": "assets/res/skills/attack_1048.xml",
+      "texture": "assets/res/skills/attack_1048.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "b7d42488b31ac39f77238d00470f2b4431e6a740f3e75391cc2f780c02481191"
+    },
+    "effects/attack_1048.json": {
+      "archive": "assets/res/skills/attack_1048.xml",
+      "texture": "assets/res/skills/attack_1048.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "ef288306678543f499654f3aec532262c140a224c611214fb1f3768a46ebfa8f"
+    },
+    "effects/attack_1049.webp": {
+      "archive": "assets/res/skills/attack_1049.xml",
+      "texture": "assets/res/skills/attack_1049.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "95ca5ce491f65fc42dd2a471f0170cadac757f1197b129222740bd5968630bc4"
+    },
+    "effects/attack_1049.json": {
+      "archive": "assets/res/skills/attack_1049.xml",
+      "texture": "assets/res/skills/attack_1049.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "1955a73d4d009224e4272827d2dbc9cb759658ff32d38d66a1d7ca3e623fb86e"
+    },
+    "effects/attack_1050.webp": {
+      "archive": "assets/res/skills/attack_1050.xml",
+      "texture": "assets/res/skills/attack_1050.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "dd298feef579a96cc616ecc19b4f35f814d72733c124a356c49d132804f11f5a"
+    },
+    "effects/attack_1050.json": {
+      "archive": "assets/res/skills/attack_1050.xml",
+      "texture": "assets/res/skills/attack_1050.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "bcc48533a82cb21b4f45fba8671be44457c40d28cf0fe37e2b967fc2b8002628"
+    },
+    "effects/attack_1051.webp": {
+      "archive": "assets/res/skills/attack_1051.xml",
+      "texture": "assets/res/skills/attack_1051.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "c4a57311843ffa47f21bf27aaaafc44d0bc0683d8c7568c3867c49d96dbbeb04"
+    },
+    "effects/attack_1051.json": {
+      "archive": "assets/res/skills/attack_1051.xml",
+      "texture": "assets/res/skills/attack_1051.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "a375ec526f916d1701563618d59af2bfc6e653bad53899ed46a8ca1e36adf524"
+    },
+    "effects/attack_1055.webp": {
+      "archive": "assets/res/skills/attack_1055.xml",
+      "texture": "assets/res/skills/attack_1055.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "78fb254f039079b5da44460f96edb156b7b92ec48907613c85814c97abb9df59"
+    },
+    "effects/attack_1055.json": {
+      "archive": "assets/res/skills/attack_1055.xml",
+      "texture": "assets/res/skills/attack_1055.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "f9bfaeacd72b1d2ebb1b6121e482691acb86f7853f661b6cae0d7ac00150a456"
+    },
+    "effects/attack_1056.webp": {
+      "archive": "assets/res/skills/attack_1056.xml",
+      "texture": "assets/res/skills/attack_1056.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "9c4150e9d1bb0d20d049a5c41fbfd8275bb3ff0f9f0dffdbfc8f739e26fed32a"
+    },
+    "effects/attack_1056.json": {
+      "archive": "assets/res/skills/attack_1056.xml",
+      "texture": "assets/res/skills/attack_1056.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "272336e36f595ff41fe322b7da22a620c16522fa3e44f80be20257666f393827"
+    },
+    "effects/attack_1057.webp": {
+      "archive": "assets/res/skills/attack_1057.xml",
+      "texture": "assets/res/skills/attack_1057.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "b5054314bc6c1508019166ffdd2e44f3fa5e9482d0198a6340dcdcaa1d6a8b09"
+    },
+    "effects/attack_1057.json": {
+      "archive": "assets/res/skills/attack_1057.xml",
+      "texture": "assets/res/skills/attack_1057.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "aac9bba6e896559639c2b74d191f140033a3c00a1b80aa2abf94e3ef3a4bfed2"
+    },
+    "effects/attack_1058.webp": {
+      "archive": "assets/res/skills/attack_1058.xml",
+      "texture": "assets/res/skills/attack_1058.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "e39fc9611bd991a3dd449192ecae0578ffc90e7211201c6d0c3009986ba47e37"
+    },
+    "effects/attack_1058.json": {
+      "archive": "assets/res/skills/attack_1058.xml",
+      "texture": "assets/res/skills/attack_1058.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "42e3cb95fba72505306fd4a6d58b2f4916ea1a3a89e57013beffb8360e2b371a"
+    },
+    "effects/attack_1059.webp": {
+      "archive": "assets/res/skills/attack_1059.xml",
+      "texture": "assets/res/skills/attack_1059.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "4b4a205e594a36e6ac53a0796a72a27d12eb1631f945c7dc055fe2b818746632"
+    },
+    "effects/attack_1059.json": {
+      "archive": "assets/res/skills/attack_1059.xml",
+      "texture": "assets/res/skills/attack_1059.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "92f64c834700a0c527b42db6bf5ee78e78b9c4007a70e37e5ed457cc45eed62a"
+    },
+    "effects/attack_1060.webp": {
+      "archive": "assets/res/skills/attack_1060.xml",
+      "texture": "assets/res/skills/attack_1060.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "1cfce9820337b2406225eada0f50af779a5649e878e17e2619303a889f8edb59"
+    },
+    "effects/attack_1060.json": {
+      "archive": "assets/res/skills/attack_1060.xml",
+      "texture": "assets/res/skills/attack_1060.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "030ea19eca2ecba917e99bff65fcecf387458ba062ca18e1e70cc523d267d3fc"
+    },
+    "effects/attack_1061.webp": {
+      "archive": "assets/res/skills/attack_1061.xml",
+      "texture": "assets/res/skills/attack_1061.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "9b97cf11841ba4396e1cc041905e5cceab54b13b88dceb124e1d848bb96d6e75"
+    },
+    "effects/attack_1061.json": {
+      "archive": "assets/res/skills/attack_1061.xml",
+      "texture": "assets/res/skills/attack_1061.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "094d6ee3309107ab6de47bbba3542f9288059cde183533ee674acb8e34277dc7"
+    },
+    "effects/attack_1062.webp": {
+      "archive": "assets/res/skills/attack_1062.xml",
+      "texture": "assets/res/skills/attack_1062.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "ce730610306983ef6c5fac01ec70926d9d9c4b08ed6e496a41c5ba7515776fae"
+    },
+    "effects/attack_1062.json": {
+      "archive": "assets/res/skills/attack_1062.xml",
+      "texture": "assets/res/skills/attack_1062.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "44baee9bb7c49a6424fed9b4beff03f00e789fe4891e4d71241dc844629bf266"
+    },
+    "effects/attack_1063.webp": {
+      "archive": "assets/res/skills/attack_1063.xml",
+      "texture": "assets/res/skills/attack_1063.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "d65da8c767aedf00ee4e2457e34c9d56c440a98b829d957b2f44190ab0682188"
+    },
+    "effects/attack_1063.json": {
+      "archive": "assets/res/skills/attack_1063.xml",
+      "texture": "assets/res/skills/attack_1063.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "75d06d496b71d6e1ce47fb9d9d0edbc6d2d427a99da0582ddde0043843f4f9c2"
+    },
+    "effects/attack_1064.webp": {
+      "archive": "assets/res/skills/attack_1064.xml",
+      "texture": "assets/res/skills/attack_1064.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "e4ff286d59945613cc285964d1fc388ba5547cd662f31460fae546810ec13921"
+    },
+    "effects/attack_1064.json": {
+      "archive": "assets/res/skills/attack_1064.xml",
+      "texture": "assets/res/skills/attack_1064.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "aa8a5569e665e09d72614e5817c3d33a180d12aae2c0697d1c5efc4be84525f3"
+    },
+    "effects/attack_1065.webp": {
+      "archive": "assets/res/skills/attack_1065.xml",
+      "texture": "assets/res/skills/attack_1065.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "cd0b1bdf79afab7913af1346ccb62f0ef0a33be9eea25b55ba60b64476f8e6fe"
+    },
+    "effects/attack_1065.json": {
+      "archive": "assets/res/skills/attack_1065.xml",
+      "texture": "assets/res/skills/attack_1065.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "9188c268467d4dcbd607ae5be04267ab05f3ee43beb4ce6592c6e62dbb555454"
+    },
+    "effects/attack_1066.webp": {
+      "archive": "assets/res/skills/attack_1066.xml",
+      "texture": "assets/res/skills/attack_1066.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "4acd35d6b5ffb53b968fefaf4c75c7ccf56151aeb0885bd8e8fb7cd818681aae"
+    },
+    "effects/attack_1066.json": {
+      "archive": "assets/res/skills/attack_1066.xml",
+      "texture": "assets/res/skills/attack_1066.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "2c5e545e918d1aba2c3ed6e8b29b1d7844002097774f78eff0a5cacf8f2cc153"
+    },
+    "effects/attack_1067.webp": {
+      "archive": "assets/res/skills/attack_1067.xml",
+      "texture": "assets/res/skills/attack_1067.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "2aa15cf59c40183ce12c3a0649fd19c46940d529aa1884f79342368871ce540a"
+    },
+    "effects/attack_1067.json": {
+      "archive": "assets/res/skills/attack_1067.xml",
+      "texture": "assets/res/skills/attack_1067.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "f47906b99156963d5b9ff16a03125e92eda28ee201fe68b5aae66ed26b701787"
+    },
+    "effects/attack_1068.webp": {
+      "archive": "assets/res/skills/attack_1068.xml",
+      "texture": "assets/res/skills/attack_1068.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "8d406ae5f5e113dd26c5627fa18a313d1480ff6b838d63cf57025cd460ac5f11"
+    },
+    "effects/attack_1068.json": {
+      "archive": "assets/res/skills/attack_1068.xml",
+      "texture": "assets/res/skills/attack_1068.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "d4db94fd9275e16c6c2fae394cf8ed74c562c891b0b72d265d58faad6aa313e5"
+    },
+    "effects/attack_1069.webp": {
+      "archive": "assets/res/skills/attack_1069.xml",
+      "texture": "assets/res/skills/attack_1069.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "258459be0d1c44a92b4f0d58a68176153de3176aac95553ab52c84f0dbad42ea"
+    },
+    "effects/attack_1069.json": {
+      "archive": "assets/res/skills/attack_1069.xml",
+      "texture": "assets/res/skills/attack_1069.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "f67351776cbce1de25b287df7befa9598ed32f6f966ff147c74230b1a4cba224"
+    },
+    "effects/attack_1070.webp": {
+      "archive": "assets/res/skills/attack_1070.xml",
+      "texture": "assets/res/skills/attack_1070.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "08630cacfe155721a108ce3836715e68c62c71617794f021cb788b345660a47f"
+    },
+    "effects/attack_1070.json": {
+      "archive": "assets/res/skills/attack_1070.xml",
+      "texture": "assets/res/skills/attack_1070.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "0e856c2500a43aba784805eb65d74725cd6ee305964319aa9f9d27f103c31f86"
+    },
+    "effects/attack_1071.webp": {
+      "archive": "assets/res/skills/attack_1071.xml",
+      "texture": "assets/res/skills/attack_1071.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "616e46ce46fd71abc05a3bc97214d162425c83abc48ba0f981ebff2422ab57f5"
+    },
+    "effects/attack_1071.json": {
+      "archive": "assets/res/skills/attack_1071.xml",
+      "texture": "assets/res/skills/attack_1071.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "6f75d47256d8f51d387374c9428cc0311d7c07c09cd8172d0309473042f4c469"
+    },
+    "effects/attack_1072.webp": {
+      "archive": "assets/res/skills/attack_1072.xml",
+      "texture": "assets/res/skills/attack_1072.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "e9291be260f555f9f9a4296df111d8efef9ab6e61f2f90711f49e6c9fbcd7d8b"
+    },
+    "effects/attack_1072.json": {
+      "archive": "assets/res/skills/attack_1072.xml",
+      "texture": "assets/res/skills/attack_1072.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "c3685527f37d1843959bdffd17069670e7f098e59c4c74e6c20fe5d91dc2a06a"
+    },
+    "effects/attack_1072_4.webp": {
+      "archive": "assets/res/skills/attack_1072_4.xml",
+      "texture": "assets/res/skills/attack_1072_4.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "e9291be260f555f9f9a4296df111d8efef9ab6e61f2f90711f49e6c9fbcd7d8b"
+    },
+    "effects/attack_1072_4.json": {
+      "archive": "assets/res/skills/attack_1072_4.xml",
+      "texture": "assets/res/skills/attack_1072_4.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "bf8934bcdc20c2a575d8c100f1ebafa0f911a60e0288f60e1d4f7780e0047783"
+    },
+    "effects/attack_1073.webp": {
+      "archive": "assets/res/skills/attack_1073.xml",
+      "texture": "assets/res/skills/attack_1073.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "8a424d20ceb14b38a86d84986d6c67fc0bc982ceed0cf5eaa40404deb4a14616"
+    },
+    "effects/attack_1073.json": {
+      "archive": "assets/res/skills/attack_1073.xml",
+      "texture": "assets/res/skills/attack_1073.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "4756857ce764255eb17a130b8978076c96d69d9ff301a4ee151ecef71b334635"
+    },
+    "effects/attack_1073_4.webp": {
+      "archive": "assets/res/skills/attack_1073_4.xml",
+      "texture": "assets/res/skills/attack_1073_4.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "b2cd8fd219370ff122e46beb83f50d57a230d868afc7789058287079d70bcaa9"
+    },
+    "effects/attack_1073_4.json": {
+      "archive": "assets/res/skills/attack_1073_4.xml",
+      "texture": "assets/res/skills/attack_1073_4.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "4b0dfb48c3121cc8b002ab7a4572ae5269fe88d2e8f6fbbb4c5e78493e469eca"
+    },
+    "effects/attack_1074.webp": {
+      "archive": "assets/res/skills/attack_1074.xml",
+      "texture": "assets/res/skills/attack_1074.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "ee9680e06e26049931ba6f1526af053606f24d20eeaf2546da8d2f29d45b8852"
+    },
+    "effects/attack_1074.json": {
+      "archive": "assets/res/skills/attack_1074.xml",
+      "texture": "assets/res/skills/attack_1074.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "ee84194314be487bd7a6e7cb7ba625cf235847b5ea260ae3895c2d06b2289dd0"
+    },
+    "effects/attack_1074_4.webp": {
+      "archive": "assets/res/skills/attack_1074_4.xml",
+      "texture": "assets/res/skills/attack_1074_4.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "ee9680e06e26049931ba6f1526af053606f24d20eeaf2546da8d2f29d45b8852"
+    },
+    "effects/attack_1074_4.json": {
+      "archive": "assets/res/skills/attack_1074_4.xml",
+      "texture": "assets/res/skills/attack_1074_4.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "7310a6064ea7d70317fb80e1b6b8e5cb87c29f16ddca9c23bfc6cb99bae80b97"
+    },
+    "effects/attack_1075.webp": {
+      "archive": "assets/res/skills/attack_1075.xml",
+      "texture": "assets/res/skills/attack_1075.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "5379fd8e6a4b61021c0f6a11f6699c75ac19ad0c793db844f7664b0df7295b79"
+    },
+    "effects/attack_1075.json": {
+      "archive": "assets/res/skills/attack_1075.xml",
+      "texture": "assets/res/skills/attack_1075.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "007419e9e8a113b9c2da9f9b574183a59774ec40ec7aeb3354819006880ce1ce"
+    },
+    "effects/attack_1075_4.webp": {
+      "archive": "assets/res/skills/attack_1075_4.xml",
+      "texture": "assets/res/skills/attack_1075_4.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "5379fd8e6a4b61021c0f6a11f6699c75ac19ad0c793db844f7664b0df7295b79"
+    },
+    "effects/attack_1075_4.json": {
+      "archive": "assets/res/skills/attack_1075_4.xml",
+      "texture": "assets/res/skills/attack_1075_4.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "0576310ac179443409ba5cdf7474938f4648345433240b2f754b9bdab6d13d79"
+    },
+    "effects/attack_1076.webp": {
+      "archive": "assets/res/skills/attack_1076.xml",
+      "texture": "assets/res/skills/attack_1076.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "9ee0ffddd18e94443b3cb4e779481c4fa7c695e705b203450c6a84b3a29e8adb"
+    },
+    "effects/attack_1076.json": {
+      "archive": "assets/res/skills/attack_1076.xml",
+      "texture": "assets/res/skills/attack_1076.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "598878fe1e3fd70dbf13135e1d372702fc383b69cb827f0c0f604163b3f553e3"
+    },
+    "effects/attack_1076_4.webp": {
+      "archive": "assets/res/skills/attack_1076_4.xml",
+      "texture": "assets/res/skills/attack_1076_4.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "4591993957a28bb22bc2fc7a01868036dc7361fdae8f971c42cf5897c335a46f"
+    },
+    "effects/attack_1076_4.json": {
+      "archive": "assets/res/skills/attack_1076_4.xml",
+      "texture": "assets/res/skills/attack_1076_4.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "3020764137165f262b4a60a0a7f4d5bd7297bd50e7a087dc181a3b8037035d28"
+    },
+    "effects/attack_1092.webp": {
+      "archive": "assets/res/skills/attack_1092.xml",
+      "texture": "assets/res/skills/attack_1092.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "607f8806295ccc4b74bf18df0a7a26f99dffeadab68b8302ded7b88e58c826b4"
+    },
+    "effects/attack_1092.json": {
+      "archive": "assets/res/skills/attack_1092.xml",
+      "texture": "assets/res/skills/attack_1092.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "d80fe8bbe88dd502b2508112ad3375179d8863648ab736d333a1f87c7842a2ec"
+    },
+    "effects/attack_1093.webp": {
+      "archive": "assets/res/skills/attack_1093.xml",
+      "texture": "assets/res/skills/attack_1093.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "acd07f9e372b72bea909e0263d1640cfb3d9e8f1b87d1cff488fd3386bfc4b1c"
+    },
+    "effects/attack_1093.json": {
+      "archive": "assets/res/skills/attack_1093.xml",
+      "texture": "assets/res/skills/attack_1093.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "12326ef45ead093336fe750a88b5cc6e7e0e64f624af67766e4b16c92e6bd74d"
+    },
+    "effects/attack_1100.webp": {
+      "archive": "assets/res/skills/attack_1100.xml",
+      "texture": "assets/res/skills/attack_1100.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "d092e591dfaf42161ae458e3c217597eb72085770dee0638de0fa5989d3a6c12"
+    },
+    "effects/attack_1100.json": {
+      "archive": "assets/res/skills/attack_1100.xml",
+      "texture": "assets/res/skills/attack_1100.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "5f5e67419e350ebcaca88b6aa5db9578aad294043b120a05d6967f078e09a6ea"
+    },
+    "effects/attack_1100_4.webp": {
+      "archive": "assets/res/skills/attack_1100_4.xml",
+      "texture": "assets/res/skills/attack_1100_4.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "d092e591dfaf42161ae458e3c217597eb72085770dee0638de0fa5989d3a6c12"
+    },
+    "effects/attack_1100_4.json": {
+      "archive": "assets/res/skills/attack_1100_4.xml",
+      "texture": "assets/res/skills/attack_1100_4.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "2f65e14519325b9326cc82b8c2e13bce376b8f97db90ebd59b65924a3c59f3d1"
+    },
+    "effects/attack_1200.webp": {
+      "archive": "assets/res/skills/attack_1200.xml",
+      "texture": "assets/res/skills/attack_1200.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "5623c6ae8717644418301c75079881a327d10a00a36d8197df2161e27509df4a"
+    },
+    "effects/attack_1200.json": {
+      "archive": "assets/res/skills/attack_1200.xml",
+      "texture": "assets/res/skills/attack_1200.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "08193a305150b27b2258bd47397c2ff621a1d13583d03e946eb44e342da61072"
+    },
+    "effects/attack_1201.webp": {
+      "archive": "assets/res/skills/attack_1201.xml",
+      "texture": "assets/res/skills/attack_1201.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "b540fbedbfa8c3f5bcfa4eb4a1f625dcfc4f667ed186410c4c627c113a255ebb"
+    },
+    "effects/attack_1201.json": {
+      "archive": "assets/res/skills/attack_1201.xml",
+      "texture": "assets/res/skills/attack_1201.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "17c5453939fbab89cd7c03217d79ccca43dbd8c1a426d08fd282185940215d09"
+    },
+    "effects/attack_1201_4.webp": {
+      "archive": "assets/res/skills/attack_1201_4.xml",
+      "texture": "assets/res/skills/attack_1201_4.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "423a0d6b0a86255b807629b6a7ff5259cc3964f3d8415ef3b3e42ea8edfa92e2"
+    },
+    "effects/attack_1201_4.json": {
+      "archive": "assets/res/skills/attack_1201_4.xml",
+      "texture": "assets/res/skills/attack_1201_4.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "daeb45ab95f70e2aef1f5f9c2b3501d5067bccb7b334fc2d7c593c1efead2958"
+    },
+    "effects/attack_1202.webp": {
+      "archive": "assets/res/skills/attack_1202.xml",
+      "texture": "assets/res/skills/attack_1202.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "b540fbedbfa8c3f5bcfa4eb4a1f625dcfc4f667ed186410c4c627c113a255ebb"
+    },
+    "effects/attack_1202.json": {
+      "archive": "assets/res/skills/attack_1202.xml",
+      "texture": "assets/res/skills/attack_1202.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "1eb186580c1368301794435e28f64aa72ebebf65b0cfec18f953fdc6694a0bb2"
+    },
+    "effects/attack_1203.webp": {
+      "archive": "assets/res/skills/attack_1203.xml",
+      "texture": "assets/res/skills/attack_1203.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "b518b22729530655d7525face9015437278cec3cd6768ea8ce297bfd202aa3ab"
+    },
+    "effects/attack_1203.json": {
+      "archive": "assets/res/skills/attack_1203.xml",
+      "texture": "assets/res/skills/attack_1203.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "2cb0884bc9ab047baa2778437d17d0f2cc0be3bfc8381b89ba3e385a2c681490"
+    },
+    "effects/attack_1204.webp": {
+      "archive": "assets/res/skills/attack_1204.xml",
+      "texture": "assets/res/skills/attack_1204.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "c977b15e3f1f8731b4f3221b8af237f30c1595d263a1674687141c780a14c3ea"
+    },
+    "effects/attack_1204.json": {
+      "archive": "assets/res/skills/attack_1204.xml",
+      "texture": "assets/res/skills/attack_1204.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "f38363dc0235e0b8f3d765fab4f95ef9d51ec94186b57f724b3ea08f4fc47422"
+    },
+    "effects/attack_1205.webp": {
+      "archive": "assets/res/skills/attack_1205.xml",
+      "texture": "assets/res/skills/attack_1205.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "f526194049d3a88acf059fa6b6dbe3c7ca30e2bc73c9ddd2fb3576bf7aa96a11"
+    },
+    "effects/attack_1205.json": {
+      "archive": "assets/res/skills/attack_1205.xml",
+      "texture": "assets/res/skills/attack_1205.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "c9e8ad198b5f2a463a42348bd081a6aa2aa4e343364b57f4f1554ba1c3051e43"
+    },
+    "effects/attack_1206.webp": {
+      "archive": "assets/res/skills/attack_1206.xml",
+      "texture": "assets/res/skills/attack_1206.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "47f0d1d45f58576e17158aad5687d2d8daa5b330d4255ef9457262aa99fcc890"
+    },
+    "effects/attack_1206.json": {
+      "archive": "assets/res/skills/attack_1206.xml",
+      "texture": "assets/res/skills/attack_1206.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "9dfc7f92379171c13eb88f566a3b293efff034797a467ff03218506831c848a6"
+    },
+    "effects/magic_1000.webp": {
+      "archive": "assets/res/skills/magic_1000.xml",
+      "texture": "assets/res/skills/magic_1000.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "dad0b2d4165e753f7264be4b39ed2dc350c9de2d35bb7c5af004adb0dfb5d0c9"
+    },
+    "effects/magic_1000.json": {
+      "archive": "assets/res/skills/magic_1000.xml",
+      "texture": "assets/res/skills/magic_1000.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "05d724645ca9aabcd8d34bb98e40401e4149bb8b62d7382df923066d1fbf9299"
+    },
+    "effects/magic_1001.webp": {
+      "archive": "assets/res/skills/magic_1001.xml",
+      "texture": "assets/res/skills/magic_1001.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "03e947df07a012263b6970b4123fec620c7b043cd79c0498c48247e4099bd217"
+    },
+    "effects/magic_1001.json": {
+      "archive": "assets/res/skills/magic_1001.xml",
+      "texture": "assets/res/skills/magic_1001.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "070f850d61044a2aefb629bfdb7241e407ceb801aedf933441fed7c30caea99d"
+    },
+    "effects/magic_1002.webp": {
+      "archive": "assets/res/skills/magic_1002.xml",
+      "texture": "assets/res/skills/magic_1002.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "b6e54abef96631db45324e2366fd45cb8af4647cbf250550eadb33f99af480c9"
+    },
+    "effects/magic_1002.json": {
+      "archive": "assets/res/skills/magic_1002.xml",
+      "texture": "assets/res/skills/magic_1002.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "1cc6c443543807798bc10dc20476204f713c8fbb8c4c52e1e616e776a408a66d"
+    },
+    "effects/magic_1003.webp": {
+      "archive": "assets/res/skills/magic_1003.xml",
+      "texture": "assets/res/skills/magic_1003.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "0e81ae863ed6d79addb30467c23e8cf68a1fc31504de6d10d426610a8f4ea7bc"
+    },
+    "effects/magic_1003.json": {
+      "archive": "assets/res/skills/magic_1003.xml",
+      "texture": "assets/res/skills/magic_1003.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "70783223f16efd1ae91bc71b38a059bb06bd6a9c80025ef30af1c2769e3e5c1d"
+    },
+    "effects/magic_1004.webp": {
+      "archive": "assets/res/skills/magic_1004.xml",
+      "texture": "assets/res/skills/magic_1004.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "534b53ca88e43aa86108fb9ec1d59fea3f36b47d97825208c6f7e395d27c746c"
+    },
+    "effects/magic_1004.json": {
+      "archive": "assets/res/skills/magic_1004.xml",
+      "texture": "assets/res/skills/magic_1004.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "557745346b35ef8d1e1eb55ab56c4fa28f4effc04282509dc450375692fe22d5"
+    },
+    "effects/magic_1005.webp": {
+      "archive": "assets/res/skills/magic_1005.xml",
+      "texture": "assets/res/skills/magic_1005.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "b0a7144b7f729cdffa6eb384542591067e51b3fa59e8623661a02cfe0703e098"
+    },
+    "effects/magic_1005.json": {
+      "archive": "assets/res/skills/magic_1005.xml",
+      "texture": "assets/res/skills/magic_1005.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "2d43a4fa8c2dbea8651533424e5588e869a1faea6d29453a92cd02cb4d2f697b"
+    },
+    "effects/magic_1006.webp": {
+      "archive": "assets/res/skills/magic_1006.xml",
+      "texture": "assets/res/skills/magic_1006.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "49d6554601433cfe86a495d16d4fe8b5b6aef2fd7aae97c138fa6adcd1ee8740"
+    },
+    "effects/magic_1006.json": {
+      "archive": "assets/res/skills/magic_1006.xml",
+      "texture": "assets/res/skills/magic_1006.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "d6e1147c370293bdc18a36c84556a04129bdb7d1ec239c0353ef522f0df946a1"
+    },
+    "effects/magic_1007.webp": {
+      "archive": "assets/res/skills/magic_1007.xml",
+      "texture": "assets/res/skills/magic_1007.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "84be86db34a4b6a796a70789d46e5c3aa80cbb3ede75ecf6420387551505a5a1"
+    },
+    "effects/magic_1007.json": {
+      "archive": "assets/res/skills/magic_1007.xml",
+      "texture": "assets/res/skills/magic_1007.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "f10d0b19cb91f708a3dbc5ad92a9ab7ffc5cf35a4d11b2a59e5ad807f93d0e35"
+    },
+    "effects/magic_1008.webp": {
+      "archive": "assets/res/skills/magic_1008.xml",
+      "texture": "assets/res/skills/magic_1008.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "98359e23b544f3f14c5b34c5e9f7b1c35c2601de352b8712d1d2b0b14004bfcc"
+    },
+    "effects/magic_1008.json": {
+      "archive": "assets/res/skills/magic_1008.xml",
+      "texture": "assets/res/skills/magic_1008.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "1d8391fb5c6c9102cba3601992ad2b9e36ffe4d89a96ed3cf301caf79b88f127"
+    },
+    "effects/magic_1009.webp": {
+      "archive": "assets/res/skills/magic_1009.xml",
+      "texture": "assets/res/skills/magic_1009.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "ca6c4f8de2b3b7a983ecc063b47c156f49ee783296c2417576d3b8f39e5e0a02"
+    },
+    "effects/magic_1009.json": {
+      "archive": "assets/res/skills/magic_1009.xml",
+      "texture": "assets/res/skills/magic_1009.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "e1a97e48ea98e6ad96920f09269b6e84f5482e043a2c54d8b8ee3cc9d66cd57c"
+    },
+    "effects/magic_1010.webp": {
+      "archive": "assets/res/skills/magic_1010.xml",
+      "texture": "assets/res/skills/magic_1010.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "223a45e120cbff018732113aee3814b8f82e96aa9d14af5bd408d7c3237c79fc"
+    },
+    "effects/magic_1010.json": {
+      "archive": "assets/res/skills/magic_1010.xml",
+      "texture": "assets/res/skills/magic_1010.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "8970c170d5a0c7b12a7d38f6bf1075c1ccbd7bfd56bf5d171d0e521fc76537fb"
+    },
+    "effects/magic_1011.webp": {
+      "archive": "assets/res/skills/magic_1011.xml",
+      "texture": "assets/res/skills/magic_1011.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "b9223d4c50f9ea0ae3c585974247a97687dbf3e51158ceee0da17e6e302c302a"
+    },
+    "effects/magic_1011.json": {
+      "archive": "assets/res/skills/magic_1011.xml",
+      "texture": "assets/res/skills/magic_1011.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "1f0918d0fafcb5d3b46eb01c3fc596d2d2a09e8409622096adc557ce5138e951"
+    },
+    "effects/magic_1012.webp": {
+      "archive": "assets/res/skills/magic_1012.xml",
+      "texture": "assets/res/skills/magic_1012.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "af63b9628ef1f0a3ea05a372d4a2fd2eb3bfb042b8e7086f6e3e3ad8d32ec3ee"
+    },
+    "effects/magic_1012.json": {
+      "archive": "assets/res/skills/magic_1012.xml",
+      "texture": "assets/res/skills/magic_1012.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "a63e17f61d4dfb52915e66a2df15e30bce2c8c257ba151384eb69ebf99b1a8d9"
+    },
+    "effects/magic_1013.webp": {
+      "archive": "assets/res/skills/magic_1013.xml",
+      "texture": "assets/res/skills/magic_1013.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "8f057a34d4ceb27b46087a5dcaa1ef64b47528496c48e97dd7571d0f2b836c11"
+    },
+    "effects/magic_1013.json": {
+      "archive": "assets/res/skills/magic_1013.xml",
+      "texture": "assets/res/skills/magic_1013.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "ed325d22278dad4aaba8471b842609d866c21b4e78a599b771a6234f4d27ee36"
+    },
+    "effects/magic_1014.webp": {
+      "archive": "assets/res/skills/magic_1014.xml",
+      "texture": "assets/res/skills/magic_1014.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "b1cbb88b2f0ce6afe3d7c4d3055d10df981af97c16cb89ddbd6cfeeac21dfd61"
+    },
+    "effects/magic_1014.json": {
+      "archive": "assets/res/skills/magic_1014.xml",
+      "texture": "assets/res/skills/magic_1014.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "4ca00b16c8e007a534d42965dabce66981fb5b7af5822838f2abd72bd632197d"
+    },
+    "effects/magic_1015.webp": {
+      "archive": "assets/res/skills/magic_1015.xml",
+      "texture": "assets/res/skills/magic_1015.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "e5394e2337ce1a5a33c186e49178252d1ac50e4058a7bf92915124f1ac1c57fc"
+    },
+    "effects/magic_1015.json": {
+      "archive": "assets/res/skills/magic_1015.xml",
+      "texture": "assets/res/skills/magic_1015.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "971073fd5e893e2a11e6681323f5e214eb77ccbd983edba3dad6d193f2d954d4"
+    },
+    "effects/magic_1016.webp": {
+      "archive": "assets/res/skills/magic_1016.xml",
+      "texture": "assets/res/skills/magic_1016.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "6cb5f180f18aa2a3454e3d09af1332d68a87c5fdb09ea28db9d34007a239a16d"
+    },
+    "effects/magic_1016.json": {
+      "archive": "assets/res/skills/magic_1016.xml",
+      "texture": "assets/res/skills/magic_1016.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "8f5843008135f374f81f47318c2e86f15ce8b9c1d228f0cb0cf857275beb4770"
+    },
+    "effects/magic_1017.webp": {
+      "archive": "assets/res/skills/magic_1017.xml",
+      "texture": "assets/res/skills/magic_1017.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "e851fb535a8b77fe2987dea67865988814583b8128f89e93558089b8663bc4a5"
+    },
+    "effects/magic_1017.json": {
+      "archive": "assets/res/skills/magic_1017.xml",
+      "texture": "assets/res/skills/magic_1017.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "1d30ad6f7e0694ea3eb779f73187eaf3c532f2555bc00ab9786939aa241a95e4"
+    },
+    "effects/magic_1018.webp": {
+      "archive": "assets/res/skills/magic_1018.xml",
+      "texture": "assets/res/skills/magic_1018.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "cd8f2b46c65f1d142a07710214b224d45a42567b7ce7a5cd354018981fef0c5e"
+    },
+    "effects/magic_1018.json": {
+      "archive": "assets/res/skills/magic_1018.xml",
+      "texture": "assets/res/skills/magic_1018.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "075eb9f88875f0664036668693d961ae308e58d69dfa93f748f9a15c21474e99"
+    },
+    "effects/magic_1019.webp": {
+      "archive": "assets/res/skills/magic_1019.xml",
+      "texture": "assets/res/skills/magic_1019.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "bf0a36603e85fc5d9d477a10831b0477df085c87a0985c8ce8366b586cf88972"
+    },
+    "effects/magic_1019.json": {
+      "archive": "assets/res/skills/magic_1019.xml",
+      "texture": "assets/res/skills/magic_1019.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "953ad2d4a38057c70f38a670e817eb21c67b6902e776b98e02c8f5607e5749d6"
+    },
+    "effects/magic_1020.webp": {
+      "archive": "assets/res/skills/magic_1020.xml",
+      "texture": "assets/res/skills/magic_1020.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "ea28de40cd4a96cdc7c3e99900a80a7a257765d82b514070f192548a65ec5603"
+    },
+    "effects/magic_1020.json": {
+      "archive": "assets/res/skills/magic_1020.xml",
+      "texture": "assets/res/skills/magic_1020.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "9fc7bda8119835956d9d9984ce50b5cfe068e99d53338b2206ecdc3039be524e"
+    },
+    "effects/magic_1021.webp": {
+      "archive": "assets/res/skills/magic_1021.xml",
+      "texture": "assets/res/skills/magic_1021.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "a977c1d451089b79ec622911f0ba8fce8c813fd4c16f820927af2bc58dbac1a2"
+    },
+    "effects/magic_1021.json": {
+      "archive": "assets/res/skills/magic_1021.xml",
+      "texture": "assets/res/skills/magic_1021.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "6c92e6ae0b9abf09259ff8b0f3236b06aff54b74f6d36928eaf26c7e3bc18d4a"
+    },
+    "effects/magic_1022.webp": {
+      "archive": "assets/res/skills/magic_1022.xml",
+      "texture": "assets/res/skills/magic_1022.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "823a005315480b5cceea118cd66161e61ebbab7bd7f3a38efd59196141988441"
+    },
+    "effects/magic_1022.json": {
+      "archive": "assets/res/skills/magic_1022.xml",
+      "texture": "assets/res/skills/magic_1022.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "41bb5186ea0e3908f4d0c38425a26a18bc5665f7863a102cd019e4cf719f0afa"
+    },
+    "effects/magic_1023.webp": {
+      "archive": "assets/res/skills/magic_1023.xml",
+      "texture": "assets/res/skills/magic_1023.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "c01272eac125546d8ccf420238f0fbf7fe2ed43c8c59690c9683f63b2ca53708"
+    },
+    "effects/magic_1023.json": {
+      "archive": "assets/res/skills/magic_1023.xml",
+      "texture": "assets/res/skills/magic_1023.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "240e2ec378f1daf6a6b4f076c9dc2173aed8d1d325d414d7483cbfd5edfc0cc2"
+    },
+    "effects/magic_1024.webp": {
+      "archive": "assets/res/skills/magic_1024.xml",
+      "texture": "assets/res/skills/magic_1024.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "e9f09512aa44fc41609069abd766d3152bfe558f3cbefc7c1c59f50e4b8bf97a"
+    },
+    "effects/magic_1024.json": {
+      "archive": "assets/res/skills/magic_1024.xml",
+      "texture": "assets/res/skills/magic_1024.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "b073e8c9a43998d8135059e0c4c15e1c3a7d44d3f140c56f37563ebc12813adf"
+    },
+    "effects/magic_1025.webp": {
+      "archive": "assets/res/skills/magic_1025.xml",
+      "texture": "assets/res/skills/magic_1025.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "26e5eb85305da290f27de5c136b631174f218dec0a016e5e8311f5160f09dc22"
+    },
+    "effects/magic_1025.json": {
+      "archive": "assets/res/skills/magic_1025.xml",
+      "texture": "assets/res/skills/magic_1025.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "304c86fb8adf6653ebf3b11e2a5b21ec4f6a31ddf19994cabd6a370989cdb01b"
+    },
+    "effects/magic_1026.webp": {
+      "archive": "assets/res/skills/magic_1026.xml",
+      "texture": "assets/res/skills/magic_1026.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "15894643da700f41c296fdc45dda1ff4941f7971c84c1f0f1fa25a93bb8270ad"
+    },
+    "effects/magic_1026.json": {
+      "archive": "assets/res/skills/magic_1026.xml",
+      "texture": "assets/res/skills/magic_1026.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "3b4a906d4848a7b656a8b8eb556906328f4fab006acfc55484abf4fec9ca4afa"
+    },
+    "effects/magic_1028.webp": {
+      "archive": "assets/res/skills/magic_1028.xml",
+      "texture": "assets/res/skills/magic_1028.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "5360a44a70407fa6d73e9305e7d2917d62da094bfec61c9fb90b44e063c6c575"
+    },
+    "effects/magic_1028.json": {
+      "archive": "assets/res/skills/magic_1028.xml",
+      "texture": "assets/res/skills/magic_1028.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "b578492a007fec80c61c52154abf784f3abae468e5c5365b3dd9696b7349d44e"
+    },
+    "effects/magic_1029.webp": {
+      "archive": "assets/res/skills/magic_1029.xml",
+      "texture": "assets/res/skills/magic_1029.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "e5394e2337ce1a5a33c186e49178252d1ac50e4058a7bf92915124f1ac1c57fc"
+    },
+    "effects/magic_1029.json": {
+      "archive": "assets/res/skills/magic_1029.xml",
+      "texture": "assets/res/skills/magic_1029.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "fefe1c004c107ee440ad8efde5eafb526ce4231c17c34056054b2edf87b032c8"
+    },
+    "effects/magic_1031.webp": {
+      "archive": "assets/res/skills/magic_1031.xml",
+      "texture": "assets/res/skills/magic_1031.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "43990fa70b0b6a700c7ed8e13d340a4b215fb37374015d8d85de9099cfb210c8"
+    },
+    "effects/magic_1031.json": {
+      "archive": "assets/res/skills/magic_1031.xml",
+      "texture": "assets/res/skills/magic_1031.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "27e295e458f4ba7a40bdccc903bb72d0870df1ae30524c4fc6cb959dfe61bcee"
+    },
+    "effects/magic_1032.webp": {
+      "archive": "assets/res/skills/magic_1032.xml",
+      "texture": "assets/res/skills/magic_1032.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "6c194f28dd48528976b0298fc7f606ecf415456916da89fec14f25f49bd5dc45"
+    },
+    "effects/magic_1032.json": {
+      "archive": "assets/res/skills/magic_1032.xml",
+      "texture": "assets/res/skills/magic_1032.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "da41c2a1d9aad7c43f3dc17b548bde2dd9338f3b7036383d30fab18da12098f7"
+    },
+    "effects/magic_1033.webp": {
+      "archive": "assets/res/skills/magic_1033.xml",
+      "texture": "assets/res/skills/magic_1033.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "240dac3642f67738c6bab81400a1eeda9682dfb503bd24d581dbc39a127bf452"
+    },
+    "effects/magic_1033.json": {
+      "archive": "assets/res/skills/magic_1033.xml",
+      "texture": "assets/res/skills/magic_1033.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "cb150f0fb3e52668a7630dba7dcb7bdb5a87b28643a35380ebca8c3796550fc2"
+    },
+    "effects/magic_1039.webp": {
+      "archive": "assets/res/skills/magic_1039.xml",
+      "texture": "assets/res/skills/magic_1039.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "f37dd3281333a762624a623951bf7a246b9d94b36d58a699ff4c3e7bb165ecac"
+    },
+    "effects/magic_1039.json": {
+      "archive": "assets/res/skills/magic_1039.xml",
+      "texture": "assets/res/skills/magic_1039.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "5068c50bfb69417db7dd1dc0c73d9cf6359634f7a4732749df75bee1cce85de3"
+    },
+    "effects/magic_1040.webp": {
+      "archive": "assets/res/skills/magic_1040.xml",
+      "texture": "assets/res/skills/magic_1040.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "a17330082cc61d0d15e84821b09f8304c80e208f829f6dd099968a578c126a52"
+    },
+    "effects/magic_1040.json": {
+      "archive": "assets/res/skills/magic_1040.xml",
+      "texture": "assets/res/skills/magic_1040.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "a03608ae7f28b5284cfadabbbdf4227c3ae8d9e1cd591c57df8f0591fd49d20a"
+    },
+    "effects/magic_1041.webp": {
+      "archive": "assets/res/skills/magic_1041.xml",
+      "texture": "assets/res/skills/magic_1041.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "d52ea44d7d861f7744811e4a94caa3f8ee1bea1deed1cb5588c91f85dc65de0b"
+    },
+    "effects/magic_1041.json": {
+      "archive": "assets/res/skills/magic_1041.xml",
+      "texture": "assets/res/skills/magic_1041.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "0cb12fa6681232580eee3d0942c62440adbb0a80b015d45c2203f564f30c46a8"
+    },
+    "effects/magic_1041_4.webp": {
+      "archive": "assets/res/skills/magic_1041_4.xml",
+      "texture": "assets/res/skills/magic_1041_4.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "d52ea44d7d861f7744811e4a94caa3f8ee1bea1deed1cb5588c91f85dc65de0b"
+    },
+    "effects/magic_1041_4.json": {
+      "archive": "assets/res/skills/magic_1041_4.xml",
+      "texture": "assets/res/skills/magic_1041_4.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "8af0b71c03c82342ea53d27561aa57ce7159c89dfdab67ab0a2a4090a608ff27"
+    },
+    "effects/magic_1042.webp": {
+      "archive": "assets/res/skills/magic_1042.xml",
+      "texture": "assets/res/skills/magic_1042.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "7337fcbc48c4c02614c5e896ada62419a0e44d0310f67bb425f56b6fa7d34de2"
+    },
+    "effects/magic_1042.json": {
+      "archive": "assets/res/skills/magic_1042.xml",
+      "texture": "assets/res/skills/magic_1042.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "f06f4e782931ab2d0e5dd19be51e45ea202557829a9995623d95cd4281339dbc"
+    },
+    "effects/magic_1043.webp": {
+      "archive": "assets/res/skills/magic_1043.xml",
+      "texture": "assets/res/skills/magic_1043.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "e586ed755d76382543d897a63945f82b0b9fea59b5509a55d5b7e89d623687a1"
+    },
+    "effects/magic_1043.json": {
+      "archive": "assets/res/skills/magic_1043.xml",
+      "texture": "assets/res/skills/magic_1043.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "e050deb067b9b099776ed9824a5e572af238415b949c32da19d4a7cf4cf84a04"
+    },
+    "effects/magic_1045.webp": {
+      "archive": "assets/res/skills/magic_1045.xml",
+      "texture": "assets/res/skills/magic_1045.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "30134d6b750222925ef3d271bc6daaf485a5fdc9c8deb65f4567721b72175dd1"
+    },
+    "effects/magic_1045.json": {
+      "archive": "assets/res/skills/magic_1045.xml",
+      "texture": "assets/res/skills/magic_1045.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "8e3a28d0bae66e4b35db50745464e37c2880f5b35a84c89d8cd8c3d7204b3f70"
+    },
+    "effects/magic_1046.webp": {
+      "archive": "assets/res/skills/magic_1046.xml",
+      "texture": "assets/res/skills/magic_1046.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "0f516dd23828affb49656fdd40bcf3be04dadd8aff103eb197545bb8b642c48f"
+    },
+    "effects/magic_1046.json": {
+      "archive": "assets/res/skills/magic_1046.xml",
+      "texture": "assets/res/skills/magic_1046.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "9ea2f99ef5547878e814c1e51580ca408ecb5545f6650ec9e47c16dadd40675e"
+    },
+    "effects/magic_1047.webp": {
+      "archive": "assets/res/skills/magic_1047.xml",
+      "texture": "assets/res/skills/magic_1047.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "74a9d8c1ee835cfb6d26a07905c870e6b26cb4201bd7cd038abdcb500843945a"
+    },
+    "effects/magic_1047.json": {
+      "archive": "assets/res/skills/magic_1047.xml",
+      "texture": "assets/res/skills/magic_1047.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "0c08a68c67fa58b9433b0dde9cd5de2ae73b899d23348b2250787e1710c92a91"
+    },
+    "effects/magic_1048.webp": {
+      "archive": "assets/res/skills/magic_1048.xml",
+      "texture": "assets/res/skills/magic_1048.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "ff2d519f3e5d379c289809d2a88c17fc1f14a2c68b64a8ee24d7271cf91fa869"
+    },
+    "effects/magic_1048.json": {
+      "archive": "assets/res/skills/magic_1048.xml",
+      "texture": "assets/res/skills/magic_1048.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "c05fafc7f749c43d0d4b1bd7c876863e986153272ec82c0f29d57f5434292a2c"
+    },
+    "effects/magic_1049.webp": {
+      "archive": "assets/res/skills/magic_1049.xml",
+      "texture": "assets/res/skills/magic_1049.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "735a08275ea567c3eeaa64b24c2e43253aa23dfab4a3d0e60dd25bbc3cdb1bca"
+    },
+    "effects/magic_1049.json": {
+      "archive": "assets/res/skills/magic_1049.xml",
+      "texture": "assets/res/skills/magic_1049.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "d71bd55fe2d4684f1adf349e536d6d7d9c7c81ca83b4c92176b45f5d463fdc0f"
+    },
+    "effects/magic_1050.webp": {
+      "archive": "assets/res/skills/magic_1050.xml",
+      "texture": "assets/res/skills/magic_1050.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "4f5c5da38c1dbfbf0c4a07db4032028106243329922a3a1f4e89ea25d7b2a9f2"
+    },
+    "effects/magic_1050.json": {
+      "archive": "assets/res/skills/magic_1050.xml",
+      "texture": "assets/res/skills/magic_1050.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "94a9bc52a5e6638955a6a3630cacaac933a2576d1f94b51f50b63d1e9841d301"
+    },
+    "effects/magic_1051.webp": {
+      "archive": "assets/res/skills/magic_1051.xml",
+      "texture": "assets/res/skills/magic_1051.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "d5a94fc9b3b570ac4c560fe4e715c9c244cda7a585b31868e767b1f337015542"
+    },
+    "effects/magic_1051.json": {
+      "archive": "assets/res/skills/magic_1051.xml",
+      "texture": "assets/res/skills/magic_1051.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "aa6b5e34c1894f1955488675e7a7d3bff9adc489dc261a63f04ac3f1b06e44ae"
+    },
+    "effects/magic_1055.webp": {
+      "archive": "assets/res/skills/magic_1055.xml",
+      "texture": "assets/res/skills/magic_1055.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "77c3e7c2c72f0575e6fab3c1166d8f3c4ac401b7da02d08f03f7923836bbb1c9"
+    },
+    "effects/magic_1055.json": {
+      "archive": "assets/res/skills/magic_1055.xml",
+      "texture": "assets/res/skills/magic_1055.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "3f67e361fe4e9948fa290b361e856d5220dfa1aff10f006e095469f174710f3e"
+    },
+    "effects/magic_1056.webp": {
+      "archive": "assets/res/skills/magic_1056.xml",
+      "texture": "assets/res/skills/magic_1056.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "161273f6a3ba9ec8353b680b4a268cf4dc58b37af6fb2b3c10da9db653e811d0"
+    },
+    "effects/magic_1056.json": {
+      "archive": "assets/res/skills/magic_1056.xml",
+      "texture": "assets/res/skills/magic_1056.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "0b51d61f0c7b5c801dfe816838dcc729cf760765b3266a03e9b8d9e6361ed2d4"
+    },
+    "effects/magic_1057.webp": {
+      "archive": "assets/res/skills/magic_1057.xml",
+      "texture": "assets/res/skills/magic_1057.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "8f4ba6cb1d20c2c571f98cca717aef424bca5e39f83b427b961d721c38f950c6"
+    },
+    "effects/magic_1057.json": {
+      "archive": "assets/res/skills/magic_1057.xml",
+      "texture": "assets/res/skills/magic_1057.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "5f5e77ebc042b6318c9a6f58e54e9c0de2dfdbd5dbdc0639030ecc87cc3adf73"
+    },
+    "effects/magic_1058.webp": {
+      "archive": "assets/res/skills/magic_1058.xml",
+      "texture": "assets/res/skills/magic_1058.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "91ae390089de6d0e0377c7103578601846cd182469a78a74b40521f654ef4197"
+    },
+    "effects/magic_1058.json": {
+      "archive": "assets/res/skills/magic_1058.xml",
+      "texture": "assets/res/skills/magic_1058.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "020f16769083a3c40317ee8b96e12c89f9f689f22b83d0e08602591adb8a4116"
+    },
+    "effects/magic_1059.webp": {
+      "archive": "assets/res/skills/magic_1059.xml",
+      "texture": "assets/res/skills/magic_1059.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "b135d2080e6900ac4f316da909f3b373e99f274f00123c22d5f917577700daa3"
+    },
+    "effects/magic_1059.json": {
+      "archive": "assets/res/skills/magic_1059.xml",
+      "texture": "assets/res/skills/magic_1059.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "c52521788a9cff115637675e935a9f4c231bd1613c7258c07c6859c91348b57d"
+    },
+    "effects/magic_1060.webp": {
+      "archive": "assets/res/skills/magic_1060.xml",
+      "texture": "assets/res/skills/magic_1060.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "5bc14198e50ca90b020ab657240795a811be679b4745625e25fe1c52bc27a7cd"
+    },
+    "effects/magic_1060.json": {
+      "archive": "assets/res/skills/magic_1060.xml",
+      "texture": "assets/res/skills/magic_1060.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "6039e04bc49b095982a2e0e537eb649bb6ed3eab8bfb42d7c1962ffa0966d0a8"
+    },
+    "effects/magic_1061.webp": {
+      "archive": "assets/res/skills/magic_1061.xml",
+      "texture": "assets/res/skills/magic_1061.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "fb02f567c80f0f0d1c6cb700db70597a547c18eadc469735fc8c936cf3c56fc9"
+    },
+    "effects/magic_1061.json": {
+      "archive": "assets/res/skills/magic_1061.xml",
+      "texture": "assets/res/skills/magic_1061.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "f317eb448fdac1397d618f41edadecce43704f61925405d084d6a7284e6c2ab0"
+    },
+    "effects/magic_1062.webp": {
+      "archive": "assets/res/skills/magic_1062.xml",
+      "texture": "assets/res/skills/magic_1062.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "ab5d405b450f142dc684e8faec981b84d2e8deac75689af4b9de5398efa64d1c"
+    },
+    "effects/magic_1062.json": {
+      "archive": "assets/res/skills/magic_1062.xml",
+      "texture": "assets/res/skills/magic_1062.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "df008f8b35a3befa69cbbabb0ecc030d82fb9478d2bdf555cac1c8afe3e73c02"
+    },
+    "effects/magic_1063.webp": {
+      "archive": "assets/res/skills/magic_1063.xml",
+      "texture": "assets/res/skills/magic_1063.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "60a21bbe8d9a6215d6a5e6f3526221cf3fe8ea969fa7f8b6ae3595742164b6b2"
+    },
+    "effects/magic_1063.json": {
+      "archive": "assets/res/skills/magic_1063.xml",
+      "texture": "assets/res/skills/magic_1063.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "c05c2fa5427f20dc6c46ab4ba6ed3ba2b3a46309a269bc3486bd27461f5fa45e"
+    },
+    "effects/magic_1064.webp": {
+      "archive": "assets/res/skills/magic_1064.xml",
+      "texture": "assets/res/skills/magic_1064.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "c42914619beeb6b8c94a2232762c17dd9b9366beb7626cac455bc9229851f238"
+    },
+    "effects/magic_1064.json": {
+      "archive": "assets/res/skills/magic_1064.xml",
+      "texture": "assets/res/skills/magic_1064.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "2e15e8acdeed5fdee66984febfb086c06cb6258c37ede265061e9adb82520aa0"
+    },
+    "effects/magic_1065.webp": {
+      "archive": "assets/res/skills/magic_1065.xml",
+      "texture": "assets/res/skills/magic_1065.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "a0c88210a9271090050027fa38c578e1c71725a4fe56b2439c0f5fa52222be51"
+    },
+    "effects/magic_1065.json": {
+      "archive": "assets/res/skills/magic_1065.xml",
+      "texture": "assets/res/skills/magic_1065.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "d8ec8bba4c541793233edd617244ceb1551a61cdb2bf2730c77155b7b4ebc16e"
+    },
+    "effects/magic_1066.webp": {
+      "archive": "assets/res/skills/magic_1066.xml",
+      "texture": "assets/res/skills/magic_1066.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "a6b55386320e982635b9c924f18e5ff97b214ef96f114fc77df05b4770156d32"
+    },
+    "effects/magic_1066.json": {
+      "archive": "assets/res/skills/magic_1066.xml",
+      "texture": "assets/res/skills/magic_1066.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "a41d6cbe3f41cf6edeef5a4454ce6136ce16336011d2689d25fb0384ec58886f"
+    },
+    "effects/magic_1067.webp": {
+      "archive": "assets/res/skills/magic_1067.xml",
+      "texture": "assets/res/skills/magic_1067.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "149b4a80dbcebe604f92397e576b05ba334686b96c43d8c3bac7d03f0eb75215"
+    },
+    "effects/magic_1067.json": {
+      "archive": "assets/res/skills/magic_1067.xml",
+      "texture": "assets/res/skills/magic_1067.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "d84548ae88070773d249186207f305cb887e402d44f58e353dfeb72c64f8fc94"
+    },
+    "effects/magic_1068.webp": {
+      "archive": "assets/res/skills/magic_1068.xml",
+      "texture": "assets/res/skills/magic_1068.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "73ce9a1c2a6fb919dbeb9635e6309aeb32f9d1e5426059b91154a0258fc66cc7"
+    },
+    "effects/magic_1068.json": {
+      "archive": "assets/res/skills/magic_1068.xml",
+      "texture": "assets/res/skills/magic_1068.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "5e42462dd1daf51bf4dc965f153d0d3906e2f8d5dcec6166e531701ba6a5043a"
+    },
+    "effects/magic_1069.webp": {
+      "archive": "assets/res/skills/magic_1069.xml",
+      "texture": "assets/res/skills/magic_1069.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "6bd31a65bc8810601ccec802bfab929999a4d8651606fee2e2e867de42a0ffaa"
+    },
+    "effects/magic_1069.json": {
+      "archive": "assets/res/skills/magic_1069.xml",
+      "texture": "assets/res/skills/magic_1069.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "569a6046bed2af92ea7902c2db71f80eceb51a55540ea4a84b29bc68e2b49e08"
+    },
+    "effects/magic_1070.webp": {
+      "archive": "assets/res/skills/magic_1070.xml",
+      "texture": "assets/res/skills/magic_1070.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "be087d9b2017652e3cef654a699e773d2f2dcc0676434f3eeb2572a0e5db36ce"
+    },
+    "effects/magic_1070.json": {
+      "archive": "assets/res/skills/magic_1070.xml",
+      "texture": "assets/res/skills/magic_1070.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "14b2d421a9c58ffbb5997c1201b6acf7e222960e4f89b3a2faec6c37ea17c02c"
+    },
+    "effects/magic_1071.webp": {
+      "archive": "assets/res/skills/magic_1071.xml",
+      "texture": "assets/res/skills/magic_1071.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "1af7f9d30d9c6565b296c8ec3e846005fa0339db87fe09ce6fea5bbf45b7c7f0"
+    },
+    "effects/magic_1071.json": {
+      "archive": "assets/res/skills/magic_1071.xml",
+      "texture": "assets/res/skills/magic_1071.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "0ef66fec053c14148b6dced3effc1011c98ffe54e885998e5d1c306f4a2170db"
+    },
+    "effects/magic_1072.webp": {
+      "archive": "assets/res/skills/magic_1072.xml",
+      "texture": "assets/res/skills/magic_1072.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "e9d5a44e2e70585163a6a0a5737787abd8598892b125dc9281ba021b0d9f5cb6"
+    },
+    "effects/magic_1072.json": {
+      "archive": "assets/res/skills/magic_1072.xml",
+      "texture": "assets/res/skills/magic_1072.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "58f522c9828d3d80dacef2cc6124b3ddbb390d98090c15baa0b7d4daf0f514bf"
+    },
+    "effects/magic_1072_4.webp": {
+      "archive": "assets/res/skills/magic_1072_4.xml",
+      "texture": "assets/res/skills/magic_1072_4.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "e9d5a44e2e70585163a6a0a5737787abd8598892b125dc9281ba021b0d9f5cb6"
+    },
+    "effects/magic_1072_4.json": {
+      "archive": "assets/res/skills/magic_1072_4.xml",
+      "texture": "assets/res/skills/magic_1072_4.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "80f8e277d7fde4081de8ce4eae72e7fb24866676b0abea36ddd1954f34736bbf"
+    },
+    "effects/magic_1073.webp": {
+      "archive": "assets/res/skills/magic_1073.xml",
+      "texture": "assets/res/skills/magic_1073.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "e152d9151c2f2b7a5627ccbf52a8e81930c857a42df49e4980a19ca6acb8f329"
+    },
+    "effects/magic_1073.json": {
+      "archive": "assets/res/skills/magic_1073.xml",
+      "texture": "assets/res/skills/magic_1073.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "490d1001838bc9327b3a8faf2df2a9fb36d5b5a2ffed5a96780d810bf9427004"
+    },
+    "effects/magic_1073_4.webp": {
+      "archive": "assets/res/skills/magic_1073_4.xml",
+      "texture": "assets/res/skills/magic_1073_4.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "fbb796df642d08fdb2fc2161d3232c717bf16b3926b1095434c21cf942b91d35"
+    },
+    "effects/magic_1073_4.json": {
+      "archive": "assets/res/skills/magic_1073_4.xml",
+      "texture": "assets/res/skills/magic_1073_4.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "a7341e3a9e6a4eab68f7d4067134340ac5e76b23783c622c3e5011393fd3d7a1"
+    },
+    "effects/magic_1074.webp": {
+      "archive": "assets/res/skills/magic_1074.xml",
+      "texture": "assets/res/skills/magic_1074.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "6a2a1771489efe7ad699e0817d0a27607589e95e538274e552971934365cdaba"
+    },
+    "effects/magic_1074.json": {
+      "archive": "assets/res/skills/magic_1074.xml",
+      "texture": "assets/res/skills/magic_1074.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "8df7560d5d0cb27c5d045123863108fff635e9f9a201e1ffbb0578a78a359fc2"
+    },
+    "effects/magic_1074_4.webp": {
+      "archive": "assets/res/skills/magic_1074_4.xml",
+      "texture": "assets/res/skills/magic_1074_4.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "6a2a1771489efe7ad699e0817d0a27607589e95e538274e552971934365cdaba"
+    },
+    "effects/magic_1074_4.json": {
+      "archive": "assets/res/skills/magic_1074_4.xml",
+      "texture": "assets/res/skills/magic_1074_4.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "f067cb94d2b60d25ca271af748a6279eaa881d959af1d424d6b8e79dadf654bf"
+    },
+    "effects/magic_1075.webp": {
+      "archive": "assets/res/skills/magic_1075.xml",
+      "texture": "assets/res/skills/magic_1075.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "6b917ceaf2aff9cc43753e1360b2e8b44086b00f46f70495d6141145deac14a1"
+    },
+    "effects/magic_1075.json": {
+      "archive": "assets/res/skills/magic_1075.xml",
+      "texture": "assets/res/skills/magic_1075.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "e66f5978fd82e48d0d0e92c9fb0160ae78ee9a37006a630518c753fd98352f2a"
+    },
+    "effects/magic_1075_4.webp": {
+      "archive": "assets/res/skills/magic_1075_4.xml",
+      "texture": "assets/res/skills/magic_1075_4.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "6b917ceaf2aff9cc43753e1360b2e8b44086b00f46f70495d6141145deac14a1"
+    },
+    "effects/magic_1075_4.json": {
+      "archive": "assets/res/skills/magic_1075_4.xml",
+      "texture": "assets/res/skills/magic_1075_4.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "949c24c9c660aed594649dbcff66b94fa456f131259f1a25f7733e4e05e540b1"
+    },
+    "effects/magic_1076.webp": {
+      "archive": "assets/res/skills/magic_1076.xml",
+      "texture": "assets/res/skills/magic_1076.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "9084b404f391ddee793b5df7f50817278786efbfd0af51d4c61d9980cb5b4a6e"
+    },
+    "effects/magic_1076.json": {
+      "archive": "assets/res/skills/magic_1076.xml",
+      "texture": "assets/res/skills/magic_1076.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "4bf72d59d0d44f3f3dbfaecfafe3cf5e3bed0858345d07d0531a7f9a849d02bb"
+    },
+    "effects/magic_1076_4.webp": {
+      "archive": "assets/res/skills/magic_1076_4.xml",
+      "texture": "assets/res/skills/magic_1076_4.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "63b5269320b98977b841857cc1957376e1a109a60debb6a00ba0565eb8f1bbcc"
+    },
+    "effects/magic_1076_4.json": {
+      "archive": "assets/res/skills/magic_1076_4.xml",
+      "texture": "assets/res/skills/magic_1076_4.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "6907f6cb838cf4a0f8ff13b7600ed0c757374f4d23c2c0f3309e964671fd370e"
+    },
+    "effects/magic_1092.webp": {
+      "archive": "assets/res/skills/magic_1092.xml",
+      "texture": "assets/res/skills/magic_1092.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "607f8806295ccc4b74bf18df0a7a26f99dffeadab68b8302ded7b88e58c826b4"
+    },
+    "effects/magic_1092.json": {
+      "archive": "assets/res/skills/magic_1092.xml",
+      "texture": "assets/res/skills/magic_1092.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "e522e8c97e4156bd623cdee20f48a8da83af0951dfc471588c731e8e32a6ec85"
+    },
+    "effects/magic_1093.webp": {
+      "archive": "assets/res/skills/magic_1093.xml",
+      "texture": "assets/res/skills/magic_1093.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "d54d10a3a787ae711eb8cf2403843f03af5d1f19d57e465605906b5a68cee279"
+    },
+    "effects/magic_1093.json": {
+      "archive": "assets/res/skills/magic_1093.xml",
+      "texture": "assets/res/skills/magic_1093.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "cc394a07a864a347796076293e9a8b14a6839bc9c240e098045429bfce146792"
+    },
+    "effects/magic_1100.webp": {
+      "archive": "assets/res/skills/magic_1100.xml",
+      "texture": "assets/res/skills/magic_1100.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "e3291c9d7431b7b344d973a30f9c30a8653d00fcc44893a4e133b18d894cdf23"
+    },
+    "effects/magic_1100.json": {
+      "archive": "assets/res/skills/magic_1100.xml",
+      "texture": "assets/res/skills/magic_1100.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "07ee73c062c783490f4952e6c67d4493ad3be8f2913bc8a90b3fd2d86050350e"
+    },
+    "effects/magic_1100_4.webp": {
+      "archive": "assets/res/skills/magic_1100_4.xml",
+      "texture": "assets/res/skills/magic_1100_4.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "e3291c9d7431b7b344d973a30f9c30a8653d00fcc44893a4e133b18d894cdf23"
+    },
+    "effects/magic_1100_4.json": {
+      "archive": "assets/res/skills/magic_1100_4.xml",
+      "texture": "assets/res/skills/magic_1100_4.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "318896ae40ae9ec18fe10a7b1fff79b21148919752072d7a6bde1aa8379da4d0"
+    },
+    "effects/magic_1200.webp": {
+      "archive": "assets/res/skills/magic_1200.xml",
+      "texture": "assets/res/skills/magic_1200.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "c1494698deaf692c618fce5cb7bb2c089c8cbb9380821c648bd83ed90e68b87c"
+    },
+    "effects/magic_1200.json": {
+      "archive": "assets/res/skills/magic_1200.xml",
+      "texture": "assets/res/skills/magic_1200.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "fa9ecc3c8ad8e58fea91be3cd3636621bb788e62c14bc8e88f71e39fb616cdbc"
+    },
+    "effects/magic_1201.webp": {
+      "archive": "assets/res/skills/magic_1201.xml",
+      "texture": "assets/res/skills/magic_1201.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "de84f3ad892caaa45a7bc5c61b37d1777ef1356aff02899bddf4655dd9f29aec"
+    },
+    "effects/magic_1201.json": {
+      "archive": "assets/res/skills/magic_1201.xml",
+      "texture": "assets/res/skills/magic_1201.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "25ca1b6c71b676c44deb6e99e441ee7bf9a618115a556313b2b0641882ba4b15"
+    },
+    "effects/magic_1201_4.webp": {
+      "archive": "assets/res/skills/magic_1201_4.xml",
+      "texture": "assets/res/skills/magic_1201_4.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "c42cf40bbdc9d398fe99d7901145bff6bdd0dc2c3aa3a721664cfe64aecea776"
+    },
+    "effects/magic_1201_4.json": {
+      "archive": "assets/res/skills/magic_1201_4.xml",
+      "texture": "assets/res/skills/magic_1201_4.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "762cee18abb4f0f972f6da3e695ff529758bf089d3c744e10c3228199a348f88"
+    },
+    "effects/magic_1202.webp": {
+      "archive": "assets/res/skills/magic_1202.xml",
+      "texture": "assets/res/skills/magic_1202.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "2dab1ae57c91c275502ee9afca914e845c35d95013ab5aac9d4f2eea43434460"
+    },
+    "effects/magic_1202.json": {
+      "archive": "assets/res/skills/magic_1202.xml",
+      "texture": "assets/res/skills/magic_1202.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "46dd632914d00fef90ead7db5fcdd33340e3a5bfae1702cfea2b80bc9cb863b4"
+    },
+    "effects/magic_1203.webp": {
+      "archive": "assets/res/skills/magic_1203.xml",
+      "texture": "assets/res/skills/magic_1203.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "649b8cd0e595e8107144bf2af640907626457183c64598ed324738a2c769676c"
+    },
+    "effects/magic_1203.json": {
+      "archive": "assets/res/skills/magic_1203.xml",
+      "texture": "assets/res/skills/magic_1203.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "c60f331e790c23afc9c03f93ee6cee9477483bc5a71d1081e5facd97e8a6fb96"
+    },
+    "effects/magic_1204.webp": {
+      "archive": "assets/res/skills/magic_1204.xml",
+      "texture": "assets/res/skills/magic_1204.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "36247fc92865649a5fdb9c50ac1a2b6e887f0a241100f68c95f577439e478001"
+    },
+    "effects/magic_1204.json": {
+      "archive": "assets/res/skills/magic_1204.xml",
+      "texture": "assets/res/skills/magic_1204.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "14f95843e2cdb784edb09dea84c598cfb3d1ddabf95dcf2fc4fc112d561da6ff"
+    },
+    "effects/magic_1205.webp": {
+      "archive": "assets/res/skills/magic_1205.xml",
+      "texture": "assets/res/skills/magic_1205.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "b5d3e94ad5f676b675827aba5e30c1a37bf227650bcd694869711690324bdb89"
+    },
+    "effects/magic_1205.json": {
+      "archive": "assets/res/skills/magic_1205.xml",
+      "texture": "assets/res/skills/magic_1205.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "f356e98d3636676fa940fa56e06d6f5674fbe09f4173e970572135502e660395"
+    },
+    "effects/magic_1206.webp": {
+      "archive": "assets/res/skills/magic_1206.xml",
+      "texture": "assets/res/skills/magic_1206.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "766c101353046e066776ea05ae6f4843c74c8b78853e8dda2144ae770a6d2c2d"
+    },
+    "effects/magic_1206.json": {
+      "archive": "assets/res/skills/magic_1206.xml",
+      "texture": "assets/res/skills/magic_1206.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "ec0d92b6b46c7df1830a500d0dea69a4381ec473bf4da82962da58463df778c9"
+    },
+    "effects/magic_base1.webp": {
+      "archive": "assets/res/skills/magic_base1.xml",
+      "texture": "assets/res/skills/magic_base1.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "4dd54e5b06bcc338f16ce9a2948e04e377d5ad1ea4584a4e9a059717e0521bc4"
+    },
+    "effects/magic_base1.json": {
+      "archive": "assets/res/skills/magic_base1.xml",
+      "texture": "assets/res/skills/magic_base1.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "ecb0d438a6fefcd069190515690aff8c80f039da24bc98382666fc7e37b81bb8"
     }
   }
 }
