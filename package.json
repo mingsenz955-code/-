@@ -1,6 +1,6 @@
 {
   "name": "yulong-ranch",
-  "version": "0.16.10",
+  "version": "0.16.11",
   "private": true,
   "description": "Offline Windows dragon ranch prototype",
   "main": "desktop/main.cjs",
@@ -14,3 +14,4 @@
     "electron": "^42.0.0"
   }
 }
+

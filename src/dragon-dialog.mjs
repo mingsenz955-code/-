@@ -10,7 +10,7 @@ export async function openDragonDialog(state,id,{returnToCollection=false}={}){c
  for(const [key,label] of Object.entries(labels)){values[key+'/miaoshu']=label;values[key+'/shuzi']='—';values[key+'/fujia']=''}
  const slots={icon:`<div class="source-dragon-model">${dragonArt(d.species,'',d.level)}</div>`,lv:`<span class="source-level">Lv.${d.level}</span>`};
  for(let i=1;i<=3;i++)slots['con_shuxing'+i]=sp.attributes?.[i-1]?`<img class="source-element" src="assets/original/ui/shangcheng_long_shuxing_${sp.attributes[i-1]}.png" alt="${escape(sp.element)}">`:'';
- const actions={evolution_entry:{type:'openEvolution',id,label:'进化条件'},close:{type:returnToCollection?'returnCollection':'close',label:'关闭喂养'},'weishi/btn':{type:'feed',id,label:'喂食'},'yidong/btn':{type:'dragonMove',id,label:'移动幼龙'},btn_ShiWu:{type:'farm',label:'种植龙粮'}};
- const disabled=new Set(busy||d.level>=RULES.maxLevel||state.food<feedCost(d)?['weishi/btn']:[]);if(busy)disabled.add('yidong/btn');
+ const actions={evolution_entry:{type:'openEvolution',id,label:'进化条件'},close:{type:returnToCollection?'returnCollection':'close',label:'关闭喂养'},'weishi/btn':{type:'feed',id,label:'喂食'},'weishi_vip/btn':{type:'feedAll',id,label:'一键喂食'},'yidong/btn':{type:'dragonMove',id,label:'移动幼龙'},btn_ShiWu:{type:'farm',label:'种植龙粮'}};
+ const disabled=new Set(busy||d.level>=RULES.maxLevel||state.food<feedCost(d)?['weishi/btn','weishi_vip/btn']:[]);if(busy)disabled.add('yidong/btn');
  const scale=Math.min((innerWidth-20)/1024,(innerHeight-20)/768);dialog.style.setProperty('--source-scale',scale);dialog.innerHTML=`<div class="source-artboard">${renderSourceLayout(layout,{values,slots,actions,disabled,hidden:new Set(['evolution_entry_di']),progress:{'jindu/tianchong':(d.feedsInLevel??0)/4*100}})}</div>`;dialog.showModal();
 }

@@ -41,6 +41,10 @@ test('moving dragons settles old and new income at the correct time',()=>{
 test('four feeds per level and original food price breakpoint',()=>{
  let s=createGame(T);for(let i=0;i<3;i++)s=action(s,'feed',{id:2},T);assert.equal(s.dragons[0].level,1);assert.equal(s.dragons[0].feedsInLevel,3);assert.equal(s.food,385);s=action(s,'feed',{id:2},T);assert.equal(s.dragons[0].level,2);assert.equal(s.dragons[0].feedsInLevel,0);assert.equal(s.food,380);
 });
+test('one-click feeding stops after one level or when food is insufficient',()=>{
+ let s=createGame(T);s.food=100;s=action(s,'feedAll',{id:2},T);assert.equal(s.dragons[0].level,2);assert.equal(s.dragons[0].feedsInLevel,0);assert.equal(s.food,80);assert.equal(s.stats.feeds,4);
+ s.food=10;s=action(s,'feedAll',{id:2},T);assert.equal(s.dragons[0].level,2);assert.equal(s.dragons[0].feedsInLevel,1);assert.equal(s.food,0);assert.equal(s.stats.feeds,5);assert.throws(()=>action(s,'feedAll',{id:2},T),/龙粮不足/);
+});
 test('original crop prices, wait times and yields; legacy crop saves retain original promised yield',()=>{
  let s=action(createGame(T),'plant',{cropId:2},T);assert.equal(s.coins,950);assert.equal(s.farm.readyAt,T+300000);s=action(s,'harvest',{},T+300000);assert.equal(s.food,450);s.farm={readyAt:T+300000};s=action(s,'harvest',{},T+300000);assert.equal(s.food,540);
  assert.throws(()=>action(createGame(T),'plant',{cropId:4},T),/升级农场/);
