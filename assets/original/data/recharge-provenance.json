@@ -1,0 +1,11 @@
+{
+  "baseline": "2.9.35-202402271124",
+  "tablesSha256": "63ac9f739c2dcd2ec226212a7037a519c7be8428ed519fd591010db32a463345",
+  "tierCount": 6,
+  "columns": "LibDanbichongzhiInfo defines all seventeen columns; nothing here is inferred.",
+  "priceRelation": "costYuan is the yuan price and androidCost/iosCost are exactly ten times it on every row.",
+  "notes": [
+    "These are the client's single-purchase recharge tiers. The real payment path is not implemented and must not be.",
+    "Award names come from the client items table plus textnew_cn; one award (1074suipian) has no translation entry and keeps its internal key."
+  ]
+}

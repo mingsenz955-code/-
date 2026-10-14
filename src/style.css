@@ -94,3 +94,12 @@ canvas.dragon{display:inline-block;object-fit:contain}.dragon-preview-dialog{wid
 .source-pve-node img{width:100%;height:100%;object-fit:contain;pointer-events:none}
 .source-pve-node.is-major{width:120px;height:120px}
 .source-pve-node:hover{transform:translate(-50%,-50%) scale(1.06)}
+
+/* 原版充值面板 panel_recharge 与档位卡 item_recharge_data */
+.source-recharge-list{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:905px;height:376px;display:grid;grid-template-columns:repeat(3,251px);justify-content:center;align-content:start;gap:14px;overflow-y:auto;pointer-events:auto;scrollbar-color:#9c6b3b #efd4a0;scrollbar-width:thin}
+.source-recharge-card{position:relative;width:251px;height:361px;padding:0;border:0;border-radius:0;background:transparent!important;box-shadow:none;pointer-events:auto}
+.source-recharge-card:hover{filter:brightness(1.05)}
+.source-recharge-icon{position:absolute;width:96px;height:96px;transform:translate(-50%,-50%);object-fit:contain;pointer-events:none}
+.source-recharge-status{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:22px;color:#ffe9bf;white-space:nowrap;text-shadow:0 1px 2px #000a}
+/* Award lines are long (three items with names), so the card wraps and shrinks them. */
+.source-recharge-card .source-label[data-source$="give"]{white-space:normal!important;line-height:1.15;font-size:16px!important;text-align:center;transform:translate(-50%,-60%)}
