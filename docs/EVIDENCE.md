@@ -106,3 +106,14 @@
 - 补入原ui_evolution/ui_star/ui_daojukuang/ui_mydragon四图集所需资源，新增64条原图登记，manifest共1784项（含模型JSON，不等于1784张图）。
 - 喂食仍用已有原四次/级与价格公式，原进度图以feedsInLevel/4裁切，Lv4模型阶段变化仍按既有源规则。UI产出明确显示每分钟本地rate，原运行时单位格式待对照。
 - 战斗生命/攻击/防御/抗性/暴击/战斗力当前显示“—”，不从未核对成长公式伪造数字。原进化、一键喂食和出售入口保留禁用；出售不会删除玩家龙。
+
+## E05 原版我的龙族 — v0.8
+- 使用已安全导出的ui_mydragon（1024×768）和item_mydragon（287×459）原坐标、背景、标题、等级盾牌、未点亮星槽与元素位置。横向间距/模型视觉锚点仍待同分辨率实机核对。
+- 源ui_mydragon的ckb节点包含img_on/img_off和all/e/f/w/p/el/i/m/d/l，图像实际在ui_ButtonProp.plist，而非同名ui_shop图集中；新增30条原图登记，manifest共1814项。
+- scripts/export-ui-sizes.py导出1225条原UI图集尺寸，补全源布局省略的按钮宽高；未再假定所有缺省按钮均85×85。
+- 本地筛选只从已拥有龙读取attributes，混合龙的次要属性也参与。旧版3测试混合龙有明确兼容属性映射，未将未拥有目录龙塞入列表。
+- 当前排序按本地实例编号；源品质底板/星级点亮/运行时排序规则尚未接入，不把空星槽当作已实现升星系统。字体仍为系统字体。
+
+## E05 本轮额外静态核对
+- DragonUI.lua的已安全读取常量在levelUp更新路径包含Config_LocaleText.lang('#0#/MIN')和rate；APK textnew_cn.json中该键明确译为“#0#/分钟”。喂养页产出已改为数值/分钟，单位文案不再仅凭本地习惯。
+- APK含15套.fnt和同名PNG位图字库，无TTF/OTF/WOFF文件；ui_main只有少数节点显式bmp=1/font，ui_dragon/item_mydragon当前绑定文字大多是普通label。不能据“存在字库”就给全部普通标签换成任意位图字体；动态new text helper及原系统默认字体仍须核对。

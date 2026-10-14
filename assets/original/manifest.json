@@ -13253,6 +13253,246 @@
       "width": 78,
       "height": 25,
       "sha256": "c214c97b1fdfb5594d9447fb6f3bf78079c71ecf4e9cf5a1bdf62e03cb6036ce"
+    },
+    "ui/ui_shop_a0001.png": {
+      "archive": "assets/res/ui/ui_ButtonProp.plist",
+      "frame": "ui_shop_a0001.png",
+      "texture": "assets/res/ui/ui_ButtonProp.pkm",
+      "width": 73,
+      "height": 100,
+      "sha256": "c53a0218b035f2f5206c9c0c706dc1625a352d4c0ea0e13e38188de8358c709e"
+    },
+    "ui/ui_shop_a0002.png": {
+      "archive": "assets/res/ui/ui_ButtonProp.plist",
+      "frame": "ui_shop_a0002.png",
+      "texture": "assets/res/ui/ui_ButtonProp.pkm",
+      "width": 73,
+      "height": 100,
+      "sha256": "f7e56c9760d237168899503bbf9562470ccf6d466c43cbba52d03dcf2650ca18"
+    },
+    "ui/ui_shop_a0003.png": {
+      "archive": "assets/res/ui/ui_ButtonProp.plist",
+      "frame": "ui_shop_a0003.png",
+      "texture": "assets/res/ui/ui_ButtonProp.pkm",
+      "width": 73,
+      "height": 100,
+      "sha256": "523fbd05f74dd668959ca5f130c6b7ada341aeda7ef199051ff0623ca7d9bf7f"
+    },
+    "ui/ui_shop_a0004.png": {
+      "archive": "assets/res/ui/ui_ButtonProp.plist",
+      "frame": "ui_shop_a0004.png",
+      "texture": "assets/res/ui/ui_ButtonProp.pkm",
+      "width": 73,
+      "height": 100,
+      "sha256": "580a6f29905fa9be9756fb100794770a13b2a12e31fd6e3d9240193bd17e5598"
+    },
+    "ui/ui_shop_a0005.png": {
+      "archive": "assets/res/ui/ui_ButtonProp.plist",
+      "frame": "ui_shop_a0005.png",
+      "texture": "assets/res/ui/ui_ButtonProp.pkm",
+      "width": 73,
+      "height": 100,
+      "sha256": "dfe5530df976d4f10db9cacda71a0a726cd86280b66e45c18f5582a9f2d40749"
+    },
+    "ui/ui_shop_a0006.png": {
+      "archive": "assets/res/ui/ui_ButtonProp.plist",
+      "frame": "ui_shop_a0006.png",
+      "texture": "assets/res/ui/ui_ButtonProp.pkm",
+      "width": 73,
+      "height": 100,
+      "sha256": "725cce167278e9bc9324c3cde175a18d648c40ac907fd363d4618cd1d8968fe7"
+    },
+    "ui/ui_shop_a0007.png": {
+      "archive": "assets/res/ui/ui_ButtonProp.plist",
+      "frame": "ui_shop_a0007.png",
+      "texture": "assets/res/ui/ui_ButtonProp.pkm",
+      "width": 73,
+      "height": 100,
+      "sha256": "e3b715bb289ef15fc3cb2c25770ff45d41157eb38486305e9ee10bf8e93dcb62"
+    },
+    "ui/ui_shop_a0008.png": {
+      "archive": "assets/res/ui/ui_ButtonProp.plist",
+      "frame": "ui_shop_a0008.png",
+      "texture": "assets/res/ui/ui_ButtonProp.pkm",
+      "width": 73,
+      "height": 100,
+      "sha256": "948ef9f8f733ebe4a995adfd4d08451077cfcc29918af95fa8edd1d60d3df953"
+    },
+    "ui/ui_shop_a0009.png": {
+      "archive": "assets/res/ui/ui_ButtonProp.plist",
+      "frame": "ui_shop_a0009.png",
+      "texture": "assets/res/ui/ui_ButtonProp.pkm",
+      "width": 73,
+      "height": 100,
+      "sha256": "9f43afad0f416e6889b9b7d80d97cf7f53cfc1d2c5b46e6d9a81d91ac1541d96"
+    },
+    "ui/ui_shop_a0010.png": {
+      "archive": "assets/res/ui/ui_ButtonProp.plist",
+      "frame": "ui_shop_a0010.png",
+      "texture": "assets/res/ui/ui_ButtonProp.pkm",
+      "width": 73,
+      "height": 100,
+      "sha256": "6202c9b5340e069c20d1e697c6edebe6d544425229be203b203eb8e4a53f1f87"
+    },
+    "ui/ui_shop_b0001.png": {
+      "archive": "assets/res/ui/ui_ButtonProp.plist",
+      "frame": "ui_shop_b0001.png",
+      "texture": "assets/res/ui/ui_ButtonProp.pkm",
+      "width": 73,
+      "height": 100,
+      "sha256": "6bb3ee6dac7638a1683d4a6f12f97753921714c431a15bafec5d2e850a5b6fe7"
+    },
+    "ui/ui_shop_b0002.png": {
+      "archive": "assets/res/ui/ui_ButtonProp.plist",
+      "frame": "ui_shop_b0002.png",
+      "texture": "assets/res/ui/ui_ButtonProp.pkm",
+      "width": 73,
+      "height": 100,
+      "sha256": "c7ed0786ad2f021fee2479c09bb1622c4ce7734b28c18cc09ec69bbb721227f8"
+    },
+    "ui/ui_shop_b0003.png": {
+      "archive": "assets/res/ui/ui_ButtonProp.plist",
+      "frame": "ui_shop_b0003.png",
+      "texture": "assets/res/ui/ui_ButtonProp.pkm",
+      "width": 73,
+      "height": 100,
+      "sha256": "91964a53432f6d692efb5342268ed7f87559bb03102f173956e49eea36db65a9"
+    },
+    "ui/ui_shop_b0004.png": {
+      "archive": "assets/res/ui/ui_ButtonProp.plist",
+      "frame": "ui_shop_b0004.png",
+      "texture": "assets/res/ui/ui_ButtonProp.pkm",
+      "width": 73,
+      "height": 100,
+      "sha256": "fb53c531af6d869e7d107aef61df28643ea8a8a852fdcaa57856bc09d20de115"
+    },
+    "ui/ui_shop_b0005.png": {
+      "archive": "assets/res/ui/ui_ButtonProp.plist",
+      "frame": "ui_shop_b0005.png",
+      "texture": "assets/res/ui/ui_ButtonProp.pkm",
+      "width": 73,
+      "height": 100,
+      "sha256": "54302a5466d3e51c9f6d114e13cc1ac400cf3219ffb78f3fbd70a97bd485a66c"
+    },
+    "ui/ui_shop_b0006.png": {
+      "archive": "assets/res/ui/ui_ButtonProp.plist",
+      "frame": "ui_shop_b0006.png",
+      "texture": "assets/res/ui/ui_ButtonProp.pkm",
+      "width": 73,
+      "height": 100,
+      "sha256": "b45dae09b9aebc1bc18c3d40bb0fc0633575f96ccdea2ded11ea7da4c91f7ee4"
+    },
+    "ui/ui_shop_b0007.png": {
+      "archive": "assets/res/ui/ui_ButtonProp.plist",
+      "frame": "ui_shop_b0007.png",
+      "texture": "assets/res/ui/ui_ButtonProp.pkm",
+      "width": 73,
+      "height": 100,
+      "sha256": "0f5300a6ca92c5fae661bd8864caca0ace735279885e348478be9016c01a5dad"
+    },
+    "ui/ui_shop_b0008.png": {
+      "archive": "assets/res/ui/ui_ButtonProp.plist",
+      "frame": "ui_shop_b0008.png",
+      "texture": "assets/res/ui/ui_ButtonProp.pkm",
+      "width": 73,
+      "height": 100,
+      "sha256": "7d1325f030991185a1cd05375ef629834bef86a3f7aa0078308506e19fd3fa54"
+    },
+    "ui/ui_shop_b0009.png": {
+      "archive": "assets/res/ui/ui_ButtonProp.plist",
+      "frame": "ui_shop_b0009.png",
+      "texture": "assets/res/ui/ui_ButtonProp.pkm",
+      "width": 73,
+      "height": 100,
+      "sha256": "a8294cf936429286548195e29196653a9887ebc7eb220ce68a6bc224d39aa2b4"
+    },
+    "ui/ui_shop_b0010.png": {
+      "archive": "assets/res/ui/ui_ButtonProp.plist",
+      "frame": "ui_shop_b0010.png",
+      "texture": "assets/res/ui/ui_ButtonProp.pkm",
+      "width": 73,
+      "height": 100,
+      "sha256": "0894f9ec87f863f62cb23bfd2ff4b78534a41f040c0eb45daf4dac23e70234ad"
+    },
+    "ui/ui_shop_c0001.png": {
+      "archive": "assets/res/ui/ui_ButtonProp.plist",
+      "frame": "ui_shop_c0001.png",
+      "texture": "assets/res/ui/ui_ButtonProp.pkm",
+      "width": 73,
+      "height": 100,
+      "sha256": "c24bad75b15db90752271fd44874ec22ec276626eb9e1db4a04671506d37af11"
+    },
+    "ui/ui_shop_c0002.png": {
+      "archive": "assets/res/ui/ui_ButtonProp.plist",
+      "frame": "ui_shop_c0002.png",
+      "texture": "assets/res/ui/ui_ButtonProp.pkm",
+      "width": 73,
+      "height": 100,
+      "sha256": "eebc6f25f08f68fc6664c8f34ea5616b1ad5da1eb1a210fc13d7f07d35d3b399"
+    },
+    "ui/ui_shop_c0003.png": {
+      "archive": "assets/res/ui/ui_ButtonProp.plist",
+      "frame": "ui_shop_c0003.png",
+      "texture": "assets/res/ui/ui_ButtonProp.pkm",
+      "width": 73,
+      "height": 100,
+      "sha256": "b6829c333283cda24c30495784d1f72e62a8cecf4ed9de7759ac9785a829a2c2"
+    },
+    "ui/ui_shop_c0004.png": {
+      "archive": "assets/res/ui/ui_ButtonProp.plist",
+      "frame": "ui_shop_c0004.png",
+      "texture": "assets/res/ui/ui_ButtonProp.pkm",
+      "width": 73,
+      "height": 100,
+      "sha256": "2b7bf6484cfe106013f655659c510380d637d6ad2e014fbba0e1be00e9e1cb48"
+    },
+    "ui/ui_shop_c0005.png": {
+      "archive": "assets/res/ui/ui_ButtonProp.plist",
+      "frame": "ui_shop_c0005.png",
+      "texture": "assets/res/ui/ui_ButtonProp.pkm",
+      "width": 73,
+      "height": 100,
+      "sha256": "a56cda636a8fe96b8ea17899dfa3d3348570de54da54d09fc5964f5f08b8666a"
+    },
+    "ui/ui_shop_c0006.png": {
+      "archive": "assets/res/ui/ui_ButtonProp.plist",
+      "frame": "ui_shop_c0006.png",
+      "texture": "assets/res/ui/ui_ButtonProp.pkm",
+      "width": 73,
+      "height": 100,
+      "sha256": "b2804865070e477755064826305c85fabddde92e023aee7fe378430282965ad3"
+    },
+    "ui/ui_shop_c0007.png": {
+      "archive": "assets/res/ui/ui_ButtonProp.plist",
+      "frame": "ui_shop_c0007.png",
+      "texture": "assets/res/ui/ui_ButtonProp.pkm",
+      "width": 73,
+      "height": 100,
+      "sha256": "18aed4eedf9b7353f3d64a32a88c15ff47fa78311de1eaeb58d2210b2df0d65e"
+    },
+    "ui/ui_shop_c0008.png": {
+      "archive": "assets/res/ui/ui_ButtonProp.plist",
+      "frame": "ui_shop_c0008.png",
+      "texture": "assets/res/ui/ui_ButtonProp.pkm",
+      "width": 73,
+      "height": 100,
+      "sha256": "fe5a1ec13015fd4a366a6b6f4a793efd290e6b69f53f835919b096aefe2b4fd5"
+    },
+    "ui/ui_shop_c0009.png": {
+      "archive": "assets/res/ui/ui_ButtonProp.plist",
+      "frame": "ui_shop_c0009.png",
+      "texture": "assets/res/ui/ui_ButtonProp.pkm",
+      "width": 73,
+      "height": 100,
+      "sha256": "cb150eab02e9073c93730d300c88d90075a554aa2988b979e87c11b49eb00ab5"
+    },
+    "ui/ui_shop_c0010.png": {
+      "archive": "assets/res/ui/ui_ButtonProp.plist",
+      "frame": "ui_shop_c0010.png",
+      "texture": "assets/res/ui/ui_ButtonProp.pkm",
+      "width": 73,
+      "height": 100,
+      "sha256": "b38aa76142a9eaafd820469c1f73b6ce6860038bb7a829451f40625ce581d48e"
     }
   }
 }
