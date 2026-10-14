@@ -189,3 +189,8 @@
 - 用户视频关键帧实际复查：1.6s无中央资料面板；13.2s彩色旋涡；16.5s白色冲击与橙红描边数字。战斗画面移除所有中央开发说明与通用CSS蓝球。
 - 原APK的assets/res/skills/下169套attack_/magic_ XML+atlas已静态导出，直接播放bullistic与bomb动作；fonts/red_50原位图数字用于伤害。scripts/import-battle-effects.py可复现，manifest含转换产物哈希。
 - BattleField.lua为明文，已确认使用Warrior/BulletNormal/BulletLightning/BulletChain/FloatingText，事件来自battleData；BattleUI.lua是字节码，已静态检查其飞行/地面坐标和setDragonsPos调用存在。完整坐标/事件/伤害/技能调度尚未复刻，当前播放为离线结果的表现过程。
+
+## E05 v0.16.16 冒险实际布局纠正
+- PvePanel.lua第64行实际调用layout.ui_battle_chuangguan_guanka；后续afterPageChange分别设置txt_name、star_num，体力独立，不是旧panel_pve叠加标题。现用实际布局及其原图，撤下旧缺图兜底纸卷。
+- PveRender.lua第28–29行加载mapInfo.layoutName并向basenode添加map_N.jpg，未缩放为layout.width/height。节点采用源坐标，背景保留原1366x768，按视口裁切。
+- PveRender小节点使用point1未到达/point2当前/point3已通过；大节点未通关隐藏星星，通过后ui_pve_s4填充。现按此规则展示本地进度。

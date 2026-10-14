@@ -58,6 +58,13 @@ if(locked)app.whenReady().then(async()=>{
   if(!await window.webContents.executeJavaScript("!!document.querySelector('.original-hud')"))throw new Error('Live game did not reach the ranch UI; existing save was not overwritten.');
   await new Promise(resolve=>setTimeout(resolve,700));const destination=path.join(__dirname,'..','work','live-preview.png');await fs.mkdir(path.dirname(destination),{recursive:true});await fs.writeFile(destination,(await window.webContents.capturePage()).toPNG());console.log('LIVE_PREVIEW_READY '+destination);
  }
+ if(process.argv.includes('--show-adventure')&&!smoke&&!verify){
+  for(let i=0;i<80;i++){if(await window.webContents.executeJavaScript("!!document.querySelector('[data-action=openAdventure]')"))break;await new Promise(resolve=>setTimeout(resolve,100))}
+  await window.webContents.executeJavaScript("document.querySelector('[data-action=openAdventure]').click();true");
+  for(let i=0;i<80;i++){if(await window.webContents.executeJavaScript("document.querySelector('#modal').dataset.mode==='sourcePve'"))break;await new Promise(resolve=>setTimeout(resolve,100))}
+  if(!await window.webContents.executeJavaScript("document.querySelector('#modal').dataset.mode==='sourcePve'"))throw Error('Adventure page did not open');
+  await new Promise(resolve=>setTimeout(resolve,700));const shot=path.join(__dirname,'..','work','live-adventure-preview.png');await fs.mkdir(path.dirname(shot),{recursive:true});await fs.writeFile(shot,(await window.webContents.capturePage()).toPNG());
+ }
  if(process.argv.includes('--show-habitat')&&!smoke&&!verify){
   for(let i=0;i<80;i++){if(await window.webContents.executeJavaScript("!!document.querySelector('[data-place-id]')"))break;await new Promise(resolve=>setTimeout(resolve,100))}
   await window.webContents.executeJavaScript("document.querySelector('[data-place-id]').click();true");

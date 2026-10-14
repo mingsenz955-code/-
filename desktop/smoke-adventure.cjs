@@ -18,12 +18,16 @@ exports.run=async(window,store,verify=false)=>{
  if(verify){
   assert.equal(before.adventure.cleared['100101'],1);
   assert.equal(before.adventure.energy,9);
-  assert.equal(await js("document.querySelectorAll('#modal .pve-stars').length"),1);
+  assert.equal(await js("document.querySelectorAll('#modal .source-pve-node.is-cleared').length"),1);
   assert.equal(await js("document.querySelectorAll('#modal .source-pve-node:not(:disabled)').length"),2);
   console.log('PASS persisted adventure result: first node, one star and spent energy');return;
  }
  assert.equal(await js("document.querySelectorAll('#modal .source-pve-node:not(:disabled)').length"),1);
  assert.equal(await js("document.querySelectorAll('#modal .source-pve-node:disabled').length"),19);
+ assert.equal(await js("!!document.querySelector('#modal [data-source=tx_biaoti]')"),false);
+ assert(await js("(()=>{const a=document.querySelector('#modal .source-artboard');return getComputedStyle(a).overflow==='hidden'&&getComputedStyle(document.querySelector('#modal')).overflow==='hidden'})()"),'Map must fit its artboard without scrollbars');
+ assert(await js("(()=>{const a=document.querySelector('#modal [data-source=txt_name]').getBoundingClientRect(),b=document.querySelector('#modal [data-source=tx_time]').getBoundingClientRect();return a.bottom<b.top})()"),'Title and energy must not overlap');
+ assert(await js("Array.from(document.querySelectorAll('#modal img')).every(i=>i.complete&&i.naturalWidth>0)"),'Actual adventure layout must have no missing source images');
  await shot('adventure-map-qa.png');
  await click('#modal [data-action=pveMap][data-value="102"]');await wait(700);
  assert.equal(await js("document.querySelector('#modal').dataset.pveMap"),'102');
