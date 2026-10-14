@@ -21,6 +21,12 @@ exports.run=async(window,store)=>{
  await click('[data-action=showMore]');await click('[data-action=openHabitats]');await shot('native-shop');
  // 资源: the three kinds live in their own sections, and a currency ＋ opens only its own kind.
  await click('#modal [data-action=resourceShop]');
+ // 商店是模态，但主 HUD 的资源栏仍在后面透出来：三个 ＋ 必须都还在、图也都得加载好。
+ assert.equal(await js("document.querySelectorAll('.original-hud [data-action=resourceShopGold]').length"),1,'金币 ＋ must still exist behind the shop');
+ assert.equal(await js("document.querySelectorAll('.original-hud [data-action=resourceShopFood]').length"),1,'食物 ＋ must still exist behind the shop');
+ assert.equal(await js("document.querySelectorAll('.original-hud [data-action=openRecharge]').length"),2,'魔晶 ＋ must still exist behind the shop');
+ assert.equal(await js("[...document.querySelectorAll('.original-hud img')].filter(i=>!i.complete||!i.naturalWidth).map(i=>i.getAttribute('src')).join(',')"),'','HUD images must load while the shop is open');
+ assert.equal(await js("document.querySelectorAll('.original-hud .hud-text').length"),6,'every HUD number must still be rendered behind the shop (power is intentionally skipped)');
  assert.equal(await js("document.querySelectorAll('#modal [data-resource-section]').length"),3,'the 资源 category must not mix 金币, 食物 and 进化果实');
  assert.equal(await js("document.querySelector('#modal [data-resource-section]').dataset.resourceSection"),'g','金币 comes first');
  await shot('native-resource-shop');
@@ -45,7 +51,18 @@ exports.run=async(window,store)=>{
   assert.equal(await js("document.querySelectorAll('.original-hud [data-action=resourceShopGold]').length"),1,`金币 ＋ missing at ${w}x${h}`);
   assert.equal(await js("document.querySelectorAll('.original-hud [data-action=resourceShopFood]').length"),1,`食物 ＋ missing at ${w}x${h}`);
   assert.equal(await js("document.querySelectorAll('.original-hud [data-action=openRecharge]').length"),2,`魔晶 ＋ or 充值 missing at ${w}x${h}`);
-  if(w===1707)await shot('native-hud-1707');
+  if(w===1707){
+   await shot('native-hud-1707');
+   // 玩家的窗口比例 + 商店开着：这才是他看到残缺格子的场景。
+   await click('.original-hud [data-action=resourceShopFood]');
+   await wait(800);
+   assert.equal(await js("document.querySelectorAll('#modal').length && document.querySelector('#modal').dataset.mode"),'nativeResourceShop','the 食物 ＋ must open the shop');
+   assert.equal(await js("[...document.querySelectorAll('.original-hud img')].filter(i=>!i.complete||!i.naturalWidth).map(i=>i.getAttribute('src')).join(',')"),'','HUD images must survive the shop at 1707x1019');
+   assert.equal(await js("document.querySelectorAll('.original-hud [data-action=resourceShopFood]').length"),1,'食物 ＋ must survive the shop at 1707x1019');
+   assert.equal(await js("document.querySelectorAll('.original-hud .hud-text').length"),6,'HUD numbers must survive the shop at 1707x1019');
+   await shot('native-hud-1707-shop');
+   await click('#modal [data-action=close]');
+  }
  }
  await shot('native-hud-widths');
  window.setSize(1000,700);await click('[data-place-id="1"]');assert(await js("(()=>{const r=document.querySelector('#modal').getBoundingClientRect();return r.width<=innerWidth&&r.height<=innerHeight})()"));assert.deepEqual(errors,[]);
