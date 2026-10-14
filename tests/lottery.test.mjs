@@ -46,7 +46,7 @@ test('won dragon goes to chosen compatible habitat once; full or incompatible ha
 });
 
 test('v1-v4 saves migrate without granting draw currency and reject malformed/newer lottery records',()=>{
- for(const version of [1,2,3,4]){const s=createGame(T);s.version=version;delete s.lottery;const before=JSON.stringify(s),next=validate(s);assert.equal(next.version,11);assert.deepEqual(next.lottery,{normalTokens:0,advancedTokens:0,draws:0,pending:[]});assert.equal(JSON.stringify(s),before);assert.deepEqual(next.dragons,s.dragons);}
+ for(const version of [1,2,3,4]){const s=createGame(T);s.version=version;delete s.lottery;const before=JSON.stringify(s),next=validate(s);assert.equal(next.version,12);assert.deepEqual(next.lottery,{normalTokens:0,advancedTokens:0,draws:0,pending:[]});assert.equal(JSON.stringify(s),before);assert.deepEqual(next.dragons,s.dragons);}
  const s=action(fixture(),'lotteryDraw',{mode:1,count:1},T,()=>0.52);
  for(const mutate of [s=>delete s.lottery,s=>s.lottery.normalTokens=-1,s=>s.lottery.pending[0].id=2,s=>s.lottery.pending[0].sourceRow=-1,s=>s.lottery.pending[0].amount=2,s=>s.lottery.pending[0].policy='server-verified',s=>s.lottery.pending[0].mode=2]){const bad=structuredClone(s);mutate(bad);assert.throws(()=>validate(bad));}
 });
@@ -59,6 +59,6 @@ test('actual disk reload preserves draw outcomes and costs; resource claim and d
 
 test('v4 disk migration preserves ranch and keeps original save as backup before first v5 draw',async t=>{
  const dir=await fs.mkdtemp(path.join(os.tmpdir(),'yulong-lottery-migrate-'));t.after(()=>fs.rm(dir,{recursive:true,force:true}));const store=new SaveStore(dir),old=fixture();old.version=4;delete old.lottery;
- await fs.writeFile(store.file,JSON.stringify(old));const migrated=(await store.load()).state;assert.equal(migrated.version,11);assert.deepEqual(migrated.dragons,old.dragons);assert.equal(JSON.parse(await fs.readFile(store.file,'utf8')).version,4);
+ await fs.writeFile(store.file,JSON.stringify(old));const migrated=(await store.load()).state;assert.equal(migrated.version,12);assert.deepEqual(migrated.dragons,old.dragons);assert.equal(JSON.parse(await fs.readFile(store.file,'utf8')).version,4);
  const drawn=action(migrated,'lotteryDraw',{mode:1,count:1},T,()=>0.52);await store.save(drawn);assert.deepEqual(JSON.parse(await fs.readFile(store.backup,'utf8')),old);assert.deepEqual((await new SaveStore(dir).load()).state,drawn);
 });

@@ -12,7 +12,7 @@ const atlasIndex=atlas=>Number(String(atlas).replace('item_pve_map_',''))||1;
 // item_pve_map_N draws check1..check20, and mapevents holds exactly twenty nodes per map in
 // order, so checkN is the Nth node. Small nodes carry point1/2/3 (three states) and large
 // nodes carry diban+star+icon; both are made clickable the same way.
-function decorate(layout,nodes){
+function decorate(layout,nodes,state){
  const slots={},hidden=new Set(),visit=(list,path='')=>{
   for(const node of list){
    const key=path?`${path}/${node.name??''}`:node.name??'';
@@ -20,7 +20,7 @@ function decorate(layout,nodes){
    if(match){
     const event=nodes[Number(match[1])-1],children=node.children??[],major=children.find(child=>child.name==='diban'),point=children.find(child=>child.name==='point2'),target=major??point;
     for(const child of children)if(child.name==='point1'||child.name==='point3')hidden.add(`${key}/${child.name}`);
-    if(event&&target){const image=String(target.img??target.img_normal??'').replace(/^#/,'');slots[`${key}/${target.name}`]=`<button class="source-pve-node${major?' is-major':''}" data-action="pveNode" data-id="${event.id}" aria-label="${esc(event.name)}"><img src="assets/original/ui/${esc(image)}" alt=""></button>`}
+    if(event&&target){const image=String(target.img??target.img_normal??'').replace(/^#/,'');const stars=state.adventure?.cleared?.[String(event.id)]??0,unlocked=event.prev===-1||!!state.adventure?.cleared?.[String(event.prev)];slots[`${key}/${target.name}`]=`<button class="source-pve-node${major?' is-major':''}${stars?' is-cleared':''}" data-action="pveNode" data-id="${event.id}" aria-label="${esc(event.name)}" ${unlocked?'':'disabled'}><img src="assets/original/ui/${esc(image)}" alt="">${stars?`<span class="pve-stars">${'★'.repeat(stars)}</span>`:''}</button>`}
     continue;
    }
    visit(node.children??[],key);
@@ -30,16 +30,15 @@ function decorate(layout,nodes){
  return {slots,hidden};
 }
 
-// The client's own adventure panel. Player progress, stars and chests live on the server
-// (PVEData.getPveMapInfo), so every node is drawn in its neutral state and no clear/star
-// state is invented.
+// The client's own adventure panel. The original online progress came from
+// PVEData.getPveMapInfo; the offline edition persists its clearly separated local progress.
 export async function openAdventureDialog(state,mapId=ADVENTURE_MAP_IDS[0]){
  if(!ADVENTURE_MAP_IDS.includes(mapId))mapId=ADVENTURE_MAP_IDS[0];
  const panel=await loadPanel(),map=adventureMap(mapId),detail=adventureMapDetail(mapId),nodes=adventureMapNodes(mapId);
- const mapLayout=await loadMapLayout(map.atlas),{slots:nodeslots,hidden}=decorate(mapLayout,nodes);
+ const mapLayout=await loadMapLayout(map.atlas),{slots:nodeslots,hidden}=decorate(mapLayout,nodes,state);
  const index=ADVENTURE_MAP_IDS.indexOf(mapId);
  const values={
-  tx_biaoti:`${detail?.name??''}`,
+  tx_biaoti:`${detail?.name??''}　体力 ${state.adventure?.energy??0}/10`,
   tx_biaoti2:`${detail?.name??''}`,
   'btn_normal/txt_name':'普通','btn_elite/txt_name':'精英',
  };

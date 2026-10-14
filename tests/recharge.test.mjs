@@ -92,7 +92,7 @@ test('save validation migrates v9 recharge records and rejects malformed ones',(
  old.version=9;old.recharge={count:2,lastTier:96};delete old.recharge.totalGems;delete old.recharge.doubled;
  const before=JSON.stringify(old),migrated=validate(old);
  assert.equal(JSON.stringify(old),before,'migration must not touch the loaded file');
- assert.equal(migrated.version,11);
+ assert.equal(migrated.version,12);
  assert.deepEqual(migrated.recharge,{count:2,lastTier:96,totalGems:0,doubled:[]});
  const badCount=createGame(T);badCount.recharge={count:-1,lastTier:0,totalGems:0,doubled:[]};
  assert.throws(()=>validate(badCount),/充值记录无效/);

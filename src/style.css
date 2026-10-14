@@ -95,6 +95,7 @@ canvas.dragon{display:inline-block;object-fit:contain}.dragon-preview-dialog{wid
 .source-pve-node img{width:100%;height:100%;object-fit:contain;pointer-events:none}
 .source-pve-node.is-major{width:120px;height:120px}
 .source-pve-node:hover{transform:translate(-50%,-50%) scale(1.06)}
+.source-pve-node:disabled{filter:grayscale(1) brightness(.55)}.pve-stars{position:absolute;left:50%;bottom:-9px;transform:translateX(-50%);color:#ffd232;font-size:18px;text-shadow:0 2px 2px #5c3418;white-space:nowrap}.source-battle-enemy{width:100%;height:100%;display:grid;place-items:center;border-radius:50%;background:#3d2730;color:#f6c56d;font:bold 46px serif}.formation-choice{position:relative}.formation-choice input{position:absolute;z-index:2;left:8px;top:8px;width:24px;height:24px}
 
 /* 原版充值面板 panel_recharge 与档位卡 item_recharge_data */
 .source-recharge-list{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:905px;height:376px;display:grid;grid-template-columns:repeat(3,251px);justify-content:center;align-content:start;gap:14px;overflow-y:auto;pointer-events:auto;scrollbar-color:#9c6b3b #efd4a0;scrollbar-width:thin}

@@ -176,3 +176,7 @@
 ## E05 v0.16.10 地块与商城
 - `BuildingBaseDelegate.showTiles` 直接读取建筑 `width/height`，按行列创建 `width × height` 个格，源图为 `grid_yellow.png` 和 `grid_red.png`；格子坐标使用27像素半菱形投影。`BuildingMoveConfirmPanel` 调用 `moveBuildingCancel/moveBuildingConfirm` 并显示取消、确定两键。
 - `assets/res/config/config_cn_qq.json` 共404项；筛选 `in_store=1` 后商城相关115项：47龙蛋、17龙巢、18建筑、33装饰。导出脚本、字段和两个源文件哈希见 `assets/original/data/shop-provenance.json`。
+
+## E05 v0.16.13 冒险与布阵
+- `mapevents`前后链用于真实解锁顺序，`map_level`用于节点类型；玩家进度由本地v12存档补足。客户端没有提供节点到`Dragon_computer_array_nine`怪物包的映射，故敌方战力和奖励仅为`offline-adventure-balance-v1`，界面中明确标注。
+- 布阵采用原六格上限并使用牧场真实龙；基础战力继续遵循已证明的`attack + defend + maxblood/3`部分。符文、觉醒、秘宝等尚未计入。
