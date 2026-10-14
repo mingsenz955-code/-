@@ -40,6 +40,7 @@ if(locked)app.whenReady().then(async()=>{
  if(expansionSmoke)await require('./smoke-expansion.cjs').prepare(store);
  if(rechargeSmoke)await require('./smoke-recharge.cjs').prepare(store);
  if(farmSmoke)await require('./smoke.cjs').prepareFarmProfile(store);
+ ipcMain.handle('app:version',()=>app.getVersion());
  ipcMain.handle('save:load',()=>store.load());
  ipcMain.handle('save:write',(_e,s)=>store.save(s));
  ipcMain.handle('save:export',async(_e,s)=>{validate(s);const result=await dialog.showSaveDialog(window,{title:'导出牧场存档',defaultPath:'御龙高手存档.json',filters:[{name:'JSON 存档',extensions:['json']}]});if(result.canceled)return false;await fs.writeFile(result.filePath,JSON.stringify(s,null,2));return true});
