@@ -379,3 +379,6 @@
 - APK原items 7026 name=kuLouDragonSuiPian、img_name=1076_dragon_skeleton_0，textnew_cn中7026miaoshu明确10片骷髅龙，不能用数字suipian正则排除。7015对应1074冰月龙但description未翻译且未查到数量；其10片仅离线配方，reference/item-use-source.json单独列offlineFragmentCosts。
 - 原UsePropPanel明文按持有量选择数量，确定传回id/count；StorePanel静态反汇编显示兑换结果后initData/list.reset。原BattleField使用服务器battleData驱动Warrior/Bullet，未在本客户端取得服务器轮次算法；本轮修正的是本地动画错误，不把三轮表现称原计算规则。
 - 原RAFFLE_PREVIEW_ROWS没有远古1200/1202/1203/1205/1206。新增池/20%及10次保底是用户授权单机可玩性调整，原品种/形象沿用；策略v2与旧v1存档明确兼容，原服务器概率仍未核实。
+
+## v0.16.53 符文寻访定位
+- 本地原ui_fuwen_panel和现有NPC条坐标未修改。本地CSS通用button:hover覆盖头像中心transform造成真实悬停x偏移48.488px，修前原生鼠标验收断言失败；修后hover/focus/active均保持translate(-50%,-50%)，源版与包内原生鼠标坐标及完整寻访/穿戴流程通过，不以DOM.click替代鼠标验收。
