@@ -1,0 +1,909 @@
+Static source evidence; PCs and nested indexes are zero based. No client code executed.
+
+FILE ui/fuwen/FuwenPanel.lua
+SHA256 4c26b94850b5936723f97b7bb8b5bf42c2b98ed510e494f05371fcdf93a4057a
+
+FUNCTION 1.0
+CONSTANTS ["locked", "blocknode", "numChildren", 0, true, "DataManager", "_FuwenData", "havePlace", "Gui", "showToast", "符文背包空间不足", false, "getPosition", "layout", "getChild", "node_btn_usefw", "CCNodeExtend", "extend", "CCParticleSystemQuad", "create", "particle/cj_niudan02.plist", "addTo", "scale", 0.5, 1, "getChildAt", "transition", "scaleTo", 1.2, "time", 0.3, "delay", 0.15, "onComplete"]
+0000 GETUPVAL A=0 B=0 C=0
+0001 GETTABLE r0 r0["locked"]
+0002 TEST A=0 B=0 C=1
+0003 JMP A=0 target=10
+0004 GETUPVAL A=0 B=0 C=0
+0005 GETTABLE r0 r0["blocknode"]
+0006 SELF r0 self=r0 method="numChildren"
+0007 CALL A=0 B=2 C=2
+0008 EQ A=0 r0 0
+0009 JMP A=0 target=11
+0010 RETURN A=0 B=1 C=0
+0011 GETUPVAL A=0 B=0 C=0
+0012 SETTABLE r0["locked"] true
+0013 GETUPVAL A=0 B=0 C=0
+0014 GETTABLE r0 r0["blocknode"]
+0015 SELF r0 self=r0 method="numChildren"
+0016 CALL A=0 B=2 C=2
+0017 GETGLOBAL r1 "DataManager"
+0018 GETTABLE r1 r1["_FuwenData"]
+0019 GETTABLE r1 r1["havePlace"]
+0020 MOVE A=2 B=0 C=0
+0021 CALL A=1 B=2 C=2
+0022 TEST A=1 B=0 C=1
+0023 JMP A=0 target=31
+0024 GETGLOBAL r1 "Gui"
+0025 GETTABLE r1 r1["showToast"]
+0026 LOADK r2 "符文背包空间不足"
+0027 CALL A=1 B=2 C=1
+0028 GETUPVAL A=1 B=0 C=0
+0029 SETTABLE r1["locked"] false
+0030 RETURN A=0 B=1 C=0
+0031 GETUPVAL A=1 B=0 C=0
+0032 GETTABLE r1 r1["blocknode"]
+0033 SELF r1 self=r1 method="getPosition"
+0034 CALL A=1 B=2 C=3
+0035 GETUPVAL A=3 B=0 C=0
+0036 GETTABLE r3 r3["layout"]
+0037 GETTABLE r3 r3["getChild"]
+0038 LOADK r4 "node_btn_usefw"
+0039 CALL A=3 B=2 C=2
+0040 SELF r3 self=r3 method="getPosition"
+0041 CALL A=3 B=2 C=3
+0042 SUB r5 r3 r1
+0043 SUB r6 r4 r2
+0044 GETGLOBAL r7 "CCNodeExtend"
+0045 GETTABLE r7 r7["extend"]
+0046 GETGLOBAL r8 "CCParticleSystemQuad"
+0047 SELF r8 self=r8 method="create"
+0048 LOADK r10 "particle/cj_niudan02.plist"
+0049 CALL A=8 B=3 C=0
+0050 CALL A=7 B=0 C=2
+0051 SELF r8 self=r7 method="addTo"
+0052 GETUPVAL A=10 B=0 C=0
+0053 GETTABLE r10 r10["layout"]
+0054 GETTABLE r10 r10["getChild"]
+0055 LOADK r11 "node_btn_usefw"
+0056 CALL A=10 B=2 C=0
+0057 CALL A=8 B=0 C=1
+0058 SELF r8 self=r7 method="scale"
+0059 LOADK r10 0.5
+0060 CALL A=8 B=3 C=1
+0061 LOADK r8 1
+0062 MOVE A=9 B=0 C=0
+0063 LOADK r10 1
+0064 FORPREP A=8 target=92
+0065 GETUPVAL A=12 B=0 C=0
+0066 GETTABLE r12 r12["blocknode"]
+0067 SELF r12 self=r12 method="getChildAt"
+0068 SUB r14 r0 r11
+0069 ADD r14 r14 1
+0070 CALL A=12 B=3 C=2
+0071 GETGLOBAL r13 "transition"
+0072 GETTABLE r13 r13["scaleTo"]
+0073 MOVE A=14 B=12 C=0
+0074 NEWTABLE A=15 B=0 C=4
+0075 SETTABLE r15["scale"] 1.2
+0076 SETTABLE r15["time"] 0.3
+0077 SUB r16 r11 1
+0078 MUL r16 r16 0.15
+0079 SETTABLE r15["delay"] r16
+0080 CLOSURE r16 nested=0
+0081 MOVE A=0 B=12 C=0
+0082 MOVE A=0 B=5 C=0
+0083 MOVE A=0 B=6 C=0
+0084 MOVE A=0 B=11 C=0
+0085 MOVE A=0 B=0 C=0
+0086 GETUPVAL A=0 B=0 C=0
+0087 MOVE A=0 B=7 C=0
+0088 SETTABLE r15["onComplete"] r16
+0089 CALL A=13 B=3 C=1
+0090 CLOSE A=12 B=0 C=0
+0091 CLOSE A=11 B=0 C=0
+0092 FORLOOP A=8 target=65
+0093 RETURN A=0 B=1 C=0
+
+FUNCTION 1.0.0
+CONSTANTS ["scale", 1, "tf", "hide", "transition", "moveTo", "x", "y", "easing", "BACKIN", "time", "onComplete", "fadeOut", 0.1, "delay", 0.9]
+0000 GETUPVAL A=0 B=0 C=0
+0001 SELF r0 self=r0 method="scale"
+0002 LOADK r2 1
+0003 CALL A=0 B=3 C=1
+0004 GETUPVAL A=0 B=0 C=0
+0005 GETTABLE r0 r0["tf"]
+0006 SELF r0 self=r0 method="hide"
+0007 CALL A=0 B=2 C=1
+0008 GETGLOBAL r0 "transition"
+0009 GETTABLE r0 r0["moveTo"]
+0010 GETUPVAL A=1 B=0 C=0
+0011 NEWTABLE A=2 B=0 C=5
+0012 GETUPVAL A=3 B=1 C=0
+0013 SETTABLE r2["x"] r3
+0014 GETUPVAL A=3 B=2 C=0
+0015 SETTABLE r2["y"] r3
+0016 SETTABLE r2["easing"] "BACKIN"
+0017 SETTABLE r2["time"] 1
+0018 CLOSURE r3 nested=0
+0019 GETUPVAL A=0 B=3 C=0
+0020 GETUPVAL A=0 B=4 C=0
+0021 GETUPVAL A=0 B=5 C=0
+0022 GETUPVAL A=0 B=6 C=0
+0023 SETTABLE r2["onComplete"] r3
+0024 CALL A=0 B=3 C=1
+0025 GETGLOBAL r0 "transition"
+0026 GETTABLE r0 r0["fadeOut"]
+0027 GETUPVAL A=1 B=0 C=0
+0028 NEWTABLE A=2 B=0 C=2
+0029 SETTABLE r2["time"] 0.1
+0030 SETTABLE r2["delay"] 0.9
+0031 CALL A=0 B=3 C=1
+0032 RETURN A=0 B=1 C=0
+
+FUNCTION 3
+CONSTANTS ["print", "FuwenPanel:onDataBack: ", "type", "ret", 1, 2, 0, "没有空位,请先拾取", "没有足够的神符", "Gui", "showToast", "string", "format", "一键拜访完成，一共消耗%d张神符", "cost", 4, "符文背包已满", "收取失败:", -1, "locked", false, "收取成功", "SocketSender", "dceFuwen", "pkg", "layout", "getChild", "node_shiwu", "txt_ShiWu", "txt_cost", "setString", "short", "shenfucnt", "node_mojing", "txt_MoJing", "PlayerManager", "iCash", "获取到的物品:", "getlist", "setNPCStatus", "lightlist", "blocknode", "removeAllChildren", "npcEffect", 4294967295, 16711935, 280428543, 3894345727, 4288217343, 4278190335, "getWidth", 0.5, 160, "numChildren", "display", "newNode", "getItemData2", "itemtype", "itemid", "getItemImage", "scale", "tf", "new", "name", "color", "quality", "size", 18, "pos", -60, "hide", "add", "setCascadeOpacityEnabled", "addChild", "firstTime", "transition", "fadeIn", "time", 0.15, "delay", 0.08, "onComplete", "getPosition", 0.05, 0.1]
+0000 GETGLOBAL r2 "print"
+0001 LOADK r3 "FuwenPanel:onDataBack: "
+0002 GETTABLE r4 r1["type"]
+0003 GETTABLE r5 r1["ret"]
+0004 CALL A=2 B=4 C=1
+0005 GETTABLE r2 r1["type"]
+0006 EQ A=1 r2 1
+0007 JMP A=0 target=11
+0008 GETTABLE r2 r1["type"]
+0009 EQ A=0 r2 2
+0010 JMP A=0 target=23
+0011 GETTABLE r2 r1["ret"]
+0012 LT A=0 0 r2
+0013 JMP A=0 target=23
+0014 NEWTABLE A=2 B=2 C=0
+0015 LOADK r3 "没有空位,请先拾取"
+0016 LOADK r4 "没有足够的神符"
+0017 SETLIST A=2 B=2 C=1
+0018 GETGLOBAL r3 "Gui"
+0019 GETTABLE r3 r3["showToast"]
+0020 GETTABLE r4 r1["ret"]
+0021 GETTABLE r4 r2[r4]
+0022 CALL A=3 B=2 C=1
+0023 GETTABLE r2 r1["type"]
+0024 EQ A=0 r2 2
+0025 JMP A=0 target=38
+0026 GETTABLE r2 r1["ret"]
+0027 EQ A=0 r2 0
+0028 JMP A=0 target=65
+0029 GETGLOBAL r2 "Gui"
+0030 GETTABLE r2 r2["showToast"]
+0031 GETGLOBAL r3 "string"
+0032 GETTABLE r3 r3["format"]
+0033 LOADK r4 "一键拜访完成，一共消耗%d张神符"
+0034 GETTABLE r5 r1["cost"]
+0035 CALL A=3 B=3 C=0
+0036 CALL A=2 B=0 C=1
+0037 JMP A=0 target=65
+0038 GETTABLE r2 r1["type"]
+0039 EQ A=0 r2 4
+0040 JMP A=0 target=65
+0041 GETTABLE r2 r1["ret"]
+0042 EQ A=1 r2 0
+0043 JMP A=0 target=58
+0044 NEWTABLE A=2 B=1 C=0
+0045 LOADK r3 "符文背包已满"
+0046 SETLIST A=2 B=1 C=1
+0047 GETGLOBAL r3 "Gui"
+0048 GETTABLE r3 r3["showToast"]
+0049 LOADK r4 "收取失败:"
+0050 GETTABLE r5 r1["ret"]
+0051 MUL r5 r5 -1
+0052 GETTABLE r5 r2[r5]
+0053 CONCAT A=4 B=4 C=5
+0054 CALL A=3 B=2 C=1
+0055 SETTABLE r0["locked"] false
+0056 RETURN A=0 B=1 C=0
+0057 JMP A=0 target=65
+0058 GETGLOBAL r2 "Gui"
+0059 GETTABLE r2 r2["showToast"]
+0060 LOADK r3 "收取成功"
+0061 CALL A=2 B=2 C=1
+0062 GETGLOBAL r2 "SocketSender"
+0063 GETTABLE r2 r2["dceFuwen"]
+0064 CALL A=2 B=1 C=1
+0065 SETTABLE r0["pkg"] r1
+0066 GETTABLE r2 r0["layout"]
+0067 GETTABLE r2 r2["getChild"]
+0068 LOADK r3 "node_shiwu"
+0069 CALL A=2 B=2 C=2
+0070 GETTABLE r2 r2["getChild"]
+0071 LOADK r3 "txt_ShiWu"
+0072 CALL A=2 B=2 C=2
+0073 GETTABLE r2 r2["getChild"]
+0074 LOADK r3 "txt_cost"
+0075 CALL A=2 B=2 C=2
+0076 SELF r2 self=r2 method="setString"
+0077 GETUPVAL A=4 B=0 C=0
+0078 GETTABLE r4 r4["short"]
+0079 GETTABLE r5 r1["shenfucnt"]
+0080 CALL A=4 B=2 C=0
+0081 CALL A=2 B=0 C=1
+0082 GETTABLE r2 r0["layout"]
+0083 GETTABLE r2 r2["getChild"]
+0084 LOADK r3 "node_mojing"
+0085 CALL A=2 B=2 C=2
+0086 GETTABLE r2 r2["getChild"]
+0087 LOADK r3 "txt_MoJing"
+0088 CALL A=2 B=2 C=2
+0089 GETTABLE r2 r2["getChild"]
+0090 LOADK r3 "txt_cost"
+0091 CALL A=2 B=2 C=2
+0092 SELF r2 self=r2 method="setString"
+0093 GETGLOBAL r4 "PlayerManager"
+0094 GETTABLE r4 r4["iCash"]
+0095 CALL A=4 B=1 C=0
+0096 CALL A=2 B=0 C=1
+0097 GETGLOBAL r2 "print"
+0098 LOADK r3 "获取到的物品:"
+0099 GETTABLE r4 r1["getlist"]
+0100 LEN A=4 B=4 C=0
+0101 CALL A=2 B=3 C=1
+0102 GETTABLE r2 r1["getlist"]
+0103 LEN A=2 B=2 C=0
+0104 EQ A=0 r2 0
+0105 JMP A=0 target=114
+0106 SELF r2 self=r0 method="setNPCStatus"
+0107 GETTABLE r4 r1["lightlist"]
+0108 CALL A=2 B=3 C=1
+0109 GETTABLE r2 r0["blocknode"]
+0110 SELF r2 self=r2 method="removeAllChildren"
+0111 CALL A=2 B=2 C=1
+0112 SETTABLE r0["locked"] false
+0113 RETURN A=0 B=1 C=0
+0114 GETTABLE r2 r1["type"]
+0115 EQ A=0 r2 2
+0116 JMP A=0 target=119
+0117 SELF r2 self=r0 method="npcEffect"
+0118 CALL A=2 B=2 C=1
+0119 NEWTABLE A=2 B=6 C=0
+0120 LOADK r3 4294967295
+0121 LOADK r4 16711935
+0122 LOADK r5 280428543
+0123 LOADK r6 3894345727
+0124 LOADK r7 4288217343
+0125 LOADK r8 4278190335
+0126 SETLIST A=2 B=6 C=1
+0127 GETTABLE r3 r0["blocknode"]
+0128 SELF r3 self=r3 method="getWidth"
+0129 CALL A=3 B=2 C=2
+0130 MUL r3 r3 0.5
+0131 LOADK r4 160
+0132 LOADK r5 1
+0133 GETTABLE r6 r1["getlist"]
+0134 LEN A=6 B=6 C=0
+0135 GETTABLE r7 r0["blocknode"]
+0136 SELF r7 self=r7 method="numChildren"
+0137 CALL A=7 B=2 C=2
+0138 ADD r7 r7 1
+0139 MOVE A=8 B=6 C=0
+0140 LOADK r9 1
+0141 FORPREP A=7 target=247
+0142 GETTABLE r11 r1["getlist"]
+0143 GETTABLE r11 r11[r10]
+0144 GETGLOBAL r12 "display"
+0145 GETTABLE r12 r12["newNode"]
+0146 CALL A=12 B=1 C=2
+0147 GETUPVAL A=13 B=1 C=0
+0148 GETTABLE r13 r13["getItemData2"]
+0149 GETTABLE r14 r11["itemtype"]
+0150 GETTABLE r15 r11["itemid"]
+0151 LOADK r16 0
+0152 CALL A=13 B=4 C=2
+0153 GETUPVAL A=14 B=1 C=0
+0154 GETTABLE r14 r14["getItemImage"]
+0155 MOVE A=15 B=13 C=0
+0156 CALL A=14 B=2 C=2
+0157 SELF r14 self=r14 method="scale"
+0158 LOADK r16 1
+0159 CALL A=14 B=3 C=2
+0160 GETUPVAL A=15 B=2 C=0
+0161 GETTABLE r15 r15["new"]
+0162 GETTABLE r16 r13["name"]
+0163 NEWTABLE A=17 B=0 C=2
+0164 GETTABLE r18 r13["quality"]
+0165 GETTABLE r18 r2[r18]
+0166 SETTABLE r17["color"] r18
+0167 SETTABLE r17["size"] 18
+0168 CALL A=15 B=3 C=2
+0169 SETTABLE r12["tf"] r15
+0170 GETTABLE r15 r12["tf"]
+0171 SELF r15 self=r15 method="pos"
+0172 GETTABLE r17 r12["tf"]
+0173 SELF r17 self=r17 method="getWidth"
+0174 CALL A=17 B=2 C=2
+0175 MUL r17 r17 0.5
+0176 SUB r17 0 r17
+0177 LOADK r18 -60
+0178 CALL A=15 B=4 C=1
+0179 GETTABLE r15 r12["tf"]
+0180 SELF r15 self=r15 method="hide"
+0181 CALL A=15 B=2 C=1
+0182 SELF r15 self=r12 method="add"
+0183 GETTABLE r17 r12["tf"]
+0184 CALL A=15 B=3 C=1
+0185 SELF r15 self=r12 method="add"
+0186 MOVE A=17 B=14 C=0
+0187 CALL A=15 B=3 C=1
+0188 SELF r15 self=r12 method="setCascadeOpacityEnabled"
+0189 LOADBOOL A=17 B=1 C=0
+0190 CALL A=15 B=3 C=1
+0191 GETTABLE r15 r0["blocknode"]
+0192 SELF r15 self=r15 method="addChild"
+0193 MOVE A=17 B=12 C=0
+0194 CALL A=15 B=3 C=1
+0195 GETTABLE r15 r0["firstTime"]
+0196 TEST A=15 B=0 C=0
+0197 JMP A=0 target=218
+0198 GETGLOBAL r15 "transition"
+0199 GETTABLE r15 r15["fadeIn"]
+0200 MOVE A=16 B=12 C=0
+0201 NEWTABLE A=17 B=0 C=3
+0202 SETTABLE r17["time"] 0.15
+0203 SUB r18 r5 1
+0204 MUL r18 r18 0.08
+0205 SETTABLE r17["delay"] r18
+0206 CLOSURE r18 nested=0
+0207 MOVE A=0 B=10 C=0
+0208 MOVE A=0 B=6 C=0
+0209 MOVE A=0 B=0 C=0
+0210 MOVE A=0 B=12 C=0
+0211 MOVE A=0 B=13 C=0
+0212 SETTABLE r17["onComplete"] r18
+0213 CALL A=15 B=3 C=1
+0214 SELF r15 self=r0 method="setNPCStatus"
+0215 GETTABLE r17 r1["lightlist"]
+0216 CALL A=15 B=3 C=1
+0217 JMP A=0 target=244
+0218 SELF r15 self=r12 method="getPosition"
+0219 CALL A=15 B=2 C=3
+0220 SELF r17 self=r12 method="pos"
+0221 MOVE A=19 B=3 C=0
+0222 MOVE A=20 B=4 C=0
+0223 CALL A=17 B=4 C=1
+0224 GETGLOBAL r17 "transition"
+0225 GETTABLE r17 r17["fadeIn"]
+0226 MOVE A=18 B=12 C=0
+0227 NEWTABLE A=19 B=0 C=3
+0228 SETTABLE r19["time"] 0.05
+0229 SUB r20 r5 1
+0230 MUL r20 r20 0.1
+0231 SETTABLE r19["delay"] r20
+0232 CLOSURE r20 nested=1
+0233 MOVE A=0 B=13 C=0
+0234 MOVE A=0 B=12 C=0
+0235 MOVE A=0 B=15 C=0
+0236 MOVE A=0 B=16 C=0
+0237 MOVE A=0 B=10 C=0
+0238 MOVE A=0 B=6 C=0
+0239 MOVE A=0 B=0 C=0
+0240 MOVE A=0 B=1 C=0
+0241 SETTABLE r19["onComplete"] r20
+0242 CALL A=17 B=3 C=1
+0243 CLOSE A=15 B=0 C=0
+0244 ADD r5 r5 1
+0245 CLOSE A=11 B=0 C=0
+0246 CLOSE A=10 B=0 C=0
+0247 FORLOOP A=7 target=142
+0248 SETTABLE r0["firstTime"] false
+0249 RETURN A=0 B=1 C=0
+
+FUNCTION 3.1
+CONSTANTS ["quality", 1, "CCNodeExtend", "extend", "CCParticleSystemQuad", "create", "particle/cj_putong.plist", "add", -1, "transition", "moveTo", "x", "y", "time", 0.15, "onComplete"]
+0000 GETUPVAL A=0 B=0 C=0
+0001 GETTABLE r0 r0["quality"]
+0002 LT A=0 1 r0
+0003 JMP A=0 target=16
+0004 GETGLOBAL r0 "CCNodeExtend"
+0005 GETTABLE r0 r0["extend"]
+0006 GETGLOBAL r1 "CCParticleSystemQuad"
+0007 SELF r1 self=r1 method="create"
+0008 LOADK r3 "particle/cj_putong.plist"
+0009 CALL A=1 B=3 C=0
+0010 CALL A=0 B=0 C=2
+0011 GETUPVAL A=1 B=1 C=0
+0012 SELF r1 self=r1 method="add"
+0013 MOVE A=3 B=0 C=0
+0014 LOADK r4 -1
+0015 CALL A=1 B=4 C=1
+0016 GETGLOBAL r0 "transition"
+0017 GETTABLE r0 r0["moveTo"]
+0018 GETUPVAL A=1 B=1 C=0
+0019 NEWTABLE A=2 B=0 C=4
+0020 GETUPVAL A=3 B=2 C=0
+0021 SETTABLE r2["x"] r3
+0022 GETUPVAL A=3 B=3 C=0
+0023 SETTABLE r2["y"] r3
+0024 SETTABLE r2["time"] 0.15
+0025 CLOSURE r3 nested=0
+0026 GETUPVAL A=0 B=1 C=0
+0027 GETUPVAL A=0 B=4 C=0
+0028 GETUPVAL A=0 B=5 C=0
+0029 GETUPVAL A=0 B=6 C=0
+0030 GETUPVAL A=0 B=7 C=0
+0031 SETTABLE r2["onComplete"] r3
+0032 CALL A=0 B=3 C=1
+0033 RETURN A=0 B=1 C=0
+
+FUNCTION 3.1.0
+CONSTANTS ["tf", "show", "setNPCStatus", "lightlist", "locked", false]
+0000 GETUPVAL A=0 B=0 C=0
+0001 GETTABLE r0 r0["tf"]
+0002 SELF r0 self=r0 method="show"
+0003 CALL A=0 B=2 C=1
+0004 GETUPVAL A=0 B=1 C=0
+0005 GETUPVAL A=1 B=2 C=0
+0006 EQ A=0 r0 r1
+0007 JMP A=0 target=15
+0008 GETUPVAL A=0 B=3 C=0
+0009 SELF r0 self=r0 method="setNPCStatus"
+0010 GETUPVAL A=2 B=4 C=0
+0011 GETTABLE r2 r2["lightlist"]
+0012 CALL A=0 B=3 C=1
+0013 GETUPVAL A=0 B=3 C=0
+0014 SETTABLE r0["locked"] false
+0015 RETURN A=0 B=1 C=0
+
+FUNCTION 4
+CONSTANTS ["layout", "getChild", "node_npcbar", 2, 5, 1, "print", "点亮状态:", "node_item", "node_head", "transition", "stopTarget", "rotation", 0, "node_show", "show", "node_hide", "hide", "effect", "scaleTo", "time", 0.1, "scale", 1.3, "easing", "RATEACTION", "onComplete", "node_item1"]
+0000 GETTABLE r2 r0["layout"]
+0001 GETTABLE r2 r2["getChild"]
+0002 LOADK r3 "node_npcbar"
+0003 CALL A=2 B=2 C=2
+0004 LOADK r3 2
+0005 LOADK r4 5
+0006 LOADK r5 1
+0007 FORPREP A=3 target=72
+0008 GETGLOBAL r7 "print"
+0009 LOADK r8 "点亮状态:"
+0010 MOVE A=9 B=6 C=0
+0011 GETTABLE r10 r1[r6]
+0012 CALL A=7 B=4 C=1
+0013 GETTABLE r7 r2["getChild"]
+0014 LOADK r8 "node_item"
+0015 MOVE A=9 B=6 C=0
+0016 CONCAT A=8 B=8 C=9
+0017 CALL A=7 B=2 C=2
+0018 GETTABLE r7 r7["getChild"]
+0019 LOADK r8 "node_head"
+0020 CALL A=7 B=2 C=2
+0021 GETGLOBAL r8 "transition"
+0022 GETTABLE r8 r8["stopTarget"]
+0023 MOVE A=9 B=7 C=0
+0024 CALL A=8 B=2 C=1
+0025 SELF r8 self=r7 method="rotation"
+0026 LOADK r10 0
+0027 CALL A=8 B=3 C=1
+0028 GETTABLE r8 r1[r6]
+0029 EQ A=0 r8 1
+0030 JMP A=0 target=58
+0031 GETTABLE r8 r7["getChild"]
+0032 LOADK r9 "node_show"
+0033 CALL A=8 B=2 C=2
+0034 SELF r8 self=r8 method="show"
+0035 CALL A=8 B=2 C=1
+0036 GETTABLE r8 r7["getChild"]
+0037 LOADK r9 "node_hide"
+0038 CALL A=8 B=2 C=2
+0039 SELF r8 self=r8 method="hide"
+0040 CALL A=8 B=2 C=1
+0041 GETTABLE r8 r7["effect"]
+0042 SELF r8 self=r8 method="show"
+0043 CALL A=8 B=2 C=1
+0044 EQ A=0 r6 5
+0045 JMP A=0 target=71
+0046 GETGLOBAL r8 "transition"
+0047 GETTABLE r8 r8["scaleTo"]
+0048 MOVE A=9 B=7 C=0
+0049 NEWTABLE A=10 B=0 C=4
+0050 SETTABLE r10["time"] 0.1
+0051 SETTABLE r10["scale"] 1.3
+0052 SETTABLE r10["easing"] "RATEACTION"
+0053 CLOSURE r11 nested=0
+0054 MOVE A=0 B=7 C=0
+0055 SETTABLE r10["onComplete"] r11
+0056 CALL A=8 B=3 C=1
+0057 JMP A=0 target=71
+0058 GETTABLE r8 r7["getChild"]
+0059 LOADK r9 "node_show"
+0060 CALL A=8 B=2 C=2
+0061 SELF r8 self=r8 method="hide"
+0062 CALL A=8 B=2 C=1
+0063 GETTABLE r8 r7["getChild"]
+0064 LOADK r9 "node_hide"
+0065 CALL A=8 B=2 C=2
+0066 SELF r8 self=r8 method="show"
+0067 CALL A=8 B=2 C=1
+0068 GETTABLE r8 r7["effect"]
+0069 SELF r8 self=r8 method="hide"
+0070 CALL A=8 B=2 C=1
+0071 CLOSE A=7 B=0 C=0
+0072 FORLOOP A=3 target=8
+0073 GETTABLE r3 r2["getChild"]
+0074 LOADK r4 "node_item1"
+0075 CALL A=3 B=2 C=2
+0076 GETTABLE r3 r3["getChild"]
+0077 LOADK r4 "node_head"
+0078 CALL A=3 B=2 C=2
+0079 GETGLOBAL r4 "transition"
+0080 GETTABLE r4 r4["stopTarget"]
+0081 MOVE A=5 B=3 C=0
+0082 CALL A=4 B=2 C=1
+0083 SELF r4 self=r3 method="rotation"
+0084 LOADK r6 0
+0085 CALL A=4 B=3 C=1
+0086 RETURN A=0 B=1 C=0
+
+FUNCTION 4.0
+CONSTANTS ["transition", "scaleTo", "time", 0.1, "delay", 0.3, "scale", 1]
+0000 GETGLOBAL r0 "transition"
+0001 GETTABLE r0 r0["scaleTo"]
+0002 GETUPVAL A=1 B=0 C=0
+0003 NEWTABLE A=2 B=0 C=3
+0004 SETTABLE r2["time"] 0.1
+0005 SETTABLE r2["delay"] 0.3
+0006 SETTABLE r2["scale"] 1
+0007 CALL A=0 B=3 C=1
+0008 RETURN A=0 B=1 C=0
+
+FILE ui/strengthen/FuwenSelector.lua
+SHA256 21e81206ad2683226d9f77b23e5732fde06734c5a572d7a6553254acaf579e83
+
+FUNCTION 5
+CONSTANTS ["pkg", "DataManager", "_FuwenData", null, "getCurDragonElement", "getExtendInfo", "quality", 2, "tiptf", "setString", "蓝色品质以上的龙可装备符文", "list", "resetData", "getAtksInfo", "ipairs", "fuwenlist", "dragonid", 0, "LibraryManager", "lib_fuwen", "getInfoById", "type", "equipType", 5, "defaultSkill_", "table", "insert", "info", "data", "isFergment", false, true, "sort", "sortFunc", 1, "dividing", "可以镶嵌的符文:", "不可以镶嵌的符文,碎片:", "new", "layout", "getChild", "huadong", "preline", 3, "target", "没有可以装备到此龙的符文", ""]
+0000 GETGLOBAL r1 "DataManager"
+0001 GETTABLE r1 r1["_FuwenData"]
+0002 GETTABLE r1 r1["pkg"]
+0003 SETTABLE r0["pkg"] r1
+0004 GETTABLE r1 r0["pkg"]
+0005 EQ A=0 r1 null
+0006 JMP A=0 target=8
+0007 RETURN A=0 B=1 C=0
+0008 NEWTABLE A=1 B=0 C=0
+0009 NEWTABLE A=2 B=0 C=0
+0010 SELF r3 self=r0 method="getCurDragonElement"
+0011 CALL A=3 B=2 C=2
+0012 SELF r4 self=r3 method="getExtendInfo"
+0013 CALL A=4 B=2 C=2
+0014 GETTABLE r5 r4["quality"]
+0015 LE A=0 r5 2
+0016 JMP A=0 target=29
+0017 GETTABLE r5 r0["tiptf"]
+0018 SELF r5 self=r5 method="setString"
+0019 LOADK r7 "蓝色品质以上的龙可装备符文"
+0020 CALL A=5 B=3 C=1
+0021 GETTABLE r5 r0["list"]
+0022 TEST A=5 B=0 C=0
+0023 JMP A=0 target=28
+0024 GETTABLE r5 r0["list"]
+0025 SELF r5 self=r5 method="resetData"
+0026 MOVE A=7 B=1 C=0
+0027 CALL A=5 B=3 C=1
+0028 RETURN A=0 B=1 C=0
+0029 SELF r5 self=r0 method="getCurDragonElement"
+0030 CALL A=5 B=2 C=2
+0031 SELF r5 self=r5 method="getAtksInfo"
+0032 CALL A=5 B=2 C=2
+0033 GETGLOBAL r6 "ipairs"
+0034 GETTABLE r7 r0["pkg"]
+0035 GETTABLE r7 r7["fuwenlist"]
+0036 CALL A=6 B=2 C=4
+0037 JMP A=0 target=74
+0038 GETTABLE r11 r10["dragonid"]
+0039 EQ A=0 r11 0
+0040 JMP A=0 target=74
+0041 GETGLOBAL r11 "LibraryManager"
+0042 GETTABLE r11 r11["lib_fuwen"]
+0043 SELF r11 self=r11 method="getInfoById"
+0044 GETTABLE r13 r10["type"]
+0045 CALL A=11 B=3 C=2
+0046 TEST A=11 B=0 C=0
+0047 JMP A=0 target=66
+0048 GETTABLE r12 r11["equipType"]
+0049 LT A=0 r12 5
+0050 JMP A=0 target=66
+0051 LOADK r12 "defaultSkill_"
+0052 GETTABLE r13 r11["equipType"]
+0053 CONCAT A=12 B=12 C=13
+0054 GETTABLE r12 r5[r12]
+0055 TEST A=12 B=0 C=0
+0056 JMP A=0 target=74
+0057 GETGLOBAL r12 "table"
+0058 GETTABLE r12 r12["insert"]
+0059 MOVE A=13 B=1 C=0
+0060 NEWTABLE A=14 B=0 C=3
+0061 SETTABLE r14["info"] r11
+0062 SETTABLE r14["data"] r10
+0063 SETTABLE r14["isFergment"] false
+0064 CALL A=12 B=3 C=1
+0065 JMP A=0 target=74
+0066 GETGLOBAL r12 "table"
+0067 GETTABLE r12 r12["insert"]
+0068 MOVE A=13 B=2 C=0
+0069 NEWTABLE A=14 B=0 C=3
+0070 SETTABLE r14["info"] r11
+0071 SETTABLE r14["data"] r10
+0072 SETTABLE r14["isFergment"] true
+0073 CALL A=12 B=3 C=1
+0074 TFORLOOP A=6 B=0 C=2
+0075 JMP A=0 target=38
+0076 GETGLOBAL r6 "table"
+0077 GETTABLE r6 r6["sort"]
+0078 MOVE A=7 B=1 C=0
+0079 GETGLOBAL r8 "DataManager"
+0080 GETTABLE r8 r8["_FuwenData"]
+0081 GETTABLE r8 r8["sortFunc"]
+0082 CALL A=6 B=3 C=1
+0083 LEN A=6 B=2 C=0
+0084 LT A=0 0 r6
+0085 JMP A=0 target=120
+0086 GETGLOBAL r6 "table"
+0087 GETTABLE r6 r6["sort"]
+0088 MOVE A=7 B=2 C=0
+0089 GETGLOBAL r8 "DataManager"
+0090 GETTABLE r8 r8["_FuwenData"]
+0091 GETTABLE r8 r8["sortFunc"]
+0092 CALL A=6 B=3 C=1
+0093 LEN A=6 B=1 C=0
+0094 LT A=0 0 r6
+0095 JMP A=0 target=103
+0096 GETGLOBAL r6 "table"
+0097 GETTABLE r6 r6["insert"]
+0098 MOVE A=7 B=1 C=0
+0099 LOADK r8 1
+0100 NEWTABLE A=9 B=0 C=1
+0101 SETTABLE r9["dividing"] "可以镶嵌的符文:"
+0102 CALL A=6 B=4 C=1
+0103 GETGLOBAL r6 "table"
+0104 GETTABLE r6 r6["insert"]
+0105 MOVE A=7 B=1 C=0
+0106 NEWTABLE A=8 B=0 C=1
+0107 SETTABLE r8["dividing"] "不可以镶嵌的符文,碎片:"
+0108 CALL A=6 B=3 C=1
+0109 GETGLOBAL r6 "ipairs"
+0110 MOVE A=7 B=2 C=0
+0111 CALL A=6 B=2 C=4
+0112 JMP A=0 target=118
+0113 GETGLOBAL r11 "table"
+0114 GETTABLE r11 r11["insert"]
+0115 MOVE A=12 B=1 C=0
+0116 MOVE A=13 B=10 C=0
+0117 CALL A=11 B=3 C=1
+0118 TFORLOOP A=6 B=0 C=2
+0119 JMP A=0 target=113
+0120 GETTABLE r6 r0["list"]
+0121 TEST A=6 B=0 C=0
+0122 JMP A=0 target=128
+0123 GETTABLE r6 r0["list"]
+0124 SELF r6 self=r6 method="resetData"
+0125 MOVE A=8 B=1 C=0
+0126 CALL A=6 B=3 C=1
+0127 JMP A=0 target=142
+0128 GETUPVAL A=6 B=0 C=0
+0129 GETTABLE r6 r6["new"]
+0130 GETTABLE r7 r0["layout"]
+0131 GETTABLE r7 r7["getChild"]
+0132 LOADK r8 "huadong"
+0133 CALL A=7 B=2 C=2
+0134 MOVE A=8 B=1 C=0
+0135 GETUPVAL A=9 B=1 C=0
+0136 NEWTABLE A=10 B=0 C=1
+0137 SETTABLE r10["preline"] 3
+0138 CALL A=6 B=5 C=2
+0139 SETTABLE r0["list"] r6
+0140 GETTABLE r6 r0["list"]
+0141 SETTABLE r6["target"] r0
+0142 LEN A=6 B=1 C=0
+0143 EQ A=0 r6 0
+0144 JMP A=0 target=150
+0145 GETTABLE r6 r0["tiptf"]
+0146 SELF r6 self=r6 method="setString"
+0147 LOADK r8 "没有可以装备到此龙的符文"
+0148 CALL A=6 B=3 C=1
+0149 JMP A=0 target=154
+0150 GETTABLE r6 r0["tiptf"]
+0151 SELF r6 self=r6 method="setString"
+0152 LOADK r8 ""
+0153 CALL A=6 B=3 C=1
+0154 RETURN A=0 B=1 C=0
+
+FUNCTION 0.1
+CONSTANTS ["getCurDragonElement", "getAtksInfo", 0, 1, 4, "defaultSkill_", "DataManager", "_FuwenData", "getFuwenByDragonAndPos", "_data", "id", "info", "quality", "level", "ipairs", "pkg", "fuwenlist", "LibraryManager", "lib_fuwen", "getInfoById", "type", "equipType", "dragonid", "SocketSender", "dceFuwenDragon"]
+0000 GETUPVAL A=0 B=0 C=0
+0001 SELF r0 self=r0 method="getCurDragonElement"
+0002 CALL A=0 B=2 C=2
+0003 SELF r1 self=r0 method="getAtksInfo"
+0004 CALL A=1 B=2 C=2
+0005 NEWTABLE A=2 B=4 C=0
+0006 LOADK r3 0
+0007 LOADK r4 0
+0008 LOADK r5 0
+0009 LOADK r6 0
+0010 SETLIST A=2 B=4 C=1
+0011 LOADK r3 1
+0012 LOADK r4 4
+0013 LOADK r5 1
+0014 FORPREP A=3 target=77
+0015 LOADK r7 "defaultSkill_"
+0016 MOVE A=8 B=6 C=0
+0017 CONCAT A=7 B=7 C=8
+0018 GETTABLE r7 r1[r7]
+0019 LT A=0 0 r7
+0020 JMP A=0 target=77
+0021 GETGLOBAL r7 "DataManager"
+0022 GETTABLE r7 r7["_FuwenData"]
+0023 GETTABLE r7 r7["getFuwenByDragonAndPos"]
+0024 GETTABLE r8 r0["_data"]
+0025 GETTABLE r8 r8["id"]
+0026 MOVE A=9 B=6 C=0
+0027 CALL A=7 B=3 C=2
+0028 TEST A=7 B=0 C=0
+0029 JMP A=0 target=34
+0030 GETTABLE r8 r7["info"]
+0031 GETTABLE r8 r8["quality"]
+0032 TEST A=8 B=0 C=1
+0033 JMP A=0 target=35
+0034 LOADK r8 0
+0035 TEST A=7 B=0 C=0
+0036 JMP A=0 target=41
+0037 GETTABLE r9 r7["info"]
+0038 GETTABLE r9 r9["level"]
+0039 TEST A=9 B=0 C=1
+0040 JMP A=0 target=42
+0041 LOADK r9 0
+0042 GETGLOBAL r10 "ipairs"
+0043 GETUPVAL A=11 B=0 C=0
+0044 GETTABLE r11 r11["pkg"]
+0045 GETTABLE r11 r11["fuwenlist"]
+0046 CALL A=10 B=2 C=4
+0047 JMP A=0 target=75
+0048 GETGLOBAL r15 "LibraryManager"
+0049 GETTABLE r15 r15["lib_fuwen"]
+0050 SELF r15 self=r15 method="getInfoById"
+0051 GETTABLE r17 r14["type"]
+0052 CALL A=15 B=3 C=2
+0053 GETTABLE r16 r15["equipType"]
+0054 EQ A=0 r16 r6
+0055 JMP A=0 target=75
+0056 GETTABLE r16 r14["dragonid"]
+0057 EQ A=0 r16 0
+0058 JMP A=0 target=75
+0059 GETTABLE r16 r15["quality"]
+0060 LT A=0 r8 r16
+0061 JMP A=0 target=66
+0062 GETTABLE r16 r14["id"]
+0063 SETTABLE r2[r6] r16
+0064 GETTABLE r8 r15["quality"]
+0065 JMP A=0 target=75
+0066 GETTABLE r16 r15["quality"]
+0067 EQ A=0 r16 r8
+0068 JMP A=0 target=75
+0069 GETTABLE r16 r15["level"]
+0070 LT A=0 r9 r16
+0071 JMP A=0 target=75
+0072 GETTABLE r16 r14["id"]
+0073 SETTABLE r2[r6] r16
+0074 GETTABLE r9 r15["level"]
+0075 TFORLOOP A=10 B=0 C=2
+0076 JMP A=0 target=48
+0077 FORLOOP A=3 target=15
+0078 GETGLOBAL r3 "SocketSender"
+0079 GETTABLE r3 r3["dceFuwenDragon"]
+0080 LOADK r4 1
+0081 GETTABLE r5 r0["_data"]
+0082 GETTABLE r5 r5["id"]
+0083 MOVE A=6 B=2 C=0
+0084 CALL A=3 B=4 C=1
+0085 RETURN A=0 B=1 C=0
+
+FILE ui/strengthen/EquipStrengthenGroupPanel.lua
+SHA256 809e864a3d907d29c1b5390fed2039911ae626685357ce61a5a6ae2e049d074c
+
+FUNCTION
+CONSTANTS ["require", "ui.components.GroupBase", "class", "EquipStrengthenGroupPanel", 0, "name", "strengthen.NewEquipListPanel", "titleName", "装备", "layoutCKB", "item_starup_ckb02", "img", "ico_zb.png", "limit", "lv", "limitValue", 7, "limitTxt", "7级解锁", "left", false, "center", "NewEquipList", "centerPos", "ccp", -30, "right", "strengthen.NewDecomposeListPanel", "装备分解", "ico_zbfj.png", "NewDecomposeList", "strengthen.FuwenPanel", "镶嵌符文", "ico_fuwen.png", 8, "8级解锁", "DragonSelecter", "leftPos", -430, "FuwenStatus", -130, "FuwenSelector", "rightPos", 300, -10, "EMPTY_TAB", "close", "setCurTab", "ctor", "getTabIndexByName"]
+0000 GETGLOBAL r0 "require"
+0001 LOADK r1 "ui.components.GroupBase"
+0002 CALL A=0 B=2 C=2
+0003 GETGLOBAL r1 "class"
+0004 LOADK r2 "EquipStrengthenGroupPanel"
+0005 MOVE A=3 B=0 C=0
+0006 CALL A=1 B=3 C=2
+0007 LOADNIL A=2 B=2 C=0
+0008 LOADK r3 0
+0009 NEWTABLE A=4 B=7 C=0
+0010 NEWTABLE A=5 B=0 C=11
+0011 SETTABLE r5["name"] "strengthen.NewEquipListPanel"
+0012 SETTABLE r5["titleName"] "装备"
+0013 SETTABLE r5["layoutCKB"] "item_starup_ckb02"
+0014 SETTABLE r5["img"] "ico_zb.png"
+0015 SETTABLE r5["limit"] "lv"
+0016 SETTABLE r5["limitValue"] 7
+0017 SETTABLE r5["limitTxt"] "7级解锁"
+0018 SETTABLE r5["left"] false
+0019 SETTABLE r5["center"] "NewEquipList"
+0020 GETGLOBAL r6 "ccp"
+0021 LOADK r7 0
+0022 LOADK r8 -30
+0023 CALL A=6 B=3 C=2
+0024 SETTABLE r5["centerPos"] r6
+0025 SETTABLE r5["right"] false
+0026 NEWTABLE A=6 B=0 C=11
+0027 SETTABLE r6["name"] "strengthen.NewDecomposeListPanel"
+0028 SETTABLE r6["titleName"] "装备分解"
+0029 SETTABLE r6["layoutCKB"] "item_starup_ckb02"
+0030 SETTABLE r6["img"] "ico_zbfj.png"
+0031 SETTABLE r6["limit"] "lv"
+0032 SETTABLE r6["limitValue"] 7
+0033 SETTABLE r6["limitTxt"] "7级解锁"
+0034 SETTABLE r6["left"] false
+0035 SETTABLE r6["center"] "NewDecomposeList"
+0036 GETGLOBAL r7 "ccp"
+0037 LOADK r8 0
+0038 LOADK r9 -30
+0039 CALL A=7 B=3 C=2
+0040 SETTABLE r6["centerPos"] r7
+0041 SETTABLE r6["right"] false
+0042 NEWTABLE A=7 B=0 C=13
+0043 SETTABLE r7["name"] "strengthen.FuwenPanel"
+0044 SETTABLE r7["titleName"] "镶嵌符文"
+0045 SETTABLE r7["layoutCKB"] "item_starup_ckb02"
+0046 SETTABLE r7["img"] "ico_fuwen.png"
+0047 SETTABLE r7["limit"] "lv"
+0048 SETTABLE r7["limitValue"] 8
+0049 SETTABLE r7["limitTxt"] "8级解锁"
+0050 SETTABLE r7["left"] "DragonSelecter"
+0051 GETGLOBAL r8 "ccp"
+0052 LOADK r9 -430
+0053 LOADK r10 0
+0054 CALL A=8 B=3 C=2
+0055 SETTABLE r7["leftPos"] r8
+0056 SETTABLE r7["center"] "FuwenStatus"
+0057 GETGLOBAL r8 "ccp"
+0058 LOADK r9 -130
+0059 LOADK r10 0
+0060 CALL A=8 B=3 C=2
+0061 SETTABLE r7["centerPos"] r8
+0062 SETTABLE r7["right"] "FuwenSelector"
+0063 GETGLOBAL r8 "ccp"
+0064 LOADK r9 300
+0065 LOADK r10 -10
+0066 CALL A=8 B=3 C=2
+0067 SETTABLE r7["rightPos"] r8
+0068 NEWTABLE A=8 B=0 C=1
+0069 GETTABLE r9 r0["EMPTY_TAB"]
+0070 SETTABLE r8["name"] r9
+0071 NEWTABLE A=9 B=0 C=1
+0072 GETTABLE r10 r0["EMPTY_TAB"]
+0073 SETTABLE r9["name"] r10
+0074 NEWTABLE A=10 B=0 C=1
+0075 GETTABLE r11 r0["EMPTY_TAB"]
+0076 SETTABLE r10["name"] r11
+0077 NEWTABLE A=11 B=0 C=1
+0078 GETTABLE r12 r0["EMPTY_TAB"]
+0079 SETTABLE r11["name"] r12
+0080 SETLIST A=4 B=7 C=1
+0081 LOADK r5 8
+0082 CLOSURE r6 nested=0
+0083 MOVE A=0 B=1 C=0
+0084 MOVE A=0 B=2 C=0
+0085 MOVE A=0 B=3 C=0
+0086 SETTABLE r1["close"] r6
+0087 CLOSURE r6 nested=1
+0088 MOVE A=0 B=3 C=0
+0089 MOVE A=0 B=2 C=0
+0090 MOVE A=0 B=1 C=0
+0091 SETTABLE r1["setCurTab"] r6
+0092 CLOSURE r6 nested=2
+0093 MOVE A=0 B=5 C=0
+0094 MOVE A=0 B=0 C=0
+0095 MOVE A=0 B=1 C=0
+0096 MOVE A=0 B=4 C=0
+0097 MOVE A=0 B=3 C=0
+0098 MOVE A=0 B=2 C=0
+0099 SETTABLE r1["ctor"] r6
+0100 CLOSURE r6 nested=3
+0101 MOVE A=0 B=4 C=0
+0102 SETTABLE r1["getTabIndexByName"] r6
+0103 RETURN A=1 B=2 C=0
+0104 RETURN A=0 B=1 C=0

@@ -10,6 +10,7 @@ const SEED=[
  {id:'eq-4',type:116101,exp:0,star:0,randinfo:[],dragonid:0},
 ];
 exports.prepare=async store=>{
+ if(process.argv.includes('--exercise-equipment-features'))return require('./smoke-equipment-features.cjs').prepare(store);
  const loaded=await store.load();if(loaded.state)return;
  const {createGame}=await import('../src/game.mjs');
  const s=createGame();s.equipment=SEED.map(instance=>({...instance}));s.nextEquipId=5;
@@ -17,6 +18,7 @@ exports.prepare=async store=>{
  await store.save(s);
 };
 exports.run=async(window,store,verify)=>{
+ if(process.argv.includes('--exercise-equipment-features'))return require('./smoke-equipment-features.cjs').run(window,store,verify);
  const js=code=>window.webContents.executeJavaScript(code),state=async()=>(await store.load()).state;
  for(let i=0;i<80;i++){if(await js("!!document.querySelector('.original-hud')"))break;await wait(100)}
  const click=async selector=>{assert(await js(`(()=>{const e=document.querySelector(${JSON.stringify(selector)});return e&&!e.disabled&&e.getBoundingClientRect().height>0})()`),selector);await js(`document.querySelector(${JSON.stringify(selector)}).click();true`);await wait(420)};

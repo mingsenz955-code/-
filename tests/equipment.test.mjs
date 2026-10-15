@@ -2,7 +2,7 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {createHash} from 'node:crypto';
-import {equipmentCatalog,equipmentDefinition,equipmentUpgradeTarget,equipmentDowngradeTarget,EQUIPMENT_SLOTS,EQUIPMENT_SLOTS_LAYOUT,equipmentEmptyIcon,createEquipmentInstance,equipmentIcon,equipmentGradeText,equipmentOfDragon,equipmentInPart,equipmentBonus} from '../src/equipment.mjs';
+import {equipmentCatalog,equipmentDefinition,equipmentUpgradeTarget,equipmentDowngradeTarget,EQUIPMENT_SLOTS,EQUIPMENT_SLOTS_LAYOUT,equipmentEmptyIcon,createEquipmentInstance,equipmentIcon,equipmentGradeText,equipmentOfDragon,equipmentInPart,equipmentBonus,recommendedEquipment,equipmentPower,equipmentBagItems} from '../src/equipment.mjs';
 import {createGame,validate,action} from '../src/game.mjs';
 const T=1800000000000;
 
@@ -71,7 +71,7 @@ test('wearing follows the instance dragonid and one part holds at most one item'
  assert.equal(equipmentOfDragon(s,2).length,1);
  assert.equal(equipmentInPart(equipmentOfDragon(s,2),0).id,'eq-1');
  assert.throws(()=>action(s,'wearEquipment',{id:2,equipmentId:'eq-1'},T),/已经穿在龙身上/);
- assert.throws(()=>action(s,'wearEquipment',{id:2,equipmentId:'eq-2'},T),/该部位已装备/);
+ const replaced=action(s,'wearEquipment',{id:2,equipmentId:'eq-2'},T);assert.equal(replaced.equipment[0].dragonid,0);assert.equal(replaced.equipment[1].dragonid,2);assert.equal(replaced.equipment.length,s.equipment.length);assert.equal(replaced.coins,s.coins);
  s=action(s,'wearEquipment',{id:2,equipmentId:'eq-3'},T);
  assert.equal(equipmentOfDragon(s,2).length,2);
  s=action(s,'wearEquipment',{id:3,equipmentId:'eq-2'},T);
@@ -112,4 +112,20 @@ test('v5 saves migrate to v6 with an empty equipment list and untouched ranch da
  assert.equal(migrated.nextEquipId,1);
  assert.deepEqual(migrated.dragons,old.dragons);
  assert.equal(old.version,5);
+});
+
+
+test('source one-click equipment fills only empty slots by quality then grade and protects other owners',()=>{
+ const s=createGame(T),defs=equipmentCatalog({part:0,grade:null}),low=defs.find(v=>v.quality===1&&v.grade===1),higher=defs.find(v=>v.quality===3&&v.grade===1),up=defs.find(v=>v.quality===3&&v.grade===2);
+ s.equipment=[createEquipmentInstance('eq-1',low.id),createEquipmentInstance('eq-2',higher.id),createEquipmentInstance('eq-3',up.id),{...createEquipmentInstance('eq-4',equipmentCatalog({part:1,quality:1})[0].id),dragonid:3},createEquipmentInstance('eq-5',equipmentCatalog({part:4,quality:1})[0].id)];s.nextEquipId=6;
+ const before=structuredClone(s);assert.deepEqual(recommendedEquipment(s,2).map(v=>v.id),['eq-3','eq-5']);
+ const n=action(s,'wearBestEquipment',{id:2},T);assert.deepEqual(s,before);assert.deepEqual(equipmentOfDragon(n,2).map(v=>v.id),['eq-3','eq-5']);assert.equal(n.equipment[3].dragonid,3);assert.equal(n.coins,s.coins);assert.equal(n.equipment.length,s.equipment.length);
+ assert.throws(()=>action(n,'wearBestEquipment',{id:2},T),/空槽/);assert.equal(validate(JSON.parse(JSON.stringify(n))).equipment[2].dragonid,2);
+});
+
+test('equipment score includes cumulative stars and filters preserve protected worn inventory',()=>{
+ const s=createGame(T),type=equipmentCatalog({part:0,quality:3})[0].id;
+ s.equipment=[{...createEquipmentInstance('eq-1',type),star:1,dragonid:2},createEquipmentInstance('eq-2',115101),createEquipmentInstance('eq-3',type)];s.nextEquipId=4;
+ const bonus=equipmentBonus([s.equipment[0]]);assert.equal(equipmentPower(s.equipment[0]),bonus.atk+bonus.def+Math.round(bonus.hp/3)+bonus.resist+bonus.antResist);
+ assert(equipmentPower(s.equipment[0])>equipmentPower(s.equipment[2]));assert.deepEqual(equipmentBagItems(s,'decompose',0).map(v=>v.id),['eq-3']);assert.deepEqual(equipmentBagItems(s,'enhance',4).map(v=>v.id),['eq-2']);assert.deepEqual(equipmentBagItems(s,'star',0).map(v=>v.id),['eq-1','eq-3']);
 });

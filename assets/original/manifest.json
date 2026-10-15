@@ -37605,6 +37605,67 @@
       "width": 201,
       "height": 208,
       "sha256": "0be720978fe18ffb81d90b74a2510bdc417e16e1809a3f652b98a1e3950e84d0"
+    },
+    "effects/eff_huodongkuang.webp": {
+      "archive": "assets/res/Effects/eff_huodongkuang.xml",
+      "texture": "assets/res/Effects/eff_huodongkuang.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "db14c6b81e88effa9761e559c04cfde2971fb2ab0f8677862b06a4015125e5cb"
+    },
+    "effects/eff_huodongkuang.json": {
+      "archive": "assets/res/Effects/eff_huodongkuang.xml",
+      "texture": "assets/res/Effects/eff_huodongkuang.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "fb9601f71060584ccf8cda85ac13580b3de101852cb3a7909512e64f4d520311"
+    },
+    "particles/cj_putong.png": {
+      "archive": "assets/res/particle/cj_putong.png",
+      "sha256": "ecde4214e2368afd2d9e3290384bf56730219a25c3cd5dd12a56b245b260f602"
+    },
+    "particles/cj_niudan02.png": {
+      "archive": "assets/res/particle/cj_niudan02.png",
+      "sha256": "a6f30998c10e640a7122e8f37817996e21af7cc5705859f3785275eabffac6de"
+    },
+    "particles/cj_gaoji.png": {
+      "archive": "assets/res/particle/cj_gaoji.png",
+      "sha256": "8429c773fbf3b3714756fe5f99c3b5a7889a9828dd4574019ae53ebd2e75ae2e"
+    },
+    "particles/cj_gaojichuxian01.png": {
+      "archive": "assets/res/particle/cj_gaojichuxian01.png",
+      "sha256": "d79e01b3d9dd762c78e231c673be29022dd3045830651783efac1b3b8ff7290a"
+    },
+    "particles/cj_gaojichuxian02.png": {
+      "archive": "assets/res/particle/cj_gaojichuxian02.png",
+      "sha256": "a6f30998c10e640a7122e8f37817996e21af7cc5705859f3785275eabffac6de"
+    },
+    "particles/index.mjs": {
+      "archive": "assets/res/particle/cj_*.plist",
+      "conversion": "plist settings, no particle parameters invented",
+      "sha256": "4ffb81edd58c451e6c542123f5506e80d4b15432bfac69e9bc6ff1ea7152ad78"
+    },
+    "effects/effect_dress_equip.webp": {
+      "archive": "assets/res/Effects/Effect_Normal/effect_dress_equip.xml",
+      "texture": "assets/res/Effects/Effect_Normal/effect_dress_equip.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "63eb942de081c30d558aacd681f348735750d3dcb13c07bf1a5d9f484cfa729f"
+    },
+    "effects/effect_dress_equip.json": {
+      "archive": "assets/res/Effects/Effect_Normal/effect_dress_equip.xml",
+      "texture": "assets/res/Effects/Effect_Normal/effect_dress_equip.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "f1f0e32f6a505b88fcd6989415ef16aeac74b2b196c46e63d20033970b2084d3"
+    },
+    "effects/equip_strengthen.webp": {
+      "archive": "assets/res/Effects/Effect_Normal/equip_strengthen.xml",
+      "texture": "assets/res/Effects/Effect_Normal/equip_strengthen.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "64c56f2bb46552c35e409425074b5e3556ab717aee212427be3d1221ea2a3adf"
+    },
+    "effects/equip_strengthen.json": {
+      "archive": "assets/res/Effects/Effect_Normal/equip_strengthen.xml",
+      "texture": "assets/res/Effects/Effect_Normal/equip_strengthen.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "0cbfb4715d95d6c99fef98b709d8f2dc91b27c3b5abaaf2b26b9569de54b84ac"
     }
   }
 }

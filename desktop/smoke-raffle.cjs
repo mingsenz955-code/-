@@ -13,13 +13,13 @@ exports.prepare=async store=>{
 exports.run=async(window,store,verify)=>{
  const js=code=>window.webContents.executeJavaScript(code);
  for(let i=0;i<80;i++){if(await js("!!document.querySelector('.original-hud')"))break;await wait(100)}
- const click=async selector=>{assert(await js(`(()=>{const e=document.querySelector(${JSON.stringify(selector)});return e&&!e.disabled&&e.getBoundingClientRect().height>0})()`),selector);await js(`document.querySelector(${JSON.stringify(selector)}).click();true`);await wait(320)};
+ const click=selector=>require('./smoke-input.cjs').nativeClick(window,selector);
  const state=async()=>(await store.load()).state;
  const shot=async name=>fs.writeFile(path.join(__dirname,'..','work',name),(await window.webContents.capturePage()).toPNG());
 
  if(verify){
   const restored=await state();
-  assert.equal(restored.raffle.pending.length,0,'sold raffle eggs must stay removed after restart');
+  assert.equal(restored.raffle.pending.length,process.argv.includes('--exercise-ten-raffle')?10:0,'saved raffle eggs must survive restart without restoring sold ones');
   assert.equal(restored.raffle.tickets['6048'],4,'ticket spending must persist');
   assert.equal(restored.incubator,null,'a sold hatched dragon must not return after restart');
   assert(restored.log.some(line=>line.includes('出售')),'sale record must survive restart');
@@ -50,6 +50,7 @@ exports.run=async(window,store,verify)=>{
  assert.equal(await js("document.querySelector('#modal').dataset.mode"),'sourceRaffleResult','the original result panel opens after the machine animation');
  assert.equal(await js("document.querySelectorAll('#modal .raffle-result-egg').length"),1,'the result panel shows the won egg');
  assert(await js("document.querySelector('#modal').textContent.includes('获得的龙蛋，可在仓库中查看')"));
+ assert(await js("[...document.querySelectorAll('.raffle-result-egg')].every(e=>Number(getComputedStyle(e).opacity)>.99&&e.getBoundingClientRect().width>0&&e.querySelector('img').naturalWidth>0)"),'Won eggs must actually be visible, including with Windows reduced motion');
  await shot('raffle-result-qa.png');
  await click('#modal [data-action=returnRaffle]');
 
@@ -84,5 +85,18 @@ exports.run=async(window,store,verify)=>{
  const accelerated=await state();assert.equal(accelerated.gems,gemsBeforeSpeed-speedCost);assert(accelerated.incubator.readyAt<=Date.now());assert(await js("!!document.querySelector('#modal [data-action=sellIncubator]')"));
  const hatchGold=dragonSellGold(accelerated.incubator.species),coinsBeforeHatchSale=accelerated.coins;await shot('incubator-sell-qa.png');await click('#modal [data-action=sellIncubator]');
  const sold=await state();assert.equal(sold.incubator,null);assert.equal(sold.coins,coinsBeforeHatchSale+hatchGold);assert.deepEqual(sold.dragons,before.dragons,'selling eggs or the hatched dragon must not touch ranch dragons');
+ if(process.argv.includes('--exercise-ten-raffle')){
+  if(await js("document.querySelector('#modal').open"))await click('#modal [data-action=close]');
+  await click('[data-action=lotteryOptions]');const beforeTen=await state();
+  await click('[data-action=raffleDraw][data-value="junior:10"]');
+  for(let i=0;i<100&&await js("document.querySelector('#modal').dataset.mode!=='sourceRaffleResult'");i++)await wait(50);
+  await wait(1300);
+  assert.equal(await js("document.querySelectorAll('.raffle-result-egg').length"),10);
+  assert(await js("[...document.querySelectorAll('.raffle-result-egg')].every(e=>Number(getComputedStyle(e).opacity)>.99&&e.querySelector('img').complete&&e.querySelector('img').naturalWidth>0)"),'All ten won eggs must actually be visible');
+  const afterTen=await state();assert.equal(afterTen.raffle.pending.length,10);assert.equal(afterTen.raffle.tickets['6047'],beforeTen.raffle.tickets['6047']-10);assert.equal(afterTen.gems,beforeTen.gems);
+  await shot('raffle-ten-visible-qa.png');await click('[data-action=returnRaffle]');await click('#modal [data-action=close]');await click('[data-action=openWarehouse]');
+  assert.equal(await js("document.querySelectorAll('[data-raffle-egg]').length"),10);assert.deepEqual((await state()).raffle.pending,afterTen.raffle.pending);
+  console.log('PASS native ten draw: ten visible source egg images, exact single charge and ten warehouse prizes');
+ }
  console.log('PASS three machines draw, exact ticket charging, warehouse egg sale, source-formula hatch acceleration and hatched-dragon sale');
 };

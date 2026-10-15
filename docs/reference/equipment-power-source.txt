@@ -1,0 +1,15 @@
+SHA256 260427d21eaeeb05ad9742adde0c3b103906bf8d4aac01f5e8eb4e84abe6c06a
+Static Lua 5.1 disassembly. PCs and nested function indexes are zero-based. No code executed.
+
+FUNCTION 88
+CONSTANTS ["math", "round", 3]
+0000 ADD r5 r0 r1
+0001 GETGLOBAL r6 "math"
+0002 GETTABLE r6 r6["round"]
+0003 DIV r7 r2 3
+0004 CALL A=6 B=2 C=2
+0005 ADD r5 r5 r6
+0006 ADD r5 r5 r3
+0007 ADD r5 r5 r4
+0008 RETURN A=5 B=2 C=0
+0009 RETURN A=0 B=1 C=0

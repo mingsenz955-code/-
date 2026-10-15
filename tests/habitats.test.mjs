@@ -3,11 +3,20 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {createGame,validate,action,income} from '../src/game.mjs';
 import {SPECIES,ORIGINAL_LEVELS} from '../src/data.mjs';
-import {ORIGINAL_HABITATS,habitatInfo,acceptsDragon,habitatLimit,snapHabitatPosition,canPlaceHabitat} from '../src/habitats.mjs';
+import {ORIGINAL_HABITATS,habitatInfo,acceptsDragon,habitatLimit,habitatBuildStatus,snapHabitatPosition,canPlaceHabitat} from '../src/habitats.mjs';
 const T=1800000000000;
 const earth=Object.keys(SPECIES).find(k=>SPECIES[k].attributes?.length===1&&SPECIES[k].attributes[0]==='e');
 function fixture(level=8){const s=createGame(T);s.playerXp=ORIGINAL_LEVELS.find(l=>l.level===level).xp_required;s.coins=10000000;s.gems=500;return s}
 function build(s,id){s=action(s,'build',{buildingId:id},T);return action(s,'completeHabitat',{id:s.habitats.at(-1).id},s.habitats.at(-1).job.readyAt)}
+
+test('level-one habitat limit explains why purchase is blocked without charging; level two and expansion reopen capacity',()=>{
+ const s=fixture(1),before=structuredClone(s),status=habitatBuildStatus(s,1);
+ assert.equal(status.blocked,true);assert.equal(status.limit,1);assert.deepEqual(status.next,{level:2,limit:2});
+ assert.throws(()=>action(s,'build',{buildingId:26},T),/当前 1\/1 座.*2 级/);assert.deepEqual(s,before);
+ const two=fixture(2);assert.equal(habitatBuildStatus(two,2).blocked,false);
+ const built=action(two,'build',{buildingId:26},T);assert.equal(built.habitats.length,2);assert.equal(habitatBuildStatus(built,2).blocked,true);
+ const expanded=action(built,'expandIsland',{},T);assert.equal(habitatBuildStatus(expanded,2).blocked,false);
+});
 test('all 18 client habitat definitions have verified exported images and differing capacities/storage',async()=>{assert.equal(ORIGINAL_HABITATS.length,18);for(const h of ORIGINAL_HABITATS){assert(h.nameCN&&!h.nameCN.includes('Habitat'));await fs.access(new URL('../'+h.image,import.meta.url));}assert.equal(habitatInfo({buildingId:26}).maxGold,500);assert.equal(habitatInfo({buildingId:31}).maxGold,50000);assert.equal(habitatInfo({buildingId:40}).capacity,1)});
 test('v2 generic habitat migration preserves three mixed dragons, stored coins and paused jobs',()=>{const s=fixture();s.version=2;s.dragons.push({id:4,species:'mist',level:1,habitatId:1});s.nextId=5;s.habitats[0].storedCoins=1234.5;s.nest={phase:'hatching',species:'steam',parents:[2,3],readyAt:T+9000};const restored=validate(JSON.parse(JSON.stringify(s)));assert.equal(restored.version,12);assert.deepEqual(restored.habitats,s.habitats);assert.deepEqual(restored.dragons,s.dragons);assert.deepEqual(restored.incubator,s.nest)});
 test('construction gates, exact cost, real source timer and XP survive serialization',()=>{let s=fixture();s=action(s,'build',{buildingId:26},T);const h=s.habitats.at(-1);assert.equal(s.coins,9999900);assert.equal(h.job.readyAt,T+10000);assert(!acceptsDragon(h,earth));assert.throws(()=>action(s,'completeHabitat',{id:h.id},T+9999),/尚未完成/);const xp=s.playerXp;s=action(validate(JSON.parse(JSON.stringify(s))),'completeHabitat',{id:h.id},T+10000);assert.equal(s.playerXp,xp+100);assert(acceptsDragon(s.habitats.at(-1),earth));assert.throws(()=>action(s,'completeHabitat',{id:h.id},T+10001),/尚未完成/)});

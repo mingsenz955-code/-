@@ -1,0 +1,45 @@
+{
+  "file": "assets/scripts/ui/rune/RuneLotteryEffectPanel.lua",
+  "sha256": "259e2cb32625aa1ef595d703b789f672d0655a0b642529db712184ce344ff2a6",
+  "methods": [
+    "Rune result _playEffect and _playLotteryEffect (function names preserved in source)",
+    "Warrior:setMotion source at assets/scripts/ui/battle/Warrior.lua"
+  ],
+  "gemReveal": {
+    "origin": [
+      0,
+      200
+    ],
+    "iconScale": [
+      1,
+      0.7
+    ],
+    "iconScaleSeconds": 0.4,
+    "normalHoldSeconds": 0.2,
+    "normalMoveSeconds": 0.2,
+    "quality5HoldSeconds": 0.4,
+    "quality5MoveSeconds": 0.2,
+    "sequential": true,
+    "singleDestination": [
+      0,
+      0
+    ],
+    "gridX": "(index-1)%5*125-250",
+    "gridY": "-floor((index-1)/5)*150+80",
+    "quality5Particles": [
+      "cj_gaoji",
+      "cj_gaojichuxian01",
+      "cj_gaojichuxian02"
+    ],
+    "otherParticles": [
+      "cj_putong"
+    ],
+    "quitVisibleAfterAll": true
+  },
+  "knownDifferences": [
+    "Canvas gravity particle simulation has not been pixel-compared to original native emitter",
+    "Cocos rate/back easing sampled at 60 intervals; exact APK native engine build not yet identified",
+    "Offline pools and server combat remain separately documented approximations"
+  ],
+  "easingReference": "https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-2.2.6/cocos2dx/actions/CCActionEase.cpp"
+}

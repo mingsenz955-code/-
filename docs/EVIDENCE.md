@@ -276,3 +276,37 @@
 
 ## v0.16.34 存档入口核验
 - 正式SaveStore路径APPDATA/YulongRanch/saves/ranch-v1.json保有plots9；v34实画HUD99且4岛无锁。截图1级与正式档不符，具体预览URL未取得。storage.mjs已有默认localStorage独立分支是已确认代码隐患，已改显式试玩才可用。
+
+
+## v0.16.35 本机冻结与原版获取动作
+- 在本机真实 Electron 环境复现 `matchMedia('(prefers-reduced-motion: reduce)').matches === true`，旧 `paint(..., reduced ? 0 : elapsed)` 和牧场 `!reduced.matches` 使角色永久静止。修复后同环境完成实时帧变化和走动边界检查。
+- `ui/battle/BattleUI.lua` SHA256/PC30–33 明确把外观等级提升到至少7级；原 `Warrior:setMotion` 在抬手完成回调进入相应 end 动作，再发出攻击。本地战斗已使用该成年外观与完成事件。尚未改变离线胜负/伤害策略。
+- `ui/fuwen/FuwenPanel.lua` 直接证实：原 NPC `eff_huodongkuang` 边框、掉落首次0.15秒/0.08秒间隔；新增掉落0.05秒显现+0.15秒移位；拾取0.3秒放大至1.2/0.15秒间隔，随后BACKIN飞行1秒，最后0.1秒淡出；源粒子为 cj_putong / cj_niudan02。
+- `EquipStrengthenGroupPanel` 原三栏坐标 (-430,0)、(-130,0)、(300,-10)；源 FuwenSelector 条件 `quality <= 2` 拒绝，文字为蓝色以上；原一键镶嵌按品质/等级比较空闲符文。门槛原记录的“绿色”已纠正，并兼容已有旧版装备关系。
+- `RuneLotteryEffectPanel.lua` 原图标从 (0,200) 依次揭晓，0.4秒缩到0.7；普通0.2秒等待+0.2秒位移，橙色0.4秒等待+0.2秒位移；原屏幕暗幕、普通/高级粒子与品质标识均使用原资源。原方法与文件哈希见 gem-reveal-source.json。
+- 动作缓动使用 [Cocos2d-x 2.2.6 CCActionEase.cpp](https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-2.2.6/cocos2dx/actions/CCActionEase.cpp) 的数学曲线采样；尚未确认APK精确原生引擎构建，不能称逐帧一致。Canvas 粒子参数/纹理由原 plist 导出，仍需原机画面比较。
+- 真实鼠标回归发现：原符文槽缺 pointer-events，宝石结果按钮零尺寸。已修复，并由原生鼠标输入验证完整获得—拾取—镶嵌—卸下—一键镶嵌；153项规则检查通过。原生Windows包也验证，不以 DOM .click() 代替真实点选。
+
+
+## v0.16.36 战斗表现继续对照
+- 静态阅读原客户端明文 `BattleField.lua`、`Warrior.lua`、`HpBar.lua`、三种 Bullet 实现及 `EffectDelegate.lua`，各文件 SHA256 和对照参数保存在 `reference/battle-presentation-source.json`；没有执行原 Lua。
+- 恢复 ui_battlenormal 1024×768 画板，不再压缩天空阵位。所有角色 movein 完成后等待0.1秒开战；源头部高度和嘴部偏移决定弹道端点。
+- 普通弹道速度1800单位/秒、原始缩放与方向翻转；闪电/链段采用距离伸缩并等待 bullistic 完成再命中，分别保留0.5/0.3秒后用0.3/0.15秒淡出。hitEff 的 bomb2/bomb3 分前后景并保留原0.1秒完成延迟；死亡播完再延迟0.1秒退场。血条使用原尺寸图和0.3秒追赶/0.5秒延迟/0.5秒淡出。
+- 源技能公共表 type 列已由构造函数字段序核实并导出，349行逐项检查。156项Node测试通过；源Electron和v0.16.36实际Windows包均通过动作实时帧、完整冒险、奖励/退出取消检查；重启恢复关卡状态通过。Windows包真实鼠标符文和宝石获取—应用回归通过，均使用独立测试存档。
+- 剩余差异明确保留：现有离线胜负、伤害、行动顺序、选取目标和buff并非服务端战报；完整闪电链和群体目标规则未接入，群体命中特效仍使用单目标位置；普通伤害字尚未按 FloatingText 的 orange_36 和原完整上浮曲线恢复。当前成果是战斗表现修复，不能宣称原版战斗已完美一致。
+
+
+## v0.16.38 扭蛋奖品透明问题
+- 本机 Windows `prefers-reduced-motion: reduce` 为 true；`.raffle-result-egg` 基础 opacity=0，而全局 reduce 规则使用 animation:none!important，导致结果DOM/奖品存档已存在但完全不可见。
+- 修复前实际Electron原生鼠标单抽后，新增可见性检查明确失败；修复基础 opacity=1 后，单抽/十连各项实际计算透明度、图片成功载入、仓库数量和单次扣费检查通过。装饰淡入关闭时结果仍直接可见。
+- 扭蛋机播放使用实际源32帧/30fps片段完成事件；不再因reduce跳过游戏动作，也不再固定1秒切走。关闭页面仍保留先行落盘的奖品。
+- 157项Node规则测试通过；源运行时独立重启确认十枚奖品、券消耗和已出售条目不复活。未向玩家存档注入测试资源。
+
+
+## v0.16.39 装备功能继续对照
+- FormationInfoPanel函数7跳过非空装备槽；FormationData函数19按quality再grade推荐。新一键装备据此填空，保留已穿戴项；保护全部其他龙的装备是既有本地保护政策，较源出战阵容过滤严格。
+- DataManager函数88装备评分为 atk+def+round(hp/3)+crit+uncrit，函数87先累计星级值。原界面直接使用definition.evaluate漏掉星级，现详情、更换、背包评分统一；强化预览显示累计星级总量，不把此信息补充冒称原生基础表预览。
+- NewEquipEnhancePanel函数6明确播放原equip_strengthen，DragonInfor明文有effect_dress_equip。仅静态导出这两组原纹理/骨骼，保留manifest来源与SHA；沿用现有骨骼渲染器，精确原生缓动/混合仍是已知差异。
+- 真实鼠标新检查发现：source-equipment-bag-body透明容器遮住组标签；source-star-remove受通用button:hover影响位移，导致click不产生。已分别修复事件穿透与稳定定位，并验证升星材料移除/重新添加/确认/详情激活值。
+- 规则检查159项通过；独立profile验证一键穿戴、手动替换、他龙装备保护、带星装备评分、单次/十次强化/星级保留、分解按可见分类全选/确认取消与碎片合成。不写入玩家测试装备或资源。
+- 仍缺随机词条的原服务端生成、条件属性完整应用、强化失败/保护符/降阶服务器规则、装备页完整原分组组合/已装备未装备切换/帮助与音效。当前为本地功能对照推进，不称完美复刻完成。

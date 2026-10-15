@@ -5,6 +5,6 @@
   "source": "SkillNewCommonInfo ctor columns5/6/7/15, BattleField attack/playSkillName",
   "limits": [
     "Presentation only; server action targeting, skill schedule, damage, buffs and settlement remain unverified",
-    "BattleUI source native768-high sky gaps compressed by0.62 for existing576-high PC battle artboard; not original viewport equality"
+    "BattleUI uses the source 1024x768 logical artboard and uncompressed position coordinates"
   ]
 }

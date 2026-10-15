@@ -4,6 +4,7 @@ import {ORIGINAL_EGGS} from '../assets/original/data/eggs.mjs';
 import {RAFFLE_GUARANTEE_DRAWS,raffleCost} from './raffle.mjs';
 import EFFECTS from '../assets/original/effects/index.mjs';
 import {renderSourceLayout} from './source-layout.mjs';
+import {waitForSourceMotion} from './source-motion.mjs';
 let layoutPromise,previewPromise,itemPromise,resultPromise;
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 // Later mobile raffle UI is a different system from the old Dragonrand table.
@@ -33,9 +34,10 @@ export async function openRaffleDialog(state){
 export async function playRaffleDraw(mode){
  const index={junior:1,mid:2,senior:3}[mode],dialog=document.querySelector('#modal');
  const canvas=dialog?.querySelector(`canvas[data-model="eff_choujiangji${index}"]`);if(!canvas)return false;
- canvas.dataset.clip='2';canvas.dataset.replay=String(Number(canvas.dataset.replay??0)+1);
- if(matchMedia('(prefers-reduced-motion: reduce)').matches){canvas.dataset.clip='1';return dialog.open&&canvas.isConnected}
- return new Promise(resolve=>{const started=performance.now();const finish=kept=>{if(canvas.isConnected){canvas.dataset.clip='1';canvas.dataset.replay=String(Number(canvas.dataset.replay??0)+1)}resolve(kept)};const frame=now=>{if(!dialog.open||!canvas.isConnected)return finish(false);if(now-started>=1000)return finish(true);requestAnimationFrame(frame)};requestAnimationFrame(frame)});
+ const live=()=>dialog.open&&canvas.isConnected&&dialog.dataset.mode==='sourceRaffle';
+ const done=waitForSourceMotion(canvas,'2',live);dialog.dataset.animating='true';
+ canvas.dataset.playOnce='true';canvas.dataset.clip='2';canvas.dataset.replay=String(Number(canvas.dataset.replay??0)+1);
+ try{return await done}finally{delete dialog.dataset.animating;if(canvas.isConnected){delete canvas.dataset.playOnce;canvas.dataset.clip='1';canvas.dataset.replay=String(Number(canvas.dataset.replay??0)+1)}}
 }
 
 export async function openRaffleResult(state,results,mode,count){

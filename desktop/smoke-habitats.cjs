@@ -1,7 +1,8 @@
 const assert=require('node:assert/strict'),fs=require('node:fs/promises'),path=require('node:path');
 const wait=ms=>new Promise(resolve=>setTimeout(resolve,ms));
-exports.prepare=async store=>{assert.equal((await store.load()).state,null,'Use a fresh isolated profile');const {createGame}=await import('../src/game.mjs');const {ORIGINAL_LEVELS,SPECIES}=await import('../src/data.mjs');const s=createGame();s.version=2;s.playerXp=ORIGINAL_LEVELS.find(l=>l.level===8).xp_required;s.coins=50000;s.habitats[0].storedCoins=777;s.dragons.push({id:4,species:Object.keys(SPECIES).find(k=>SPECIES[k].attributes?.length===1&&SPECIES[k].attributes[0]==='e'),level:1,habitatId:1});s.nextId=5;await store.save(s)};
+exports.prepare=async store=>{assert.equal((await store.load()).state,null,'Use a fresh isolated profile');const {createGame}=await import('../src/game.mjs');const {ORIGINAL_LEVELS,SPECIES}=await import('../src/data.mjs');const s=createGame();if(process.argv.includes('--exercise-habitat-limit')){s.coins=5000;await store.save(s);return}s.version=2;s.playerXp=ORIGINAL_LEVELS.find(l=>l.level===8).xp_required;s.coins=50000;s.habitats[0].storedCoins=777;s.dragons.push({id:4,species:Object.keys(SPECIES).find(k=>SPECIES[k].attributes?.length===1&&SPECIES[k].attributes[0]==='e'),level:1,habitatId:1});s.nextId=5;await store.save(s)};
 exports.run=async(window,store,verify)=>{
+ if(process.argv.includes('--exercise-habitat-limit'))return require('./smoke-habitat-limit.cjs').run(window,store);
  const js=code=>window.webContents.executeJavaScript(code),state=async()=>(await store.load()).state;
  const errors=[];window.webContents.on('console-message',(event,level,message)=>{if(event.level==='error'||level===3)errors.push(event.message||message)});
  for(let i=0;i<60;i++){if(await js("!!document.querySelector('.original-hud')"))break;await wait(100)}

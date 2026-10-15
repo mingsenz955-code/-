@@ -20,13 +20,13 @@ export function advanceHabitatMotion(motion,seconds,random=Math.random,specialSe
 // habitat scale; other dialogs and battle retain their existing render contract.
 export function habitatCanvasGeometry(bounds){const [x,y,r,b]=bounds;return {left:x*.45,top:y*.45,width:(r-x)*.45,height:(b-y)*.45,pixelWidth:Math.max(1,Math.ceil((r-x)*.9)),pixelHeight:Math.max(1,Math.ceil((b-y)*.9))}}
 export function startHabitatMotion(){
- const states=new Map();let last=performance.now(),refresh=0,nodes=[];const reduced=matchMedia('(prefers-reduced-motion: reduce)');
+ const states=new Map();let last=performance.now(),refresh=0,nodes=[];
  function frame(now){requestAnimationFrame(frame);if(now-last<1000/30)return;const dt=(now-last)/1000;last=now;
   if(now>refresh){nodes=[...document.querySelectorAll('.world-resident[data-motion-id]')];refresh=now+250;const ids=new Set(nodes.map(n=>n.dataset.motionId));for(const id of states.keys())if(!ids.has(id))states.delete(id)}
   for(const el of nodes){if(!el.isConnected)continue;const id=el.dataset.motionId,area=JSON.parse(el.dataset.motionArea);let m=states.get(id);if(!m||m.area.minX!==area.minX||m.area.maxX!==area.maxX||m.area.y!==area.y){m=createHabitatMotion(area);states.set(id,m)}
-   const canvas=el.querySelector('canvas[data-model]');if(!reduced.matches&&!document.querySelector('#modal')?.open&&!el.closest('.is-moving'))advanceHabitatMotion(m,dt,Math.random,Number(canvas?.dataset.specialDurationMs??1000)/1000);
+   const canvas=el.querySelector('canvas[data-model]');if(!document.querySelector('#modal')?.open&&!el.closest('.is-moving'))advanceHabitatMotion(m,dt,Math.random,Number(canvas?.dataset.specialDurationMs??1000)/1000);
    el.style.left=m.x+'px';el.style.top=(area.ground-m.y)+'px';el.style.zIndex=Math.round(1000-m.y);
-   if(canvas){canvas.dataset.worldScale='.45';canvas.dataset.nativeSize='true';canvas.dataset.clip=reduced.matches?'breath':m.clip;canvas.style.transform=`scaleX(${m.direction})`}
+   if(canvas){canvas.dataset.worldScale='.45';canvas.dataset.nativeSize='true';canvas.dataset.clip=m.clip;canvas.style.transform=`scaleX(${m.direction})`}
   }
  }
  requestAnimationFrame(frame);

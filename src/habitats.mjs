@@ -12,6 +12,12 @@ export function acceptsDragon(h,species){if(h.job?.kind==='build')return false;c
 export function acceptsSavedResident(h,species){return acceptsDragon(h,species)||(h.job?.kind!=='build'&&SPECIES[species]?.isLegendHabitat&&SPECIES[species]?.attributes?.includes(habitatInfo(h).element_type))}
 
 export function habitatLimit(level){return HABITATS_PER_LEVEL[Math.min(level,HABITATS_PER_LEVEL.length)-1]}
+export function habitatBuildStatus(state,level){
+ const owned=state.habitats.length,plots=state.expansion?.plots??0,limit=habitatLimit(level)+plots;
+ const nextIndex=HABITATS_PER_LEVEL.findIndex((count,index)=>index+1>level&&count+plots>owned);
+ const blocked=owned>=limit,next=nextIndex<0?null:{level:nextIndex+1,limit:HABITATS_PER_LEVEL[nextIndex]+plots};
+ return {owned,limit,blocked,next,message:blocked?`龙巢数量上限：当前 ${owned}/${limit} 座。${next?`升至牧场 ${next.level} 级可拥有 ${next.limit} 座；也可在满足等级后购买扩建。`:'可查看商店扩建以增加上限。'}`:''};
+}
 export function habitatPosition(h,index){return h.position??[[41,50],[59,51],[48,66],[67,65],[31,65],[56,39]][index]??[25+(index%7)*8,36+Math.floor(index/7)*9]}
 // A fixed world plane: pixels never change when the window or camera changes.
 // Tile pitch comes from BuildingBaseDelegate.showTiles. Island unlock geometry

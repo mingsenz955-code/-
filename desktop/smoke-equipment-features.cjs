@@ -1,0 +1,43 @@
+const assert=require('node:assert/strict'),fs=require('node:fs/promises'),path=require('node:path'),{nativeClick}=require('./smoke-input.cjs');
+const wait=ms=>new Promise(r=>setTimeout(r,ms));
+exports.prepare=async store=>{
+ assert.equal((await store.load()).state,null,'Use an isolated empty profile');
+ const {createGame}=await import('../src/game.mjs'),{createEquipmentInstance,equipmentCatalog}=await import('../src/equipment.mjs');
+ const s=createGame();s.equipmentFragments={30001:19};s.coins=1000000;s.equipmentMaterials={stone:1000,wing:1000,crystal:1000};
+ const type=(part,quality)=>equipmentCatalog({part,quality})[0].id;
+ s.equipment=[{...createEquipmentInstance('eq-1',101101),dragonid:2},{...createEquipmentInstance('eq-2',301101),star:1},createEquipmentInstance('eq-3',301102),createEquipmentInstance('eq-4',type(1,2)),createEquipmentInstance('eq-5',115101),{...createEquipmentInstance('eq-6',116101),dragonid:3},createEquipmentInstance('eq-7',type(2,3)),{...createEquipmentInstance('eq-8',501101),dragonid:3},createEquipmentInstance('eq-9',type(1,3))];s.nextEquipId=10;
+ await store.save(s);
+};
+exports.run=async(w,store,verify)=>{
+ const js=c=>w.webContents.executeJavaScript(c),click=q=>nativeClick(w,q),state=async()=>(await store.load()).state;
+ for(let i=0;i<100&&!await js("!!document.querySelector('.original-hud')");i++)await wait(100);
+ if(verify){const s=await state();assert.equal(s.equipment.length,8);assert.equal(s.equipmentFragments[30001],9);assert.equal(s.equipment.find(v=>v.id==='eq-2').type,301112);assert.equal(s.equipment.find(v=>v.id==='eq-2').star,1);assert.equal(s.equipment.find(v=>v.id==='eq-2').dragonid,2);assert.equal(s.equipment.find(v=>v.id==='eq-8').dragonid,3);assert(!s.equipment.some(v=>['eq-1','eq-3'].includes(v.id)));console.log('PASS equipment replacement, star-preserving enhancement, filtered decomposition and ownership persist');return}
+ const {equipmentBonus,equipmentPower}=await import('../src/equipment.mjs');
+ await click('[data-action=showMore]');await click('[data-action=openEquipmentBag]');await click('#modal [data-action=openEquip]');
+ const before=await state();await click('[data-action=wearBestEquipment]');let s=await state();
+ assert.equal(s.equipment.find(v=>v.id==='eq-1').dragonid,2,'one-click keeps an occupied slot');
+ for(const id of ['eq-5','eq-7','eq-9'])assert.equal(s.equipment.find(v=>v.id===id).dragonid,2);
+ for(const id of ['eq-6','eq-8'])assert.equal(s.equipment.find(v=>v.id===id).dragonid,3);
+ assert.equal(s.coins,before.coins);assert.equal(s.equipment.length,before.equipment.length);
+ await click('[data-action=openEquipInfo][data-id="eq-1"]');await click('[data-action=equipChange]');
+ assert.equal(await js("document.querySelectorAll('[data-action=wearEquipment][data-value=\"eq-8\"]').length"),0,'cannot take gear worn by another dragon');
+ await click('[data-action=wearEquipment][data-value="eq-2"]');s=await state();assert.equal(s.equipment.find(v=>v.id==='eq-1').dragonid,0);assert.equal(s.equipment.find(v=>v.id==='eq-2').dragonid,2);
+ await click('[data-action=openEquipInfo][data-id="eq-2"]');
+ assert.equal(Number(await js("document.querySelector('[data-source=\"pingding/shuzi\"]').textContent")),equipmentPower(s.equipment.find(v=>v.id==='eq-2')));
+ assert(!await js("document.querySelector('#modal').textContent.includes('�')"),'equipment sheet must have readable Chinese labels');
+ await fs.writeFile(path.join(__dirname,'..','work','equipment-detail-v39-qa.png'),(await w.webContents.capturePage()).toPNG());
+ await click('[data-action=openEquipEnhance]');const old=s.equipment.find(v=>v.id==='eq-2');
+ assert.equal(Number(await js("document.querySelector('[data-source=\"shuxing/shuxing1/shuzi\"]').textContent")),equipmentBonus([old]).atk);
+ await click('[data-action=enhanceEquipment][data-value="1"]');
+ assert(await js("!!document.querySelector('canvas[data-equipment-effect=equip_strengthen]')"),'native strengthen success effect must mount');
+ s=await state();assert.equal(s.equipment.find(v=>v.id==='eq-2').star,1);assert.equal(s.equipment.find(v=>v.id==='eq-2').type,301102);
+ assert.equal(Number(await js("document.querySelector('[data-source=\"shuxing/shuxing1/shuzi\"]').textContent")),equipmentBonus([s.equipment.find(v=>v.id==='eq-2')]).atk);
+ await fs.writeFile(path.join(__dirname,'..','work','equipment-enhance-v39-qa.png'),(await w.webContents.capturePage()).toPNG());
+ await click('[data-action=enhanceEquipment][data-value="10"]');s=await state();assert.equal(s.equipment.find(v=>v.id==='eq-2').type,301112);assert.equal(s.equipment.find(v=>v.id==='eq-2').star,1);await click('#modal [data-action=openEquipInfo]');await click('#modal [data-action=unwearEquipment]');assert.equal((await state()).equipment.find(v=>v.id==='eq-2').dragonid,0);await click('[data-action=equipChange][data-id="0"]');await click('[data-action=wearEquipment][data-value="eq-2"]');await click('#modal [data-action=close]');await click('[data-action=openEquipmentBag]');await click('[data-action=openEquipmentBag][data-value=decompose]');
+ await click('[data-action=equipmentBagFilter][data-value="0"]');await click('[data-action=selectAllDecomposeEquipment]');
+ assert.deepEqual((await js("document.querySelector('#modal').dataset.selectedEquipmentIds")).split(',').sort(),['eq-1','eq-3']);assert.equal(await js("document.querySelector('#modal').dataset.bagPart"),'0');
+ await click('[data-action=confirmDecomposeEquipment]');await click('[data-action=cancelDecomposeEquipment]');assert.equal(await js("document.querySelector('#modal').dataset.bagPart"),'0');
+ await click('[data-action=confirmDecomposeEquipment]');await click('[data-action=decomposeEquipment]');s=await state();assert.equal(s.equipment.length,7);assert.equal(s.equipment.find(v=>v.id==='eq-8').dragonid,3);
+ await click('[data-action=openEquipmentBag][data-value=enhance]');await click('[data-action=openEquipmentBag][data-value=fragments]');await click('[data-action=composeEquipmentFragments][data-id="30001"]');s=await state();assert.equal(s.equipmentFragments[30001],9);assert.equal(s.equipment.length,8);assert(await js("document.querySelector('[data-action=composeEquipmentFragments][data-id=\"30001\"]').disabled"));
+ console.log('PASS native equipment one-click empty slots, direct replacement, source score, star-aware enhancement/effect, filtered select-all and cancel/confirm');
+};

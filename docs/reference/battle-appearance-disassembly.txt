@@ -1,0 +1,91 @@
+SHA256 320d14d3aa80456b2c597cd77b254b13fda2b9704ad110d8dc8138ef06ec83b9
+Static Lua 5.1 disassembly. PCs and nested function indexes are zero-based. No code executed.
+
+FUNCTION 4
+CONSTANTS ["id", "maxHp", "max_hp", "curHp", "cur_hp", "finalHp", "final_hp", "holyID", "holy_id", "name", "level", 7, "wakestar", 0, "echoLog", "battle ui", "id: %d, curHp: %d, maxHp: %d", "isMonster", "LibraryManager", "lib_monster", "getInfoById", "tabID", "type", "info", "lib_dragonExtend", "starlvl", 5, "quality", "viewName", "DragonManager", "getDragonGraphic", "icon", "getDragonIcon"]
+0000 NEWTABLE A=1 B=0 C=8
+0001 GETTABLE r2 r0["id"]
+0002 SETTABLE r1["id"] r2
+0003 GETTABLE r2 r0["max_hp"]
+0004 SETTABLE r1["maxHp"] r2
+0005 GETTABLE r2 r0["cur_hp"]
+0006 SETTABLE r1["curHp"] r2
+0007 GETTABLE r2 r0["final_hp"]
+0008 SETTABLE r1["finalHp"] r2
+0009 GETTABLE r2 r0["holy_id"]
+0010 SETTABLE r1["holyID"] r2
+0011 GETTABLE r2 r0["name"]
+0012 SETTABLE r1["name"] r2
+0013 GETTABLE r2 r0["level"]
+0014 TEST A=2 B=0 C=1
+0015 JMP A=0 target=17
+0016 LOADK r2 7
+0017 SETTABLE r1["level"] r2
+0018 GETTABLE r2 r0["wakestar"]
+0019 TEST A=2 B=0 C=1
+0020 JMP A=0 target=22
+0021 LOADK r2 0
+0022 SETTABLE r1["wakestar"] r2
+0023 GETGLOBAL r2 "echoLog"
+0024 LOADK r3 "battle ui"
+0025 LOADK r4 "id: %d, curHp: %d, maxHp: %d"
+0026 GETTABLE r5 r1["id"]
+0027 GETTABLE r6 r1["curHp"]
+0028 GETTABLE r7 r1["maxHp"]
+0029 CALL A=2 B=6 C=1
+0030 GETTABLE r2 r1["level"]
+0031 LT A=0 r2 7
+0032 JMP A=0 target=34
+0033 SETTABLE r1["level"] 7
+0034 GETTABLE r2 r0["isMonster"]
+0035 TEST A=2 B=0 C=0
+0036 JMP A=0 target=60
+0037 GETGLOBAL r2 "LibraryManager"
+0038 GETTABLE r2 r2["lib_monster"]
+0039 SELF r2 self=r2 method="getInfoById"
+0040 GETTABLE r4 r0["tabID"]
+0041 CALL A=2 B=3 C=2
+0042 GETTABLE r3 r2["type"]
+0043 SETTABLE r1["tabID"] r3
+0044 GETGLOBAL r3 "LibraryManager"
+0045 GETTABLE r3 r3["lib_dragonExtend"]
+0046 SELF r3 self=r3 method="getInfoById"
+0047 GETTABLE r5 r1["tabID"]
+0048 CALL A=3 B=3 C=2
+0049 SETTABLE r1["info"] r3
+0050 GETTABLE r3 r2["starlvl"]
+0051 LT A=0 5 r3
+0052 JMP A=0 target=57
+0053 GETTABLE r3 r2["starlvl"]
+0054 SUB r3 r3 5
+0055 TEST A=3 B=0 C=1
+0056 JMP A=0 target=58
+0057 LOADK r3 0
+0058 SETTABLE r1["wakestar"] r3
+0059 JMP A=0 target=68
+0060 GETTABLE r2 r0["tabID"]
+0061 SETTABLE r1["tabID"] r2
+0062 GETGLOBAL r2 "LibraryManager"
+0063 GETTABLE r2 r2["lib_dragonExtend"]
+0064 SELF r2 self=r2 method="getInfoById"
+0065 GETTABLE r4 r1["tabID"]
+0066 CALL A=2 B=3 C=2
+0067 SETTABLE r1["info"] r2
+0068 GETTABLE r2 r1["info"]
+0069 GETTABLE r2 r2["quality"]
+0070 SETTABLE r1["quality"] r2
+0071 GETGLOBAL r2 "DragonManager"
+0072 GETTABLE r2 r2["getDragonGraphic"]
+0073 GETTABLE r3 r1["tabID"]
+0074 GETTABLE r4 r1["level"]
+0075 GETTABLE r5 r1["wakestar"]
+0076 CALL A=2 B=4 C=2
+0077 SETTABLE r1["viewName"] r2
+0078 GETGLOBAL r2 "DragonManager"
+0079 GETTABLE r2 r2["getDragonIcon"]
+0080 GETTABLE r3 r1["tabID"]
+0081 GETTABLE r4 r1["level"]
+0082 CALL A=2 B=3 C=2
+0083 SETTABLE r1["icon"] r2
+0084 RETURN A=1 B=2 C=0
+0085 RETURN A=0 B=1 C=0
