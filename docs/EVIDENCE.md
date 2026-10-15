@@ -273,3 +273,6 @@
 - 明文ui/battle/Warrior.lua:67–83确认attack→attackend、end/hurt完成回stand。渲染按原模型frames/fps处理，取消固定出字后才恢复动作。
 - islandleft/right/top/bottom原图/布局均已读取，独立PC地图接入；原地块遮罩、解锁顺序与统一坐标没取得，不冒充原服务器逻辑。
 - source shop115项含47龙蛋，treasure_items110项c商品保留sourceEnabled字段；49原关闭项是按用户授权开放。export-resource-shop.py可复现。获取条件minLevel更正为原lvl兼容min_level，不再显示未知破折号。
+
+## v0.16.34 存档入口核验
+- 正式SaveStore路径APPDATA/YulongRanch/saves/ranch-v1.json保有plots9；v34实画HUD99且4岛无锁。截图1级与正式档不符，具体预览URL未取得。storage.mjs已有默认localStorage独立分支是已确认代码隐患，已改显式试玩才可用。
