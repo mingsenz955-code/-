@@ -26,6 +26,7 @@ import {openEquipmentStar} from './equipment-star-dialog.mjs';
 import {openGiftUseDialog,openBattleRewards,openLootBoxDialog,openLootBoxResults,openNodeReward} from './loot-dialog.mjs';
 import {equipmentFragment} from './loot.mjs';
 import {openEquipmentBag,confirmEquipmentDecompose} from './equip-bag-dialog.mjs';
+import {installEquipmentListScroll} from './equipment-list-scroll.mjs';
 import {openGemExplore,openGemExploreResult} from './gem-explore-dialog.mjs';
 import {openRuneHunt,openShenfuDialog} from './rune-hunt-dialog.mjs';
 import {openRunePanel,openRuneSelector,openRuneInfo,openRuneUpgrade,refreshRunePreview} from './rune-dialog.mjs';
@@ -62,6 +63,7 @@ import {openFormationDialog,openFormationPicker,openFormationPreview} from './fo
 import {formationReplacement} from './formation.mjs';
 import {startDragonModels,DRAGON_MODELS} from './dragon-models.mjs';
 import {originalHud} from './original-hud.mjs';
+installEquipmentListScroll();
 let drag;
 let camera={zoom:1,x:0,y:0},pan;
 function applyCamera(){const el=document.querySelector('.ranch-world'),scene=document.querySelector('.scene');if(!el||!scene)return;const fit=Math.min(scene.clientWidth/1300,scene.clientHeight/768);camera=clampWorldCamera(camera,scene.clientWidth,scene.clientHeight,fit,WORLD_BOUNDS);if(!drag)activeIsland=nearestWorldIsland(-camera.x/(fit*camera.zoom),-camera.y/(fit*camera.zoom),unlockedIslands(state));el.style.transform=`translate(calc(-50% + ${camera.x}px),calc(-50% + ${camera.y}px)) scale(${fit*camera.zoom})`;el.dataset.zoom=camera.zoom;}

@@ -4,7 +4,7 @@ exports.run=async(w,store,verify=false)=>{
  const js=c=>w.webContents.executeJavaScript(c),click=s=>require('./smoke-input.cjs').nativeClick(w,s);
  for(let i=0;i<80;i++){if(await js("!!document.querySelector('.original-hud')"))break;await wait(100)}
  if(verify){const s=(await store.load()).state;assert.equal(s.equipment[0].star,1);assert.equal(s.equipment[0].exp,1);assert.equal(s.equipment.length,6);assert.equal(s.coins,944000);assert.equal(s.equipment[0].dragonid,2);console.log('PASS equipment stars independent restart, ownership and materials');return}
- await click('[data-action=showMore]');await click('[data-action=openEquipmentBag]');await click('[data-action=openEquipmentBag][data-value="star"]');await click('[data-action=openEquipmentStar][data-id="eq-1"]');
+ await click('[data-action=showMore]');await click('[data-action=openEquipmentBag]');await click('[data-action=openEquipmentBag][data-value="star"]');await require('./smoke-equipment-scroll.cjs').run(w);await click('[data-action=openEquipmentStar][data-id="eq-1"]');
  assert.equal(await js("document.querySelector('#modal').dataset.mode"),'sourceEquipmentStar');assert.equal(await js("document.querySelectorAll('.source-star-material').length"),7);
  await click('[data-action=starMaterial][data-id="eq-2"]');await click('.source-star-remove[data-id="eq-2"]');assert.equal(await js("document.querySelector('#modal').dataset.starMaterialIds"),'');await click('[data-action=starMaterial][data-id="eq-2"]');await click('[data-action=starMaterial][data-id="eq-3"]');
  await fs.writeFile(path.join(__dirname,'..','work','equipment-stars-preview-qa.png'),(await w.webContents.capturePage()).toPNG());
