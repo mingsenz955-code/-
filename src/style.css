@@ -233,3 +233,13 @@ body:has(#modal[open].native-fullscreen){background:#09242e}
 .tree-opponent-team{display:grid;grid-template-columns:repeat(2,1fr);height:160px;align-items:center}
 .world-targets .tree-opponent-team .dragon{position:static;width:90px;height:75px;margin:0;transform:none}
 .tree-seed-choices{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;text-align:center}.tree-seed-choices img{width:75px;height:75px;object-fit:contain}.tree-seed-choices p{margin:5px 0;font-size:17px}.tree-seed-choices .native-game-button{min-width:130px;height:52px;font-size:21px}
+
+/* Original HolyTree hint icon + caption; native bottom tray chooses the seed. */
+.tree-slot-empty{left:-45px;top:-45px;width:90px;height:90px;border:0;outline:0;background:transparent!important;box-shadow:none;transform:none}
+.tree-slot-empty .tree-hint-icon{position:absolute;inset:0;width:90px;height:90px;object-fit:contain}
+.tree-slot-empty .tree-hint-caption{position:absolute;left:50%;top:61px;transform:translateX(-50%);width:92px;height:34px;object-fit:contain}
+.tree-slot-empty:hover .tree-hint-icon{content:url('../assets/original/ui/ui_main_icon_kezhongzhi2.png')}
+.tree-selecting-seed .tree-slot-empty.is-selected:after{content:'';position:absolute;inset:2px;background:url('../assets/original/ui/ui_daojukuang_selected85.png') center/contain no-repeat;pointer-events:none}
+.tree-selecting-seed .tree-seed:not(:disabled){filter:drop-shadow(0 0 5px #ffe874)}
+.tree-fruit{left:-43px;top:-53px;width:86px;height:112px;border:0;box-shadow:none;background:transparent!important;transform:none}
+.tree-fruit img{width:64px;height:64px;object-fit:contain}.tree-fruit span{font-size:17px;line-height:1.25}

@@ -289,3 +289,6 @@
 ## v0.16.39 修正圣树NPC原证据
 - seedrobot的第二列与Dragon_computer_array_nine的包ID关联：30001包为30001/30002/30003；30011包为30031/30032/30033；30024包为30070/30071/30072/30032。旧文档中把第二列当同号单怪的描述已被此证据推翻，现导出字段packId+groups+完整monster。
 - 原NPC包人数3/3/4已用于预览与实际战斗，属性仍按用户动态难度90/110/120整队缩放，不能称为原服务端属性。圣树控件因source-node继承pointer-events:none漏接，已真实鼠标复现并修正。
+
+## v0.16.40 圣树种植入口依据
+- item_holy_tree_hint_kezhongzhi.json原btn90×90使用ui_main_icon_kezhongzhi.png/2，con_name位于y-29；t_kezhongzhi_cn.png为原文字图。HolyTree_seeds静态函数onSeedClicked调用getEmptyGrowPos和godTreePlantSeed，证实底部托盘选种。现UI恢复托盘交互，指定槽位为PC适配，不将v39通用选择弹窗记为原界面。

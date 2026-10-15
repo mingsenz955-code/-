@@ -665,3 +665,9 @@
 - treeOpponent.enemies为整队，UI预览所有龙/人数，战斗完整敌队，结算和展示均按整队攻防生命之和算战力，分摊目标强度，避免每条龙都拿整队战力导致新手被3倍压制。按用户要求，档位由75/95/110提高到90/110/120，保留最强合法已拥有成年龙战力的×1.25分档机制；不是原服务器难度算法。
 - 162项Node通过，新增原整包成员/总战力一致、指定果位种植/占位与非法槽防耗种。Electron隔离档使用真正sendInputEvent鼠标验证成熟果实点击领取→点空果位2→种子选择→食物种到2→直接点底部强化石种到0，截图可见两处8小时倒计时；NPC预览3/3/4龙且实际战斗3敌人；NPC抢夺/首领战斗/购买次数回归通过。独立重启保留指定果位与战斗进度。work/holy-tree-planted-qa.png、holy-tree-targets-qa.png、holy-tree-npc-team-battle-qa.png已查看。
 - 打包v39、根exe更新前备份最新正式档；没有自动重置玩家果位/本日已挑战、资源或原有龙。原客户端专属种子选择/NPC列表布局尚未逐像素复刻，现列表仍为原素材适配；真实技能战报/副作用结算等旧缺口未因NPC整队修复而完成。
+## 最新检查点 — v0.16.40 原圣树种植入口与PR查找（2026-10-15）
+- 用户指出通用种子选择大弹窗及文字果位太简陋，要求审查朋友PR后合并。本轮先git fetch、git ls-remote refs/pull/*/head无结果，GitHub connector search_prs开放/全部两次均issues=[]，远端仅origin/master且无新提交。已异步索取具体PR链接/编号；没有臆造或合并未知PR，也没有声称审查通过。收到后必须读取实际diff/测试/附加PR再按用户条件合并。
+- 静态查看HolyTree_seeds配置，原实现为圣树底部种子托盘选种；原item_holy_tree_hint_kezhongzhi明确90×90图标+con_name。取消v39自造通用种子选择弹窗，点空果位留在原ui_holy_tree内选中果位，再点底部种子种到该位。以原ui_main_icon_kezhongzhi/2+t_kezhongzhi_cn替换纯字按钮，恢复原VIP6开放label，取消自写VIP果位label。种子禁用状态/计时/存档仍保留。
+- 使用原selected85提示当前果位、底部可用种子微光辅助选择；这是PC适配提示，位置/细节未逐像素核验，种子信息保留鼠标提示。不再保留那张带两个大空框的通用种子列表。生长图标收小，不遮挡过多树干。
+- 162项Node与Electron隔离档真实鼠标回归通过：点空果位2后仍sourceHolyTree且selectedTreeSlot=2，通用tree-seed-choices节点数0；点底部食物实际种到2、快捷强化石种到0、收获到账、原3/3/4敌队与首领回归。work/holy-tree-native-seed-tray-qa.png已查看。
+- v40打包并通过根启动程序更新，升级前备份当前正式档；没有重置玩家进度。PR审查当前缺少实际链接，不属于已完成合并。
