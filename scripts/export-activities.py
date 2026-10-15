@@ -26,7 +26,7 @@ add('seven-login','七日福利·登录','login','7dayfuli_denglu',[simple(r,[pr
 add('seven-tasks','七日福利·任务','sevenTask','7dayfuli_renwu',[simple(r,[prize(r[2],r[3],r[4],r[5])],goal=r[1]) for r in t['7dayfuli_renwu']],group='七日')
 add('seven-shop','七日福利·半价购','purchase','7dayfuli_shangpin',[simple(r,[prize(r[1],r[2],r[3],r[8])],cost=prize(3,-1,r[5]),limit=r[6],vip=r[7],day=r[0]) for r in t['7dayfuli_shangpin']],group='七日')
 for table,key,title,width in [('7daybuy','seven-recharge','七日充值',4),('5daybuy','five-recharge','五日充值送豪礼',4)]:
- add(key,title,'rechargeDays',table,[simple(r,groups(r,2,count=3 if table=='5daybuy' else 2),day=r[1],goal=(5 if table=='5daybuy' else 7) if not r[1] else r[-1],super=not r[1]) for r in t[table]],group='七日')
+ add(key,title,'rechargeDays',table,[simple(r,groups(r,2,count=3 if table=='5daybuy' else 2),day=r[1],goal=(5 if table=='5daybuy' else 7) if not r[1] else r[-1],paidGoal=200 if table=='5daybuy' and not r[1] else 0,super=not r[1]) for r in t[table]],group='七日')
 for table,key,title,kind in [('xiaofeifanli','spend','消费返利','spent'),('chongzhifanli','recharge-rebate','充值返利','paid'),('dafuwengfanli','monopoly-rebate','大富翁充值返利','paid')]:
  add(key,title,kind,table,[simple(r,groups(r,2),goal=r[1]) for r in t[table]],group='返利')
 add('limited-spend','限时消费','spent','xiaofeifanli2',[simple(r,groups(r,3),goal=r[2],day=r[1]) for r in t['xiaofeifanli2']],group='返利')

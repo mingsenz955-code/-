@@ -63,7 +63,7 @@ export function activityRows(s,key,now=Date.now()){const d=activityDefinition(ke
  case 'sevenTask':current=taskProgress(s,r.id);note=['','拥有紫色及以上的龙','拥有S级宝石','累计通关节点','收集龙种','拥有强化至60级的蓝装','任意一条龙培养至2阶','拥有橙色装备'][r.id];break;
  case 'paid':current=h.paid;note='本轮累计测试充值（元）';break;
  case 'spent':current=h.spent;note='本轮累计消费魔晶';break;
- case 'rechargeDays':{const ds=Object.values(h.paidDays).filter(n=>n>=50).length;current=r.super?ds:(h.paidDays[day]??0);ready=r.super?ds>=goal:visits(s)>=r.day;note=r.super?`达标充值天数 ${ds}`:`第${r.day}天；当日充值魔晶`;break;}
+ case 'rechargeDays':{const ds=Object.values(h.paidDays).filter(n=>n>=50).length;current=r.super?ds:(h.paidDays[day]??0);ready=r.super?ds>=goal&&h.paid>=(r.paidGoal??0):ds>=r.day;note=r.super?`达标充值天数 ${ds}/${goal}${r.paidGoal?`；累计测试充值 ${h.paid}/${r.paidGoal} 元`:''}`:`第${r.day}个充值达标日；当日充值魔晶 ${current}/${goal}`;break;}
  case 'rechargeShop':current=h.paid;label='购买';ready=(h.paidDays[day]??0)>=goal&&h.counts[`${key}:${r.id}`]!==day;goal=1;current=1;note=`当日充值需达 ${r.goal} 魔晶，每项每日限购一次`;break;
  case 'purchase':current=1;label='购买';ready=(h.counts[`${key}:${r.id}`]??0)<(r.limit??1e9)&&visits(s)>=(r.day??1);note=r.limit?`剩余 ${Math.max(0,r.limit-(h.counts[`${key}:${r.id}`]??0))} 次`:'';break;
  case 'exchange':current=held(s,r.cost.type,r.cost.itemId);goal=r.cost.amount;label='兑换';claimed=false;break;
