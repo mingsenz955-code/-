@@ -11,7 +11,7 @@ function cell(item,action){const d=runeDefinition(item.type);return `<button cla
 export async function openRunePanel(state,dragonId){
  const dragon=state.dragons.find(d=>d.id===dragonId)??state.dragons[0];if(!dragon)throw Error('牧场里还没有龙。');
  const [group,left,status,selector,portrait]=await Promise.all(['ui_tab_group','item_star_up_zuo_equipPart1','ui_fuwenStatus','ui_FuwenSelector','item_star_up_touxiang_dengji'].map(sourceLayout));
- const values={node_name:SPECIES[dragon.species].name,txt_power:dragonPower(dragon,state)},slots={},hidden=new Set();
+ const values={node_name:SPECIES[dragon.species].name+((state.formation??[]).includes(dragon.id)?'（已出战）':'（未出战）'),txt_power:dragonPower(dragon,state)},slots={},hidden=new Set();
  for(let slot=1;slot<=4;slot++){
   const item=runeOfDragon(state,dragon.id,slot),def=runeDefinition(item?.type),skill=runeSkill(dragon,null,slot),key='node_fw_item'+slot;
   hidden.add(key+(item?'/image_off':'/image_on'));values[key+'/txt_num']=def?'+'+def.level:'';

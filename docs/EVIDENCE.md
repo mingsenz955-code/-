@@ -329,3 +329,7 @@
 ## v0.16.42 获取动画与装备目标核验
 - gem-reveal-source.json保留原RuneLotteryEffectPanel缩放1→0.7/0.4秒与三类S粒子记录。此次只纠正DOM居中随scale发生位移及粒子宿主锚点，不改原导出plist。
 - 原FuwenSelector蓝品质以上门槛继续保留；寻访默认选合格已有龙是PC交互修正，不宣称是已证明的客户端默认选龙顺序。实际正式档id2烈火龙不符合门槛且排第一，解释用户截图灰色装备按钮。真实鼠标隔离测试确认合格龙装备/卸下/重启保持有效。
+
+## v0.16.43 永久被动属性证据
+- docs/reference/dragon-attributes-disassembly.txt FUNCTION1 PC38–40筛type3被动，PC48–65按buff1ID/符文颜色等级算buffID，PC94–122以arg1=0/1/2/3/4把arg2加入攻/防/生命/暴击/免暴，之后加入baseAttribute。skill-descriptions.mjs原buff表10101000=攻击300、10101302=攻击1091，10401000=暴击750、10401301=暴击1519。
+- fuwen-skill-extension-disassembly.txt PC63–86仍证明攻击/特技加addPower，被动addPower=0且另有addPowerDisplay；被动收益来自实际属性，不能用显示评分再重复加一遍。当前修复与此分工一致。

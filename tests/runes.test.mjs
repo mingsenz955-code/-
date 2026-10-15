@@ -38,3 +38,20 @@ test('hunt entry selects an eligible owner while preserving an eligible explicit
  assert.equal(defaultRuneDragon(createGame(T),2).id,2);
  assert.deepEqual(s,before);
 });
+
+test('permanent passive rune buffs raise real attributes and power without adding display power twice',async()=>{
+ const {dragonAttributes,lineupPower,configuredLineup}=await import('../src/battle.mjs');
+ let s=fixture();s.dragons[2].species='original1074';s.formation=[4];s.runes[0].type=30302;
+ const base=dragonAttributes(s.dragons[2],s),power=dragonPower(s.dragons[2],s);
+ s=action(s,'wearRune',{id:4,runeId:'fw-1'},T);
+ const next=dragonAttributes(s.dragons[2],s);assert.equal(next.attack-base.attack,1091-300);assert.equal(dragonPower(s.dragons[2],s)-power,791);
+ assert.equal(lineupPower(configuredLineup(s),s),dragonPower(s.dragons[2],s));
+ assert.equal(defaultRuneDragon(s,2).id,4);
+ s.runes[2].type=30401;s=action(s,'wearRune',{id:4,runeId:'fw-3'},T);assert.equal(dragonAttributes(s.dragons[2],s).crit-base.crit,1519-750);assert.equal(dragonPower(s.dragons[2],s)-power,791+769);s=action(s,'unwearRune',{runeId:'fw-3'},T);
+ const removed=action(s,'unwearRune',{runeId:'fw-1'},T);assert.deepEqual(dragonAttributes(removed.dragons[2],removed),base);
+});
+
+test('hunt default prioritizes the deployed eligible dragon over an idle one',()=>{
+ const s=fixture();s.dragons.push({id:5,species:'original1074',level:20,habitatId:1});s.formation=[5];
+ assert.equal(defaultRuneDragon(s,2).id,5);assert.equal(defaultRuneDragon(s,4).id,4);
+});

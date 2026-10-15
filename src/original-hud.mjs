@@ -1,3 +1,4 @@
+import {configuredLineup,lineupPower} from './battle.mjs';
 import {playerProgress} from './game.mjs';
 import layout from '../assets/original/layout-main.mjs';
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -12,10 +13,10 @@ const ACTIONS={btn_RenWU:'showTasks',btn_pickAll:'collectAll',btn_GengDuo:'showM
 export function originalHud(state,{expanded=false}={}){
  const scale=Math.min(innerWidth/layout.width,innerHeight/layout.height),rootWidth=innerWidth/scale,rootHeight=innerHeight/scale;
  const progress=playerProgress(state);
- const values={txt_JinBi:state.coins.toLocaleString('zh-CN'),txt_ShiWu:state.food.toLocaleString('zh-CN'),txt_MoJing:String(state.gems??0),txt_exp:progress.percent+'%',txt_level:String(progress.level),player_name:'御龙高手',power:'0',vip_num:'0'};
+ const values={txt_JinBi:state.coins.toLocaleString('zh-CN'),txt_ShiWu:state.food.toLocaleString('zh-CN'),txt_MoJing:String(state.gems??0),txt_exp:progress.percent+'%',txt_level:String(progress.level),player_name:'御龙高手',power:String(lineupPower(configuredLineup(state),state)),vip_num:'0'};
  const render=(node,root=false)=>{
   if(node.name==='act_btn')node={...node,children:node.children.filter(n=>['btn_firstrecharge','btn_welfare','btn_Huodongzhongxin','btn_dafuweng'].includes(n.name))};
-  if(['bubble','label','label_good','go1','go2','new','pbar_exp','vip','power'].includes(node.name))return '';
+  if(['bubble','label','label_good','go1','go2','new','pbar_exp','vip'].includes(node.name))return '';
   const w=node.width??0,h=node.height??0;let x=node.x??0,y=node.y??0;
   if(root){
    if(node.left!==undefined)x=node.left+w/2-rootWidth/2;
@@ -32,7 +33,7 @@ export function originalHud(state,{expanded=false}={}){
   if(node.type==='label'){
    const text=values[node.name]??node.text??'';
    const color=Number(node.color??0xffffffff),rgb=(color>>>8).toString(16).padStart(6,'0');
-   return `<span class="hud-text" style="${style}font-size:${node.size??20}px;color:#${rgb};text-align:${node.align??'left'};">${escape(text)}</span>`;
+   return `<span class="hud-text" data-hud="${escape(node.name)}" style="${style}font-size:${node.size??20}px;color:#${rgb};text-align:${node.align??'left'};">${escape(text)}</span>`;
   }
   const label=LABELS[node.name],act=ACTIONS[node.name];
   const children=(node.children??[]).map(child=>render(child)).join('');

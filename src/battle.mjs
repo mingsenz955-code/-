@@ -1,5 +1,5 @@
 import {dragonStars} from './dragon-stars.mjs';
-import {runePower} from './runes.mjs';
+import {runePower,passiveAttributes} from './runes.mjs';
 import {gemBonus} from './gems.mjs';
 import {equipmentBonus,equipmentOfDragon} from './equipment.mjs';
 import {ORIGINAL_DRAGON_ATK} from '../assets/original/data/battle.mjs';
@@ -11,8 +11,8 @@ import {ORIGINAL_OFFLINE_ENEMY_GROUPS} from '../assets/original/data/enemies.mjs
 // static disassembly (see docs/reference/dragon-attributes-disassembly.txt):
 //   attack = floor(baseAttack + (level-1)*attackQuality + ...)
 //   power  = floor(attack + defend + maxblood/3 + crit + uncrit + getRunePower())
-// Crit, uncrit, awakening, treasure and rune terms are NOT modelled yet, so a power value
-// produced here is a documented baseline and sits below the original total.
+// Permanent passive skills, runes, equipment and gems are included. Awakening
+// and treasure terms remain incomplete; this is not the full original total.
 export const BATTLE_POLICY='offline-power-baseline-v1';
 export const BATTLE_SLOTS=6;
 export const BATTLE_ROUND_LIMIT=30;
@@ -25,13 +25,14 @@ export function dragonAttributes(dragon,state=null){
  if(!species?.originalId)return null;
  const row=dragonCombatRow(species.originalId,dragonStars(dragon));
  if(!row)return null;
+ const passive=passiveAttributes(dragon,state);
  const level=Math.max(1,dragon.level??1);
  const gems=state?gemBonus(state,dragon):{attack:0,defend:0,blood:0,crit:0,uncrit:0};
  const bonus=state?equipmentBonus(equipmentOfDragon(state,dragon.id)):{atk:0,def:0,hp:0};
- const attack=Math.floor(row.baseAttack+(level-1)*row.attackQuality)+bonus.atk+gems.attack;
- const defend=Math.floor(row.baseDefence+(level-1)*row.defenceQuality)+bonus.def+gems.defend;
- const life=Math.floor(row.baseLife+(level-1)*row.lifeQuality)+bonus.hp+gems.blood;
- return {attack,defend,life,crit:gems.crit+(bonus.antResist??0),uncrit:gems.uncrit+(bonus.resist??0),quality:species.quality};
+ const attack=Math.floor(row.baseAttack+(level-1)*row.attackQuality+passive.attack)+bonus.atk+gems.attack;
+ const defend=Math.floor(row.baseDefence+(level-1)*row.defenceQuality+passive.defend)+bonus.def+gems.defend;
+ const life=Math.floor(row.baseLife+(level-1)*row.lifeQuality+passive.life)+bonus.hp+gems.blood;
+ return {attack,defend,life,crit:passive.crit+gems.crit+(bonus.antResist??0),uncrit:passive.uncrit+gems.uncrit+(bonus.resist??0),quality:species.quality};
 }
 
 export function dragonPower(dragon,state=null){
