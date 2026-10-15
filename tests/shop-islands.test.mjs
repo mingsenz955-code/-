@@ -1,0 +1,13 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {createGame,action,validate} from '../src/game.mjs';
+import {ORIGINAL_SHOP_ITEMS} from '../assets/original/data/shop.mjs';
+import {RESOURCE_SHOP_OFFERS} from '../src/resource-shop.mjs';
+import {dragonAcquisition} from '../src/acquisition.mjs';
+import {unlockedIslands} from '../src/islands.mjs';
+const T=1800000000000;
+function rich(){const s=createGame(T);s.coins=1e12;s.gems=1e12;s.playerXp=2057823900;return s;}
+test('all 47 catalog shop eggs have a real cost, persistent inventory and working incubation',()=>{for(const row of ORIGINAL_SHOP_ITEMS.filter(r=>r.category==='eggs')){const s=rich(),n=action(s,'buyShopEgg',{id:row.id},T),egg=n.giftEggs.at(-1);assert.equal(egg.dragonId,row.id);assert.equal(n.coins,s.coins-(row.costs.g??0));assert.equal(n.gems,s.gems-(row.costs.c??0));const h=action(n,'raffleEggHatch',{id:egg.id},T);assert(h.incubator);assert.equal(h.giftEggs.length,0);assert.equal(validate(JSON.parse(JSON.stringify(n))).giftEggs[0].source,'shop');}const poor=createGame(T);assert.throws(()=>action(poor,'buyShopEgg',{id:1002},T),/不足/);assert.equal(poor.giftEggs.length,0)});
+test('all 110 gem-priced source rows buy something without lost inventory',()=>{for(const row of RESOURCE_SHOP_OFFERS){const s=rich(),n=action(s,'buyResource',{id:row.id},T);assert.equal(n.gems,s.gems-row.priceGems);assert(n.coins>s.coins||n.food>s.food||n.giftEggs.length||Object.values(n.items).some(v=>v>0)||Object.values(n.equipmentMaterials).some(v=>v>0)||Object.values(n.shopInventory).some(v=>v>0)||Object.values(n.gemExplore.balls).some(v=>v>0),String(row.id));validate(JSON.parse(JSON.stringify(n)));}});
+test('paid expansion unlocks four independent island boards; transfer preserves residents and jobs',()=>{let s=rich();for(let i=0;i<3;i++)s=action(s,'expandIsland',{},T);assert.equal(unlockedIslands(s),4);for(let islandId=1;islandId<4;islandId++){s=action(s,'build',{buildingId:26,islandId},T);assert.equal(s.habitats.at(-1).islandId,islandId);}const h=s.habitats.at(-1),job=structuredClone(h.job);s=action(s,'transferBuilding',{id:h.id,kind:'habitat',islandId:1},T);assert.deepEqual(s.habitats.at(-1).job,job);assert.equal(s.habitats.at(-1).islandId,1);assert.notDeepEqual(s.habitats.at(-1).position,s.habitats[1].position);assert.equal(validate(JSON.parse(JSON.stringify(s))).habitats.at(-1).islandId,1);assert.throws(()=>action(createGame(T),'build',{buildingId:26,islandId:1},T),/尚未解锁|数量上限/)});
+test('acquisition shows actual source shop listing and resolved ranch level',()=>{assert.equal(dragonAcquisition(1002).shop.listed,true);assert(Number.isInteger(dragonAcquisition(1002).shop.minLevel));assert(dragonAcquisition(1002).breeding.length);});

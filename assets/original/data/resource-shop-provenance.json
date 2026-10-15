@@ -1,10 +1,11 @@
 {
   "baseline": "2.9.35-202402271124",
   "tablesSha256": "1408d684c2a6530668a8ed4816ad1697d579077fed5d02b887d06f035395e750",
-  "rows": 61,
-  "resourceRows": 14,
+  "rows": 110,
+  "resourceRows": 16,
   "columnSource": "LibTreasureInfo.lua names every column; none is inferred. (`irestype` is not a column: the library assigns the literal \"魔晶\".)",
   "policy": "original-treasure-items-resource-v1",
+  "userOverride": "All source gem-priced rows opened per user request, including source enable=0; sourceEnabled records the original flag. Costs and quantities unchanged.",
   "evidence": [
     "ui/ResourceShopPanel.lua reads LibraryManager.lib_treasure, prints info.costtype and refuses the sale with \"not enough gems\".",
     "The same table sells 魔晶 for costtype \"r\" (元) in the recharge panel list, so \"c\" is the in-game 魔晶 and \"r\" is money.",

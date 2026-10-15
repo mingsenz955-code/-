@@ -268,3 +268,8 @@
 ## v0.16.32 龙出售、星级与变异取证
 - reference/dragon-sale-rules.txt、dragon-star-rules.txt、dragon-star-selection.txt、dragon-star-attributes.txt保存原函数，不执行原Lua。580行星级表及源SHA/本地政策在dragon-stars-provenance.json；属性和技能以显式星级查表，旧档保持原数值。
 - 原RandEvPanel.help直接说明>1小时/紫龙/变异奇遇/VIP/5事件；cf10行/nr14行与完整价格时间在mutation-events.json，非成年龙一键变身证据。没有触发概率响应，不自行给概率并声称一致。
+
+## v0.16.33 原动作/地图/商店证据
+- 明文ui/battle/Warrior.lua:67–83确认attack→attackend、end/hurt完成回stand。渲染按原模型frames/fps处理，取消固定出字后才恢复动作。
+- islandleft/right/top/bottom原图/布局均已读取，独立PC地图接入；原地块遮罩、解锁顺序与统一坐标没取得，不冒充原服务器逻辑。
+- source shop115项含47龙蛋，treasure_items110项c商品保留sourceEnabled字段；49原关闭项是按用户授权开放。export-resource-shop.py可复现。获取条件minLevel更正为原lvl兼容min_level，不再显示未知破折号。

@@ -1,3 +1,5 @@
+import {RESOURCE_SHOP_OFFERS} from './resource-shop.mjs';
+import {ORIGINAL_SHOP_ITEMS} from '../assets/original/data/shop.mjs';
 import {lotteryPool} from './lottery.mjs';
 import CATALOG from '../assets/original/catalog.mjs';
 import {ORIGINAL_BREEDING} from '../assets/original/data/rules.mjs';
@@ -14,6 +16,6 @@ for(const row of ORIGINAL_BREEDING){
 }
 export function dragonAcquisition(id){
  const record=records.get(id);if(!record)return null;
- return {id,name:record.name,shop:{listed:record.original.in_store===1||record.original.in_store===true,costs:{...record.original.costs},minLevel:record.original.min_level??null},breeding:[...pools.get(id)],baseLottery:[...lotteryPool(1),...lotteryPool(2)].filter(row=>row.type===16&&row.itemId===id).map(row=>({mode:row.mode,sourceRow:row.id,probability:'unverified'})),otherSources:'unverified'};
+ return {id,name:record.name,resourceShop:RESOURCE_SHOP_OFFERS.filter(r=>r.type==='d'&&r.xid===id),shop:{listed:ORIGINAL_SHOP_ITEMS.some(r=>r.id===id&&r.category==='eggs'),costs:{...record.original.costs},minLevel:record.original.min_level??record.original.lvl??null},breeding:[...pools.get(id)],baseLottery:[...lotteryPool(1),...lotteryPool(2)].filter(row=>row.type===16&&row.itemId===id).map(row=>({mode:row.mode,sourceRow:row.id,probability:'unverified'})),otherSources:'unverified'};
 }
 export function sourceDragonName(id){return records.get(id)?.name??`原ID ${id}（目录未收录）`;}

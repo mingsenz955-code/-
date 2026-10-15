@@ -6,7 +6,7 @@ columns come from LibTreasureInfo.lua (twenty-three named columns, see export-re
 costtype 'c' is 魔晶 - the same letter the habitat and expansion tables use for 魔晶 - and
 type 'g'/'f'/'ef' are 金币/食物/进化果实; l1/l2 are 中/高级龙珠.
 
-Only rows the client itself leaves enabled (enable ~= 0) and that pay in 魔晶 are exported. The
+Per explicit user request all rows paying in 魔晶 are exported; original enable is retained. The
 game's own resource shop shows the ones this build can actually deliver; the remaining rows
 (强化石, 保护符, 培养丹, 龙魂, 觉醒石, 宝箱, 玫瑰花 ...) are still listed here so the
 evidence is complete.
@@ -22,7 +22,7 @@ COLUMNS = ['id', 'name', 'amount', 'costtype', 'price', 'rebate', 'rebateMultipl
 rows = []
 for row in tables['treasure_items']:
     info = dict(zip(COLUMNS, row))
-    if info['costtype'] != 'c' or not info['enable']:
+    if info['costtype'] != 'c':
         continue
     rows.append({
         'id': info['id'],
@@ -34,6 +34,7 @@ for row in tables['treasure_items']:
         'displayOrder': info['display_order'],
         'zhekouIcon': info.get('zhekouIcon') or '',
         'img': info['img'],
+        'sourceEnabled': bool(info['enable']),
     })
 rows.sort(key=lambda row: row['id'])
 text = 'export const ORIGINAL_RESOURCE_SHOP=' + json.dumps(rows, ensure_ascii=False) + ';\n'
@@ -46,6 +47,7 @@ report = {
     'resourceRows': len(resources),
     'columnSource': 'LibTreasureInfo.lua names every column; none is inferred. (`irestype` is not a column: the library assigns the literal "魔晶".)',
     'policy': 'original-treasure-items-resource-v1',
+    'userOverride': 'All source gem-priced rows opened per user request, including source enable=0; sourceEnabled records the original flag. Costs and quantities unchanged.',
     'evidence': [
         'ui/ResourceShopPanel.lua reads LibraryManager.lib_treasure, prints info.costtype and refuses the sale with "not enough gems".',
         'The same table sells 魔晶 for costtype "r" (元) in the recharge panel list, so "c" is the in-game 魔晶 and "r" is money.',

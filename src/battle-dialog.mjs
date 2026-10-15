@@ -32,10 +32,10 @@ export async function openBattleDialog(state,{nodeId=null}={}){
  const stage=`<div class="battle-stage" aria-label="自动战斗">${lineup.map((d,i)=>fighter(d,'ally',i,allyPositions)).join('')}${enemies.filter(d=>d.species).map((d,i)=>fighter(d,'enemy',i,enemyPositions)).join('')}<div class="battle-fx-layer"></div></div>`;
  const d=showSource('sourceBattle',renderSourceLayout(layout,{values,slots,hidden,actions:{'skip/btn':{type:'close',label:'退出战斗'}}})+stage,'source-battle-dialog');
  d.style.setProperty('--source-scale',Math.min((innerWidth-20)/1024,(innerHeight-20)/576));
- d.dataset.battleNode=String(nodeId);d.dataset.battleRun=String(++activeRun);
+ d.querySelector('.battle-stage').addEventListener('dragon-clip-complete',e=>{const fighter=e.target.closest('.battle-fighter');if(!fighter)return;if(['airattack','landattack','magic'].includes(e.detail.clip))fighter.classList.remove('is-attacking');if(e.detail.clip==='hurt')fighter.classList.remove('is-hit');});d.dataset.battleNode=String(nodeId);d.dataset.battleRun=String(++activeRun);
  return d;
 }
-function clip(el,name){const c=el.querySelector('canvas[data-model]');if(c){const clips=MODELS[c.dataset.model]?.clips??[];c.dataset.clip=clips.includes(name)?name:clips.includes('breathinbattle')?'breathinbattle':'breath';c.dataset.replay=String((+c.dataset.replay||0)+1)}}
+function clip(el,name){const c=el.querySelector('canvas[data-model]');if(c){const clips=MODELS[c.dataset.model]?.clips??[];c.dataset.clip=clips.includes(name)?name:clips.includes('breathinbattle')?'breathinbattle':'breath';delete c.dataset.afterNextClip;if(['airattack','landattack','magic','hurt'].includes(name)){const idle=clips.includes('breathinbattle')?'breathinbattle':'breath',end=name+'end';c.dataset.nextClip=clips.includes(end)?end:idle;if(clips.includes(end))c.dataset.afterNextClip=idle;}else delete c.dataset.nextClip;c.dataset.replay=String((+c.dataset.replay||0)+1)}}
 function effect(layer,key,name,x,y,flip=false){const entry=EFFECTS[key];if(!entry)return null;const canvas=document.createElement('canvas');canvas.width=400;canvas.height=400;canvas.className='battle-source-effect';canvas.dataset.model=key;canvas.dataset.clip=entry.clips.includes(name)?name:entry.clips[0];canvas.style.cssText=`left:${x}px;top:${y}px;${flip?'scale:-1 1;':''}`;layer.append(canvas);return canvas}
 let glyphs;
 async function damageNumber(layer,value,x,y){glyphs??=await fetch('assets/original/fonts/red_50.json').then(r=>r.json());const number=document.createElement('span');number.className='battle-damage';number.style.cssText=`left:${x}px;top:${y}px`;number.setAttribute('aria-label',String(value));for(const char of String(value)){const g=glyphs[char];if(!g)continue;const digit=document.createElement('i');digit.style.cssText=`width:${g.width}px;height:${g.height}px;background-position:-${g.x}px -${g.y}px;margin-right:${g.xadvance-g.width}px`;number.append(digit)}layer.append(number);setTimeout(()=>number.remove(),1000)}
@@ -64,7 +64,7 @@ export async function playBattleAnimation(state,nodeId,result){
   clip(target.el,'hurt');target.el.classList.add('is-hit');
   const damage=finishing?Math.max(1,Math.floor((target.stats?.life??1)*target.hp/100)):Math.max(1,Math.floor((attacker.stats?.attack??1)*.4));
   await damageNumber(layer,damage,targetX,ty-75);setHp(target,finishing?0:Math.max(30,target.hp-10));
-  await wait(550);blast?.remove();target.el.classList.remove('is-hit');attacker.el.classList.remove('is-attacking');clip(attacker.el,'breathinbattle');if(target.hp>0)clip(target.el,'breathinbattle');
+  await wait(550);blast?.remove();target.el.classList.remove('is-hit');attacker.el.classList.remove('is-attacking');if(target.hp>0&&target.el.querySelector('canvas')?.dataset.clip==='hurt')clip(target.el,'breathinbattle');
  }
  await wait(500);return live();
 }
