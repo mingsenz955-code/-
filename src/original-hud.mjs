@@ -1,9 +1,10 @@
 import {configuredLineup,lineupPower} from './battle.mjs';
+import {vipInfo} from './vip.mjs';
 import {playerProgress} from './game.mjs';
 import layout from '../assets/original/layout-main.mjs';
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const LABELS={btn_RenWU:'任务',btn_pickAll:'收金币',btn_GengDuo:'更多',btn_ZhanDou:'战斗',btn_YouJian:'邮件',btn_TuJian:'图鉴',btn_NiuDanJi:'扭蛋机',btn_mydragon:'我的龙族',btn_YuLong:'育龙',btn_ShangDian:'商店',btn_ZhuangBei:'装备',btn_FuWen:'符文',btn_CangKu:'仓库',btn_Rank:'排行',btn_BaoShi:'宝石',btn_BuZhen:'布阵',btn_Guild:'公会',btn_SheZhi:'设置',btn_firstrecharge:'首充',btn_welfare:'福利中心',btn_Huodongzhongxin:'限时活动',btn_dafuweng:'大富翁',btn_JinBi:'获取金币',btn_ShiWu:'获取食物',btn_MoJing:'获取魔晶'};
-const ACTIONS={btn_RenWU:'showTasks',btn_pickAll:'collectAll',btn_GengDuo:'showMore',btn_ZhanDou:'openAdventure',btn_YouJian:'unavailable',btn_recharge:'openRecharge',btn_TuJian:'openOriginal',btn_NiuDanJi:'lotteryOptions',btn_mydragon:'openMyDragons',btn_YuLong:'openDragonGrowth',btn_ShangDian:'openHabitats',btn_SheZhi:'settings',btn_ZhuangBei:'openEquipmentBag',btn_FuWen:'openRunes',btn_CangKu:'openWarehouse',btn_Rank:'unavailable',btn_BaoShi:'openGems',btn_BuZhen:'openFormation',btn_Guild:'unavailable',btn_firstrecharge:'unavailable',btn_welfare:'unavailable',btn_Huodongzhongxin:'unavailable',btn_dafuweng:'unavailable',
+const ACTIONS={btn_RenWU:'showTasks',btn_pickAll:'collectAll',btn_GengDuo:'showMore',btn_ZhanDou:'openAdventure',btn_YouJian:'unavailable',btn_recharge:'openRecharge',btn_TuJian:'openOriginal',btn_NiuDanJi:'lotteryOptions',btn_mydragon:'openMyDragons',btn_YuLong:'openDragonGrowth',btn_ShangDian:'openHabitats',btn_SheZhi:'settings',btn_ZhuangBei:'openEquipmentBag',btn_FuWen:'openRunes',btn_CangKu:'openWarehouse',btn_Rank:'unavailable',btn_BaoShi:'openGems',btn_BuZhen:'openFormation',btn_Guild:'unavailable',btn_firstrecharge:'openFirstCharge',btn_welfare:'openWelfare',btn_Huodongzhongxin:'openActivities',btn_dafuweng:'openMonopolyActivities',
  // The three ＋ buttons inside gold/food/gem carry no action in the client table. 魔晶 opens the
  // recharge panel; 金币 and 食物 open the shop's 资源 category, which is the client's own 魔晶
  // sink for those two resources. That mapping is a decision, not a recovered rule.
@@ -13,7 +14,7 @@ const ACTIONS={btn_RenWU:'showTasks',btn_pickAll:'collectAll',btn_GengDuo:'showM
 export function originalHud(state,{expanded=false}={}){
  const scale=Math.min(innerWidth/layout.width,innerHeight/layout.height),rootWidth=innerWidth/scale,rootHeight=innerHeight/scale;
  const progress=playerProgress(state);
- const values={txt_JinBi:state.coins.toLocaleString('zh-CN'),txt_ShiWu:state.food.toLocaleString('zh-CN'),txt_MoJing:String(state.gems??0),txt_exp:progress.percent+'%',txt_level:String(progress.level),player_name:'御龙高手',power:String(lineupPower(configuredLineup(state),state)),vip_num:'0'};
+ const values={txt_JinBi:state.coins.toLocaleString('zh-CN'),txt_ShiWu:state.food.toLocaleString('zh-CN'),txt_MoJing:String(state.gems??0),txt_exp:progress.percent+'%',txt_level:String(progress.level),player_name:'御龙高手',power:String(lineupPower(configuredLineup(state),state)),vip_num:String(vipInfo(state).level)};
  const render=(node,root=false)=>{
   if(node.name==='act_btn')node={...node,children:node.children.filter(n=>['btn_firstrecharge','btn_welfare','btn_Huodongzhongxin','btn_dafuweng'].includes(n.name))};
   if(['bubble','label','label_good','go1','go2','new','pbar_exp','vip'].includes(node.name))return '';
@@ -44,5 +45,5 @@ export function originalHud(state,{expanded=false}={}){
   return `<${act?'button':'div'} class="hud-node ${act?'hud-clickable':''}" style="${style}" ${act?`data-action="${act}" aria-label="${label}"`:''}>${children}${text}${portrait}</${act?'button':'div'}>`;
  };
  const chosen=['level','gold','food','gem','btn_RenWU','btn_YouJian','btn_pickAll','btn_GengDuo','btn_ZhanDou','btn_recharge',...(!expanded?['act_btn']:[]),...(expanded?['btn_TuJian','btn_NiuDanJi','btn_mydragon','btn_YuLong','btn_ShangDian','btn_SheZhi','btn_ZhuangBei','btn_FuWen','btn_CangKu','btn_Rank','btn_BaoShi','btn_BuZhen','btn_Guild']:[])];
- return `<div class="original-hud" style="width:${rootWidth}px;height:${rootHeight}px;--hud-scale:${scale}">${layout.children.filter(n=>chosen.includes(n.name)).map(n=>render(n,true)).join('')}</div>`;
+ return `<button class="hud-vip-entry" data-action="rechargeVip">VIP${vipInfo(state).level}</button><div class="original-hud" style="width:${rootWidth}px;height:${rootHeight}px;--hud-scale:${scale}">${layout.children.filter(n=>chosen.includes(n.name)).map(n=>render(n,true)).join('')}</div>`;
 }

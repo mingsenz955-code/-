@@ -55,3 +55,5 @@ test('hunt default prioritizes the deployed eligible dragon over an idle one',()
  const s=fixture();s.dragons.push({id:5,species:'original1074',level:20,habitatId:1});s.formation=[5];
  assert.equal(defaultRuneDragon(s,2).id,5);assert.equal(defaultRuneDragon(s,4).id,4);
 });
+
+test('training additions preserve source passive and equipped rune attributes after integration',async()=>{const {dragonAttributes}=await import('../src/battle.mjs');let s=fixture();s.dragons[2].species='original1074';s.runes[0].type=30302;s=action(s,'wearRune',{id:4,runeId:'fw-1'},T);const d=s.dragons[2],before=dragonAttributes(d,s),power=dragonPower(d,s);d.training={stage:0,attack:50,defend:20,life:300};const after=dragonAttributes(d,s);assert.equal(after.attack-before.attack,50);assert.equal(after.defend-before.defend,20);assert.equal(after.life-before.life,300);assert.equal(after.crit,before.crit);assert.equal(dragonPower(d,s)-power,170);});

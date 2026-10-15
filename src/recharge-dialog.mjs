@@ -1,3 +1,4 @@
+import SOURCE from '../assets/original/data/arena-vip.mjs';
 import {renderSourceLayout} from './source-layout.mjs';
 import {sourceLayout,showSource,esc,openNativePaper} from './ranch-dialogs.mjs';
 import {RECHARGE_PRODUCTS,RECHARGE_NOTICE,vipProgress,VIP_LEVELS} from './recharge.mjs';
@@ -28,5 +29,5 @@ export async function openRechargeDialog(state){
 // are not implemented in this offline build, so they are not claimed here.
 export async function openVipThresholds(state){
  const total=state.recharge?.totalGems??0,vip=vipProgress(total);
- await openNativePaper('VIP 门槛',`<p>原版按累计充值魔晶提升 VIP，当前累计 ${total} 魔晶，VIP${vip.level}。</p><p>${VIP_LEVELS.filter(entry=>entry.level>0).map(entry=>`VIP${entry.level}：累计充值 ${entry.needExp} 魔晶`).join('<br>')}</p><p>VIP 特权效果尚未接入。</p>`,'nativeVipThresholds');
+ await openNativePaper('VIP 特权',`<p>累计充值 ${total} 魔晶，当前 VIP${vip.level}。测试充值不扣真实费用。</p><div class="vip-tier-list">${SOURCE.vip.map(v=>`<article class="${v.level===vip.level?'current-vip':''}"><h3>VIP${v.level} · ${v.needExp} 魔晶</h3><p>牧场经验 +${v.expExtro}%　产金 +${v.goldExtro}%　农场龙粮 +${v.foodExtro}%</p><p>繁殖 -${v.reducebreed}%　孵化 -${v.reducehatch}%　建造 -${v.reducebuilding}%</p><p>竞技每日可购买 ${v.pvpBuyTime} 次${v.pvpNoCD?'，挑战免冷却':''}</p></article>`).join('')}</div><p>以上特权已生效；培养成功率、VIP礼包及其它系统特权仍待接入。</p>`,'nativeVipThresholds');
 }

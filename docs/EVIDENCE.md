@@ -341,3 +341,21 @@
 ## v0.16.45 启动存档证据
 - computer-use用户实际v44窗口及游戏主进程6548的fs/bridge读取，均为1级xp0/5815692金币/11770魔晶；同时Codex读同名AppData为99级xp2057825400/19728054金币/13348魔晶。这是实际跨进程读取证据，推翻此前仅凭Codex侧last-launch认定用户入口正常的判断。
 - v45通过资源管理器真实双击根exe后，实际UI与工程player-data/last-launch同为99级；源与发行目录共用工程存档，不依赖可能重定向的Roaming路径。恢复副本在Git忽略的player-data/recovery，个人数据未提交。
+
+
+## v0.16.40 龙翼、竞技、VIP与首批活动
+- 翼片漂移定位：1201_dragon_golden_3 的 breath/b35 等轨道从可见帧切到 display=-1；旧采样器把隐藏帧占位坐标0插值进可见翼片。现在按 CCTween::setBetween 保持可见姿态到切换帧。参考官方源码 https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-2.2.6/extensions/CocoStudio/Armature/animation/CCTween.cpp 。非针对某条龙的偏移补丁。
+- `tests/arena-vip.test.mjs` 遍历该龙所有动作的可见→隐藏段，在99%帧验证保持源坐标；原生Canvas连续帧见 work/golden-wing-fixed-qa.png。261模型1734动作均正常渲染。
+- 竞技：源ui_arena_new四NPC位置；源PVPjiangli前14列奖章/魔晶，PVPduihuan前6列价格和物品。10魔晶购买和50魔晶清冷却来自NewArenaPanel；VIP上限/免冷却来自VipInfo。源字段和哈希在 arena-vip-source.json。
+- 单机NPC对战：复用成年骨骼战斗动画；按当前出战战力结算。排名、匹配强度、每日5次/10分钟冷却/每日领奖为明确离线规则。竞技奖励不改写已有战斗或真人服务器资料。
+- VIP0—10的原门槛/源百分比已接入经验、产金、农场龙粮、繁殖/孵化/施工新任务计时和竞技权限；充值前结清既有产金，避免新等级追溯加成。
+- 单笔充值：复用原panel_danbichongzhi/item_danbichongzhi_reward，六档奖励与品质保持源danchong。离线按对应商品金额达成，每档一次，无真实支付。道具入库存、装备碎片入装备碎片库存，6048/6049进入可实际消费的召唤券库存。
+- 所有QA均在work隔离档。规则测试175项通过，原生挑战/兑换/充值领奖/重启保留状态已验证。
+
+## 历史活动 v0.16.41
+
+原2.9.35的LibraryManager、各Info构造函数与活动Lua/原表导出76个活动版本，详见[ACTIVITIES.md](ACTIVITIES.md)及[活动来源清单](reference/activities-source.json)。这证明客户端保留相关配置，不证明服务器实际采用日期、概率、资格，也不证明覆盖全部历史版本。
+
+## v0.16.46 PR #2 集成验证
+- 接入作者静态活动/竞技/VIP导出与出处，保留docs/ACTIVITIES.md中的原表和离线模拟区别。现有world机器人packId必须经groups解析，原monsters字段已不适用；集成时修正竞技取怪映射，圣树3/3/4原整包不变。
+- 永久被动符文属性与新培养属性共同进入dragonAttributes，原getRunePower分工不变；新增叠加测试防止冲突解决时丢失被动。正式路径继续工程player-data，原字段迁移比对无变化。

@@ -1,4 +1,9 @@
 import {defaultRuneDragon} from './runes.mjs';
+import {resourceBarValues} from './resource-bar.mjs';
+import {closeHistoryResult,openHistoryGiftResult,openHistoryRanks,openHistoryTraining,openHistoryActivity,openHistoryHelp,openHistoryCatalogHelp,openHistoryInventory,playHistoryAnimation,openHistoryResult} from './history-activity-dialog.mjs';
+import {openActivities,openSingleRecharge,openSingleRechargeHelp} from './activity-dialog.mjs';
+import {openArena,openArenaExchange,openArenaRecords,openArenaRanks,openArenaHelp} from './arena-dialog.mjs';
+import {arenaPlan,refreshArena,vipInfo} from './arena.mjs';
 import {playEquipmentEffect} from './equipment-effects.mjs';
 import {pickRuneDrops} from './acquisition-animation.mjs';
 import {worldEntries,openWorldBoss,openHolyTree,openTreeTargets,openWorldHelp,openTreeSeeds} from './world-encounter-dialog.mjs';
@@ -85,7 +90,20 @@ function render(){
 }
 function tick(){const modal=$('#modal');if(!busy&&modal?.open&&modal.dataset.mode==='sourceGemExplore'&&Number(modal.dataset.freeReady)>0&&Date.now()>=Number(modal.dataset.freeReady)){delete modal.dataset.freeReady;void openGemExplore(state)}if(!busy&&modal?.open&&modal.dataset.mode==='sourceShenfu'&&Number(modal.dataset.freeReady)>0&&Date.now()>=Number(modal.dataset.freeReady)){delete modal.dataset.freeReady;void openShenfuDialog(state)}document.querySelectorAll('[data-timer]').forEach(el=>el.textContent=el.classList.contains('source-pve-reward-state')&&Date.now()>=Number(el.dataset.timer)?'可领取':time(Number(el.dataset.timer)));document.querySelectorAll('[data-ready]').forEach(el=>el.disabled=busy||Date.now()<Number(el.dataset.ready));document.querySelectorAll('[data-income]').forEach(el=>{const h=state.habitats.find(h=>h.id===Number(el.dataset.income));if(h)el.textContent=fmt(income(state,h))})}
 async function persist(next){busy=true;saveStatus='正在保存…';if($('#save-status'))$('#save-status').textContent=saveStatus;try{await storage.save(next);state=next;saveStatus=`已保存 · ${new Date().toLocaleTimeString('zh-CN')}`;}catch(e){saveStatus='保存失败 · 请重试';throw e}finally{busy=false}}
-function closeDialog(){const d=$('#modal');d.close();d.className='';delete d.dataset.mode;delete d.dataset.returnToCollection;}
+const resourceReturnStack=[];
+const resourceScrollSelectors=['.history-reward-list','.history-activity-grid','.history-categories','.native-shop-list','.native-resource-groups','.native-resource-row'];
+function captureResourcePage(){const d=$('#modal');return {mode:d.dataset.mode,dataset:{...d.dataset},html:d.innerHTML,className:d.className,style:d.style.cssText,search:d.querySelector('#history-search')?.value,scrolls:resourceScrollSelectors.flatMap(selector=>[...d.querySelectorAll(selector)].map((el,index)=>({selector,index,top:el.scrollTop,left:el.scrollLeft})))};}
+async function returnResourcePage(){if(busy||!resourceReturnStack.length)return;const frame=resourceReturnStack.pop();busy=true;try{
+ if(frame.mode==='sourceHistoryActivity')await openHistoryActivity(state,frame.dataset.activity);
+ else if(frame.mode==='sourceHistoryHub')await openActivities(state,frame.dataset.historyFilter??'全部');
+ else if(frame.mode==='sourceHistoryTraining')await openHistoryTraining(state);
+ else if(frame.mode==='sourceHistoryInventory')await openHistoryInventory(state);
+ else if(frame.mode==='sourceHistoryRanks')await openHistoryRanks(state,frame.dataset.activity);
+ else{const d=$('#modal');if(d.open)d.close();d.className=frame.className;d.style.cssText=frame.style;d.style.setProperty('--source-scale',Math.min((innerWidth-20)/1024,(innerHeight-20)/768));for(const key of Object.keys(d.dataset))delete d.dataset[key];Object.assign(d.dataset,frame.dataset);d.innerHTML=frame.html;for(const [key,value] of Object.entries(resourceBarValues(state)))for(const el of d.querySelectorAll(`[data-source="${key}"]`))el.textContent=value;d.showModal();}
+ const search=$('#modal').querySelector('#history-search');if(search&&frame.search!==undefined){search.value=frame.search;search.dispatchEvent(new Event('input',{bubbles:true}));}
+ for(const {selector,index,top,left} of frame.scrolls){const el=$('#modal').querySelectorAll(selector)[index];if(el){el.scrollTop=top;el.scrollLeft=left;}}
+ }finally{busy=false;}}
+function closeDialog(){if(closeHistoryResult())return;const d=$('#modal');if(resourceReturnStack.length&&['nativeResourceShop','sourceRecharge','nativeVipThresholds'].includes(d.dataset.mode)){void returnResourcePage().catch(e=>toast(e.message));return;}d.close();d.className='';delete d.dataset.mode;delete d.dataset.returnToCollection;}
 async function showSettings(){const version=await window.ranch?.version?.().catch(()=>null);await openNativePaper('本地存档',`<p>御龙高手 <b>v${version??'未知'}</b>　操作后自动保存</p><div class="native-save-actions">${nativeButton('立即保存','save')}${nativeButton('导出存档','export')}${nativeButton('导入存档','import')}</div>`,'nativeSettings')}
 let suppressHabitatClick=false;
 const clipNames={breath:'呼吸',walk:'步行',especial:'特殊动作',combat:'战斗姿态',breathinbattle:'战斗待机',movein:'入场',hurt:'受击',dead:'倒下',airattack:'空中攻击',airattackend:'空中攻击收招',landattack:'地面攻击',landattackend:'地面攻击收招',magic:'施法',magicend:'施法收招',fly:'飞行',walk2:'步行二',walk3:'步行三'};
@@ -97,6 +115,33 @@ document.addEventListener('click',async e=>{
  if(el.dataset.tab){closeDialog();if(el.dataset.tab==='habitats')await openHabitatShop(state);else if(el.dataset.tab==='breeding')await openBreed(state);else if(el.dataset.tab==='dragons')await openCollectionDialog(state,collectionFilter);else render();return}
  let type=el.dataset.action;const id=Number(el.dataset.id);
  try{
+  if(['resourceBarGold','resourceBarGems','resourceBarSouls'].includes(type)){const d=$('#modal'),kind=type==='resourceBarGold'?'g':'h';if(type!=='resourceBarGems'&&d.dataset.mode==='nativeResourceShop'&&d.dataset.resourceKind===kind){toast(`当前已是${kind==='g'?'金币':'龙魂'}商店。`);return;}resourceReturnStack.push(captureResourcePage());if(type==='resourceBarGems')await openRechargeDialog(state);else await openResourceShop(state,{type:kind});return;}
+  if(type==='openHabitats'&&resourceReturnStack.length&&$('#modal').dataset.mode==='nativeResourceShop'){await returnResourcePage();return;}
+  if(type==='openActivities'||type==='openWelfare'||type==='openMonopolyActivities'){await persist(action(state,'activityVisit'));render();await openActivities(state,type==='openWelfare'?'福利':type==='openMonopolyActivities'?'大富翁':'全部');return}
+  if(type==='openFirstCharge'){await persist(action(state,'activityVisit'));render();await openHistoryActivity(state,'first');return}
+  if(type==='historyResultClose'){closeHistoryResult();return}
+  if(type==='historyRanks'){await openHistoryRanks(state,el.dataset.value);return}
+  if(type==='historyGift'){await persist(action(state,'activityGift',{id}));render();await openHistoryGiftResult(state);return}
+  if(type==='historyTraining'){await openHistoryTraining(state);return}
+  if(type==='historyPillShop'){await openResourceShop(state,{type:'i'});return}
+  if(type==='historyTrain'){await persist(action(state,'activityTrain',{id,count:Number(el.dataset.count??1)}));render();await openHistoryTraining(state);toast(state.log[0]);return}
+  if(type==='historyFilter'){await openActivities(state,el.dataset.value);return}
+  if(type==='historyOpen'){if(!state.activities.history){await persist(action(state,'activityVisit'));render();}await openHistoryActivity(state,el.dataset.value);return}
+  if(type==='historyHelp'){await openHistoryHelp(el.dataset.value);return}
+  if(type==='historyCatalogHelp'){await openHistoryCatalogHelp();return}
+  if(type==='historyInventory'){await openHistoryInventory(state);return}
+  if(type==='historyAct'){const key=el.dataset.value,old=state.activities.history.boards[key]?.position??0;await persist(action(state,'historyActivity',{key,id,token:el.dataset.token,count:Number(el.dataset.count??1),op:el.dataset.op,code:document.querySelector('#history-code')?.value}));render();const dialog=await openHistoryActivity(state,key);if(state.activities.history.last.length&&await playHistoryAnimation(dialog,state,key,old))await openHistoryResult(state,key);toast(state.log[0]);return}
+  if(type==='openSingleRecharge'){await openSingleRecharge(state);return}
+  if(type==='singleRechargeHelp'){await openSingleRechargeHelp();return}
+  if(type==='singleRechargeClaim'){await persist(action(state,type,{id}));render();await openSingleRecharge(state);toast(state.log[0]);return}
+  if(type==='openArena'){await openArena(state);tick();return}
+  if(type==='arenaHelp'){await openArenaHelp();return}
+  if(type==='arenaExchangeList'){await openArenaExchange(state);return}
+  if(type==='arenaRecords'){await openArenaRecords(state);return}
+  if(type==='arenaRanks'){await openArenaRanks(state);return}
+  if(type==='arenaBuyConfirm'||type==='arenaResetConfirm'){const buy=type==='arenaBuyConfirm';await openNativePaper(buy?'增加挑战次数':'重置挑战冷却',buy?`<p>花费10魔晶增加一次挑战。当前VIP每日最多购买 ${vipInfo(state).pvpBuyTime} 次，今日已购买 ${state.arena.bought} 次。</p>${nativeButton('确定','arenaBuy')}${nativeButton('返回','openArena')}`:`<p>花费50魔晶立即清除挑战冷却。</p>${nativeButton('确定','arenaReset')}${nativeButton('返回','openArena')}`,'sourceArenaConfirm');return}
+  if(type==='arenaChallenge'){const before=structuredClone(state);refreshArena(before,Date.now());const plan=arenaPlan(before,id,Date.now(),el.dataset.value);await persist(action(state,type,{id,token:el.dataset.value}));render();await openBattleDialog(before,{enemyGroup:[plan.enemy]});if(await playBattleAnimation(before,null,{won:plan.won,enemyGroup:[plan.enemy]})){await openArena(state);tick();toast(state.log[0]);}return}
+  if(['arenaBuy','arenaReset','arenaRefresh','arenaClaim','arenaExchange'].includes(type)){await persist(action(state,type,{id}));render();if(type==='arenaExchange')await openArenaExchange(state);else await openArena(state);tick();toast(state.log[0]);return}
   if(type==='openWorldBoss'){if(playerProgress(state).level<15){toast('15级开启远古首领。');return}await openWorldBoss(state);return}
   if(type==='openHolyTree'){if(playerProgress(state).level<10){toast('10级开启圣树抢夺战。');return}await openHolyTree(state);tick();return}
   if(type==='worldHelp'){await openWorldHelp(el.dataset.value);return}
@@ -109,7 +154,7 @@ document.addEventListener('click',async e=>{
   if(type==='bossHistory'){const b=state.encounters.boss;await openNativePaper('首领战绩',`<p>累计伤害：${fmt(b.totalDamage)}</p><p>已击杀首领：${b.kills}</p>`,'sourceBossHistory');return}
   if(type==='bossAchievements'){await openNativePaper('首领成就',`<p>累计伤害：${fmt(state.encounters.boss.totalDamage)}</p><p>原成就阈值：100000、250000等；完整奖励类型与领取结算尚未核实。</p>`,'sourceBossAchievement');return}
   if(type==='treePlunder'){const before=structuredClone(state),op=treeOpponent(state,id),won=lineupPower(configuredLineup(state),state)>=op.power;await persist(action(state,type,{id}));render();await openBattleDialog(before,{enemyGroup:op.enemies});if(await playBattleAnimation(before,null,{won,enemyGroup:op.enemies})){await openTreeTargets(state);toast(state.log[0]);}return}
-  if(type==='openBloodFront'||type==='openArena'){await openNativePaper(type==='openArena'?'竞技之神':'血战前线','<p>原地图入口已恢复。此模式的离线挑战与奖励结算仍在开发，暂不伪造原服务器对手。</p>','sourceWorldModePending');return}
+  if(type==='openBloodFront'){await openNativePaper(type==='openArena'?'竞技之神':'血战前线','<p>原地图入口已恢复。此模式的离线挑战与奖励结算仍在开发，暂不伪造原服务器对手。</p>','sourceWorldModePending');return}
   if(type==='openRunes'||type==='openRuneHunt'){await openRuneHunt(state);return}
   if(type==='runeEquipment'||type==='runePanelDragon'){const target=type==='runePanelDragon'?id:defaultRuneDragon(state,id||selected)?.id;await openRunePanel(state,target);return}
   if(type==='openShenfu'){await openShenfuDialog(state);tick();return}
@@ -198,11 +243,11 @@ document.addEventListener('click',async e=>{
   if(type==='equipTab'){toast(el.dataset.value==='frag'?'装备碎片尚未接入，当前只有装备列表。':'当前已显示未装备的装备。');return}
   if(type==='unverifiedEquip'){toast('请先选择龙和可用装备。');return}
   if(type==='openRecharge'){await openRechargeDialog(state);return}
-  if(type==='rechargeVip'){await openVipThresholds(state);return}
+  if(type==='rechargeVip'){if(resourceReturnStack.length)resourceReturnStack.push(captureResourcePage());await openVipThresholds(state);return}
   if(type==='resourceShop'){await openResourceShop(state);return}
   if(type==='resourceShopGold'){await openResourceShop(state,{type:'g'});return}
   if(type==='resourceShopFood'){await openResourceShop(state,{type:'f'});return}
-  if(type==='buyResource'){const offer=resourceShopRow(id);if(!offer){toast('这个商品尚未开放。');return}const kind=$('#modal')?.dataset.resourceKind||null;if(state.gems<offer.priceGems){toast(`魔晶不足，还差 ${offer.priceGems-state.gems} 魔晶。`);await openRechargeDialog(state);return}const next=action(state,'buyResource',{id});await persist(next);render();await openResourceShop(state,{type:kind});toast(state.log[0]);return}
+  if(type==='buyResource'){const offer=resourceShopRow(id);if(!offer){toast('这个商品尚未开放。');return}const kind=$('#modal')?.dataset.resourceKind||null;if(state.gems<offer.priceGems){toast(`魔晶不足，还差 ${offer.priceGems-state.gems} 魔晶。`);resourceReturnStack.push(captureResourcePage());await openRechargeDialog(state);return}const next=action(state,'buyResource',{id});await persist(next);render();await openResourceShop(state,{type:kind});toast(state.log[0]);return}
   if(type==='openAdventure'){await openAdventureDialog(state);return}
   if(type==='openGemExplore'){await openGemExplore(state);return}
   if(type==='exploreGem'){const [mode,count]=el.dataset.value.split(':');await persist(action(state,type,{mode,count:Number(count)}));busy=true;try{render();await openGemExploreResult(state,state.gemInventory.slice(-Number(count)),mode,Number(count))}finally{busy=false}toast(state.log[0]);return}
@@ -286,3 +331,5 @@ document.addEventListener('wheel',e=>{if(e.target.closest('.scene')&&!document.q
 document.querySelector('#modal').addEventListener('cancel',e=>{e.preventDefault();if($('#modal').dataset.mode==='sourceRafflePreview')closeRafflePreview();else closeDialog()});
 
 document.addEventListener('dblclick',e=>{if(e.target.closest('.scene')&&!e.target.closest('[data-action],.original-hud,.placement-controls')&&!$('#modal').open&&!drag){camera={zoom:1,x:0,y:0};applyCamera();}});
+
+document.addEventListener('input',e=>{if(e.target.id==='history-search'){const q=e.target.value.trim().toLowerCase();document.querySelectorAll('.history-activity-card').forEach(el=>el.hidden=!el.textContent.toLowerCase().includes(q));}});
