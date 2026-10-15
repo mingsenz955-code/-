@@ -12,5 +12,5 @@ export async function openFarmDialog(state,farmId=0){
  }
  const [l,item]=await Promise.all([sourceLayout('panel_zhongzhi_info'),sourceLayout('item_zhongzhi')]);
  const cards=unlockedCrops(state,farmId).map(c=>`<article class="native-crop-card">${renderSourceLayout(item,{values:{tx_name:c.name,tx_time:time(c.ms),tx_time_t:'时间',tx_food:c.yield,tx_food_t:'收获',tx_xp:c.xp,tx_xp_t:'经验',tx_gold:c.cost,'btn_zhongzhi/txt_name':'种植'},actions:{'btn_zhongzhi/btn':{type:'plantNative',id:c.id,label:'种植'+c.name}},hidden:new Set([c.id>9?'food_ico':'fruit_ico']),slots:{con_img:`<img class="native-crop-art" src="${esc(c.image)}" alt="${esc(c.name)}">`}})}</article>`).join('');
- const d=showSource('farm',renderSourceLayout(l,{values:{txt_name:info.nameCN},actions:{btn_GuanBiXiao:{type:'close',label:'关闭农场'}},slots:{hadong:`<div class="native-crop-list">${cards}</div>`}})+(next?`<div class="native-farm-upgrade">${nativeButton('升级农场','upgradeFarm',`data-id="${farmId}"`,playerProgress(state).level<next.min_level||state.coins<next.costs.g)}<span>${esc(next.nameCN)}　Lv.${next.min_level}　${next.costs.g}金币</span></div>`:''));d.dataset.farmId=farmId;
+ const d=showSource('farm',renderSourceLayout(l,{values:{txt_name:info.nameCN},actions:{btn_GuanBiXiao:{type:'close',label:'关闭农场'}},slots:{hadong:`<div class="native-crop-list">${cards}</div>`}}));d.dataset.farmId=farmId;
 }

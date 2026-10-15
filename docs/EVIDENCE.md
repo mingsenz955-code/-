@@ -364,3 +364,8 @@
 - 原ui/PlantsPanel.lua明确普通cp范围1至(id-15)*3、LEGEND_FARM为10—12，所用COLLECT价格/时间/产量/经验与现ORIGINAL_CROPS对应；FarmDelegate.lua区分普通粮食和进化果实并含VIPfoodExtro/expExtro。
 - 原ui/SpeedUpPanel.lua的openFarm调用CostUtil.speedUpCost(time)，原dragon/utils/CostUtil.lua给出ceil((time/3600)^0.7*15)。加速使FarmDelegate:collectable(true)，收获另外执行；按此恢复离线扣费/成熟/收获。
 - 原FarmDelegate:setPlantStep(1/2/3)与现有world三态图一一对应，地图已接。完整功能建筑核对及剩余缺口见BUILDINGS.md。源版/正式包真实鼠标与重启通过，未操作正式存档作测试。
+
+## v0.16.48 原版农场界面依据
+- BuildingOptPanel.lua SHA256 fc5f0c7786fa53ecabc98312d8237a2e2d2a37d566ec39ae3714efa2cd186114；函数30 PC376—484为农场操作项，1036—1061对所有cp按间隔200×__scaleRatio居中排列，复用原cp_*静态布局/图标。
+- BuildingInfoPanel.lua函数4 PC145—171通过Literal.lang(buildingId)设置原描述并置顶；Literal.lua的FARM_1/2/3描述键在APK assets/res/config/textnew_cn.json取得原中文，未改写描述内容。
+- 使用原panel_building_info，不再往农场页面插入通用管理按钮。真实鼠标点原图标、种植/升级及重启验证通过；截图与尚未逐像素核验的区别保留。
