@@ -1,0 +1,52 @@
+{
+  "rows": 580,
+  "columns": [
+    "index",
+    "dragonId",
+    "star",
+    "baseAttack",
+    "baseDefence",
+    "baseLife",
+    "resistance",
+    "spellPenetration",
+    "attackQuality",
+    "defenceQuality",
+    "lifeQuality",
+    "element1",
+    "element2",
+    "anger",
+    "hit",
+    "dodge",
+    "critical",
+    "resilience",
+    "skill1",
+    "skill2",
+    "skill3",
+    "skill4",
+    "xp",
+    "perxp"
+  ],
+  "tablesSha256": "1408d684c2a6530668a8ed4816ad1697d579077fed5d02b887d06f035395e750",
+  "sources": {
+    "ui/strengthen/DragonStarUpInfo.lua": "8e47d139e11b6690ed988be99acd526fb2746282519dd4da753a0b5c922234b5",
+    "ui/StarUpPanel.lua": "a8eb9c528d28e75867e536645508306b79aad9a356f4820e1b29666ffac55bb2",
+    "dragon/pconfig/librarys/dragon/LibDragonAtksInfo.lua": "44f3b316143de1304f481b39937a3356d6605e8cf3e1d88abd17e9c1c0a21dd9",
+    "dragon/core/dragonfarm/DragonElement.lua": "558a78516ea4fdf94157c0e569f50a9ab617837548923c1624481eb66ae86880",
+    "ui/DragonUI.lua": "21cdc5e9845f04bc4b8f64581f95a16821af0334181a99cf488ede194b52c1b8",
+    "ui/randev/RandEvPanel.lua": "4110b0dc1ba9017add253cbd3bbcf40858e28b3f4581a1e587706cb8c5849fb0"
+  },
+  "confirmed": [
+    "Level >=7 for target, same species materials; variant target ID>=2000 at star>=5 may also eat ID-1000",
+    "Rune-bearing materials/sales blocked; sale price from item.sell_price.g",
+    "Dragon_atks xp and perxp columns; saved quality selects star attribute and skill row",
+    "StarUpPanel consumes server olddragonlist; no authoritative server response available",
+    "RandEvPanel.help: breeding duration >1 hour, purple offspring may trigger mutant event; retain max5; probability depends on VIP"
+  ],
+  "offlinePolicies": [
+    "Local fusion adds material row xp, subtracts target row perxp; residual retained at cap, server carry-over unavailable",
+    "Legacy saves preserve former rarity-based numeric row until explicit upgrade; fresh hatched/placed dragons start star1",
+    "Protect worn equipment and all pending parent references until egg leaves tower; stricter than source busy/rune guard",
+    "Do not consume materials past star5 using old 90000 perxp placeholder: awakening separate and not implemented",
+    "No invented mutation trigger probability or adult transformation; ten distinct catalog variants remain separate species"
+  ]
+}

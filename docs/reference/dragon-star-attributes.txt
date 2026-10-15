@@ -1,0 +1,34 @@
+SHA256 558a78516ea4fdf94157c0e569f50a9ab617837548923c1624481eb66ae86880
+Static Lua 5.1 disassembly. PCs and nested function indexes are zero-based. No code executed.
+
+FUNCTION 59
+CONSTANTS ["_data", "quality", 0, 1, "wakestar", "print", "getAtksInfo..quality:", "LibraryManager", "lib_dragon_atks", "getDragonAtksInfo", "type"]
+0000 GETTABLE r1 r0["_data"]
+0001 GETTABLE r1 r1["quality"]
+0002 EQ A=0 r1 0
+0003 JMP A=0 target=5
+0004 LOADK r1 1
+0005 GETTABLE r2 r0["_data"]
+0006 TEST A=2 B=0 C=0
+0007 JMP A=0 target=15
+0008 GETTABLE r2 r0["_data"]
+0009 GETTABLE r2 r2["wakestar"]
+0010 TEST A=2 B=0 C=0
+0011 JMP A=0 target=15
+0012 GETTABLE r2 r0["_data"]
+0013 GETTABLE r2 r2["wakestar"]
+0014 ADD r1 r1 r2
+0015 GETGLOBAL r2 "print"
+0016 LOADK r3 "getAtksInfo..quality:"
+0017 MOVE A=4 B=1 C=0
+0018 CONCAT A=3 B=3 C=4
+0019 CALL A=2 B=2 C=1
+0020 GETGLOBAL r2 "LibraryManager"
+0021 GETTABLE r2 r2["lib_dragon_atks"]
+0022 SELF r2 self=r2 method="getDragonAtksInfo"
+0023 GETTABLE r4 r0["_data"]
+0024 GETTABLE r4 r4["type"]
+0025 MOVE A=5 B=1 C=0
+0026 TAILCALL A=2 B=4 C=0
+0027 RETURN A=2 B=0 C=0
+0028 RETURN A=0 B=1 C=0

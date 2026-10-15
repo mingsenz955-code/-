@@ -1,0 +1,572 @@
+SHA256 8e47d139e11b6690ed988be99acd526fb2746282519dd4da753a0b5c922234b5
+Static Lua 5.1 disassembly. PCs and nested function indexes are zero-based. No code executed.
+
+FUNCTION 6
+CONSTANTS ["curDragonElement", "_data", "wakestate", 2, 3, "showRelativeInfo", "SocketSender", "wakeUp", 0, "id", "quality", 5, "getExtendInfo", "Gui", "showToast", "尚未开放觉醒，敬请期待", "maxStar", "已达到最大星级", "floatText", "Config_LocaleText", "lang", "Choose at least one dragon", "ipairs", "math", "max", "open", "Among the dragons consuming to evolve is the “#0# star” dragon，do you want to continue evolving？", "handler", "sureToEat"]
+0000 GETTABLE r1 r0["curDragonElement"]
+0001 GETTABLE r1 r1["_data"]
+0002 GETTABLE r1 r1["wakestate"]
+0003 EQ A=0 r1 2
+0004 JMP A=0 target=19
+0005 GETTABLE r1 r0["curDragonElement"]
+0006 GETTABLE r1 r1["_data"]
+0007 SETTABLE r1["wakestate"] 3
+0008 SELF r1 self=r0 method="showRelativeInfo"
+0009 GETTABLE r3 r0["curDragonElement"]
+0010 CALL A=1 B=3 C=1
+0011 GETGLOBAL r1 "SocketSender"
+0012 GETTABLE r1 r1["wakeUp"]
+0013 LOADK r2 0
+0014 GETTABLE r3 r0["curDragonElement"]
+0015 GETTABLE r3 r3["_data"]
+0016 GETTABLE r3 r3["id"]
+0017 CALL A=1 B=3 C=1
+0018 RETURN A=0 B=1 C=0
+0019 GETTABLE r1 r0["curDragonElement"]
+0020 GETTABLE r1 r1["_data"]
+0021 GETTABLE r1 r1["wakestate"]
+0022 EQ A=0 r1 3
+0023 JMP A=0 target=25
+0024 RETURN A=0 B=1 C=0
+0025 GETTABLE r1 r0["curDragonElement"]
+0026 GETTABLE r1 r1["_data"]
+0027 GETTABLE r1 r1["quality"]
+0028 EQ A=0 r1 5
+0029 JMP A=0 target=41
+0030 GETTABLE r1 r0["curDragonElement"]
+0031 SELF r1 self=r1 method="getExtendInfo"
+0032 CALL A=1 B=2 C=2
+0033 GETTABLE r1 r1["quality"]
+0034 EQ A=0 r1 5
+0035 JMP A=0 target=41
+0036 GETGLOBAL r1 "Gui"
+0037 GETTABLE r1 r1["showToast"]
+0038 LOADK r2 "尚未开放觉醒，敬请期待"
+0039 CALL A=1 B=2 C=1
+0040 RETURN A=0 B=1 C=0
+0041 GETTABLE r1 r0["curDragonElement"]
+0042 GETTABLE r1 r1["_data"]
+0043 GETTABLE r1 r1["quality"]
+0044 GETTABLE r2 r0["curDragonElement"]
+0045 SELF r2 self=r2 method="getExtendInfo"
+0046 CALL A=2 B=2 C=2
+0047 GETTABLE r2 r2["maxStar"]
+0048 LE A=0 r2 r1
+0049 JMP A=0 target=55
+0050 GETGLOBAL r1 "Gui"
+0051 GETTABLE r1 r1["showToast"]
+0052 LOADK r2 "已达到最大星级"
+0053 CALL A=1 B=2 C=1
+0054 RETURN A=0 B=1 C=0
+0055 GETUPVAL A=1 B=0 C=0
+0056 LEN A=1 B=1 C=0
+0057 EQ A=0 r1 0
+0058 JMP A=0 target=67
+0059 GETGLOBAL r1 "Gui"
+0060 GETTABLE r1 r1["floatText"]
+0061 GETGLOBAL r2 "Config_LocaleText"
+0062 GETTABLE r2 r2["lang"]
+0063 LOADK r3 "Choose at least one dragon"
+0064 CALL A=2 B=2 C=0
+0065 CALL A=1 B=0 C=1
+0066 RETURN A=0 B=1 C=0
+0067 LOADK r1 2
+0068 GETGLOBAL r2 "ipairs"
+0069 GETUPVAL A=3 B=0 C=0
+0070 CALL A=2 B=2 C=4
+0071 JMP A=0 target=83
+0072 GETTABLE r7 r6["_data"]
+0073 GETTABLE r7 r7["quality"]
+0074 TEST A=7 B=0 C=0
+0075 JMP A=0 target=83
+0076 GETGLOBAL r7 "math"
+0077 GETTABLE r7 r7["max"]
+0078 MOVE A=8 B=1 C=0
+0079 GETTABLE r9 r6["_data"]
+0080 GETTABLE r9 r9["quality"]
+0081 CALL A=7 B=3 C=2
+0082 MOVE A=1 B=7 C=0
+0083 TFORLOOP A=2 B=0 C=2
+0084 JMP A=0 target=72
+0085 LE A=0 3 r1
+0086 JMP A=0 target=100
+0087 GETUPVAL A=2 B=1 C=0
+0088 GETTABLE r2 r2["open"]
+0089 GETGLOBAL r3 "Config_LocaleText"
+0090 GETTABLE r3 r3["lang"]
+0091 LOADK r4 "Among the dragons consuming to evolve is the “#0# star” dragon，do you want to continue evolving？"
+0092 MOVE A=5 B=1 C=0
+0093 CALL A=3 B=3 C=2
+0094 GETGLOBAL r4 "handler"
+0095 MOVE A=5 B=0 C=0
+0096 GETTABLE r6 r0["sureToEat"]
+0097 CALL A=4 B=3 C=0
+0098 CALL A=2 B=0 C=1
+0099 RETURN A=0 B=1 C=0
+0100 SELF r2 self=r0 method="sureToEat"
+0101 CALL A=2 B=2 C=1
+0102 RETURN A=0 B=1 C=0
+
+FUNCTION 8
+CONSTANTS ["layout", "curDragonElement", "getChild", "quanxuan", "biaoji", "quding_biaoji", "setVisible", "_data", "quality", 1, "wakestar", null, 0, 5, "#ui_star_x0009.png", "#ui_star_x0010.png", "#ui_star_x0007.png", "#ui_star_x0008.png", "star", "removeAllChildren", "add", "display", "newSprite", "progress", "#ui_starup_xp2.png", "newProgressTimer", "kCCProgressTimerTypeBar", "setMidpoint", "ccp", "setBarChangeRate", "jindu", "tianchong", "addChild", "LibraryManager", "lib_dragon_atks", "getDragonAtksInfo", "type", "setPercentage", "math", "floor", "starexp", "perxp", 100, "txt_shuzi", "setString", "Config_LocaleText", "lang", "XP: #0#", " / ", "level", 7, "btn_shengji", "btn", "setButtonEnabled", "notAllowdTip", "new", "Can not upgrade star before reaching level 7", "DIR_RIGHT", "__scaleRatio", -160, -530, "panel", "runAction", "CCRepeatForever", "create", "transition", "sequence", "CCMoveBy", 0.5, "CCPoint", 20, -20, "stopTarget", "hide", "id", "DragonManager", "getDragons", "DataManager", "getDragonRandListByType", 16, "tonumber", "pairs", "hatched", "table", "insert", "sort", "fromPackage", true, "oid", "itemid", "log", "#eatAllDragons %d", "ipairs", 2000, 1000, "_FuwenData", "getFuwenByDragonID", 4, false, "tx_shuoming", "tx_hongzi", "#eatarr %d", "eatList", "container", "huadong_xiao", "direction", "DIRECTION_V", "max_display", "gap", 10, "create_item_func", "handler", "create_eatCell", "donot_play", "item_pool_on", "get_data", "get_data_count", "onTap", "item_height", "setGetDataFunc", "setGetDataCountFunc", "setMaxDisplay", "reset"]
+0000 GETTABLE r2 r0["layout"]
+0001 LOADNIL A=3 B=3 C=0
+0002 SETTABLE r0["curDragonElement"] r1
+0003 NEWTABLE A=4 B=0 C=0
+0004 SETUPVAL A=4 B=0 C=0
+0005 NEWTABLE A=4 B=0 C=0
+0006 SETUPVAL A=4 B=1 C=0
+0007 GETTABLE r4 r2["getChild"]
+0008 LOADK r5 "quanxuan"
+0009 CALL A=4 B=2 C=2
+0010 GETTABLE r4 r4["getChild"]
+0011 LOADK r5 "biaoji"
+0012 CALL A=4 B=2 C=2
+0013 GETTABLE r4 r4["getChild"]
+0014 LOADK r5 "quding_biaoji"
+0015 CALL A=4 B=2 C=2
+0016 SELF r4 self=r4 method="setVisible"
+0017 LOADBOOL A=6 B=1 C=0
+0018 CALL A=4 B=3 C=1
+0019 GETTABLE r4 r1["_data"]
+0020 GETTABLE r4 r4["quality"]
+0021 TEST A=4 B=0 C=1
+0022 JMP A=0 target=24
+0023 LOADK r4 1
+0024 LOADNIL A=5 B=6 C=0
+0025 GETGLOBAL r7 "wakestar"
+0026 EQ A=1 r7 null
+0027 JMP A=0 target=31
+0028 GETGLOBAL r7 "wakestar"
+0029 EQ A=0 r7 0
+0030 JMP A=0 target=40
+0031 LT A=0 5 r4
+0032 JMP A=0 target=37
+0033 SUB r4 r4 5
+0034 LOADK r5 "#ui_star_x0009.png"
+0035 LOADK r6 "#ui_star_x0010.png"
+0036 JMP A=0 target=43
+0037 LOADK r5 "#ui_star_x0007.png"
+0038 LOADK r6 "#ui_star_x0008.png"
+0039 JMP A=0 target=43
+0040 LOADK r5 "#ui_star_x0009.png"
+0041 LOADK r6 "#ui_star_x0010.png"
+0042 GETGLOBAL r4 "wakestar"
+0043 LOADK r7 1
+0044 MOVE A=8 B=4 C=0
+0045 LOADK r9 1
+0046 FORPREP A=7 target=60
+0047 GETTABLE r11 r2["getChild"]
+0048 LOADK r12 "star"
+0049 MOVE A=13 B=10 C=0
+0050 CONCAT A=12 B=12 C=13
+0051 CALL A=11 B=2 C=2
+0052 SELF r12 self=r11 method="removeAllChildren"
+0053 CALL A=12 B=2 C=1
+0054 SELF r12 self=r11 method="add"
+0055 GETGLOBAL r14 "display"
+0056 GETTABLE r14 r14["newSprite"]
+0057 MOVE A=15 B=5 C=0
+0058 CALL A=14 B=2 C=0
+0059 CALL A=12 B=0 C=1
+0060 FORLOOP A=7 target=47
+0061 ADD r7 r4 1
+0062 LOADK r8 5
+0063 LOADK r9 1
+0064 FORPREP A=7 target=78
+0065 GETTABLE r11 r2["getChild"]
+0066 LOADK r12 "star"
+0067 MOVE A=13 B=10 C=0
+0068 CONCAT A=12 B=12 C=13
+0069 CALL A=11 B=2 C=2
+0070 SELF r12 self=r11 method="removeAllChildren"
+0071 CALL A=12 B=2 C=1
+0072 SELF r12 self=r11 method="add"
+0073 GETGLOBAL r14 "display"
+0074 GETTABLE r14 r14["newSprite"]
+0075 MOVE A=15 B=6 C=0
+0076 CALL A=14 B=2 C=0
+0077 CALL A=12 B=0 C=1
+0078 FORLOOP A=7 target=65
+0079 GETTABLE r7 r0["progress"]
+0080 EQ A=0 r7 null
+0081 JMP A=0 target=115
+0082 GETGLOBAL r7 "display"
+0083 GETTABLE r7 r7["newSprite"]
+0084 LOADK r8 "#ui_starup_xp2.png"
+0085 CALL A=7 B=2 C=2
+0086 GETGLOBAL r8 "display"
+0087 GETTABLE r8 r8["newProgressTimer"]
+0088 MOVE A=9 B=7 C=0
+0089 GETGLOBAL r10 "kCCProgressTimerTypeBar"
+0090 CALL A=8 B=3 C=2
+0091 SETTABLE r0["progress"] r8
+0092 GETTABLE r8 r0["progress"]
+0093 SELF r8 self=r8 method="setMidpoint"
+0094 GETGLOBAL r10 "ccp"
+0095 LOADK r11 0
+0096 LOADK r12 0
+0097 CALL A=10 B=3 C=0
+0098 CALL A=8 B=0 C=1
+0099 GETTABLE r8 r0["progress"]
+0100 SELF r8 self=r8 method="setBarChangeRate"
+0101 GETGLOBAL r10 "ccp"
+0102 LOADK r11 1
+0103 LOADK r12 0
+0104 CALL A=10 B=3 C=0
+0105 CALL A=8 B=0 C=1
+0106 GETTABLE r8 r2["getChild"]
+0107 LOADK r9 "jindu"
+0108 CALL A=8 B=2 C=2
+0109 GETTABLE r8 r8["getChild"]
+0110 LOADK r9 "tianchong"
+0111 CALL A=8 B=2 C=2
+0112 SELF r8 self=r8 method="addChild"
+0113 GETTABLE r10 r0["progress"]
+0114 CALL A=8 B=3 C=1
+0115 GETGLOBAL r7 "LibraryManager"
+0116 GETTABLE r7 r7["lib_dragon_atks"]
+0117 SELF r7 self=r7 method="getDragonAtksInfo"
+0118 GETTABLE r9 r1["_data"]
+0119 GETTABLE r9 r9["type"]
+0120 GETTABLE r10 r1["_data"]
+0121 GETTABLE r10 r10["quality"]
+0122 CALL A=7 B=4 C=2
+0123 GETTABLE r8 r0["progress"]
+0124 SELF r8 self=r8 method="setPercentage"
+0125 GETGLOBAL r10 "math"
+0126 GETTABLE r10 r10["floor"]
+0127 GETTABLE r11 r1["_data"]
+0128 GETTABLE r11 r11["starexp"]
+0129 GETTABLE r12 r7["perxp"]
+0130 DIV r11 r11 r12
+0131 MUL r11 r11 100
+0132 CALL A=10 B=2 C=0
+0133 CALL A=8 B=0 C=1
+0134 GETTABLE r8 r2["getChild"]
+0135 LOADK r9 "jindu"
+0136 CALL A=8 B=2 C=2
+0137 GETTABLE r8 r8["getChild"]
+0138 LOADK r9 "txt_shuzi"
+0139 CALL A=8 B=2 C=2
+0140 SELF r8 self=r8 method="setString"
+0141 GETGLOBAL r10 "Config_LocaleText"
+0142 GETTABLE r10 r10["lang"]
+0143 LOADK r11 "XP: #0#"
+0144 GETTABLE r12 r1["_data"]
+0145 GETTABLE r12 r12["starexp"]
+0146 LOADK r13 " / "
+0147 GETTABLE r14 r7["perxp"]
+0148 CONCAT A=12 B=12 C=14
+0149 CALL A=10 B=3 C=0
+0150 CALL A=8 B=0 C=1
+0151 GETTABLE r8 r1["_data"]
+0152 GETTABLE r8 r8["level"]
+0153 LT A=0 r8 7
+0154 JMP A=0 target=216
+0155 NEWTABLE A=8 B=0 C=0
+0156 MOVE A=3 B=8 C=0
+0157 GETTABLE r8 r2["getChild"]
+0158 LOADK r9 "btn_shengji"
+0159 CALL A=8 B=2 C=2
+0160 GETTABLE r8 r8["getChild"]
+0161 LOADK r9 "btn"
+0162 CALL A=8 B=2 C=2
+0163 SELF r8 self=r8 method="setButtonEnabled"
+0164 LOADBOOL A=10 B=0 C=0
+0165 CALL A=8 B=3 C=1
+0166 GETUPVAL A=8 B=2 C=0
+0167 GETTABLE r8 r8["notAllowdTip"]
+0168 EQ A=0 r8 null
+0169 JMP A=0 target=406
+0170 GETUPVAL A=8 B=2 C=0
+0171 GETUPVAL A=9 B=3 C=0
+0172 GETTABLE r9 r9["new"]
+0173 GETGLOBAL r10 "Config_LocaleText"
+0174 GETTABLE r10 r10["lang"]
+0175 LOADK r11 "Can not upgrade star before reaching level 7"
+0176 CALL A=10 B=2 C=2
+0177 GETUPVAL A=11 B=3 C=0
+0178 GETTABLE r11 r11["DIR_RIGHT"]
+0179 GETGLOBAL r12 "__scaleRatio"
+0180 MUL r12 -160 r12
+0181 GETGLOBAL r13 "__scaleRatio"
+0182 MUL r13 -530 r13
+0183 MOVE A=14 B=2 C=0
+0184 CALL A=9 B=6 C=2
+0185 SETTABLE r8["notAllowdTip"] r9
+0186 GETUPVAL A=8 B=2 C=0
+0187 GETTABLE r8 r8["notAllowdTip"]
+0188 GETTABLE r8 r8["panel"]
+0189 SELF r8 self=r8 method="runAction"
+0190 GETGLOBAL r10 "CCRepeatForever"
+0191 SELF r10 self=r10 method="create"
+0192 GETGLOBAL r12 "transition"
+0193 GETTABLE r12 r12["sequence"]
+0194 NEWTABLE A=13 B=1 C=0
+0195 GETGLOBAL r14 "CCMoveBy"
+0196 SELF r14 self=r14 method="create"
+0197 LOADK r16 0.5
+0198 GETGLOBAL r17 "CCPoint"
+0199 LOADK r18 20
+0200 LOADK r19 0
+0201 CALL A=17 B=3 C=0
+0202 CALL A=14 B=0 C=2
+0203 GETGLOBAL r15 "CCMoveBy"
+0204 SELF r15 self=r15 method="create"
+0205 LOADK r17 0.5
+0206 GETGLOBAL r18 "CCPoint"
+0207 LOADK r19 -20
+0208 LOADK r20 0
+0209 CALL A=18 B=3 C=0
+0210 CALL A=15 B=0 C=0
+0211 SETLIST A=13 B=0 C=1
+0212 CALL A=12 B=2 C=0
+0213 CALL A=10 B=0 C=0
+0214 CALL A=8 B=0 C=1
+0215 JMP A=0 target=406
+0216 GETTABLE r8 r2["getChild"]
+0217 LOADK r9 "btn_shengji"
+0218 CALL A=8 B=2 C=2
+0219 GETTABLE r8 r8["getChild"]
+0220 LOADK r9 "btn"
+0221 CALL A=8 B=2 C=2
+0222 SELF r8 self=r8 method="setButtonEnabled"
+0223 LOADBOOL A=10 B=1 C=0
+0224 CALL A=8 B=3 C=1
+0225 GETUPVAL A=8 B=2 C=0
+0226 GETTABLE r8 r8["notAllowdTip"]
+0227 TEST A=8 B=0 C=0
+0228 JMP A=0 target=241
+0229 GETGLOBAL r8 "transition"
+0230 GETTABLE r8 r8["stopTarget"]
+0231 GETUPVAL A=9 B=2 C=0
+0232 GETTABLE r9 r9["notAllowdTip"]
+0233 GETTABLE r9 r9["panel"]
+0234 CALL A=8 B=2 C=1
+0235 GETUPVAL A=8 B=2 C=0
+0236 GETTABLE r8 r8["notAllowdTip"]
+0237 SELF r8 self=r8 method="hide"
+0238 CALL A=8 B=2 C=1
+0239 GETUPVAL A=8 B=2 C=0
+0240 SETTABLE r8["notAllowdTip"] null
+0241 GETTABLE r8 r1["_data"]
+0242 GETTABLE r8 r8["type"]
+0243 GETTABLE r9 r1["_data"]
+0244 GETTABLE r9 r9["id"]
+0245 NEWTABLE A=10 B=0 C=0
+0246 GETGLOBAL r11 "DragonManager"
+0247 GETTABLE r11 r11["getDragons"]
+0248 CALL A=11 B=1 C=2
+0249 GETGLOBAL r12 "DataManager"
+0250 GETTABLE r12 r12["getDragonRandListByType"]
+0251 LOADK r13 16
+0252 GETGLOBAL r14 "tonumber"
+0253 MOVE A=15 B=8 C=0
+0254 CALL A=14 B=2 C=0
+0255 CALL A=12 B=0 C=2
+0256 NEWTABLE A=13 B=0 C=0
+0257 GETGLOBAL r14 "pairs"
+0258 MOVE A=15 B=11 C=0
+0259 CALL A=14 B=2 C=4
+0260 JMP A=0 target=269
+0261 GETTABLE r19 r18["hatched"]
+0262 TEST A=19 B=0 C=0
+0263 JMP A=0 target=269
+0264 GETGLOBAL r19 "table"
+0265 GETTABLE r19 r19["insert"]
+0266 MOVE A=20 B=13 C=0
+0267 MOVE A=21 B=18 C=0
+0268 CALL A=19 B=3 C=1
+0269 TFORLOOP A=14 B=0 C=2
+0270 JMP A=0 target=261
+0271 GETGLOBAL r14 "table"
+0272 GETTABLE r14 r14["sort"]
+0273 MOVE A=15 B=13 C=0
+0274 CLOSURE r16 nested=0
+0275 CALL A=14 B=3 C=1
+0276 LOADK r14 1
+0277 LEN A=15 B=12 C=0
+0278 LOADK r16 1
+0279 FORPREP A=14 target=295
+0280 GETTABLE r18 r12[r17]
+0281 GETGLOBAL r19 "table"
+0282 GETTABLE r19 r19["insert"]
+0283 MOVE A=20 B=13 C=0
+0284 NEWTABLE A=21 B=0 C=2
+0285 SETTABLE r21["fromPackage"] true
+0286 NEWTABLE A=22 B=0 C=4
+0287 GETTABLE r23 r18["oid"]
+0288 SETTABLE r22["id"] r23
+0289 GETTABLE r23 r18["itemid"]
+0290 SETTABLE r22["type"] r23
+0291 SETTABLE r22["quality"] 1
+0292 SETTABLE r22["level"] 1
+0293 SETTABLE r21["_data"] r22
+0294 CALL A=19 B=3 C=1
+0295 FORLOOP A=14 target=280
+0296 LEN A=14 B=13 C=0
+0297 LT A=0 0 r14
+0298 JMP A=0 target=375
+0299 GETGLOBAL r14 "log"
+0300 LOADK r15 "#eatAllDragons %d"
+0301 LEN A=16 B=13 C=0
+0302 CALL A=14 B=3 C=1
+0303 NEWTABLE A=14 B=1 C=0
+0304 MOVE A=15 B=10 C=0
+0305 SETLIST A=14 B=1 C=1
+0306 MOVE A=3 B=14 C=0
+0307 LOADBOOL A=14 B=0 C=0
+0308 GETGLOBAL r15 "ipairs"
+0309 MOVE A=16 B=13 C=0
+0310 CALL A=15 B=2 C=4
+0311 JMP A=0 target=368
+0312 GETTABLE r20 r19["_data"]
+0313 GETTABLE r20 r20["id"]
+0314 EQ A=1 r20 r9
+0315 JMP A=0 target=368
+0316 GETTABLE r20 r19["_data"]
+0317 GETTABLE r20 r20["type"]
+0318 EQ A=1 r20 r8
+0319 JMP A=0 target=339
+0320 LE A=0 2000 r8
+0321 JMP A=0 target=368
+0322 GETTABLE r20 r1["_data"]
+0323 GETTABLE r20 r20["quality"]
+0324 LT A=0 r20 5
+0325 JMP A=0 target=368
+0326 GETTABLE r20 r19["_data"]
+0327 GETTABLE r20 r20["type"]
+0328 ADD r20 r20 1000
+0329 EQ A=0 r20 r8
+0330 JMP A=0 target=368
+0331 GETGLOBAL r20 "DataManager"
+0332 GETTABLE r20 r20["_FuwenData"]
+0333 GETTABLE r20 r20["getFuwenByDragonID"]
+0334 GETTABLE r21 r19["_data"]
+0335 GETTABLE r21 r21["id"]
+0336 CALL A=20 B=2 C=2
+0337 EQ A=0 r20 null
+0338 JMP A=0 target=368
+0339 LEN A=20 B=10 C=0
+0340 LT A=0 r20 4
+0341 JMP A=0 target=348
+0342 GETGLOBAL r20 "table"
+0343 GETTABLE r20 r20["insert"]
+0344 MOVE A=21 B=10 C=0
+0345 MOVE A=22 B=19 C=0
+0346 CALL A=20 B=3 C=1
+0347 JMP A=0 target=357
+0348 NEWTABLE A=20 B=1 C=0
+0349 MOVE A=21 B=19 C=0
+0350 SETLIST A=20 B=1 C=1
+0351 MOVE A=10 B=20 C=0
+0352 GETGLOBAL r20 "table"
+0353 GETTABLE r20 r20["insert"]
+0354 MOVE A=21 B=3 C=0
+0355 MOVE A=22 B=10 C=0
+0356 CALL A=20 B=3 C=1
+0357 LOADBOOL A=14 B=1 C=0
+0358 GETGLOBAL r20 "table"
+0359 GETTABLE r20 r20["insert"]
+0360 GETUPVAL A=21 B=0 C=0
+0361 MOVE A=22 B=19 C=0
+0362 CALL A=20 B=3 C=1
+0363 GETGLOBAL r20 "table"
+0364 GETTABLE r20 r20["insert"]
+0365 GETUPVAL A=21 B=1 C=0
+0366 MOVE A=22 B=19 C=0
+0367 CALL A=20 B=3 C=1
+0368 TFORLOOP A=15 B=0 C=2
+0369 JMP A=0 target=312
+0370 EQ A=0 r14 false
+0371 JMP A=0 target=377
+0372 NEWTABLE A=15 B=0 C=0
+0373 MOVE A=3 B=15 C=0
+0374 JMP A=0 target=377
+0375 NEWTABLE A=14 B=0 C=0
+0376 MOVE A=3 B=14 C=0
+0377 GETUPVAL A=14 B=0 C=0
+0378 LEN A=14 B=14 C=0
+0379 EQ A=0 r14 0
+0380 JMP A=0 target=394
+0381 GETTABLE r14 r2["getChild"]
+0382 LOADK r15 "tx_shuoming"
+0383 CALL A=14 B=2 C=2
+0384 SELF r14 self=r14 method="setVisible"
+0385 LOADBOOL A=16 B=1 C=0
+0386 CALL A=14 B=3 C=1
+0387 GETTABLE r14 r2["getChild"]
+0388 LOADK r15 "tx_hongzi"
+0389 CALL A=14 B=2 C=2
+0390 SELF r14 self=r14 method="setVisible"
+0391 LOADBOOL A=16 B=1 C=0
+0392 CALL A=14 B=3 C=1
+0393 JMP A=0 target=406
+0394 GETTABLE r14 r2["getChild"]
+0395 LOADK r15 "tx_shuoming"
+0396 CALL A=14 B=2 C=2
+0397 SELF r14 self=r14 method="setVisible"
+0398 LOADBOOL A=16 B=0 C=0
+0399 CALL A=14 B=3 C=1
+0400 GETTABLE r14 r2["getChild"]
+0401 LOADK r15 "tx_hongzi"
+0402 CALL A=14 B=2 C=2
+0403 SELF r14 self=r14 method="setVisible"
+0404 LOADBOOL A=16 B=0 C=0
+0405 CALL A=14 B=3 C=1
+0406 GETGLOBAL r8 "log"
+0407 LOADK r9 "#eatarr %d"
+0408 LEN A=10 B=3 C=0
+0409 CALL A=8 B=3 C=1
+0410 GETTABLE r8 r0["eatList"]
+0411 EQ A=0 r8 null
+0412 JMP A=0 target=446
+0413 GETUPVAL A=9 B=4 C=0
+0414 GETTABLE r9 r9["new"]
+0415 NEWTABLE A=10 B=0 C=11
+0416 GETTABLE r11 r2["getChild"]
+0417 LOADK r12 "huadong_xiao"
+0418 CALL A=11 B=2 C=2
+0419 SETTABLE r10["container"] r11
+0420 GETUPVAL A=11 B=4 C=0
+0421 GETTABLE r11 r11["DIRECTION_V"]
+0422 SETTABLE r10["direction"] r11
+0423 SETTABLE r10["max_display"] 5
+0424 GETGLOBAL r11 "__scaleRatio"
+0425 MUL r11 10 r11
+0426 SETTABLE r10["gap"] r11
+0427 GETGLOBAL r11 "handler"
+0428 MOVE A=12 B=0 C=0
+0429 GETTABLE r13 r0["create_eatCell"]
+0430 CALL A=11 B=3 C=2
+0431 SETTABLE r10["create_item_func"] r11
+0432 SETTABLE r10["donot_play"] true
+0433 SETTABLE r10["item_pool_on"] true
+0434 CLOSURE r11 nested=1
+0435 MOVE A=0 B=3 C=0
+0436 SETTABLE r10["get_data"] r11
+0437 CLOSURE r11 nested=2
+0438 MOVE A=0 B=3 C=0
+0439 SETTABLE r10["get_data_count"] r11
+0440 CLOSURE r11 nested=3
+0441 SETTABLE r10["onTap"] r11
+0442 SETTABLE r10["item_height"] 100
+0443 CALL A=9 B=2 C=2
+0444 MOVE A=8 B=9 C=0
+0445 JMP A=0 target=459
+0446 SELF r9 self=r8 method="setGetDataFunc"
+0447 CLOSURE r11 nested=4
+0448 MOVE A=0 B=3 C=0
+0449 CALL A=9 B=3 C=1
+0450 SELF r9 self=r8 method="setGetDataCountFunc"
+0451 CLOSURE r11 nested=5
+0452 MOVE A=0 B=3 C=0
+0453 CALL A=9 B=3 C=1
+0454 SELF r9 self=r8 method="setMaxDisplay"
+0455 LOADK r11 5
+0456 CALL A=9 B=3 C=1
+0457 SELF r9 self=r8 method="reset"
+0458 CALL A=9 B=2 C=1
+0459 SETTABLE r0["eatList"] r8
+0460 RETURN A=0 B=1 C=0

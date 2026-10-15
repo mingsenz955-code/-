@@ -264,3 +264,7 @@
 
 ## v0.16.31 原技能完整说明
 - SkillUtils.getDes函数2、SkillNewInfo字段及BuffNewInfo plain ctor确认描述格式与参数；skilltypes为SkillDes模板42行。buffID=baseID*1000，装符文时加品质*100+等级；来源SHA与条数在reference/skill-descriptions-provenance.json。所有目标/持续/吸血与被动数字使用源表，不凭名称猜。
+
+## v0.16.32 龙出售、星级与变异取证
+- reference/dragon-sale-rules.txt、dragon-star-rules.txt、dragon-star-selection.txt、dragon-star-attributes.txt保存原函数，不执行原Lua。580行星级表及源SHA/本地政策在dragon-stars-provenance.json；属性和技能以显式星级查表，旧档保持原数值。
+- 原RandEvPanel.help直接说明>1小时/紫龙/变异奇遇/VIP/5事件；cf10行/nr14行与完整价格时间在mutation-events.json，非成年龙一键变身证据。没有触发概率响应，不自行给概率并声称一致。

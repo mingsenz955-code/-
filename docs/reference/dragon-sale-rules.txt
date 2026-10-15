@@ -1,0 +1,49 @@
+SHA256 21cdc5e9845f04bc4b8f64581f95a16821af0334181a99cf488ede194b52c1b8
+Static Lua 5.1 disassembly. PCs and nested function indexes are zero-based. No code executed.
+
+FUNCTION 4
+CONSTANTS ["busy", "Gui", "showToast", "此龙暂时不能卖出", "DataManager", "_FuwenData", "getFuwenByDragonID", "_data", "id", null, "此龙不能卖出，除非卸下其装备的符文", "price", "open", "Config_LocaleText", "lang", "Are you sure you want to sell #0# for #1# gold?", "name"]
+0000 GETUPVAL A=1 B=0 C=0
+0001 SELF r1 self=r1 method="busy"
+0002 CALL A=1 B=2 C=2
+0003 TEST A=1 B=0 C=0
+0004 JMP A=0 target=10
+0005 GETGLOBAL r1 "Gui"
+0006 GETTABLE r1 r1["showToast"]
+0007 LOADK r2 "此龙暂时不能卖出"
+0008 CALL A=1 B=2 C=1
+0009 RETURN A=0 B=1 C=0
+0010 GETGLOBAL r1 "DataManager"
+0011 GETTABLE r1 r1["_FuwenData"]
+0012 GETTABLE r1 r1["getFuwenByDragonID"]
+0013 GETUPVAL A=2 B=0 C=0
+0014 GETTABLE r2 r2["_data"]
+0015 GETTABLE r2 r2["id"]
+0016 CALL A=1 B=2 C=2
+0017 EQ A=1 r1 null
+0018 JMP A=0 target=24
+0019 GETGLOBAL r1 "Gui"
+0020 GETTABLE r1 r1["showToast"]
+0021 LOADK r2 "此龙不能卖出，除非卸下其装备的符文"
+0022 CALL A=1 B=2 C=1
+0023 RETURN A=0 B=1 C=0
+0024 GETUPVAL A=1 B=0 C=0
+0025 SELF r1 self=r1 method="price"
+0026 CALL A=1 B=2 C=2
+0027 GETUPVAL A=2 B=1 C=0
+0028 GETTABLE r2 r2["open"]
+0029 GETGLOBAL r3 "Config_LocaleText"
+0030 GETTABLE r3 r3["lang"]
+0031 LOADK r4 "Are you sure you want to sell #0# for #1# gold?"
+0032 GETUPVAL A=5 B=0 C=0
+0033 GETTABLE r5 r5["_data"]
+0034 GETTABLE r5 r5["name"]
+0035 MOVE A=6 B=1 C=0
+0036 CALL A=3 B=4 C=2
+0037 CLOSURE r4 nested=0
+0038 GETUPVAL A=0 B=0 C=0
+0039 GETUPVAL A=0 B=2 C=0
+0040 GETUPVAL A=0 B=3 C=0
+0041 MOVE A=0 B=1 C=0
+0042 CALL A=2 B=3 C=1
+0043 RETURN A=0 B=1 C=0

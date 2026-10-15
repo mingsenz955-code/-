@@ -1,3 +1,4 @@
+import {dragonStars} from './dragon-stars.mjs';
 import {runePower} from './runes.mjs';
 import {gemBonus} from './gems.mjs';
 import {equipmentBonus,equipmentOfDragon} from './equipment.mjs';
@@ -22,7 +23,7 @@ export function dragonCombatRow(originalId,quality){return rows.get(`${originalI
 export function dragonAttributes(dragon,state=null){
  const species=SPECIES[dragon?.species];
  if(!species?.originalId)return null;
- const row=dragonCombatRow(species.originalId,species.quality);
+ const row=dragonCombatRow(species.originalId,dragonStars(dragon));
  if(!row)return null;
  const level=Math.max(1,dragon.level??1);
  const gems=state?gemBonus(state,dragon):{attack:0,defend:0,blood:0,crit:0,uncrit:0};

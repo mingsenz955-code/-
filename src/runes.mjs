@@ -1,3 +1,4 @@
+import {dragonStars} from './dragon-stars.mjs';
 import {ORIGINAL_RUNES} from '../assets/original/data/progression.mjs';
 import DATA from '../assets/original/data/rune-skills.mjs';
 import {SPECIES} from './data.mjs';
@@ -7,7 +8,7 @@ export const runeDefinition=id=>definitions.get(Number(id))??null;
 export const runeInstance=(state,id)=>state.runes?.find(v=>v.id===id)??null;
 export const runeOfDragon=(state,id,slot)=>(state.runes??[]).find(v=>v.dragonid===id&&runeDefinition(v.type)?.equipType===slot)??null;
 export const runeIcon=def=>def?.image?`assets/original/ui/thumbs_fuwen_${def.image}.png`:null;
-export function dragonSkillIds(dragon){const s=SPECIES[dragon?.species];return dragonRows.get(`${s?.originalId}:${s?.quality}`)??[-1,-1,-1,-1]}
+export function dragonSkillIds(dragon){const s=SPECIES[dragon?.species];return dragonRows.get(`${s?.originalId}:${dragonStars(dragon)}`)??[-1,-1,-1,-1]}
 export function runeSkill(dragon,def=null,slot=def?.equipType){const id=dragonSkillIds(dragon)[slot-1],base=DATA.skills[id];if(!base)return null;const common=DATA.skillCommon[base.kind]??{},result={...base,...common};if(!def)return result;const c=DATA.runeColour[base.runeColour],l=DATA.runeLevel[base.runeLevel],i=(def.quality-2)*3;if(!c||!l||i<0||i+2>=c.length)return null;const n=def.level-1;return {...result,damageVector:c[i]+n*l[i],damageValue:c[i+1]+n*l[i+1],addPower:slot<=2?c[i+2]+n*l[i+2]:0,addPowerDisplay:c[i+2]+n*l[i+2]}}
 export function runePower(state,dragon){return [1,2,3,4].reduce((sum,slot)=>{const item=runeOfDragon(state,dragon.id,slot);return sum+(item?runeSkill(dragon,runeDefinition(item.type))?.addPower??0:0)},0)}
 export function runeEquipError(state,dragon,item){const def=runeDefinition(item?.type);if(!dragon||!def)return '找不到龙或符文。';if(SPECIES[dragon.species].quality<2)return '绿色品质及以上的龙才能装备符文。';if(def.equipType===5)return '碎片只能用于升级符文。';if(item.dragonid&&item.dragonid!==dragon.id)return '符文已装备给另一条龙，请先卸下。';if(!runeSkill(dragon,def))return '这条龙没有对应技能，或原技能增幅表未覆盖此符文。';return null}

@@ -1,3 +1,6 @@
+import {openDragonStar,confirmDragonStar} from './dragon-star-dialog.mjs';
+import {confirmDragonSale} from './dragon-sale-dialog.mjs';
+import {mutationRecord} from './dragon-stars.mjs';
 import {openSkillDialog} from './skill-dialog.mjs';
 import {formationSwap} from './formation.mjs';
 import {runeSkill} from './runes.mjs';
@@ -117,6 +120,15 @@ document.addEventListener('click',async e=>{
   if(type==='returnLottery'){await openLotteryDialog(state,Number($('#modal').dataset.lotteryMode));return}
   if(type==='lotteryPrize'){openLotteryPrize(state,id);return}
   if(type==='lotteryHelp'){await openNativePaper('抽奖说明',`<p>${escape(lotteryHelp())}</p>`);return}
+  if(type==='confirmSellDragon'){await confirmDragonSale(state,id);return}
+  if(type==='cancelDragonSale'||type==='returnStarDragon'){await openDragonDialog(state,id,{returnToCollection:$('#modal').dataset.returnToCollection==='true'});return}
+  if(type==='sellDragon'){const collection=$('#modal').dataset.returnToCollection==='true';await persist(action(state,type,{id}));selected=state.dragons[0]?.id;render();closeDialog();if(collection)await openCollectionDialog(state,collectionFilter);toast(state.log[0]);return}
+  if(type==='openDragonStar'||type==='openDragonGrowth'){const target=type==='openDragonGrowth'?(selected??state.dragons[0]?.id):id;if(!target)throw Error('牧场里还没有可以升星的龙。');await openDragonStar(state,target);return}
+  if(type==='dragonStarMaterial'){const modal=$('#modal'),ids=(modal.dataset.dragonMaterialIds||'').split(',').filter(Boolean).map(Number),next=ids.includes(id)?ids.filter(v=>v!==id):[...ids,id];await openDragonStar(state,Number(modal.dataset.dragonId),next);return}
+  if(type==='requestStarDragon'){await confirmDragonStar(state,id,($('#modal').dataset.dragonMaterialIds||'').split(',').filter(Boolean).map(Number));return}
+  if(type==='cancelStarDragon'){await openDragonStar(state,id,($('#modal').dataset.dragonMaterialIds||'').split(',').filter(Boolean).map(Number));return}
+  if(type==='starDragon'){const ids=($('#modal').dataset.dragonMaterialIds||'').split(',').filter(Boolean).map(Number);await persist(action(state,type,{id,ids}));render();await openDragonStar(state,id);toast(state.log[0]);return}
+  if(type==='dragonMutationHelp'){const d=state.dragons.find(d=>d.id===id),record=d&&mutationRecord(d.species);await openNativePaper('变异龙',`<p>${record?'对应变异龙：'+escape(record.name):'当前客户端未记录这条龙对应的变异品种。'}</p><p>原版提示：两龙交配时间大于1小时，有概率触发奇遇；培育出紫色品质龙，有概率触发变异龙奇遇。概率随VIP提高，最多保留5个事件。</p><p>变异龙最高7星；奇遇触发、奖励结算与五星后的觉醒修炼仍未完成。</p>`);return}
   if(type==='openEvolution'){await openEvolutionDialog(state,id,{returnToCollection:$('#modal').dataset.returnToCollection==='true'});return}
   if(type==='returnFromEvolution'){await openDragonDialog(state,id,{returnToCollection:$('#modal').dataset.returnToCollection==='true'});return}
   if(type==='evolutionHelp'){await openNativePaper('进化说明',`<p>${escape(EVOLUTION_TEXT['ev.evolution tip'])}</p>`);return}
@@ -206,7 +218,7 @@ document.addEventListener('click',async e=>{
   if(type==='selectDragon'){selected=id;await openDragonDialog(state,id);return}
   if(type==='save'){await persist(state);render();toast('牧场已保存。');return}
   if(type==='export'){if(await storage.export(state))toast('存档已导出。');return}
-  if(type==='import'){const imported=await storage.import();if(!imported)return;if(imported.error)throw new Error(imported.error);const next=validate(imported);if(!confirm('将载入这份存档，并备份当前牧场。继续吗？'))return;await persist(next);closeDialog();selected=state.dragons[0].id;render();toast('存档已载入。');return}
+  if(type==='import'){const imported=await storage.import();if(!imported)return;if(imported.error)throw new Error(imported.error);const next=validate(imported);if(!confirm('将载入这份存档，并备份当前牧场。继续吗？'))return;await persist(next);closeDialog();selected=state.dragons[0]?.id;render();toast('存档已载入。');return}
   const priorMode=$('#modal').dataset.mode,priorHabitat=Number($('#modal').dataset.habitatId),moveDragon=Number($('#modal').dataset.dragonId);
   const lotteryMode=Number($('#modal').dataset.lotteryMode??1);const refreshWarehouse=priorMode==='nativeWarehouse'||priorMode==='nativeWarehousePlace';const warehouseGroup=$('#modal').dataset.warehouseGroup??'all';const pendingPrize=Number($('#modal').dataset.pendingPrize);const refreshLottery=!refreshWarehouse&&['lotteryDraw','lotteryClaimResources','lotteryPlace'].includes(type);const payload={id};if(type==='unwearEquipment')payload.equipmentId=$('#modal').dataset.equipmentId;if(type==='wearEquipment')payload.equipmentId=el.dataset.value;if(type==='recharge')payload.tierId=id;if(type==='plantNative'){type='plant';payload.cropId=id}if(type==='buyHabitat'){type='build';payload.buildingId=id}if(type==='moveNative'){type=priorMode==='nativeWarehousePlace'?'lotteryPlace':'move';payload.id=priorMode==='nativeWarehousePlace'?pendingPrize:moveDragon;payload.habitatId=id}if(type==='hatchNative'){type='hatch';payload.habitatId=id}if(type==='lotteryDraw'){payload.mode=lotteryMode;payload.count=Number(el.dataset.value);const cost=lotteryCost(state.lottery,payload.mode,payload.count);if(cost.gems>0&&!confirm(`本次扣除 ${cost.tokens} 抽奖币及 ${cost.gems} 魔晶，继续吗？`))return}if(type==='lotteryPlace')payload.habitatId??=Number($('#lottery-habitat').value);if(type==='build')payload.buildingId??=Number(el.dataset.buildingId);if(type==='plant')payload.cropId??=Number(el.dataset.cropId??el.closest('.card')?.querySelector('[data-crop]')?.value??1);if(type==='breed'){payload.a=Number($('#modal').dataset.parentA);payload.b=Number($('#modal').dataset.parentB)}
   if(type==='hatch')payload.habitatId??=Number($('#hatch-target')?.value);
