@@ -1,0 +1,16 @@
+{
+  "tablesSha256": "1408d684c2a6530668a8ed4816ad1697d579077fed5d02b887d06f035395e750",
+  "source": [
+    "MainScene:initIslands:positions and level gates",
+    "LibHolyInfo:seed columns",
+    "LibMonsterInfo static ctor:monster fields",
+    "HolyTreePanelNew static:plant,plunder,manualharvest and NPC flag",
+    "WorldBossMainPanel static:bossid,damage,totaldamage,battlecnt and attempt price ladder"
+  ],
+  "offlinePolicies": [
+    "No human opponents or server rankings; source seedrobot NPCs only",
+    "Three growing slots; five daily active seed rows one each; UTC+8 reset; VIP fourth slot pending",
+    "Always open worldboss in offline mode, 10 daily attempts and static per-dragon damage formula",
+    "Boss kill reward uses world_boss row reward; server schedule, combat AI, rankings and achievement rewards pending"
+  ]
+}

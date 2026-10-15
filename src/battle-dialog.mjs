@@ -17,9 +17,9 @@ let activeRun=0;
 // BattleUI normalizes appearance level to at least 7 before getDragonGraphic.
 // The younger ranch models intentionally contain no combat tracks.
 function fighter(item,side,index,positions){const p=positions[index],art=dragonArt(item.species,'',Math.max(7,item.level??7)).replace('data-clip="breath"',`data-clip="breathinbattle" data-battle-scale="${p.scale}" data-native-size="true"`);return `<div class="battle-fighter ${side}" data-unit="${side}${index}" data-position="${p.type}" style="left:${p.x}px;top:${p.y}px;z-index:${Math.round(p.y)}"><div class="battle-model">${art}</div><span class="battle-unit-hp"><img class="hp-background" src="assets/original/ui/ui_battle_hp_diban.png" alt=""><img class="hp-delay" src="assets/original/ui/ui_battle_hp_delay.png" alt=""><img class="hp-current" src="assets/original/ui/ui_battle_hp_${side==='enemy'?'defender':'attacker'}.png" alt=""></span></div>`}
-export async function openBattleDialog(state,{nodeId=null}={}){
+export async function openBattleDialog(state,{nodeId=null,enemyGroup=null}={}){
  const layout=await sourceLayout('ui_battlenormal');
- const lineup=configuredLineup(state),enemies=battleEnemyGroup(nodeId)?.monsters??[],values={},slots={},hidden=new Set();
+ const lineup=configuredLineup(state),enemies=enemyGroup??battleEnemyGroup(nodeId)?.monsters??[],values={},slots={},hidden=new Set();
  for(let index=1;index<=BATTLE_SLOTS;index++)for(const side of ['left','right']){
   const item=(side==='left'?lineup:enemies)[index-1],key=`${side}${index}`,team=side==='left'?'ally':'enemy';
   values[`${key}/lv`]=item?`Lv.${item.level}`:'';
@@ -62,7 +62,7 @@ export async function playBattleAnimation(state,nodeId,result){
  const d=document.querySelector('#modal'),run=d.dataset.battleRun,layer=d.querySelector('.battle-fx-layer');
  const live=()=>d.open&&d.dataset.mode==='sourceBattle'&&d.dataset.battleRun===run;
  const make=(item,side,index)=>({item,side,index,el:d.querySelector(`[data-unit="${side}${index}"]`),stats:side==='ally'?dragonAttributes(item,state):{attack:item.attack,defend:item.defend,life:item.life},hp:100});
- const allies=configuredLineup(state).map((v,i)=>make(v,'ally',i)),enemies=battleEnemyGroup(nodeId).monsters.filter(v=>v.species).map((v,i)=>make(v,'enemy',i));
+ const allies=configuredLineup(state).map((v,i)=>make(v,'ally',i)),enemies=(result.enemyGroup??battleEnemyGroup(nodeId)?.monsters??[]).filter(v=>v.species).map((v,i)=>make(v,'enemy',i));
  const allyPositions=battlePositions(allies.map(v=>v.item)),enemyPositions=battlePositions(enemies.map(v=>v.item),'enemy');
  const winners=result.won?allies:enemies,losers=result.won?enemies:allies;
  const deaths=[];
@@ -92,4 +92,14 @@ export async function playBattleAnimation(state,nodeId,result){
   const results=await Promise.all([foreground,target.hp>0?hurt:Promise.resolve(true)]);if(!results.every(Boolean))return false;
  }
  await Promise.all(deaths);await wait(1000);return live();
+}
+
+// Offline world-boss encounter: recorded partial damage, never fake a defeated boss.
+export async function playBossAnimation(state,plan){
+ const d=document.querySelector('#modal'),run=d.dataset.battleRun,layer=d.querySelector('.battle-fx-layer'),target=d.querySelector('[data-unit="enemy0"]'),team=configuredLineup(state),positions=battlePositions(team),targetPos=battlePositions([plan.enemy],'enemy')[0];let hp=plan.startHp;
+ const live=()=>d.open&&d.dataset.battleRun===run&&d.dataset.mode==='sourceBattle';
+ if(!(await Promise.all([...d.querySelectorAll('.battle-fighter')].map(el=>motion(el,'movein',live)))).every(Boolean))return false;
+ await wait(100);
+ for(const hit of plan.hits){if(!live())return false;const actor=d.querySelector(`[data-unit="ally${hit.index}"]`);const r=d.querySelector('[data-source="round/num"]');if(r)r.textContent=`${hit.round}/30`;if(!await motion(actor,'magic',live))return false;const fx=playSourceHit(layer,'magic_'+SPECIES[team[hit.index].species].originalId,'bomb2',{x:targetPos.x,y:targetPos.y-45},live),hurt=motion(target,'hurt',live);await damageNumber(layer,hit.damage,targetPos.x,targetPos.y-75);hp-=hit.damage;const percent=Math.max(0,hp/plan.enemy.life*100);healthBar({el:target},percent);const bar=d.querySelector('[data-source="right1/hp"]');if(bar)bar.style.clipPath=`inset(0 ${100-percent}% 0 0)`;if(!(await Promise.all([fx,hurt])).every(Boolean))return false;}
+ if(live()&&plan.won){target.classList.add('is-dead');if(!await motion(target,'dead',live))return false;await wait(100);target.hidden=true}await wait(500);return live();
 }

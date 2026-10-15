@@ -310,3 +310,11 @@
 - 真实鼠标新检查发现：source-equipment-bag-body透明容器遮住组标签；source-star-remove受通用button:hover影响位移，导致click不产生。已分别修复事件穿透与稳定定位，并验证升星材料移除/重新添加/确认/详情激活值。
 - 规则检查159项通过；独立profile验证一键穿戴、手动替换、他龙装备保护、带星装备评分、单次/十次强化/星级保留、分解按可见分类全选/确认取消与碎片合成。不写入玩家测试装备或资源。
 - 仍缺随机词条的原服务端生成、条件属性完整应用、强化失败/保护符/降阶服务器规则、装备页完整原分组组合/已装备未装备切换/帮助与音效。当前为本地功能对照推进，不称完美复刻完成。
+## v0.16.35 原连续世界证据
+- work/client-config/app/scenes/MainScene.lua第135–197行，initIslands实际positions与z-order；left/top/right/bottom同一islandLayer，不是四页面。原背景第86行island_bg_day.png。
+- assets/original/layouts/islandleft/right/top/bottom.json各自尺寸及世界图。WORLD_ISLANDS统一比例/翻转Y，保存岛ID不变。旧建筑板缩放为兼容适配，未当作原等距网格证据。
+
+## v0.16.36 中央首领与圣树证据
+- MainScene.lua第192–235/302–375/602–618行确认圣树、血战、冒险、竞技、首领入口坐标、层次、等级与模块名；中央首领是额外功能岛，不是省略的一块普通放置板。
+- 原APK buildings/{bossdao_dao,bossdao_shitou,shengshu_eff,feiting,yandong_eff,jingjichang_eff}导出numeric骨骼/原纹理，manifest保留来源。原ui_world_boss、ui_holy_tree布局接实际点击。
+- world-encounters-provenance.json记录原种子/首领/NPC表与静态字段来源。work/worldboss-main-static.txt、holytree-main-static.txt记录只读反汇编。原源码label与条件有不同开放星期表述，因此本轮不猜精确服务器周历，单机常驻。

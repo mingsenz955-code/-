@@ -255,3 +255,20 @@ body:has(#modal[open].native-fullscreen){background:#09242e}
 .source-equip-recommend{position:absolute;transform:translate(-50%,-50%);pointer-events:none}
 
 .source-equipment-starbar{display:flex;gap:0}.source-equipment-starbar img{width:18px;height:18px;object-fit:contain;pointer-events:none}
+/* Keep legacy PC board coordinates while bringing footprints back onto source land. */
+.ranch-world .world-island .world-objects{transform:scale(.72);transform-origin:50% 50%}
+.ranch-world .world-island[data-world-island="1"] .world-objects,.ranch-world .world-island[data-world-island="2"] .world-objects{transform:scale(.65)}
+.ranch-world .world-island[data-world-island="3"] .world-objects{transform:scale(.42)}
+
+.world-entrance{position:absolute;width:1px;height:1px;min-width:0;padding:0;border:0;background:none;overflow:visible;box-shadow:none}
+.world-entrance canvas{position:absolute;pointer-events:auto;max-width:none;max-height:none}
+.boss-map-dragon{position:absolute;left:-65px;top:-100px;width:130px;height:130px;pointer-events:none}.boss-map-dragon .dragon{width:100%;height:100%}
+.source-world-boss .boss-island-model{position:absolute;left:-270px;top:-340px;width:540px;height:470px}
+.source-world-boss [data-source="dragon/dragon"] .dragon{position:absolute;left:-150px;top:-260px;width:300px;height:300px}
+.world-entry-caption{position:absolute;left:-55px;top:-15px;width:110px;text-align:center;white-space:nowrap;color:#fff7db;font-size:24px;text-shadow:2px 2px #50371c}
+.tree-seed{position:absolute;left:-42px;top:-42px;width:84px;height:84px;padding:6px;border:0;background:none}.tree-seed img{width:100%;height:100%;object-fit:contain}.tree-seed:disabled{opacity:.35}
+.tree-fruit{position:absolute;left:-48px;top:-75px;width:96px;height:135px;padding:0;background:none;border:0;color:#fff6d7;text-shadow:1px 2px #352818;font-size:17px}.tree-fruit img{width:80px;height:80px;object-fit:contain}.tree-fruit span{display:block;white-space:nowrap}.tree-fruit:disabled{opacity:1}
+.tree-slot-empty,.tree-slot-locked{position:absolute;left:-45px;top:-12px;width:100px;color:#fff4d4;font-size:23px;text-shadow:1px 2px #352818}.tree-slot-locked{font-size:18px;color:#cbbd9b}
+.world-targets{display:flex;gap:24px}.world-targets article{width:30%;text-align:center}.world-targets .dragon{width:170px;height:170px}.world-targets .native-game-button{position:relative;width:170px;height:65px;transform:none}
+
+.worldboss-dragon{position:absolute;left:0;top:-35px}.worldboss-dragon canvas{max-width:none;max-height:none}
