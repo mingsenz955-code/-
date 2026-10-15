@@ -1,4 +1,4 @@
-import {openHistoryGiftResult,openHistoryRanks,openHistoryTraining,openHistoryActivity,openHistoryHelp,openHistoryCatalogHelp,openHistoryInventory,playHistoryAnimation,openHistoryResult} from './history-activity-dialog.mjs';
+import {closeHistoryResult,openHistoryGiftResult,openHistoryRanks,openHistoryTraining,openHistoryActivity,openHistoryHelp,openHistoryCatalogHelp,openHistoryInventory,playHistoryAnimation,openHistoryResult} from './history-activity-dialog.mjs';
 import {openActivities,openSingleRecharge,openSingleRechargeHelp} from './activity-dialog.mjs';
 import {openArena,openArenaExchange,openArenaRecords,openArenaRanks,openArenaHelp} from './arena-dialog.mjs';
 import {arenaPlan,refreshArena,vipInfo} from './arena.mjs';
@@ -88,7 +88,7 @@ function render(){
 }
 function tick(){const modal=$('#modal');if(!busy&&modal?.open&&modal.dataset.mode==='sourceGemExplore'&&Number(modal.dataset.freeReady)>0&&Date.now()>=Number(modal.dataset.freeReady)){delete modal.dataset.freeReady;void openGemExplore(state)}if(!busy&&modal?.open&&modal.dataset.mode==='sourceShenfu'&&Number(modal.dataset.freeReady)>0&&Date.now()>=Number(modal.dataset.freeReady)){delete modal.dataset.freeReady;void openShenfuDialog(state)}document.querySelectorAll('[data-timer]').forEach(el=>el.textContent=el.classList.contains('source-pve-reward-state')&&Date.now()>=Number(el.dataset.timer)?'可领取':time(Number(el.dataset.timer)));document.querySelectorAll('[data-ready]').forEach(el=>el.disabled=busy||Date.now()<Number(el.dataset.ready));document.querySelectorAll('[data-income]').forEach(el=>{const h=state.habitats.find(h=>h.id===Number(el.dataset.income));if(h)el.textContent=fmt(income(state,h))})}
 async function persist(next){busy=true;saveStatus='正在保存…';if($('#save-status'))$('#save-status').textContent=saveStatus;try{await storage.save(next);state=next;saveStatus=`已保存 · ${new Date().toLocaleTimeString('zh-CN')}`;}catch(e){saveStatus='保存失败 · 请重试';throw e}finally{busy=false}}
-function closeDialog(){const d=$('#modal');d.close();d.className='';delete d.dataset.mode;delete d.dataset.returnToCollection;}
+function closeDialog(){if(closeHistoryResult())return;const d=$('#modal');d.close();d.className='';delete d.dataset.mode;delete d.dataset.returnToCollection;}
 async function showSettings(){const version=await window.ranch?.version?.().catch(()=>null);await openNativePaper('本地存档',`<p>御龙高手 <b>v${version??'未知'}</b>　操作后自动保存</p><div class="native-save-actions">${nativeButton('立即保存','save')}${nativeButton('导出存档','export')}${nativeButton('导入存档','import')}</div>`,'nativeSettings')}
 let suppressHabitatClick=false;
 const clipNames={breath:'呼吸',walk:'步行',especial:'特殊动作',combat:'战斗姿态',breathinbattle:'战斗待机',movein:'入场',hurt:'受击',dead:'倒下',airattack:'空中攻击',airattackend:'空中攻击收招',landattack:'地面攻击',landattackend:'地面攻击收招',magic:'施法',magicend:'施法收招',fly:'飞行',walk2:'步行二',walk3:'步行三'};
@@ -102,6 +102,7 @@ document.addEventListener('click',async e=>{
  try{
   if(type==='openActivities'||type==='openWelfare'||type==='openMonopolyActivities'){await persist(action(state,'activityVisit'));render();await openActivities(state,type==='openWelfare'?'福利':type==='openMonopolyActivities'?'大富翁':'全部');return}
   if(type==='openFirstCharge'){await persist(action(state,'activityVisit'));render();await openHistoryActivity(state,'first');return}
+  if(type==='historyResultClose'){closeHistoryResult();return}
   if(type==='historyRanks'){await openHistoryRanks(state,el.dataset.value);return}
   if(type==='historyGift'){await persist(action(state,'activityGift',{id}));render();await openHistoryGiftResult(state);return}
   if(type==='historyTraining'){await openHistoryTraining(state);return}

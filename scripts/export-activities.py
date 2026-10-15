@@ -31,7 +31,7 @@ for table,key,title,kind in [('xiaofeifanli','spend','消费返利','spent'),('c
  add(key,title,kind,table,[simple(r,groups(r,2),goal=r[1]) for r in t[table]],group='返利')
 add('limited-spend','限时消费','spent','xiaofeifanli2',[simple(r,groups(r,3),goal=r[2],day=r[1]) for r in t['xiaofeifanli2']],group='返利')
 for i in range(1,5):
- table='tuhao_'+str(i);add('tycoon-'+str(i),'土豪节·第'+str(i)+'期','paid',table,[simple(r,[prize(r[1],r[2],r[3],r[6] if len(r)>6 else 1)],goal=r[4]) for r in t[table]],group='返利')
+ table='tuhao_'+str(i);add('tycoon-'+str(i),'土豪节·第'+str(i)+'期','paid',table,[simple(r,[prize(r[1],r[2],r[3],r[6] if len(r)>6 else None)],goal=r[4]) for r in t[table]],group='返利')
 add('gem-deals','宝石特惠','purchase','baoshitehui',[simple(r,[prize(r[1],r[2],r[3])],cost=prize(3,-1,r[4])) for r in t['baoshitehui']],group='特惠')
 for i,title in enumerate(['强化石特惠','羽翼特惠','水晶特惠'],1):
  add('enhance-sale-'+str(i),title,'purchase','qianghuatehui',[simple(r,[prize(r[3],r[4],r[5])],cost=prize(3,-1,r[6])) for r in t['qianghuatehui'] if r[1]==i],group='特惠')
@@ -56,9 +56,9 @@ add('collection','神龙收集回馈','collection','Arpuhuodong',[simple(r,group
 add('purple-gift','紫装送礼','purple','huodong',[simple(r,[prize(r[3],r[4],r[5])],fragments=list(map(int,r[1].split('|'))),goal=r[2]) for r in t['huodong']],group='收集')
 add('lucky-cat','招财猫','cat','money_cat',[simple(r,[prize(r[4],r[5],r[6])],max=r[7],cost=prize(r[1],r[2],r[3]),vip=r[8]) for r in t['money_cat']],group='抽奖')
 for i,title in enumerate(['碎片','骷髅龙','中国龙','李小龙','金蛇龙','屎大龙']):
- table='Gaming_table3_'+str(i);add('wheel-'+str(i),'幸运转盘·'+title,'draw',table,[simple(r,[prize(r[2],r[3],r[4],r[9] if len(r)>9 else 1)],weight=(r[5]-(t[table][n-1][5] if n else 0))) for n,r in enumerate(t[table])],price=8,tenPrice=76,fiftyPrice=350,freeDaily=1,group='抽奖',odds='原奖池保留；累计区间列的权重为离线解释。')
+ table='Gaming_table3_'+str(i);add('wheel-'+str(i),'幸运转盘·'+title,'draw',table,[simple(r,[prize(r[2],r[3],r[4],r[9] if len(r)>9 else None)],weight=(r[5]-(t[table][n-1][5] if n else 0))) for n,r in enumerate(t[table])],price=8,tenPrice=76,fiftyPrice=350,freeDaily=1,group='抽奖',odds='原奖池保留；累计区间列的权重为离线解释。')
 for i,title in enumerate(['爪','角','骨','鳞'],1):
- table='runehuodong_'+str(i);add('fire-'+str(i),'点燃圣火·橙装'+title,'draw',table,[simple(r,[prize(r[1],r[2],r[3],r[6] if len(r)>6 else 1)],weight=r[4]-(t[table][n-1][4] if n else 0)) for n,r in enumerate(t[table])],price=30,group='抽奖',odds='原累计区间用于离线抽取；30魔晶单抽价格为离线设置。')
+ table='runehuodong_'+str(i);add('fire-'+str(i),'点燃圣火·橙装'+title,'draw',table,[simple(r,[prize(r[1],r[2],r[3],r[6] if len(r)>6 else None)],weight=r[4]-(t[table][n-1][4] if n else 0)) for n,r in enumerate(t[table])],price=30,group='抽奖',odds='原累计区间用于离线抽取；30魔晶单抽价格为离线设置。')
 for i in [1,2,3]:
  add('recharge-wheel-'+str(i),'充值转盘·'+['普通','高级','豪华'][i-1],'rechargeDraw','Recharge_table1-1',[simple(r,[prize(r[2],r[3],r[4],r[6])],weight=r[5]) for r in t['Recharge_table1-1'] if r[1]==i],goal=[30,100,300][i-1],group='抽奖',odds='原奖池保留；每轮充值门槛30/100/300元为离线设置。')
 for i,title in enumerate(['狂龙','高能威龙','大圣龙','蛋壳龙','大圣龙·复刻'],1):
