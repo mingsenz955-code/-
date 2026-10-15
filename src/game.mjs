@@ -1,5 +1,6 @@
+import {createMissions,validateMissions,updateMissions} from './missions.mjs';
 import {trainDragon,validateTraining} from './dragon-training.mjs';
-import {openActivityGift,recordActivityBreed,recordSpringTask,historyAction,observeActivityDay,recordActivitySpend} from './historical-activities.mjs';
+import {activityDeliver,composeActivityFragment,openActivityGift,recordActivityBreed,recordSpringTask,historyAction,observeActivityDay,recordActivitySpend} from './historical-activities.mjs';
 import {createActivities,validateActivities,recordActivityRecharge,claimSingleRecharge} from './activities.mjs';
 import {vipYield,vipDuration} from './vip.mjs';
 import {createArena,validateArena,arenaAction} from './arena.mjs';
@@ -112,7 +113,7 @@ export function validate(s) {
  for(const [job,phases] of [[s.breeding,['breeding','egg']],[s.incubator,['hatching']]]){if(job===null)continue;const n=job;if(n?.startedAt!==undefined&&(!number(n.startedAt)||n.startedAt>n.readyAt))fail('繁殖起始时间无效。');if(n?.hatchMs!==undefined&&!number(n.hatchMs,0,365*86400000))fail('孵化时间无效。');if(!n||!phases.includes(n.phase)||!Object.hasOwn(SPECIES,n.species)||!number(n.readyAt))fail('繁殖或孵化数据无效。');if(n.source==='raffle'){if(!Array.isArray(n.parents)||n.parents.length)fail('扭蛋龙蛋不应带亲代。')}else if(!Array.isArray(n.parents)||n.parents.length!==2||n.parents[0]===n.parents[1]||!n.parents.every(id=>s.dragons.some(d=>d.id===id)))fail('繁殖或孵化数据无效。');}
  if(!s.stats||!['harvests','hatches','feeds'].every(k=>number(s.stats[k]))) fail('统计数据无效。');
  if(!Array.isArray(s.log)||s.log.length>12||!s.log.every(x=>typeof x==='string'&&x.length<=200))fail('日志数据无效。');
- validateRunes(s);validateRuneHunt(s);validateGemExplore(s);validateLoot(s);return {...structuredClone(s),version:12};
+ validateMissions(s);validateRunes(s);validateRuneHunt(s);validateGemExplore(s);validateLoot(s);return {...structuredClone(s),version:12};
 }
 export function dragonRate(d){const species=SPECIES[d.species];if(!species.originalId)return species.income*d.level*60;return d.level<=10?species.coinStart+species.coinAdded*(d.level-1):species.coinStart+species.coinAdded*9+Math.floor(species.coinAdded*(d.level-10)/2)}
 function rawIncome(s,h,now){const cap=habitatInfo(h).maxGold*60000;let units=Math.round((h.storedCoins??0)*60000);const start=Math.min(now,h.lastCollected);for(const d of s.dragons.filter(d=>d.habitatId===h.id)){let elapsed=Math.max(0,now-start);const n=s.breeding;if(n?.phase==='breeding'&&n.parents.includes(d.id)){const breedStart=n.startedAt??n.readyAt-(SPECIES[n.species].breedingMs??RULES.breedMs);elapsed-=Math.max(0,Math.min(now,n.readyAt)-Math.max(start,breedStart));}units=Math.min(cap,units+Math.min(cap,Math.max(0,elapsed)*dragonRate(d)*(1+(vipYield(s,'coins',100)-100)/100)));}return Math.min(cap,units)/60000}
@@ -125,7 +126,7 @@ export function playerProgress(s){const xp=s.playerXp??0;const current=ORIGINAL_
 export function farmOwner(s,id=null){if(id===null||id===undefined||id===0)return s;const o=s.structures.find(o=>o.id===id);if(!o||![16,17,18,108].includes(o.itemId))fail('农场不存在。');return o}
 export function farmInfo(s,id=null){const o=farmOwner(s,id),type=o===s?(s.farmBuildingId??16):o.itemId;return ORIGINAL_FARMS.find(f=>f.id===type)??ORIGINAL_SHOP_ITEMS.find(f=>f.id===type)}
 export function unlockedCrops(s,id=null){const info=farmInfo(s,id);return info.id===108?ORIGINAL_CROPS.slice(9,12):ORIGINAL_CROPS.slice(0,(info.id-15)*3)}
-function awardPlayerXp(s,xp){const before=playerProgress(s).level;s.playerXp=(s.playerXp??0)+vipYield(s,'xp',xp);const after=playerProgress(s).level;for(const level of ORIGINAL_LEVELS.filter(level=>level.level>before&&level.level<=after)){const resource={c:'gems',g:'coins',f:'food'}[level.reward_type];if(resource)s[resource]=(s[resource]??0)+level.reward_amount}}
+function awardPlayerXp(s,xp,applyVip=true){const before=playerProgress(s).level;s.playerXp=(s.playerXp??0)+(applyVip?vipYield(s,'xp',xp):xp);const after=playerProgress(s).level;for(const level of ORIGINAL_LEVELS.filter(level=>level.level>before&&level.level<=after)){const resource={c:'gems',g:'coins',f:'food'}[level.reward_type];if(resource)s[resource]=(s[resource]??0)+level.reward_amount}}
 export function action(state,type,payload={},now=Date.now(),random=Math.random) {
  const s=validate(state); now=Math.max(now,s.updatedAt); let message='';
  const gained=Math.floor((now-s.adventure.energyAt)/300000);if(gained>0){s.adventure.energy=Math.min(10,s.adventure.energy+gained);s.adventure.energyAt+=gained*300000;if(s.adventure.energy===10)s.adventure.energyAt=now;}
@@ -137,7 +138,10 @@ export function action(state,type,payload={},now=Date.now(),random=Math.random) 
  refreshEncounters(s,now);observeActivityDay(s,now);
  switch(type){
  case 'activityTrain':message=trainDragon(s,payload.id,payload.count??1,random,now);break;
- case 'activityGift':message=openActivityGift(s,payload.id);break;
+ case 'composeActivityFragment':message=composeActivityFragment(s,payload.id,payload.count??1);break;
+ case 'activateMissions':s.missions??=createMissions();message='原任务列表已开启。';break;
+ case 'dismissMission':{if(!s.missions?.notices.includes(payload.id))fail('没有待领取的任务奖励。');s.missions.notices=s.missions.notices.filter(id=>id!==payload.id);message='任务奖励已领取。';break;}
+ case 'activityGift':message=openActivityGift(s,payload.id,payload.count??1,random);break;
  case 'activityVisit':message='历史活动已开放。';break;
  case 'historyActivity':message=historyAction(s,payload,now,random);break;
  case 'singleRechargeClaim':message=claimSingleRecharge(s,payload.id);break;
@@ -233,5 +237,6 @@ export function action(state,type,payload={},now=Date.now(),random=Math.random) 
  if(type==='raffleDraw'&&['mid','senior'].includes(payload.mode))recordSpringTask(s,6,payload.count,now);
  if(type==='huntRune')recordSpringTask(s,7,1,now);
  if(type==='recharge')recordSpringTask(s,10,1,now);
+ updateMissions(s,state,type,payload,{awardXp:v=>awardPlayerXp(s,v,false),deliver:rewards=>activityDeliver(s,rewards)});
  s.updatedAt=now;s.log.unshift(message);s.log=s.log.slice(0,12);return validate(s);
 }

@@ -1,0 +1,31 @@
+{
+  "count": 147,
+  "rewardRows": 223,
+  "activeLimit": 10,
+  "kinds": [
+    "Breed",
+    "BuildId",
+    "BuyDragon",
+    "BuyResources",
+    "CollectGroup",
+    "CollectId",
+    "DragonAmount",
+    "Expand",
+    "ExpandIsland",
+    "HatchEgg",
+    "IslandComplete",
+    "LevelDragonUp",
+    "SelectTime",
+    "SpeedBreed",
+    "SpeedClear",
+    "SpeedHatchByElement",
+    "UpgradeId",
+    "WinPVEBattle"
+  ],
+  "sources": {
+    "work\\client-config\\dragon\\core\\dragonfarm\\GoalManager.lua": "921f59a49e6e4b01a6020cac7964a740327379b8fe0f3f1da80685cb6500cf3c",
+    "work\\client-config\\dragon\\config\\TranslationGoals.lua": "88d843d48b9a1e385985bc899541639bb7c22a77afe006a2a69e160d75fb6596",
+    "work\\config-json\\goals.json": "5a943f1c24d70a5333d733cf0d46ad0e56a611483d5c5a90ec8519a1be57c954"
+  },
+  "excluded": "Commented-out registrations are not enabled. Original tutorial-only goals absent from init are not fabricated."
+}

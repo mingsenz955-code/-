@@ -1,3 +1,6 @@
+import {missionById} from './missions.mjs';
+import {openMissions,openMissionReward} from './missions-dialog.mjs';
+import {activityFragment,activityItemDescription} from './historical-activities.mjs';
 import {showFarmOptions,clearBuildingOptions,openFarmSourceInfo} from './building-options.mjs';
 import {defaultRuneDragon} from './runes.mjs';
 import {resourceBarValues} from './resource-bar.mjs';
@@ -20,7 +23,7 @@ import {formationSwap} from './formation.mjs';
 import {runeSkill} from './runes.mjs';
 import {openCatalogDetail} from './catalog-detail.mjs';
 import {openEquipmentStar} from './equipment-star-dialog.mjs';
-import {openBattleRewards,openLootBoxDialog,openLootBoxResults,openNodeReward} from './loot-dialog.mjs';
+import {openGiftUseDialog,openBattleRewards,openLootBoxDialog,openLootBoxResults,openNodeReward} from './loot-dialog.mjs';
 import {equipmentFragment} from './loot.mjs';
 import {openEquipmentBag,confirmEquipmentDecompose} from './equip-bag-dialog.mjs';
 import {openGemExplore,openGemExploreResult} from './gem-explore-dialog.mjs';
@@ -48,7 +51,7 @@ import {dragonAcquisition,sourceDragonName} from './acquisition.mjs';
 import {EVOLUTION_TEXT} from '../assets/original/data/evolution.mjs';
 import {SPECIES,speciesKey} from './data.mjs';
 import {createGame,validate,action,income,farmInfo,playerProgress,isBreedingParent,incubatorSpeedCost,dragonSellGold} from './game.mjs';
-import {habitatInfo,habitatLimit,habitatPosition,snapHabitatPosition,canPlaceObject,FIXED_BUILDINGS,fixedBuildings} from './habitats.mjs';
+import {habitatDefinition,habitatInfo,habitatLimit,habitatPosition,snapHabitatPosition,canPlaceObject,FIXED_BUILDINGS,fixedBuildings} from './habitats.mjs';
 import {structureInfo,structurePosition,structureArt,farmWorldArt} from './structures.mjs';
 import {dragonArt,sceneArt,eggArt} from './art.mjs';
 import {storage} from './storage.mjs';
@@ -122,7 +125,10 @@ document.addEventListener('click',async e=>{
   if(type==='openFirstCharge'){await persist(action(state,'activityVisit'));render();await openHistoryActivity(state,'first');return}
   if(type==='historyResultClose'){closeHistoryResult();return}
   if(type==='historyRanks'){await openHistoryRanks(state,el.dataset.value);return}
-  if(type==='historyGift'){await persist(action(state,'activityGift',{id}));render();await openHistoryGiftResult(state);return}
+  if(type==='historyGift'){await openGiftUseDialog(state,id);return}
+  if(type==='giftUseCount'){const d=$('#modal');await openGiftUseDialog(state,Number(d.dataset.giftId),el.dataset.value==='max'?Number(d.dataset.giftMax):Number(d.dataset.giftCount)+Number(el.dataset.value));return}
+  if(type==='confirmGiftUse'){await persist(action(state,activityFragment(id)?'composeActivityFragment':'activityGift',{id,count:Number($('#modal').dataset.giftCount)}));render();await openHistoryGiftResult(state);return}
+  if(type==='warehouseItemInfo'){toast(activityItemDescription(id)||'原客户端未取得该道具的使用说明。');return}
   if(type==='historyTraining'){await openHistoryTraining(state);return}
   if(type==='historyPillShop'){await openResourceShop(state,{type:'i'});return}
   if(type==='historyTrain'){await persist(action(state,'activityTrain',{id,count:Number(el.dataset.count??1)}));render();await openHistoryTraining(state);toast(state.log[0]);return}
@@ -292,7 +298,10 @@ document.addEventListener('click',async e=>{
   if(type==='settings'){closeDialog();return await showSettings();}
   if(type==='showMore'){moreExpanded=!moreExpanded;closeDialog();tab='ranch';render();return}
   if(type==='unavailable'){toast('该功能尚未开放。');return}
-  if(type==='showTasks'){await openNativePaper('任务',`<p>${state.stats.harvests?'✓':'○'} 收获作物</p><p>${state.dragons.slice(0,2).every(x=>x.level>=4)?'✓':'○'} 将两只亲代喂养到Lv4</p><p>${state.stats.hatches?'✓':'○'} 繁殖并孵化幼龙</p>`);return}
+  if(type==='showTasks'){await persist(action(state,'activateMissions'));render();await openMissions(state);return}
+  if(type==='missionToggle'){const details=JSON.parse($('#modal').dataset.missionDetails??'[]'),scroll=$('#modal .mission-source-list')?.scrollTop??0;await openMissions(state,details.includes(id)?details.filter(v=>v!==id):[...details,id]);$('#modal .mission-source-list').scrollTop=scroll;return}
+  if(type==='dismissMission'){await persist(action(state,type,{id}));render();await openMissions(state);return}
+  if(type==='missionGoto'){const g=missionById(id);if(!g)return;const k=g.kind;closeDialog();if(['SelectTime','CollectGroup'].includes(k))await openFarmDialog(state);else if(['BuildId','UpgradeId'].includes(k)){if(g.args[0].some(id=>habitatDefinition(id)))await openHabitatShop(state);else await openOriginalShopCategory(state,'buildings');}else if(['Breed','SpeedBreed'].includes(k))await openBreed(state);else if(['BuyDragon'].includes(k))await openOriginalShopCategory(state,'eggs');else if(['HatchEgg','SpeedHatchByElement'].includes(k))await openIncubator(state);else if(['LevelDragonUp','DragonAmount'].includes(k))await openCollectionDialog(state,collectionFilter);else if(k==='WinPVEBattle')await openAdventureDialog(state,g.args[0]);else if(k==='BuyResources')await openResourceShop(state,{type:id===165?'g':'f'});else if(['Expand','ExpandIsland','IslandComplete'].includes(k))await openExpansionShop(state);else toast(g.text[3]??g.text[0]);tick();return}
   if(type==='battlePlanned'){toast('战斗尚未开放。');return}
   if(type==='openHabitats'){await openShop(state);return}
   if(type==='openIncubator'){await openIncubator(state);appendFixedMove(2);tick();return}
@@ -315,7 +324,7 @@ document.addEventListener('click',async e=>{
   if(type==='sellRaffleEgg'){const prize=[...state.raffle.pending,...(state.giftEggs??[])].find(p=>p.id===id),species=prize?speciesKey(prize.dragonId):null,sp=SPECIES[species];if(!prize||!confirm(`确定出售${sp?.name??'这枚'}龙蛋并获得 ${dragonSellGold(species)} 金币吗？`))return}
   if(type==='sellLotteryDragon'){const prize=state.lottery.pending.find(p=>p.id===id),species=prize?speciesKey(prize.itemId):null,sp=SPECIES[species];if(!prize||!confirm(`确定出售${sp?.name??'这只幼龙'}并获得 ${dragonSellGold(species)} 金币吗？`))return}
   if(type==='sellStructure'){const structure=state.structures.find(o=>o.id===id),info=structure&&structureInfo(structure);if(!info||!confirm(`确定出售${info.nameCN}吗？`))return}
-  if(type==='buyStructure')payload.itemId=id;const returnToCollection=$('#modal').dataset.returnToCollection==='true';const refreshDragon=['feed','feedAll'].includes(type)&&$('#modal').dataset.mode==='sourceDragon'?Number($('#modal').dataset.dragonId):null;const refreshRecharge=type==='recharge';const refreshExpansion=type==='expandIsland';const equipDragon=(type==='unwearEquipment'||type==='wearEquipment')?(Number($('#modal').dataset.dragonId)||Number(el.dataset.id)||selected):null;const next=action(state,type,payload);await persist(next);if(['plant','harvest'].includes(type)&&$('#modal').dataset.mode==='farm')closeDialog();const refreshFarm=['speedCrop','upgradeFarm','completeFarmUpgrade'].includes(type)&&['farm','farmSourceInfo'].includes($('#modal').dataset.mode);render();if(refreshFarm){closeDialog();await openFarmDialog(state,payload.farmId);tick();}if(refreshDragon)await openDragonDialog(state,refreshDragon,{returnToCollection});if(refreshLottery)await openLotteryDialog(state,lotteryMode);if(refreshWarehouse)await openWarehouse(state,warehouseGroup);if(refreshExpansion)await openExpansionShop(state);if(refreshRecharge)await openRechargeDialog(state);if(equipDragon){await openEquipDialog(state,equipDragon);if(type==='wearEquipment')void playEquipmentEffect($('#modal'),'effect_dress_equip',`[data-action=openEquipInfo][data-id="${payload.equipmentId}"]`).catch(console.error);}if(type==='buyShopEgg')await openOriginalShopCategory(state,'eggs');if(type==='build')beginObjectMove('habitat',state.habitats.at(-1).id);else if(type==='buyStructure')beginObjectMove('structure',state.structures.at(-1).id);else if(['collect','upgradeHabitat','completeHabitat'].includes(type)&&priorMode==='nativeHabitatInfo')await openHabitatInfo(state,priorHabitat);else if(['breed','takeEgg'].includes(type))await openBreed(state);else if(['incubate','speedIncubator'].includes(type))await openIncubator(state);else if(['hatch','sellIncubator'].includes(type))closeDialog();else if(type==='move')await openDragonDialog(state,payload.id);tick();toast(state.log[0]);
+  if(type==='buyStructure')payload.itemId=id;const returnToCollection=$('#modal').dataset.returnToCollection==='true';const refreshDragon=['feed','feedAll'].includes(type)&&$('#modal').dataset.mode==='sourceDragon'?Number($('#modal').dataset.dragonId):null;const refreshRecharge=type==='recharge';const refreshExpansion=type==='expandIsland';const equipDragon=(type==='unwearEquipment'||type==='wearEquipment')?(Number($('#modal').dataset.dragonId)||Number(el.dataset.id)||selected):null;const next=action(state,type,payload);await persist(next);if(['plant','harvest'].includes(type)&&$('#modal').dataset.mode==='farm')closeDialog();const refreshFarm=['speedCrop','upgradeFarm','completeFarmUpgrade'].includes(type)&&['farm','farmSourceInfo'].includes($('#modal').dataset.mode);render();if(refreshFarm){closeDialog();await openFarmDialog(state,payload.farmId);tick();}if(refreshDragon)await openDragonDialog(state,refreshDragon,{returnToCollection});if(refreshLottery)await openLotteryDialog(state,lotteryMode);if(refreshWarehouse)await openWarehouse(state,warehouseGroup);if(refreshExpansion)await openExpansionShop(state);if(refreshRecharge)await openRechargeDialog(state);if(equipDragon){await openEquipDialog(state,equipDragon);if(type==='wearEquipment')void playEquipmentEffect($('#modal'),'effect_dress_equip',`[data-action=openEquipInfo][data-id="${payload.equipmentId}"]`).catch(console.error);}if(type==='buyShopEgg')await openOriginalShopCategory(state,'eggs');if(type==='build')beginObjectMove('habitat',state.habitats.at(-1).id);else if(type==='buyStructure')beginObjectMove('structure',state.structures.at(-1).id);else if(['collect','upgradeHabitat','completeHabitat'].includes(type)&&priorMode==='nativeHabitatInfo')await openHabitatInfo(state,priorHabitat);else if(['breed','takeEgg'].includes(type))await openBreed(state);else if(['incubate','speedIncubator'].includes(type))await openIncubator(state);else if(['hatch','sellIncubator'].includes(type))closeDialog();else if(type==='move')await openDragonDialog(state,payload.id);tick();toast(state.log[0]);if(state.missions?.notices.length&&!$('#modal').open&&!drag)await openMissionReward(state);
  }catch(error){toast(error.message);if($('#save-status'))$('#save-status').textContent=saveStatus}
 });
 document.addEventListener('change',e=>{if(e.target.id==='preview-stage'){openDragonPreview(Number(e.target.dataset.id),Number(e.target.value));return}if(e.target.id==='preview-clip'){$('#modal canvas').dataset.clip=e.target.value;return}});

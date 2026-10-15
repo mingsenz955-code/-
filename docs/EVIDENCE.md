@@ -369,3 +369,8 @@
 - BuildingOptPanel.lua SHA256 fc5f0c7786fa53ecabc98312d8237a2e2d2a37d566ec39ae3714efa2cd186114；函数30 PC376—484为农场操作项，1036—1061对所有cp按间隔200×__scaleRatio居中排列，复用原cp_*静态布局/图标。
 - BuildingInfoPanel.lua函数4 PC145—171通过Literal.lang(buildingId)设置原描述并置顶；Literal.lua的FARM_1/2/3描述键在APK assets/res/config/textnew_cn.json取得原中文，未改写描述内容。
 - 使用原panel_building_info，不再往农场页面插入通用管理按钮。真实鼠标点原图标、种植/升级及重启验证通过；截图与尚未逐像素核验的区别保留。
+
+## v0.16.51 原任务与活动道具
+- 原任务源：GoalManager.init、Goal各子类、TranslationGoals、goals表、LibGoalsRewardInfo。147实际注册、10活跃限制均静态取得；原接口服务器状态由本地事务存档替代。详细出处/限制见MISSIONS.md与reference/missions-source.json。
+- 原列表奖励/说明是互斥状态：GoalListPanel函数3 PC209—244与nested1；UI复用对应原布局和两张查看字图，未将重叠排版留给用户。GoalAwardPanel的领取回调只关闭窗口，原checkComplete先发送completeGoal；本地奖励也一次入库、通知单独保存。
+- 原items第61列奖池串及randgive表235奖池导出116种可开启包，新增42随机包；30种碎片的成本来自APK原中文说明，目标ID优先原图名并校验为DRAGON。例如7042名称误为7042suipian，图名1093及中文开泰龙相符，取1093，不将道具ID当龙ID。SHA和解释见reference/item-use-source.json。

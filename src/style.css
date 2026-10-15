@@ -345,3 +345,13 @@ body:has(#modal[open].native-fullscreen){background:#09242e}
 
 .original-building-option .source-button:hover{transform:translate(-50%,-50%)}
 .native-ranch-dialog[data-mode="farmSourceInfo"] [data-source="neirong"]{align-items:flex-start;white-space:normal}
+
+.mission-source-list{position:absolute;width:850px;height:551px;transform:translate(-50%,-50%);overflow-y:auto;overflow-x:hidden;pointer-events:auto;scrollbar-color:#9c6b3b #dfc88b}
+.mission-source-row{position:relative;width:850px;height:169px;flex:none}
+.mission-source-row [data-source="tx_neirong"]{white-space:normal;align-items:flex-start}
+.mission-kind-icon{position:absolute;width:80px;height:80px;object-fit:contain;transform:translate(-50%,-50%);pointer-events:none}
+.mission-reward-icon{position:absolute;width:72px;height:72px;object-fit:contain;transform:translate(-50%,-50%);pointer-events:none}
+.native-ranch-dialog[data-mode="sourceMissionReward"] [data-source="tx_renwu_miaoshu"]{white-space:normal;align-items:flex-start}
+
+.mission-details-word{position:absolute;transform:translate(-50%,-50%);width:85px;height:auto;pointer-events:none}
+.mission-speaker{position:absolute;width:300px;height:250px;object-fit:fill;transform:translate(-50%,-50%);pointer-events:none}
