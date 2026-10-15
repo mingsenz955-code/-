@@ -41,6 +41,8 @@ app.on('second-instance',()=>{if(window){if(window.isMinimized())window.restore(
 if(locked)app.whenReady().then(async()=>{
  const {SaveStore}=await import('./save-store.mjs');const {validate}=await import('../src/game.mjs');
  const store=new SaveStore(path.join(app.getPath('userData'),'saves'));
+ if(process.argv.includes('--require-player-save')&&!smoke&&!verify&&!lotteryDemo){const current=await store.load();if(!current.state)throw Error('未找到已有正式存档，已阻止创建空白牧场。请检查启动路径。');}
+
  if(lotteryDemo&&!(await store.load()).state){const {createGame}=await import('../src/game.mjs');const demo=createGame();demo.gems=1000;demo.lottery.normalTokens=300;demo.lottery.advancedTokens=800;demo.log=['独立抽奖演示存档，测试资源仅供试玩，不影响正式牧场。'];await store.save(demo);}
  if(warehouseSmoke)await require('./smoke-warehouse.cjs').prepare(store);
  if(nativeRanchSmoke)await require('./smoke-native-ranch.cjs').prepare(store);
@@ -73,14 +75,16 @@ if(locked)app.whenReady().then(async()=>{
  ipcMain.handle('save:export',async(_e,s)=>{validate(s);const result=await dialog.showSaveDialog(window,{title:'导出牧场存档',defaultPath:'御龙高手存档.json',filters:[{name:'JSON 存档',extensions:['json']}]});if(result.canceled)return false;await fs.writeFile(result.filePath,JSON.stringify(s,null,2));return true});
  ipcMain.handle('save:import',async()=>{const result=await dialog.showOpenDialog(window,{title:'导入牧场存档',properties:['openFile'],filters:[{name:'JSON 存档',extensions:['json']}]});if(result.canceled)return null;const file=result.filePaths[0];if((await fs.stat(file)).size>2e6)throw new Error('存档文件过大。');return validate(JSON.parse(await fs.readFile(file,'utf8')))});
  const area=screen.getPrimaryDisplay().workAreaSize;
- window=new BrowserWindow({title:'御龙高手 · 云上牧场',width:Math.min(1440,area.width-24),height:Math.min(940,area.height-24),minWidth:Math.min(1000,area.width-24),minHeight:Math.min(650,area.height-24),backgroundColor:'#e7ecd7',autoHideMenuBar:true,show:!smoke&&!verify,webPreferences:{preload:path.join(__dirname,'preload.cjs'),contextIsolation:true,nodeIntegration:false,sandbox:true,backgroundThrottling:false,offscreen:smoke||verify}});
+ window=new BrowserWindow({title:`御龙高手 v${app.getVersion()} · ${lotteryDemo?'抽奖试玩':'正式牧场'}`,width:Math.min(1440,area.width-24),height:Math.min(940,area.height-24),minWidth:Math.min(1000,area.width-24),minHeight:Math.min(650,area.height-24),backgroundColor:'#e7ecd7',autoHideMenuBar:true,show:!smoke&&!verify,webPreferences:{preload:path.join(__dirname,'preload.cjs'),contextIsolation:true,nodeIntegration:false,sandbox:true,backgroundThrottling:false,offscreen:smoke||verify}});
  window.webContents.setWindowOpenHandler(()=>({action:'deny'}));window.webContents.on('will-navigate',e=>e.preventDefault());
  window.once('ready-to-show',()=>{if(!smoke&&!verify)window.show()});
  await window.loadFile(path.join(__dirname,'..','index.html'),lotterySmoke||lotteryVerify?{query:{legacyLottery:'1'}}:{});
+ window.setTitle(`御龙高手 v${app.getVersion()} · ${lotteryDemo?'抽奖试玩':'正式牧场'}`);
  if(process.argv.includes('--verify-live')){
   for(let i=0;i<60;i++){if(await window.webContents.executeJavaScript("!!document.querySelector('.original-hud')"))break;await new Promise(resolve=>setTimeout(resolve,100))}
   if(!await window.webContents.executeJavaScript("!!document.querySelector('.original-hud')"))throw new Error('Live game did not reach the ranch UI; existing save was not overwritten.');
   await new Promise(resolve=>setTimeout(resolve,700));const destination=path.join(__dirname,'..','work','live-preview.png');await fs.mkdir(path.dirname(destination),{recursive:true});await fs.writeFile(destination,(await window.webContents.capturePage()).toPNG());console.log('LIVE_PREVIEW_READY '+destination);
+  const loaded=await store.load(),s=loaded.state;await fs.writeFile(path.join(app.getPath('userData'),'last-launch.json'),JSON.stringify({version:app.getVersion(),executable:process.execPath,save:loaded.location,mode:lotteryDemo?'demo':'player',dragons:s?.dragons.length,habitats:s?.habitats.length,playerXp:s?.playerXp,coins:s?.coins,at:new Date().toISOString()},null,2));
  }
  if(process.argv.includes('--show-warehouse')&&!smoke&&!verify){
   await window.webContents.executeJavaScript("document.querySelector('[data-action=showMore]').click();true");await new Promise(r=>setTimeout(r,200));await window.webContents.executeJavaScript("document.querySelector('[data-action=openWarehouse]').click();true");await new Promise(r=>setTimeout(r,700));

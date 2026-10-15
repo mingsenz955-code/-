@@ -573,3 +573,11 @@
 - 用户要求继续补原战斗结算。已定位ui/battle/BattleField、Warrior、BattleUI与SkillNew/BuffNew、战报协议；现存game.battleResolve仍是战力阈值，动画仍预定胜负。Git 65d2a2f干净。
 - 当前账户5小时窗口98%、周45%，ordinaryUsageAllowed=true；按既有95%停止规则仅保存续接点，不在临界额度写入半成品结算。恢复后先静态核对战报驱动/技能表和调度，替换阈值并同步动画/结算、奖励与重启验证。
 
+
+## 最新检查点 — v0.16.29 exe启动与正式档核验（2026-10-15）
+- 用户报告启动exe像另一个版本且数据消失。只读取证确认根launcher真实选择v0.16.28，运行进程也是v28，源app.mjs和打包一致；正式档实际99级/13龙/11巢/19641235金币，五赠送远古均已孵化入住，非丢档。未将早期备份覆盖新进度，未确认用户当时空白画面的直接成因。
+- 找到并修正启动器备用源码入口工作目录为electron所在目录而非工程根的问题；追踪版scripts/launcher.cs现在使用完整根路径启动源码。根exe重新编译，数字版本排序不变，增加--inspect及work/launcher-target.txt，正式档存在时传--require-player-save防止因错误目录静默建空档。
+- 不同打包版本共享应用锁，旧可见实例会拦截新版本启动：启动器在同工程dist内正常CloseMainWindow并等待旧可见版本退出后启新版，同版本直接聚焦；不强杀、不动其它目录。实际从运行v28用根exe启动切换v29成功。
+- 主进程--verify-live写last-launch.json，明确exe、版本、正式/演示模式、档路径和龙/巢/金币。用户界面标题增加版本及正式/试玩模式。原正式userData固定APPDATA/YulongRanch，抽奖试玩独立目录不混合。
+- 修改前另备份ranch-v1-before-launch-fix-时间.json。真实根exe验收last-launch.json记录v0.16.29/player、正式路径、13龙/11巢；live-preview.png已查看显示99级完整牧场。启动前后正式档SHA256均5F2F852C2CDF0EFFC8A5EBF4BC63E1767B228A20F07DB12CE83162AA50C87259，证明本次没有重建/改写存档。133项既有测试通过。
+- 本轮是启动恢复修复，战斗结算接续待办未取消；原回合/技能/被动/伤害调度仍下一优先。
