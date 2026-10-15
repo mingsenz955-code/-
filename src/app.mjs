@@ -1,4 +1,4 @@
-import {worldEntries,openWorldBoss,openHolyTree,openTreeTargets,openWorldHelp} from './world-encounter-dialog.mjs';
+import {worldEntries,openWorldBoss,openHolyTree,openTreeTargets,openWorldHelp,openTreeSeeds} from './world-encounter-dialog.mjs';
 import {bossAttackPlan,treeOpponent,WORLD_SOURCE,bossInfo} from './world-encounters.mjs';
 import {configuredLineup,lineupPower} from './battle.mjs';
 import {ISLANDS,islandOf,unlockedIslands,WORLD_ISLANDS,WORLD_BOUNDS,nearestWorldIsland} from './islands.mjs';
@@ -96,14 +96,15 @@ document.addEventListener('click',async e=>{
   if(type==='openWorldBoss'){if(playerProgress(state).level<15){toast('15级开启远古首领。');return}await openWorldBoss(state);return}
   if(type==='openHolyTree'){if(playerProgress(state).level<10){toast('10级开启圣树抢夺战。');return}await openHolyTree(state);tick();return}
   if(type==='worldHelp'){await openWorldHelp(el.dataset.value);return}
+  if(type==='treeChooseSeed'){await openTreeSeeds(state,id);return}
   if(type==='treeTargets'){await openTreeTargets(state);return}
-  if(['treePlant','treeHarvest'].includes(type)){await persist(action(state,type,{id}));render();await openHolyTree(state);tick();toast(state.log[0]);return}
+  if(['treePlant','treeHarvest'].includes(type)){await persist(action(state,type,{id,slot:el.dataset.slot===undefined?undefined:Number(el.dataset.slot)}));render();await openHolyTree(state);tick();toast(state.log[0]);return}
   if(type==='bossChallenge'){const before=structuredClone(state),plan=bossAttackPlan(state);await persist(action(state,type));render();await openBattleDialog(before,{enemyGroup:[plan.enemy]});if(await playBossAnimation(before,plan)){await openWorldBoss(state);toast(state.log[0]);}return}
   if(type==='bossAttemptInfo'){const cost=[10,30,50,70,90][Math.min(state.encounters.boss.bought,4)];await openNativePaper('增加首领挑战次数',`<p>花费 ${cost} 魔晶增加1次挑战。</p>${nativeButton('确定','bossBuyAttempt')}`,'sourceBossAttempt');return}
   if(type==='bossBuyAttempt'){await persist(action(state,type));await openWorldBoss(state);toast(state.log[0]);return}
   if(type==='bossHistory'){const b=state.encounters.boss;await openNativePaper('首领战绩',`<p>累计伤害：${fmt(b.totalDamage)}</p><p>已击杀首领：${b.kills}</p>`,'sourceBossHistory');return}
   if(type==='bossAchievements'){await openNativePaper('首领成就',`<p>累计伤害：${fmt(state.encounters.boss.totalDamage)}</p><p>原成就阈值：100000、250000等；完整奖励类型与领取结算尚未核实。</p>`,'sourceBossAchievement');return}
-  if(type==='treePlunder'){const before=structuredClone(state),op=treeOpponent(state,id),won=lineupPower(configuredLineup(state),state)>=op.power;await persist(action(state,type,{id}));render();await openBattleDialog(before,{enemyGroup:[op.enemy]});if(await playBattleAnimation(before,null,{won,enemyGroup:[op.enemy]})){await openTreeTargets(state);toast(state.log[0]);}return}
+  if(type==='treePlunder'){const before=structuredClone(state),op=treeOpponent(state,id),won=lineupPower(configuredLineup(state),state)>=op.power;await persist(action(state,type,{id}));render();await openBattleDialog(before,{enemyGroup:op.enemies});if(await playBattleAnimation(before,null,{won,enemyGroup:op.enemies})){await openTreeTargets(state);toast(state.log[0]);}return}
   if(type==='openBloodFront'||type==='openArena'){await openNativePaper(type==='openArena'?'竞技之神':'血战前线','<p>原地图入口已恢复。此模式的离线挑战与奖励结算仍在开发，暂不伪造原服务器对手。</p>','sourceWorldModePending');return}
   if(type==='openRunes'||type==='openRuneHunt'){await openRuneHunt(state);return}
   if(type==='runeEquipment'){await openEquipDialog(state,selected);return}

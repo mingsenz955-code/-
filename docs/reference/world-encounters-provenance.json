@@ -3,6 +3,7 @@
   "source": [
     "MainScene:initIslands:positions and level gates",
     "LibHolyInfo:seed columns",
+    "seedrobot second column is a Dragon_computer_array_nine pack ID, not a single monster ID",
     "LibMonsterInfo static ctor:monster fields",
     "HolyTreePanelNew static:plant,plunder,manualharvest and NPC flag",
     "WorldBossMainPanel static:bossid,damage,totaldamage,battlecnt and attempt price ladder"

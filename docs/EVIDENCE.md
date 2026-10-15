@@ -285,3 +285,7 @@
 - MainScene.lua第192–235/302–375/602–618行确认圣树、血战、冒险、竞技、首领入口坐标、层次、等级与模块名；中央首领是额外功能岛，不是省略的一块普通放置板。
 - 原APK buildings/{bossdao_dao,bossdao_shitou,shengshu_eff,feiting,yandong_eff,jingjichang_eff}导出numeric骨骼/原纹理，manifest保留来源。原ui_world_boss、ui_holy_tree布局接实际点击。
 - world-encounters-provenance.json记录原种子/首领/NPC表与静态字段来源。work/worldboss-main-static.txt、holytree-main-static.txt记录只读反汇编。原源码label与条件有不同开放星期表述，因此本轮不猜精确服务器周历，单机常驻。
+
+## v0.16.39 修正圣树NPC原证据
+- seedrobot的第二列与Dragon_computer_array_nine的包ID关联：30001包为30001/30002/30003；30011包为30031/30032/30033；30024包为30070/30071/30072/30032。旧文档中把第二列当同号单怪的描述已被此证据推翻，现导出字段packId+groups+完整monster。
+- 原NPC包人数3/3/4已用于预览与实际战斗，属性仍按用户动态难度90/110/120整队缩放，不能称为原服务端属性。圣树控件因source-node继承pointer-events:none漏接，已真实鼠标复现并修正。
