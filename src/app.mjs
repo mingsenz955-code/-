@@ -4,7 +4,7 @@ import {activityFragment,activityItemDescription} from './historical-activities.
 import {showFarmOptions,clearBuildingOptions,openFarmSourceInfo} from './building-options.mjs';
 import {defaultRuneDragon} from './runes.mjs';
 import {resourceBarValues} from './resource-bar.mjs';
-import {closeHistoryResult,openHistoryGiftResult,openHistoryRanks,openHistoryTraining,openHistoryActivity,openHistoryHelp,openHistoryCatalogHelp,openHistoryInventory,playHistoryAnimation,openHistoryResult} from './history-activity-dialog.mjs';
+import {closeHistoryResult,openHistoryFamily,openHistoryGiftResult,openHistoryRanks,openHistoryTraining,openHistoryActivity,openHistoryHelp,openHistoryCatalogHelp,openHistoryInventory,playHistoryAnimation,openHistoryResult} from './history-activity-dialog.mjs';
 import {openActivities,openSingleRecharge,openSingleRechargeHelp} from './activity-dialog.mjs';
 import {openArena,openArenaExchange,openArenaRecords,openArenaRanks,openArenaHelp} from './arena-dialog.mjs';
 import {arenaPlan,refreshArena,vipInfo} from './arena.mjs';
@@ -100,6 +100,7 @@ function captureResourcePage(){const d=$('#modal');return {mode:d.dataset.mode,d
 async function returnResourcePage(){if(busy||!resourceReturnStack.length)return;const frame=resourceReturnStack.pop();busy=true;try{
  if(frame.mode==='sourceHistoryActivity')await openHistoryActivity(state,frame.dataset.activity);
  else if(frame.mode==='sourceHistoryHub')await openActivities(state,frame.dataset.historyFilter??'全部');
+ else if(frame.mode==='sourceHistoryFamily')await openHistoryFamily(state,frame.dataset.historyFamily);
  else if(frame.mode==='sourceHistoryTraining')await openHistoryTraining(state);
  else if(frame.mode==='sourceHistoryInventory')await openHistoryInventory(state);
  else if(frame.mode==='sourceHistoryRanks')await openHistoryRanks(state,frame.dataset.activity);
@@ -133,6 +134,7 @@ document.addEventListener('click',async e=>{
   if(type==='historyPillShop'){await openResourceShop(state,{type:'i'});return}
   if(type==='historyTrain'){await persist(action(state,'activityTrain',{id,count:Number(el.dataset.count??1)}));render();await openHistoryTraining(state);toast(state.log[0]);return}
   if(type==='historyFilter'){await openActivities(state,el.dataset.value);return}
+  if(type==='historyFamily'){await openHistoryFamily(state,el.dataset.value);return}
   if(type==='historyOpen'){if(!state.activities.history){await persist(action(state,'activityVisit'));render();}await openHistoryActivity(state,el.dataset.value);return}
   if(type==='historyHelp'){await openHistoryHelp(el.dataset.value);return}
   if(type==='historyCatalogHelp'){await openHistoryCatalogHelp();return}
@@ -345,4 +347,4 @@ document.querySelector('#modal').addEventListener('cancel',e=>{e.preventDefault(
 
 document.addEventListener('dblclick',e=>{if(e.target.closest('.scene')&&!e.target.closest('[data-action],.original-hud,.placement-controls')&&!$('#modal').open&&!drag){camera={zoom:1,x:0,y:0};applyCamera();}});
 
-document.addEventListener('input',e=>{if(e.target.id==='history-search'){const q=e.target.value.trim().toLowerCase();document.querySelectorAll('.history-activity-card').forEach(el=>el.hidden=!el.textContent.toLowerCase().includes(q));}});
+document.addEventListener('input',e=>{if(e.target.id==='history-search'){const q=e.target.value.trim().toLowerCase();document.querySelectorAll('.history-activity-card').forEach(el=>el.hidden=!(el.dataset.search??el.textContent).toLowerCase().includes(q));}});
