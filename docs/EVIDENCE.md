@@ -359,3 +359,8 @@
 ## v0.16.46 PR #2 集成验证
 - 接入作者静态活动/竞技/VIP导出与出处，保留docs/ACTIVITIES.md中的原表和离线模拟区别。现有world机器人packId必须经groups解析，原monsters字段已不适用；集成时修正竞技取怪映射，圣树3/3/4原整包不变。
 - 永久被动符文属性与新培养属性共同进入dragonAttributes，原getRunePower分工不变；新增叠加测试防止冲突解决时丢失被动。正式路径继续工程player-data，原字段迁移比对无变化。
+
+## v0.16.47 农场原流程
+- 原ui/PlantsPanel.lua明确普通cp范围1至(id-15)*3、LEGEND_FARM为10—12，所用COLLECT价格/时间/产量/经验与现ORIGINAL_CROPS对应；FarmDelegate.lua区分普通粮食和进化果实并含VIPfoodExtro/expExtro。
+- 原ui/SpeedUpPanel.lua的openFarm调用CostUtil.speedUpCost(time)，原dragon/utils/CostUtil.lua给出ceil((time/3600)^0.7*15)。加速使FarmDelegate:collectable(true)，收获另外执行；按此恢复离线扣费/成熟/收获。
+- 原FarmDelegate:setPlantStep(1/2/3)与现有world三态图一一对应，地图已接。完整功能建筑核对及剩余缺口见BUILDINGS.md。源版/正式包真实鼠标与重启通过，未操作正式存档作测试。
