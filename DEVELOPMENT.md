@@ -700,3 +700,4 @@
 - 合并审查修正测试选择器：动画检查原[data-action=openAdventure]命中屏幕外飞艇，新改.original-hud作用域后通过。延长世界整队动作等待且明确断言返回目标页，避免在NPC动画没播完时误以为通过。
 - 额外QA添加仅smoke可用--qa-reduced-motion，页面载入后CDP模拟reduce并重载验证真实媒体条件；最初在空renderer提前发Emulation命令会等待，已停止仅两个隔离测试进程、把QA步骤放到loadFile后。模拟reduce=true下实际8个龙模型帧持续变化，movein/呼吸/攻击/收招/受击/施法/死亡全部观察到；十连10个原奖品图像实际opacity>.99、naturalWidth>0、扣费一次、仓库10蛋通过。原圣树native托盘改动仍通过。
 - 截图battle-runtime-qa.png、equipment-enhance-v39-qa.png等已查看；打包v41，升级前备份正式玩家档，不注入测试资源。后续仍按证据补服务器技能战报与待核实界面，不能将本次合并称为全量一比一完成。
+- 正式合并/启动验收：GitHub PR #1已确认closed且merged=true，merge_commit_sha=7cd5129f27e958d7696d65cef41699cb0a21ef21。根exe正式v0.16.41/player已打开，桥接true、99级/12龙/12巢/金币19717504/魔晶25948/龙粮598368；本轮启动前后正式档SHA256均A25C31053CC3A4A1218836EDE011C6C24313767CA51E092A296D1B6876F4D263，无玩家进度覆盖。此前未找到PR的记录为当时查询结果，现已解决，无需用户再提供链接。
