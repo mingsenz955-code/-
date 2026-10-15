@@ -333,3 +333,7 @@
 ## v0.16.43 永久被动属性证据
 - docs/reference/dragon-attributes-disassembly.txt FUNCTION1 PC38–40筛type3被动，PC48–65按buff1ID/符文颜色等级算buffID，PC94–122以arg1=0/1/2/3/4把arg2加入攻/防/生命/暴击/免暴，之后加入baseAttribute。skill-descriptions.mjs原buff表10101000=攻击300、10101302=攻击1091，10401000=暴击750、10401301=暴击1519。
 - fuwen-skill-extension-disassembly.txt PC63–86仍证明攻击/特技加addPower，被动addPower=0且另有addPowerDisplay；被动收益来自实际属性，不能用显示评分再重复加一遍。当前修复与此分工一致。
+
+## v0.16.44 圣树目标栏与奖励
+- HolyTreePanelNew静态函数5引用layout.ui_holy_tree、layout.panel_holy_tree_mubiao与HolyTree_players；ui_holy_tree包含home/backToMyTree与mubiao入口。目标栏原背景684×220、huadong617.5×134，item_holy_tree_target_player包含原头像框/等级星/玩家名；本次用这些资源替换通用建筑详情纸框。战力/抢夺奖励/按钮在原目标栏内为离线适配排列，未逐像素证明其服务器列表内容。
+- world-encounters原seeds 1/2/33/34/35的propNum分别20000/10000/200/4/4，plantTime均28800；新增结算测试核验无倍率。用户最终要求原奖励，10倍设想未实施。

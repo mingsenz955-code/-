@@ -293,3 +293,19 @@ body:has(#modal[open].native-fullscreen){background:#09242e}
 /* Keep image scaling independent of its centering translation. */
 .gem-result-art{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
 .gem-result-art .gem-result-icon{position:static;transform:none;flex:none}
+
+/* HolyTree_players: original tree backdrop and compact native target tray. */
+.tree-target-picker{position:absolute;left:512px;top:555px;width:684px;height:220px;transform:translate(-50%,-50%);pointer-events:none}
+.tree-target-roster{position:absolute;left:-308.75px;top:-67px;width:617.5px;height:134px;display:flex;justify-content:space-around;pointer-events:auto}
+.tree-target-card{position:relative;width:190px;height:134px;flex:none}
+.tree-target-card .source-label[data-source=player_name]{top:4px!important;left:8px!important;width:80px!important;font-size:17px!important;text-align:center!important}
+.tree-target-card .source-label[data-source=txt_lv]{font-size:17px!important}
+.tree-target-portrait{position:absolute;width:52px;height:52px;transform:translate(-50%,-50%);object-fit:contain}
+.tree-target-power,.tree-target-reward{position:absolute;left:94px;top:13px;width:95px;font-size:15px;line-height:20px;color:#563c25}
+.tree-target-reward{top:41px}
+.tree-target-card .native-game-button{position:absolute;left:34px;top:93px;width:126px;min-width:126px;height:37px;padding:0;font-size:19px}
+
+.tree-target-avatar{position:absolute;left:4px;top:5px;width:80px;height:80px}
+.tree-target-name{position:absolute;left:0;top:76px;width:190px;text-align:center;font-size:16px;color:#563c25}
+.tree-target-reward{font-size:13px;line-height:17px;top:42px;overflow-wrap:anywhere}
+.tree-target-card .native-game-button{top:100px;height:31px}

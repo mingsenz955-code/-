@@ -11,3 +11,8 @@ test('adaptive reference excludes duplicate species and unavailable baby reserve
 
 test('tree NPC uses full original packs and aggregate adaptive battle strength',()=>{const s=rich(),ops=[1,2,3].map(id=>treeOpponent(s,id));assert.deepEqual(ops.map(o=>o.enemies.length),[3,3,4]);assert.deepEqual(ops[1].enemies.map(m=>m.id),[30031,30032,30033]);assert.deepEqual(ops[2].enemies.map(m=>m.id),[30070,30071,30072,30032]);for(const op of ops)assert.equal(op.power,Math.floor(op.enemies.reduce((sum,m)=>sum+m.attack+m.defend+m.life/3,0)));assert(ops[0].power<ops[1].power&&ops[1].power<ops[2].power);});
 test('selected fruit slot is honored and occupied or invalid slots cannot consume seeds',()=>{let s=rich();s=action(s,'treePlant',{id:1,slot:2},now);assert.equal(s.encounters.tree.plots[0],null);assert.equal(s.encounters.tree.plots[2].seedId,1);const before=structuredClone(s);assert.throws(()=>action(s,'treePlant',{id:2,slot:2},now),/果位/);assert.throws(()=>action(s,'treePlant',{id:2,slot:3},now),/果位/);assert.deepEqual(s,before);});
+
+test('all five current holy tree harvest rewards retain original amounts with no multiplier',()=>{
+ const expected=[[1,'coins',20000],[2,'food',10000],[33,'stone',200],[34,6015,4],[35,6016,4]];
+ for(const [id,key,amount] of expected){let s=rich();const read=x=>key==='stone'?x.equipmentMaterials.stone:typeof key==='number'?(x.items[key]??0):x[key];const before=read(s);s=action(s,'treePlant',{id},now);s=action(s,'treeHarvest',{id:0},now+28800000);assert.equal(read(s)-before,amount);}
+});
