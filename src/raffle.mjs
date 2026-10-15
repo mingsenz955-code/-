@@ -6,9 +6,11 @@ import {RAFFLE_PREVIEW_ROWS} from '../assets/original/data/raffle.mjs';
 // the three machines and their prices, the three ticket ids, the junior free single draw,
 // the 10-draw 必得紫/橙 counter on the middle and senior machines, and the on-screen rule
 // that a free single draw does not advance that counter. The pool itself is an explicit
-// offline inference over the client's own 53 preview entries and must never be presented
-// as the original probability.
-export const RAFFLE_POLICY='offline-raffle-preview-v1';
+// offline inference over the client's own 53 preview entries. v2 adds five ancient
+// species at the user's request; neither this pool nor its odds are server evidence.
+export const RAFFLE_POLICY='offline-raffle-ancient-v2';
+export const RAFFLE_POLICIES=[RAFFLE_POLICY,'offline-raffle-preview-v1'];
+export const ANCIENT_DRAGONS=Object.freeze([1200,1202,1203,1205,1206]);
 export const RAFFLE_CAPACITY=60;
 export const RAFFLE_GUARANTEE_DRAWS=10;
 const MACHINES=Object.freeze({
@@ -30,7 +32,7 @@ export function raffleMachine(key){return MACHINES[key]??null}
 export function rafflePool(key){
  const machine=MACHINES[key];
  if(!machine)throw new Error('扭蛋机档位无效。');
- return preview.filter(row=>machine.qualities.includes(row.quality));
+ return [...preview.filter(row=>machine.qualities.includes(row.quality)),...(key==='senior'?ANCIENT_DRAGONS.map((dragonId,i)=>({index:54+i,dragonId,quality:5})):[])];
 }
 
 export function raffleCost(raffle,key,count){
@@ -48,10 +50,18 @@ export function raffleCost(raffle,key,count){
  return {tickets,gems,total,ticketKey:String(machine.ticket),free};
 }
 
-export function sampleRaffle(key,random=Math.random,{guarantee=false}={}){
+export function sampleRaffle(key,random=Math.random,{guarantee=false,ancientGuarantee=false}={}){
  const machine=MACHINES[key];
  if(!machine)throw new Error('扭蛋机档位无效。');
  const unit=()=>{const value=random();if(!Number.isFinite(value)||value<0||value>=1)throw new Error('抽奖随机值无效。');return value};
+ // Explicit offline accessibility adjustment requested by the player. Sample
+ // buckets first so adding more species cannot dilute the ancient probability.
+ if(key==='senior'){
+  const roll=unit(),bucket=ancientGuarantee?'ancient':guarantee?(roll<.5?'ancient':'gold'):roll<.2?'ancient':roll<.3?'gold':roll<.55?'purple':'blue';
+  const pool=rafflePool(key).filter(row=>bucket==='ancient'?ANCIENT_DRAGONS.includes(row.dragonId):bucket==='gold'?row.quality===5&&!ANCIENT_DRAGONS.includes(row.dragonId):row.quality===(bucket==='purple'?4:3));
+  const picked=pool[Math.floor(unit()*pool.length)];
+  return {policy:RAFFLE_POLICY,machine:key,dragonId:picked.dragonId,quality:picked.quality,previewIndex:picked.index};
+ }
  let candidates=machine.guarantee===null?[]:rafflePool(key).filter(row=>row.quality===machine.guarantee);
  if(!guarantee||!candidates.length)candidates=rafflePool(key);
  if(!candidates.length)throw new Error('该扭蛋机的奖池未取得。');

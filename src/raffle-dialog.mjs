@@ -1,7 +1,7 @@
 import CATALOG from '../assets/original/catalog.mjs';
 import {RAFFLE_PREVIEW_ROWS} from '../assets/original/data/raffle.mjs';
 import {ORIGINAL_EGGS} from '../assets/original/data/eggs.mjs';
-import {RAFFLE_GUARANTEE_DRAWS,raffleCost} from './raffle.mjs';
+import {RAFFLE_GUARANTEE_DRAWS,raffleCost,rafflePool} from './raffle.mjs';
 import EFFECTS from '../assets/original/effects/index.mjs';
 import {renderSourceLayout} from './source-layout.mjs';
 import {waitForSourceMotion} from './source-motion.mjs';
@@ -29,6 +29,7 @@ export async function openRaffleDialog(state){
  for(const node of layout.children)if((node.name==='zhongji'&&(tickets[6048]??0)===0)||(node.name==='gaoji'&&(tickets[6049]??0)===0))for(const group of node.children??[])if(group.name==='money')for(const image of group.children??[])if(image.name?.startsWith('daijuan_'))image.img='#ui_lotterydragon_mojing.png';
  const scale=Math.min((innerWidth-20)/1024,(innerHeight-20)/770);dialog.style.setProperty('--source-scale',scale);
  dialog.innerHTML=`<div class="source-artboard">${renderSourceLayout(layout,{values,slots,actions,hidden:new Set(['txt1','zhongji/money/mojing_one','zhongji/money/mojing_ten','gaoji/money/mojing_one','gaoji/money/mojing_ten'])})}</div>`;dialog.showModal();
+ for(const button of dialog.querySelectorAll('[data-action=raffleDraw][data-value^="senior:"]'))button.title=`单机规则：远古龙基础概率20%，至多再抽${10-(state.raffle.ancientCounter??0)}次获得远古龙。原服务器概率未取得。`;
 }
 
 export async function playRaffleDraw(mode){
@@ -60,7 +61,8 @@ export async function openRafflePreview(){
  const dialog=document.querySelector('#modal');if(dialog.querySelector('.raffle-preview-layer'))return;
  previewPromise??=fetch('assets/original/layouts/panel_lottery_dragon_show.json').then(r=>r.json());itemPromise??=fetch('assets/original/layouts/item_lottery_dragon_show.json').then(r=>r.json());
  const [preview,item]=await Promise.all([previewPromise,itemPromise]),byId=new Map(CATALOG.map(d=>[d.id,d]));
- const cards=RAFFLE_PREVIEW_ROWS.map(([index,id,quality])=>{const dragon=byId.get(id),image=dragon?.images[1],color=['','#000','#00ff00','#00a8ff','#d33bff','#fead00'][quality];return `<div class="raffle-preview-card" data-raffle-preview-id="${id}" style="--prize-color:${color}">${renderSourceLayout(item,{values:{txt_name:dragon?.name??'原ID '+id},hidden:new Set(['add']),slots:{xiangkuang:`<img class="raffle-preview-frame" src="assets/original/ui/ui_daojukuang_DaoJuKuang${quality}.png" alt="">`,icon:image?`<img class="raffle-preview-icon" src="${escape(image)}" alt="${escape(dragon.name)}">`:'<span class="raffle-missing-icon">图像待补</span>'}})}</div>`}).join('');
+ const rows=[...RAFFLE_PREVIEW_ROWS,...rafflePool('senior').filter(r=>r.index>53).map(r=>[r.index,r.dragonId,r.quality])];
+ const cards=rows.map(([index,id,quality])=>{const dragon=byId.get(id),image=dragon?.images[1],color=['','#000','#00ff00','#00a8ff','#d33bff','#fead00'][quality];return `<div class="raffle-preview-card" data-raffle-preview-id="${id}" style="--prize-color:${color}">${renderSourceLayout(item,{values:{txt_name:dragon?.name??'原ID '+id},hidden:new Set(['add']),slots:{xiangkuang:`<img class="raffle-preview-frame" src="assets/original/ui/ui_daojukuang_DaoJuKuang${quality}.png" alt="">`,icon:image?`<img class="raffle-preview-icon" src="${escape(image)}" alt="${escape(dragon.name)}">`:'<span class="raffle-missing-icon">图像待补</span>'}})}</div>`}).join('');
  dialog.dataset.mode='sourceRafflePreview';dialog.querySelector('.source-artboard').insertAdjacentHTML('beforeend',`<div class="raffle-preview-shade"></div><div class="raffle-preview-layer">${renderSourceLayout(preview,{values:{txt_name:'奖品预览'},actions:{close:{type:'closeRafflePreview',label:'关闭奖品预览'}},slots:{huadong:`<div class="raffle-preview-list">${cards}</div>`}})}</div>`);
 }
 export function closeRafflePreview(){const dialog=document.querySelector('#modal');dialog.querySelector('.raffle-preview-shade')?.remove();dialog.querySelector('.raffle-preview-layer')?.remove();dialog.dataset.mode='sourceRaffle';}

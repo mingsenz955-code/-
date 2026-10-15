@@ -11,7 +11,8 @@ export const activityPropMeta=id=>SOURCE.items[id]??null;
 export const activityGiftPack=id=>ITEM_USE.packs[id]??SOURCE.fixedPacks[id]??null;
 export const activityItemDescription=id=>ITEM_USE.descriptions[id]??'';
 export const activityFragment=id=>ITEM_USE.fragments[id]??null;
-export function composeActivityFragment(s,id,count=1){const r=activityFragment(id);if(!r||!integer(count,1,99))throw Error('龙蛋碎片或数量无效。');activityPay(s,{type:4,itemId:id,amount:count*r.cost});const rewards=[{type:5,itemId:r.dragonId,amount:count}];activityDeliver(s,rewards);s.activities.history.last=rewards;s.activities.history.revision++;return `合成 ${count} 枚龙蛋，已进入仓库。`;}
+export const activityFragmentCount=(s,id)=>(s.items[id]??0)+(s.activities?.history?.inventory?.[`4:${id}`]??0);
+export function composeActivityFragment(s,id,count=1){const r=activityFragment(id);if(!r||!integer(count,1,99))throw Error('龙蛋碎片或数量无效。');const cost=count*r.cost;if(activityFragmentCount(s,id)<cost)throw Error(`碎片不足：合成需要${cost}片，当前${activityFragmentCount(s,id)}片。`);const fromItems=Math.min(s.items[id]??0,cost);s.items[id]=(s.items[id]??0)-fromItems;if(cost>fromItems)s.activities.history.inventory[`4:${id}`]-=cost-fromItems;const rewards=[{type:5,itemId:r.dragonId,amount:count}];activityDeliver(s,rewards);s.activities.history.last=rewards;s.activities.history.revision++;return `合成 ${count} 枚龙蛋，已进入仓库。`;}
 export const activityDefinition=key=>HISTORICAL_ACTIVITIES.find(d=>d.key===key);
 export const activityDay=now=>Math.floor((now+28800000)/86400000);
 const integer=(x,min=0,max=Number.MAX_SAFE_INTEGER)=>Number.isSafeInteger(x)&&x>=min&&x<=max;

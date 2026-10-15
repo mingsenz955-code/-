@@ -374,3 +374,8 @@
 - 原任务源：GoalManager.init、Goal各子类、TranslationGoals、goals表、LibGoalsRewardInfo。147实际注册、10活跃限制均静态取得；原接口服务器状态由本地事务存档替代。详细出处/限制见MISSIONS.md与reference/missions-source.json。
 - 原列表奖励/说明是互斥状态：GoalListPanel函数3 PC209—244与nested1；UI复用对应原布局和两张查看字图，未将重叠排版留给用户。GoalAwardPanel的领取回调只关闭窗口，原checkComplete先发送completeGoal；本地奖励也一次入库、通知单独保存。
 - 原items第61列奖池串及randgive表235奖池导出116种可开启包，新增42随机包；30种碎片的成本来自APK原中文说明，目标ID优先原图名并校验为DRAGON。例如7042名称误为7042suipian，图名1093及中文开泰龙相符，取1093，不将道具ID当龙ID。SHA和解释见reference/item-use-source.json。
+
+## v0.16.52 碎片与战斗修复证据
+- APK原items 7026 name=kuLouDragonSuiPian、img_name=1076_dragon_skeleton_0，textnew_cn中7026miaoshu明确10片骷髅龙，不能用数字suipian正则排除。7015对应1074冰月龙但description未翻译且未查到数量；其10片仅离线配方，reference/item-use-source.json单独列offlineFragmentCosts。
+- 原UsePropPanel明文按持有量选择数量，确定传回id/count；StorePanel静态反汇编显示兑换结果后initData/list.reset。原BattleField使用服务器battleData驱动Warrior/Bullet，未在本客户端取得服务器轮次算法；本轮修正的是本地动画错误，不把三轮表现称原计算规则。
+- 原RAFFLE_PREVIEW_ROWS没有远古1200/1202/1203/1205/1206。新增池/20%及10次保底是用户授权单机可玩性调整，原品种/形象沿用；策略v2与旧v1存档明确兼容，原服务器概率仍未核实。

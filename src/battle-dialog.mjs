@@ -3,6 +3,7 @@ import {waitForSourceMotion} from './source-motion.mjs';
 import {playSourceProjectile,playSourceHit} from './battle-effects.mjs';
 import {sourceAnimate} from './acquisition-animation.mjs';
 import {battlePositions} from './battle-positions.mjs';
+import {battleTurnPlan} from './battle-turns.mjs';
 import {formationPosition,formationDefinition} from './formation.mjs';
 import {runeSkill,runeOfDragon,runeDefinition} from './runes.mjs';
 import SKILL_ART from '../assets/original/data/battle-skill-art.mjs';
@@ -72,11 +73,14 @@ export async function playBattleAnimation(state,nodeId,result){
  };
  if(!(await Promise.all([...allies,...enemies].map(u=>motion(u.el,'movein',live)))).every(Boolean))return false;
  await wait(100);if(!live())return false;
- for(let turn=0;turn<losers.length*2&&live();turn++){
-  const finishing=turn%2===1,target=finishing?losers[Math.floor(turn/2)]:winners[turn%winners.length],attacker=finishing?winners[turn%winners.length]:losers[Math.floor(turn/2)];
-  const round=d.querySelector('[data-source="round/num"]');if(round)round.textContent=`${Math.floor(turn/6)+1}/${BATTLE_ROUND_LIMIT}`;
+ for(const turn of battleTurnPlan(winners.length,losers.length)){
+  if(!live())return false;
+  const {finishing}=turn,target=(turn.winning?losers:winners)[turn.target],attacker=(turn.winning?winners:losers)[turn.actor];
+  if(attacker.hp<=0||target.hp<=0)continue;
+  attacker.el.dataset.attacks=String(Number(attacker.el.dataset.attacks??0)+1);
+  const round=d.querySelector('[data-source="round/num"]');if(round)round.textContent=`${turn.round}/${BATTLE_ROUND_LIMIT}`;
   const {x,y:ay}=(attacker.side==='ally'?allyPositions:enemyPositions)[attacker.index],{x:targetX,y:ty}=(target.side==='ally'?allyPositions:enemyPositions)[target.index];
-  const magic=turn%3===2,slot=magic?2:1,rune=attacker.side==='ally'?runeOfDragon(state,attacker.item.id,slot):null,skill=runeSkill(attacker.item,runeDefinition(rune?.type),slot),common=SKILL_ART[skill?.kind],key=common?common.fireEff:`${magic?'magic':'attack'}_${SPECIES[attacker.item.species].originalId}`;
+  const magic=turn.round===2,slot=magic?2:1,rune=attacker.side==='ally'?runeOfDragon(state,attacker.item.id,slot):null,skill=runeSkill(attacker.item,runeDefinition(rune?.type),slot),common=SKILL_ART[skill?.kind],key=common?common.fireEff:`${magic?'magic':'attack'}_${SPECIES[attacker.item.species].originalId}`;
   if(magic)void skillName(layer,skill,common,formationDefinition(attacker.item)?.isLegend===1);
   const attackMotion=magic?'magic':formationPosition(target.item)===1?'airattack':'landattack';
   if(!await motion(attacker.el,attackMotion,live))return false;
@@ -89,6 +93,7 @@ export async function playBattleAnimation(state,nodeId,result){
   const hurt=finishing?Promise.resolve(true):motion(target.el,'hurt',live);
   const damage=finishing?Math.max(1,Math.floor((target.stats?.life??1)*target.hp/100)):Math.max(1,Math.floor((attacker.stats?.attack??1)*.4));
   await damageNumber(layer,damage,targetX,ty-75);setHp(target,finishing?0:Math.max(30,target.hp-10));
+  attacker.el.dataset.resolvedAttacks=String(Number(attacker.el.dataset.resolvedAttacks??0)+1);
   const results=await Promise.all([foreground,target.hp>0?hurt:Promise.resolve(true)]);if(!results.every(Boolean))return false;
  }
  await Promise.all(deaths);await wait(1000);return live();
