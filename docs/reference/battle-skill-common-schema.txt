@@ -1,0 +1,36 @@
+SHA256 6676cd61c3289138036988c0dfa64116dd6c9ce9c11f84fcf2d708bcfa06bbdd
+Static Lua 5.1 disassembly. PCs and nested function indexes are zero-based. No code executed.
+
+FUNCTION 0
+CONSTANTS ["id", 1, "name", 2, "type", 3, "icon", 4, "fireEff", 5, "hitEff", 6, "groundEff", 7, "fireSoundID", 8, "hitSoundID", 9, "buff1Eff", 10, "buff1HookType", 11, "buff2Eff", 12, "buff2HookType", 13, "desID", 14, "nameImg", 15]
+0000 GETTABLE r2 r1[1]
+0001 SETTABLE r0["id"] r2
+0002 GETTABLE r2 r1[2]
+0003 SETTABLE r0["name"] r2
+0004 GETTABLE r2 r1[3]
+0005 SETTABLE r0["type"] r2
+0006 GETTABLE r2 r1[4]
+0007 SETTABLE r0["icon"] r2
+0008 GETTABLE r2 r1[5]
+0009 SETTABLE r0["fireEff"] r2
+0010 GETTABLE r2 r1[6]
+0011 SETTABLE r0["hitEff"] r2
+0012 GETTABLE r2 r1[7]
+0013 SETTABLE r0["groundEff"] r2
+0014 GETTABLE r2 r1[8]
+0015 SETTABLE r0["fireSoundID"] r2
+0016 GETTABLE r2 r1[9]
+0017 SETTABLE r0["hitSoundID"] r2
+0018 GETTABLE r2 r1[10]
+0019 SETTABLE r0["buff1Eff"] r2
+0020 GETTABLE r2 r1[11]
+0021 SETTABLE r0["buff1HookType"] r2
+0022 GETTABLE r2 r1[12]
+0023 SETTABLE r0["buff2Eff"] r2
+0024 GETTABLE r2 r1[13]
+0025 SETTABLE r0["buff2HookType"] r2
+0026 GETTABLE r2 r1[14]
+0027 SETTABLE r0["desID"] r2
+0028 GETTABLE r2 r1[15]
+0029 SETTABLE r0["nameImg"] r2
+0030 RETURN A=0 B=1 C=0

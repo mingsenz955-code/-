@@ -1,3 +1,4 @@
+import {runeSkill} from './runes.mjs';
 import {openCatalogDetail} from './catalog-detail.mjs';
 import {openEquipmentStar} from './equipment-star-dialog.mjs';
 import {openBattleRewards,openLootBoxDialog,openLootBoxResults,openNodeReward} from './loot-dialog.mjs';
@@ -115,6 +116,7 @@ document.addEventListener('click',async e=>{
   if(type==='openEvolution'){await openEvolutionDialog(state,id,{returnToCollection:$('#modal').dataset.returnToCollection==='true'});return}
   if(type==='returnFromEvolution'){await openDragonDialog(state,id,{returnToCollection:$('#modal').dataset.returnToCollection==='true'});return}
   if(type==='evolutionHelp'){await openNativePaper('进化说明',`<p>${escape(EVOLUTION_TEXT['ev.evolution tip'])}</p>`);return}
+  if(type==='dragonSkillInfo'){const dragon=state.dragons.find(d=>d.id===id)??{id:0,species:speciesKey(Number($('#modal').dataset.catalogId)),level:1},slot=Number(el.dataset.value),skill=runeSkill(dragon,null,slot);if(skill)await openNativePaper(skill.name,`<p>${slot===1?'普通攻击':slot===2?'特技':'被动技能'}</p>${skill.damageVector>0?`<p>伤害系数：${skill.damageVector/100}%</p>`:''}${skill.damageValue>0?`<p>附加伤害：${skill.damageValue}</p>`:''}`);return}
   if(type==='catalogDetail'){await openCatalogDetail(state,id);return}
   if(type==='returnCatalog'){await openCatalog(state);return}
   if(type==='acquisition'){await showAcquisition(id);return}

@@ -258,3 +258,6 @@
 ## v0.16.28 图鉴数值与远古赠送
 - 数值来自已有dragonAttributes/dragonPower客户端成长、装备累计星级、宝石和符文战力；未拥有Lv1，已拥有当前最高等级。原PVEBattleResultPanel第71行仅isWin才开奖励面板，本轮未改胜负算法。
 - catalog中文name以远古开头的5种ID1200/1202/1203/1205/1206有证据，用户授权赠送每种1枚；独立giftEggs，记录防重，不纳入原版奖池证据。
+
+## v0.16.30 战斗阵位及技能表现
+- Warrior.positionType=info.position==0 land否则air，scaleInBattle直接传DragonDelegate；BattleUI根数字阵位与函数6/8、SkillNewCommonInfo构造字段反汇编已保留。技能字图/效果由源表独立导出，93字图在原UI目录存在。

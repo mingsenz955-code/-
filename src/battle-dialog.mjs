@@ -1,3 +1,7 @@
+import {battlePositions} from './battle-positions.mjs';
+import {formationPosition} from './formation.mjs';
+import {runeSkill,runeOfDragon,runeDefinition} from './runes.mjs';
+import SKILL_ART from '../assets/original/data/battle-skill-art.mjs';
 import {renderSourceLayout} from './source-layout.mjs';
 import {sourceLayout,showSource} from './ranch-dialogs.mjs';
 import {dragonArt} from './art.mjs';
@@ -8,9 +12,7 @@ import CATALOG from '../assets/original/catalog.mjs';
 import {BATTLE_SLOTS,BATTLE_ROUND_LIMIT,dragonAttributes,lineupPower,configuredLineup,battleRequirement,battleEnemyGroup} from './battle.mjs';
 const wait=ms=>new Promise(resolve=>setTimeout(resolve,ms));
 let activeRun=0;
-const origins=new Map(CATALOG.map(v=>[v.id,v.original]));
-function teamPositions(team){let sky=0,land=0;return team.map(item=>{const source=origins.get(SPECIES[item.species]?.originalId),flying=source?.flying_level>0&&item.level>=source.flying_level;const index=flying?sky++:land++;return [110+index*100,flying?220+(index%2)*20:390]})}
-function fighter(item,side,index,positions){const [x,y]=positions[index];return `<div class="battle-fighter ${side}" data-unit="${side}${index}" style="left:${side==='ally'?x:1024-x}px;top:${y}px">${dragonArt(item.species,'',item.level).replace('data-clip="breath"','data-clip="breathinbattle"')}<span class="battle-unit-hp"><i></i></span></div>`}
+function fighter(item,side,index,positions){const p=positions[index],art=dragonArt(item.species,'',item.level).replace('data-clip="breath"',`data-clip="breathinbattle" data-battle-scale="${p.scale}" data-native-size="true"`);return `<div class="battle-fighter ${side}" data-unit="${side}${index}" data-position="${p.type}" style="left:${p.x}px;top:${p.y}px;z-index:${Math.round(p.y)}">${art}<span class="battle-unit-hp"><i></i></span></div>`}
 export async function openBattleDialog(state,{nodeId=null}={}){
  const layout=await sourceLayout('ui_battlenormal');
  layout.height=576;
@@ -26,7 +28,7 @@ export async function openBattleDialog(state,{nodeId=null}={}){
  }
  values['round/num']=`1/${BATTLE_ROUND_LIMIT}`;values['skip/miaoshu']='退出';
  values.power_left=String(lineupPower(lineup,state));values.power_right=String(battleRequirement(nodeId)??'');
- const allyPositions=teamPositions(lineup),enemyPositions=teamPositions(enemies);
+ const allyPositions=battlePositions(lineup),enemyPositions=battlePositions(enemies,'enemy');
  const stage=`<div class="battle-stage" aria-label="自动战斗">${lineup.map((d,i)=>fighter(d,'ally',i,allyPositions)).join('')}${enemies.filter(d=>d.species).map((d,i)=>fighter(d,'enemy',i,enemyPositions)).join('')}<div class="battle-fx-layer"></div></div>`;
  const d=showSource('sourceBattle',renderSourceLayout(layout,{values,slots,hidden,actions:{'skip/btn':{type:'close',label:'退出战斗'}}})+stage,'source-battle-dialog');
  d.style.setProperty('--source-scale',Math.min((innerWidth-20)/1024,(innerHeight-20)/576));
@@ -44,20 +46,21 @@ export async function playBattleAnimation(state,nodeId,result){
  const live=()=>d.open&&d.dataset.mode==='sourceBattle'&&d.dataset.battleRun===run;
  const make=(item,side,index)=>({item,side,index,el:d.querySelector(`[data-unit="${side}${index}"]`),stats:side==='ally'?dragonAttributes(item,state):{attack:item.attack,defend:item.defend,life:item.life},hp:100});
  const allies=configuredLineup(state).map((v,i)=>make(v,'ally',i)),enemies=battleEnemyGroup(nodeId).monsters.filter(v=>v.species).map((v,i)=>make(v,'enemy',i));
- const allyPositions=teamPositions(allies.map(v=>v.item)),enemyPositions=teamPositions(enemies.map(v=>v.item));
+ const allyPositions=battlePositions(allies.map(v=>v.item)),enemyPositions=battlePositions(enemies.map(v=>v.item),'enemy');
  const winners=result.won?allies:enemies,losers=result.won?enemies:allies;
  const setHp=(u,hp)=>{u.hp=hp;u.el.style.setProperty('--hp',`${hp}%`);const key=`${u.side==='ally'?'left':'right'}${u.index+1}/hp`,bar=d.querySelector(`[data-source="${key}"]`);if(bar)bar.style.clipPath=`inset(0 ${100-hp}% 0 0)`;if(hp<=0){clip(u.el,'dead');u.el.classList.add('is-dead');d.querySelector(`[data-portrait="${u.side}${u.index}"]`)?.classList.add('is-dead')}};
  await wait(600);
  for(let turn=0;turn<losers.length*2&&live();turn++){
   const finishing=turn%2===1,target=finishing?losers[Math.floor(turn/2)]:winners[turn%winners.length],attacker=finishing?winners[turn%winners.length]:losers[Math.floor(turn/2)];
   const round=d.querySelector('[data-source="round/num"]');if(round)round.textContent=`${Math.floor(turn/6)+1}/${BATTLE_ROUND_LIMIT}`;
-  const [ax,ay]=(attacker.side==='ally'?allyPositions:enemyPositions)[attacker.index],[tx,ty]=(target.side==='ally'?allyPositions:enemyPositions)[target.index],x=attacker.side==='ally'?ax:1024-ax,targetX=target.side==='ally'?tx:1024-tx;
-  const magic=turn%3===2,key=`${magic?'magic':'attack'}_${SPECIES[attacker.item.species].originalId}`;
-  clip(attacker.el,magic?'magic':'landattack');attacker.el.classList.add('is-attacking');
+  const {x,y:ay}=(attacker.side==='ally'?allyPositions:enemyPositions)[attacker.index],{x:targetX,y:ty}=(target.side==='ally'?allyPositions:enemyPositions)[target.index];
+  const magic=turn%3===2,slot=magic?2:1,rune=attacker.side==='ally'?runeOfDragon(state,attacker.item.id,slot):null,skill=runeSkill(attacker.item,runeDefinition(rune?.type),slot),common=SKILL_ART[skill?.kind],key=common?common.fireEff:`${magic?'magic':'attack'}_${SPECIES[attacker.item.species].originalId}`;
+  if(magic&&common?.nameImage){const name=document.createElement('div');name.className='battle-skill-name';name.innerHTML=`<img src="assets/original/ui/${common.nameImage}" alt="${skill.name}">`;layer.append(name);setTimeout(()=>name.remove(),1600)}
+  clip(attacker.el,magic?'magic':formationPosition(target.item)===1?'airattack':'landattack');attacker.el.classList.add('is-attacking');
   const missile=effect(layer,key,'bullistic',x,ay,attacker.side==='enemy');
   if(missile)missile.animate([{left:`${x}px`,top:`${ay}px`},{left:`${targetX}px`,top:`${ty}px`}],{duration:550,fill:'forwards'});
   await wait(550);if(!live()){missile?.remove();return false}missile?.remove();
-  const explosion=EFFECTS[key]?.clips.find(v=>v.startsWith('bomb'));const blast=explosion?effect(layer,key,explosion,targetX,ty):null;
+  const hitKey=common?.hitEff||key,explosion=EFFECTS[hitKey]?.clips.find(v=>v.startsWith('bomb'));const blast=explosion?effect(layer,hitKey,explosion,targetX,ty-45):null;
   clip(target.el,'hurt');target.el.classList.add('is-hit');
   const damage=finishing?Math.max(1,Math.floor((target.stats?.life??1)*target.hp/100)):Math.max(1,Math.floor((attacker.stats?.attack??1)*.4));
   await damageNumber(layer,damage,targetX,ty-75);setHp(target,finishing?0:Math.max(30,target.hp-10));

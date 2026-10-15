@@ -581,3 +581,11 @@
 - 主进程--verify-live写last-launch.json，明确exe、版本、正式/演示模式、档路径和龙/巢/金币。用户界面标题增加版本及正式/试玩模式。原正式userData固定APPDATA/YulongRanch，抽奖试玩独立目录不混合。
 - 修改前另备份ranch-v1-before-launch-fix-时间.json。真实根exe验收last-launch.json记录v0.16.29/player、正式路径、13龙/11巢；live-preview.png已查看显示99级完整牧场。启动前后正式档SHA256均5F2F852C2CDF0EFFC8A5EBF4BC63E1767B228A20F07DB12CE83162AA50C87259，证明本次没有重建/改写存档。133项既有测试通过。
 - 本轮是启动恢复修复，战斗结算接续待办未取消；原回合/技能/被动/伤害调度仍下一优先。
+
+## 最新检查点 — v0.16.30 战斗阵位与源技能展示（2026-10-15）
+- 用户实机截图指出全龙浮空和没有技能。查明battle teamPositions误用原牧场flying_level/等级，而Warrior明确用dragonExtend.position；三眼魔龙1200是position0地面，高能/大圣/大黄蜂/火凤凰为1飞行。修复战斗判定与布阵同源，不修改玩家阵容或龙属性。
+- 静态取得BattleUI根左右三类land/sky阵位表：默认3地3空、4地2空、2地4空及独立左右站台；证据reference/battle-position-tables.txt、battle-positions.txt。不再简单每龙x+100横排导致双方重叠。地面按原站台脚底锚点，模型使用Warrior的scaleInBattle及原骨骼原点，取消所有龙归一化170px居中。576高PC视口暂将空地纵差乘.62，仍需原768视口/真实视频对照，不称完整坐标一比一；个别巨大翼展边缘裁切仍待核验。
+- 源SkillNewCommonInfo列5/6/7/15确认fireEff/hitEff/groundEff/nameImg，export-battle-skill-art.py导出原93项特技字图及效果索引。战斗普攻按目标position选airattack/landattack，特技用magic和本龙技能表对应字图/发射/命中；源fireEff为空时不伪造飞弹。龙喂养与图鉴四技能槽显示源名称/图标，点击可查看类型与已知基础系数，不再全空。
+- 仍未改game.battleResolve战力阈值，动画当前预定胜负/每三次攻击一次特技并非原服务器调度，被动buff/多目标/持续伤害/真实伤害/星级判定未接。技能表现与技能结算明确分开，不把可见字图说成原技能已完整生效。
+- 136项Node测试通过；混合六龙Electron实际2地4空、技能四槽、字图加载/显示、退出战斗不结算通过。旧冒险完整胜利→奖励→保存与取消回归通过。截图battle-six-source-positions-qa.png、battle-skill-title-qa.png、dragon-skills-qa.png已查看。
+- v0.16.30打包由修复后的根exe启动新版，继续使用正式99级13龙存档，不重建/回滚。下一优先仍真实回合报告驱动动画和结算、符文被动及原图鉴技能说明。

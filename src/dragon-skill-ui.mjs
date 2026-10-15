@@ -1,0 +1,2 @@
+import {runeSkill,runeOfDragon,runeDefinition} from './runes.mjs';
+export function dragonSkillSlots(state,dragon){const slots={};for(let i=1;i<=4;i++){const item=runeOfDragon(state,dragon.id,i),skill=runeSkill(dragon,runeDefinition(item?.type),i);slots['skill'+i+'/icon']=skill?`<button class="source-dragon-skill" data-action="dragonSkillInfo" data-id="${dragon.id}" data-value="${i}" aria-label="${skill.name}"><img src="assets/original/ui/skillicon_${skill.icon}.png" alt="${skill.name}"><span>${skill.name}</span></button>`:''}return slots}
