@@ -1,3 +1,4 @@
+import {openHistoryGiftResult,openHistoryRanks,openHistoryTraining,openHistoryActivity,openHistoryHelp,openHistoryCatalogHelp,openHistoryInventory,playHistoryAnimation,openHistoryResult} from './history-activity-dialog.mjs';
 import {openActivities,openSingleRecharge,openSingleRechargeHelp} from './activity-dialog.mjs';
 import {openArena,openArenaExchange,openArenaRecords,openArenaRanks,openArenaHelp} from './arena-dialog.mjs';
 import {arenaPlan,refreshArena,vipInfo} from './arena.mjs';
@@ -99,7 +100,19 @@ document.addEventListener('click',async e=>{
  if(el.dataset.tab){closeDialog();if(el.dataset.tab==='habitats')await openHabitatShop(state);else if(el.dataset.tab==='breeding')await openBreed(state);else if(el.dataset.tab==='dragons')await openCollectionDialog(state,collectionFilter);else render();return}
  let type=el.dataset.action;const id=Number(el.dataset.id);
  try{
-  if(type==='openActivities'){await openActivities();return}
+  if(type==='openActivities'||type==='openWelfare'||type==='openMonopolyActivities'){await persist(action(state,'activityVisit'));render();await openActivities(state,type==='openWelfare'?'福利':type==='openMonopolyActivities'?'大富翁':'全部');return}
+  if(type==='openFirstCharge'){await persist(action(state,'activityVisit'));render();await openHistoryActivity(state,'first');return}
+  if(type==='historyRanks'){await openHistoryRanks(state,el.dataset.value);return}
+  if(type==='historyGift'){await persist(action(state,'activityGift',{id}));render();await openHistoryGiftResult(state);return}
+  if(type==='historyTraining'){await openHistoryTraining(state);return}
+  if(type==='historyPillShop'){await openResourceShop(state,{type:'i'});return}
+  if(type==='historyTrain'){await persist(action(state,'activityTrain',{id,count:Number(el.dataset.count??1)}));render();await openHistoryTraining(state);toast(state.log[0]);return}
+  if(type==='historyFilter'){await openActivities(state,el.dataset.value);return}
+  if(type==='historyOpen'){if(!state.activities.history){await persist(action(state,'activityVisit'));render();}await openHistoryActivity(state,el.dataset.value);return}
+  if(type==='historyHelp'){await openHistoryHelp(el.dataset.value);return}
+  if(type==='historyCatalogHelp'){await openHistoryCatalogHelp();return}
+  if(type==='historyInventory'){await openHistoryInventory(state);return}
+  if(type==='historyAct'){const key=el.dataset.value,old=state.activities.history.boards[key]?.position??0;await persist(action(state,'historyActivity',{key,id,token:el.dataset.token,count:Number(el.dataset.count??1),op:el.dataset.op,code:document.querySelector('#history-code')?.value}));render();const dialog=await openHistoryActivity(state,key);if(state.activities.history.last.length&&await playHistoryAnimation(dialog,state,key,old))await openHistoryResult(state,key);toast(state.log[0]);return}
   if(type==='openSingleRecharge'){await openSingleRecharge(state);return}
   if(type==='singleRechargeHelp'){await openSingleRechargeHelp();return}
   if(type==='singleRechargeClaim'){await persist(action(state,type,{id}));render();await openSingleRecharge(state);toast(state.log[0]);return}
@@ -299,3 +312,5 @@ document.addEventListener('wheel',e=>{if(e.target.closest('.scene')&&!document.q
 document.querySelector('#modal').addEventListener('cancel',e=>{e.preventDefault();if($('#modal').dataset.mode==='sourceRafflePreview')closeRafflePreview();else closeDialog()});
 
 document.addEventListener('dblclick',e=>{if(e.target.closest('.scene')&&!e.target.closest('[data-action],.original-hud,.placement-controls')&&!$('#modal').open&&!drag){camera={zoom:1,x:0,y:0};applyCamera();}});
+
+document.addEventListener('input',e=>{if(e.target.id==='history-search'){const q=e.target.value.trim().toLowerCase();document.querySelectorAll('.history-activity-card').forEach(el=>el.hidden=!el.textContent.toLowerCase().includes(q));}});

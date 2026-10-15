@@ -1,0 +1,3840 @@
+{
+  "baseline": "2.9.35-202402271124",
+  "tablesSha256": "1408d684c2a6530668a8ed4816ad1697d579077fed5d02b887d06f035395e750",
+  "activityCount": 76,
+  "rewardRows": 1434,
+  "scope": "活动资料来自该APK，不能证明涵盖所有历史发布版本。",
+  "activities": [
+    {
+      "key": "first",
+      "title": "首充礼包",
+      "kind": "first",
+      "table": "shouchong",
+      "group": "福利"
+    },
+    {
+      "key": "newcomer",
+      "title": "新手礼包",
+      "kind": "purchase",
+      "table": "xinshoulibao",
+      "group": "福利"
+    },
+    {
+      "key": "growth",
+      "title": "成长计划",
+      "kind": "growth",
+      "table": "growth_plan",
+      "unlockCost": 488,
+      "group": "福利"
+    },
+    {
+      "key": "monthly-sign",
+      "title": "每月签到",
+      "kind": "sign",
+      "table": "qiandao_meiyue",
+      "group": "福利"
+    },
+    {
+      "key": "legacy-sign",
+      "title": "十五日签到",
+      "kind": "login",
+      "table": "qiandao",
+      "group": "福利"
+    },
+    {
+      "key": "seven-login",
+      "title": "七日福利·登录",
+      "kind": "login",
+      "table": "7dayfuli_denglu",
+      "group": "七日"
+    },
+    {
+      "key": "seven-tasks",
+      "title": "七日福利·任务",
+      "kind": "sevenTask",
+      "table": "7dayfuli_renwu",
+      "group": "七日"
+    },
+    {
+      "key": "seven-shop",
+      "title": "七日福利·半价购",
+      "kind": "purchase",
+      "table": "7dayfuli_shangpin",
+      "group": "七日"
+    },
+    {
+      "key": "seven-recharge",
+      "title": "七日充值",
+      "kind": "rechargeDays",
+      "table": "7daybuy",
+      "group": "七日"
+    },
+    {
+      "key": "five-recharge",
+      "title": "五日充值送豪礼",
+      "kind": "rechargeDays",
+      "table": "5daybuy",
+      "group": "七日"
+    },
+    {
+      "key": "spend",
+      "title": "消费返利",
+      "kind": "spent",
+      "table": "xiaofeifanli",
+      "group": "返利"
+    },
+    {
+      "key": "recharge-rebate",
+      "title": "充值返利",
+      "kind": "paid",
+      "table": "chongzhifanli",
+      "group": "返利"
+    },
+    {
+      "key": "monopoly-rebate",
+      "title": "大富翁充值返利",
+      "kind": "paid",
+      "table": "dafuwengfanli",
+      "group": "返利"
+    },
+    {
+      "key": "limited-spend",
+      "title": "限时消费",
+      "kind": "spent",
+      "table": "xiaofeifanli2",
+      "group": "返利"
+    },
+    {
+      "key": "tycoon-1",
+      "title": "土豪节·第1期",
+      "kind": "paid",
+      "table": "tuhao_1",
+      "group": "返利"
+    },
+    {
+      "key": "tycoon-2",
+      "title": "土豪节·第2期",
+      "kind": "paid",
+      "table": "tuhao_2",
+      "group": "返利"
+    },
+    {
+      "key": "tycoon-3",
+      "title": "土豪节·第3期",
+      "kind": "paid",
+      "table": "tuhao_3",
+      "group": "返利"
+    },
+    {
+      "key": "tycoon-4",
+      "title": "土豪节·第4期",
+      "kind": "paid",
+      "table": "tuhao_4",
+      "group": "返利"
+    },
+    {
+      "key": "gem-deals",
+      "title": "宝石特惠",
+      "kind": "purchase",
+      "table": "baoshitehui",
+      "group": "特惠"
+    },
+    {
+      "key": "enhance-sale-1",
+      "title": "强化石特惠",
+      "kind": "purchase",
+      "table": "qianghuatehui",
+      "group": "特惠"
+    },
+    {
+      "key": "enhance-sale-2",
+      "title": "羽翼特惠",
+      "kind": "purchase",
+      "table": "qianghuatehui",
+      "group": "特惠"
+    },
+    {
+      "key": "enhance-sale-3",
+      "title": "水晶特惠",
+      "kind": "purchase",
+      "table": "qianghuatehui",
+      "group": "特惠"
+    },
+    {
+      "key": "orange-sale",
+      "title": "双十二·抢购橙装",
+      "kind": "purchase",
+      "table": "qianggouchengzhuang",
+      "group": "节日"
+    },
+    {
+      "key": "recharge-store",
+      "title": "充值限购",
+      "kind": "rechargeShop",
+      "table": "chongzhixiangou",
+      "group": "特惠"
+    },
+    {
+      "key": "recharge-points",
+      "title": "充值积分兑换",
+      "kind": "pointShop",
+      "table": "chongzhijifen",
+      "group": "兑换"
+    },
+    {
+      "key": "dragon-exchange",
+      "title": "神龙碎片兑换",
+      "kind": "exchange",
+      "table": "duihuan",
+      "group": "兑换"
+    },
+    {
+      "key": "rose-date",
+      "title": "七夕·玫瑰之约",
+      "kind": "exchange",
+      "table": "love_duihuan",
+      "group": "节日"
+    },
+    {
+      "key": "chest-exchange",
+      "title": "宝箱积分兑换",
+      "kind": "chestShop",
+      "table": "baoxiang_duihuan",
+      "group": "兑换"
+    },
+    {
+      "key": "train-points",
+      "title": "培养回馈·积分兑换",
+      "kind": "trainShop",
+      "table": "peiyangjifenduihuan",
+      "group": "培养"
+    },
+    {
+      "key": "training-rank",
+      "title": "培养回馈·排名奖励",
+      "kind": "trainingRank",
+      "table": "peiyangpaihangjiangli",
+      "group": "培养",
+      "odds": "原排名奖励目录；本地单人榜，至少完成一次培养可领取一次第一名奖励。没有原在线排行与结算日期，常驻领取属于本地适配。"
+    },
+    {
+      "key": "training-missions",
+      "title": "培养回馈·任务",
+      "kind": "trainingMission",
+      "table": "peiyangrenwu",
+      "group": "培养",
+      "odds": "培养丹消耗、完美/失败次数及属性增量由本地培养记录。任务8～14采用累计属性增量，属于离线条件。"
+    },
+    {
+      "key": "train-tasks",
+      "title": "培养送豪礼",
+      "kind": "trainTask",
+      "table": "peiyangduihuan",
+      "group": "培养"
+    },
+    {
+      "key": "egg-event-1",
+      "title": "龙蛋培育·第1期",
+      "kind": "eggEvent",
+      "table": "longdan_jiangli",
+      "group": "收集",
+      "odds": "按本版本起实际完成的培育龙蛋记录计入各期；不同历史期同步开放并累计，属于本地常驻适配。"
+    },
+    {
+      "key": "egg-event-2",
+      "title": "龙蛋培育·第2期",
+      "kind": "eggEvent",
+      "table": "longdan_jiangli",
+      "group": "收集",
+      "odds": "按本版本起实际完成的培育龙蛋记录计入各期；不同历史期同步开放并累计，属于本地常驻适配。"
+    },
+    {
+      "key": "egg-event-3",
+      "title": "龙蛋培育·第3期",
+      "kind": "eggEvent",
+      "table": "longdan_jiangli",
+      "group": "收集",
+      "odds": "按本版本起实际完成的培育龙蛋记录计入各期；不同历史期同步开放并累计，属于本地常驻适配。"
+    },
+    {
+      "key": "egg-event-4",
+      "title": "龙蛋培育·第4期",
+      "kind": "eggEvent",
+      "table": "longdan_jiangli",
+      "group": "收集",
+      "odds": "按本版本起实际完成的培育龙蛋记录计入各期；不同历史期同步开放并累计，属于本地常驻适配。"
+    },
+    {
+      "key": "egg-event-5",
+      "title": "龙蛋培育·第5期",
+      "kind": "eggEvent",
+      "table": "longdan_jiangli",
+      "group": "收集",
+      "odds": "按本版本起实际完成的培育龙蛋记录计入各期；不同历史期同步开放并累计，属于本地常驻适配。"
+    },
+    {
+      "key": "egg-event-6",
+      "title": "龙蛋培育·第6期",
+      "kind": "eggEvent",
+      "table": "longdan_jiangli",
+      "group": "收集",
+      "odds": "按本版本起实际完成的培育龙蛋记录计入各期；不同历史期同步开放并累计，属于本地常驻适配。"
+    },
+    {
+      "key": "egg-event-7",
+      "title": "龙蛋培育·第7期",
+      "kind": "eggEvent",
+      "table": "longdan_jiangli",
+      "group": "收集",
+      "odds": "按本版本起实际完成的培育龙蛋记录计入各期；不同历史期同步开放并累计，属于本地常驻适配。"
+    },
+    {
+      "key": "egg-event-8",
+      "title": "龙蛋培育·第8期",
+      "kind": "eggEvent",
+      "table": "longdan_jiangli",
+      "group": "收集",
+      "odds": "按本版本起实际完成的培育龙蛋记录计入各期；不同历史期同步开放并累计，属于本地常驻适配。"
+    },
+    {
+      "key": "egg-event-9",
+      "title": "龙蛋培育·第9期",
+      "kind": "eggEvent",
+      "table": "longdan_jiangli",
+      "group": "收集",
+      "odds": "按本版本起实际完成的培育龙蛋记录计入各期；不同历史期同步开放并累计，属于本地常驻适配。"
+    },
+    {
+      "key": "egg-event-10",
+      "title": "龙蛋培育·第10期",
+      "kind": "eggEvent",
+      "table": "longdan_jiangli",
+      "group": "收集",
+      "odds": "按本版本起实际完成的培育龙蛋记录计入各期；不同历史期同步开放并累计，属于本地常驻适配。"
+    },
+    {
+      "key": "cdkeys",
+      "title": "福利兑换码",
+      "kind": "cdkey",
+      "table": "CDKlibao",
+      "group": "福利",
+      "odds": "原礼包奖励目录；没有原服务器兑换码数据库。本地档案码YULONG-CDK-1至31各限用一次，不冒充线上有效码。"
+    },
+    {
+      "key": "collection",
+      "title": "神龙收集回馈",
+      "kind": "collection",
+      "table": "Arpuhuodong",
+      "group": "收集"
+    },
+    {
+      "key": "purple-gift",
+      "title": "紫装送礼",
+      "kind": "purple",
+      "table": "huodong",
+      "group": "收集"
+    },
+    {
+      "key": "lucky-cat",
+      "title": "招财猫",
+      "kind": "cat",
+      "table": "money_cat",
+      "group": "抽奖"
+    },
+    {
+      "key": "wheel-0",
+      "title": "幸运抽奖·神圣•麒麟龙",
+      "kind": "draw",
+      "table": "Gaming_table3_0",
+      "price": 8,
+      "tenPrice": 76,
+      "fiftyPrice": 350,
+      "freeDaily": 1,
+      "group": "抽奖",
+      "odds": "原奖池保留；累计区间列的权重为离线解释。",
+      "preview": 1092
+    },
+    {
+      "key": "wheel-1",
+      "title": "幸运抽奖·神圣•骷髅龙",
+      "kind": "draw",
+      "table": "Gaming_table3_1",
+      "price": 8,
+      "tenPrice": 76,
+      "fiftyPrice": 350,
+      "freeDaily": 1,
+      "group": "抽奖",
+      "odds": "原奖池保留；累计区间列的权重为离线解释。",
+      "preview": 1076
+    },
+    {
+      "key": "wheel-2",
+      "title": "幸运抽奖·神圣•中国龙",
+      "kind": "draw",
+      "table": "Gaming_table3_2",
+      "price": 8,
+      "tenPrice": 76,
+      "fiftyPrice": 350,
+      "freeDaily": 1,
+      "group": "抽奖",
+      "odds": "原奖池保留；累计区间列的权重为离线解释。",
+      "preview": 1041
+    },
+    {
+      "key": "wheel-3",
+      "title": "幸运抽奖·神圣•小龙哥",
+      "kind": "draw",
+      "table": "Gaming_table3_3",
+      "price": 8,
+      "tenPrice": 76,
+      "fiftyPrice": 350,
+      "freeDaily": 1,
+      "group": "抽奖",
+      "odds": "原奖池保留；累计区间列的权重为离线解释。",
+      "preview": 1073
+    },
+    {
+      "key": "wheel-4",
+      "title": "幸运抽奖·金蛇龙",
+      "kind": "draw",
+      "table": "Gaming_table3_4",
+      "price": 8,
+      "tenPrice": 76,
+      "fiftyPrice": 350,
+      "freeDaily": 1,
+      "group": "抽奖",
+      "odds": "原奖池保留；累计区间列的权重为离线解释。",
+      "preview": 1071
+    },
+    {
+      "key": "wheel-5",
+      "title": "幸运抽奖·神圣•开泰龙",
+      "kind": "draw",
+      "table": "Gaming_table3_5",
+      "price": 8,
+      "tenPrice": 76,
+      "fiftyPrice": 350,
+      "freeDaily": 1,
+      "group": "抽奖",
+      "odds": "原奖池保留；累计区间列的权重为离线解释。",
+      "preview": 1093
+    },
+    {
+      "key": "fire-1",
+      "title": "点燃圣火·橙装爪",
+      "kind": "draw",
+      "table": "runehuodong_1",
+      "price": 30,
+      "group": "抽奖",
+      "odds": "原累计区间用于离线抽取；30魔晶单抽价格为离线设置。"
+    },
+    {
+      "key": "fire-2",
+      "title": "点燃圣火·橙装角",
+      "kind": "draw",
+      "table": "runehuodong_2",
+      "price": 30,
+      "group": "抽奖",
+      "odds": "原累计区间用于离线抽取；30魔晶单抽价格为离线设置。"
+    },
+    {
+      "key": "fire-3",
+      "title": "点燃圣火·橙装骨",
+      "kind": "draw",
+      "table": "runehuodong_3",
+      "price": 30,
+      "group": "抽奖",
+      "odds": "原累计区间用于离线抽取；30魔晶单抽价格为离线设置。"
+    },
+    {
+      "key": "fire-4",
+      "title": "点燃圣火·橙装鳞",
+      "kind": "draw",
+      "table": "runehuodong_4",
+      "price": 30,
+      "group": "抽奖",
+      "odds": "原累计区间用于离线抽取；30魔晶单抽价格为离线设置。"
+    },
+    {
+      "key": "recharge-wheel-1",
+      "title": "充值转盘·普通",
+      "kind": "rechargeDraw",
+      "table": "Recharge_table1-1",
+      "goal": 30,
+      "group": "抽奖",
+      "odds": "原奖池保留；每轮充值门槛30/100/300元为离线设置。"
+    },
+    {
+      "key": "recharge-wheel-2",
+      "title": "充值转盘·高级",
+      "kind": "rechargeDraw",
+      "table": "Recharge_table1-1",
+      "goal": 100,
+      "group": "抽奖",
+      "odds": "原奖池保留；每轮充值门槛30/100/300元为离线设置。"
+    },
+    {
+      "key": "recharge-wheel-3",
+      "title": "充值转盘·豪华",
+      "kind": "rechargeDraw",
+      "table": "Recharge_table1-1",
+      "goal": 300,
+      "group": "抽奖",
+      "odds": "原奖池保留；每轮充值门槛30/100/300元为离线设置。"
+    },
+    {
+      "key": "limited-1",
+      "title": "限时神龙·狂龙",
+      "kind": "limited",
+      "table": "shenlong_1",
+      "price": 280,
+      "tenPrice": 2800,
+      "featured": 1200,
+      "simulation": [
+        {
+          "id": 1,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1093,
+              "amount": 1,
+              "quality": 5
+            }
+          ],
+          "weight": 1
+        },
+        {
+          "id": 2,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1073,
+              "amount": 1,
+              "quality": 5
+            }
+          ],
+          "weight": 1
+        },
+        {
+          "id": 3,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1074,
+              "amount": 1,
+              "quality": 5
+            }
+          ],
+          "weight": 1
+        },
+        {
+          "id": 4,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1092,
+              "amount": 1,
+              "quality": 5
+            }
+          ],
+          "weight": 1
+        },
+        {
+          "id": 5,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1076,
+              "amount": 1,
+              "quality": 5
+            }
+          ],
+          "weight": 1
+        },
+        {
+          "id": 6,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1002,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 7,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1003,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 8,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1004,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 9,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1006,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 10,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1013,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 11,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1018,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 12,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1023,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 13,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1024,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 14,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1025,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 15,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1028,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 16,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1049,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 17,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1050,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 18,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1062,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 19,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1063,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 20,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1001,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 21,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1005,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 22,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1007,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 23,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1009,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 24,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1015,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 25,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1017,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 26,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1029,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 27,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1042,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 28,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1043,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 29,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1048,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 30,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1055,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 31,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1056,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 32,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1058,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 33,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1059,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 34,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1061,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 35,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1066,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 36,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1069,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 37,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1008,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 38,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1010,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 39,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1012,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 40,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1014,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 41,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1016,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 42,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1019,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 43,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1021,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 44,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1022,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 45,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1032,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 46,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1045,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 47,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1046,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 48,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1057,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 49,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1060,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 50,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1064,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 51,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1065,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 52,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1067,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 53,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1071,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        }
+      ],
+      "group": "神龙",
+      "odds": "该配置是排名奖励表，不是抽奖池。抽取使用客户端扭蛋预览池作离线模拟，不代表原限时奖池或概率；每抽10分，200分后可领一次本地第一名奖励，无真人排名。"
+    },
+    {
+      "key": "limited-2",
+      "title": "限时神龙·高能威龙",
+      "kind": "limited",
+      "table": "shenlong_2",
+      "price": 280,
+      "tenPrice": 2800,
+      "featured": 1202,
+      "simulation": [
+        {
+          "id": 1,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1093,
+              "amount": 1,
+              "quality": 5
+            }
+          ],
+          "weight": 1
+        },
+        {
+          "id": 2,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1073,
+              "amount": 1,
+              "quality": 5
+            }
+          ],
+          "weight": 1
+        },
+        {
+          "id": 3,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1074,
+              "amount": 1,
+              "quality": 5
+            }
+          ],
+          "weight": 1
+        },
+        {
+          "id": 4,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1092,
+              "amount": 1,
+              "quality": 5
+            }
+          ],
+          "weight": 1
+        },
+        {
+          "id": 5,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1076,
+              "amount": 1,
+              "quality": 5
+            }
+          ],
+          "weight": 1
+        },
+        {
+          "id": 6,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1002,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 7,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1003,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 8,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1004,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 9,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1006,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 10,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1013,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 11,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1018,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 12,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1023,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 13,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1024,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 14,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1025,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 15,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1028,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 16,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1049,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 17,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1050,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 18,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1062,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 19,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1063,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 20,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1001,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 21,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1005,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 22,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1007,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 23,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1009,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 24,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1015,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 25,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1017,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 26,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1029,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 27,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1042,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 28,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1043,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 29,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1048,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 30,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1055,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 31,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1056,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 32,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1058,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 33,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1059,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 34,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1061,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 35,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1066,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 36,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1069,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 37,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1008,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 38,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1010,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 39,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1012,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 40,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1014,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 41,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1016,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 42,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1019,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 43,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1021,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 44,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1022,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 45,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1032,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 46,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1045,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 47,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1046,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 48,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1057,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 49,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1060,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 50,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1064,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 51,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1065,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 52,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1067,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 53,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1071,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        }
+      ],
+      "group": "神龙",
+      "odds": "该配置是排名奖励表，不是抽奖池。抽取使用客户端扭蛋预览池作离线模拟，不代表原限时奖池或概率；每抽10分，200分后可领一次本地第一名奖励，无真人排名。"
+    },
+    {
+      "key": "limited-3",
+      "title": "限时神龙·大圣龙",
+      "kind": "limited",
+      "table": "shenlong_3",
+      "price": 280,
+      "tenPrice": 2800,
+      "featured": 1203,
+      "simulation": [
+        {
+          "id": 1,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1093,
+              "amount": 1,
+              "quality": 5
+            }
+          ],
+          "weight": 1
+        },
+        {
+          "id": 2,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1073,
+              "amount": 1,
+              "quality": 5
+            }
+          ],
+          "weight": 1
+        },
+        {
+          "id": 3,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1074,
+              "amount": 1,
+              "quality": 5
+            }
+          ],
+          "weight": 1
+        },
+        {
+          "id": 4,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1092,
+              "amount": 1,
+              "quality": 5
+            }
+          ],
+          "weight": 1
+        },
+        {
+          "id": 5,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1076,
+              "amount": 1,
+              "quality": 5
+            }
+          ],
+          "weight": 1
+        },
+        {
+          "id": 6,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1002,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 7,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1003,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 8,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1004,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 9,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1006,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 10,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1013,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 11,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1018,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 12,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1023,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 13,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1024,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 14,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1025,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 15,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1028,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 16,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1049,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 17,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1050,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 18,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1062,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 19,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1063,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 20,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1001,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 21,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1005,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 22,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1007,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 23,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1009,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 24,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1015,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 25,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1017,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 26,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1029,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 27,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1042,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 28,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1043,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 29,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1048,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 30,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1055,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 31,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1056,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 32,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1058,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 33,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1059,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 34,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1061,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 35,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1066,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 36,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1069,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 37,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1008,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 38,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1010,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 39,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1012,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 40,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1014,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 41,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1016,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 42,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1019,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 43,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1021,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 44,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1022,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 45,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1032,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 46,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1045,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 47,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1046,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 48,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1057,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 49,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1060,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 50,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1064,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 51,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1065,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 52,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1067,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 53,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1071,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        }
+      ],
+      "group": "神龙",
+      "odds": "该配置是排名奖励表，不是抽奖池。抽取使用客户端扭蛋预览池作离线模拟，不代表原限时奖池或概率；每抽10分，200分后可领一次本地第一名奖励，无真人排名。"
+    },
+    {
+      "key": "limited-4",
+      "title": "限时神龙·蛋壳龙",
+      "kind": "limited",
+      "table": "shenlong_4",
+      "price": 280,
+      "tenPrice": 2800,
+      "featured": 1204,
+      "simulation": [
+        {
+          "id": 1,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1093,
+              "amount": 1,
+              "quality": 5
+            }
+          ],
+          "weight": 1
+        },
+        {
+          "id": 2,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1073,
+              "amount": 1,
+              "quality": 5
+            }
+          ],
+          "weight": 1
+        },
+        {
+          "id": 3,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1074,
+              "amount": 1,
+              "quality": 5
+            }
+          ],
+          "weight": 1
+        },
+        {
+          "id": 4,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1092,
+              "amount": 1,
+              "quality": 5
+            }
+          ],
+          "weight": 1
+        },
+        {
+          "id": 5,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1076,
+              "amount": 1,
+              "quality": 5
+            }
+          ],
+          "weight": 1
+        },
+        {
+          "id": 6,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1002,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 7,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1003,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 8,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1004,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 9,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1006,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 10,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1013,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 11,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1018,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 12,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1023,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 13,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1024,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 14,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1025,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 15,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1028,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 16,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1049,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 17,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1050,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 18,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1062,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 19,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1063,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 20,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1001,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 21,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1005,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 22,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1007,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 23,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1009,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 24,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1015,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 25,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1017,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 26,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1029,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 27,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1042,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 28,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1043,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 29,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1048,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 30,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1055,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 31,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1056,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 32,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1058,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 33,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1059,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 34,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1061,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 35,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1066,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 36,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1069,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 37,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1008,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 38,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1010,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 39,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1012,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 40,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1014,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 41,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1016,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 42,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1019,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 43,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1021,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 44,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1022,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 45,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1032,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 46,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1045,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 47,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1046,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 48,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1057,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 49,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1060,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 50,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1064,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 51,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1065,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 52,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1067,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 53,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1071,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        }
+      ],
+      "group": "神龙",
+      "odds": "该配置是排名奖励表，不是抽奖池。抽取使用客户端扭蛋预览池作离线模拟，不代表原限时奖池或概率；每抽10分，200分后可领一次本地第一名奖励，无真人排名。"
+    },
+    {
+      "key": "limited-5",
+      "title": "限时神龙·大圣龙·复刻",
+      "kind": "limited",
+      "table": "shenlong_5",
+      "price": 280,
+      "tenPrice": 2800,
+      "featured": 1206,
+      "simulation": [
+        {
+          "id": 1,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1093,
+              "amount": 1,
+              "quality": 5
+            }
+          ],
+          "weight": 1
+        },
+        {
+          "id": 2,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1073,
+              "amount": 1,
+              "quality": 5
+            }
+          ],
+          "weight": 1
+        },
+        {
+          "id": 3,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1074,
+              "amount": 1,
+              "quality": 5
+            }
+          ],
+          "weight": 1
+        },
+        {
+          "id": 4,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1092,
+              "amount": 1,
+              "quality": 5
+            }
+          ],
+          "weight": 1
+        },
+        {
+          "id": 5,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1076,
+              "amount": 1,
+              "quality": 5
+            }
+          ],
+          "weight": 1
+        },
+        {
+          "id": 6,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1002,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 7,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1003,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 8,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1004,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 9,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1006,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 10,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1013,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 11,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1018,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 12,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1023,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 13,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1024,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 14,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1025,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 15,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1028,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 16,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1049,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 17,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1050,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 18,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1062,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 19,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1063,
+              "amount": 1,
+              "quality": 4
+            }
+          ],
+          "weight": 9
+        },
+        {
+          "id": 20,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1001,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 21,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1005,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 22,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1007,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 23,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1009,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 24,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1015,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 25,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1017,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 26,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1029,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 27,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1042,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 28,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1043,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 29,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1048,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 30,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1055,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 31,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1056,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 32,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1058,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 33,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1059,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 34,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1061,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 35,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1066,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 36,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1069,
+              "amount": 1,
+              "quality": 3
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "id": 37,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1008,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 38,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1010,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 39,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1012,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 40,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1014,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 41,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1016,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 42,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1019,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 43,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1021,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 44,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1022,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 45,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1032,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 46,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1045,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 47,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1046,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 48,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1057,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 49,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1060,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 50,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1064,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 51,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1065,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 52,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1067,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        },
+        {
+          "id": 53,
+          "rewards": [
+            {
+              "type": 5,
+              "itemId": 1071,
+              "amount": 1,
+              "quality": 2
+            }
+          ],
+          "weight": 60
+        }
+      ],
+      "group": "神龙",
+      "odds": "该配置是排名奖励表，不是抽奖池。抽取使用客户端扭蛋预览池作离线模拟，不代表原限时奖池或概率；每抽10分，200分后可领一次本地第一名奖励，无真人排名。"
+    },
+    {
+      "key": "spring-wheel",
+      "title": "春节·红包转盘",
+      "kind": "springDraw",
+      "table": "chunjiezhuanpan",
+      "price": 12,
+      "tenPrice": 118,
+      "couponCosts": {
+        "1": 1,
+        "10": 10
+      },
+      "group": "节日",
+      "odds": "原奖池及红包/魔晶消费配置：红包单抽1、十抽10，魔晶单抽12、十抽118。原奖池区间权重用于离线抽取；任务红包由本地实际操作获得。"
+    },
+    {
+      "key": "spring-tasks",
+      "title": "春节·红包任务",
+      "kind": "springTask",
+      "table": "chunjierenwu",
+      "group": "节日",
+      "odds": "每日真实操作计数，按原任务次数与红包数量领取。HARD驯龙挑战尚未接通，不以其它战斗替代。"
+    },
+    {
+      "key": "children-eggs",
+      "title": "儿童节·砸金蛋",
+      "kind": "eggs",
+      "table": "zadanhuodong",
+      "group": "节日",
+      "odds": "原血量、道具与奖励区间保留；每次击打一点，完成后离线抽取一份奖励。"
+    },
+    {
+      "key": "daily-sale",
+      "title": "每日秒杀",
+      "kind": "dailySale",
+      "table": "meirimiaosha",
+      "group": "特惠"
+    },
+    {
+      "key": "monopoly-1",
+      "title": "大富翁·冒险岛",
+      "kind": "board",
+      "table": "dafuweng_randgive",
+      "entryType": 31,
+      "entryGems": 10,
+      "group": "大富翁",
+      "odds": "原路线、格子与奖池；每张入场券走一骰、魔晶补票价格为离线适配。"
+    },
+    {
+      "key": "monopoly-2",
+      "title": "大富翁·宝藏岛",
+      "kind": "board",
+      "table": "dafuweng_randgive",
+      "entryType": 32,
+      "entryGems": 30,
+      "group": "大富翁",
+      "odds": "原路线、格子与奖池；每张入场券走一骰、魔晶补票价格为离线适配。"
+    },
+    {
+      "key": "monopoly-3",
+      "title": "大富翁·金银岛",
+      "kind": "board",
+      "table": "dafuweng_randgive",
+      "entryType": 33,
+      "entryGems": 50,
+      "group": "大富翁",
+      "odds": "原路线、格子与奖池；每张入场券走一骰、魔晶补票价格为离线适配。"
+    },
+    {
+      "key": "month-card",
+      "title": "月卡",
+      "kind": "card",
+      "table": "treasure_items",
+      "group": "福利"
+    },
+    {
+      "key": "lucky-bag",
+      "title": "每日福袋",
+      "kind": "card",
+      "table": "treasure_items",
+      "group": "福利"
+    },
+    {
+      "key": "red-packets",
+      "title": "新春红包",
+      "kind": "packet",
+      "table": "hongbao",
+      "group": "节日",
+      "odds": "本地拆自己的红包，余款保留，可一次取回；不发送给其它玩家。"
+    },
+    {
+      "key": "double-eleven",
+      "title": "双十一·消费红包",
+      "kind": "cashback",
+      "table": "ui/carnival/DoubleEvelen.lua",
+      "group": "节日",
+      "odds": "前四个活动日分别记录消费，四日后返还当日消费的10%。依据原DoubleEvelen的4行、345600秒和costlist/10；本地开始时间替代原服务器活动日期。"
+    },
+    {
+      "key": "single",
+      "title": "单笔充值",
+      "kind": "single",
+      "table": "danchong",
+      "group": "返利"
+    }
+  ],
+  "limitations": [
+    "历史活动永久开放属于用户要求的离线适配",
+    "未声称恢复真人排行、服务器开奖、外部兑换码、所有历史发行版本",
+    "客户端库未保存的周期、资格与概率在活动说明中标出本地政策"
+  ]
+}

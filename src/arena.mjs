@@ -1,3 +1,4 @@
+import {recordActivitySpend} from './historical-activities.mjs';
 import SOURCE from '../assets/original/data/arena-vip.mjs';
 import {vipInfo} from './vip.mjs';
 export {vipInfo} from './vip.mjs';
@@ -15,7 +16,7 @@ export const arenaAward=rank=>SOURCE.awards.find(r=>r.maxRank<=rank&&r.minRank>=
 export function arenaOpponents(s){const reference=treeDifficultyReference(s);return [0,1,2,3].map(i=>{const row=WORLD_SOURCE.robots[(i+s.arena.generation)%WORLD_SOURCE.robots.length],base=monster(row.monsterId),rank=Math.max(1,s.arena.rank-[40,100,250,500][i]),ratio=[.65,.85,1.05,1.3][i]*(1+(5000-rank)/10000),scale=reference.bucket*ratio/(base.attack+base.defend+base.life/3),enemy={...base,level:Math.min(50,reference.level+i),attack:Math.max(1,Math.floor(base.attack*scale)),defend:Math.max(1,Math.floor(base.defend*scale)),life:Math.max(1,Math.floor(base.life*scale))};return {id:i,name:`${row.name}·${i+1}`,rank,enemy,power:Math.floor(enemy.attack+enemy.defend+enemy.life/3)};});}
 export function arenaPlan(s,id,now=Date.now(),token=arenaToken(s)){if(token!==arenaToken(s))throw Error('对手列表已变化，请重新选择。');if(!s.arena.attempts)throw Error('今日已无挑战次数，请点击+购买。');if(!vipInfo(s).pvpNoCD&&now<s.arena.readyAt)throw Error('挑战尚在冷却，可等待或花费50魔晶重置。');const team=configuredLineup(s);if(!team.length)throw Error('还没有选择出战的龙。');const op=arenaOpponents(s).find(r=>r.id===id);if(!op)throw Error('挑战对手不存在。');return {...op,won:lineupPower(team,s)>=op.power};}
 export const exchangeSupported=r=>r.exchangeType===1&&([1,2,19,20,21,22].includes(r.itemType)||r.itemType===4&&!!lootProp(r.itemID)||r.itemType===8&&!!equipmentDefinition(r.itemID)||r.itemType===9&&!!equipmentFragment(r.itemID));
-export function arenaAction(s,type,payload,now){refreshArena(s,now);const a=s.arena,pay=n=>{if(s.gems<n)throw Error('魔晶不足。');s.gems-=n;};
+export function arenaAction(s,type,payload,now){refreshArena(s,now);const a=s.arena,pay=n=>{if(s.gems<n)throw Error('魔晶不足。');s.gems-=n;recordActivitySpend(s,n);};
  switch(type){
  case 'arenaChallenge':{if(typeof payload.token!=='string')throw Error('请重新选择对手。');const op=arenaPlan(s,payload.id,now,payload.token);a.attempts--;const from=a.rank;if(op.won)a.rank=op.rank;a.best=Math.min(a.best,a.rank);a.readyAt=vipInfo(s).pvpNoCD?0:now+600000;a.generation++;a.records.unshift({at:now,name:op.name,power:op.power,won:op.won,from,to:a.rank});a.records=a.records.slice(0,50);return op.won?`挑战获胜，当前单机排名 ${a.rank}。`:'挑战失败，调整布阵后再试。';}
  case 'arenaBuy':if(a.bought>=vipInfo(s).pvpBuyTime)throw Error(`当前VIP每日最多购买 ${vipInfo(s).pvpBuyTime} 次。`);pay(10);a.bought++;a.attempts++;return '已增加一次挑战次数。';

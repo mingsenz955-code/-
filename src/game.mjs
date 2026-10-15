@@ -1,3 +1,5 @@
+import {trainDragon,validateTraining} from './dragon-training.mjs';
+import {openActivityGift,recordActivityBreed,recordSpringTask,historyAction,observeActivityDay,recordActivitySpend} from './historical-activities.mjs';
 import {createActivities,validateActivities,recordActivityRecharge,claimSingleRecharge} from './activities.mjs';
 import {vipYield,vipDuration} from './vip.mjs';
 import {createArena,validateArena,arenaAction} from './arena.mjs';
@@ -26,7 +28,7 @@ import {resourceShopRow,EVOLUTION_FRUIT_ITEM_ID} from './resource-shop.mjs';
 const fail = message => {throw new Error(message)};
 const number = (v,min=0,max=Number.MAX_SAFE_INTEGER) => Number.isSafeInteger(v)&&v>=min&&v<=max;
 export function createGame(now=Date.now()) {
- return {version:12,activities:createActivities(),arena:createArena(now),encounters:createEncounters(now),shopInventory:{},fixedPositions:{},giftEggs:[],equipmentFragments:{},loot:{policy:LOOT_POLICY,boxesOpened:0,lastOpened:null,nodeRewards:createNodeRewards(now)},gemExplore:createGemExplore(now),runeHunt:createRuneHunt(now),runes:[],nextRuneId:1,equipmentMaterials:{stone:0,wing:0,crystal:0},gemInventory:[],gemSockets:Array(12).fill(null),nextGemId:1,structures:[],formation:[2,3],adventure:{cleared:{},energy:10,energyAt:now,policy:OFFLINE_BATTLE_POLICY},lottery:{normalTokens:0,advancedTokens:0,draws:0,pending:[]},raffle:{tickets:{},counters:{junior:0,mid:0,senior:0},pending:[]},expansion:{plots:0},items:{},recharge:{count:0,lastTier:0,totalGems:0,doubled:[]},equipment:[],nextEquipId:1,coins:1200,food:400,gems:0,playerXp:0,nextId:4,updatedAt:now,habitats:[{id:1,name:'晨曦栖息地',lastCollected:now}],dragons:[{id:2,species:'ember',level:1,habitatId:1},{id:3,species:'leaf',level:1,habitatId:1}],farm:null,nest:null,breeding:null,incubator:null,stats:{harvests:0,hatches:0,feeds:0},log:['欢迎来到云上牧场。种下第一份龙粮吧。']};
+ return {version:12,activities:createActivities(now),arena:createArena(now),encounters:createEncounters(now),shopInventory:{},fixedPositions:{},giftEggs:[],equipmentFragments:{},loot:{policy:LOOT_POLICY,boxesOpened:0,lastOpened:null,nodeRewards:createNodeRewards(now)},gemExplore:createGemExplore(now),runeHunt:createRuneHunt(now),runes:[],nextRuneId:1,equipmentMaterials:{stone:0,wing:0,crystal:0},gemInventory:[],gemSockets:Array(12).fill(null),nextGemId:1,structures:[],formation:[2,3],adventure:{cleared:{},energy:10,energyAt:now,policy:OFFLINE_BATTLE_POLICY},lottery:{normalTokens:0,advancedTokens:0,draws:0,pending:[]},raffle:{tickets:{},counters:{junior:0,mid:0,senior:0},pending:[]},expansion:{plots:0},items:{},recharge:{count:0,lastTier:0,totalGems:0,doubled:[]},equipment:[],nextEquipId:1,coins:1200,food:400,gems:0,playerXp:0,nextId:4,updatedAt:now,habitats:[{id:1,name:'晨曦栖息地',lastCollected:now}],dragons:[{id:2,species:'ember',level:1,habitatId:1},{id:3,species:'leaf',level:1,habitatId:1}],farm:null,nest:null,breeding:null,incubator:null,stats:{harvests:0,hatches:0,feeds:0},log:['欢迎来到云上牧场。种下第一份龙粮吧。']};
 }
 export function validate(s) {
  if(!s||![1,2,3,4,5,6,7,8,9,10,11,12].includes(s.version)) fail('存档版本不受支持，请保留原文件。');
@@ -35,13 +37,13 @@ export function validate(s) {
  if(s.nest!==null)fail('旧繁殖任务未迁移。');
  s.breeding??=null;s.incubator??=null;if(s.version<5)s.lottery??={normalTokens:0,advancedTokens:0,draws:0,pending:[]};
  if(s.version<6){s.equipment??=[];s.nextEquipId??=1;}
- s.activities??=createActivities();validateActivities(s);
+ s.activities??={...createActivities(s.updatedAt),history:undefined};validateActivities(s);
  s.arena??=createArena(s.updatedAt);validateArena(s);
  s.encounters??=createEncounters(s.updatedAt);validateEncounters(s);
  s.fixedPositions??={};
  if(!s.fixedPositions||typeof s.fixedPositions!=='object'||Array.isArray(s.fixedPositions)||Object.entries(s.fixedPositions).some(([key,p])=>!FIXED_BUILDINGS.some(b=>b.key===key)||!Array.isArray(p)||p.length!==2||!p.every(Number.isFinite)))fail('基础建筑位置无效。');
  s.shopInventory??={};if(!s.shopInventory||typeof s.shopInventory!=='object'||Array.isArray(s.shopInventory)||Object.entries(s.shopInventory).some(([id,n])=>!resourceShopRow(Number(id))||!number(n,0,1e9)))fail('购买物品库存无效。');s.giftEggs??=[];
- if(!Array.isArray(s.giftEggs)||s.giftEggs.length>200||s.giftEggs.some(e=>!number(e.id,1)||!SPECIES[speciesKey(e.dragonId)]||!['user-request','shop'].includes(e.source)))fail('赠送龙蛋存档无效。');
+ if(!Array.isArray(s.giftEggs)||s.giftEggs.length>200||s.giftEggs.some(e=>!number(e.id,1)||!SPECIES[speciesKey(e.dragonId)]||!['user-request','shop','activity'].includes(e.source)))fail('赠送龙蛋存档无效。');
  s.equipment??=[];s.nextEquipId??=1;
  validateGems(s);
  s.equipmentMaterials??={stone:0,wing:0,crystal:0};
@@ -72,6 +74,7 @@ export function validate(s) {
  if(!Array.isArray(s.formation)||s.formation.length>6||new Set(s.formation).size!==s.formation.length||!s.formation.every(id=>s.dragons.some(d=>d.id===id)))fail('出战阵容无效。');
  if(!s.adventure||!s.adventure.cleared||typeof s.adventure.cleared!=='object'||Array.isArray(s.adventure.cleared)||!number(s.adventure.energy,0,10)||!number(s.adventure.energyAt)||s.adventure.policy!==OFFLINE_BATTLE_POLICY)fail('冒险进度无效。');
  for(const [nodeId,stars] of Object.entries(s.adventure.cleared)){if(!/^\d+$/.test(nodeId)||!adventureEvent(Number(nodeId))||!number(stars,1,3))fail('冒险关卡记录无效。');}
+ for(const d of s.dragons)validateTraining(d);
  for(const d of s.dragons)if(!acceptsSavedResident(s.habitats.find(h=>h.id===d.habitatId),d.species))fail('龙与栖息地属性不匹配。');
  const lottery=s.lottery;if(!lottery||!number(lottery.normalTokens)||!number(lottery.advancedTokens)||!number(lottery.draws)||!Array.isArray(lottery.pending)||lottery.pending.length>LOTTERY_CAPACITY||lottery.draws<lottery.pending.length)fail('抽奖存档无效。');
  for(const prize of lottery.pending){const row=lotteryRow(prize.sourceRow);if(!row||!number(prize.id,1)||ids.has(prize.id)||prize.mode!==row.mode||prize.type!==row.type||prize.itemId!==row.itemId||prize.policy!==LOTTERY_POLICY||!number(prize.amount,row.min,row.max)||prize.type===16&&!SPECIES[speciesKey(prize.itemId)])fail('抽奖奖励记录无效。');ids.add(prize.id);}
@@ -125,20 +128,24 @@ function awardPlayerXp(s,xp){const before=playerProgress(s).level;s.playerXp=(s.
 export function action(state,type,payload={},now=Date.now(),random=Math.random) {
  const s=validate(state); now=Math.max(now,s.updatedAt); let message='';
  const gained=Math.floor((now-s.adventure.energyAt)/300000);if(gained>0){s.adventure.energy=Math.min(10,s.adventure.energy+gained);s.adventure.energyAt+=gained*300000;if(s.adventure.energy===10)s.adventure.energyAt=now;}
- const spend=(key,cost)=>{if(s[key]<cost)fail(key==='coins'?'金币不足。':key==='gems'?'魔晶不足。':'龙粮不足，请先种植并收获。');s[key]-=cost;};
+ const spend=(key,cost)=>{if(s[key]<cost)fail(key==='coins'?'金币不足。':key==='gems'?'魔晶不足。':'龙粮不足，请先种植并收获。');s[key]-=cost;if(key==='gems')recordActivitySpend(s,cost);};
  const payBuilding=target=>{for(const [unit,cost] of Object.entries(target.costs)){const key={g:'coins',c:'gems',f:'food'}[unit];if(!key)fail('该建筑资源类型尚未支持。');spend(key,cost);}};
  const placeables=(island=0)=>[...fixedBuildings(s).map(b=>({...b,islandId:0})),...s.habitats.map((h,i)=>({islandId:islandOf(h),key:`h:${h.id}`,info:habitatInfo(h),position:habitatPosition(h,i)})),...s.structures.map((o,i)=>({islandId:islandOf(o),key:`s:${o.id}`,info:structureInfo(o),position:structurePosition(o,i)}))].filter(o=>islandOf(o)===island);
  const dragon=id=>s.dragons.find(d=>d.id===id)||fail('找不到这只龙。');
  const settle=h=>{h.storedCoins=rawIncome(s,h,now);h.lastCollected=now;};
- refreshEncounters(s,now);
+ refreshEncounters(s,now);observeActivityDay(s,now);
  switch(type){
+ case 'activityTrain':message=trainDragon(s,payload.id,payload.count??1,random,now);break;
+ case 'activityGift':message=openActivityGift(s,payload.id);break;
+ case 'activityVisit':message='历史活动已开放。';break;
+ case 'historyActivity':message=historyAction(s,payload,now,random);break;
  case 'singleRechargeClaim':message=claimSingleRecharge(s,payload.id);break;
  case 'arenaChallenge':case 'arenaBuy':case 'arenaReset':case 'arenaRefresh':case 'arenaClaim':case 'arenaExchange':message=arenaAction(s,type,payload,now);break;
  case 'bossChallenge':{if(playerProgress(s).level<15)fail('15级开启远古首领。');const b=s.encounters.boss;if(!b.attempts)fail('挑战次数不足。');const plan=bossAttackPlan(s),info=bossInfo(s);b.attempts--;b.damage+=plan.damage;b.totalDamage+=plan.damage;b.todayDamage+=plan.damage;if(plan.won){deliverLoot(s,[{type:info.rewardType,itemId:info.rewardId,amount:info.rewardCount}]);b.kills++;b.damage=0;b.stage=Math.min(b.stage+1,21);}message=`远古首领造成 ${plan.damage} 伤害${plan.won?'，击杀奖励已入库':''}。`;break;}
  case 'bossBuyAttempt':{if(playerProgress(s).level<15)fail('15级开启远古首领。');const b=s.encounters.boss,cost=[10,30,50,70,90][Math.min(b.bought,4)];spend('gems',cost);b.attempts++;b.bought++;message=`花费 ${cost} 魔晶增加一次首领挑战。`;break;}
  case 'treePlant':{if(playerProgress(s).level<10)fail('10级开启圣树。');const r=availableSeeds(playerProgress(s).level,now).find(r=>r.id===payload.id),t=s.encounters.tree,index=t.plots.indexOf(null);if(!r||t.used.includes(r.id))fail('该种子本日已使用或不在当前供应中。');if(index<0)fail('圣树没有空闲位置。');t.used.push(r.id);t.plots[index]={seedId:r.id,readyAt:now+r.plantTime*1000};message=`已种植${r.seedName}，等待成熟。`;break;}
  case 'treeHarvest':{const t=s.encounters.tree,p=t.plots[payload.id];if(!p||now<p.readyAt)fail('果实尚未成熟。');const r=seedInfo(p.seedId);deliverLoot(s,[{type:r.propType,itemId:r.propID,amount:r.propNum}]);t.plots[payload.id]=null;message=`收获圣树${r.seedName} × ${r.propNum}。`;break;}
- case 'treePlunder':{if(playerProgress(s).level<10)fail('10级开启圣树。');const t=s.encounters.tree,op=treeOpponent(s,payload.id),team=configuredLineup(s);if(!team.length)fail('请先布阵至少一条龙。');if(t.robbed.includes(op.id))fail('本日已挑战过该圣树。');t.robbed.push(op.id);const won=lineupPower(team,s)>=op.power,r=availableSeeds(playerProgress(s).level,now)[(op.id-1)%availableSeeds(playerProgress(s).level,now).length];if(won)deliverLoot(s,[{type:r.propType,itemId:r.propID,amount:r.plunderNum1}]);message=won?`圣树抢夺获胜，获得${r.seedName} × ${r.plunderNum1}。`:'圣树抢夺失败，调整布阵后再挑战其它对手。';break;}
+ case 'treePlunder':{if(playerProgress(s).level<10)fail('10级开启圣树。');const t=s.encounters.tree,op=treeOpponent(s,payload.id),team=configuredLineup(s);if(!team.length)fail('请先布阵至少一条龙。');if(t.robbed.includes(op.id))fail('本日已挑战过该圣树。');t.robbed.push(op.id);const won=lineupPower(team,s)>=op.power,r=availableSeeds(playerProgress(s).level,now)[(op.id-1)%availableSeeds(playerProgress(s).level,now).length];if(won){deliverLoot(s,[{type:r.propType,itemId:r.propID,amount:r.plunderNum1}]);recordSpringTask(s,3,1,now);}message=won?`圣树抢夺获胜，获得${r.seedName} × ${r.plunderNum1}。`:'圣树抢夺失败，调整布阵后再挑战其它对手。';break;}
  case 'setFormation': {if(!Array.isArray(payload.ids)||payload.ids.length>6||new Set(payload.ids).size!==payload.ids.length||!payload.ids.every(id=>s.dragons.some(d=>d.id===id)))fail('请选择1至6条不同的龙。');const formationIssue=formationError(payload.ids.map(id=>s.dragons.find(d=>d.id===id)));if(formationIssue)fail(formationIssue);s.formation=[...payload.ids];message=`已保存 ${s.formation.length} 条龙的出战阵容。`;break;}
  case 'battleResolve': {
   adventureEvent(payload.nodeId)||fail('关卡不存在。');const allIds=Array.from({length:ADVENTURE_LEVEL_COUNT},(_,i)=>100101+Math.floor(i/20)*100+i%20),index=allIds.indexOf(payload.nodeId),source=sourceAdventureLevel(payload.nodeId);
@@ -212,10 +219,17 @@ export function action(state,type,payload={},now=Date.now(),random=Math.random) 
  case 'sellRaffleEgg': {const prize=[...s.raffle.pending,...s.giftEggs].find(entry=>entry.id===payload.id)||fail('找不到这枚龙蛋。'),species=speciesKey(prize.dragonId),gold=dragonSellGold(species);s.coins+=gold;s.raffle.pending=s.raffle.pending.filter(entry=>entry.id!==prize.id);s.giftEggs=s.giftEggs.filter(entry=>entry.id!==prize.id);message=`出售${SPECIES[species].name}龙蛋，获得 ${gold} 金币。`;break;}
  case 'sellLotteryDragon': {const prize=s.lottery.pending.find(entry=>entry.id===payload.id&&entry.type===16)||fail('找不到这只待安置幼龙。'),species=speciesKey(prize.itemId),gold=dragonSellGold(species);s.coins+=gold;s.lottery.pending=s.lottery.pending.filter(entry=>entry.id!==prize.id);message=`出售${SPECIES[species].name}，获得 ${gold} 金币。`;break;}
  case 'expandIsland': {const step=nextExpansion(s.expansion.plots)||fail('原版扩建阶梯已到尽头，没有更多地块。');if(playerProgress(s).level<step.minLevel)fail(`扩建需要牧场等级 ${step.minLevel}。`);spend('coins',step.coins);if(step.gems>0)spend('gems',step.gems);s.expansion.plots++;message=`岛屿扩建完成，已有 ${s.expansion.plots} 块扩建地。`;break;}
- case 'recharge': {s.habitats.forEach(h=>{settle(h);h.lastCollected=now;});const product=rechargeProduct(payload.tierId)||fail('找不到这个充值档位。');const firstPurchase=!s.recharge.doubled.includes(product.id),delivery=rechargeDelivery(product,{firstPurchase});s.gems+=delivery.gems;if(firstPurchase)s.recharge.doubled.push(product.id);s.recharge.count++;s.recharge.lastTier=product.id;s.recharge.totalGems+=delivery.gems;recordActivityRecharge(s,product);message=`充值测试：${product.priceYuan} 元档到账 ${delivery.gems} 魔晶（含${firstPurchase?'首充双倍':'再送'} ${delivery.gift}，未实际扣款）。`;break;}
+ case 'recharge': {s.habitats.forEach(h=>{settle(h);h.lastCollected=now;});const product=rechargeProduct(payload.tierId)||fail('找不到这个充值档位。');const firstPurchase=!s.recharge.doubled.includes(product.id),delivery=rechargeDelivery(product,{firstPurchase});s.gems+=delivery.gems;if(firstPurchase)s.recharge.doubled.push(product.id);s.recharge.count++;s.recharge.lastTier=product.id;s.recharge.totalGems+=delivery.gems;recordActivityRecharge(s,product,now);message=`充值测试：${product.priceYuan} 元档到账 ${delivery.gems} 魔晶（含${firstPurchase?'首充双倍':'再送'} ${delivery.gift}，未实际扣款）。`;break;}
  case 'buyShopEgg': {const row=ORIGINAL_SHOP_ITEMS.find(r=>r.id===payload.id&&r.category==='eggs')||fail('找不到龙蛋商品。'),species=speciesKey(row.id);if(!SPECIES[species])fail('该龙的数据尚未取得。');if(s.giftEggs.length>=200)fail('仓库龙蛋已满。');payBuilding(row);s.giftEggs.push({id:s.nextId++,dragonId:row.id,source:'shop'});message=`购买${SPECIES[species].name}龙蛋，已放入仓库。`;break;}
  case 'buyResource': {const row=resourceShopRow(payload.id)||fail('这个商品尚未开放。');spend('gems',row.priceGems);if(row.type==='g')s.coins+=row.amount;else if(row.type==='f')s.food+=row.amount;else if(row.type==='l1'||row.type==='l2')s.gemExplore.balls[row.type==='l1'?'normal':'high']+=row.amount;else if(row.type==='ef')s.items[EVOLUTION_FRUIT_ITEM_ID]=(s.items[EVOLUTION_FRUIT_ITEM_ID]??0)+row.amount;else if(['es','yy','sj'].includes(row.type)){s.equipmentMaterials[{es:'stone',yy:'wing',sj:'crystal'}[row.type]]+=row.amount;}else if(row.type==='d'){if(!SPECIES[speciesKey(row.xid)])fail('龙蛋资料尚未取得。');if(s.giftEggs.length+row.amount>200)fail('仓库龙蛋已满。');for(let i=0;i<row.amount;i++)s.giftEggs.push({id:s.nextId++,dragonId:row.xid,source:'shop'});}else if(row.type==='i'&&LOOT_PROPS.some(p=>p.id===row.xid)){s.items[row.xid]=(s.items[row.xid]??0)+row.amount;}else{s.shopInventory[row.id]=(s.shopInventory[row.id]??0)+row.amount;}message=`花 ${row.priceGems} 魔晶买到${row.name}。`;break;}
  default: fail('未知操作。');
  }
+ if(type==='takeEgg')recordActivityBreed(s,SPECIES[s.breeding.species].originalId);
+ if(type==='battleResolve'&&s.adventure.lastBattle?.won)recordSpringTask(s,1,1,now);
+ if(type==='arenaChallenge')recordSpringTask(s,2,1,now);
+ if(type==='exploreGem'&&['normal','high'].includes(payload.mode))recordSpringTask(s,5,payload.count,now);
+ if(type==='raffleDraw'&&['mid','senior'].includes(payload.mode))recordSpringTask(s,6,payload.count,now);
+ if(type==='huntRune')recordSpringTask(s,7,1,now);
+ if(type==='recharge')recordSpringTask(s,10,1,now);
  s.updatedAt=now;s.log.unshift(message);s.log=s.log.slice(0,12);return validate(s);
 }
