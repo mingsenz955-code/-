@@ -199,3 +199,12 @@ body:has(#modal[open].native-fullscreen){background:#09242e}
 .native-unpictured-prop{position:absolute;transform:translate(-50%,-50%);width:150px;color:#68472d;font-size:23px;text-align:center;white-space:normal}
 
 .native-shop-card .egg-preview{position:absolute;left:0;top:0;width:180px;height:180px;transform:translate(-50%,-50%);object-fit:contain}
+
+/* MainScene continuous island cluster. HUD stays in screen space. */
+.world-sky{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.ranch-world .world-island{position:absolute;width:1300px;height:768px;transform:translate(0,0);pointer-events:none}
+.ranch-world .world-island .original-landscape{background:transparent;isolation:auto}
+.ranch-world .world-island .original-island{width:var(--island-w);height:var(--island-h);left:650px;top:384px;transform:translate(-50%,-50%);filter:none}
+.ranch-world .world-island .world-objects{pointer-events:none}
+.ranch-world .world-island [data-place-id]{pointer-events:auto}
+.island-unlock{position:absolute;left:550px;top:380px;pointer-events:auto;z-index:1000}
