@@ -276,3 +276,7 @@
 
 ## v0.16.34 存档入口核验
 - 正式SaveStore路径APPDATA/YulongRanch/saves/ranch-v1.json保有plots9；v34实画HUD99且4岛无锁。截图1级与正式档不符，具体预览URL未取得。storage.mjs已有默认localStorage独立分支是已确认代码隐患，已改显式试玩才可用。
+
+## v0.16.35 原连续世界证据
+- work/client-config/app/scenes/MainScene.lua第135–197行，initIslands实际positions与z-order；left/top/right/bottom同一islandLayer，不是四页面。原背景第86行island_bg_day.png。
+- assets/original/layouts/islandleft/right/top/bottom.json各自尺寸及世界图。WORLD_ISLANDS统一比例/翻转Y，保存岛ID不变。旧建筑板缩放为兼容适配，未当作原等距网格证据。

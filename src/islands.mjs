@@ -20,5 +20,5 @@ export const WORLD_ISLANDS=[
  {id:2,x:600,y:-182.5,z:1,width:1656,height:1219},
  {id:3,x:540,y:400,z:4,width:1057,height:794}
 ];
-export const WORLD_BOUNDS={left:-520,right:1535,top:-490,bottom:640};
+export const WORLD_BOUNDS={left:-700,right:1600,top:-600,bottom:750};
 export function nearestWorldIsland(x,y,count=4){return WORLD_ISLANDS.filter(i=>i.id<count).reduce((a,b)=>(a.x-x)**2+(a.y-y)**2<(b.x-x)**2+(b.y-y)**2?a:b).id;}

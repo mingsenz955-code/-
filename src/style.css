@@ -208,3 +208,8 @@ body:has(#modal[open].native-fullscreen){background:#09242e}
 .ranch-world .world-island .world-objects{pointer-events:none}
 .ranch-world .world-island [data-place-id]{pointer-events:auto}
 .island-unlock{position:absolute;left:550px;top:380px;pointer-events:auto;z-index:1000}
+
+/* Keep legacy PC board coordinates while bringing footprints back onto source land. */
+.ranch-world .world-island .world-objects{transform:scale(.72);transform-origin:50% 50%}
+.ranch-world .world-island[data-world-island="1"] .world-objects,.ranch-world .world-island[data-world-island="2"] .world-objects{transform:scale(.65)}
+.ranch-world .world-island[data-world-island="3"] .world-objects{transform:scale(.42)}
