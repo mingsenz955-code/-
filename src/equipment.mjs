@@ -1,4 +1,5 @@
 import {ORIGINAL_EQUIPMENT} from '../assets/original/data/equipment.mjs';
+import {equipmentStarRow} from './equipment-stars.mjs';
 
 // Source definition queries only. Ownership, random rolls and combat totals are
 // deliberately not inferred from a definition or its resale price.
@@ -68,12 +69,11 @@ export function definitionPart(instance){return equipmentDefinition(instance?.ty
 
 export function equipmentInPart(list,part){return list.find(instance=>definitionPart(instance)===part)??null}
 
-// Definition values only. star, exp and randinfo are carried on the instance but
-// equipinfostar/equipinforand rollout rules are not confirmed, so they are never
-// folded into a total here and the UI must not present them as combat values.
+// DataManager function87 adds cumulative star values to base equipment values.
+// Original resist is curUnCrit, antResist is curCrit. Random traits remain unverified.
 export function equipmentBonus(list){
  const total={atk:0,def:0,hp:0,resist:0,antResist:0};
- for(const instance of list){const definition=equipmentDefinition(instance.type);if(!definition)continue;for(const key of Object.keys(total))total[key]+=definition[key]??0}
+ for(const instance of list){const definition=equipmentDefinition(instance.type);if(!definition)continue;const star=equipmentStarRow(instance);for(const key of Object.keys(total))total[key]+=(definition[key]??0)+(star?.[{atk:'atkAdd',def:'defAdd',hp:'hpAdd',resist:'uncritAdd',antResist:'critAdd'}[key]]??0)}
  return total;
 }
 

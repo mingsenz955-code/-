@@ -249,3 +249,8 @@
 - equipment-fragment-compose-disassembly.txt确认floor(count/mergeCost)；equipment-fragment-card-disassembly.txt确认现代equipID。48原碎片定义/1283原掉落行/16原道具图及来源哈希见loot.mjs与reference/loot-provenance.json，export-loot.py复现。
 - ItemUtil root反汇编明确19强化石、20低级龙珠、21中级、22高级；PvePanel.onCheckClick守卫已清且可领取时dceMapAward，PveRender threeHour10800与box_num<3。UTC+8日界、首领重新占领与初始可领仍非服务器证据。
 - green_42原字形/图及哈希独立导出，panel_map_act数字与文字均用原字形。原结果panel_battle_guanka_jiangli.bg.alpha0在本页隐藏视觉木板；stars3与原领取/开箱粒子没有被静态星图替代后宣称相同。
+
+## v0.16.27 装备升星证据
+- EquipStarInfo构造21列/192行与库查表键由静态反汇编确认；装备ID前三位分羽翼/皇冠族系。quality3 cap3、quality4/5 cap5来自EquipStarUpInfo根常量表，预览函数2、选材函数8、DataManager函数87累计属性、FormationEquipPanel函数3逐星激活标签均保留reference/equipment-star-*.txt。
+- 费用=当前星级行cost×材料件数；累计目标exp+各材料星级expHave，逐级扣expCost。服务器Socket响应未取得，离线执行预览量，不伪造随机词条/条件属性。
+- 原布局item_star_up_zuo_equip_up/item_star_up_you_equip_up已接入；132项Node及Electron操作/独立读档验证通过。源哈希/列名/差异：reference/equipment-stars-provenance.json。

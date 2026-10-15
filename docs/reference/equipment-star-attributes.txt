@@ -1,0 +1,59 @@
+0000 GETGLOBAL r2 "LibraryManager"
+0001 GETTABLE r2 r2["lib_equipInfo"]
+0002 SELF r2 self=r2 method="getInfoById"
+0003 GETTABLE r4 r1["type"]
+0004 CALL A=2 B=3 C=2
+0005 GETGLOBAL r3 "LibraryManager"
+0006 GETTABLE r3 r3["lib_equipStarInfo"]
+0007 SELF r3 self=r3 method="getEquipStarInfo"
+0008 GETTABLE r5 r1["star"]
+0009 GETTABLE r6 r2["quality"]
+0010 GETTABLE r7 r2["part"]
+0011 GETTABLE r8 r2["id"]
+0012 CALL A=3 B=6 C=2
+0013 SETTABLE r0["data"] r1
+0014 TESTSET A=4 B=3 C=1
+0015 JMP A=0 target=22
+0016 NEWTABLE A=4 B=0 C=5
+0017 SETTABLE r4["atkAdd"] 0
+0018 SETTABLE r4["defAdd"] 0
+0019 SETTABLE r4["hpAdd"] 0
+0020 SETTABLE r4["critAdd"] 0
+0021 SETTABLE r4["uncritAdd"] 0
+0022 SETTABLE r0["starInfo"] r4
+0023 SETTABLE r0["info"] r2
+0024 GETTABLE r4 r2["atk"]
+0025 GETTABLE r5 r0["starInfo"]
+0026 GETTABLE r5 r5["atkAdd"]
+0027 ADD r4 r4 r5
+0028 SETTABLE r0["curAtk"] r4
+0029 GETTABLE r4 r2["def"]
+0030 GETTABLE r5 r0["starInfo"]
+0031 GETTABLE r5 r5["defAdd"]
+0032 ADD r4 r4 r5
+0033 SETTABLE r0["curDef"] r4
+0034 GETTABLE r4 r2["hp"]
+0035 GETTABLE r5 r0["starInfo"]
+0036 GETTABLE r5 r5["hpAdd"]
+0037 ADD r4 r4 r5
+0038 SETTABLE r0["curHp"] r4
+0039 GETTABLE r4 r2["antResist"]
+0040 GETTABLE r5 r0["starInfo"]
+0041 GETTABLE r5 r5["critAdd"]
+0042 ADD r4 r4 r5
+0043 SETTABLE r0["curCrit"] r4
+0044 GETTABLE r4 r2["resist"]
+0045 GETTABLE r5 r0["starInfo"]
+0046 GETTABLE r5 r5["uncritAdd"]
+0047 ADD r4 r4 r5
+0048 SETTABLE r0["curUnCrit"] r4
+0049 GETGLOBAL r4 "DataManager"
+0050 GETTABLE r4 r4["getEquipPower"]
+0051 GETTABLE r5 r0["curAtk"]
+0052 GETTABLE r6 r0["curDef"]
+0053 GETTABLE r7 r0["curHp"]
+0054 GETTABLE r8 r0["curCrit"]
+0055 GETTABLE r9 r0["curUnCrit"]
+0056 CALL A=4 B=6 C=2
+0057 SETTABLE r0["power"] r4
+0058 RETURN A=0 B=1 C=0

@@ -1,0 +1,450 @@
+SHA256 87ded60fa5e247281af8ab5e4f81535326cef87d30a05069a46226c508db523c
+Static Lua 5.1 disassembly. PCs and nested function indexes are zero-based. No code executed.
+
+FUNCTION 2
+CONSTANTS ["curEquipId", "print", "self.curEquipId != nil", "DataManager", "_allEquips", "data", "exp", 0, "ipairs", "selectEquipList", "LibraryManager", "lib_equipStarInfo", "getEquipStarInfo", "star", "info", "quality", "part", "id", "expHave", 1, "layout", "getChild", "icon", "removeAllChildren", "expCost", -1, "isUpStar", "shuxing", "show", "", "extType", "getElementStringFromInt", "extSubType", "系", "DragonNames", "getNamesByType", "额外增加", "getAtomStringFromInt", "extAtom", "atkAdd", "hpAdd", "defAdd", "enhExt", "uncritAdd", "critAdd", "add", "display", "newSprite", "#ui_dragon_x0006.png", "hide", "Config_LocaleText", "lang", "ATK", "增加:", "HP", "DEF", "增加：", "强化经验:", "免爆增加:", "暴击增加:", 4, "miaoshu", "setString", "shuzi", "fujia", 3, "cost", "expense_num", "+", "star_up_btn", "setButtonEnabled", "math", "floor", 100, "progress", "setPercentage", "jindu", "txt_shuzi", "经验: ", "/", "isMax", "已达最高等级"]
+0000 GETTABLE r2 r0["curEquipId"]
+0001 TEST A=2 B=0 C=0
+0002 JMP A=0 target=10
+0003 GETGLOBAL r2 "print"
+0004 LOADK r3 "self.curEquipId != nil"
+0005 CALL A=2 B=2 C=1
+0006 GETGLOBAL r2 "DataManager"
+0007 GETTABLE r2 r2["_allEquips"]
+0008 GETTABLE r3 r0["curEquipId"]
+0009 GETTABLE r1 r2[r3]
+0010 TEST A=1 B=0 C=1
+0011 JMP A=0 target=13
+0012 RETURN A=0 B=1 C=0
+0013 GETTABLE r2 r1["data"]
+0014 GETTABLE r2 r2["exp"]
+0015 LOADK r3 0
+0016 SETUPVAL A=3 B=0 C=0
+0017 GETGLOBAL r3 "ipairs"
+0018 GETTABLE r4 r0["selectEquipList"]
+0019 CALL A=3 B=2 C=4
+0020 JMP A=0 target=37
+0021 GETGLOBAL r8 "LibraryManager"
+0022 GETTABLE r8 r8["lib_equipStarInfo"]
+0023 SELF r8 self=r8 method="getEquipStarInfo"
+0024 GETTABLE r10 r7["data"]
+0025 GETTABLE r10 r10["star"]
+0026 GETTABLE r11 r7["info"]
+0027 GETTABLE r11 r11["quality"]
+0028 GETTABLE r12 r7["info"]
+0029 GETTABLE r12 r12["part"]
+0030 GETTABLE r13 r7["info"]
+0031 GETTABLE r13 r13["id"]
+0032 GETTABLE r14 r7["info"]
+0033 GETTABLE r14 r14["id"]
+0034 CALL A=8 B=7 C=2
+0035 GETTABLE r9 r8["expHave"]
+0036 ADD r2 r2 r9
+0037 TFORLOOP A=3 B=0 C=2
+0038 JMP A=0 target=21
+0039 LOADK r3 1
+0040 GETUPVAL A=4 B=1 C=0
+0041 LOADK r5 1
+0042 FORPREP A=3 target=54
+0043 GETTABLE r7 r0["layout"]
+0044 GETTABLE r7 r7["getChild"]
+0045 LOADK r8 "star"
+0046 MOVE A=9 B=6 C=0
+0047 CONCAT A=8 B=8 C=9
+0048 CALL A=7 B=2 C=2
+0049 GETTABLE r7 r7["getChild"]
+0050 LOADK r8 "icon"
+0051 CALL A=7 B=2 C=2
+0052 SELF r7 self=r7 method="removeAllChildren"
+0053 CALL A=7 B=2 C=1
+0054 FORLOOP A=3 target=43
+0055 TEST A=1 B=0 C=0
+0056 JMP A=0 target=376
+0057 GETUPVAL A=3 B=2 C=0
+0058 GETTABLE r4 r1["info"]
+0059 GETTABLE r4 r4["quality"]
+0060 GETTABLE r3 r3[r4]
+0061 GETGLOBAL r4 "LibraryManager"
+0062 GETTABLE r4 r4["lib_equipStarInfo"]
+0063 SELF r4 self=r4 method="getEquipStarInfo"
+0064 GETTABLE r6 r1["data"]
+0065 GETTABLE r6 r6["star"]
+0066 GETTABLE r7 r1["info"]
+0067 GETTABLE r7 r7["quality"]
+0068 GETTABLE r8 r1["info"]
+0069 GETTABLE r8 r8["part"]
+0070 GETTABLE r9 r1["info"]
+0071 GETTABLE r9 r9["id"]
+0072 CALL A=4 B=6 C=2
+0073 GETTABLE r5 r4["star"]
+0074 MOVE A=6 B=2 C=0
+0075 LOADNIL A=7 B=7 C=0
+0076 ADD r5 r5 1
+0077 GETGLOBAL r8 "LibraryManager"
+0078 GETTABLE r8 r8["lib_equipStarInfo"]
+0079 SELF r8 self=r8 method="getEquipStarInfo"
+0080 SUB r10 r5 1
+0081 GETTABLE r11 r1["info"]
+0082 GETTABLE r11 r11["quality"]
+0083 GETTABLE r12 r1["info"]
+0084 GETTABLE r12 r12["part"]
+0085 GETTABLE r13 r1["info"]
+0086 GETTABLE r13 r13["id"]
+0087 CALL A=8 B=6 C=2
+0088 TEST A=8 B=0 C=0
+0089 JMP A=0 target=110
+0090 GETTABLE r9 r8["expCost"]
+0091 LT A=1 r6 r9
+0092 JMP A=0 target=96
+0093 GETTABLE r9 r8["expCost"]
+0094 EQ A=0 r9 -1
+0095 JMP A=0 target=99
+0096 MOVE A=7 B=8 C=0
+0097 JMP A=0 target=110
+0098 JMP A=0 target=106
+0099 GETTABLE r9 r8["expCost"]
+0100 SUB r6 r6 r9
+0101 MOVE A=7 B=8 C=0
+0102 LOADBOOL A=9 B=1 C=0
+0103 SETGLOBAL r9 "isUpStar"
+0104 JMP A=0 target=106
+0105 JMP A=0 target=110
+0106 LT A=0 r3 r5
+0107 JMP A=0 target=76
+0108 JMP A=0 target=110
+0109 JMP A=0 target=76
+0110 TEST A=7 B=0 C=1
+0111 JMP A=0 target=113
+0112 MOVE A=7 B=4 C=0
+0113 GETTABLE r8 r0["layout"]
+0114 GETTABLE r8 r8["getChild"]
+0115 LOADK r9 "shuxing"
+0116 CALL A=8 B=2 C=2
+0117 TEST A=7 B=0 C=0
+0118 JMP A=0 target=297
+0119 SELF r9 self=r8 method="show"
+0120 CALL A=9 B=2 C=1
+0121 LOADK r9 ""
+0122 GETTABLE r10 r1["info"]
+0123 GETTABLE r10 r10["extType"]
+0124 EQ A=0 r10 1
+0125 JMP A=0 target=133
+0126 GETGLOBAL r10 "getElementStringFromInt"
+0127 GETTABLE r11 r1["info"]
+0128 GETTABLE r11 r11["extSubType"]
+0129 CALL A=10 B=2 C=2
+0130 LOADK r11 "系"
+0131 CONCAT A=9 B=10 C=11
+0132 JMP A=0 target=139
+0133 GETGLOBAL r10 "DragonNames"
+0134 GETTABLE r10 r10["getNamesByType"]
+0135 GETTABLE r11 r1["info"]
+0136 GETTABLE r11 r11["extSubType"]
+0137 CALL A=10 B=2 C=2
+0138 ADD r9 "额外增加" r10
+0139 MOVE A=10 B=9 C=0
+0140 GETUPVAL A=11 B=3 C=0
+0141 GETTABLE r11 r11["getAtomStringFromInt"]
+0142 GETTABLE r12 r1["info"]
+0143 GETTABLE r12 r12["extAtom"]
+0144 CALL A=11 B=2 C=2
+0145 CONCAT A=9 B=10 C=11
+0146 NEWTABLE A=10 B=6 C=0
+0147 GETTABLE r11 r4["atkAdd"]
+0148 GETTABLE r12 r4["hpAdd"]
+0149 GETTABLE r13 r4["defAdd"]
+0150 GETTABLE r14 r4["enhExt"]
+0151 GETTABLE r15 r4["uncritAdd"]
+0152 GETTABLE r16 r4["critAdd"]
+0153 SETLIST A=10 B=6 C=1
+0154 NEWTABLE A=11 B=6 C=0
+0155 GETTABLE r12 r7["atkAdd"]
+0156 GETTABLE r13 r7["hpAdd"]
+0157 GETTABLE r14 r7["defAdd"]
+0158 GETTABLE r15 r7["enhExt"]
+0159 GETTABLE r16 r7["uncritAdd"]
+0160 GETTABLE r17 r7["critAdd"]
+0161 SETLIST A=11 B=6 C=1
+0162 LOADK r12 1
+0163 MOVE A=13 B=3 C=0
+0164 LOADK r14 1
+0165 FORPREP A=12 target=186
+0166 GETTABLE r16 r0["layout"]
+0167 GETTABLE r16 r16["getChild"]
+0168 LOADK r17 "star"
+0169 MOVE A=18 B=15 C=0
+0170 CONCAT A=17 B=17 C=18
+0171 CALL A=16 B=2 C=2
+0172 SELF r17 self=r16 method="show"
+0173 CALL A=17 B=2 C=1
+0174 GETTABLE r17 r7["star"]
+0175 LE A=0 r15 r17
+0176 JMP A=0 target=186
+0177 GETTABLE r17 r16["getChild"]
+0178 LOADK r18 "icon"
+0179 CALL A=17 B=2 C=2
+0180 SELF r17 self=r17 method="add"
+0181 GETGLOBAL r19 "display"
+0182 GETTABLE r19 r19["newSprite"]
+0183 LOADK r20 "#ui_dragon_x0006.png"
+0184 CALL A=19 B=2 C=0
+0185 CALL A=17 B=0 C=1
+0186 FORLOOP A=12 target=166
+0187 ADD r12 r3 1
+0188 GETUPVAL A=13 B=1 C=0
+0189 LOADK r14 1
+0190 FORPREP A=12 target=199
+0191 GETTABLE r16 r0["layout"]
+0192 GETTABLE r16 r16["getChild"]
+0193 LOADK r17 "star"
+0194 MOVE A=18 B=15 C=0
+0195 CONCAT A=17 B=17 C=18
+0196 CALL A=16 B=2 C=2
+0197 SELF r16 self=r16 method="hide"
+0198 CALL A=16 B=2 C=1
+0199 FORLOOP A=12 target=191
+0200 NEWTABLE A=12 B=6 C=0
+0201 GETGLOBAL r13 "Config_LocaleText"
+0202 GETTABLE r13 r13["lang"]
+0203 LOADK r14 "ATK"
+0204 CALL A=13 B=2 C=2
+0205 LOADK r14 "增加:"
+0206 CONCAT A=13 B=13 C=14
+0207 GETGLOBAL r14 "Config_LocaleText"
+0208 GETTABLE r14 r14["lang"]
+0209 LOADK r15 "HP"
+0210 CALL A=14 B=2 C=2
+0211 LOADK r15 "增加:"
+0212 CONCAT A=14 B=14 C=15
+0213 GETGLOBAL r15 "Config_LocaleText"
+0214 GETTABLE r15 r15["lang"]
+0215 LOADK r16 "DEF"
+0216 CALL A=15 B=2 C=2
+0217 LOADK r16 "增加："
+0218 CONCAT A=15 B=15 C=16
+0219 LOADK r16 "强化经验:"
+0220 LOADK r17 "免爆增加:"
+0221 LOADK r18 "暴击增加:"
+0222 SETLIST A=12 B=6 C=1
+0223 LOADK r13 1
+0224 LOADK r14 1
+0225 LEN A=15 B=12 C=0
+0226 LOADK r16 1
+0227 FORPREP A=14 target=269
+0228 GETTABLE r18 r10[r17]
+0229 TEST A=18 B=0 C=0
+0230 JMP A=0 target=269
+0231 GETTABLE r18 r11[r17]
+0232 TEST A=18 B=0 C=0
+0233 JMP A=0 target=269
+0234 GETTABLE r18 r11[r17]
+0235 LT A=0 0 r18
+0236 JMP A=0 target=269
+0237 LT A=0 r13 4
+0238 JMP A=0 target=269
+0239 GETTABLE r18 r8["getChild"]
+0240 LOADK r19 "shuxing"
+0241 MOVE A=20 B=13 C=0
+0242 CONCAT A=19 B=19 C=20
+0243 CALL A=18 B=2 C=2
+0244 GETTABLE r19 r18["getChild"]
+0245 LOADK r20 "miaoshu"
+0246 CALL A=19 B=2 C=2
+0247 SELF r19 self=r19 method="setString"
+0248 GETTABLE r21 r12[r17]
+0249 CALL A=19 B=3 C=1
+0250 GETTABLE r19 r18["getChild"]
+0251 LOADK r20 "shuzi"
+0252 CALL A=19 B=2 C=2
+0253 SELF r19 self=r19 method="setString"
+0254 LOADK r21 ""
+0255 GETTABLE r22 r10[r17]
+0256 CONCAT A=21 B=21 C=22
+0257 CALL A=19 B=3 C=1
+0258 GETTABLE r19 r18["getChild"]
+0259 LOADK r20 "fujia"
+0260 CALL A=19 B=2 C=2
+0261 SELF r19 self=r19 method="setString"
+0262 LOADK r21 ""
+0263 GETTABLE r22 r11[r17]
+0264 CONCAT A=21 B=21 C=22
+0265 CALL A=19 B=3 C=1
+0266 SELF r19 self=r18 method="show"
+0267 CALL A=19 B=2 C=1
+0268 ADD r13 r13 1
+0269 FORLOOP A=14 target=228
+0270 MOVE A=14 B=13 C=0
+0271 LOADK r15 3
+0272 LOADK r16 1
+0273 FORPREP A=14 target=281
+0274 GETTABLE r18 r8["getChild"]
+0275 LOADK r19 "shuxing"
+0276 MOVE A=20 B=17 C=0
+0277 CONCAT A=19 B=19 C=20
+0278 CALL A=18 B=2 C=2
+0279 SELF r18 self=r18 method="hide"
+0280 CALL A=18 B=2 C=1
+0281 FORLOOP A=14 target=274
+0282 GETTABLE r14 r4["cost"]
+0283 GETTABLE r15 r0["selectEquipList"]
+0284 LEN A=15 B=15 C=0
+0285 MUL r14 r14 r15
+0286 SETUPVAL A=14 B=0 C=0
+0287 GETTABLE r14 r0["layout"]
+0288 GETTABLE r14 r14["getChild"]
+0289 LOADK r15 "expense_num"
+0290 CALL A=14 B=2 C=2
+0291 SELF r14 self=r14 method="setString"
+0292 LOADK r16 ""
+0293 GETUPVAL A=17 B=0 C=0
+0294 CONCAT A=16 B=16 C=17
+0295 CALL A=14 B=3 C=1
+0296 JMP A=0 target=299
+0297 SELF r9 self=r8 method="hide"
+0298 CALL A=9 B=2 C=1
+0299 LOADK r9 ""
+0300 GETTABLE r10 r1["data"]
+0301 GETTABLE r10 r10["exp"]
+0302 CONCAT A=9 B=9 C=10
+0303 GETTABLE r10 r1["data"]
+0304 GETTABLE r10 r10["exp"]
+0305 SUB r10 r2 r10
+0306 LT A=0 0 r10
+0307 JMP A=0 target=312
+0308 MOVE A=11 B=9 C=0
+0309 LOADK r12 "+"
+0310 MOVE A=13 B=10 C=0
+0311 CONCAT A=9 B=11 C=13
+0312 LT A=0 0 r10
+0313 JMP A=0 target=318
+0314 GETTABLE r11 r0["star_up_btn"]
+0315 SELF r11 self=r11 method="setButtonEnabled"
+0316 LOADBOOL A=13 B=1 C=0
+0317 CALL A=11 B=3 C=1
+0318 GETTABLE r11 r4["expCost"]
+0319 LOADK r12 0
+0320 EQ A=0 r11 -1
+0321 JMP A=0 target=324
+0322 LOADK r11 0
+0323 JMP A=0 target=330
+0324 GETGLOBAL r13 "math"
+0325 GETTABLE r13 r13["floor"]
+0326 MUL r14 r2 100
+0327 DIV r14 r14 r11
+0328 CALL A=13 B=2 C=2
+0329 MOVE A=12 B=13 C=0
+0330 LT A=0 100 r12
+0331 JMP A=0 target=333
+0332 LOADK r12 100
+0333 GETTABLE r13 r0["progress"]
+0334 SELF r13 self=r13 method="setPercentage"
+0335 MOVE A=15 B=12 C=0
+0336 CALL A=13 B=3 C=1
+0337 GETTABLE r13 r0["layout"]
+0338 GETTABLE r13 r13["getChild"]
+0339 LOADK r14 "jindu"
+0340 CALL A=13 B=2 C=2
+0341 GETTABLE r13 r13["getChild"]
+0342 LOADK r14 "txt_shuzi"
+0343 CALL A=13 B=2 C=2
+0344 SELF r14 self=r13 method="setString"
+0345 LOADK r16 "经验: "
+0346 MOVE A=17 B=9 C=0
+0347 LOADK r18 "/"
+0348 MOVE A=19 B=11 C=0
+0349 CONCAT A=16 B=16 C=19
+0350 CALL A=14 B=3 C=1
+0351 SELF r14 self=r13 method="show"
+0352 CALL A=14 B=2 C=1
+0353 GETTABLE r14 r4["star"]
+0354 EQ A=0 r14 r3
+0355 JMP A=0 target=374
+0356 LOADBOOL A=14 B=1 C=0
+0357 SETGLOBAL r14 "isMax"
+0358 SELF r14 self=r8 method="show"
+0359 CALL A=14 B=2 C=1
+0360 GETTABLE r14 r0["layout"]
+0361 GETTABLE r14 r14["getChild"]
+0362 LOADK r15 "expense_num"
+0363 CALL A=14 B=2 C=2
+0364 SELF r14 self=r14 method="setString"
+0365 LOADK r16 "已达最高等级"
+0366 CALL A=14 B=3 C=1
+0367 SELF r14 self=r13 method="hide"
+0368 CALL A=14 B=2 C=1
+0369 GETTABLE r14 r0["star_up_btn"]
+0370 SELF r14 self=r14 method="setButtonEnabled"
+0371 LOADBOOL A=16 B=0 C=0
+0372 CALL A=14 B=3 C=1
+0373 JMP A=0 target=376
+0374 LOADBOOL A=14 B=0 C=0
+0375 SETGLOBAL r14 "isMax"
+0376 RETURN A=0 B=1 C=0
+
+FUNCTION 8
+CONSTANTS ["eatEquipList", "DataManager", "getSortedEquipList", "curEquipId", "_allEquips", "ipairs", "info", "quality", "data", "id", "formationData", "onBattleDragon", "part", 4, "table", "insert"]
+0000 NEWTABLE A=1 B=0 C=0
+0001 SETTABLE r0["eatEquipList"] r1
+0002 GETGLOBAL r1 "DataManager"
+0003 GETTABLE r1 r1["getSortedEquipList"]
+0004 CALL A=1 B=1 C=2
+0005 GETTABLE r2 r0["curEquipId"]
+0006 TEST A=2 B=0 C=0
+0007 JMP A=0 target=62
+0008 GETGLOBAL r2 "DataManager"
+0009 GETTABLE r2 r2["_allEquips"]
+0010 GETTABLE r3 r0["curEquipId"]
+0011 GETTABLE r2 r2[r3]
+0012 GETGLOBAL r3 "ipairs"
+0013 MOVE A=4 B=1 C=0
+0014 CALL A=3 B=2 C=4
+0015 JMP A=0 target=60
+0016 GETTABLE r8 r7["info"]
+0017 GETTABLE r8 r8["quality"]
+0018 GETTABLE r9 r2["info"]
+0019 GETTABLE r9 r9["quality"]
+0020 EQ A=0 r8 r9
+0021 JMP A=0 target=60
+0022 GETTABLE r8 r7["data"]
+0023 GETTABLE r8 r8["id"]
+0024 GETTABLE r9 r0["curEquipId"]
+0025 EQ A=1 r8 r9
+0026 JMP A=0 target=60
+0027 GETGLOBAL r8 "DataManager"
+0028 GETTABLE r8 r8["formationData"]
+0029 CALL A=8 B=1 C=2
+0030 GETTABLE r8 r8["onBattleDragon"]
+0031 MOVE A=9 B=7 C=0
+0032 CALL A=8 B=2 C=2
+0033 TEST A=8 B=0 C=1
+0034 JMP A=0 target=60
+0035 GETTABLE r8 r2["info"]
+0036 GETTABLE r8 r8["part"]
+0037 LT A=0 r8 4
+0038 JMP A=0 target=49
+0039 GETTABLE r8 r7["info"]
+0040 GETTABLE r8 r8["part"]
+0041 LT A=0 r8 4
+0042 JMP A=0 target=60
+0043 GETGLOBAL r8 "table"
+0044 GETTABLE r8 r8["insert"]
+0045 GETTABLE r9 r0["eatEquipList"]
+0046 MOVE A=10 B=7 C=0
+0047 CALL A=8 B=3 C=1
+0048 JMP A=0 target=60
+0049 GETTABLE r8 r7["info"]
+0050 GETTABLE r8 r8["part"]
+0051 GETTABLE r9 r2["info"]
+0052 GETTABLE r9 r9["part"]
+0053 EQ A=0 r8 r9
+0054 JMP A=0 target=60
+0055 GETGLOBAL r8 "table"
+0056 GETTABLE r8 r8["insert"]
+0057 GETTABLE r9 r0["eatEquipList"]
+0058 MOVE A=10 B=7 C=0
+0059 CALL A=8 B=3 C=1
+0060 TFORLOOP A=3 B=0 C=2
+0061 JMP A=0 target=16
+0062 GETTABLE r2 r0["eatEquipList"]
+0063 RETURN A=2 B=2 C=0
+0064 RETURN A=0 B=1 C=0

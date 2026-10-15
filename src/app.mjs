@@ -1,3 +1,4 @@
+import {openEquipmentStar} from './equipment-star-dialog.mjs';
 import {openBattleRewards,openLootBoxDialog,openLootBoxResults,openNodeReward} from './loot-dialog.mjs';
 import {equipmentFragment} from './loot.mjs';
 import {openEquipmentBag,confirmEquipmentDecompose} from './equip-bag-dialog.mjs';
@@ -116,6 +117,9 @@ document.addEventListener('click',async e=>{
   if(type==='acquisition'){await showAcquisition(id);return}
   if(type==='dragonMove'){selected=id;await openHabitatShop(state,{moveDragon:state.dragons.find(d=>d.id===id)});return}
   if(type==='returnMoveDragon'){await openDragonDialog(state,id);return}
+  if(type==='openEquipmentStar'){await openEquipmentStar(state,el.dataset.id);return}
+  if(type==='starMaterial'){const d=$('#modal'),ids=(d.dataset.starMaterialIds||'').split(',').filter(Boolean),next=ids.includes(el.dataset.id)?ids.filter(v=>v!==el.dataset.id):[...ids,el.dataset.id];await openEquipmentStar(state,d.dataset.equipmentId,next);return}
+  if(type==='starEquipment'){const d=$('#modal'),eid=d.dataset.equipmentId;await persist(action(state,type,{equipmentId:eid,ids:(d.dataset.starMaterialIds||'').split(',').filter(Boolean)}));render();await openEquipmentStar(state,eid);toast(state.log[0]);return}
   if(type==='openEquipmentBag'){await openEquipmentBag(state,el.dataset.value);return}
   if(type==='equipmentBagFilter'){const part=Number(el.dataset.value);const icons=[['ui_equip_c0010.png','ui_equip_a0010.png'],['ui_equip_c0011.png','ui_equip_a0011.png'],['ui_equip_c0013.png','ui_equip_a0013.png'],['ui_equip_c0012.png','ui_equip_a0012.png'],['ui_equip_c0014.png','ui_equip_a0014.png'],['ui_equip_yi1.png','ui_equip_yi2.png'],['ui_equip_guan1.png','ui_equip_guan2.png']];document.querySelectorAll('[data-action=equipmentBagFilter]').forEach(b=>{const active=Number(b.dataset.value)===part;b.setAttribute('aria-pressed',String(active));b.querySelector('img').src='assets/original/ui/'+icons[Number(b.dataset.value)+1][active?0:1]});document.querySelectorAll('.source-bag-equipment').forEach(e=>e.hidden=part>=0&&(e.dataset.fragmentId?equipmentFragment(e.dataset.fragmentId)?.part:definitionPart(equipmentInstance(state,e.dataset.id)))!==part);return}
   if(type==='selectDecomposeEquipment'||type==='selectAllDecomposeEquipment'){const modal=$('#modal'),current=(modal.dataset.selectedEquipmentIds||'').split(',').filter(Boolean),ids=type==='selectAllDecomposeEquipment'?(current.length===state.equipment.filter(e=>!e.dragonid).length?[]:state.equipment.filter(e=>!e.dragonid).map(e=>e.id)):current.includes(el.dataset.id)?current.filter(id=>id!==el.dataset.id):[...current,el.dataset.id];await openEquipmentBag(state,'decompose',ids);return}

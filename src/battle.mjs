@@ -30,7 +30,7 @@ export function dragonAttributes(dragon,state=null){
  const attack=Math.floor(row.baseAttack+(level-1)*row.attackQuality)+bonus.atk+gems.attack;
  const defend=Math.floor(row.baseDefence+(level-1)*row.defenceQuality)+bonus.def+gems.defend;
  const life=Math.floor(row.baseLife+(level-1)*row.lifeQuality)+bonus.hp+gems.blood;
- return {attack,defend,life,crit:gems.crit,uncrit:gems.uncrit,quality:species.quality};
+ return {attack,defend,life,crit:gems.crit+(bonus.antResist??0),uncrit:gems.uncrit+(bonus.resist??0),quality:species.quality};
 }
 
 export function dragonPower(dragon,state=null){

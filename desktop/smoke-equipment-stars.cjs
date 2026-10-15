@@ -1,0 +1,15 @@
+const assert=require('node:assert/strict'),fs=require('node:fs/promises'),path=require('node:path'),wait=ms=>new Promise(r=>setTimeout(r,ms));
+exports.prepare=async store=>{assert.equal((await store.load()).state,null);const {createGame}=await import('../src/game.mjs'),{createEquipmentInstance}=await import('../src/equipment.mjs');const s=createGame();s.coins=1000000;s.equipment=Array.from({length:8},(_,i)=>createEquipmentInstance('eq-'+(i+1),301101));s.equipment[0].dragonid=2;s.nextEquipId=9;await store.save(s)};
+exports.run=async(w,store,verify=false)=>{
+ const js=c=>w.webContents.executeJavaScript(c),click=async s=>{assert(await js(`!!document.querySelector(${JSON.stringify(s)})`),s);await js(`document.querySelector(${JSON.stringify(s)}).click();true`);await wait(350)};
+ for(let i=0;i<80;i++){if(await js("!!document.querySelector('.original-hud')"))break;await wait(100)}
+ if(verify){const s=(await store.load()).state;assert.equal(s.equipment[0].star,1);assert.equal(s.equipment[0].exp,1);assert.equal(s.equipment.length,6);assert.equal(s.coins,944000);assert.equal(s.equipment[0].dragonid,2);console.log('PASS equipment stars independent restart, ownership and materials');return}
+ await click('[data-action=showMore]');await click('[data-action=openEquipmentBag]');await click('[data-action=openEquipmentBag][data-value="star"]');await click('[data-action=openEquipmentStar][data-id="eq-1"]');
+ assert.equal(await js("document.querySelector('#modal').dataset.mode"),'sourceEquipmentStar');assert.equal(await js("document.querySelectorAll('.source-star-material').length"),7);
+ await click('[data-action=starMaterial][data-id="eq-2"]');await click('.source-star-remove[data-id="eq-2"]');assert.equal(await js("document.querySelector('#modal').dataset.starMaterialIds"),'');await click('[data-action=starMaterial][data-id="eq-2"]');await click('[data-action=starMaterial][data-id="eq-3"]');
+ await fs.writeFile(path.join(__dirname,'..','work','equipment-stars-preview-qa.png'),(await w.webContents.capturePage()).toPNG());
+ assert.equal(await js("Array.from(document.images).filter(i=>i.src.includes('/assets/')&&i.complete&&!i.naturalWidth).length"),0);
+ await click('[data-action=starEquipment]');const s=(await store.load()).state;assert.equal(s.equipment[0].star,1);assert.equal(s.equipment[0].exp,1);assert.equal(s.coins,944000);assert.equal(s.equipment.length,6);
+ await fs.writeFile(path.join(__dirname,'..','work','equipment-stars-result-qa.png'),(await w.webContents.capturePage()).toPNG());
+ await click('[data-action=openEquipmentBag][data-value="star"]');await click('#modal [data-action=openEquip]');await click('[data-action=openEquipInfo][data-id="eq-1"]');assert.equal(await js("document.querySelector('[data-source=\"node_starinfo/txt_open_star1\"]').textContent"),'一星激活：攻击+363');await fs.writeFile(path.join(__dirname,'..','work','equipment-stars-detail-qa.png'),(await w.webContents.capturePage()).toPNG());console.log('PASS source star UI, add/remove selection, original cost/preview, transaction, activated detail and save');
+};

@@ -1,0 +1,44 @@
+{
+  "tablesSha256": "1408d684c2a6530668a8ed4816ad1697d579077fed5d02b887d06f035395e750",
+  "columns": [
+    "id",
+    "quality",
+    "part",
+    "star",
+    "expCost",
+    "expHave",
+    "enhAtk",
+    "enhDef",
+    "enhHp",
+    "enhExt",
+    "decomposeReward",
+    "starQuality",
+    "cost",
+    "atkAdd",
+    "defAdd",
+    "hpAdd",
+    "uncritAdd",
+    "critAdd",
+    "enhUnCrit",
+    "enhCrit",
+    "equipIDFix"
+  ],
+  "rows": 192,
+  "sourceSha256": {
+    "dragon/pconfig/librarys/equip/EquipStarInfo.lua": "b2a8d3bee291ecd169ab2d8c50dfd585186c6843f5c5267d7bf94a7e1ef05d66",
+    "dragon/pconfig/librarys/equip/EquipStarInfoLibrary.lua": "93f62f1c672b20108bf9c07a51ef80e8f3a8a914977dc22267564160a5153eb8",
+    "dragon/data/clientdatas/DataManager.lua": "260427d21eaeeb05ad9742adde0c3b103906bf8d4aac01f5e8eb4e84abe6c06a",
+    "ui/strengthen/EquipStarUpInfo.lua": "87ded60fa5e247281af8ab5e4f81535326cef87d30a05069a46226c508db523c"
+  },
+  "confirmed": [
+    "Lookup by star,quality,part and first three digits of equipment definition id",
+    "Quality 3 cap3; quality4/5 cap5; up to5 same-quality materials; regular parts0..3 cross-compatible, wings/crowns same part",
+    "Preview adds material star-row expHave to target exp; subtracts each expCost; coin cost=current target row cost times material count",
+    "DataManager function87: curAtk/Def/Hp=definition+star cumulative Add; curCrit=antResist+critAdd; curUnCrit=resist+uncritAdd"
+  ],
+  "offlinePolicies": [
+    "Settlement performed locally from client preview; authoritative server response unavailable",
+    "Protect all worn material equipment, stricter than source deployed-dragon filter",
+    "Retain residual exp at cap; no fabricated random traits or extType/extAtom conditional bonuses"
+  ]
+}

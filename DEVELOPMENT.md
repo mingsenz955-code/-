@@ -547,3 +547,13 @@
 - Electron隔离档实际2场战斗→掉领主箱+钥匙→仓库开箱→穿戴→独立重启通过，无注入货币/装备/箱子，测试只把基础龙喂养等级设20和固定RNG。碎片验收通过纯游戏action预先赚取10箱/钥匙后实际MAX开箱/合成/来源页/独立重启；奖励点验收仅用测试神圣龙打前三关后实际领取/拒绝重复/重启。没有向正式玩家发测试道具。冒险UI/效果/退出取消结算回归通过。
 - 截图battle-rewards-qa.png、warehouse-loot-qa.png、loot-box-use-qa.png、loot-box-result-qa.png、equipment-fragments-qa.png、adventure-node-reward-qa.png、equipment-source-qa.png已查看。v0.16.26打包，启动器下次选择新版，保留v12及所有旧存档字段。
 - 下一优先：装备升星/随机词条、原战斗技能调度/被动buff与敌队来源。其余皇冠/羽翼/皮肤/活动/扩建仍须逐项核验；maxAtkCnt/刷新限制、史诗钥匙来源、完整随机/粒子/音效不隐藏，不把本获取闭环标为全项完成。
+
+## 最新检查点 — v0.16.27 原装备升星闭环（2026-10-15）
+- 开始额度76%/周42%，ordinaryUsageAllowed=true，Git基线b56bef3干净；读取开发、证据、差异后接续装备升星。未改正式玩家等级/货币/道具，不重启正式窗口。
+- 静态确认EquipStarInfo21列/192行、EquipStarInfoLibrary首3位equipIDFix匹配、EquipStarUpInfo根quality3上限3/quality4和5上限5；最多5材料，同品质，部位0–3互吞、羽翼/皇冠各同部位。材料经验用其星级行expHave（不另加材料残余exp），目标残余经验逐级减expCost；费用为当前目标星级行cost×材料数。export-equipment-stars.py可复现，反汇编与源SHA登记reference/equipment-stars-provenance.json。
+- 接通装备组升星页和详情升星入口，使用原item_star_up_zuo_equip_up/item_star_up_you_equip_up布局、法阵背景/星图/五材料槽/右侧材料列表/消耗和按钮。预览星级、累积属性、材料选择/移除、金币不足禁用，操作原子扣费/吞噬/保存；详情使用源逐星enh增量显示激活/未激活行，背包显示当前累计属性。
+- DataManager函数87证实curAtk/Def/Hp=基础+星级累计Add，curCrit=antResist+critAdd，curUnCrit=resist+uncritAdd。接入战斗及阵容数字，修正此前强化/背包暴击免暴字段互换。随机词条、ext条件加成、原技能/被动/服务器战报仍未实现，不宣称等同完整原服战斗。
+- 服务器升星响应未取得，离线使用客户端预览结算；满星残余经验保留是本地政策。材料保护所有已穿戴装备，比原仅保护出战龙更严格。升星粒子/音效/右侧选材卡逐项实机对照、强化预览附加星级值仍需完善。
+- 132项Node检查全绿，覆盖所有源行/6000装备查表、部分经验/多级/上限/吞噬和费用/非法材料/已穿戴保护/不足费用不改档/累积攻防血和暴击免暴。Electron隔离档实际HUD进入→升星页→选材/移除→预览→升星→详情激活文字→存档；独立重启持久化通过。强化1/10次、宝石镶嵌/吞噬升级回归通过。测试明确使用蓝装和金币fixture，仅隔离档，普通来源继承v26箱子/碎片闭环。
+- 截图work/equipment-stars-preview-qa.png、equipment-stars-result-qa.png、equipment-stars-detail-qa.png已查看；v0.16.27打包，启动器下次选择新版。存档版本12不变。
+- 下一步：装备随机词条取证与原战斗技能调度/被动buff、敌队映射。皮肤、皇冠羽翼、原特效音效、多岛扩建和活动仍须逐项继续，不标全项完成。

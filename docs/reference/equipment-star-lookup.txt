@@ -1,0 +1,33 @@
+SHA256 93f62f1c672b20108bf9c07a51ef80e8f3a8a914977dc22267564160a5153eb8
+Static Lua 5.1 disassembly. PCs and nested function indexes are zero-based. No code executed.
+
+FUNCTION 1
+CONSTANTS ["string", "sub", 1, 3, "pairs", "lib", "star", "quality", "part", "equipIDFix"]
+0000 GETGLOBAL r5 "string"
+0001 GETTABLE r5 r5["sub"]
+0002 MOVE A=6 B=4 C=0
+0003 LOADK r7 1
+0004 LOADK r8 3
+0005 CALL A=5 B=4 C=2
+0006 GETGLOBAL r6 "pairs"
+0007 GETTABLE r7 r0["lib"]
+0008 CALL A=6 B=2 C=4
+0009 JMP A=0 target=23
+0010 GETTABLE r11 r10["star"]
+0011 EQ A=0 r11 r1
+0012 JMP A=0 target=23
+0013 GETTABLE r11 r10["quality"]
+0014 EQ A=0 r11 r2
+0015 JMP A=0 target=23
+0016 GETTABLE r11 r10["part"]
+0017 EQ A=0 r11 r3
+0018 JMP A=0 target=23
+0019 GETTABLE r11 r10["equipIDFix"]
+0020 EQ A=0 r5 r11
+0021 JMP A=0 target=23
+0022 RETURN A=10 B=2 C=0
+0023 TFORLOOP A=6 B=0 C=2
+0024 JMP A=0 target=10
+0025 LOADNIL A=6 B=6 C=0
+0026 RETURN A=6 B=2 C=0
+0027 RETURN A=0 B=1 C=0
