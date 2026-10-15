@@ -1,6 +1,7 @@
+import {formationPosition} from './formation.mjs';
 import SOURCE from '../assets/original/data/world-encounters.mjs';
-import {SPECIES,ORIGINAL_LEVELS} from './data.mjs';
-import {configuredLineup,dragonAttributes} from './battle.mjs';
+import {SPECIES} from './data.mjs';
+import {configuredLineup,dragonAttributes,dragonPower} from './battle.mjs';
 export {SOURCE as WORLD_SOURCE};
 export const ENCOUNTER_POLICY='offline-source-world-v1';
 const day=now=>Math.floor((now+28800000)/86400000);
@@ -12,7 +13,8 @@ export function availableSeeds(level,now=Date.now()){const stamp=str=>{const m=s
 export function monster(id){const r=SOURCE.monsters.find(m=>m.id===id);if(!r)throw Error('原怪物配置尚未取得。');const species=Object.keys(SPECIES).find(k=>SPECIES[k].originalId===r.dragonId);if(!species)throw Error('原龙模型尚未取得。');return {...r,species};}
 export function bossInfo(s){return {...monster(SOURCE.bossStages[s.encounters.boss.stage].id),...SOURCE.bossStages[s.encounters.boss.stage]};}
 export function bossAttackPlan(s){const b=bossInfo(s),team=configuredLineup(s);if(!team.length)throw Error('请先布阵至少一条龙。');let remaining=b.life-s.encounters.boss.damage;const hits=[];for(let round=0;round<3&&remaining>0;round++)for(let i=0;i<team.length&&remaining>0;i++){const stats=dragonAttributes(team[i],s),damage=Math.min(remaining,Math.max(1,Math.floor(stats.attack*.8-b.defend*.15)));remaining-=damage;hits.push({index:i,damage,round:round+1});}return {hits,damage:hits.reduce((sum,h)=>sum+h.damage,0),won:remaining===0,enemy:b,startHp:b.life-s.encounters.boss.damage};}
-// User-requested offline difficulty tuning. Keep source robot/model/skills intact;
-// fixed ranch-level tiers do not follow formation power or equipment changes.
-export const TREE_NPC_TIERS=[{name:'精英',power:110000,level:20},{name:'强敌',power:160000,level:25},{name:'霸主',power:220000,level:30}];
-export function treeOpponent(s,id){const r=SOURCE.robots.find(r=>r.id===id);if(!r)throw Error('圣树对手不存在。');const original=monster(r.monsterId),tier=TREE_NPC_TIERS[r.id-1],ranchLevel=(ORIGINAL_LEVELS.findLast(l=>l.xp_required<=(s.playerXp??0))??ORIGINAL_LEVELS[0]).level,progress=Math.max(0,Math.min(1,(ranchLevel-10)/89)),base=original.attack+original.defend+original.life/3,target=Math.max(base,tier.power*progress**2),scale=target/base,enemy={...original,attack:Math.floor(original.attack*scale),defend:Math.floor(original.defend*scale),life:Math.floor(original.life*scale),level:Math.max(original.level,Math.round(original.level+(tier.level-original.level)*progress))},power=Math.floor(enemy.attack+enemy.defend+enemy.life/3);return {...r,enemy,power,difficulty:tier.name};}
+// User-requested adaptive offline balance. Select the strongest legal owned team,
+// independent of currently selected formation; use 25% steps so small upgrades help.
+export const TREE_NPC_TIERS=[{name:'精英',ratio:.75},{name:'强敌',ratio:.95},{name:'霸主',ratio:1.1}];
+export function treeDifficultyReference(s){const candidates=s.dragons.filter(d=>d.level>=7).map(d=>({dragon:d,power:dragonPower(d,s)??0})).sort((a,b)=>b.power-a.power),team=[],seen=new Set(),count=[0,0];for(const v of candidates){const key=SPECIES[v.dragon.species]?.originalId??v.dragon.species,pos=formationPosition(v.dragon);if(seen.has(key)||count[pos]>=4)continue;team.push(v);seen.add(key);count[pos]++;if(team.length===6)break;}const power=Math.max(1,team.reduce((sum,v)=>sum+v.power,0)||Math.max(1,...s.dragons.map(d=>dragonPower(d,s)??0))),bucket=power<100?power:100*1.25**Math.floor(Math.log(power/100)/Math.log(1.25));return {power,bucket,level:team.length?Math.round(team.reduce((sum,v)=>sum+v.dragon.level,0)/team.length):Math.max(1,...s.dragons.map(d=>d.level))};}
+export function treeOpponent(s,id){const r=SOURCE.robots.find(r=>r.id===id);if(!r)throw Error('圣树对手不存在。');const original=monster(r.monsterId),tier=TREE_NPC_TIERS[r.id-1],reference=treeDifficultyReference(s),base=original.attack+original.defend+original.life/3,target=reference.bucket*tier.ratio,scale=target/base,enemy={...original,attack:Math.max(1,Math.floor(original.attack*scale)),defend:Math.max(1,Math.floor(original.defend*scale)),life:Math.max(1,Math.floor(original.life*scale)),level:Math.min(50,reference.level+r.id-1)},power=Math.floor(enemy.attack+enemy.defend+enemy.life/3);return {...r,enemy,power,difficulty:tier.name};}
