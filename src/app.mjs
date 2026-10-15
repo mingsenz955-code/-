@@ -103,7 +103,7 @@ document.addEventListener('click',async e=>{
   if(type==='bossBuyAttempt'){await persist(action(state,type));await openWorldBoss(state);toast(state.log[0]);return}
   if(type==='bossHistory'){const b=state.encounters.boss;await openNativePaper('首领战绩',`<p>累计伤害：${fmt(b.totalDamage)}</p><p>已击杀首领：${b.kills}</p>`,'sourceBossHistory');return}
   if(type==='bossAchievements'){await openNativePaper('首领成就',`<p>累计伤害：${fmt(state.encounters.boss.totalDamage)}</p><p>原成就阈值：100000、250000等；完整奖励类型与领取结算尚未核实。</p>`,'sourceBossAchievement');return}
-  if(type==='treePlunder'){const before=structuredClone(state),op=treeOpponent(state,id),won=lineupPower(configuredLineup(state),state)>=Math.floor(op.enemy.attack+op.enemy.defend+op.enemy.life/3);await persist(action(state,type,{id}));render();await openBattleDialog(before,{enemyGroup:[op.enemy]});if(await playBattleAnimation(before,null,{won,enemyGroup:[op.enemy]})){await openTreeTargets(state);toast(state.log[0]);}return}
+  if(type==='treePlunder'){const before=structuredClone(state),op=treeOpponent(state,id),won=lineupPower(configuredLineup(state),state)>=op.power;await persist(action(state,type,{id}));render();await openBattleDialog(before,{enemyGroup:[op.enemy]});if(await playBattleAnimation(before,null,{won,enemyGroup:[op.enemy]})){await openTreeTargets(state);toast(state.log[0]);}return}
   if(type==='openBloodFront'||type==='openArena'){await openNativePaper(type==='openArena'?'竞技之神':'血战前线','<p>原地图入口已恢复。此模式的离线挑战与奖励结算仍在开发，暂不伪造原服务器对手。</p>','sourceWorldModePending');return}
   if(type==='openRunes'||type==='openRuneHunt'){await openRuneHunt(state);return}
   if(type==='runeEquipment'){await openEquipDialog(state,selected);return}
