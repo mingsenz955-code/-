@@ -1,3 +1,4 @@
+import {openCatalogDetail} from './catalog-detail.mjs';
 import {openEquipmentStar} from './equipment-star-dialog.mjs';
 import {openBattleRewards,openLootBoxDialog,openLootBoxResults,openNodeReward} from './loot-dialog.mjs';
 import {equipmentFragment} from './loot.mjs';
@@ -114,6 +115,8 @@ document.addEventListener('click',async e=>{
   if(type==='openEvolution'){await openEvolutionDialog(state,id,{returnToCollection:$('#modal').dataset.returnToCollection==='true'});return}
   if(type==='returnFromEvolution'){await openDragonDialog(state,id,{returnToCollection:$('#modal').dataset.returnToCollection==='true'});return}
   if(type==='evolutionHelp'){await openNativePaper('进化说明',`<p>${escape(EVOLUTION_TEXT['ev.evolution tip'])}</p>`);return}
+  if(type==='catalogDetail'){await openCatalogDetail(state,id);return}
+  if(type==='returnCatalog'){await openCatalog(state);return}
   if(type==='acquisition'){await showAcquisition(id);return}
   if(type==='dragonMove'){selected=id;await openHabitatShop(state,{moveDragon:state.dragons.find(d=>d.id===id)});return}
   if(type==='returnMoveDragon'){await openDragonDialog(state,id);return}
@@ -202,7 +205,7 @@ document.addEventListener('click',async e=>{
   if(type==='move')payload.habitatId??=Number($('#move-target')?.value);
   if(type==='speedIncubator'){const cost=incubatorSpeedCost(state.incubator?.readyAt??0);if(!confirm(`立即完成孵化需要 ${cost} 魔晶，继续吗？`))return}
   if(type==='sellIncubator'){const sp=SPECIES[state.incubator?.species],gold=dragonSellGold(state.incubator?.species);if(!confirm(`确定出售${sp?.name??'幼龙'}并获得 ${gold} 金币吗？`))return}
-  if(type==='sellRaffleEgg'){const prize=state.raffle.pending.find(p=>p.id===id),species=prize?speciesKey(prize.dragonId):null,sp=SPECIES[species];if(!prize||!confirm(`确定出售${sp?.name??'这枚'}龙蛋并获得 ${dragonSellGold(species)} 金币吗？`))return}
+  if(type==='sellRaffleEgg'){const prize=[...state.raffle.pending,...(state.giftEggs??[])].find(p=>p.id===id),species=prize?speciesKey(prize.dragonId):null,sp=SPECIES[species];if(!prize||!confirm(`确定出售${sp?.name??'这枚'}龙蛋并获得 ${dragonSellGold(species)} 金币吗？`))return}
   if(type==='sellLotteryDragon'){const prize=state.lottery.pending.find(p=>p.id===id),species=prize?speciesKey(prize.itemId):null,sp=SPECIES[species];if(!prize||!confirm(`确定出售${sp?.name??'这只幼龙'}并获得 ${dragonSellGold(species)} 金币吗？`))return}
   if(type==='sellStructure'){const structure=state.structures.find(o=>o.id===id),info=structure&&structureInfo(structure);if(!info||!confirm(`确定出售${info.nameCN}吗？`))return}
   if(type==='buyStructure')payload.itemId=id;const returnToCollection=$('#modal').dataset.returnToCollection==='true';const refreshDragon=['feed','feedAll'].includes(type)&&$('#modal').dataset.mode==='sourceDragon'?Number($('#modal').dataset.dragonId):null;const refreshRecharge=type==='recharge';const refreshExpansion=type==='expandIsland';const equipDragon=(type==='unwearEquipment'||type==='wearEquipment')?(Number($('#modal').dataset.dragonId)||Number(el.dataset.id)||selected):null;const next=action(state,type,payload);await persist(next);if(['plant','harvest'].includes(type)&&$('#modal').dataset.mode==='farm')closeDialog();const refreshFarm=['upgradeFarm','completeFarmUpgrade'].includes(type)&&$('#modal').dataset.mode==='farm';render();if(refreshFarm){closeDialog();await openFarmDialog(state);tick();}if(refreshDragon)await openDragonDialog(state,refreshDragon,{returnToCollection});if(refreshLottery)await openLotteryDialog(state,lotteryMode);if(refreshWarehouse)await openWarehouse(state,warehouseGroup);if(refreshExpansion)await openExpansionShop(state);if(refreshRecharge)await openRechargeDialog(state);if(equipDragon)await openEquipDialog(state,equipDragon);if(type==='build')beginObjectMove('habitat',state.habitats.at(-1).id);else if(type==='buyStructure')beginObjectMove('structure',state.structures.at(-1).id);else if(['collect','upgradeHabitat','completeHabitat'].includes(type)&&priorMode==='nativeHabitatInfo')await openHabitatInfo(state,priorHabitat);else if(['breed','takeEgg'].includes(type))await openBreed(state);else if(['incubate','speedIncubator'].includes(type))await openIncubator(state);else if(['hatch','sellIncubator'].includes(type))closeDialog();else if(type==='move')await openDragonDialog(state,payload.id);tick();toast(state.log[0]);

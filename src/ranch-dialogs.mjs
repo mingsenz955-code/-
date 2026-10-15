@@ -113,7 +113,7 @@ export async function openCatalog(state,filter='all'){
  for(const [key,label] of Object.entries(attributes)){values[`book_ability/${key}/miaoshu`]=label;values[`book_ability/${key}/num`]='—'}
  const actions={close:{type:'close',label:'关闭图鉴'},help:{type:'catalogHelp',label:'图鉴说明'}},checked=new Set(['btn_dragon/btn','longzuleixing/'+filter]);
  for(const key of ['all','e','f','w','p','el','i','m','d'])actions['longzuleixing/'+key]={type:'catalogFilter',value:key,label:key};
- const cards=rows.map(dragon=>`<button class="native-book-card" data-action="acquisition" data-id="${dragon.id}" aria-label="${esc(dragon.name)}">${renderSourceLayout(item,{values:{name:dragon.name},hidden:new Set(['bg','ability1','ability2','new','lock']),slots:{daojukuang:image(`assets/original/ui/ui_daojukuang_DaoJuKuang${dragon.extended.quality}.png`,'native-book-frame'),icon:dragon.images[1]?image(dragon.images[1],'native-book-icon'):'<span>图像待补</span>'}})}</button>`).join('');
+ const cards=rows.map(dragon=>`<button class="native-book-card" data-action="catalogDetail" data-id="${dragon.id}" aria-label="${esc(dragon.name)}">${renderSourceLayout(item,{values:{name:dragon.name},hidden:new Set(['bg','ability1','ability2','new','lock']),slots:{daojukuang:image(`assets/original/ui/ui_daojukuang_DaoJuKuang${dragon.extended.quality}.png`,'native-book-frame'),icon:dragon.images[1]?image(dragon.images[1],'native-book-icon'):'<span>图像待补</span>'}})}</button>`).join('');
  showSource('nativeCatalog',renderSourceLayout(l,{values,actions,checked,progress:{exp:0},slots:{huadong:`<div class="native-book-list">${cards}</div>`}}),'native-fullscreen');
 }
 

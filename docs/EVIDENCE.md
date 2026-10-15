@@ -254,3 +254,7 @@
 - EquipStarInfo构造21列/192行与库查表键由静态反汇编确认；装备ID前三位分羽翼/皇冠族系。quality3 cap3、quality4/5 cap5来自EquipStarUpInfo根常量表，预览函数2、选材函数8、DataManager函数87累计属性、FormationEquipPanel函数3逐星激活标签均保留reference/equipment-star-*.txt。
 - 费用=当前星级行cost×材料件数；累计目标exp+各材料星级expHave，逐级扣expCost。服务器Socket响应未取得，离线执行预览量，不伪造随机词条/条件属性。
 - 原布局item_star_up_zuo_equip_up/item_star_up_you_equip_up已接入；132项Node及Electron操作/独立读档验证通过。源哈希/列名/差异：reference/equipment-stars-provenance.json。
+
+## v0.16.28 图鉴数值与远古赠送
+- 数值来自已有dragonAttributes/dragonPower客户端成长、装备累计星级、宝石和符文战力；未拥有Lv1，已拥有当前最高等级。原PVEBattleResultPanel第71行仅isWin才开奖励面板，本轮未改胜负算法。
+- catalog中文name以远古开头的5种ID1200/1202/1203/1205/1206有证据，用户授权赠送每种1枚；独立giftEggs，记录防重，不纳入原版奖池证据。

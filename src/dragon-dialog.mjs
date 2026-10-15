@@ -1,3 +1,4 @@
+import {dragonAttributes,dragonPower} from './battle.mjs';
 import {SPECIES,RULES} from './data.mjs';
 import {feedCost,dragonRate,isBreedingParent} from './game.mjs';
 import {dragonArt} from './art.mjs';
@@ -6,8 +7,9 @@ const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&g
 let layoutPromise;
 export async function openDragonDialog(state,id,{returnToCollection=false}={}){const d=state.dragons.find(d=>d.id===id);if(!d)return;layoutPromise??=fetch('assets/original/layouts/ui_dragon.json').then(r=>r.json());const layout=await layoutPromise,sp=SPECIES[d.species],busy=isBreedingParent(state,id),dialog=document.querySelector('#modal');if(dialog.open)dialog.close();dialog.className='source-dragon-dialog';dialog.dataset.mode='sourceDragon';dialog.dataset.dragonId=id;dialog.dataset.returnToCollection=String(returnToCollection);
  const values={txt_name:'喂养',txt_dragonname:sp.name,long_name:sp.name,zhongzu:'种族：',xingji:'类型：',xibie:sp.rarity,shuxing:'属性：',chanchu:'产出：','ziyuanchanchu/gold':dragonRate(d)+'/分钟','ziyuanchanchu/baifenbi':'',lv_miaoshu:'等级：',txt_ShiWu:state.food.toLocaleString('zh-CN'),'weishi/txt_name':'喂食','weishi/txt_name_t':feedCost(d),'weishi_vip/txt_name':'一键喂食','yidong/txt_name':'移动','chushou/txt_name':'出售',teshumiaoshu:busy?'亲代正在培育山，繁殖结束后可以喂养。':d.level>=RULES.maxLevel?'当前离线养成等级上限':'',evolution_dsp:'进化条件'};
- const labels={shengming:'生命：',gongji:'攻击：',fangyu:'防御：',kangxing:'抗性：',baoji:'暴击：',pingding:'战斗力：'};
- for(const [key,label] of Object.entries(labels)){values[key+'/miaoshu']=label;values[key+'/shuzi']='—';values[key+'/fujia']=''}
+ const stats=dragonAttributes(d,state),numbers={shengming:stats?.life,gongji:stats?.attack,fangyu:stats?.defend,kangxing:stats?.uncrit,baoji:stats?.crit,pingding:dragonPower(d,state)};
+ const labels={shengming:'生命：',gongji:'攻击：',fangyu:'防御：',kangxing:'免暴：',baoji:'暴击：',pingding:'战斗力：'};
+ for(const [key,label] of Object.entries(labels)){values[key+'/miaoshu']=label;values[key+'/shuzi']=numbers[key]??'—';values[key+'/fujia']=''}
  const slots={icon:`<div class="source-dragon-model">${dragonArt(d.species,'',d.level)}</div>`,lv:`<span class="source-level">Lv.${d.level}</span>`};
  for(let i=1;i<=3;i++)slots['con_shuxing'+i]=sp.attributes?.[i-1]?`<img class="source-element" src="assets/original/ui/shangcheng_long_shuxing_${sp.attributes[i-1]}.png" alt="${escape(sp.element)}">`:'';
  const actions={evolution_entry:{type:'openEvolution',id,label:'进化条件'},close:{type:returnToCollection?'returnCollection':'close',label:'关闭喂养'},'weishi/btn':{type:'feed',id,label:'喂食'},'weishi_vip/btn':{type:'feedAll',id,label:'一键喂食'},'yidong/btn':{type:'dragonMove',id,label:'移动幼龙'},btn_ShiWu:{type:'farm',label:'种植龙粮'}};
