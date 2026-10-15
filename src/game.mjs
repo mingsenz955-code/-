@@ -7,7 +7,7 @@ import {validateGems,gemItem,gemSocket,gemInsertIndex,gemFusionPlan} from './gem
 import {formationError} from './formation.mjs';
 import {LOTTERY_POLICY,LOTTERY_CAPACITY,lotteryRow,lotteryCost,sampleLottery} from './lottery.mjs';
 import {SPECIES, RULES, RECIPES, ORIGINAL_CROPS, ORIGINAL_LEVELS, ORIGINAL_FARMS, breedingOptions, speciesKey} from './data.mjs';
-import {habitatDefinition,habitatInfo,acceptsDragon,acceptsSavedResident,habitatLimit,habitatPosition,snapHabitatPosition,canPlaceHabitat,canPlaceObject,findBuildingPosition,FIXED_BUILDINGS} from './habitats.mjs';
+import {habitatDefinition,habitatInfo,acceptsDragon,acceptsSavedResident,habitatLimit,habitatPosition,snapHabitatPosition,canPlaceHabitat,canPlaceObject,findBuildingPosition,FIXED_BUILDINGS,fixedBuildings} from './habitats.mjs';
 import {structureDefinition,structureInfo,structurePosition} from './structures.mjs';
 import {configuredLineup,lineupPower,battleRequirement,OFFLINE_BATTLE_POLICY} from './battle.mjs';
 import {adventureEvent,ADVENTURE_LEVEL_COUNT} from './adventure.mjs';
@@ -19,7 +19,7 @@ import {resourceShopRow,EVOLUTION_FRUIT_ITEM_ID} from './resource-shop.mjs';
 const fail = message => {throw new Error(message)};
 const number = (v,min=0,max=Number.MAX_SAFE_INTEGER) => Number.isSafeInteger(v)&&v>=min&&v<=max;
 export function createGame(now=Date.now()) {
- return {version:12,giftEggs:[],equipmentFragments:{},loot:{policy:LOOT_POLICY,boxesOpened:0,lastOpened:null,nodeRewards:createNodeRewards(now)},gemExplore:createGemExplore(now),runeHunt:createRuneHunt(now),runes:[],nextRuneId:1,equipmentMaterials:{stone:0,wing:0,crystal:0},gemInventory:[],gemSockets:Array(12).fill(null),nextGemId:1,structures:[],formation:[2,3],adventure:{cleared:{},energy:10,energyAt:now,policy:OFFLINE_BATTLE_POLICY},lottery:{normalTokens:0,advancedTokens:0,draws:0,pending:[]},raffle:{tickets:{},counters:{junior:0,mid:0,senior:0},pending:[]},expansion:{plots:0},items:{},recharge:{count:0,lastTier:0,totalGems:0,doubled:[]},equipment:[],nextEquipId:1,coins:1200,food:400,gems:0,playerXp:0,nextId:4,updatedAt:now,habitats:[{id:1,name:'晨曦栖息地',lastCollected:now}],dragons:[{id:2,species:'ember',level:1,habitatId:1},{id:3,species:'leaf',level:1,habitatId:1}],farm:null,nest:null,breeding:null,incubator:null,stats:{harvests:0,hatches:0,feeds:0},log:['欢迎来到云上牧场。种下第一份龙粮吧。']};
+ return {version:12,fixedPositions:{},giftEggs:[],equipmentFragments:{},loot:{policy:LOOT_POLICY,boxesOpened:0,lastOpened:null,nodeRewards:createNodeRewards(now)},gemExplore:createGemExplore(now),runeHunt:createRuneHunt(now),runes:[],nextRuneId:1,equipmentMaterials:{stone:0,wing:0,crystal:0},gemInventory:[],gemSockets:Array(12).fill(null),nextGemId:1,structures:[],formation:[2,3],adventure:{cleared:{},energy:10,energyAt:now,policy:OFFLINE_BATTLE_POLICY},lottery:{normalTokens:0,advancedTokens:0,draws:0,pending:[]},raffle:{tickets:{},counters:{junior:0,mid:0,senior:0},pending:[]},expansion:{plots:0},items:{},recharge:{count:0,lastTier:0,totalGems:0,doubled:[]},equipment:[],nextEquipId:1,coins:1200,food:400,gems:0,playerXp:0,nextId:4,updatedAt:now,habitats:[{id:1,name:'晨曦栖息地',lastCollected:now}],dragons:[{id:2,species:'ember',level:1,habitatId:1},{id:3,species:'leaf',level:1,habitatId:1}],farm:null,nest:null,breeding:null,incubator:null,stats:{harvests:0,hatches:0,feeds:0},log:['欢迎来到云上牧场。种下第一份龙粮吧。']};
 }
 export function validate(s) {
  if(!s||![1,2,3,4,5,6,7,8,9,10,11,12].includes(s.version)) fail('存档版本不受支持，请保留原文件。');
@@ -28,6 +28,8 @@ export function validate(s) {
  if(s.nest!==null)fail('旧繁殖任务未迁移。');
  s.breeding??=null;s.incubator??=null;if(s.version<5)s.lottery??={normalTokens:0,advancedTokens:0,draws:0,pending:[]};
  if(s.version<6){s.equipment??=[];s.nextEquipId??=1;}
+ s.fixedPositions??={};
+ if(!s.fixedPositions||typeof s.fixedPositions!=='object'||Array.isArray(s.fixedPositions)||Object.entries(s.fixedPositions).some(([key,p])=>!FIXED_BUILDINGS.some(b=>b.key===key)||!Array.isArray(p)||p.length!==2||!p.every(Number.isFinite)))fail('基础建筑位置无效。');
  s.giftEggs??=[];
  if(!Array.isArray(s.giftEggs)||s.giftEggs.length>200||s.giftEggs.some(e=>!number(e.id,1)||!SPECIES[speciesKey(e.dragonId)]||e.source!=='user-request'))fail('赠送龙蛋存档无效。');
  s.equipment??=[];s.nextEquipId??=1;
@@ -115,7 +117,7 @@ export function action(state,type,payload={},now=Date.now(),random=Math.random) 
  const gained=Math.floor((now-s.adventure.energyAt)/300000);if(gained>0){s.adventure.energy=Math.min(10,s.adventure.energy+gained);s.adventure.energyAt+=gained*300000;if(s.adventure.energy===10)s.adventure.energyAt=now;}
  const spend=(key,cost)=>{if(s[key]<cost)fail(key==='coins'?'金币不足。':key==='gems'?'魔晶不足。':'龙粮不足，请先种植并收获。');s[key]-=cost;};
  const payBuilding=target=>{for(const [unit,cost] of Object.entries(target.costs)){const key={g:'coins',c:'gems',f:'food'}[unit];if(!key)fail('该建筑资源类型尚未支持。');spend(key,cost);}};
- const placeables=()=>[...FIXED_BUILDINGS,...s.habitats.map((h,i)=>({key:`h:${h.id}`,info:habitatInfo(h),position:habitatPosition(h,i)})),...s.structures.map((o,i)=>({key:`s:${o.id}`,info:structureInfo(o),position:structurePosition(o,i)}))];
+ const placeables=()=>[...fixedBuildings(s),...s.habitats.map((h,i)=>({key:`h:${h.id}`,info:habitatInfo(h),position:habitatPosition(h,i)})),...s.structures.map((o,i)=>({key:`s:${o.id}`,info:structureInfo(o),position:structurePosition(o,i)}))];
  const dragon=id=>s.dragons.find(d=>d.id===id)||fail('找不到这只龙。');
  const settle=h=>{h.storedCoins=rawIncome(s,h,now);h.lastCollected=now;};
  switch(type){
@@ -158,6 +160,7 @@ export function action(state,type,payload={},now=Date.now(),random=Math.random) 
  const cost=incubatorSpeedCost(job.readyAt,now);spend('gems',cost);job.readyAt=now;
  const completed=action(s,complete,{id:payload.id},now,random);completed.log[0]=`花费 ${cost} 魔晶，`+completed.log[0];return completed;}
  case 'completeHabitat': {const h=s.habitats.find(h=>h.id===payload.id)||fail('栖息地不存在。');if(!h.job||now<h.job.readyAt)fail('栖息地施工尚未完成。');settle(h);const target=habitatDefinition(h.job.targetId);h.buildingId=target.id;h.name=target.nameCN;h.job=null;h.lastCollected=now;awardPlayerXp(s,target.xp);message=`${h.name}施工完成。`;break;}
+ case 'placeFixed': {const object=fixedBuildings(s).find(b=>b.id===payload.id)||fail('基础建筑不存在。');if(!Array.isArray(payload.position)||payload.position.length!==2||!payload.position.every(Number.isFinite))fail('请选择岛内位置。');const position=snapHabitatPosition(payload.position);if(!canPlaceObject(placeables(),object.key,object.info,position,s.expansion.plots))fail('这里与其他建筑重叠或超出可用地块。');s.fixedPositions[object.key]=position;message='建筑位置已保存，计时保持不变。';break;}
  case 'placeHabitat': {const h=s.habitats.find(h=>h.id===payload.id)||fail('栖息地不存在。');if(!Array.isArray(payload.position)||payload.position.length!==2||!payload.position.every(Number.isFinite))fail('请选择岛内位置。');const position=snapHabitatPosition(payload.position);if(!canPlaceObject(placeables(),`h:${h.id}`,habitatInfo(h),position,s.expansion.plots))fail('这里与其他建筑重叠或超出可用地块。');h.position=position;message='建筑已按地块位置保存。';break;}
  case 'buyStructure': {const target=structureDefinition(payload.itemId)||fail('该商品不是可摆放建筑。');if(playerProgress(s).level<target.min_level)fail(`购买需要牧场等级 ${target.min_level}。`);payBuilding(target);const key=`s:${s.nextId}`,objects=placeables();const position=findBuildingPosition(objects,target,s.expansion.plots);if(!position)fail('岛上没有足够的连续空格。');s.structures.push({id:s.nextId++,itemId:target.id,position,...(target.build_time?{readyAt:now+target.build_time*1000}:{})});message=`${target.nameCN}已购买，请确认摆放位置。`;break;}
  case 'placeStructure': {const structure=s.structures.find(o=>o.id===payload.id)||fail('建筑不存在。'),info=structureInfo(structure);if(!Array.isArray(payload.position)||payload.position.length!==2||!payload.position.every(Number.isFinite))fail('请选择岛内位置。');const position=snapHabitatPosition(payload.position);if(!canPlaceObject(placeables(),`s:${structure.id}`,info,position,s.expansion.plots))fail('这里与其他建筑重叠或超出可用地块。');structure.position=position;message=`${info.nameCN}已按地块位置保存。`;break;}

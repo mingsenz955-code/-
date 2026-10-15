@@ -29,9 +29,10 @@ export function canPlaceObject(objects,movingKey,info,position,plots=0){
  // Conservative grass envelope prevents a newly bought building spawning in the
  // clouds or behind the rocky rim. Existing saves are never repositioned.
  const scale=1+plots/12,px=position[0]*13,py=position[1]*7.68;
- if(Math.abs(px-650)>400*scale||py<240||py>240+280*scale)return false;
+ if(Math.abs(px-650)>400*scale||py<210||py>240+310*scale)return false;
  return objects.every(o=>{if(o.key===movingKey)return true;const b=bounds(placementGridRect(o.info,o.position));return a.right<=b.left||a.left>=b.right||a.bottom<=b.top||a.top>=b.bottom});
 }
 export function canPlaceHabitat(habitats,id,position,plots=0){const h=habitats.find(h=>h.id===id);return !!h&&canPlaceObject(habitats.map((v,i)=>({key:`h:${v.id}`,info:habitatInfo(v),position:habitatPosition(v,i)})),`h:${id}`,habitatInfo(h),position,plots)}
 export function findBuildingPosition(objects,info,plots=0){const g=placementGrid(plots);for(let row=0;row<g.rows;row++)for(let column=0;column<g.columns;column++){const p=gridPosition(column,row);if(canPlaceObject(objects,'new',info,p,plots))return p}return null}
 export const FIXED_BUILDINGS=[{key:'fixed:breed',info:{width:6,height:6},position:[66,31]},{key:'fixed:incubator',info:{width:5,height:5},position:[75,48]},{key:'fixed:farm',info:{width:4,height:4},position:[26,39]}];
+export function fixedBuildings(state){return FIXED_BUILDINGS.map((b,i)=>({...b,id:i+1,position:state.fixedPositions?.[b.key]??b.position}))}

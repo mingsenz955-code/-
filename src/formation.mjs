@@ -19,3 +19,8 @@ export function formationReplacement(state,slot,id){
  const dragons=ids.map(v=>state.dragons.find(d=>d.id===v));if(dragons.some(d=>!d))throw new Error('找不到这条龙。');
  const error=formationError(dragons);if(error)throw new Error(error);return ids;
 }
+export function formationSwap(state,a,b){
+ const ids=[...state.formation],i=ids.indexOf(a),j=ids.indexOf(b);if(i<0||j<0||i===j)throw Error('请选择两条不同的出战龙。');
+ if(formationPosition(state.dragons.find(d=>d.id===a))!==formationPosition(state.dragons.find(d=>d.id===b)))throw Error('只能交换同为飞行或爬行的阵位。');
+ [ids[i],ids[j]]=[ids[j],ids[i]];return ids;
+}

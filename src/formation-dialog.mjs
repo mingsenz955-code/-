@@ -26,12 +26,12 @@ export async function openFormationPicker(state,slot=0,filter='all'){
  slots.huadong=`<div class="formation-picker-list">${cards}</div>`;
  const d=showSource('sourceFormationPicker',renderSourceLayout(layout,{values:{txt_name:'选择龙'},actions,slots,checked}));d.dataset.formationSlot=String(slot);d.dataset.formationFilter=filter;
 }
-export async function openFormationPreview(state){
+export async function openFormationPreview(state,selected=null){
  const layout=await sourceLayout('ui_formation_new'),slots={},groups={sky:[],earth:[]};
  for(const dragon of configuredLineup(state))groups[formationPosition(dragon)===1?'sky':'earth'].push(dragon);
  for(const [group,dragons] of Object.entries(groups)){
-  dragons.sort((a,b)=>(formationDefinition(a)?.queuePriority??0)-(formationDefinition(b)?.queuePriority??0));
-  dragons.forEach((dragon,i)=>slots[group+(i+1)]=`<div class="formation-preview-model">${dragonArt(dragon.species,'',dragon.level).replace('data-clip="breath"','data-clip="breathinbattle"')}</div>`);
+
+  dragons.forEach((dragon,i)=>slots[group+(i+1)]=`<button class="formation-preview-model formation-preview-unit${selected===dragon.id?' is-selected':''}" data-action="formationReorder" data-id="${dragon.id}" aria-label="调整${SPECIES[dragon.species].name}阵位">${dragonArt(dragon.species,'',dragon.level).replace('data-clip="breath"','data-clip="breathinbattle"')}</button>`);
  }
- return showSource('sourceFormationPreview',renderSourceLayout(layout,{values:{txt_name:'阵型','btn_yes/txt_name':'确定'},slots,actions:{'btn_yes/btn':{type:'formationSlot',id:0,label:'返回阵容'}}}));
+ const d=showSource('sourceFormationPreview',renderSourceLayout(layout,{values:{txt_name:'阵型','btn_yes/txt_name':'确定'},slots,actions:{'btn_yes/btn':{type:'formationSlot',id:0,label:'返回阵容'}}})+`<p class="formation-reorder-help">点选两条飞行龙或两条爬行龙交换阵位</p>`);d.dataset.selectedFormationId=selected??'';return d;
 }

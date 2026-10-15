@@ -261,3 +261,6 @@
 
 ## v0.16.30 战斗阵位及技能表现
 - Warrior.positionType=info.position==0 land否则air，scaleInBattle直接传DragonDelegate；BattleUI根数字阵位与函数6/8、SkillNewCommonInfo构造字段反汇编已保留。技能字图/效果由源表独立导出，93字图在原UI目录存在。
+
+## v0.16.31 原技能完整说明
+- SkillUtils.getDes函数2、SkillNewInfo字段及BuffNewInfo plain ctor确认描述格式与参数；skilltypes为SkillDes模板42行。buffID=baseID*1000，装符文时加品质*100+等级；来源SHA与条数在reference/skill-descriptions-provenance.json。所有目标/持续/吸血与被动数字使用源表，不凭名称猜。

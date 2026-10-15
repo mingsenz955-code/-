@@ -1,0 +1,45 @@
+SHA256 de339ac66f5a191f6dd20c7288e5335462546fca53f840a9a2f72bdd5da11218
+Static Lua 5.1 disassembly. PCs and nested function indexes are zero-based. No code executed.
+
+FUNCTION 0
+CONSTANTS ["id", 2, "math", "modf", 1000, "kind", "level", "round", "type", 3, "activeProb", 4, "activeTargetType", 5, "damageVector", 6, "damageValue", 7, "suckBloodPercent", 8, "buff1ID", 9, "buff1ActiveProb", 10, "buff2ID", 11, "buff2ActiveProb", 12, "addPower", 13, "runeColour", 14, "runeLevel", 15]
+0000 GETTABLE r2 r1[2]
+0001 SETTABLE r0["id"] r2
+0002 GETGLOBAL r2 "math"
+0003 GETTABLE r2 r2["modf"]
+0004 GETTABLE r3 r0["id"]
+0005 DIV r3 r3 1000
+0006 CALL A=2 B=2 C=3
+0007 SETTABLE r0["kind"] r2
+0008 GETGLOBAL r4 "math"
+0009 GETTABLE r4 r4["round"]
+0010 MUL r5 r3 1000
+0011 CALL A=4 B=2 C=2
+0012 SETTABLE r0["level"] r4
+0013 GETTABLE r4 r1[3]
+0014 SETTABLE r0["type"] r4
+0015 GETTABLE r4 r1[4]
+0016 SETTABLE r0["activeProb"] r4
+0017 GETTABLE r4 r1[5]
+0018 SETTABLE r0["activeTargetType"] r4
+0019 GETTABLE r4 r1[6]
+0020 SETTABLE r0["damageVector"] r4
+0021 GETTABLE r4 r1[7]
+0022 SETTABLE r0["damageValue"] r4
+0023 GETTABLE r4 r1[8]
+0024 SETTABLE r0["suckBloodPercent"] r4
+0025 GETTABLE r4 r1[9]
+0026 SETTABLE r0["buff1ID"] r4
+0027 GETTABLE r4 r1[10]
+0028 SETTABLE r0["buff1ActiveProb"] r4
+0029 GETTABLE r4 r1[11]
+0030 SETTABLE r0["buff2ID"] r4
+0031 GETTABLE r4 r1[12]
+0032 SETTABLE r0["buff2ActiveProb"] r4
+0033 GETTABLE r4 r1[13]
+0034 SETTABLE r0["addPower"] r4
+0035 GETTABLE r4 r1[14]
+0036 SETTABLE r0["runeColour"] r4
+0037 GETTABLE r4 r1[15]
+0038 SETTABLE r0["runeLevel"] r4
+0039 RETURN A=0 B=1 C=0

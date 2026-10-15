@@ -1,0 +1,8 @@
+{
+  "tablesSha256": "1408d684c2a6530668a8ed4816ad1697d579077fed5d02b887d06f035395e750",
+  "templates": 42,
+  "skills": 347,
+  "buffs": 464,
+  "format": "SkillUtils.getDes function2; buffID=base*1000+(quality*100+level when rune equipped)",
+  "boundary": "Describes source skills; does not claim those buffs are already implemented in offline combat"
+}

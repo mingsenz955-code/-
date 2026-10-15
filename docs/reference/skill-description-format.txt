@@ -1,0 +1,222 @@
+SHA256 dfb87a9ad397a27552dc7b7d1ba87c5cf933d745bc6cd0dd32a272f487b291ab
+Static Lua 5.1 disassembly. PCs and nested function indexes are zero-based. No code executed.
+
+FUNCTION 2
+CONSTANTS [0, 1, "getExtendInfo", "LibraryManager", "lib_skillCommon_new", "getInfoById", "kind", "lib_skillDes", "desID", "type", "getBuffID", "buff1ID", "lib_buff_new", "log", "buffID:%d, buff1ID:%d, colour:%d, level:%d", "string", "format", "des", "arg2", 2, "%g%%%s", "damageVector", 100, "damageValue", "+%d点", "", 3, "suckBloodPercent", 4, "buff1ActiveProb", 10000, "有%g%%几率", "roundsNum", 5]
+0000 TEST A=1 B=0 C=1
+0001 JMP A=0 target=3
+0002 LOADK r1 0
+0003 TEST A=2 B=0 C=1
+0004 JMP A=0 target=6
+0005 LOADK r2 1
+0006 GETUPVAL A=4 B=0 C=0
+0007 GETTABLE r4 r4["getExtendInfo"]
+0008 MOVE A=5 B=0 C=0
+0009 MOVE A=6 B=1 C=0
+0010 MOVE A=7 B=2 C=0
+0011 MOVE A=8 B=3 C=0
+0012 CALL A=4 B=5 C=2
+0013 GETGLOBAL r5 "LibraryManager"
+0014 GETTABLE r5 r5["lib_skillCommon_new"]
+0015 SELF r5 self=r5 method="getInfoById"
+0016 GETTABLE r7 r4["kind"]
+0017 CALL A=5 B=3 C=2
+0018 GETGLOBAL r6 "LibraryManager"
+0019 GETTABLE r6 r6["lib_skillDes"]
+0020 SELF r6 self=r6 method="getInfoById"
+0021 GETTABLE r8 r5["desID"]
+0022 CALL A=6 B=3 C=2
+0023 GETTABLE r7 r6["type"]
+0024 EQ A=0 r7 1
+0025 JMP A=0 target=53
+0026 GETUPVAL A=7 B=0 C=0
+0027 GETTABLE r7 r7["getBuffID"]
+0028 GETTABLE r8 r4["buff1ID"]
+0029 MOVE A=9 B=1 C=0
+0030 MOVE A=10 B=2 C=0
+0031 CALL A=7 B=4 C=2
+0032 GETGLOBAL r8 "LibraryManager"
+0033 GETTABLE r8 r8["lib_buff_new"]
+0034 SELF r8 self=r8 method="getInfoById"
+0035 MOVE A=10 B=7 C=0
+0036 CALL A=8 B=3 C=2
+0037 TEST A=8 B=0 C=1
+0038 JMP A=0 target=46
+0039 GETGLOBAL r9 "log"
+0040 LOADK r10 "buffID:%d, buff1ID:%d, colour:%d, level:%d"
+0041 MOVE A=11 B=7 C=0
+0042 GETTABLE r12 r4["buff1ID"]
+0043 MOVE A=13 B=1 C=0
+0044 MOVE A=14 B=2 C=0
+0045 CALL A=9 B=6 C=1
+0046 GETGLOBAL r9 "string"
+0047 GETTABLE r9 r9["format"]
+0048 GETTABLE r10 r6["des"]
+0049 GETTABLE r11 r8["arg2"]
+0050 TAILCALL A=9 B=3 C=0
+0051 RETURN A=9 B=0 C=0
+0052 JMP A=0 target=214
+0053 GETTABLE r7 r6["type"]
+0054 EQ A=0 r7 2
+0055 JMP A=0 target=79
+0056 GETGLOBAL r7 "string"
+0057 GETTABLE r7 r7["format"]
+0058 GETTABLE r8 r6["des"]
+0059 GETGLOBAL r9 "string"
+0060 GETTABLE r9 r9["format"]
+0061 LOADK r10 "%g%%%s"
+0062 GETTABLE r11 r4["damageVector"]
+0063 DIV r11 r11 100
+0064 GETTABLE r12 r4["damageValue"]
+0065 LT A=0 0 r12
+0066 JMP A=0 target=74
+0067 GETGLOBAL r12 "string"
+0068 GETTABLE r12 r12["format"]
+0069 LOADK r13 "+%d点"
+0070 GETTABLE r14 r4["damageValue"]
+0071 CALL A=12 B=3 C=2
+0072 TEST A=12 B=0 C=1
+0073 JMP A=0 target=75
+0074 LOADK r12 ""
+0075 CALL A=9 B=4 C=0
+0076 TAILCALL A=7 B=0 C=0
+0077 RETURN A=7 B=0 C=0
+0078 JMP A=0 target=214
+0079 GETTABLE r7 r6["type"]
+0080 EQ A=0 r7 3
+0081 JMP A=0 target=107
+0082 GETGLOBAL r7 "string"
+0083 GETTABLE r7 r7["format"]
+0084 GETTABLE r8 r6["des"]
+0085 GETGLOBAL r9 "string"
+0086 GETTABLE r9 r9["format"]
+0087 LOADK r10 "%g%%%s"
+0088 GETTABLE r11 r4["damageVector"]
+0089 DIV r11 r11 100
+0090 GETTABLE r12 r4["damageValue"]
+0091 LT A=0 0 r12
+0092 JMP A=0 target=100
+0093 GETGLOBAL r12 "string"
+0094 GETTABLE r12 r12["format"]
+0095 LOADK r13 "+%d点"
+0096 GETTABLE r14 r4["damageValue"]
+0097 CALL A=12 B=3 C=2
+0098 TEST A=12 B=0 C=1
+0099 JMP A=0 target=101
+0100 LOADK r12 ""
+0101 CALL A=9 B=4 C=2
+0102 GETTABLE r10 r4["suckBloodPercent"]
+0103 DIV r10 r10 100
+0104 TAILCALL A=7 B=4 C=0
+0105 RETURN A=7 B=0 C=0
+0106 JMP A=0 target=214
+0107 GETTABLE r7 r6["type"]
+0108 EQ A=0 r7 4
+0109 JMP A=0 target=166
+0110 GETUPVAL A=7 B=0 C=0
+0111 GETTABLE r7 r7["getBuffID"]
+0112 GETTABLE r8 r4["buff1ID"]
+0113 MOVE A=9 B=1 C=0
+0114 MOVE A=10 B=2 C=0
+0115 CALL A=7 B=4 C=2
+0116 GETGLOBAL r8 "LibraryManager"
+0117 GETTABLE r8 r8["lib_buff_new"]
+0118 SELF r8 self=r8 method="getInfoById"
+0119 MOVE A=10 B=7 C=0
+0120 CALL A=8 B=3 C=2
+0121 TEST A=8 B=0 C=1
+0122 JMP A=0 target=130
+0123 GETGLOBAL r9 "log"
+0124 LOADK r10 "buffID:%d, buff1ID:%d, colour:%d, level:%d"
+0125 MOVE A=11 B=7 C=0
+0126 GETTABLE r12 r4["buff1ID"]
+0127 MOVE A=13 B=1 C=0
+0128 MOVE A=14 B=2 C=0
+0129 CALL A=9 B=6 C=1
+0130 GETGLOBAL r9 "string"
+0131 GETTABLE r9 r9["format"]
+0132 GETTABLE r10 r6["des"]
+0133 GETGLOBAL r11 "string"
+0134 GETTABLE r11 r11["format"]
+0135 LOADK r12 "%g%%%s"
+0136 GETTABLE r13 r4["damageVector"]
+0137 DIV r13 r13 100
+0138 GETTABLE r14 r4["damageValue"]
+0139 LT A=0 0 r14
+0140 JMP A=0 target=148
+0141 GETGLOBAL r14 "string"
+0142 GETTABLE r14 r14["format"]
+0143 LOADK r15 "+%d点"
+0144 GETTABLE r16 r4["damageValue"]
+0145 CALL A=14 B=3 C=2
+0146 TEST A=14 B=0 C=1
+0147 JMP A=0 target=149
+0148 LOADK r14 ""
+0149 CALL A=11 B=4 C=2
+0150 GETTABLE r12 r4["buff1ActiveProb"]
+0151 LT A=0 r12 10000
+0152 JMP A=0 target=161
+0153 GETGLOBAL r12 "string"
+0154 GETTABLE r12 r12["format"]
+0155 LOADK r13 "有%g%%几率"
+0156 GETTABLE r14 r4["buff1ActiveProb"]
+0157 DIV r14 r14 100
+0158 CALL A=12 B=3 C=2
+0159 TEST A=12 B=0 C=1
+0160 JMP A=0 target=162
+0161 LOADK r12 ""
+0162 GETTABLE r13 r8["roundsNum"]
+0163 TAILCALL A=9 B=5 C=0
+0164 RETURN A=9 B=0 C=0
+0165 JMP A=0 target=214
+0166 GETTABLE r7 r6["type"]
+0167 EQ A=0 r7 5
+0168 JMP A=0 target=214
+0169 GETUPVAL A=7 B=0 C=0
+0170 GETTABLE r7 r7["getBuffID"]
+0171 GETTABLE r8 r4["buff1ID"]
+0172 MOVE A=9 B=1 C=0
+0173 MOVE A=10 B=2 C=0
+0174 CALL A=7 B=4 C=2
+0175 GETGLOBAL r8 "LibraryManager"
+0176 GETTABLE r8 r8["lib_buff_new"]
+0177 SELF r8 self=r8 method="getInfoById"
+0178 MOVE A=10 B=7 C=0
+0179 CALL A=8 B=3 C=2
+0180 TEST A=8 B=0 C=1
+0181 JMP A=0 target=189
+0182 GETGLOBAL r9 "log"
+0183 LOADK r10 "buffID:%d, buff1ID:%d, colour:%d, level:%d"
+0184 MOVE A=11 B=7 C=0
+0185 GETTABLE r12 r4["buff1ID"]
+0186 MOVE A=13 B=1 C=0
+0187 MOVE A=14 B=2 C=0
+0188 CALL A=9 B=6 C=1
+0189 GETGLOBAL r9 "string"
+0190 GETTABLE r9 r9["format"]
+0191 GETTABLE r10 r6["des"]
+0192 GETGLOBAL r11 "string"
+0193 GETTABLE r11 r11["format"]
+0194 LOADK r12 "%g%%%s"
+0195 GETTABLE r13 r4["damageVector"]
+0196 DIV r13 r13 100
+0197 GETTABLE r14 r4["damageValue"]
+0198 LT A=0 0 r14
+0199 JMP A=0 target=207
+0200 GETGLOBAL r14 "string"
+0201 GETTABLE r14 r14["format"]
+0202 LOADK r15 "+%d点"
+0203 GETTABLE r16 r4["damageValue"]
+0204 CALL A=14 B=3 C=2
+0205 TEST A=14 B=0 C=1
+0206 JMP A=0 target=208
+0207 LOADK r14 ""
+0208 CALL A=11 B=4 C=2
+0209 GETTABLE r12 r8["arg2"]
+0210 DIV r12 r12 100
+0211 GETTABLE r13 r8["roundsNum"]
+0212 TAILCALL A=9 B=5 C=0
+0213 RETURN A=9 B=0 C=0
+0214 LOADK r7 ""
+0215 RETURN A=7 B=2 C=0
+0216 RETURN A=0 B=1 C=0
