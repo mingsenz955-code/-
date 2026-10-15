@@ -1,3 +1,4 @@
+import {resourceBarValues} from './resource-bar.mjs';
 import {closeHistoryResult,openHistoryGiftResult,openHistoryRanks,openHistoryTraining,openHistoryActivity,openHistoryHelp,openHistoryCatalogHelp,openHistoryInventory,playHistoryAnimation,openHistoryResult} from './history-activity-dialog.mjs';
 import {openActivities,openSingleRecharge,openSingleRechargeHelp} from './activity-dialog.mjs';
 import {openArena,openArenaExchange,openArenaRecords,openArenaRanks,openArenaHelp} from './arena-dialog.mjs';
@@ -88,7 +89,20 @@ function render(){
 }
 function tick(){const modal=$('#modal');if(!busy&&modal?.open&&modal.dataset.mode==='sourceGemExplore'&&Number(modal.dataset.freeReady)>0&&Date.now()>=Number(modal.dataset.freeReady)){delete modal.dataset.freeReady;void openGemExplore(state)}if(!busy&&modal?.open&&modal.dataset.mode==='sourceShenfu'&&Number(modal.dataset.freeReady)>0&&Date.now()>=Number(modal.dataset.freeReady)){delete modal.dataset.freeReady;void openShenfuDialog(state)}document.querySelectorAll('[data-timer]').forEach(el=>el.textContent=el.classList.contains('source-pve-reward-state')&&Date.now()>=Number(el.dataset.timer)?'可领取':time(Number(el.dataset.timer)));document.querySelectorAll('[data-ready]').forEach(el=>el.disabled=busy||Date.now()<Number(el.dataset.ready));document.querySelectorAll('[data-income]').forEach(el=>{const h=state.habitats.find(h=>h.id===Number(el.dataset.income));if(h)el.textContent=fmt(income(state,h))})}
 async function persist(next){busy=true;saveStatus='正在保存…';if($('#save-status'))$('#save-status').textContent=saveStatus;try{await storage.save(next);state=next;saveStatus=`已保存 · ${new Date().toLocaleTimeString('zh-CN')}`;}catch(e){saveStatus='保存失败 · 请重试';throw e}finally{busy=false}}
-function closeDialog(){if(closeHistoryResult())return;const d=$('#modal');d.close();d.className='';delete d.dataset.mode;delete d.dataset.returnToCollection;}
+const resourceReturnStack=[];
+const resourceScrollSelectors=['.history-reward-list','.history-activity-grid','.history-categories','.native-shop-list','.native-resource-groups','.native-resource-row'];
+function captureResourcePage(){const d=$('#modal');return {mode:d.dataset.mode,dataset:{...d.dataset},html:d.innerHTML,className:d.className,style:d.style.cssText,search:d.querySelector('#history-search')?.value,scrolls:resourceScrollSelectors.flatMap(selector=>[...d.querySelectorAll(selector)].map((el,index)=>({selector,index,top:el.scrollTop,left:el.scrollLeft})))};}
+async function returnResourcePage(){if(busy||!resourceReturnStack.length)return;const frame=resourceReturnStack.pop();busy=true;try{
+ if(frame.mode==='sourceHistoryActivity')await openHistoryActivity(state,frame.dataset.activity);
+ else if(frame.mode==='sourceHistoryHub')await openActivities(state,frame.dataset.historyFilter??'全部');
+ else if(frame.mode==='sourceHistoryTraining')await openHistoryTraining(state);
+ else if(frame.mode==='sourceHistoryInventory')await openHistoryInventory(state);
+ else if(frame.mode==='sourceHistoryRanks')await openHistoryRanks(state,frame.dataset.activity);
+ else{const d=$('#modal');if(d.open)d.close();d.className=frame.className;d.style.cssText=frame.style;d.style.setProperty('--source-scale',Math.min((innerWidth-20)/1024,(innerHeight-20)/768));for(const key of Object.keys(d.dataset))delete d.dataset[key];Object.assign(d.dataset,frame.dataset);d.innerHTML=frame.html;for(const [key,value] of Object.entries(resourceBarValues(state)))for(const el of d.querySelectorAll(`[data-source="${key}"]`))el.textContent=value;d.showModal();}
+ const search=$('#modal').querySelector('#history-search');if(search&&frame.search!==undefined){search.value=frame.search;search.dispatchEvent(new Event('input',{bubbles:true}));}
+ for(const {selector,index,top,left} of frame.scrolls){const el=$('#modal').querySelectorAll(selector)[index];if(el){el.scrollTop=top;el.scrollLeft=left;}}
+ }finally{busy=false;}}
+function closeDialog(){if(closeHistoryResult())return;const d=$('#modal');if(resourceReturnStack.length&&['nativeResourceShop','sourceRecharge','nativeVipThresholds'].includes(d.dataset.mode)){void returnResourcePage().catch(e=>toast(e.message));return;}d.close();d.className='';delete d.dataset.mode;delete d.dataset.returnToCollection;}
 async function showSettings(){const version=await window.ranch?.version?.().catch(()=>null);await openNativePaper('本地存档',`<p>御龙高手 <b>v${version??'未知'}</b>　操作后自动保存</p><div class="native-save-actions">${nativeButton('立即保存','save')}${nativeButton('导出存档','export')}${nativeButton('导入存档','import')}</div>`,'nativeSettings')}
 let suppressHabitatClick=false;
 const clipNames={breath:'呼吸',walk:'步行',especial:'特殊动作',combat:'战斗姿态',breathinbattle:'战斗待机',movein:'入场',hurt:'受击',dead:'倒下',airattack:'空中攻击',airattackend:'空中攻击收招',landattack:'地面攻击',landattackend:'地面攻击收招',magic:'施法',magicend:'施法收招',fly:'飞行',walk2:'步行二',walk3:'步行三'};
@@ -100,6 +114,8 @@ document.addEventListener('click',async e=>{
  if(el.dataset.tab){closeDialog();if(el.dataset.tab==='habitats')await openHabitatShop(state);else if(el.dataset.tab==='breeding')await openBreed(state);else if(el.dataset.tab==='dragons')await openCollectionDialog(state,collectionFilter);else render();return}
  let type=el.dataset.action;const id=Number(el.dataset.id);
  try{
+  if(['resourceBarGold','resourceBarGems','resourceBarSouls'].includes(type)){const d=$('#modal'),kind=type==='resourceBarGold'?'g':'h';if(type!=='resourceBarGems'&&d.dataset.mode==='nativeResourceShop'&&d.dataset.resourceKind===kind){toast(`当前已是${kind==='g'?'金币':'龙魂'}商店。`);return;}resourceReturnStack.push(captureResourcePage());if(type==='resourceBarGems')await openRechargeDialog(state);else await openResourceShop(state,{type:kind});return;}
+  if(type==='openHabitats'&&resourceReturnStack.length&&$('#modal').dataset.mode==='nativeResourceShop'){await returnResourcePage();return;}
   if(type==='openActivities'||type==='openWelfare'||type==='openMonopolyActivities'){await persist(action(state,'activityVisit'));render();await openActivities(state,type==='openWelfare'?'福利':type==='openMonopolyActivities'?'大富翁':'全部');return}
   if(type==='openFirstCharge'){await persist(action(state,'activityVisit'));render();await openHistoryActivity(state,'first');return}
   if(type==='historyResultClose'){closeHistoryResult();return}
@@ -225,11 +241,11 @@ document.addEventListener('click',async e=>{
   if(type==='equipTab'){toast(el.dataset.value==='frag'?'装备碎片尚未接入，当前只有装备列表。':'当前已显示未装备的装备。');return}
   if(type==='unverifiedEquip'){toast('请先选择龙和可用装备。');return}
   if(type==='openRecharge'){await openRechargeDialog(state);return}
-  if(type==='rechargeVip'){await openVipThresholds(state);return}
+  if(type==='rechargeVip'){if(resourceReturnStack.length)resourceReturnStack.push(captureResourcePage());await openVipThresholds(state);return}
   if(type==='resourceShop'){await openResourceShop(state);return}
   if(type==='resourceShopGold'){await openResourceShop(state,{type:'g'});return}
   if(type==='resourceShopFood'){await openResourceShop(state,{type:'f'});return}
-  if(type==='buyResource'){const offer=resourceShopRow(id);if(!offer){toast('这个商品尚未开放。');return}const kind=$('#modal')?.dataset.resourceKind||null;if(state.gems<offer.priceGems){toast(`魔晶不足，还差 ${offer.priceGems-state.gems} 魔晶。`);await openRechargeDialog(state);return}const next=action(state,'buyResource',{id});await persist(next);render();await openResourceShop(state,{type:kind});toast(state.log[0]);return}
+  if(type==='buyResource'){const offer=resourceShopRow(id);if(!offer){toast('这个商品尚未开放。');return}const kind=$('#modal')?.dataset.resourceKind||null;if(state.gems<offer.priceGems){toast(`魔晶不足，还差 ${offer.priceGems-state.gems} 魔晶。`);resourceReturnStack.push(captureResourcePage());await openRechargeDialog(state);return}const next=action(state,'buyResource',{id});await persist(next);render();await openResourceShop(state,{type:kind});toast(state.log[0]);return}
   if(type==='openAdventure'){await openAdventureDialog(state);return}
   if(type==='openGemExplore'){await openGemExplore(state);return}
   if(type==='exploreGem'){const [mode,count]=el.dataset.value.split(':');await persist(action(state,type,{mode,count:Number(count)}));busy=true;try{render();await openGemExploreResult(state,state.gemInventory.slice(-Number(count)),mode,Number(count))}finally{busy=false}toast(state.log[0]);return}
