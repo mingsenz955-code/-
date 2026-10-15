@@ -337,3 +337,7 @@
 ## v0.16.44 圣树目标栏与奖励
 - HolyTreePanelNew静态函数5引用layout.ui_holy_tree、layout.panel_holy_tree_mubiao与HolyTree_players；ui_holy_tree包含home/backToMyTree与mubiao入口。目标栏原背景684×220、huadong617.5×134，item_holy_tree_target_player包含原头像框/等级星/玩家名；本次用这些资源替换通用建筑详情纸框。战力/抢夺奖励/按钮在原目标栏内为离线适配排列，未逐像素证明其服务器列表内容。
 - world-encounters原seeds 1/2/33/34/35的propNum分别20000/10000/200/4/4，plantTime均28800；新增结算测试核验无倍率。用户最终要求原奖励，10倍设想未实施。
+
+## v0.16.45 启动存档证据
+- computer-use用户实际v44窗口及游戏主进程6548的fs/bridge读取，均为1级xp0/5815692金币/11770魔晶；同时Codex读同名AppData为99级xp2057825400/19728054金币/13348魔晶。这是实际跨进程读取证据，推翻此前仅凭Codex侧last-launch认定用户入口正常的判断。
+- v45通过资源管理器真实双击根exe后，实际UI与工程player-data/last-launch同为99级；源与发行目录共用工程存档，不依赖可能重定向的Roaming路径。恢复副本在Git忽略的player-data/recovery，个人数据未提交。

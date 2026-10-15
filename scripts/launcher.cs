@@ -30,8 +30,9 @@ static class Launcher
         {
             start.Arguments = "\"" + root.TrimEnd(Path.DirectorySeparatorChar) + "\"";
         }
-        string save = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "YulongRanch", "saves", "ranch-v1.json");
-        if (File.Exists(save)) start.Arguments = (start.Arguments ?? "") + " --require-player-save";
+        string save = Path.Combine(root, "player-data", "saves", "ranch-v1.json");
+        string legacy = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "YulongRanch", "saves", "ranch-v1.json");
+        if (File.Exists(save) || File.Exists(legacy)) start.Arguments = (start.Arguments ?? "") + " --require-player-save";
         start.Arguments = (start.Arguments ?? "") + " --verify-live";
         Directory.CreateDirectory(Path.Combine(root, "work"));
         File.WriteAllText(Path.Combine(root, "work", "launcher-target.txt"), "程序：" + target + "\r\n正式存档：" + save + "\r\n");

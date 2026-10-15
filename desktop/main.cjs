@@ -39,13 +39,15 @@ const smoke=animationSmoke||shopIslandsSmoke||dragonGrowthSmoke||refinementSmoke
 const testProfile=process.argv.find(a=>a.startsWith('--test-profile='))?.split('=')[1]||'smoke-profile';
 if(!/^[a-z0-9-]+$/.test(testProfile))throw new Error('Invalid test profile name');
 if(smoke||verify)app.setPath('userData',path.join(__dirname,'..','work',testProfile));
-else app.setPath('userData',path.join(app.getPath('appData'),lotteryDemo?'YulongRanchLotteryDemo':'YulongRanch'));
+else if(lotteryDemo)app.setPath('userData',path.join(app.getPath('appData'),'YulongRanchLotteryDemo'));
+else {const appRoot=path.resolve(__dirname,'..'),parent=path.dirname(appRoot),release=path.dirname(parent),dist=path.dirname(release);const project=path.basename(parent)==='resources'&&path.basename(dist)==='dist'?path.dirname(dist):appRoot;app.setPath('userData',path.join(project,'player-data','runtime'));}
 const locked=app.requestSingleInstanceLock();if(!locked)app.quit();
 let window;
 app.on('second-instance',()=>{if(window){if(window.isMinimized())window.restore();window.focus()}});
 if(locked)app.whenReady().then(async()=>{
  const {SaveStore}=await import('./save-store.mjs');const {validate}=await import('../src/game.mjs');
- const store=new SaveStore(path.join(app.getPath('userData'),'saves'));
+ const {playerRoot,openPlayerStore}=await import('./player-store.mjs');
+ const store=smoke||verify||lotteryDemo?new SaveStore(path.join(app.getPath('userData'),'saves')):await openPlayerStore(playerRoot(path.resolve(__dirname,'..')),path.join(app.getPath('appData'),'YulongRanch','saves'));
  if(process.argv.includes('--require-player-save')&&!smoke&&!verify&&!lotteryDemo){const current=await store.load();if(!current.state)throw Error('未找到已有正式存档，已阻止创建空白牧场。请检查启动路径。');}
 
  if(lotteryDemo&&!(await store.load()).state){const {createGame}=await import('../src/game.mjs');const demo=createGame();demo.gems=1000;demo.lottery.normalTokens=300;demo.lottery.advancedTokens=800;demo.log=['独立抽奖演示存档，测试资源仅供试玩，不影响正式牧场。'];await store.save(demo);}
@@ -95,7 +97,7 @@ if(locked)app.whenReady().then(async()=>{
   for(let i=0;i<60;i++){if(await window.webContents.executeJavaScript("!!document.querySelector('.original-hud')"))break;await new Promise(resolve=>setTimeout(resolve,100))}
   if(!await window.webContents.executeJavaScript("!!document.querySelector('.original-hud')"))throw new Error('Live game did not reach the ranch UI; existing save was not overwritten.');
   await new Promise(resolve=>setTimeout(resolve,700));const destination=path.join(__dirname,'..','work','live-preview.png');await fs.mkdir(path.dirname(destination),{recursive:true});await fs.writeFile(destination,(await window.webContents.capturePage()).toPNG());console.log('LIVE_PREVIEW_READY '+destination);
-  const renderer=await window.webContents.executeJavaScript("({desktopBridge:!!window.ranch,habitatCount:document.querySelectorAll('[data-place-kind=habitat]').length,islands:Array.from(document.querySelectorAll('[data-world-island]')).map(b=>b.getAttribute('aria-label')),hud:document.querySelector('.original-hud')?.innerText})");if(!renderer.desktopBridge)throw Error('Desktop save bridge missing; refused independent preview.');const loaded=await store.load(),s=loaded.state;await fs.writeFile(path.join(app.getPath('userData'),'last-launch.json'),JSON.stringify({version:app.getVersion(),executable:process.execPath,save:loaded.location,mode:lotteryDemo?'demo':'player',renderer,dragons:s?.dragons.length,habitats:s?.habitats.length,playerXp:s?.playerXp,coins:s?.coins,at:new Date().toISOString()},null,2));
+  const renderer=await window.webContents.executeJavaScript("({desktopBridge:!!window.ranch,habitatCount:document.querySelectorAll('[data-place-kind=habitat]').length,islands:Array.from(document.querySelectorAll('[data-world-island]')).map(b=>b.getAttribute('aria-label')),hud:document.querySelector('.original-hud')?.innerText})");if(!renderer.desktopBridge)throw Error('Desktop save bridge missing; refused independent preview.');const loaded=await store.load(),s=loaded.state;await fs.writeFile(path.join(path.dirname(store.directory),'last-launch.json'),JSON.stringify({version:app.getVersion(),executable:process.execPath,save:loaded.location,mode:lotteryDemo?'demo':'player',renderer,dragons:s?.dragons.length,habitats:s?.habitats.length,playerXp:s?.playerXp,coins:s?.coins,at:new Date().toISOString()},null,2));
  }
  if(process.argv.includes('--show-warehouse')&&!smoke&&!verify){
   await window.webContents.executeJavaScript("document.querySelector('[data-action=showMore]').click();true");await new Promise(r=>setTimeout(r,200));await window.webContents.executeJavaScript("document.querySelector('[data-action=openWarehouse]').click();true");await new Promise(r=>setTimeout(r,700));

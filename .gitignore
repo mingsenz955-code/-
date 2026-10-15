@@ -3,3 +3,6 @@ dist/
 work/
 *.log
 __pycache__/
+
+player-data/
+御龙高手存档*.json
