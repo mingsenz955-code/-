@@ -289,3 +289,7 @@ body:has(#modal[open].native-fullscreen){background:#09242e}
 .tree-selecting-seed .tree-seed:not(:disabled){filter:drop-shadow(0 0 5px #ffe874)}
 .tree-fruit{left:-43px;top:-53px;width:86px;height:112px;border:0;box-shadow:none;background:transparent!important;transform:none}
 .tree-fruit img{width:64px;height:64px;object-fit:contain}.tree-fruit span{font-size:17px;line-height:1.25}
+
+/* Keep image scaling independent of its centering translation. */
+.gem-result-art{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
+.gem-result-art .gem-result-icon{position:static;transform:none;flex:none}

@@ -7,6 +7,13 @@ export const RUNE_TYPES=['','攻击符文','特技符文','被动符文·天','�
 export const runeDefinition=id=>definitions.get(Number(id))??null;
 export const runeInstance=(state,id)=>state.runes?.find(v=>v.id===id)??null;
 export const runeOfDragon=(state,id,slot)=>(state.runes??[]).find(v=>v.dragonid===id&&runeDefinition(v.type)?.equipType===slot)??null;
+// The hunt entry has no explicit target. Prefer the selected eligible dragon,
+// then an eligible owner, instead of silently binding the starter red dragon.
+export function defaultRuneDragon(state,selectedId){
+ const selected=state.dragons.find(d=>d.id===selectedId);
+ if(selected&&SPECIES[selected.species].quality>=3)return selected;
+ return state.dragons.find(d=>SPECIES[d.species].quality>=3)??selected??state.dragons[0];
+}
 export function bestRunesForDragon(state,dragon){
  if(!dragon||SPECIES[dragon.species].quality<=2)throw Error('蓝色品质以上的龙才能装备符文。');
  const result=[];

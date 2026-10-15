@@ -325,3 +325,7 @@
 
 ## v0.16.40 圣树种植入口依据
 - item_holy_tree_hint_kezhongzhi.json原btn90×90使用ui_main_icon_kezhongzhi.png/2，con_name位于y-29；t_kezhongzhi_cn.png为原文字图。HolyTree_seeds静态函数onSeedClicked调用getEmptyGrowPos和godTreePlantSeed，证实底部托盘选种。现UI恢复托盘交互，指定槽位为PC适配，不将v39通用选择弹窗记为原界面。
+
+## v0.16.42 获取动画与装备目标核验
+- gem-reveal-source.json保留原RuneLotteryEffectPanel缩放1→0.7/0.4秒与三类S粒子记录。此次只纠正DOM居中随scale发生位移及粒子宿主锚点，不改原导出plist。
+- 原FuwenSelector蓝品质以上门槛继续保留；寻访默认选合格已有龙是PC交互修正，不宣称是已证明的客户端默认选龙顺序。实际正式档id2烈火龙不符合门槛且排第一，解释用户截图灰色装备按钮。真实鼠标隔离测试确认合格龙装备/卸下/重启保持有效。

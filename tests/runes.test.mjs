@@ -1,5 +1,5 @@
 import {test} from 'node:test';import assert from 'node:assert/strict';
-import {createGame,action,validate} from '../src/game.mjs';import {runeSkill,runeDefinition,runePower,runeUpgradePlan} from '../src/runes.mjs';import {dragonPower} from '../src/battle.mjs';
+import {createGame,action,validate} from '../src/game.mjs';import {runeSkill,runeDefinition,runePower,runeUpgradePlan,defaultRuneDragon} from '../src/runes.mjs';import {dragonPower} from '../src/battle.mjs';
 const T=1800000000000;
 function fixture(){const s=createGame(T);s.dragons.push({id:4,species:'original1041',level:20,habitatId:1});s.nextId=5;s.runes=[{id:'fw-1',type:20101,exp:35,dragonid:0},{id:'fw-2',type:20110,exp:999,dragonid:0},{id:'fw-3',type:20501,exp:0,dragonid:0}];s.nextRuneId=4;return validate(s)}
 test('source rune slots enforce matching skills, quality, ownership and replace without destroying inventory',()=>{
@@ -28,4 +28,13 @@ test('source one-click inlay picks higher quality then level, leaves other owner
  let s=fixture();s.runes.push({id:'fw-4',type:30101,exp:0,dragonid:0},{id:'fw-5',type:20201,exp:0,dragonid:0});s.nextRuneId=6;
  s=action(s,'wearBestRunes',{id:4},T);assert.equal(s.runes.find(v=>v.id==='fw-4').dragonid,4);assert.equal(s.runes.find(v=>v.id==='fw-5').dragonid,4);assert.equal(s.runes[2].dragonid,0);assert.equal(s.runes[1].dragonid,0);
  const before=structuredClone(s);assert.throws(()=>action(s,'wearBestRunes',{id:4},T),/更合适/);assert.deepEqual(s,before);assert.deepEqual(validate(JSON.parse(JSON.stringify(s))),s);
+});
+
+test('hunt entry selects an eligible owner while preserving an eligible explicit selection and all data',()=>{
+ const s=fixture(),before=structuredClone(s);
+ assert.equal(defaultRuneDragon(s,2).id,4);
+ assert.equal(defaultRuneDragon(s,999).id,4);
+ assert.equal(defaultRuneDragon(s,4).id,4);
+ assert.equal(defaultRuneDragon(createGame(T),2).id,2);
+ assert.deepEqual(s,before);
 });

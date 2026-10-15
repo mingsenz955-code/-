@@ -1,3 +1,4 @@
+import {defaultRuneDragon} from './runes.mjs';
 import {playEquipmentEffect} from './equipment-effects.mjs';
 import {pickRuneDrops} from './acquisition-animation.mjs';
 import {worldEntries,openWorldBoss,openHolyTree,openTreeTargets,openWorldHelp,openTreeSeeds} from './world-encounter-dialog.mjs';
@@ -110,7 +111,7 @@ document.addEventListener('click',async e=>{
   if(type==='treePlunder'){const before=structuredClone(state),op=treeOpponent(state,id),won=lineupPower(configuredLineup(state),state)>=op.power;await persist(action(state,type,{id}));render();await openBattleDialog(before,{enemyGroup:op.enemies});if(await playBattleAnimation(before,null,{won,enemyGroup:op.enemies})){await openTreeTargets(state);toast(state.log[0]);}return}
   if(type==='openBloodFront'||type==='openArena'){await openNativePaper(type==='openArena'?'竞技之神':'血战前线','<p>原地图入口已恢复。此模式的离线挑战与奖励结算仍在开发，暂不伪造原服务器对手。</p>','sourceWorldModePending');return}
   if(type==='openRunes'||type==='openRuneHunt'){await openRuneHunt(state);return}
-  if(type==='runeEquipment'||type==='runePanelDragon'){await openRunePanel(state,id||selected);return}
+  if(type==='runeEquipment'||type==='runePanelDragon'){const target=type==='runePanelDragon'?id:defaultRuneDragon(state,id||selected)?.id;await openRunePanel(state,target);return}
   if(type==='openShenfu'){await openShenfuDialog(state);tick();return}
   if(['buyShenfu','huntRune','pickRuneHunt'].includes(type)){
    const next=action(state,type,{count:Number(el.dataset.value),npc:id,id:el.dataset.id||null}),previousIds=new Set(state.runeHunt.pending.map(p=>p.id));

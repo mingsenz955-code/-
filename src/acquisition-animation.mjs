@@ -59,11 +59,12 @@ export async function revealGems(dialog){
    if(!dialog.open||!el.isConnected)break;
    const quality=Number(el.dataset.quality),x=512-parseFloat(el.style.left),y=184-parseFloat(el.style.top);
    el.style.visibility='visible';
-   void sourceParticles(el,quality===5?'cj_gaoji':'cj_putong',quality===5?{}:{fadeAfter:1.4,fadeDuration:.8});
+   const gem=el.querySelector('.gem-result-icon');
+   void sourceParticles(gem,quality===5?'cj_gaoji':'cj_putong',quality===5?{}:{fadeAfter:1.4,fadeDuration:.8});
    if(quality===5){
     const mask=document.createElement('div');mask.className='source-gem-reveal-mask';dialog.querySelector('.source-artboard').append(mask);
     void sourceAnimate(mask,[{opacity:200/255},{opacity:1/255}],{duration:400}).finally(()=>mask.remove());
-    void sourceParticles(el,'cj_gaojichuxian01');void sourceParticles(el,'cj_gaojichuxian02');
+    void sourceParticles(gem,'cj_gaojichuxian01');void sourceParticles(gem,'cj_gaojichuxian02');
    }
    const duration=quality===5?600:400,hold=duration-200;
    await Promise.all([

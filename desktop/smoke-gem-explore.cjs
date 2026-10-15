@@ -10,9 +10,11 @@ exports.run=async(w,store,verify=false)=>{const js=c=>w.webContents.executeJavaS
   await click('[data-action=exploreGem][data-value="high:10"]');
   let state=(await store.load()).state;assert.equal(state.gemInventory.length,11);assert.equal(state.gems,8200);assert.equal(state.gemExplore.draws,11);
   assert.equal(await js("document.querySelectorAll('.source-gem-source-results button').length"),10);assert.equal(await js("document.querySelector('#modal').dataset.animating"),undefined);
-  await fs.writeFile(path.join(__dirname,'..','work','gem-ten-reveal-qa.png'),(await w.webContents.capturePage()).toPNG());
+  const alignment=await js(`(()=>{const centers=[...document.querySelectorAll('.source-gem-source-results button')].map(b=>{const r=b.getBoundingClientRect(),g=b.querySelector('.gem-result-icon').getBoundingClientRect();return {x:r.x+r.width/2,y:r.y+r.height/2,error:Math.hypot(g.x+g.width/2-r.x-r.width/2,g.y+g.height/2-r.y-r.height/2)}});const particles=[...document.querySelectorAll('.source-particles[data-particle="cj_gaoji"]')].map(c=>{const r=c.getBoundingClientRect();return Math.min(...centers.map(p=>Math.hypot(r.x+r.width/2-p.x,r.y+r.height/2-p.y)))});return {centers,particles}})()`);
+  assert(alignment.centers.every(p=>p.error<1),'scaled icons stay at their result anchors');assert.equal(alignment.particles.length,10,'S gem continuous emitters remain visible');assert(alignment.particles.every(e=>e<1),'each S gem emitter follows its gem center');
+  await wait(2500);await fs.writeFile(path.join(__dirname,'..','work','gem-ten-reveal-qa.png'),(await w.webContents.capturePage()).toPNG());
   await require('./smoke-input.cjs').nativeClick(w,'[data-action=exploreGem][data-value="high:10"]',{settle:false});await wait(100);
-  w.webContents.sendInputEvent({type:'keyDown',keyCode:'Escape'});w.webContents.sendInputEvent({type:'keyUp',keyCode:'Escape'});await wait(1400);
+  w.focus();w.webContents.focus();w.webContents.sendInputEvent({type:'keyDown',keyCode:'Escape'});w.webContents.sendInputEvent({type:'keyUp',keyCode:'Escape'});await wait(1400);
   assert.equal(await js("document.querySelector('#modal').open"),false);state=(await store.load()).state;assert.equal(state.gemInventory.length,21);assert.equal(state.gems,6400);assert.equal(state.gemExplore.draws,21);
   assert.equal(await js("document.querySelectorAll('.source-particles').length"),0);console.log('PASS high ten-reveal, correct single charge and all rewards saved even when closing mid-animation');
  }
