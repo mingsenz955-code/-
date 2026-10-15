@@ -37605,6 +37605,78 @@
       "width": 201,
       "height": 208,
       "sha256": "0be720978fe18ffb81d90b74a2510bdc417e16e1809a3f652b98a1e3950e84d0"
+    },
+    "effects/bossdao_dao.webp": {
+      "archive": "assets/res/buildings/bossdao_dao.xml",
+      "texture": "assets/res/buildings/bossdao_dao.png",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "110df86339d9ea297001cdaa8730973a1bf47c73808e5fa761a929f0f73a7aed"
+    },
+    "effects/bossdao_dao.json": {
+      "archive": "assets/res/buildings/bossdao_dao.xml",
+      "texture": "assets/res/buildings/bossdao_dao.png",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "154d5fafce2c8db44268112c7a2690bcca2c936efb7276d4961f66ce03e418d5"
+    },
+    "effects/bossdao_shitou.webp": {
+      "archive": "assets/res/buildings/bossdao_shitou.xml",
+      "texture": "assets/res/buildings/bossdao_shitou.png",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "9cd4472c362b1408b3ab21b3829a71ea01e756c23fdcee265168c95c22be1ffc"
+    },
+    "effects/bossdao_shitou.json": {
+      "archive": "assets/res/buildings/bossdao_shitou.xml",
+      "texture": "assets/res/buildings/bossdao_shitou.png",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "2743f870dc42bce8a8aec44b6cf89c22da4b8886a9fe7f3cd4e1bf64b9e54a61"
+    },
+    "effects/feiting.webp": {
+      "archive": "assets/res/buildings/feiting.xml",
+      "texture": "assets/res/buildings/feiting.png",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "c5b7ebd5d003e9b2fa0c910b0d052b967cc6dfbd85acc83e9a6ce166325d6c17"
+    },
+    "effects/feiting.json": {
+      "archive": "assets/res/buildings/feiting.xml",
+      "texture": "assets/res/buildings/feiting.png",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "dc1a55b9704d1745d65118f04f61c3ca0962e31f906df21163184aa2eedcbe77"
+    },
+    "effects/jingjichang_eff.webp": {
+      "archive": "assets/res/buildings/jingjichang_eff.xml",
+      "texture": "assets/res/buildings/jingjichang_eff.png",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "f2936bd3c32461bb6eb5e2c6d1664c046c6cc178def0511f5c478130876a6d5c"
+    },
+    "effects/jingjichang_eff.json": {
+      "archive": "assets/res/buildings/jingjichang_eff.xml",
+      "texture": "assets/res/buildings/jingjichang_eff.png",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "05e7536b302abbdabdcf28a3865b98aab39c81b556e6cb94ace8a7e4720c1e5b"
+    },
+    "effects/shengshu_eff.webp": {
+      "archive": "assets/res/buildings/shengshu_eff.xml",
+      "texture": "assets/res/buildings/shengshu_eff.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "a3b5b7f52352d35a55077f68a83bb0664974ba2f99feced8aa3b6770104fa573"
+    },
+    "effects/shengshu_eff.json": {
+      "archive": "assets/res/buildings/shengshu_eff.xml",
+      "texture": "assets/res/buildings/shengshu_eff.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "8535516021a209bab5507b5da3756bd328032dc4be5a95f00a87b029dadcd803"
+    },
+    "effects/yandong_eff.webp": {
+      "archive": "assets/res/buildings/yandong_eff.xml",
+      "texture": "assets/res/buildings/yandong_eff.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "681cd58b9b8f2636d816923ba02662b55615dcca4a228489635704a9f5a939d8"
+    },
+    "effects/yandong_eff.json": {
+      "archive": "assets/res/buildings/yandong_eff.xml",
+      "texture": "assets/res/buildings/yandong_eff.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "18964ff0aee9e636433216a762faae3291ecc13d8590cef471b0c3901c8b86d1"
     }
   }
 }

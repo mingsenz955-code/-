@@ -1,0 +1,15 @@
+import SOURCE from '../assets/original/data/world-encounters.mjs';
+import {SPECIES} from './data.mjs';
+import {configuredLineup,dragonAttributes} from './battle.mjs';
+export {SOURCE as WORLD_SOURCE};
+export const ENCOUNTER_POLICY='offline-source-world-v1';
+const day=now=>Math.floor((now+28800000)/86400000);
+export const createEncounters=now=>({policy:ENCOUNTER_POLICY,boss:{stage:0,damage:0,totalDamage:0,todayDamage:0,attempts:10,bought:0,day:day(now),kills:0},tree:{day:day(now),used:[],plots:[null,null,null],robbed:[]}});
+export function validateEncounters(s){const e=s.encounters;if(!e||e.policy!==ENCOUNTER_POLICY)throw Error('世界玩法存档无效。');const ints=(o,ks)=>ks.every(k=>Number.isSafeInteger(o?.[k])&&o[k]>=0);if(!ints(e.boss,['stage','damage','totalDamage','todayDamage','attempts','bought','day','kills'])||e.boss.stage>=SOURCE.bossStages.length||!ints(e.tree,['day'])||!Array.isArray(e.tree.used)||!Array.isArray(e.tree.robbed)||e.tree.used.some(id=>!SOURCE.seeds.some(r=>r.id===id))||e.tree.robbed.some(id=>!SOURCE.robots.some(r=>r.id===id))||!Array.isArray(e.tree.plots)||e.tree.plots.length!==3||e.tree.plots.some(p=>p&&(!SOURCE.seeds.some(r=>r.id===p.seedId)||!Number.isSafeInteger(p.readyAt)||p.readyAt<0)))throw Error('世界玩法进度无效。');if(e.boss.damage>=bossInfo(s).life)throw Error('首领生命记录无效。');}
+export function refreshEncounters(s,now){if(day(now)>s.encounters.boss.day)Object.assign(s.encounters.boss,{day:day(now),attempts:10,bought:0,todayDamage:0});if(day(now)>s.encounters.tree.day)Object.assign(s.encounters.tree,{day:day(now),used:[],robbed:[]});}
+export const seedInfo=id=>SOURCE.seeds.find(r=>r.id===id);
+export function availableSeeds(level,now=Date.now()){const stamp=str=>{const m=str?.match(/^(\d+)-(\d+)-(\d+)-(\d+):(\d+):(\d+)$/);return m?Date.UTC(+m[1],+m[2]-1,+m[3],+m[4]-8,+m[5],+m[6]):null};return SOURCE.seeds.filter(r=>level>=r.minLvl&&level<=r.maxLvl&&(!r.start||now>=stamp(r.start))&&(!r.end||now<=stamp(r.end))).slice(0,5);}
+export function monster(id){const r=SOURCE.monsters.find(m=>m.id===id);if(!r)throw Error('原怪物配置尚未取得。');const species=Object.keys(SPECIES).find(k=>SPECIES[k].originalId===r.dragonId);if(!species)throw Error('原龙模型尚未取得。');return {...r,species};}
+export function bossInfo(s){return {...monster(SOURCE.bossStages[s.encounters.boss.stage].id),...SOURCE.bossStages[s.encounters.boss.stage]};}
+export function bossAttackPlan(s){const b=bossInfo(s),team=configuredLineup(s);if(!team.length)throw Error('请先布阵至少一条龙。');let remaining=b.life-s.encounters.boss.damage;const hits=[];for(let round=0;round<3&&remaining>0;round++)for(let i=0;i<team.length&&remaining>0;i++){const stats=dragonAttributes(team[i],s),damage=Math.min(remaining,Math.max(1,Math.floor(stats.attack*.8-b.defend*.15)));remaining-=damage;hits.push({index:i,damage,round:round+1});}return {hits,damage:hits.reduce((sum,h)=>sum+h.damage,0),won:remaining===0,enemy:b,startHp:b.life-s.encounters.boss.damage};}
+export function treeOpponent(s,id){const r=SOURCE.robots.find(r=>r.id===id);if(!r)throw Error('圣树对手不存在。');return {...r,enemy:monster(r.monsterId)};}

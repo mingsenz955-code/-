@@ -13,11 +13,11 @@ import {BATTLE_SLOTS,BATTLE_ROUND_LIMIT,dragonAttributes,lineupPower,configuredL
 const wait=ms=>new Promise(resolve=>setTimeout(resolve,ms));
 let activeRun=0;
 function fighter(item,side,index,positions){const p=positions[index],art=dragonArt(item.species,'',item.level).replace('data-clip="breath"',`data-clip="breathinbattle" data-battle-scale="${p.scale}" data-native-size="true"`);return `<div class="battle-fighter ${side}" data-unit="${side}${index}" data-position="${p.type}" style="left:${p.x}px;top:${p.y}px;z-index:${Math.round(p.y)}">${art}<span class="battle-unit-hp"><i></i></span></div>`}
-export async function openBattleDialog(state,{nodeId=null}={}){
+export async function openBattleDialog(state,{nodeId=null,enemyGroup=null}={}){
  const layout=await sourceLayout('ui_battlenormal');
  layout.height=576;
  for(const n of layout.children){if(n.name==='bg')n.height=576;if(n.y>200)n.y-=96;else if(n.y< -200)n.y+=96;}
- const lineup=configuredLineup(state),enemies=battleEnemyGroup(nodeId)?.monsters??[],values={},slots={},hidden=new Set(['top_bg']);
+ const lineup=configuredLineup(state),enemies=enemyGroup??battleEnemyGroup(nodeId)?.monsters??[],values={},slots={},hidden=new Set(['top_bg']);
  for(let index=1;index<=BATTLE_SLOTS;index++)for(const side of ['left','right']){
   const item=(side==='left'?lineup:enemies)[index-1],key=`${side}${index}`,team=side==='left'?'ally':'enemy';
   values[`${key}/lv`]=item?`Lv.${item.level}`:'';
@@ -45,7 +45,7 @@ export async function playBattleAnimation(state,nodeId,result){
  const d=document.querySelector('#modal'),run=d.dataset.battleRun,layer=d.querySelector('.battle-fx-layer');
  const live=()=>d.open&&d.dataset.mode==='sourceBattle'&&d.dataset.battleRun===run;
  const make=(item,side,index)=>({item,side,index,el:d.querySelector(`[data-unit="${side}${index}"]`),stats:side==='ally'?dragonAttributes(item,state):{attack:item.attack,defend:item.defend,life:item.life},hp:100});
- const allies=configuredLineup(state).map((v,i)=>make(v,'ally',i)),enemies=battleEnemyGroup(nodeId).monsters.filter(v=>v.species).map((v,i)=>make(v,'enemy',i));
+ const allies=configuredLineup(state).map((v,i)=>make(v,'ally',i)),enemies=(result.enemyGroup??battleEnemyGroup(nodeId)?.monsters??[]).filter(v=>v.species).map((v,i)=>make(v,'enemy',i));
  const allyPositions=battlePositions(allies.map(v=>v.item)),enemyPositions=battlePositions(enemies.map(v=>v.item),'enemy');
  const winners=result.won?allies:enemies,losers=result.won?enemies:allies;
  const setHp=(u,hp)=>{u.hp=hp;u.el.style.setProperty('--hp',`${hp}%`);const key=`${u.side==='ally'?'left':'right'}${u.index+1}/hp`,bar=d.querySelector(`[data-source="${key}"]`);if(bar)bar.style.clipPath=`inset(0 ${100-hp}% 0 0)`;if(hp<=0){clip(u.el,'dead');u.el.classList.add('is-dead');d.querySelector(`[data-portrait="${u.side}${u.index}"]`)?.classList.add('is-dead')}};
@@ -67,4 +67,12 @@ export async function playBattleAnimation(state,nodeId,result){
   await wait(550);blast?.remove();target.el.classList.remove('is-hit');attacker.el.classList.remove('is-attacking');if(target.hp>0&&target.el.querySelector('canvas')?.dataset.clip==='hurt')clip(target.el,'breathinbattle');
  }
  await wait(500);return live();
+}
+
+// Offline world-boss encounter: recorded partial damage, never fake a defeated boss.
+export async function playBossAnimation(state,plan){
+ const d=document.querySelector('#modal'),run=d.dataset.battleRun,layer=d.querySelector('.battle-fx-layer'),target=d.querySelector('[data-unit="enemy0"]'),team=configuredLineup(state),positions=battlePositions(team),targetPos=battlePositions([plan.enemy],'enemy')[0];let hp=plan.startHp;
+ const live=()=>d.open&&d.dataset.battleRun===run&&d.dataset.mode==='sourceBattle';
+ for(const hit of plan.hits){if(!live())return false;const actor=d.querySelector(`[data-unit="ally${hit.index}"]`),p=positions[hit.index];clip(actor,'magic');actor.classList.add('is-attacking');const r=d.querySelector('[data-source="round/num"]');if(r)r.textContent=`${hit.round}/30`;await wait(350);if(!live())return false;const fx=effect(layer,'magic_'+SPECIES[team[hit.index].species].originalId,'bomb2',targetPos.x,targetPos.y-45);clip(target,'hurt');await damageNumber(layer,hit.damage,targetPos.x,targetPos.y-75);hp-=hit.damage;const percent=Math.max(0,hp/plan.enemy.life*100);target.style.setProperty('--hp',`${percent}%`);const bar=d.querySelector('[data-source="right1/hp"]');if(bar)bar.style.clipPath=`inset(0 ${100-percent}% 0 0)`;await wait(400);fx?.remove();actor.classList.remove('is-attacking');}
+ if(live()&&plan.won){clip(target,'dead');target.classList.add('is-dead')}await wait(500);return live();
 }

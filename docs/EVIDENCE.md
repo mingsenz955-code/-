@@ -280,3 +280,8 @@
 ## v0.16.35 原连续世界证据
 - work/client-config/app/scenes/MainScene.lua第135–197行，initIslands实际positions与z-order；left/top/right/bottom同一islandLayer，不是四页面。原背景第86行island_bg_day.png。
 - assets/original/layouts/islandleft/right/top/bottom.json各自尺寸及世界图。WORLD_ISLANDS统一比例/翻转Y，保存岛ID不变。旧建筑板缩放为兼容适配，未当作原等距网格证据。
+
+## v0.16.36 中央首领与圣树证据
+- MainScene.lua第192–235/302–375/602–618行确认圣树、血战、冒险、竞技、首领入口坐标、层次、等级与模块名；中央首领是额外功能岛，不是省略的一块普通放置板。
+- 原APK buildings/{bossdao_dao,bossdao_shitou,shengshu_eff,feiting,yandong_eff,jingjichang_eff}导出numeric骨骼/原纹理，manifest保留来源。原ui_world_boss、ui_holy_tree布局接实际点击。
+- world-encounters-provenance.json记录原种子/首领/NPC表与静态字段来源。work/worldboss-main-static.txt、holytree-main-static.txt记录只读反汇编。原源码label与条件有不同开放星期表述，因此本轮不猜精确服务器周历，单机常驻。

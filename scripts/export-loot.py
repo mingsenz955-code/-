@@ -5,7 +5,7 @@ root=Path(__file__).resolve().parents[1];raw=(root/'assets/original/data/tables.
 z=zipfile.ZipFile(root/'work/yulong-dcn.apk');config=json.loads(z.read('assets/res/config/config_cn_qq.json'));tr=json.loads(z.read('assets/res/config/textnew_cn.json'))['translation']
 pools={r[10] for r in tables['map_level']}|{5000019,9000011}
 rows=[dict(zip(['id','pool','type','itemId','weight','min','max'],r)) for r in tables['randgive'] if r[1] in pools]
-propids={r['itemId'] for r in rows if r['type']==4 and r['weight']>0}|{6013,6014,6015,6016}
+propids={r['itemId'] for r in rows if r['type']==4 and r['weight']>0}|{6013,6014,6015,6016,6056}
 named={r['id']:r for r in config['items']};pcf={r[0]:r for r in tables['items']};props=[]
 for id in sorted(propids):
  r=pcf[id];n=named.get(id,{});key=n.get('name',r[1]);group=n.get('group_type',r[2]);name=tr.get(group+'.'+key,tr.get(key,key));icon=n.get('img_name',key);image='thumbs_store_'+icon+'.png'
