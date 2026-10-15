@@ -1,0 +1,85 @@
+SHA256 d9303fffdf9fc0b81e7010b1b34269df5ef3fbd5ee0eb48d2bb2cb0a5accb750
+Static Lua 5.1 disassembly. PCs and nested function indexes are zero-based. No code executed.
+
+FUNCTION 7
+CONSTANTS ["DataManager", "formationData", "getEquipListByListpos", "lastSelectDragonListpos", "0", 1, "equip", "getRecommendEquip", "display", "newSprite", "#ui_formationinfo_hint01.png", "getChild", "hint", "addChild", "data", "id", "removeAllChildren", "SocketSender", "operatFormationEquip", 2, 3, 4, 5, 6]
+0000 GETGLOBAL r0 "DataManager"
+0001 GETTABLE r0 r0["formationData"]
+0002 CALL A=0 B=1 C=2
+0003 GETTABLE r0 r0["getEquipListByListpos"]
+0004 GETUPVAL A=1 B=0 C=0
+0005 GETTABLE r1 r1["lastSelectDragonListpos"]
+0006 CALL A=0 B=2 C=2
+0007 LOADBOOL A=1 B=0 C=0
+0008 NEWTABLE A=2 B=6 C=0
+0009 LOADK r3 "0"
+0010 LOADK r4 "0"
+0011 LOADK r5 "0"
+0012 LOADK r6 "0"
+0013 LOADK r7 "0"
+0014 LOADK r8 "0"
+0015 SETLIST A=2 B=6 C=1
+0016 LOADK r3 1
+0017 LEN A=4 B=0 C=0
+0018 LOADK r5 1
+0019 FORPREP A=3 target=64
+0020 GETTABLE r7 r0[r6]
+0021 GETTABLE r7 r7["equip"]
+0022 TEST A=7 B=0 C=1
+0023 JMP A=0 target=64
+0024 GETGLOBAL r7 "DataManager"
+0025 GETTABLE r7 r7["formationData"]
+0026 CALL A=7 B=1 C=2
+0027 GETTABLE r7 r7["getRecommendEquip"]
+0028 MOVE A=8 B=6 C=0
+0029 CALL A=7 B=2 C=2
+0030 TEST A=7 B=0 C=0
+0031 JMP A=0 target=53
+0032 GETGLOBAL r8 "display"
+0033 GETTABLE r8 r8["newSprite"]
+0034 LOADK r9 "#ui_formationinfo_hint01.png"
+0035 CALL A=8 B=2 C=2
+0036 GETUPVAL A=9 B=1 C=0
+0037 GETTABLE r9 r9["getChild"]
+0038 LOADK r10 "equip"
+0039 MOVE A=11 B=6 C=0
+0040 CONCAT A=10 B=10 C=11
+0041 CALL A=9 B=2 C=2
+0042 GETTABLE r9 r9["getChild"]
+0043 LOADK r10 "hint"
+0044 CALL A=9 B=2 C=2
+0045 SELF r9 self=r9 method="addChild"
+0046 MOVE A=11 B=8 C=0
+0047 CALL A=9 B=3 C=1
+0048 LOADBOOL A=1 B=1 C=0
+0049 GETTABLE r9 r7["data"]
+0050 GETTABLE r9 r9["id"]
+0051 SETTABLE r2[r6] r9
+0052 JMP A=0 target=64
+0053 GETUPVAL A=8 B=1 C=0
+0054 GETTABLE r8 r8["getChild"]
+0055 LOADK r9 "equip"
+0056 MOVE A=10 B=6 C=0
+0057 CONCAT A=9 B=9 C=10
+0058 CALL A=8 B=2 C=2
+0059 GETTABLE r8 r8["getChild"]
+0060 LOADK r9 "hint"
+0061 CALL A=8 B=2 C=2
+0062 SELF r8 self=r8 method="removeAllChildren"
+0063 CALL A=8 B=2 C=1
+0064 FORLOOP A=3 target=20
+0065 TEST A=1 B=0 C=0
+0066 JMP A=0 target=79
+0067 GETGLOBAL r3 "SocketSender"
+0068 GETTABLE r3 r3["operatFormationEquip"]
+0069 GETUPVAL A=4 B=0 C=0
+0070 GETTABLE r4 r4["lastSelectDragonListpos"]
+0071 LOADK r5 1
+0072 GETTABLE r6 r2[1]
+0073 GETTABLE r7 r2[2]
+0074 GETTABLE r8 r2[3]
+0075 GETTABLE r9 r2[4]
+0076 GETTABLE r10 r2[5]
+0077 GETTABLE r11 r2[6]
+0078 CALL A=3 B=9 C=1
+0079 RETURN A=0 B=1 C=0

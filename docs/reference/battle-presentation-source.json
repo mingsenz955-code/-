@@ -1,0 +1,58 @@
+{
+  "sourceApkSha256": "6011e9026f35d3377edf6dae7ec7479fde82c058ad413a4f4327e31e1c2555c5",
+  "method": "Static reading of plaintext Lua resources; original Lua never executed",
+  "sources": [
+    {
+      "path": "ui/battle/BattleField.lua",
+      "sha256": "a9c43cf3d4808e4621e2c117aa3e14307f9024983055bd4925d36b563f803849"
+    },
+    {
+      "path": "ui/battle/Warrior.lua",
+      "sha256": "15b7549b6a96e9fd06a2bacf3c2c1d88306f0cbe8ce5d4f724f854f61fc1a354"
+    },
+    {
+      "path": "ui/battle/HpBar.lua",
+      "sha256": "8b591cd951c5243641f87b398c15f0c76b796989f1cee32a230976be78b90c71"
+    },
+    {
+      "path": "ui/battle/bullet/BulletNormal.lua",
+      "sha256": "f45e3bd99a56f180bdb10012ae1d55a55240a204114d7b3f4a0fe98e9791a54c"
+    },
+    {
+      "path": "ui/battle/bullet/BulletLightning.lua",
+      "sha256": "42a2d53a45b29bcd6c3b174e541538cc862c144d139fa07db40d0f624cf097c4"
+    },
+    {
+      "path": "ui/battle/bullet/BulletChain.lua",
+      "sha256": "c067547fd29b277a959dc9e0dab179bde3236142ded82cff341c9437aa3f3817"
+    },
+    {
+      "path": "dragon/core/isoengine/unit/EffectDelegate.lua",
+      "sha256": "b764b9449713bdffbf5deab7afec18c35589ae53fe7b4c361422d9b109504dca"
+    },
+    {
+      "path": "app/components/FloatingText.lua",
+      "sha256": "072f388f18440cd6d55154e0b7f985aca3a0eb137817cd1eecac14b914ce4e44"
+    }
+  ],
+  "implemented": {
+    "viewport": [
+      1024,
+      768
+    ],
+    "entry": "all movein clips complete, then 0.1 seconds",
+    "normalProjectile": "distance/1800 seconds, scale 2; reverse direction sets scaleY=-1",
+    "beam": "scaleX=distance/270*2, scaleY=2; source bullistic completion then hit; keep 0.5 seconds and fade 0.3 seconds",
+    "chainSegment": "beam timing with 0.3 second keep and 0.15 second fade",
+    "hit": "source offsetY; bomb2 foreground and optional bomb3 background, clip completion plus 0.1 seconds",
+    "death": "native dead completion, then 0.1 seconds before removal",
+    "hp": "native image sizes, immediate front scale and 0.3 second trailing scale; 0.5 second delay then 0.5 second fade",
+    "skillName": "scale 0.1, delay 0.1s, scale 1.5 over 0.1s, scale 1 over 0.3s, fade 0.7-1.0s"
+  },
+  "remaining": [
+    "Server round order, targeting, damage, buffs and chained/multi-target semantics remain offline approximations",
+    "Group hit centers are not yet applied; single target hit art is used",
+    "FloatingText still uses red_50 for ordinary damage, rather than native orange_36; native floatUpPowerfull curve pending",
+    "Exact native bone easing and cross-fade are not reconstructed"
+  ]
+}

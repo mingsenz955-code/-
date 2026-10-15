@@ -39,9 +39,9 @@ exports.run=async(window,store,verify=false)=>{
  assert.equal(await js("document.querySelectorAll('#modal .source-battle-portrait[data-portrait^=ally]').length"),before.formation.length);
  assert.equal(await js("document.querySelectorAll('#modal .source-battle-panel, #modal .battle-projectile, #modal [data-action=battleStart]').length"),0);
  assert.equal(await js("document.querySelectorAll('#modal .source-battle-portrait[data-portrait^=enemy]').length"),6);
- assert.equal(await js("document.querySelector('#modal .source-artboard').getBoundingClientRect().width/document.querySelector('#modal .source-artboard').getBoundingClientRect().height"),1024/576);
+ assert(await js("Math.abs(document.querySelector('#modal .source-artboard').getBoundingClientRect().width/document.querySelector('#modal .source-artboard').getBoundingClientRect().height-1024/768)<.001"));
  await shot('battle-qa.png');
- await wait(2200);
+ for(let i=0;i<150&&!await js("!!document.querySelector('#modal .battle-source-effect[data-model]')");i++)await wait(40);
  assert(await js("!!document.querySelector('#modal .battle-source-effect[data-model]')"));
  await shot('battle-source-fx-qa.png');
  for(let i=0;i<180;i++){if((await store.load()).state.adventure.lastBattle)break;await wait(100)}

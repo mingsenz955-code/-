@@ -1,3 +1,4 @@
+import {equipmentStars} from './equipment-ui.mjs';
 import {equipmentStarRow} from './equipment-stars.mjs';
 import {runeOfDragon,runeDefinition,runeIcon,runeSkill} from './runes.mjs';
 import {formationCounts} from './formation.mjs';
@@ -7,12 +8,11 @@ import {renderSourceLayout} from './source-layout.mjs';
 import {sourceLayout,showSource,esc} from './ranch-dialogs.mjs';
 import {dragonArt} from './art.mjs';
 import CATALOG from '../assets/original/catalog.mjs';
-import {EQUIPMENT_SLOTS_LAYOUT,EQUIPMENT_PROPERTIES,equipmentCatalog,equipmentDefinition,equipmentIcon,equipmentEmptyIcon,equipmentGradeText,equipmentOfDragon,equipmentInPart,equipmentBonus,equipmentLabel,definitionPart,equipmentEnhancePlan,EQUIPMENT_MATERIAL_NAMES} from './equipment.mjs';
+import {EQUIPMENT_SLOTS_LAYOUT,EQUIPMENT_PROPERTIES,equipmentCatalog,equipmentDefinition,equipmentIcon,equipmentEmptyIcon,equipmentGradeText,equipmentOfDragon,equipmentInPart,equipmentBonus,equipmentLabel,definitionPart,equipmentEnhancePlan,recommendedEquipment,equipmentPower,EQUIPMENT_MATERIAL_NAMES} from './equipment.mjs';
 
 const PART_LABELS=['武器','鳞片','龙骨','龙角','羽翼','皇冠'];
 const QUALITY_LABELS=['','白','绿','蓝','紫','橙'];
 // EquipSelecter/DragonInfor print the tier as "+grade-1".
-const stars=count=>count>0?'★'.repeat(count):'';
 const attributeRows=definition=>[['攻击',definition.atk],['防御',definition.def],['生命',definition.hp],['免暴',definition.resist],['暴击',definition.antResist]].filter(([,value])=>value>0);
 const portraitOf=species=>{const record=CATALOG.find(entry=>entry.id===SPECIES[species].originalId);return record?.images?.[1]??record?.images?.[0]??null};
 const otherOwner=(state,instance)=>state.dragons.find(d=>d.id===instance.dragonid)??null;
@@ -34,14 +34,16 @@ export async function openEquipDialog(state,dragonId,{returnToDragon=false,forma
  const dragon=state.dragons.find(d=>d.id===dragonId)??state.dragons[0];
  if(!dragon)throw new Error('牧场里还没有可以查看的龙。');
  const [layout,listItem]=await Promise.all([sourceLayout('ui_formation_info'),sourceLayout('item_star_up_touxiang_dengji')]);
- const species=SPECIES[dragon.species],worn=equipmentOfDragon(state,dragon.id),bonus=equipmentBonus(worn);
+ const species=SPECIES[dragon.species],worn=equipmentOfDragon(state,dragon.id),recommend=recommendedEquipment(state,dragon.id);
  const values={txt_name:'阵容'},slots={},actions={},hidden=new Set(['hint_up','hint_down','type_sky','type_land']);
  for(const {node,part} of EQUIPMENT_SLOTS_LAYOUT){
   const instance=equipmentInPart(worn,part),definition=instance?equipmentDefinition(instance.type):null;
   values['right/'+node+'/txt_name']=definition?definition.name:'';
   values['right/'+node+'/txt_num']=definition?equipmentGradeText(definition):'';
   slots['right/'+node+'/icon']=slotContent(instance,part);
-  slots['right/'+node+'/star']=instance&&instance.star?`<span class="source-equip-stars">${stars(instance.star)}</span>`:'';
+  slots['right/'+node+'/quality']=definition?`<img class="source-equip-frame" src="assets/original/ui/ui_daojukuang_DaoJuKuang${definition.quality}.png" alt="">`:'';
+  slots['right/'+node+'/hint']=recommend.some(v=>definitionPart(v)===part)?'<img class="source-equip-recommend" src="assets/original/ui/ui_formationinfo_hint01.png" alt="可装备">':'';
+  slots['right/'+node+'/star']=instance?equipmentStars(instance):'';
  }
  // Four source skill slots now open their corresponding rune inventory.
  for(let i=1;i<=4;i++){const item=runeOfDragon(state,dragon.id,i),def=runeDefinition(item?.type),skill=runeSkill(dragon,def,i);values['right/skill'+i+'/txt_name']=skill?.name??'';values['right/skill'+i+'/txt_num']=def?'+'+def.level:'';slots['right/skill'+i+'/icon']=`<button class="source-rune-slot" data-action="${item?'runeInfo':'runeSelector'}" data-id="${item?item.id:dragon.id}" data-value="${i}" aria-label="${esc(skill?.name??'符文槽'+i)}">${def&&runeIcon(def)?`<img src="${runeIcon(def)}" alt="">`:'<img src="assets/original/ui/ui_daojukuang_kong2.png" alt="镶嵌符文">'}</button>`}
@@ -65,11 +67,11 @@ export async function openEquipDialog(state,dragonId,{returnToDragon=false,forma
  values['right/dragong_info/resist/num']=String(base?.uncrit??0);
  values['right/dragong_info/power/num']=String(dragonPower(dragon,state)??'—');
  slots['left/huadong']=`<div class="source-equip-dragonlist">${state.dragons.map(d=>dragonCell(listItem,d,d.id===dragon.id)).join('')}</div>`;
- values['left/tx_team_num']='—';values['left/tx_shy_num']='—';values['left/tx_land_num']='—';
+ values['left/tx_team']='队伍';values['left/tx_sky']='飞行龙';values['left/tx_land']='爬行龙';values['left/tx_team_num']='—';values['left/tx_shy_num']='—';values['left/tx_land_num']='—';
  actions.close={type:'close',label:'关闭阵容'};
- actions['left/btn_formation/btn']={type:'unverifiedEquip',label:'阵型'};
- actions['right/change/btn']={type:'unverifiedEquip',label:'更换龙'};
- actions['right/equip/btn']={type:'unverifiedEquip',label:'一键装备'};
+ actions['left/btn_formation/btn']={type:'openFormation',label:'阵型'};
+ actions['right/change/btn']={type:'openMyDragons',label:'更换龙'};
+ actions['right/equip/btn']={type:'wearBestEquipment',id:dragon.id,label:'一键装备'};
  actions['right/dragong_info/btn_xiangqing/btn']={type:'openDragon',id:dragon.id,label:'详情'};
  if(formation){
   const lineup=configuredLineup(state),count=formationCounts(lineup),cell=await sourceLayout('item_big_touxiang');
@@ -80,8 +82,8 @@ export async function openEquipDialog(state,dragonId,{returnToDragon=false,forma
   actions['right/change/btn']={type:'formationPick',id:slot,label:'更换龙'};
   actions['left/btn_formation/btn']={type:'formationPreview',label:'阵型'};
  }
- const d=showSource(formation?'sourceFormation':'sourceEquip',renderSourceLayout(layout,{values,slots,actions,hidden}));
- d.dataset.formationSlot=String(slot);
+ const d=showSource(formation?'sourceFormation':'sourceEquip',renderSourceLayout(layout,{values,slots,actions,hidden,disabled:new Set(recommend.length?[]:['right/equip/btn'])}));
+ d.dataset.formationSlot=String(slot);d.dataset.runeContext='equipment';
 
  d.dataset.dragonId=String(dragon.id);d.dataset.returnToDragon=String(returnToDragon);
 }
@@ -97,12 +99,12 @@ export async function openEquipChangeDialog(state,dragonId,part){
  const [layout,card]=await Promise.all([sourceLayout('ui_formation_equip_change'),sourceLayout('item_formation_equip_change')]);
  const loose=(state.equipment??[]).filter(instance=>!instance.dragonid&&definitionPart(instance)===part);
  const cards=loose.map(instance=>{
-  const definition=equipmentDefinition(instance.type),rows=attributeRows(definition);
-  const values={tx_name:equipmentLabel(instance),tx_lv:equipmentGradeText(definition)||'—','pingding/shuzi':String(definition.evaluate),hint:`装备于${SPECIES[dragon.species].name}`};
+  const definition=equipmentDefinition(instance.type),rows=attributeRows({...definition,...equipmentBonus([instance])});
+  const values={tx_name:definition.name,tx_lv:equipmentGradeText(definition),'pingding/miaoshu':'装备评分：','pingding/shuzi':String(equipmentPower(instance)),'btn_zhuangbei/txt_name':'装备',hint:''};
   for(let i=1;i<=3;i++){const row=rows[i-1];values['shuxing'+i+'/miaoshu']=row?row[0]+'：':'';values['shuxing'+i+'/shuzi']=row?String(row[1]):''}
-  return `<article class="source-equip-change-card">${renderSourceLayout(card,{values,hidden:new Set(['biaoji']),actions:{'btn_zhuangbei/btn':{type:'wearEquipment',id:dragon.id,value:instance.id,label:'装备'}},slots:{icon_long:`<img class="source-equip-icon" src="${equipmentIcon(definition)}" alt="">`,node_star:`<span class="source-equip-stars">${stars(instance.star)}</span>`}})}</article>`;
+  return `<article class="source-equip-change-card">${renderSourceLayout(card,{values,hidden:new Set(['biaoji','hint',...[1,2,3].filter(i=>!rows[i-1]).map(i=>'shuxing'+i)]),actions:{'btn_zhuangbei/btn':{type:'wearEquipment',id:dragon.id,value:instance.id,label:'装备'}},slots:{xiangkuang:`<img class="source-equip-frame" src="assets/original/ui/ui_daojukuang_DaoJuKuang${definition.quality}.png" alt="">`,icon_long:`<img class="source-equip-icon" src="${equipmentIcon(definition)}" alt="">`,node_star:equipmentStars(instance)}})}</article>`;
  }).join('');
- const d=showSource('sourceEquipChange',renderSourceLayout(layout,{hidden:new Set(cards?['hint']:[]),actions:{fanhui:{type:'openEquip',id:dragon.id,label:'返回阵容'},'btn_up/btn':{type:'equipSource',label:'获得更多装备'}},slots:{huadong:cards?`<div class="source-equip-change-list">${cards}</div>`:''}}));
+ const d=showSource('sourceEquipChange',renderSourceLayout(layout,{values:{hint:'背包中没有该部位的闲置装备','btn_up/miaoshu':'获得更多装备'},hidden:new Set(cards?['hint']:[]),actions:{fanhui:{type:'openEquip',id:dragon.id,label:'返回阵容'},'btn_up/btn':{type:'equipSource',label:'获得更多装备'}},slots:{huadong:cards?`<div class="source-equip-change-list">${cards}</div>`:''}}));
  d.dataset.dragonId=String(dragon.id);d.dataset.equipPart=String(part);
 }
 
@@ -114,9 +116,9 @@ export async function openEquipInfoDialog(state,equipmentId,{dragonId=null}={}){
  const definition=equipmentDefinition(instance.type);
  const owner=otherOwner(state,instance)??state.dragons.find(d=>d.id===dragonId)??null;
  const layout=await sourceLayout('panel_equip_info');
- const bonus=equipmentBonus([instance]),rows=attributeRows({...definition,...bonus}),values={tx_name:equipmentLabel(instance),tx_lv:equipmentGradeText(definition)||'—','pingding/shuzi':String(definition.evaluate)};
+ const bonus=equipmentBonus([instance]),rows=attributeRows({...definition,...bonus}),values={title:'装备信息',tx_name:definition.name,tx_lv:equipmentGradeText(definition),'pingding/miaoshu':'装备评分：','pingding/shuzi':String(equipmentPower(instance)),'btn_genghuan/txt_name':'更换','btn_xiexia/txt_name':'卸下','btn_qianghua/txt_name':'强化','btn_upstar/txt_name':'升星'};
  for(let i=1;i<=3;i++){const row=rows[i-1];values['shuxing'+i+'/miaoshu']=row?row[0]+'：':'';values['shuxing'+i+'/shuzi']=row?String(row[1]):''}
- const hidden=new Set();
+ const hidden=new Set(['add',...[1,2,3].filter(i=>!rows[i-1]).map(i=>'shuxing'+i)]);
  for(let i=1;i<=5;i++){const row=equipmentStarRow(instance,i);if(!row){hidden.add('txt_close_star'+i);hidden.add('txt_open_star'+i);continue}const line=['一','二','三','四','五'][i-1]+'星激活：'+[['攻击','enhAtk'],['生命','enhHp'],['防御','enhDef'],['免暴','enhUnCrit'],['暴击','enhCrit']].filter(([,k])=>row[k]>0).map(([n,k])=>n+'+'+row[k]).join('  ');values['node_starinfo/txt_close_star'+i]=line;values['node_starinfo/txt_open_star'+i]=line;hidden.add((i<=instance.star?'txt_close_star':'txt_open_star')+i)}
  const actions={
   close:{type:owner?'openEquip':'close',id:owner?.id,label:'返回阵容'},
@@ -126,9 +128,7 @@ export async function openEquipInfoDialog(state,equipmentId,{dragonId=null}={}){
   'btn_upstar/btn':{type:'openEquipmentStar',id:equipmentId,label:'升星'},
  };
  const disabled=new Set([...(!equipmentStarRow(instance)?['btn_upstar/btn']:[]),...(!instance.dragonid?['btn_xiexia/btn']:[])]);
- const d=showSource('sourceEquipInfo',renderSourceLayout(layout,{values,hidden,actions,disabled,slots:{icon_long:`<img class="source-equip-icon" src="${equipmentIcon(definition)}" alt="">`}})
-  +`<div class="source-equip-notes"><p>品质 ${QUALITY_LABELS[definition.quality]}　部位 ${PART_LABELS[definition.part]}　系别 ${EQUIPMENT_PROPERTIES[definition.property]??'—'}　${owner?`所属 ${esc(SPECIES[owner.species].name)}`:'未穿戴'}${instance.star?`　星级 ${instance.star}`:''}</p>`
-  +'</div>');
+ const d=showSource('sourceEquipInfo',renderSourceLayout(layout,{values,hidden,actions,disabled,slots:{xiangkuang:`<img class="source-equip-frame" src="assets/original/ui/ui_daojukuang_DaoJuKuang${definition.quality}.png" alt="">`,icon_long:`<img class="source-equip-icon" src="${equipmentIcon(definition)}" alt="">`,node_star:equipmentStars(instance)}}));
  d.dataset.equipmentId=equipmentId;if(owner)d.dataset.dragonId=String(owner.id);d.dataset.equipPart=String(definition.part);
 }
 
@@ -146,10 +146,12 @@ export async function openEquipEnhanceDialog(state,equipmentId,{returnToBag=fals
  const layout=await sourceLayout('panel_formation_equip_strengthen'),info=equipmentDefinition(instance.type),material=info.part===4?'wing':info.part===5?'crystal':'stone',icon=material==='wing'?'resource_icon_80_yuyi.png':material==='crystal'?'resource_icon_80_shuijing.png':'shangcheng_huobi_qhs.png';
  let plan=null;try{plan=equipmentEnhancePlan(instance)}catch{}
  const values={tx_name:'装备强化',zhuangbei_name:info.name,tx_lv:equipmentGradeText(info),'qianghua/txt_name':'强化','qianghuaall/txt_name':'强化10次',expense_txt:'消耗：',expense_num:plan?String(plan.cost):'已达最高等级',txt_ShiWu:String(state.equipmentMaterials?.[material]??0)},slots={},hidden=new Set();
- const attrs=[['攻击','atk'],['生命','hp'],['防御','def'],['暴击','antResist'],['免暴','resist']].filter(([,key])=>info[key]||(plan?.definition[key]??0));
- for(let i=1;i<=3;i++){const row=attrs[i-1],key=`shuxing/shuxing${i}`;if(!row){hidden.add(key);continue}values[`${key}/miaoshu`]=`${row[0]}：`;values[`${key}/shuzi`]=String(info[row[1]]);values[`${key}/fujia`]=String(plan?.definition[row[1]]??info[row[1]])}
+ const nowBonus=equipmentBonus([instance]),nextBonus=equipmentBonus([{...instance,type:plan?.type??instance.type}]);
+ const attrs=[['攻击','atk'],['生命','hp'],['防御','def'],['暴击','antResist'],['免暴','resist']].filter(([,key])=>nowBonus[key]||nextBonus[key]);
+ for(let i=1;i<=3;i++){const row=attrs[i-1],key=`shuxing/shuxing${i}`;if(!row){hidden.add(key);continue}values[`${key}/miaoshu`]=`${row[0]}：`;values[`${key}/shuzi`]=String(nowBonus[row[1]]);values[`${key}/fujia`]=String(nextBonus[row[1]]);if(nowBonus[row[1]]===nextBonus[row[1]])hidden.add(key+'/up_biaoji')}
  slots.icon_long=`<img class="source-equip-icon" src="${equipmentIcon(info)}" alt="">`;
  for(const key of ['node_showicon','node_costiicon'])slots[key]=`<img class="equip-enhance-material" src="assets/original/ui/${icon}" alt="${EQUIPMENT_MATERIAL_NAMES[material]}">`;
- const disabled=new Set(!plan?['qianghua/btn','qianghuaall/btn']:[]);
+ let ten=null;try{ten=equipmentEnhancePlan(instance,10)}catch{}
+ const held=state.equipmentMaterials?.[material]??0,disabled=new Set([...(!plan||held<plan.cost?['qianghua/btn']:[]),...(!ten||held<ten.cost?['qianghuaall/btn']:[])]);
  const d=showSource('sourceEquipEnhance',renderSourceLayout(layout,{values,slots,hidden,disabled,actions:{close:{type:returnToBag?'openEquipmentBag':'openEquipInfo',id:equipmentId,label:'返回装备'},'qianghua/btn':{type:'enhanceEquipment',id:equipmentId,value:'1',label:'强化'},'qianghuaall/btn':{type:'enhanceEquipment',id:equipmentId,value:'10',label:'强化10次'}}}));d.dataset.equipmentId=equipmentId;d.dataset.returnToBag=String(returnToBag);
 }

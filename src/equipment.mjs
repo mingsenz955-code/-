@@ -69,6 +69,27 @@ export function definitionPart(instance){return equipmentDefinition(instance?.ty
 
 export function equipmentInPart(list,part){return list.find(instance=>definitionPart(instance)===part)??null}
 
+// FormationData.getRecommendEquip compares quality first, then grade. The
+// FormationInfoPanel one-click handler fills empty slots and leaves worn items alone.
+export function recommendedEquipment(state,dragonId){
+ const worn=equipmentOfDragon(state,dragonId),result=[];
+ for(let part=0;part<6;part++){
+  if(equipmentInPart(worn,part))continue;
+  let best=null;
+  for(const item of state.equipment??[]){if(item.dragonid||definitionPart(item)!==part)continue;const a=equipmentDefinition(item.type),b=equipmentDefinition(best?.type);if(!b||a.quality>b.quality||a.quality===b.quality&&a.grade>b.grade)best=item}
+  if(best)result.push(best);
+ }
+ return result;
+}
+
+// DataManager.getEquipPower: atk + def + round(hp/3) + crit + uncrit.
+export function equipmentPower(instance){const v=equipmentBonus([instance]);return v.atk+v.def+Math.round(v.hp/3)+v.antResist+v.resist}
+
+export function equipmentBagItems(state,mode='enhance',part=-1){
+ if(!Number.isInteger(part)||part<-1||part>5)throw Error('装备部位无效。');
+ return (state.equipment??[]).filter(v=>(part<0||definitionPart(v)===part)&&(mode!=='decompose'||!v.dragonid)&&(mode!=='star'||equipmentStarRow(v)));
+}
+
 // DataManager function87 adds cumulative star values to base equipment values.
 // Original resist is curUnCrit, antResist is curCrit. Random traits remain unverified.
 export function equipmentBonus(list){

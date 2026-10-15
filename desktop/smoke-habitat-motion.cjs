@@ -1,6 +1,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs/promises'),path=require('node:path'),wait=ms=>new Promise(r=>setTimeout(r,ms));
 exports.prepare=async store=>{assert.equal((await store.load()).state,null);const {createGame,action}=await import('../src/game.mjs'),{ORIGINAL_LEVELS}=await import('../src/data.mjs');let s=createGame();s.playerXp=ORIGINAL_LEVELS.find(l=>l.level===20).xp_required;s.coins=1e8;s.gems=1000;s.dragons.forEach(d=>d.level=20);s=action(s,'build',{buildingId:40});const h=s.habitats.at(-1);s=action(s,'completeHabitat',{id:h.id},h.job.readyAt);s.dragons.push({id:s.nextId++,species:'original1041',level:20,habitatId:h.id});await store.save(s)};
 exports.run=async(w,store,verify=false)=>{
+ console.log('Motion environment:',await w.webContents.executeJavaScript("JSON.stringify({reduced:matchMedia('(prefers-reduced-motion: reduce)').matches,visibility:document.visibilityState})"));
  const js=c=>w.webContents.executeJavaScript(c);for(let i=0;i<80;i++){if(await js("document.querySelectorAll('.world-resident canvas[data-model-ready]').length===3"))break;await wait(100)}
  assert.equal(await js("document.querySelectorAll('.world-resident canvas[data-model-ready]').length"),3);
  const snapshot=()=>js("[...document.querySelectorAll('.world-resident')].map(e=>({id:e.dataset.motionId,left:parseFloat(e.style.left),top:parseFloat(e.style.top),area:JSON.parse(e.dataset.motionArea),clip:e.querySelector('canvas').dataset.clip,width:parseFloat(e.querySelector('canvas').style.width),error:e.querySelector('canvas').dataset.modelError}))");

@@ -1,7 +1,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs/promises'),path=require('node:path'),wait=ms=>new Promise(r=>setTimeout(r,ms));
 exports.prepare=async store=>{assert.equal((await store.load()).state,null);const {createGame}=await import('../src/game.mjs'),{createEquipmentInstance}=await import('../src/equipment.mjs');const s=createGame();s.coins=1000000;s.equipment=Array.from({length:8},(_,i)=>createEquipmentInstance('eq-'+(i+1),301101));s.equipment[0].dragonid=2;s.nextEquipId=9;await store.save(s)};
 exports.run=async(w,store,verify=false)=>{
- const js=c=>w.webContents.executeJavaScript(c),click=async s=>{assert(await js(`!!document.querySelector(${JSON.stringify(s)})`),s);await js(`document.querySelector(${JSON.stringify(s)}).click();true`);await wait(350)};
+ const js=c=>w.webContents.executeJavaScript(c),click=s=>require('./smoke-input.cjs').nativeClick(w,s);
  for(let i=0;i<80;i++){if(await js("!!document.querySelector('.original-hud')"))break;await wait(100)}
  if(verify){const s=(await store.load()).state;assert.equal(s.equipment[0].star,1);assert.equal(s.equipment[0].exp,1);assert.equal(s.equipment.length,6);assert.equal(s.coins,944000);assert.equal(s.equipment[0].dragonid,2);console.log('PASS equipment stars independent restart, ownership and materials');return}
  await click('[data-action=showMore]');await click('[data-action=openEquipmentBag]');await click('[data-action=openEquipmentBag][data-value="star"]');await click('[data-action=openEquipmentStar][data-id="eq-1"]');

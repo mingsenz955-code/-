@@ -1,0 +1,43 @@
+{
+  "apkSha256": "6011e9026f35d3377edf6dae7ec7479fde82c058ad413a4f4327e31e1c2555c5",
+  "method": "Read plaintext and statically disassemble Lua 5.1; never execute original Lua",
+  "sources": [
+    {
+      "path": "ui/formation/FormationInfoPanel.lua",
+      "sha256": "d9303fffdf9fc0b81e7010b1b34269df5ef3fbd5ee0eb48d2bb2cb0a5accb750"
+    },
+    {
+      "path": "dragon/data/clientdatas/FormationData.lua",
+      "sha256": "544a7abdfc5b95b3445165a2867b1593851a11e65ad8abed55021e44798858ab"
+    },
+    {
+      "path": "dragon/data/clientdatas/DataManager.lua",
+      "sha256": "260427d21eaeeb05ad9742adde0c3b103906bf8d4aac01f5e8eb4e84abe6c06a"
+    },
+    {
+      "path": "ui/strengthen/NewEquipEnhancePanel.lua",
+      "sha256": "c786e5785de7c8324d1fb23a256574ba5274ddae3faf633e8d814c7ae4358efa"
+    },
+    {
+      "path": "ui/strengthen/DragonInfor.lua",
+      "sha256": "5d58a93d5e1c64df04e654dedccf950de9152a9213ab16b7994d7cc229a4ca2b"
+    }
+  ],
+  "verified": {
+    "recommendation": "FormationData nested19: quality then grade; FormationInfoPanel nested7 skips occupied slots",
+    "score": "DataManager nested88: atk + def + round(hp/3) + crit + uncrit; nested87 includes cumulative star values",
+    "enhanceEffect": "NewEquipEnhancePanel nested6 loads Effect_Normal/equip_strengthen on success at icon_long",
+    "dressEffect": "DragonInfor shows effect_dress_equip when equipment changes"
+  },
+  "localPolicies": [
+    "All worn equipment is protected from automatic selection, not just equipped formation members",
+    "Single/ten enhancement is the existing deterministic offline upgrade policy, not a verified server response",
+    "Enhancement preview now shows base plus cumulative stars; native NewEquipEnhancePanel displays base table values",
+    "Decomposition combines the original category strip with its native confirmation screen; this arrangement is a PC adaptation"
+  ],
+  "remaining": [
+    "Random trait generation/roll weights and conditional equipment attributes",
+    "Server strengthening failure/protection item/grade rollback behavior not verified",
+    "Full original group page composition, equipment-owned/unowned tabs, help page and all source animations/sounds still need comparison"
+  ]
+}
