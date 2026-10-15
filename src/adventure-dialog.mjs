@@ -1,3 +1,4 @@
+import {sourceAdventureLevel,nodeRewardStatus} from './loot.mjs';
 import {renderSourceLayout} from './source-layout.mjs';
 import {esc,sourceLayout,showSource} from './ranch-dialogs.mjs';
 import {lineupPower,configuredLineup} from './battle.mjs';
@@ -8,13 +9,14 @@ function decorate(layout,nodes,state){
  for(const node of layout.children){
   const match=/^check(\d+)$/.exec(node.name??'');if(!match)continue;
   const event=nodes[Number(match[1])-1];if(!event)continue;
-  const children=node.children??[],major=children.find(c=>c.name==='diban'),stars=state.adventure?.cleared?.[String(event.id)]??0,unlocked=event.prev===-1||!!state.adventure?.cleared?.[String(event.prev)];
+  const source=sourceAdventureLevel(event.id),rewardNode=source?.kind>2;const children=node.children??[],major=children.find(c=>c.name==='diban'),stars=state.adventure?.cleared?.[String(event.id)]??0,unlocked=event.prev===-1||!!state.adventure?.cleared?.[String(event.prev)];
   if(major){
-   for(let j=1;j<=3;j++){if(stars===0)hidden.add(`${node.name}/star/level${j}`);else if(j<=stars){const star=children.find(c=>c.name==='star')?.children?.find(c=>c.name===`level${j}`);if(star)star.img='#ui_pve_s4.png';}}
+   for(let j=1;j<=3;j++){if(stars===0||rewardNode)hidden.add(`${node.name}/star/level${j}`);else if(j<=stars){const star=children.find(c=>c.name==='star')?.children?.find(c=>c.name===`level${j}`);if(star)star.img='#ui_pve_s4.png';}}
   }
   const target=major??children.find(c=>c.name===(stars?'point3':unlocked?'point2':'point1'));
   for(const c of children)if(c.name?.startsWith('point')&&c!==target)hidden.add(`${node.name}/${c.name}`);
-  if(target){slots[`${node.name}/${target.name}`]=`<button class="source-pve-node${major?' is-major':''}${stars?' is-cleared':''}" style="width:${target.width}px;height:${target.height}px" data-action="pveNode" data-id="${event.id}" aria-label="${esc(event.name)}" ${unlocked?'':'disabled'}><img src="assets/original/ui/${esc(String(target.img).replace(/^#/,''))}" alt=""></button>`;}
+  const claim=rewardNode&&stars>0,status=claim?nodeRewardStatus(state,event.id):null;
+  if(target){slots[`${node.name}/${target.name}`]=`<button class="source-pve-node${major?' is-major':''}${stars?' is-cleared':''}" style="width:${target.width}px;height:${target.height}px" data-action="${claim?'claimAdventureReward':'pveNode'}" data-id="${event.id}" aria-label="${esc(event.name)}" ${unlocked?'':'disabled'}><img src="assets/original/ui/${esc(String(target.img).replace(/^#/,''))}" alt="">${claim?`<span class="source-pve-reward-state" ${status.record.count<3&&!status.ready?`data-timer="${status.readyAt}"`:``}>${status.record.count>=3?'领取上限':status.ready?'可领取':''}</span>`:''}</button>`;}
  }
  return {slots,hidden};
 }

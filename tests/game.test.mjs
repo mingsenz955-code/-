@@ -52,7 +52,7 @@ test('shop decorations buy, place, collide, sell and persist',()=>{
 });
 test('formation and offline adventure battle form a saved playable loop',()=>{
  let s=createGame(T);s.dragons.forEach(d=>d.level=20);s=action(s,'setFormation',{ids:[3,2]},T);assert.deepEqual(s.formation,[3,2]);assert.throws(()=>action(s,'battleResolve',{nodeId:100102},T),/前一关/);
- const before={coins:s.coins,food:s.food};s=action(s,'battleResolve',{nodeId:100101},T);assert.equal(s.adventure.energy,9);assert(s.adventure.cleared['100101']>=1);assert(s.coins>before.coins);assert(s.food>before.food);assert.equal(s.adventure.lastBattle.policy,'offline-adventure-balance-v1');
+ const before={coins:s.coins,food:s.food};s=action(s,'battleResolve',{nodeId:100101},T,()=>0);assert.equal(s.adventure.energy,9);assert(s.adventure.cleared['100101']>=1);assert(s.coins>before.coins);assert.equal(s.food,before.food);assert.equal(s.adventure.lastBattle.reward.drops[0].pool,5000020);assert.equal(s.adventure.lastBattle.policy,'offline-adventure-balance-v1');
  s=validate(JSON.parse(JSON.stringify(s)));assert.deepEqual(s.formation,[3,2]);assert.equal(s.adventure.cleared['100101']>=1,true);
 });
 test('original crop prices, wait times and yields; legacy crop saves retain original promised yield',()=>{

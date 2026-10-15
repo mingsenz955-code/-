@@ -55,7 +55,7 @@ test('map_level is the 龙境仙踪 level table and its chain matches mapevents'
  assert.equal(ADVENTURE_LEVEL_COUNT,400);
  assert.equal(ORIGINAL_ADVENTURE_LEVELS.length,400);
  const first=adventureLevel(101001);
- assert.deepEqual(first,{id:101001,mapId:101,kind:1,prev:-1,next:101002,order:1,fragmentId:30001,dropGroup:5000020,note:''});
+ assert.deepEqual(first,{id:101001,mapId:101,kind:1,prev:-1,next:101002,order:1,enemyGroup:30001,dropGroup:5000020,specialType:null,specialId:0,specialAmount:0,hasFirstKill:0,firstKillType:0,firstKillId:0,firstKillAmount:0,powerCostWin:1,powerCostLost:0,note:''});
  assert.equal(adventureLevel(999999),null);
  // Its previous/next columns describe the same chain mapevents does.
  for(const row of ORIGINAL_ADVENTURE_LEVELS){

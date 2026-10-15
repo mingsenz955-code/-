@@ -35,7 +35,7 @@ export function adventureEventKind(node){return node?.kind==='monster'?'monster'
 // its own previous/next, the in-map order, and the same 30001+ and 5000020 values mapevents
 // uses. Only the columns with evidence are read; the last column carries a locale key such as
 // longjingxianzongdiyizhangdisanjiemiaoshu.
-const levels=new Map(ORIGINAL_ADVENTURE_LEVELS.map(row=>[row[0],Object.freeze({id:row[0],mapId:row[1],kind:row[2],prev:row[6],next:row[7],order:row[8],fragmentId:row[9],dropGroup:row[10],note:row[25]??''})]));
+const levels=new Map(ORIGINAL_ADVENTURE_LEVELS.map(row=>[row[0],Object.freeze({id:row[0],mapId:row[1],kind:row[2],prev:row[6],next:row[7],order:row[8],enemyGroup:row[9],dropGroup:row[10],specialType:row[3],specialId:row[4],specialAmount:row[5],hasFirstKill:row[12],firstKillType:row[13],firstKillId:row[14],firstKillAmount:row[15],powerCostWin:row[16],powerCostLost:0,note:row[25]??''})]));
 
 export function adventureLevel(nodeId){return levels.get(nodeId)??null}
 export function adventureLevelsOf(mapId){return ORIGINAL_ADVENTURE_LEVELS.filter(row=>row[1]===mapId).map(row=>levels.get(row[0]))}

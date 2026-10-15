@@ -242,3 +242,10 @@
 - equipment-decompose-disassembly.txt中函数13 PC16–41确认part4→wing、part5→crystal、其它→stone，数值直接加info.decomposePkgID；函数4原过滤formationData.onBattleDragon。离线保护范围为所有已穿戴装备，已标差异。原表分解cost全0。
 - 原item_equiplist_decompose/item_equiplist_equip_decompose和ApplyOrCancelPanel确认布局接入；组框/原图依据ui_tab_group/EquipStrengthenGroupPanel，但顶部完整tab顺序与字距未做实机一比一核验，不称已全部视觉相同。
 - 原treasure_items启用l1/l2 rows111/112：5颗龙珠分别120/300魔晶，现实际发放至宝石探索中/高级余额。旧es/yy/sj材料商品源enable=0，继续不出售。resource-shop-provenance及可复现脚本更新为14个可消费资源商品。
+
+## E05 v0.16.26 冒险掉落、宝箱与碎片
+- 原PveLevelInfo明文enemys=arr10、drops=arr11、首杀arr13–16、powerCostWin=arr17和powerCostLost字面0；修正此前把arr10称碎片ID的错误。包ID不是服务器怪队完整定义，不能说敌队映射已解决。
+- 原UsePropPanel明文四箱/钥匙配对、max=min库存；宝箱候选组来自raw items第61列9000011/5000019，确有对应装备/碎片/强化石等，但字段名/服务器实际映射仍未取到。每次一项和权重/数量抽样标明离线政策。
+- equipment-fragment-compose-disassembly.txt确认floor(count/mergeCost)；equipment-fragment-card-disassembly.txt确认现代equipID。48原碎片定义/1283原掉落行/16原道具图及来源哈希见loot.mjs与reference/loot-provenance.json，export-loot.py复现。
+- ItemUtil root反汇编明确19强化石、20低级龙珠、21中级、22高级；PvePanel.onCheckClick守卫已清且可领取时dceMapAward，PveRender threeHour10800与box_num<3。UTC+8日界、首领重新占领与初始可领仍非服务器证据。
+- green_42原字形/图及哈希独立导出，panel_map_act数字与文字均用原字形。原结果panel_battle_guanka_jiangli.bg.alpha0在本页隐藏视觉木板；stars3与原领取/开箱粒子没有被静态星图替代后宣称相同。

@@ -1,0 +1,40 @@
+SHA256 8a310adfced48660389aa647a840fd9c80dd53f37592786fc5487a8d54454143
+Static Lua 5.1 disassembly. PCs and nested function indexes are zero-based. No code executed.
+
+FUNCTION 9
+CONSTANTS ["math", "floor", "data", "count", "info", "mergeCost", 1, "EventManager", "addEventListener", "EventDefines", "Event_DSE_COMPOSITE_EQUIP", "onComposedHandler", "SocketSender", "dceExChangeEquip", "id", "Gui", "floatText", "碎片不足"]
+0000 GETGLOBAL r2 "math"
+0001 GETTABLE r2 r2["floor"]
+0002 GETTABLE r3 r1["data"]
+0003 GETTABLE r3 r3["count"]
+0004 GETTABLE r4 r1["info"]
+0005 GETTABLE r4 r4["mergeCost"]
+0006 DIV r3 r3 r4
+0007 CALL A=2 B=2 C=2
+0008 LE A=0 1 r2
+0009 JMP A=0 target=30
+0010 GETGLOBAL r2 "EventManager"
+0011 GETTABLE r2 r2["addEventListener"]
+0012 GETGLOBAL r3 "EventDefines"
+0013 GETTABLE r3 r3["Event_DSE_COMPOSITE_EQUIP"]
+0014 GETTABLE r4 r0["onComposedHandler"]
+0015 CALL A=2 B=3 C=1
+0016 GETGLOBAL r2 "SocketSender"
+0017 GETTABLE r2 r2["dceExChangeEquip"]
+0018 GETTABLE r3 r1["data"]
+0019 GETTABLE r3 r3["id"]
+0020 GETGLOBAL r4 "math"
+0021 GETTABLE r4 r4["floor"]
+0022 GETTABLE r5 r1["data"]
+0023 GETTABLE r5 r5["count"]
+0024 GETTABLE r6 r1["info"]
+0025 GETTABLE r6 r6["mergeCost"]
+0026 DIV r5 r5 r6
+0027 CALL A=4 B=2 C=0
+0028 CALL A=2 B=0 C=1
+0029 JMP A=0 target=34
+0030 GETGLOBAL r2 "Gui"
+0031 GETTABLE r2 r2["floatText"]
+0032 LOADK r3 "碎片不足"
+0033 CALL A=2 B=2 C=1
+0034 RETURN A=0 B=1 C=0

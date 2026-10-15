@@ -1,0 +1,34 @@
+{
+  "tablesSha256": "1408d684c2a6530668a8ed4816ad1697d579077fed5d02b887d06f035395e750",
+  "sourceSha256": {
+    "dragon/pconfig/librarys/pve/PveLevelInfo.lua": "bf9f569df8e2ed82e55409725c66b9a3e6631bfe1c5634b35e89cb1d5fa6d324",
+    "ui/UsePropPanel.lua": "f403efe90bd323b344394f0494272b2fd82cfd93e72fd892603ab404fdd8c5e2",
+    "ui/pve/PvePanel.lua": "60fa6215349ceb27f6203a0874b134791c48939792a0f2c7421a9efcaced1cd2",
+    "ui/pve/PveRender.lua": "1a17b2c1882cbcfb628ed4f92bb587b9af97d74eb949e7245fddcf452cbff24c",
+    "ui/pve/PveAwardPanel.lua": "b45fa90f7d0b79551de368ef6cb46e351b4450a229eea6f079949b5bbe28a22e",
+    "dragon/utils/ItemUtil.lua": "912105c1d03b4a28a2b0cc235a1755e7c697406c59e5a1e0e39a0e0aa8ea42b4",
+    "ui/UsePropListPanel.lua": "bb1ee0b3b33edbaa1d6f5e47721057a1bfc1f7b1a0cceca77b563064e6d9d8e3",
+    "ui/PVEBattleResultPanel.lua": "89809e7b48a191fa40d7e690a93ff1bd9bb28184a21cd5d8127c8c6208f76a26",
+    "dragon/pconfig/librarys/equip/EquipFragInfo.lua": "3bb0278ffcb274f4c5be17f7bfdfec1499bcf9b772c184bbd49ef55b93a156de"
+  },
+  "pools": 83,
+  "rows": 1283,
+  "policy": "offline-source-loot-v1",
+  "directEvidence": [
+    "PveLevelInfo arr11 drops; powerCostWin arr17, powerCostLost literal0",
+    "UsePropPanel pairs6013/6014 and6015/6016; max=min(box,key)",
+    "NewEquipList.compose floor(count/mergeCost), NewFragItem uses info.equipID",
+    "Source result panel_battle_guanka_jiangli; source box panel_useprop and panel_useprop_list",
+    "PveRender threeHour=10800; box_num<3; PvePanel dceMapAward when guard absent",
+    "ItemUtil root enums19 stone,20 low ball,21 middle ball,22 high ball"
+  ],
+  "unverified": [
+    "One weighted reward per completed win and per opened box, fifth column weights and inclusive amount bounds are offline interpretation",
+    "Box groups from raw items column61, match box contents; field name/server mapping unproven",
+    "First-kill definitions applied once; server maxAtkCnt/reset limits and dynamic pool/multi-drop correlation unverified",
+    "Special node count resets UTC+8 locally; initial post-guard reward ready and future guardian takeovers are offline policies",
+    "Box batch limit99 is a local bound; source use max equals matching inventory, not a proven99 limit",
+    "Epic box key6014 ordinary acquisition remains missing; lord box/key6015/6016 normal PVE route works",
+    "New equipment random traits and star rolls not fabricated; base definition instances only"
+  ]
+}

@@ -34,7 +34,7 @@ exports.run=async(window,store,verify=false)=>{
  assert(await js("!!document.querySelector('#modal img[src*=\"map_2.jpg\"]')"));
  await shot('adventure-map-102-qa.png');
  await click('#modal [data-action=pveMap][data-value="101"]');await wait(700);
- await click('#modal .source-pve-node:not(:disabled)');await wait(800);
+ await js('Math.random=()=>0;true');await click('#modal .source-pve-node:not(:disabled)');await wait(800);
  assert.equal(await js("document.querySelector('#modal').dataset.mode"),'sourceBattle');
  assert.equal(await js("document.querySelectorAll('#modal .source-battle-portrait[data-portrait^=ally]').length"),before.formation.length);
  assert.equal(await js("document.querySelectorAll('#modal .source-battle-panel, #modal .battle-projectile, #modal [data-action=battleStart]').length"),0);
@@ -45,12 +45,12 @@ exports.run=async(window,store,verify=false)=>{
  assert(await js("!!document.querySelector('#modal .battle-source-effect[data-model]')"));
  await shot('battle-source-fx-qa.png');
  for(let i=0;i<180;i++){if((await store.load()).state.adventure.lastBattle)break;await wait(100)}
- assert.equal(await js("document.querySelector('#modal').dataset.mode"),'sourcePve');
+ await wait(500);assert.equal(await js("document.querySelector('#modal').dataset.mode"),'sourceBattleRewards');await shot('battle-rewards-qa.png');await click('[data-action=returnAdventureRewards]');
  const after=(await store.load()).state;
  assert.equal(after.adventure.cleared['100101'],1);
  assert.equal(after.adventure.energy,9);
- assert.equal(after.coins,before.coins+150);
- assert.equal(after.food,before.food+10);
+ assert.equal(after.coins,before.coins+1000);
+ assert.equal(after.food,before.food);
  await click('#modal .source-pve-node:not(:disabled)');
  await click('#modal [data-action=close]');await wait(1500);
  assert.deepEqual((await store.load()).state,after,'Exiting combat must cancel playback without a second charge or reward');

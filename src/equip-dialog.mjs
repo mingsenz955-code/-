@@ -6,7 +6,7 @@ import {renderSourceLayout} from './source-layout.mjs';
 import {sourceLayout,showSource,esc} from './ranch-dialogs.mjs';
 import {dragonArt} from './art.mjs';
 import CATALOG from '../assets/original/catalog.mjs';
-import {EQUIPMENT_SLOTS_LAYOUT,EQUIPMENT_PROPERTIES,equipmentDefinition,equipmentIcon,equipmentEmptyIcon,equipmentGradeText,equipmentOfDragon,equipmentInPart,equipmentBonus,equipmentLabel,definitionPart,equipmentEnhancePlan,EQUIPMENT_MATERIAL_NAMES} from './equipment.mjs';
+import {EQUIPMENT_SLOTS_LAYOUT,EQUIPMENT_PROPERTIES,equipmentCatalog,equipmentDefinition,equipmentIcon,equipmentEmptyIcon,equipmentGradeText,equipmentOfDragon,equipmentInPart,equipmentBonus,equipmentLabel,definitionPart,equipmentEnhancePlan,EQUIPMENT_MATERIAL_NAMES} from './equipment.mjs';
 
 const PART_LABELS=['武器','鳞片','龙骨','龙角','羽翼','皇冠'];
 const QUALITY_LABELS=['','白','绿','蓝','紫','橙'];
@@ -103,7 +103,7 @@ export async function openEquipChangeDialog(state,dragonId,part){
   for(let i=1;i<=3;i++){const row=rows[i-1];values['shuxing'+i+'/miaoshu']=row?row[0]+'：':'';values['shuxing'+i+'/shuzi']=row?String(row[1]):''}
   return `<article class="source-equip-change-card">${renderSourceLayout(card,{values,hidden:new Set(['biaoji']),actions:{'btn_zhuangbei/btn':{type:'wearEquipment',id:dragon.id,value:instance.id,label:'装备'}},slots:{icon_long:`<img class="source-equip-icon" src="${equipmentIcon(definition)}" alt="">`,node_star:`<span class="source-equip-stars">${stars(instance.star)}</span>`}})}</article>`;
  }).join('');
- const d=showSource('sourceEquipChange',renderSourceLayout(layout,{hidden:new Set(cards?['hint']:[]),actions:{fanhui:{type:'openEquip',id:dragon.id,label:'返回阵容'},'btn_up/btn':{type:'unverifiedEquip',label:'获得更多装备'}},slots:{huadong:cards?`<div class="source-equip-change-list">${cards}</div>`:''}}));
+ const d=showSource('sourceEquipChange',renderSourceLayout(layout,{hidden:new Set(cards?['hint']:[]),actions:{fanhui:{type:'openEquip',id:dragon.id,label:'返回阵容'},'btn_up/btn':{type:'equipSource',label:'获得更多装备'}},slots:{huadong:cards?`<div class="source-equip-change-list">${cards}</div>`:''}}));
  d.dataset.dragonId=String(dragon.id);d.dataset.equipPart=String(part);
 }
 
@@ -136,11 +136,13 @@ export async function openEquipInfoDialog(state,equipmentId,{dragonId=null}={}){
 }
 
 // panel_formation_equip_info is the client's own 装备来源 sheet: 宝箱抽取, 龙境仙踪 and
-// 活动获得. All three remain unimplemented offline.
-export async function openEquipSourceDialog(){
- const layout=await sourceLayout('panel_formation_equip_info');
- showSource('sourceEquipFrom',renderSourceLayout(layout,{values:{tx_name:'装备来源',tx_lv:''},hidden:new Set(['add','xiangkuang','icon_long','shuxing1','shuxing2','shuxing3','pingding','item1','item2','item3','item4','item5']),actions:{close:{type:'close',label:'关闭装备来源'},'btn_down/btn':{type:'unverifiedEquip',label:'获得更多装备'}}})
-  +'<div class="source-equip-notes"><p>原版三种来源：宝箱抽取、龙境仙踪（PvE 关卡掉落）、活动获得；探险宝箱表 tanxian_baoxiang 已确认产出装备与装备碎片。三者都尚未实现，因此当前不会发放任何装备。</p></div>');
+// 活动获得. The box and adventure routes now lead to playable acquisition.
+export async function openEquipSourceDialog(state,part=0){
+ const layout=await sourceLayout('panel_formation_equip_info'),info=equipmentCatalog({part:Number.isInteger(part)&&part>=0&&part<6?part:0,quality:3})[0],dragonId=Number(document.querySelector('#modal').dataset.dragonId)||state.dragons[0]?.id,values={tx_title:'装备来源',tx_name:info?.name??'',tx_lv:'','hint_box/miaoshu':'宝箱抽取','hint_pve/miaoshu':'龙境仙踪','hint_pve/hint':'通关可获得','btn_down/miaoshu':'获得更多装备','pingding/miaoshu':'装备评分：','pingding/shuzi':info?.evaluate??''},hidden=new Set(['add','item1','item2','item3','item4','item5','hint_activity']),slots={icon_long:info?`<img class="source-equip-icon" src="${equipmentIcon(info)}" alt="">`:''},background=layout.children.find(n=>n.type==='btn'&&!n.name);
+ if(background){background.name='close';delete background.img_normal;delete background.img_down}const top=layout.children.find(n=>n.name==='btn_down')?.children.find(n=>n.type==='btn');if(top){delete top.img_normal;delete top.img_down}
+ const attrs=info?attributeRows(info):[];for(let i=1;i<=3;i++){const a=attrs[i-1];if(!a)hidden.add('shuxing'+i);else{values[`shuxing${i}/miaoshu`]=a[0]+'：';values[`shuxing${i}/shuzi`]=a[1]}}
+ for(const [key,action,label] of [['hint_box','openWarehouse','宝箱抽取'],['hint_pve','openAdventure','龙境仙踪']]){const node=layout.children.find(n=>n.name===key),image=node?.children.find(n=>n.type==='sprite');if(image){image.name='route';slots[key+'/route']=`<button class="source-equip-source-route" data-action="${action}" aria-label="${label}"><img src="assets/original/ui/${image.img.replace(/^#/,'')}" alt=""></button>`}}
+ const d=showSource('sourceEquipFrom',renderSourceLayout(layout,{values,slots,hidden,actions:{close:{type:'equipChange',id:part,label:'返回装备选择'},'btn_down/btn':{type:'openAdventure',label:'获得更多装备'}}}));d.dataset.dragonId=String(dragonId);d.dataset.equipPart=String(part);
 }
 export async function openEquipEnhanceDialog(state,equipmentId,{returnToBag=false}={}){
  const instance=(state.equipment??[]).find(v=>v.id===equipmentId);if(!instance)throw new Error('找不到这件装备。');

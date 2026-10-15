@@ -1,0 +1,237 @@
+SHA256 1f0c6dcd154bfe385006e03fc605a348f91c96b24e1c200b58b862383c727ce7
+Static Lua 5.1 disassembly. PCs and nested function indexes are zero-based. No code executed.
+
+FUNCTION 0
+CONSTANTS ["layout", "LayoutLoader", "load", "layout.item_equiplist_patch", "frag", "getChild", "tx_name", "setString", "info", "name", "display", "newSprite", "#thumbs_", "icon", ".png", "icon_long", "add", "#ui_daojukuang_DaoJuKuang", "quality", "xiangkuang", "print", "self.frag.info.equipID ： ", "equipID", "equipInfo", "LibraryManager", "lib_equipInfo", "getEquipInfoByID", "self.equipInfo : ", "tostring", "shuxing1", "miaoshu", "", "shuzi", "shuxing2", "shuxing3", "atk", "hp", "def", "resist", "antResist", "Config_LocaleText", "lang", "ATK", "HP", "DEF", "免爆", "暴击", 0, 1, 5, 3, "shuxing", "+", "pingding", "evaluate", "btn_hecheng", "btn", "onButtonClicked", "tx_num", "数量：", "data", "count"]
+0000 GETGLOBAL r2 "LayoutLoader"
+0001 GETTABLE r2 r2["load"]
+0002 LOADK r3 "layout.item_equiplist_patch"
+0003 CALL A=2 B=2 C=2
+0004 SETTABLE r0["layout"] r2
+0005 SETTABLE r0["frag"] r1
+0006 GETTABLE r2 r0["layout"]
+0007 GETTABLE r2 r2["getChild"]
+0008 LOADK r3 "tx_name"
+0009 CALL A=2 B=2 C=2
+0010 SELF r2 self=r2 method="setString"
+0011 GETTABLE r4 r0["frag"]
+0012 GETTABLE r4 r4["info"]
+0013 GETTABLE r4 r4["name"]
+0014 CALL A=2 B=3 C=1
+0015 GETGLOBAL r2 "display"
+0016 GETTABLE r2 r2["newSprite"]
+0017 LOADK r3 "#thumbs_"
+0018 GETTABLE r4 r0["frag"]
+0019 GETTABLE r4 r4["info"]
+0020 GETTABLE r4 r4["icon"]
+0021 LOADK r5 ".png"
+0022 CONCAT A=3 B=3 C=5
+0023 CALL A=2 B=2 C=2
+0024 GETTABLE r3 r0["layout"]
+0025 GETTABLE r3 r3["getChild"]
+0026 LOADK r4 "icon_long"
+0027 CALL A=3 B=2 C=2
+0028 SELF r3 self=r3 method="add"
+0029 MOVE A=5 B=2 C=0
+0030 CALL A=3 B=3 C=1
+0031 GETGLOBAL r3 "display"
+0032 GETTABLE r3 r3["newSprite"]
+0033 LOADK r4 "#ui_daojukuang_DaoJuKuang"
+0034 GETTABLE r5 r0["frag"]
+0035 GETTABLE r5 r5["info"]
+0036 GETTABLE r5 r5["quality"]
+0037 LOADK r6 ".png"
+0038 CONCAT A=4 B=4 C=6
+0039 CALL A=3 B=2 C=2
+0040 GETTABLE r4 r0["layout"]
+0041 GETTABLE r4 r4["getChild"]
+0042 LOADK r5 "xiangkuang"
+0043 CALL A=4 B=2 C=2
+0044 SELF r4 self=r4 method="add"
+0045 MOVE A=6 B=3 C=0
+0046 CALL A=4 B=3 C=1
+0047 GETGLOBAL r4 "print"
+0048 LOADK r5 "self.frag.info.equipID ： "
+0049 GETTABLE r6 r0["frag"]
+0050 GETTABLE r6 r6["info"]
+0051 GETTABLE r6 r6["equipID"]
+0052 CONCAT A=5 B=5 C=6
+0053 CALL A=4 B=2 C=1
+0054 GETGLOBAL r4 "LibraryManager"
+0055 GETTABLE r4 r4["lib_equipInfo"]
+0056 SELF r4 self=r4 method="getEquipInfoByID"
+0057 GETTABLE r6 r0["frag"]
+0058 GETTABLE r6 r6["info"]
+0059 GETTABLE r6 r6["equipID"]
+0060 CALL A=4 B=3 C=2
+0061 SETTABLE r0["equipInfo"] r4
+0062 GETGLOBAL r4 "print"
+0063 LOADK r5 "self.equipInfo : "
+0064 GETGLOBAL r6 "tostring"
+0065 GETTABLE r7 r0["equipInfo"]
+0066 CALL A=6 B=2 C=2
+0067 CONCAT A=5 B=5 C=6
+0068 CALL A=4 B=2 C=1
+0069 GETTABLE r4 r0["equipInfo"]
+0070 TEST A=4 B=0 C=0
+0071 JMP A=0 target=209
+0072 GETTABLE r4 r0["layout"]
+0073 GETTABLE r4 r4["getChild"]
+0074 LOADK r5 "shuxing1"
+0075 CALL A=4 B=2 C=2
+0076 GETTABLE r4 r4["getChild"]
+0077 LOADK r5 "miaoshu"
+0078 CALL A=4 B=2 C=2
+0079 SELF r4 self=r4 method="setString"
+0080 LOADK r6 ""
+0081 CALL A=4 B=3 C=1
+0082 GETTABLE r4 r0["layout"]
+0083 GETTABLE r4 r4["getChild"]
+0084 LOADK r5 "shuxing1"
+0085 CALL A=4 B=2 C=2
+0086 GETTABLE r4 r4["getChild"]
+0087 LOADK r5 "shuzi"
+0088 CALL A=4 B=2 C=2
+0089 SELF r4 self=r4 method="setString"
+0090 LOADK r6 ""
+0091 CALL A=4 B=3 C=1
+0092 GETTABLE r4 r0["layout"]
+0093 GETTABLE r4 r4["getChild"]
+0094 LOADK r5 "shuxing2"
+0095 CALL A=4 B=2 C=2
+0096 GETTABLE r4 r4["getChild"]
+0097 LOADK r5 "miaoshu"
+0098 CALL A=4 B=2 C=2
+0099 SELF r4 self=r4 method="setString"
+0100 LOADK r6 ""
+0101 CALL A=4 B=3 C=1
+0102 GETTABLE r4 r0["layout"]
+0103 GETTABLE r4 r4["getChild"]
+0104 LOADK r5 "shuxing2"
+0105 CALL A=4 B=2 C=2
+0106 GETTABLE r4 r4["getChild"]
+0107 LOADK r5 "shuzi"
+0108 CALL A=4 B=2 C=2
+0109 SELF r4 self=r4 method="setString"
+0110 LOADK r6 ""
+0111 CALL A=4 B=3 C=1
+0112 GETTABLE r4 r0["layout"]
+0113 GETTABLE r4 r4["getChild"]
+0114 LOADK r5 "shuxing3"
+0115 CALL A=4 B=2 C=2
+0116 GETTABLE r4 r4["getChild"]
+0117 LOADK r5 "miaoshu"
+0118 CALL A=4 B=2 C=2
+0119 SELF r4 self=r4 method="setString"
+0120 LOADK r6 ""
+0121 CALL A=4 B=3 C=1
+0122 GETTABLE r4 r0["layout"]
+0123 GETTABLE r4 r4["getChild"]
+0124 LOADK r5 "shuxing3"
+0125 CALL A=4 B=2 C=2
+0126 GETTABLE r4 r4["getChild"]
+0127 LOADK r5 "shuzi"
+0128 CALL A=4 B=2 C=2
+0129 SELF r4 self=r4 method="setString"
+0130 LOADK r6 ""
+0131 CALL A=4 B=3 C=1
+0132 NEWTABLE A=4 B=5 C=0
+0133 GETTABLE r5 r0["equipInfo"]
+0134 GETTABLE r5 r5["atk"]
+0135 GETTABLE r6 r0["equipInfo"]
+0136 GETTABLE r6 r6["hp"]
+0137 GETTABLE r7 r0["equipInfo"]
+0138 GETTABLE r7 r7["def"]
+0139 GETTABLE r8 r0["equipInfo"]
+0140 GETTABLE r8 r8["resist"]
+0141 GETTABLE r9 r0["equipInfo"]
+0142 GETTABLE r9 r9["antResist"]
+0143 SETLIST A=4 B=5 C=1
+0144 NEWTABLE A=5 B=5 C=0
+0145 GETGLOBAL r6 "Config_LocaleText"
+0146 GETTABLE r6 r6["lang"]
+0147 LOADK r7 "ATK"
+0148 CALL A=6 B=2 C=2
+0149 GETGLOBAL r7 "Config_LocaleText"
+0150 GETTABLE r7 r7["lang"]
+0151 LOADK r8 "HP"
+0152 CALL A=7 B=2 C=2
+0153 GETGLOBAL r8 "Config_LocaleText"
+0154 GETTABLE r8 r8["lang"]
+0155 LOADK r9 "DEF"
+0156 CALL A=8 B=2 C=2
+0157 LOADK r9 "免爆"
+0158 LOADK r10 "暴击"
+0159 SETLIST A=5 B=5 C=1
+0160 LOADK r6 0
+0161 LOADK r7 1
+0162 LOADK r8 5
+0163 LOADK r9 1
+0164 FORPREP A=7 target=197
+0165 GETTABLE r11 r4[r10]
+0166 LT A=0 0 r11
+0167 JMP A=0 target=197
+0168 ADD r6 r6 1
+0169 LT A=0 r6 3
+0170 JMP A=0 target=197
+0171 GETTABLE r11 r0["layout"]
+0172 GETTABLE r11 r11["getChild"]
+0173 LOADK r12 "shuxing"
+0174 MOVE A=13 B=6 C=0
+0175 CONCAT A=12 B=12 C=13
+0176 CALL A=11 B=2 C=2
+0177 GETTABLE r12 r11["getChild"]
+0178 LOADK r13 "miaoshu"
+0179 CALL A=12 B=2 C=2
+0180 SELF r12 self=r12 method="setString"
+0181 GETTABLE r14 r5[r10]
+0182 CALL A=12 B=3 C=1
+0183 GETTABLE r12 r0["layout"]
+0184 GETTABLE r12 r12["getChild"]
+0185 LOADK r13 "shuxing"
+0186 MOVE A=14 B=6 C=0
+0187 CONCAT A=13 B=13 C=14
+0188 CALL A=12 B=2 C=2
+0189 GETTABLE r13 r12["getChild"]
+0190 LOADK r14 "shuzi"
+0191 CALL A=13 B=2 C=2
+0192 SELF r13 self=r13 method="setString"
+0193 LOADK r15 "+"
+0194 GETTABLE r16 r4[r10]
+0195 CONCAT A=15 B=15 C=16
+0196 CALL A=13 B=3 C=1
+0197 FORLOOP A=7 target=165
+0198 GETTABLE r7 r0["layout"]
+0199 GETTABLE r7 r7["getChild"]
+0200 LOADK r8 "pingding"
+0201 CALL A=7 B=2 C=2
+0202 GETTABLE r7 r7["getChild"]
+0203 LOADK r8 "shuzi"
+0204 CALL A=7 B=2 C=2
+0205 SELF r7 self=r7 method="setString"
+0206 GETTABLE r9 r0["equipInfo"]
+0207 GETTABLE r9 r9["evaluate"]
+0208 CALL A=7 B=3 C=1
+0209 GETTABLE r4 r0["layout"]
+0210 GETTABLE r4 r4["getChild"]
+0211 LOADK r5 "btn_hecheng"
+0212 CALL A=4 B=2 C=2
+0213 GETTABLE r4 r4["getChild"]
+0214 LOADK r5 "btn"
+0215 CALL A=4 B=2 C=2
+0216 SELF r4 self=r4 method="onButtonClicked"
+0217 CLOSURE r6 nested=0
+0218 MOVE A=0 B=0 C=0
+0219 CALL A=4 B=3 C=1
+0220 GETTABLE r4 r0["layout"]
+0221 GETTABLE r4 r4["getChild"]
+0222 LOADK r5 "tx_num"
+0223 CALL A=4 B=2 C=2
+0224 SELF r4 self=r4 method="setString"
+0225 LOADK r6 "数量："
+0226 GETTABLE r7 r0["frag"]
+0227 GETTABLE r7 r7["data"]
+0228 GETTABLE r7 r7["count"]
+0229 CONCAT A=6 B=6 C=7
+0230 CALL A=4 B=3 C=1
+0231 RETURN A=0 B=1 C=0
