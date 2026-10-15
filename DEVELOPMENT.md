@@ -610,3 +610,4 @@
 - 原RandEvPanel.help明确两龙交配时间大于1小时、紫龙后有概率变异奇遇、VIP提升概率、只留5事件/第6替换最早。原randomevent_cf10行和nr14行（变异蛋、价格、时间）已存reference/mutation-events.json；十个变异品种为独立catalog记录，并非成年龙点按钮变身。尚缺VIP触发/服务端响应与奇遇领取流程，当前只提供有源依据的获取说明，不伪造概率。
 - 145项Node全绿；Electron隔离档真实育龙入口/选材料/取消/融合升二星/保存/返回；出售确认/取消/到账/移阵/刷新列表通过，独立重启保留星级与出售。正式玩家无测试注入、无自动出售/吞龙。work/dragon-star-preview-qa.png、dragon-star-result-qa.png、dragon-sale-confirm-qa.png、dragon-sale-result-qa.png已查看。
 - 下一步：源培育奇遇领取/变异获取、五星后的觉醒修炼；四岛、原战斗被动结算等旧缺口继续保留。
+- 正式启动验收：根exe正常关闭v31后载入v32/player，13龙/11巢/99级保留；本次升级前后正式档SHA256均6474B2FFA13DAB58D89F74719B580E7BF42C634963E5EB414B941D20351FB2F7，未改写玩家进度。备份已保存在原saves目录。
