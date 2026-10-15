@@ -318,3 +318,13 @@
 - MainScene.lua第192–235/302–375/602–618行确认圣树、血战、冒险、竞技、首领入口坐标、层次、等级与模块名；中央首领是额外功能岛，不是省略的一块普通放置板。
 - 原APK buildings/{bossdao_dao,bossdao_shitou,shengshu_eff,feiting,yandong_eff,jingjichang_eff}导出numeric骨骼/原纹理，manifest保留来源。原ui_world_boss、ui_holy_tree布局接实际点击。
 - world-encounters-provenance.json记录原种子/首领/NPC表与静态字段来源。work/worldboss-main-static.txt、holytree-main-static.txt记录只读反汇编。原源码label与条件有不同开放星期表述，因此本轮不猜精确服务器周历，单机常驻。
+
+
+## v0.16.40 龙翼、竞技、VIP与首批活动
+- 翼片漂移定位：1201_dragon_golden_3 的 breath/b35 等轨道从可见帧切到 display=-1；旧采样器把隐藏帧占位坐标0插值进可见翼片。现在按 CCTween::setBetween 保持可见姿态到切换帧。参考官方源码 https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-2.2.6/extensions/CocoStudio/Armature/animation/CCTween.cpp 。非针对某条龙的偏移补丁。
+- `tests/arena-vip.test.mjs` 遍历该龙所有动作的可见→隐藏段，在99%帧验证保持源坐标；原生Canvas连续帧见 work/golden-wing-fixed-qa.png。261模型1734动作均正常渲染。
+- 竞技：源ui_arena_new四NPC位置；源PVPjiangli前14列奖章/魔晶，PVPduihuan前6列价格和物品。10魔晶购买和50魔晶清冷却来自NewArenaPanel；VIP上限/免冷却来自VipInfo。源字段和哈希在 arena-vip-source.json。
+- 单机NPC对战：复用成年骨骼战斗动画；按当前出战战力结算。排名、匹配强度、每日5次/10分钟冷却/每日领奖为明确离线规则。竞技奖励不改写已有战斗或真人服务器资料。
+- VIP0—10的原门槛/源百分比已接入经验、产金、农场龙粮、繁殖/孵化/施工新任务计时和竞技权限；充值前结清既有产金，避免新等级追溯加成。
+- 单笔充值：复用原panel_danbichongzhi/item_danbichongzhi_reward，六档奖励与品质保持源danchong。离线按对应商品金额达成，每档一次，无真实支付。道具入库存、装备碎片入装备碎片库存，6048/6049进入可实际消费的召唤券库存。
+- 所有QA均在work隔离档。规则测试175项通过，原生挑战/兑换/充值领奖/重启保留状态已验证。

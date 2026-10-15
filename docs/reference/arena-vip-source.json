@@ -1,0 +1,26 @@
+{
+  "tablesSha256": "1408d684c2a6530668a8ed4816ad1697d579077fed5d02b887d06f035395e750",
+  "sourceSha256": {
+    "dragon/pconfig/librarys/arena/LibArenaAwardInfo.lua": "7d5f185b17e8f6ece9cb2103ba8afeec17798dd177f297773c2451375afd7dbc",
+    "dragon/pconfig/librarys/arena/LibArenaExchangeInfo.lua": "6c204497ad48e66a668b06e49fb9ede84d188ac8f731a41a9a4df8dc540031b1",
+    "dragon/pconfig/librarys/vip/VipInfo.lua": "9dc4e2a2cd072cd32866e48d25f45b3a924172a226777ba44fa274a2ea50c9a2",
+    "ui/arena/NewArenaPanel.lua": "8c14efcf5511e586d431eace2e55fdba3c212cd582ea629e74ad2c3e1b60cd8a"
+  },
+  "counts": {
+    "awards": 30,
+    "exchange": 27,
+    "vip": 11
+  },
+  "verified": [
+    "Four target slots; buy 10 gems; cooldown reset 50 gems",
+    "ArenaAwardInfo first14 columns; ExchangeInfo first6 columns",
+    "VipInfo percentages, reductions, arena caps and no-CD"
+  ],
+  "offlineRules": [
+    "NPC ranks and power are local, not original server ranks",
+    "5 daily attempts; 10-minute cooldown; one rank reward per local UTC+8 day",
+    "Source reward rows10-13 are zero; no invented per-fight reward",
+    "Exact-price single recharge eligibility; one claim per tier for this offline activity",
+    "Other VIP systems, source server battle and live activity schedule remain unimplemented"
+  ]
+}

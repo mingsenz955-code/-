@@ -272,3 +272,14 @@ body:has(#modal[open].native-fullscreen){background:#09242e}
 .world-targets{display:flex;gap:24px}.world-targets article{width:30%;text-align:center}.world-targets .dragon{width:170px;height:170px}.world-targets .native-game-button{position:relative;width:170px;height:65px;transform:none}
 
 .worldboss-dragon{position:absolute;left:0;top:-35px}.worldboss-dragon canvas{max-width:none;max-height:none}
+
+/* Arena keeps the client's four target positions and native buttons. */
+.arena-avatar{position:absolute;width:80px;height:80px;left:-40px;top:-40px;overflow:hidden;pointer-events:none}.arena-avatar .dragon{width:80px;height:80px}
+.arena-cooldown{position:absolute;left:-37px;top:-14px;width:100px;height:30px;font:16px Microsoft YaHei;color:#fff3bd;background:transparent;border:0;cursor:pointer}
+.arena-footer{position:absolute;left:40px;bottom:28px;color:#f8ebbe;display:flex;align-items:center;gap:20px;font-size:18px}.arena-footer .native-game-button{transform:scale(.75)}
+.arena-exchange-list,.vip-tier-list,.arena-records{max-height:440px;overflow-y:auto}.arena-exchange-list article{display:flex;align-items:center;gap:18px;padding:10px;border-bottom:1px solid #a7793a}.arena-exchange-list img{width:52px;height:52px;object-fit:contain}.arena-exchange-list article span{flex:1}.vip-tier-list article{padding:8px 16px;border-bottom:1px solid #a7793a}.vip-tier-list p{margin:4px 0}.current-vip{background:#88602955}.hud-vip-entry{position:fixed;left:14px;top:83px;z-index:25;border:1px solid #dcb248;border-radius:8px;color:#ffe394;background:#513814;font:bold 16px Microsoft YaHei;padding:3px 12px;cursor:pointer}
+
+.arena-cooldown{color:#69441e}.arena-cooldown span{white-space:nowrap}
+
+#modal[data-mode=nativeVipThresholds] .native-paper-body,#modal[data-mode=sourceArenaExchange] .native-paper-body,#modal[data-mode=sourceArenaRanks] .native-paper-body,#modal[data-mode=sourceArenaRecords] .native-paper-body,#modal[data-mode=sourceActivities] .native-paper-body{background:#f1e0ad}
+.activity-menu{padding:10px;display:flow-root}.activity-menu>img{float:left;width:100px;height:100px;object-fit:contain;margin-right:18px}.activity-recharge-list{position:absolute;left:-300px;top:-175px;width:600px;height:390px;overflow-y:auto;overflow-x:hidden;scrollbar-color:#9c6b3b #dfc88b}.activity-recharge-card{position:relative;width:590px;height:160px}.activity-reward-icon,.activity-reward-frame{position:absolute;left:-34px;top:-34px;width:68px;height:68px;object-fit:contain;pointer-events:none}.activity-reward-frame{width:76px;height:76px;left:-38px;top:-38px}.activity-close{position:absolute;right:40px;bottom:15px;display:flex;gap:16px}.activity-close button{font-size:20px;height:54px;min-width:110px}
