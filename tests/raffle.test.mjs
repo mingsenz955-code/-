@@ -26,7 +26,7 @@ test('three machines keep the client prices, ticket ids and guarantees',()=>{
  assert.deepEqual(['junior','mid','senior'].map(key=>raffleMachine(key).ticket),[6047,6048,6049]);
  assert.equal(raffleMachine('mid').guarantee,4);
  assert.equal(raffleMachine('senior').guarantee,5);
- assert.equal(raffleMachine('junior').guarantee,null);
+ assert.equal(raffleMachine('junior').guarantee,3);
  assert.equal(raffleMachine('nope'),null);
  for(const key of ['junior','mid','senior'])assert(rafflePool(key).length>0);
 });
@@ -39,7 +39,7 @@ test('the guaranteed draw lands on 紫 or 橙 and the counter follows the on-scr
  assert.equal(advanceRaffleCounter(0,{machine:'mid',quality:3}),1);
  assert.equal(advanceRaffleCounter(5,{machine:'mid',quality:4}),0,'drawing the guaranteed tier resets it');
  assert.equal(advanceRaffleCounter(4,{machine:'mid',quality:3},{free:true}),4,'a free single draw does not advance it');
- assert.equal(advanceRaffleCounter(9,{machine:'junior',quality:2}),9,'the junior machine has no counter');
+ assert.equal(advanceRaffleCounter(4,{machine:'junior',quality:2}),5,'paid junior draws use the user-requested blue guarantee');
  assert.throws(()=>sampleRaffle('mid',()=>1),/随机值无效/);
 });
 

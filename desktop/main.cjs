@@ -61,6 +61,7 @@ if(locked)app.whenReady().then(async()=>{
  if(missionsSmoke)await require(tutorialSmoke?'./smoke-tutorial.cjs':profileSmoke?'./smoke-profile.cjs':'./smoke-missions.cjs').prepare(store);
  if(itemUseSmoke)await require('./smoke-item-use.cjs').prepare(store);
  if(farmInstancesSmoke)await require('./smoke-farm-instances.cjs').prepare(store);
+ if(modelSmoke)await require('./smoke-models.cjs').prepare(store);
  if(historySmoke)await require('./smoke-history.cjs').prepare(store);
  if(arenaSmoke)await require('./smoke-arena.cjs').prepare(store);
  if(warehouseSmoke)await require('./smoke-warehouse.cjs').prepare(store);

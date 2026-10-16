@@ -14,7 +14,7 @@ export const ANCIENT_DRAGONS=Object.freeze([1200,1202,1203,1205,1206]);
 export const RAFFLE_CAPACITY=60;
 export const RAFFLE_GUARANTEE_DRAWS=10;
 const MACHINES=Object.freeze({
- junior:Object.freeze({key:'junior',name:'初级',ticket:6047,single:0,ten:10,qualities:Object.freeze([2,3]),guarantee:null}),
+ junior:Object.freeze({key:'junior',name:'初级',ticket:6047,single:0,ten:10,qualities:Object.freeze([2,3]),guarantee:3}),
  mid:Object.freeze({key:'mid',name:'中级',ticket:6048,single:100,ten:900,qualities:Object.freeze([2,3,4]),guarantee:4}),
  senior:Object.freeze({key:'senior',name:'高级',ticket:6049,single:280,ten:2500,qualities:Object.freeze([3,4,5]),guarantee:5}),
 });
@@ -79,3 +79,5 @@ export function advanceRaffleCounter(counter,result,{free=false}={}){
  if(result.quality===machine.guarantee)return 0;
  return counter+1;
 }
+
+export function raffleOdds(key,{guarantee=false,ancientGuarantee=false}={}){const pool=rafflePool(key);if(key==='senior'){const bucket=r=>ANCIENT_DRAGONS.includes(r.dragonId)?'ancient':r.quality===5?'gold':r.quality===4?'purple':'blue',rates=ancientGuarantee?{ancient:1,gold:0,purple:0,blue:0}:guarantee?{ancient:.5,gold:.5,purple:0,blue:0}:{ancient:.2,gold:.1,purple:.25,blue:.45};return pool.map(r=>({...r,probability:rates[bucket(r)]/pool.filter(v=>bucket(v)===bucket(r)).length}));}const candidates=guarantee?pool.filter(r=>r.quality===MACHINES[key].guarantee):pool,total=candidates.reduce((n,r)=>n+WEIGHTS[r.quality],0);return pool.map(r=>({...r,probability:candidates.includes(r)?WEIGHTS[r.quality]/total:0}));}

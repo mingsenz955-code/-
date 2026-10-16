@@ -2,11 +2,11 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import ITEMS from '../assets/original/data/item-use.mjs';
 import {createGame,action,validate} from '../src/game.mjs';
-import {activityDeliver} from '../src/historical-activities.mjs';
+import {activityDeliver,activityGiftBlock} from '../src/historical-activities.mjs';
 const now=1800000000000;
 test('every exported source gift pool opens at both RNG boundaries and survives restart',()=>{
  for(const id of Object.keys(ITEMS.packs))for(const roll of [0,.999999]){
-  const s=createGame(now);s.items[id]=1;
+  const s=createGame(now);s.items[id]=1;if(activityGiftBlock(id)){assert.throws(()=>action(s,'activityGift',{id:Number(id)},now),/旧版/);assert.equal(s.items[id],1);continue;}
   const n=action(s,'activityGift',{id:Number(id)},now,()=>roll);
   assert.equal(n.items[id],0,`pack ${id}`);assert(n.activities.history.last.length>0,`rewards ${id}`);
   assert.deepEqual(validate(JSON.parse(JSON.stringify(n))),n,`restart ${id}`);

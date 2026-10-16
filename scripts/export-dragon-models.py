@@ -11,7 +11,7 @@ sys.path.insert(0,str(ROOT/'work/python-libs'))
 from PIL import Image
 import texture2ddecoder
 import xml.etree.ElementTree as ET
-parser=argparse.ArgumentParser();parser.add_argument('--ids');parser.add_argument('--effect-bases',nargs='+');args=parser.parse_args()
+parser=argparse.ArgumentParser();parser.add_argument('--ids');parser.add_argument('--awakened-only',action='store_true');parser.add_argument('--effect-bases',nargs='+');args=parser.parse_args()
 ids=set(map(int,args.ids.split(','))) if args.ids else None
 out=ROOT/('assets/original/effects' if args.effect_bases else 'assets/original/models');out.mkdir(exist_ok=True)
 z=zipfile.ZipFile(ROOT/'work/yulong-dcn.apk');names=set(z.namelist())
@@ -19,6 +19,7 @@ manifest_path=ROOT/'assets/original/manifest.json';manifest=json.loads(manifest_
 index_path=out/'index.mjs';index={}
 if index_path.exists():index=json.loads(index_path.read_text(encoding='utf8').removeprefix('export default ').strip().removesuffix(';'))
 catalog=json.loads((ROOT/'assets/original/catalog.json').read_text(encoding='utf8'));missing=[]
+if args.awakened_only:catalog=[{**r,'stages':[4]} for r in catalog if r['extended'].get('canWakeup')==1]
 if args.effect_bases:catalog=[{'id':None,'base':Path(base).name,'archiveBase':base,'stages':[None]} for base in args.effect_bases]
 def nums(s):return list(map(int,re.findall(r'-?\d+',s)))
 def decode(base):
@@ -72,5 +73,5 @@ for record in catalog:
         index_path.write_bytes(('export default '+json.dumps(index,ensure_ascii=False,separators=(',',':'))+';\n').encode('utf8'))
         manifest_path.write_bytes(json.dumps(manifest,ensure_ascii=False,indent=2).encode('utf8'))
         print('Exported',key,len(clips),'clips',flush=True)
-(out/'missing.json').write_bytes(json.dumps(missing,ensure_ascii=False,indent=2).encode('utf8'))
+(out/('awakening-missing.json' if args.awakened_only else 'missing.json')).write_bytes(json.dumps(missing,ensure_ascii=False,indent=2).encode('utf8'))
 print('Indexed',len(index),'stage models;',len(missing),'missing stages',flush=True)

@@ -1,3 +1,4 @@
+import {dragonMaterials} from './dragon-materials.mjs';
 import ROWS from '../assets/original/data/dragon-stars.mjs';
 import CATALOG from '../assets/original/catalog.mjs';
 import {SPECIES} from './data.mjs';
@@ -20,18 +21,17 @@ export function dragonStarMaterialError(state,target,material){
  if(!target||!material||target.id===material.id)return '不能吞噬自身。';
  const t=SPECIES[target.species]?.originalId,m=SPECIES[material.species]?.originalId;
  if(t!==m&&!(t>=2000&&dragonStars(target)>=5&&m===t-1000))return '只能吞噬同种龙；变异龙五星后可吞噬对应普通龙。';
- return dragonRemovalError(state,material.id);
+ return material.fromEgg?null:dragonRemovalError(state,material.id);
 }
 export function dragonStarPlan(state,id,ids=[]){
  const d=state.dragons.find(v=>v.id===id);if(!d)throw Error('找不到这条龙。');
- if(!Array.isArray(ids)||new Set(ids).size!==ids.length||ids.length>100)throw Error('升星材料选择无效。');
+ if(!Array.isArray(ids)||new Set(ids).size!==ids.length||ids.length>2000)throw Error('升星材料选择无效。');
  let star=dragonStars(d),exp=d.starExp??0,gained=0;
  const current=dragonStarRow(d);if(!current)throw Error('这条龙的升星数据尚未取得。');
- for(const key of ids){const material=state.dragons.find(v=>v.id===key),error=dragonStarMaterialError(state,d,material);if(error)throw Error(error);const row=dragonStarRow(material);if(!row)throw Error('材料龙经验数据尚未取得。');gained+=row.xp;}
+ for(const key of ids){const material=dragonMaterials(state).find(v=>v.id===key),error=dragonStarMaterialError(state,d,material);if(error)throw Error(error);const row=dragonStarRow(material);if(!row)throw Error('材料龙经验数据尚未取得。');gained+=row.xp;}
  exp+=gained;
- // Above five stars this client uses a separate awakening protocol. Never consume
- // dragons using the 90000 placeholder in its old perxp column.
- const cap=Math.min(5,dragonStarLimit(d));
+ // Legendary dragons use awakening after five; mutant fusion has real sixth/seventh rows.
+ const cap=SPECIES[d.species].originalId>=2000?dragonStarLimit(d):Math.min(5,dragonStarLimit(d));
  while(star<cap&&exp>=dragonStarRow(d,star).perxp){exp-=dragonStarRow(d,star).perxp;star++;}
- return {dragon:d,current,star,exp,gained,cap,limit:dragonStarLimit(d),ids};
+ return {dragon:d,current,star,exp,gained,cap,limit:dragonStarLimit(d),ids,materials:dragonMaterials(state).filter(v=>ids.includes(v.id))};
 }

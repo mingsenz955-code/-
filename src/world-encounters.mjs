@@ -1,7 +1,8 @@
+import {runeSkill,runeOfDragon,runeDefinition,sourceCombatSkill,activeCombatSkill} from './runes.mjs';
 import {formationPosition} from './formation.mjs';
 import SOURCE from '../assets/original/data/world-encounters.mjs';
 import {SPECIES} from './data.mjs';
-import {configuredLineup,dragonAttributes,dragonPower} from './battle.mjs';
+import {configuredLineup,dragonAttributes,dragonPower,BATTLE_ROUND_LIMIT} from './battle.mjs';
 export {SOURCE as WORLD_SOURCE};
 export const ENCOUNTER_POLICY='offline-source-world-v1';
 const day=now=>Math.floor((now+28800000)/86400000);
@@ -12,7 +13,16 @@ export const seedInfo=id=>SOURCE.seeds.find(r=>r.id===id);
 export function availableSeeds(level,now=Date.now()){const stamp=str=>{const m=str?.match(/^(\d+)-(\d+)-(\d+)-(\d+):(\d+):(\d+)$/);return m?Date.UTC(+m[1],+m[2]-1,+m[3],+m[4]-8,+m[5],+m[6]):null};return SOURCE.seeds.filter(r=>level>=r.minLvl&&level<=r.maxLvl&&(!r.start||now>=stamp(r.start))&&(!r.end||now<=stamp(r.end))).slice(0,5);}
 export function monster(id){const r=SOURCE.monsters.find(m=>m.id===id);if(!r)throw Error('原怪物配置尚未取得。');const species=Object.keys(SPECIES).find(k=>SPECIES[k].originalId===r.dragonId);if(!species)throw Error('原龙模型尚未取得。');return {...r,species};}
 export function bossInfo(s){return {...monster(SOURCE.bossStages[s.encounters.boss.stage].id),...SOURCE.bossStages[s.encounters.boss.stage]};}
-export function bossAttackPlan(s){const b=bossInfo(s),team=configuredLineup(s);if(!team.length)throw Error('请先布阵至少一条龙。');let remaining=b.life-s.encounters.boss.damage;const hits=[];for(let round=0;round<3&&remaining>0;round++)for(let i=0;i<team.length&&remaining>0;i++){const stats=dragonAttributes(team[i],s),damage=Math.min(remaining,Math.max(1,Math.floor(stats.attack*.8-b.defend*.15)));remaining-=damage;hits.push({index:i,damage,round:round+1});}return {hits,damage:hits.reduce((sum,h)=>sum+h.damage,0),won:remaining===0,enemy:b,startHp:b.life-s.encounters.boss.damage};}
+// Source stats/skills and 30-round ceiling. Damage/turn targeting is an explicit
+// offline solver: the original client receives resolved damage from the server.
+export function bossAttackPlan(s){const b=bossInfo(s),team=configuredLineup(s);if(!team.length)throw Error('请先布阵至少一条龙。');const units=team.map(item=>{const stats=dragonAttributes(item,s);return {item,stats,hp:stats.life};}),startHp=b.life-s.encounters.boss.damage;let remaining=startHp,rounds=0;const events=[];
+ const damage=(stats,target,skill)=>Math.max(1,Math.floor(stats.attack*(skill?.damageVector??10000)/10000+Math.max(0,skill?.damageValue??0)-target.defend*.15));
+ for(let round=1;round<=BATTLE_ROUND_LIMIT&&remaining>0&&units.some(u=>u.hp>0);round++){rounds=round;
+  for(let i=0;i<units.length&&remaining>0;i++){const u=units[i];if(u.hp<=0)continue;const skill=activeCombatSkill(s,u.item,round%3===0?2:1),slot=skill?.type===2?2:1,hit=Math.min(remaining,damage(u.stats,b,skill));remaining-=hit;events.push({side:'ally',index:i,target:0,damage:hit,round,skillId:skill?.id,slot,hp:remaining,maxHp:b.life});}
+  if(remaining<=0)break;const i=units.findIndex(u=>u.hp>0);if(i<0)break;const u=units[i],slot=round===1||round%3===0?2:1,skill=sourceCombatSkill(b['skill'+slot]),hit=Math.min(u.hp,damage(b,u.stats,skill));u.hp-=hit;events.push({side:'enemy',index:0,target:i,damage:hit,round,skillId:skill?.id,slot,hp:u.hp,maxHp:u.stats.life});
+ }
+ const hits=events.filter(e=>e.side==='ally');return {events,hits,rounds,roundLimit:BATTLE_ROUND_LIMIT,damage:hits.reduce((sum,h)=>sum+h.damage,0),won:remaining===0,endedBy:remaining===0?'boss-defeated':units.every(u=>u.hp===0)?'team-defeated':'round-limit',enemy:b,startHp,allyLife:units.map(u=>u.stats.life)};
+}
 // User-requested adaptive offline balance. Select the strongest legal owned team,
 // independent of currently selected formation; use 25% steps so small upgrades help.
 export const TREE_NPC_TIERS=[{name:'精英',ratio:.9},{name:'强敌',ratio:1.1},{name:'霸主',ratio:1.2}];

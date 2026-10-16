@@ -5,10 +5,10 @@ import {sourceAnimate} from './acquisition-animation.mjs';
 import {battlePositions} from './battle-positions.mjs';
 import {simulateCombat} from './combat.mjs';
 import {formationPosition,formationDefinition} from './formation.mjs';
-import {runeSkill,runeOfDragon,runeDefinition,sourceSkill} from './runes.mjs';
+import {runeSkill,runeOfDragon,runeDefinition,sourceCombatSkill,activeCombatSkill,sourceSkill} from './runes.mjs';
 import SKILL_ART from '../assets/original/data/battle-skill-art.mjs';
 import {renderSourceLayout} from './source-layout.mjs';
-import {sourceLayout,showSource} from './ranch-dialogs.mjs';
+import {sourceLayout,showSource,esc} from './ranch-dialogs.mjs';
 import {dragonArt} from './art.mjs';
 import {SPECIES} from './data.mjs';
 import MODELS from '../assets/original/models/index.mjs';
@@ -17,7 +17,7 @@ const wait=ms=>new Promise(resolve=>setTimeout(resolve,ms));
 let activeRun=0;
 // BattleUI normalizes appearance level to at least 7 before getDragonGraphic.
 // The younger ranch models intentionally contain no combat tracks.
-function fighter(item,side,index,positions){const p=positions[index],art=dragonArt(item.species,'',Math.max(7,item.level??7)).replace('data-clip="breath"',`data-clip="breathinbattle" data-battle-scale="${p.scale}" data-native-size="true"`);return `<div class="battle-fighter ${side}" data-unit="${side}${index}" data-position="${p.type}" style="left:${p.x}px;top:${p.y}px;z-index:${Math.round(p.y)}"><div class="battle-model">${art}</div><span class="battle-unit-hp"><img class="hp-background" src="assets/original/ui/ui_battle_hp_diban.png" alt=""><img class="hp-delay" src="assets/original/ui/ui_battle_hp_delay.png" alt=""><img class="hp-current" src="assets/original/ui/ui_battle_hp_${side==='enemy'?'defender':'attacker'}.png" alt=""></span></div>`}
+function fighter(item,side,index,positions){const p=positions[index],art=dragonArt(item.species,'',Math.max(7,item.level??7),item.wake?.star??0).replace('data-clip="breath"',`data-clip="breathinbattle" data-battle-scale="${p.scale}" data-native-size="true"`);return `<div class="battle-fighter ${side}" data-unit="${side}${index}" data-position="${p.type}" style="left:${p.x}px;top:${p.y}px;z-index:${Math.round(p.y)}"><div class="battle-model">${art}</div><span class="battle-unit-hp"><img class="hp-background" src="assets/original/ui/ui_battle_hp_diban.png" alt=""><img class="hp-delay" src="assets/original/ui/ui_battle_hp_delay.png" alt=""><img class="hp-current" src="assets/original/ui/ui_battle_hp_${side==='enemy'?'defender':'attacker'}.png" alt=""></span></div>`}
 export async function openBattleDialog(state,{nodeId=null,enemyGroup=null,layoutName='ui_battlenormal',allyPower=null,enemyPower=null}={}){
  const layout=await sourceLayout(layoutName);
  const lineup=configuredLineup(state),enemies=enemyGroup??battleEnemyGroup(nodeId)?.monsters??[],values={},slots={},hidden=new Set();
@@ -51,8 +51,8 @@ function healthBar(unit,hp){
  for(const a of bar.getAnimations())a.cancel();bar.style.opacity='1';void sourceAnimate(bar,[{opacity:1},{opacity:0}],{delay:500,duration:500}).then(()=>{bar.style.opacity='0'}).catch(cancelled);
 }
 async function skillName(layer,skill,common,legend){
- if(!common?.nameImage)return;
- const name=document.createElement('div');name.className='battle-skill-name';name.innerHTML=(legend?'<img class="battle-legend-skill" src="assets/original/ui/skill_shensheng_bg.png" alt="">':'')+`<img src="assets/original/ui/${common.nameImage}" alt="${skill.name}">`;layer.append(name);
+ if(!skill)return;
+ const name=document.createElement('div');name.className='battle-skill-name';name.dataset.skillName=skill.name??'普通攻击';name.innerHTML=(legend?'<img class="battle-legend-skill" src="assets/original/ui/skill_shensheng_bg.png" alt="">':'')+(common?.nameImage?`<img src="assets/original/ui/${common.nameImage}" alt="${esc(skill.name??'技能')}">`:`<span class="battle-skill-text">${esc(skill.name??'普通攻击')}</span>`);layer.append(name);const img=name.querySelector('img:not(.battle-legend-skill)');if(img)img.addEventListener('error',()=>{const label=document.createElement('span');label.className='battle-skill-text';label.textContent=skill.name??'普通攻击';img.replaceWith(label);},{once:true});
  try{await sourceAnimate(name,[{opacity:0,scale:.1,offset:0},{opacity:0,scale:.1,offset:.1},{opacity:1,scale:1.5,offset:.2},{opacity:1,scale:1,offset:.5},{opacity:1,scale:1,offset:.7},{opacity:0,scale:1,offset:1}],{duration:1000})}finally{name.remove()}
 }
 let glyphs;
@@ -80,7 +80,7 @@ export async function playBattleAnimation(state,nodeId,result){
   const round=d.querySelector('[data-source="round/num"]');if(round)round.textContent=`${turn.round}/${BATTLE_ROUND_LIMIT}`;
   const {x,y:ay}=(attacker.side==='ally'?allyPositions:enemyPositions)[attacker.index],{x:targetX,y:ty}=(target.side==='ally'?allyPositions:enemyPositions)[target.index];
   const magic=turn.slot===2,slot=turn.slot,rune=attacker.side==='ally'?runeOfDragon(state,attacker.item.id,slot):null,skill=sourceSkill(turn.skillId)??runeSkill(attacker.item,runeDefinition(rune?.type),slot),common=SKILL_ART[skill?.kind],key=common?common.fireEff:`${magic?'magic':'attack'}_${SPECIES[attacker.item.species].originalId}`;
-  if(magic)void skillName(layer,skill,common,formationDefinition(attacker.item)?.isLegend===1);
+  void skillName(layer,skill,common,formationDefinition(attacker.item)?.isLegend===1);
   const attackMotion=magic?'magic':formationPosition(target.item)===1?'airattack':'landattack';
   if(!await motion(attacker.el,attackMotion,live))return false;
   const points=projectilePoints(attacker.item,{x,y:ay},target.item,{x:targetX,y:ty},attacker.side);
@@ -99,12 +99,17 @@ export async function playBattleAnimation(state,nodeId,result){
 
 // Offline world-boss encounter: recorded partial damage, never fake a defeated boss.
 export async function playBossAnimation(state,plan){
- const d=document.querySelector('#modal'),run=d.dataset.battleRun,layer=d.querySelector('.battle-fx-layer'),target=d.querySelector('[data-unit="enemy0"]'),team=configuredLineup(state),positions=battlePositions(team),targetPos=battlePositions([plan.enemy],'enemy')[0];let hp=plan.startHp;
- const live=()=>d.open&&d.dataset.battleRun===run&&d.dataset.mode==='sourceBattle';
- const paintHp=(initial=false)=>{const percent=Math.max(0,hp/plan.enemy.life*100),bar=target.querySelector('.battle-unit-hp'),top=d.querySelector('[data-source="right1/hp"]');target.dataset.maxHp=String(plan.enemy.life);target.dataset.currentHp=String(hp);bar.title=`${hp} / ${plan.enemy.life}`;if(initial){bar.dataset.hp=String(percent);for(const image of bar.querySelectorAll('.hp-current,.hp-delay'))image.style.scale=percent/100+' 1';}else healthBar({el:target},percent);if(top){top.style.clipPath=`inset(0 ${100-percent}% 0 0)`;top.dataset.currentHp=String(hp);top.dataset.maxHp=String(plan.enemy.life);}};
- paintHp(true);
+ const d=document.querySelector('#modal'),run=d.dataset.battleRun,layer=d.querySelector('.battle-fx-layer'),team=configuredLineup(state),allies=battlePositions(team),enemies=battlePositions([plan.enemy],'enemy');const live=()=>d.open&&d.dataset.battleRun===run&&d.dataset.mode==='sourceBattle';
+ const applyHp=(el,hp,max,barKey)=>{const percent=Math.max(0,hp/max*100);el.dataset.currentHp=String(hp);el.dataset.maxHp=String(max);healthBar({el},percent);const top=d.querySelector(`[data-source="${barKey}/hp"]`);if(top){top.dataset.currentHp=String(hp);top.dataset.maxHp=String(max);top.style.clipPath=`inset(0 ${100-percent}% 0 0)`;}};
+ const initialTarget=d.querySelector('[data-unit=enemy0]');applyHp(initialTarget,plan.startHp,plan.enemy.life,'right1');for(let i=0;i<team.length;i++)applyHp(d.querySelector(`[data-unit=ally${i}]`),dragonAttributes(team[i],state).life,dragonAttributes(team[i],state).life,'left'+(i+1));
+ let hp=plan.startHp;const events=plan.events??plan.hits.map(hit=>({...hit,side:'ally',slot:hit.slot??2,hp:hp=Math.max(0,hp-hit.damage),maxHp:plan.enemy.life}));
  if(!(await Promise.all([...d.querySelectorAll('.battle-fighter')].map(el=>motion(el,'movein',live)))).every(Boolean))return false;
- await wait(100);
- for(const hit of plan.hits){if(!live())return false;const actor=d.querySelector(`[data-unit="ally${hit.index}"]`);const r=d.querySelector('[data-source="round/num"]');if(r)r.textContent=`${hit.round}/30`;if(!await motion(actor,'magic',live))return false;const fx=playSourceHit(layer,'magic_'+SPECIES[team[hit.index].species].originalId,'bomb2',{x:targetPos.x,y:targetPos.y-45},live),hurt=motion(target,'hurt',live);await damageNumber(layer,hit.damage,targetPos.x,targetPos.y-75);hp-=hit.damage;paintHp();if(!(await Promise.all([fx,hurt])).every(Boolean))return false;}
- if(live()&&plan.won){target.classList.add('is-dead');if(!await motion(target,'dead',live))return false;await wait(100);target.hidden=true}await wait(500);return live();
+ for(const hit of events){if(!live())return false;const ally=hit.side==='ally',actor=d.querySelector(`[data-unit="${ally?'ally'+hit.index:'enemy0'}"]`),target=d.querySelector(`[data-unit="${ally?'enemy0':'ally'+hit.target}"]`),actorItem=ally?team[hit.index]:plan.enemy,targetItem=ally?plan.enemy:team[hit.target],from=ally?allies[hit.index]:enemies[0],to=ally?enemies[0]:allies[hit.target],skill=sourceCombatSkill(hit.skillId)??activeCombatSkill(ally?state:null,actorItem,hit.slot),art=SKILL_ART[skill?.kind],key=art?.fireEff??`${hit.slot===2?'magic':'attack'}_${SPECIES[actorItem.species].originalId}`;
+ const label=d.querySelector('[data-source="round/num"]');if(label)label.textContent=`${hit.round}/${plan.roundLimit??30}`;d.dataset.lastBattleSide=hit.side;d.dataset.bossRound=hit.round;void skillName(layer,skill,art,formationDefinition(actorItem)?.isLegend===1);
+ if(!await motion(actor,hit.slot===2?'magic':formationPosition(targetItem)===1?'airattack':'landattack',live))return false;
+ const points=projectilePoints(actorItem,from,targetItem,to,ally?'ally':'enemy');if(!await playSourceProjectile(layer,key,art?.type??3,points.from,points.to,live))return false;
+ const fx=playSourceHit(layer,art?.hitEff??key,'bomb2',{x:to.x,y:to.y-45},live),hurt=hit.hp>0?motion(target,'hurt',live):Promise.resolve(true);await damageNumber(layer,hit.damage,to.x,to.y-75);applyHp(target,hit.hp,hit.maxHp,ally?'right1':'left'+(hit.target+1));if(!(await Promise.all([fx,hurt])).every(Boolean))return false;
+ if(hit.hp===0){target.classList.add('is-dead');d.querySelector(`[data-portrait="${ally?'enemy0':'ally'+hit.target}"]`)?.classList.add('is-dead');if(!await motion(target,'dead',live))return false;target.hidden=true;}
+ }
+ d.dataset.bossEndReason=plan.endedBy;await wait(500);return live();
 }

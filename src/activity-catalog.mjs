@@ -14,6 +14,6 @@ export const ACTIVITY_FAMILIES=Object.freeze([
 export const activityFamily=key=>ACTIVITY_FAMILIES.find(f=>f.key===key)??null;
 export const activityFamilyEntries=key=>(activityFamily(key)?.keys??[]).map(k=>SOURCE.activities.find(d=>d.key===k));
 // Keep distinct playable activities; retire overlapping historical versions from the menu.
-export const ACTIVE_ACTIVITY_KEYS=Object.freeze(['first','growth','monthly-sign','seven-tasks','training-missions','train-points','egg-event-10','dragon-exchange','chest-exchange','collection','lucky-cat','wheel-5','limited-5','children-eggs','monopoly-3','daily-sale','month-card','cdkeys','single']);
+export const ACTIVE_ACTIVITY_KEYS=Object.freeze(['first','growth','monthly-sign','seven-tasks','training-missions','train-points','egg-event-10','dragon-exchange','chest-exchange','collection','lucky-cat','wheel-5','limited-5','children-eggs','monopoly-1','daily-sale','month-card','cdkeys','single']);
 export const ACTIVITY_CATALOG=Object.freeze(ACTIVE_ACTIVITY_KEYS.map(key=>SOURCE.activities.find(d=>d.key===key)));
 export const RETIRED_ACTIVITY_KEYS=Object.freeze(SOURCE.activities.filter(d=>!ACTIVE_ACTIVITY_KEYS.includes(d.key)).map(d=>d.key));

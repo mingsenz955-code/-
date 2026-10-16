@@ -43,7 +43,7 @@ add('rose-date','七夕·玫瑰之约','exchange','love_duihuan',[simple(r,[priz
 add('chest-exchange','宝箱积分兑换','chestShop','baoxiang_duihuan',[simple(r,[prize(r[1],r[2],r[3],r[4])],goal=r[5],limit=r[6]) for r in t['baoxiang_duihuan']],group='兑换')
 add('train-points','培养回馈·积分兑换','trainShop','peiyangjifenduihuan',[simple(r,[prize(r[1],r[2],r[3])],goal=r[4]) for r in t['peiyangjifenduihuan']],group='培养')
 add('training-rank','培养回馈·排名奖励','trainingRank','peiyangpaihangjiangli',[simple(r,[prize(r[1],r[2],r[3],r[6])],rankMin=r[4],rankMax=r[5]) for r in t['peiyangpaihangjiangli']],group='培养',odds='原排名奖励目录；本地单人榜，至少完成一次培养可领取一次第一名奖励。没有原在线排行与结算日期，常驻领取属于本地适配。')
-add('training-missions','培养回馈·任务','trainingMission','peiyangrenwu',[{'id':r[0],'goal':r[1],'points':r[2],'rewards':[]} for r in t['peiyangrenwu']],group='培养',odds='培养丹消耗、完美/失败次数及属性增量由本地培养记录。任务8～14采用累计属性增量，属于离线条件。')
+add('training-missions','培养回馈·任务','trainingMission','peiyangrenwu',[{'id':r[0],'goal':r[1],'points':r[2],'description':r[4],'rewards':[]} for r in t['peiyangrenwu']],group='培养',odds='按原peiyangrenwu描述，任务1～3累计消耗培养丹，4～7培养暴击/失败，8～14购买获得培养丹；达标积分自动累计。培养暴击概率仍为本地规则。')
 add('train-tasks','培养送豪礼','trainTask','peiyangduihuan',[simple(r,groups(r,3,width=3,count=2),goal=r[1]) for r in t['peiyangduihuan']],group='培养')
 for group in sorted({r[19] for r in t['longdan_jiangli']}):
  rows=[r for r in t['longdan_jiangli'] if r[19]==group];items=[]
@@ -61,7 +61,7 @@ for i,title in enumerate(['爪','角','骨','鳞'],1):
  table='runehuodong_'+str(i);add('fire-'+str(i),'点燃圣火·橙装'+title,'draw',table,[simple(r,[prize(r[1],r[2],r[3],r[6] if len(r)>6 else None)],weight=r[4]-(t[table][n-1][4] if n else 0)) for n,r in enumerate(t[table])],price=30,group='抽奖',odds='原累计区间用于离线抽取；30魔晶单抽价格为离线设置。')
 for i in [1,2,3]:
  add('recharge-wheel-'+str(i),'充值转盘·'+['普通','高级','豪华'][i-1],'rechargeDraw','Recharge_table1-1',[simple(r,[prize(r[2],r[3],r[4],r[6])],weight=r[5]) for r in t['Recharge_table1-1'] if r[1]==i],goal=[30,100,300][i-1],group='抽奖',odds='原奖池保留；每轮充值门槛30/100/300元为离线设置。')
-for i,title in enumerate(['狂龙','高能威龙','大圣龙','蛋壳龙','大圣龙·复刻'],1):
+for i,title in enumerate(['狂龙','高能威龙','大圣龙','蛋壳龙','火凤凰'],1):
  table='shenlong_'+str(i);add('limited-'+str(i),'限时神龙·'+title,'limited',table,[simple(r,groups(r,1),goal=r[0]) for r in t[table]],price=280,tenPrice=2800,featured=[1200,1202,1203,1204,1206][i-1],simulation=[simple(r,[prize(5,r[1],1,r[2])],weight={2:60,3:30,4:9,5:1}.get(r[2],1)) for r in t['choujiangyulan']],group='神龙',odds='该配置是排名奖励表，不是抽奖池。抽取使用客户端扭蛋预览池作离线模拟，不代表原限时奖池或概率；每抽10分，200分后可领一次本地第一名奖励，无真人排名。')
 add('spring-wheel','春节·红包转盘','springDraw','chunjiezhuanpan',[simple(r,[prize(r[1],r[2],r[3],r[6])],weight=r[4]) for r in t['chunjiezhuanpan']],price=12,tenPrice=118,couponCosts={str(r[2]):r[3] for r in t['chunjiexiaohao'] if r[1]==1},group='节日',odds='原奖池及红包/魔晶消费配置：红包单抽1、十抽10，魔晶单抽12、十抽118。原奖池区间权重用于离线抽取；任务红包由本地实际操作获得。')
 add('spring-tasks','春节·红包任务','springTask','chunjierenwu',[{'id':r[0],'goal':r[1],'limit':r[2],'coupons':r[3],'description':r[4],'rewards':[]} for r in t['chunjierenwu']],group='节日',odds='每日真实操作计数，按原任务次数与红包数量领取。HARD驯龙挑战尚未接通，不以其它战斗替代。')
@@ -85,6 +85,10 @@ for n in config['items']:
 for d in defs:
  if d['key'].startswith('wheel-'):
   preview=[1092,1076,1041,1073,1071,1093][int(d['key'].split('-')[1])];d['preview']=preview;d['title']='幸运抽奖·'+meta[str(preview)]['name']
+for d in defs:
+ if d['kind']=='limited':
+  featured=next(p['itemId'] for r in d['items'] if r['id']==1 for p in r['rewards'] if p['type']==5)
+  d['featured']=featured;d['title']='限时神龙·'+meta[str(featured)]['name']
 fixed_packs={}
 for row in t['items']:
  if row[0] in [6013,6015] or len(row)<=60 or not row[60] or not isinstance(row[60],str):continue
@@ -97,7 +101,23 @@ for row in t['items']:
   r=rows[0];rewards.append(prize(r[2],r[3],r[5]))
  else:
   if rewards:fixed_packs[str(row[0])]={'pools':pools,'rewards':rewards}
-data={'fixedPacks':fixed_packs,'eggPoints':t['longdan_zhonglei'],'training':t['Dragon_peiyang'],'trainingPoints':t['peiyanghuodongjifen'],'activities':defs,'items':meta,'baseline':'2.9.35-202402271124','scope':'活动资料来自该APK，不能证明涵盖所有历史发布版本。'}
+# Generic consumable packs use one weighted roll per configured group. Keyed
+# chests keep their dedicated transaction. Legacy gem IDs have no modern mapping.
+random_packs={}
+blocked_packs={}
+for row in t['items']:
+ if str(row[0]) in fixed_packs or row[0] in [6013,6015] or len(row)<=60 or not isinstance(row[60],str) or not row[60]:continue
+ try:pools=[int(p) for p in row[60].split('|')]
+ except ValueError:continue
+ groups_=[]
+ for pool in pools:
+  rows=[r for r in t['randgive'] if r[1]==pool and r[4]>0]
+  if not rows or any(r[2] not in [1,2,3,4,5,8,9,19,20,21,22,23,26,27,28,29] or r[5]<=0 or r[6]<r[5] for r in rows):break
+  groups_.append([dict(prize(r[2],r[3],r[5]),max=r[6],weight=r[4],sourceRow=r[0]) for r in rows])
+ else:
+  if groups_:random_packs[str(row[0])]={'pools':pools,'groups':groups_};continue
+ blocked_packs[str(row[0])]={'pools':pools,'reason':'旧版宝石奖励尚无对应的使用系统，暂不能开启；原物品保留。'}
+data={'randomPacks':random_packs,'blockedPacks':blocked_packs,'fixedPacks':fixed_packs,'eggPoints':t['longdan_zhonglei'],'training':t['Dragon_peiyang'],'trainingPoints':t['peiyanghuodongjifen'],'activities':defs,'items':meta,'baseline':'2.9.35-202402271124','scope':'活动资料来自该APK，不能证明涵盖所有历史发布版本。'}
 (ROOT/'assets/original/data/activities.mjs').write_text('export default '+json.dumps(data,ensure_ascii=False,separators=(',',':'))+';\n',encoding='utf8')
 report={'baseline':data['baseline'],'tablesSha256':hashlib.sha256((ROOT/'assets/original/data/tables.json').read_bytes()).hexdigest(),'activityCount':len(defs),'rewardRows':sum(len(d['items']) for d in defs),'scope':data['scope'],'activities':[{k:v for k,v in d.items() if k not in ['items','points','tiles']} for d in defs],'limitations':['历史活动永久开放属于用户要求的离线适配','未声称恢复真人排行、服务器开奖、外部兑换码、所有历史发行版本','客户端库未保存的周期、资格与概率在活动说明中标出本地政策']}
 (ROOT/'docs/reference/activities-source.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf8');print('Activities:',len(defs),'source reward rows:',report['rewardRows'])
