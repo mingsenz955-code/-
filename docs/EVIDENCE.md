@@ -421,3 +421,6 @@
 ## v0.16.61 血量与伤害跳变修复
 - 原rune-skills数据damageVector万分比及damageValue固定值接入实际伤害；怪物配置skill1/skill2优先，显示与伤害技能ID一致。原属性成长/装备/宝石/符文/升星/培养继续复用现有提取，不虚构已恢复服务器防御/暴击/怒气规则。
 - 旧3回合脚本finishing不是原版证据，已删除运行模块及其镜像测试。新增确定性逐击HP求解和守恒/真实死亡/30回合不强杀验证，防御公式等本地适配完整列COMBAT.md。冒险旧40%离线强度改在真实攻防血执行，血战原怪物属性保持独立。
+
+## v0.16.64 移动入口
+- 静态检查原BuildingOptPanel.lua函数20的Base.moveBuildingBegin与函数30的cp_move/移动；完整指令和SHA见reference/building-move-entry-disassembly.txt，未运行原Lua。原版独立移动操作得到确认，原手机版双击手势未得到证据；本轮双击为用户指定PC防误触改动，原按钮仍可用。
