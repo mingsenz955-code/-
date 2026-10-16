@@ -376,3 +376,10 @@ body:has(#modal[open].native-fullscreen){background:#09242e}
 .tutorial-pause{left:460px;right:auto;top:8px}
 
 .tutorial-artboard [data-source="miaoshu"]{align-items:flex-start}
+
+/* Original sign: 132x194 sprite, delegate scale .5, world scale .5. */
+.original-land-board{width:33px;height:48.5px}
+.original-land-board span{top:12.25px;font-size:12.5px;line-height:12.5px}
+
+/* Original boards live in buildingLayer, above islandLayer and its entrances. */
+.ranch-world>.original-land-board{z-index:900}

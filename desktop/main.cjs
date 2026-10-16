@@ -17,7 +17,7 @@ const progressionSmoke=process.argv.includes('--smoke-progression'),progressionV
 const holySmoke=process.argv.includes('--smoke-holy'),holyVerify=process.argv.includes('--verify-holy');
 const formationSmoke=process.argv.includes('--smoke-formation'),formationVerify=process.argv.includes('--verify-formation');
 const adventureSmoke=process.argv.includes('--smoke-adventure'),adventureVerify=process.argv.includes('--verify-adventure');
-const expansionSmoke=process.argv.includes('--smoke-expansion')||process.argv.includes('--smoke-expansion-legacy'),expansionVerify=process.argv.includes('--verify-expansion');
+const expansionSmoke=process.argv.includes('--smoke-expansion')||process.argv.includes('--smoke-expansion-legacy')||process.argv.includes('--smoke-land-entrances'),expansionVerify=process.argv.includes('--verify-expansion');
 const rechargeSmoke=process.argv.includes('--smoke-recharge'),rechargeVerify=process.argv.includes('--verify-recharge');
 const lotteryDemo=process.argv.includes('--lottery-demo');
 const lotterySmoke=process.argv.includes('--smoke-lottery'),lotteryVerify=process.argv.includes('--verify-lottery');

@@ -407,3 +407,8 @@
 - TutorialManager SHA256 71cc1e48fe962392e3328f54e40ba1d572e7940f976f298772baad2b36c8d007；根初始化PC40—273为46个箭头，PC285—333为47文本键。函数20按原step前缀译标题，描述TOP；11/12/41/44/45不加载独立UI_XinShou布局。export-tutorial.py只读取字面量，配置及SHA见reference/tutorial-source.json。
 - 原Base SHA256 2e49418576b4d2902610a9dbd2dc6c9bf6a2e5fccf1294b92434c643b4923655；函数9 PC35—64把未购地的ui_mapland_land<ID>按各岛中心加x/y叠加，购买后移除。export-land-masks.py从原PNG逐行导出alpha及源SHA，不用近似矩形替代曲边遮罩。
 - 地块遮罩和已用27/13.5菱形在同一画板相交；不是声称已恢复Base全局rects/白格原平面。教学1800预算、4级岩土开局与教学固定熔岩是有来源文本支撑的离线教学方案，原服务器初始包/教程结果协议仍未知，TUTORIAL.md单独记录，不修改普通繁殖概率。
+
+## v0.16.59 木牌坐标与岛屿编号纠正
+- 原 MainScene:initIslands 的 orders={1,2,3,4}、names={left,top,right,bottom}；source2 为火山 top、source3 为荒漠 right。旧实现把2/3反配，导致原 land32—36 的购买木牌画在火山/血战前线上。恢复源编号/中心/尺寸/z次序，不改地块购买记录。
+- Base.setLandBoard 函数63 PC56—78取(tx+w/2,ty+h/2)，根 upvalue r2=r3=27，生成 x=27*(tx-ty), y=27-27*(tx+ty)/2；MainScene buildingLayer=(0,0)、islandLayer.y=-2500。木牌应在全局 buildingLayer，不应使用遮罩的x/y，也不应困在各岛的stacking context。
+- LandBoardDelegate 原sprite132×194、anchor(.5,0)、delegate.scale(.5)、原文字50在y120；PC世界统一缩放.5，因此木牌33×48.5、字12.5。血战前线原(-30,2010)入口保留，未用搬动原入口掩盖木牌错误。静态反汇编见work/base-board-v59.txt，未执行原Lua。
