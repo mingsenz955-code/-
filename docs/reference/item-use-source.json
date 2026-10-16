@@ -1,0 +1,16 @@
+{
+  "baseline": "2.9.35-202402271124",
+  "packs": 116,
+  "pools": 235,
+  "fragmentRecipes": 31,
+  "offlineFragmentCosts": {
+    "7015": 10
+  },
+  "sources": {
+    "work\\config-json\\items.json": "f6246120634114c8d9894799d7f5791c8ea7c971060a5dbf543bbaee5a5614e0",
+    "work\\config-json\\randgive.json": "878a80edc023d87b3aeba3762bcc32e9eb3d75c72865437d0a606d2171a2c0bc",
+    "work\\client-config\\ui\\UsePropPanel.lua": "f403efe90bd323b344394f0494272b2fd82cfd93e72fd892603ab404fdd8c5e2",
+    "work\\client-config\\ui\\UsePropListPanel.lua": "bb1ee0b3b33edbaa1d6f5e47721057a1bfc1f7b1a0cceca77b563064e6d9d8e3"
+  },
+  "note": "Each pipe-separated pool draws once per opened pack. Raw source weights normalized offline; server probabilities unverified. 31 fragment counts from explicit original Chinese descriptions, including alternate skeleton name. Ice-moon 7015 has an untranslated description and uses an explicitly marked offline cost 10. Dragon IDs use source images cross-checked as DRAGON."
+}

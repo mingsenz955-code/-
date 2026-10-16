@@ -1,0 +1,24 @@
+{
+  "baseline": "2.9.35-202402271124",
+  "nameLimit": 6,
+  "firstRenameFree": true,
+  "laterRenameCost": 100,
+  "avatarRule": "pokedex-owned dragons; selected head preview, commit when closing",
+  "baseLevel": 10,
+  "altarLevels": {
+    "9": 15,
+    "10": 20,
+    "11": 25,
+    "12": 30
+  },
+  "sources": {
+    "ui/userinfo/UserInfoPanelFromTopUI.lua": "e90f9ada09f01a3d8d5e5eae36a3cf0c68b7548914565031e2a56df7e46f182e",
+    "ui/userinfo/ChangeNickNamePanel.lua": "2ecb1b300105e4f842a23bd05dffeb0a18b7dcd9477ab377d12d12401ab54e1c",
+    "ui/userinfo/HeadSelectPanel.lua": "dce3b4a53a080ffcfcce05bae5a3827df83a1f45ec2fd65d517b7dfb58edc511",
+    "dragon/core/dragonfarm/DragonManager.lua": "2be8c9a9845811eddce46ef32194069e89ee3c2f677150011a0dbe6a39eb1458",
+    "dragon/core/dragonfarm/goal/GoalSpeedBreed.lua": "5373d7e76d798f94c6370d6b78445a3649eb06746cb5c0d1cb277d4ee6814610",
+    "ui/SpeedUpPanel.lua": "3721d7b9e853b15624f587aa5b28842fb48f38c6c5bcd2ffea98be6b84507089",
+    "dragon/utils/CostUtil.lua": "92f7c30cd690ed323da2ac6dc9e037f652d6c7b3809489f29d32605e423ed621"
+  },
+  "limits": "Local ID is not an online account ID. Server name uniqueness and external sensitive-word service unavailable; shipped literal words used locally."
+}

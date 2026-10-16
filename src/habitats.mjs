@@ -1,3 +1,4 @@
+import {landFootprintAllowed} from './land-geometry.mjs';
 import {ORIGINAL_HABITATS,HABITATS_PER_LEVEL} from '../assets/original/data/habitats.mjs';
 import {SPECIES,RULES} from './data.mjs';
 export {ORIGINAL_HABITATS};
@@ -29,7 +30,8 @@ export function gridCoordinates(position){const g=PLACEMENT_GRID,x=(position[0]*
 export function snapHabitatPosition(position){const {column,row}=gridCoordinates(position);return gridPosition(column,row)}
 export function placementGridRect(info,position){return {...gridCoordinates(position),width:info.width??5,height:info.height??5}}
 export function habitatGridRect(h,index,position=habitatPosition(h,index)){return placementGridRect(habitatInfo(h),position)}
-export function canPlaceObject(objects,movingKey,info,position,plots=0){
+export function canPlaceObject(objects,movingKey,info,position,plots=0,state=null,island=0){
+ if(state&&!landFootprintAllowed(state,island,placementGridRect(info,position)))return false;
  const g=placementGrid(plots),bounds=r=>({left:r.column-Math.floor(r.width/2),right:r.column+Math.ceil(r.width/2),top:r.row-Math.floor(r.height/2),bottom:r.row+Math.ceil(r.height/2)}),a=bounds(placementGridRect(info,position));
  if(a.left<0||a.top<0||a.right>g.columns||a.bottom>g.rows)return false;
  // Conservative grass envelope prevents a newly bought building spawning in the
@@ -39,6 +41,6 @@ export function canPlaceObject(objects,movingKey,info,position,plots=0){
  return objects.every(o=>{if(o.key===movingKey)return true;const b=bounds(placementGridRect(o.info,o.position));return a.right<=b.left||a.left>=b.right||a.bottom<=b.top||a.top>=b.bottom});
 }
 export function canPlaceHabitat(habitats,id,position,plots=0){const h=habitats.find(h=>h.id===id);return !!h&&canPlaceObject(habitats.map((v,i)=>({key:`h:${v.id}`,info:habitatInfo(v),position:habitatPosition(v,i)})),`h:${id}`,habitatInfo(h),position,plots)}
-export function findBuildingPosition(objects,info,plots=0){const g=placementGrid(plots);for(let row=0;row<g.rows;row++)for(let column=0;column<g.columns;column++){const p=gridPosition(column,row);if(canPlaceObject(objects,'new',info,p,plots))return p}return null}
+export function findBuildingPosition(objects,info,plots=0,state=null,island=0){const g=placementGrid(plots);for(let row=0;row<g.rows;row++)for(let column=0;column<g.columns;column++){const p=gridPosition(column,row);if(canPlaceObject(objects,'new',info,p,plots,state,island))return p}return null}
 export const FIXED_BUILDINGS=[{key:'fixed:breed',info:{width:6,height:6},position:[66,31]},{key:'fixed:incubator',info:{width:5,height:5},position:[75,48]},{key:'fixed:farm',info:{width:4,height:4},position:[26,39]}];
-export function fixedBuildings(state){return FIXED_BUILDINGS.map((b,i)=>({...b,id:i+1,position:state.fixedPositions?.[b.key]??b.position}))}
+export function fixedBuildings(state){return FIXED_BUILDINGS.map((b,i)=>({...b,id:i+1,inactive:!!state.tutorial?.sourceOpening&&i!==1,position:state.fixedPositions?.[b.key]??b.position}))}

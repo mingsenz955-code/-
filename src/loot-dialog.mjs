@@ -1,6 +1,13 @@
 import {sourceLayout,showSource,esc} from './ranch-dialogs.mjs';
 import {renderSourceLayout} from './source-layout.mjs';
 import {lootDescription,lootBox,lootProp} from './loot.mjs';
+import {activityFragment,activityFragmentCount,activityPropMeta,activityGiftPack} from './historical-activities.mjs';
+export async function openGiftUseDialog(state,id,count=1){
+ const fragment=activityFragment(id);if(!activityGiftPack(id)&&!fragment)throw Error('未取得该礼包的原配置。');
+ const held=fragment?activityFragmentCount(state,id):state.items[id]??0,max=Math.min(99,Math.floor(held/(fragment?.cost??1))),num=Math.min(max,Math.max(1,count)),layout=await sourceLayout('panel_useprop');
+ const d=showSource('sourceGiftUse',renderSourceLayout(layout,{values:{txt_name:fragment?'合成龙蛋':'使用道具',num:`${num}/${max}`,txt_miaoshu:fragment?`已拥有${held}片，每${fragment.cost}片合成1枚${fragment.offlineCost?'（离线配方）':''}${max===0?'，碎片不足':'，选择合成数量'}`:'选择使用数量','btn_QueDing/txt_name':fragment?'合成':'确定'},actions:{btn_close:{type:'returnLootWarehouse',label:'取消'},btn_tianjia:{type:'giftUseCount',value:'1',label:'增加数量'},btn_jianshao:{type:'giftUseCount',value:'-1',label:'减少数量'},btn_quanbu:{type:'giftUseCount',value:'max',label:'全部'},'btn_QueDing/btn':{type:'confirmGiftUse',id,label:'开启'+(activityPropMeta(id)?.name??'礼包')}},disabled:new Set(max===0?['btn_QueDing/btn','btn_tianjia','btn_quanbu','btn_jianshao']:[])}));
+ d.dataset.giftId=id;d.dataset.giftCount=num;d.dataset.giftMax=max;
+}
 const icon=(prize,cls='source-loot-icon')=>{const d=lootDescription(prize);return `<img class="${cls}" src="assets/original/ui/${d.image}" alt="${esc(d.name)}">`};
 export async function openBattleRewards(state){const battle=state.adventure.lastBattle;if(!battle?.won||!battle.reward?.drops)return;const layout=await sourceLayout('panel_battle_guanka_jiangli'),values={miaoshu:'恭喜获得以下奖励','btn_cangku/txt_name':'确定'},slots={zuobiao:`<div class="source-loot-stars">${Array.from({length:battle.stars},()=>'<img src="assets/original/ui/ui_pve_s4.png" alt="星">').join('')}</div>`},hidden=new Set(['bg']);for(let i=1;i<=6;i++){const prize=battle.reward.drops[i-1];if(!prize){hidden.add('jiangli'+i);continue}const d=lootDescription(prize);values[`jiangli${i}/num`]=prize.amount;slots[`jiangli${i}/icon`]=icon(prize);slots[`jiangli${i}/quality`]=`<img class="source-loot-icon" src="assets/original/ui/ui_common_DaoJuKuang${d.quality}.png" alt="">`}
  const dialog=showSource('sourceBattleRewards',renderSourceLayout(layout,{values,slots,hidden,actions:{'btn_cangku/btn':{type:'returnAdventureRewards',value:String(Math.floor(battle.nodeId/100)-900),label:'确定'}}}));dialog.dataset.battleNode=String(battle.nodeId)}

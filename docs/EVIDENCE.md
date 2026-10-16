@@ -359,3 +359,65 @@
 ## v0.16.46 PR #2 集成验证
 - 接入作者静态活动/竞技/VIP导出与出处，保留docs/ACTIVITIES.md中的原表和离线模拟区别。现有world机器人packId必须经groups解析，原monsters字段已不适用；集成时修正竞技取怪映射，圣树3/3/4原整包不变。
 - 永久被动符文属性与新培养属性共同进入dragonAttributes，原getRunePower分工不变；新增叠加测试防止冲突解决时丢失被动。正式路径继续工程player-data，原字段迁移比对无变化。
+
+## v0.16.47 农场原流程
+- 原ui/PlantsPanel.lua明确普通cp范围1至(id-15)*3、LEGEND_FARM为10—12，所用COLLECT价格/时间/产量/经验与现ORIGINAL_CROPS对应；FarmDelegate.lua区分普通粮食和进化果实并含VIPfoodExtro/expExtro。
+- 原ui/SpeedUpPanel.lua的openFarm调用CostUtil.speedUpCost(time)，原dragon/utils/CostUtil.lua给出ceil((time/3600)^0.7*15)。加速使FarmDelegate:collectable(true)，收获另外执行；按此恢复离线扣费/成熟/收获。
+- 原FarmDelegate:setPlantStep(1/2/3)与现有world三态图一一对应，地图已接。完整功能建筑核对及剩余缺口见BUILDINGS.md。源版/正式包真实鼠标与重启通过，未操作正式存档作测试。
+
+## v0.16.48 原版农场界面依据
+- BuildingOptPanel.lua SHA256 fc5f0c7786fa53ecabc98312d8237a2e2d2a37d566ec39ae3714efa2cd186114；函数30 PC376—484为农场操作项，1036—1061对所有cp按间隔200×__scaleRatio居中排列，复用原cp_*静态布局/图标。
+- BuildingInfoPanel.lua函数4 PC145—171通过Literal.lang(buildingId)设置原描述并置顶；Literal.lua的FARM_1/2/3描述键在APK assets/res/config/textnew_cn.json取得原中文，未改写描述内容。
+- 使用原panel_building_info，不再往农场页面插入通用管理按钮。真实鼠标点原图标、种植/升级及重启验证通过；截图与尚未逐像素核验的区别保留。
+
+## v0.16.51 原任务与活动道具
+- 原任务源：GoalManager.init、Goal各子类、TranslationGoals、goals表、LibGoalsRewardInfo。147实际注册、10活跃限制均静态取得；原接口服务器状态由本地事务存档替代。详细出处/限制见MISSIONS.md与reference/missions-source.json。
+- 原列表奖励/说明是互斥状态：GoalListPanel函数3 PC209—244与nested1；UI复用对应原布局和两张查看字图，未将重叠排版留给用户。GoalAwardPanel的领取回调只关闭窗口，原checkComplete先发送completeGoal；本地奖励也一次入库、通知单独保存。
+- 原items第61列奖池串及randgive表235奖池导出116种可开启包，新增42随机包；30种碎片的成本来自APK原中文说明，目标ID优先原图名并校验为DRAGON。例如7042名称误为7042suipian，图名1093及中文开泰龙相符，取1093，不将道具ID当龙ID。SHA和解释见reference/item-use-source.json。
+
+## v0.16.52 碎片与战斗修复证据
+- APK原items 7026 name=kuLouDragonSuiPian、img_name=1076_dragon_skeleton_0，textnew_cn中7026miaoshu明确10片骷髅龙，不能用数字suipian正则排除。7015对应1074冰月龙但description未翻译且未查到数量；其10片仅离线配方，reference/item-use-source.json单独列offlineFragmentCosts。
+- 原UsePropPanel明文按持有量选择数量，确定传回id/count；StorePanel静态反汇编显示兑换结果后initData/list.reset。原BattleField使用服务器battleData驱动Warrior/Bullet，未在本客户端取得服务器轮次算法；本轮修正的是本地动画错误，不把三轮表现称原计算规则。
+- 原RAFFLE_PREVIEW_ROWS没有远古1200/1202/1203/1205/1206。新增池/20%及10次保底是用户授权单机可玩性调整，原品种/形象沿用；策略v2与旧v1存档明确兼容，原服务器概率仍未核实。
+
+## v0.16.53 符文寻访定位
+- 本地原ui_fuwen_panel和现有NPC条坐标未修改。本地CSS通用button:hover覆盖头像中心transform造成真实悬停x偏移48.488px，修前原生鼠标验收断言失败；修后hover/focus/active均保持translate(-50%,-50%)，源版与包内原生鼠标坐标及完整寻访/穿戴流程通过，不以DOM.click替代鼠标验收。
+
+## v0.16.54 活动目录策划调整
+- 原assets/original/data/activities.mjs的76份版本数据保持。根据用户最新精简指令，仅通过activity-catalog展示层折叠九类多期/多奖池入口为43项，减少33张顶层卡片；这是用户授权单机目录整理，不称原版全部历史版本曾同时采用该目录。
+- 展开系列后保留原key与原奖励页、费用和领取记录；目录覆盖测试确认全部76版本各可达一次，未因同奖励图标删除独立奖池或把多个领取key合成一个。
+
+## v0.16.55 装备滚动输入
+- 原装备分组/列表布局和原卡片未更改。本地source-bag-equipment-list不在原有wheel适配选择器内，也没有拖动输入，原生mouseWheel修前失败；现共用列表补PC滚轮横移与按实际缩放比例左键拖动，源版及正式包真实鼠标回归通过。属于桌面输入适配，不把鼠标滚轮称为原手机交互。
+
+
+## v0.16.56 玩家资料与等级依据
+- UserInfoPanelFromTopUI静态确认实际布局是panel_user_name_info，昵称revise/btn和bg_icon触摸分别打开ChangeNickNamePanel/HeadSelectPanel。改名6字、第一次免费/之后100魔晶、ConfirmPanel使用panel_msg，均取原客户端；HeadSelectPanel明文确认7列94/96间距、图鉴曾拥有列表、预览后关闭保存。
+- DragonManager根字节码BASE_MAX_DRAGON_LEVEL=10，函数29遍历已完工dragonLevelAmplifiers取max；APK建筑9—12上限15/20/25/30。SpeedUpPanel.openBreed及GoalSpeedBreed明文确认费用公式和两亲代类型白名单事件。源SHA/提取规则见reference/profile-growth-source.json，可重跑scripts/export-profile-growth.py。
+- 资料在线重名/敏感词服务、平台账号不可离线证明；LOCAL ID与本地原表词串检查明确属于适配。236规则测试及源/最终Windows包真实鼠标、独立重启通过，仅证明所列流程，不等于所有任务/界面逐像素验收。
+
+
+## v0.16.57 原具名扩建配置纠正
+- APK config_cn_qq.expansion_prices明确定义cash/coins/neighbors/inventory_qte；原pcf列2是cash，旧minLevel推断错误，列4为neighbors，不能拿它扣魔晶。原Config_CN_QQ.getExpansionPrices与ExpandShopPanel.initData具名字段直接佐证；onBtnBuy只扣costs[cost]=price，金币/魔晶独立商品。
+- ExpansionManager SHA256 36e41972dadd2f0342e0697e54d55313d06334497cbd5ed3fd992e2e20ff85bc根初始化字面量提供16待购矩形、20地块分组8/4/6/2及first_land 22/31/42；getTotalLandsNumber累加全部分组。未执行Lua，导出拒绝非字面量指令，详情见expansion-provenance.json/scripts/export-expansion.py。
+- globals.ISLANDS_COSTS为g0/g100000/c125/c500，ExpandShopPanel及LandBoardDelegate恢复地图牌/选币/选择地块流程。原地图牌偏移有来源，初始障碍物服务器分布及原建筑全局tile平面未取得，分别记录，不能用离线碰撞范围冒充原精确地块。
+
+
+## v0.16.58 教学与原地块遮罩
+- TutorialManager SHA256 71cc1e48fe962392e3328f54e40ba1d572e7940f976f298772baad2b36c8d007；根初始化PC40—273为46个箭头，PC285—333为47文本键。函数20按原step前缀译标题，描述TOP；11/12/41/44/45不加载独立UI_XinShou布局。export-tutorial.py只读取字面量，配置及SHA见reference/tutorial-source.json。
+- 原Base SHA256 2e49418576b4d2902610a9dbd2dc6c9bf6a2e5fccf1294b92434c643b4923655；函数9 PC35—64把未购地的ui_mapland_land<ID>按各岛中心加x/y叠加，购买后移除。export-land-masks.py从原PNG逐行导出alpha及源SHA，不用近似矩形替代曲边遮罩。
+- 地块遮罩和已用27/13.5菱形在同一画板相交；不是声称已恢复Base全局rects/白格原平面。教学1800预算、4级岩土开局与教学固定熔岩是有来源文本支撑的离线教学方案，原服务器初始包/教程结果协议仍未知，TUTORIAL.md单独记录，不修改普通繁殖概率。
+
+## v0.16.59 木牌坐标与岛屿编号纠正
+- 原 MainScene:initIslands 的 orders={1,2,3,4}、names={left,top,right,bottom}；source2 为火山 top、source3 为荒漠 right。旧实现把2/3反配，导致原 land32—36 的购买木牌画在火山/血战前线上。恢复源编号/中心/尺寸/z次序，不改地块购买记录。
+- Base.setLandBoard 函数63 PC56—78取(tx+w/2,ty+h/2)，根 upvalue r2=r3=27，生成 x=27*(tx-ty), y=27-27*(tx+ty)/2；MainScene buildingLayer=(0,0)、islandLayer.y=-2500。木牌应在全局 buildingLayer，不应使用遮罩的x/y，也不应困在各岛的stacking context。
+- LandBoardDelegate 原sprite132×194、anchor(.5,0)、delegate.scale(.5)、原文字50在y120；PC世界统一缩放.5，因此木牌33×48.5、字12.5。血战前线原(-30,2010)入口保留，未用搬动原入口掩盖木牌错误。静态反汇编见work/base-board-v59.txt，未执行原Lua。
+
+## v0.16.60 血战与活动入口
+- 静态BloodBattlePanel SHA256 5f177ae1bfecd20a032ad81ccdc7abfd3c9145bdec0c74f17a415dbe9a1e63b1，函数0载入ui_battle_blood；函数6/23对应下一波/失败重来/满纪录扫荡；LibBloodWarLevelInfo SHA256 25623bed96372947237bdbc2862d27641906f0eeef1ebe44a6d63ac43fc2362c恢复16字段。BloodWarLibrary与NextWavePanel明示三档原怪物组、积分x1/2/3；ResultPanel按关卡/score/itemnum显示结算。未执行Lua。
+- BloodWar/BloodWarLevel原表50关485波，全部1455组4365怪物及原属性导出；源VIP血战次数bloodTime=VipInfo arr[15]。原字段/源SHA/离线适配在reference/blood-front-provenance.json；BLOOD-FRONT.md明确钱包/判胜/每日刷新等证据边界。
+- 用户要求去掉过多相似活动，活动菜单43→19，保留不同玩法代表版本。76份源定义和旧claims/inventory保留，57个重复或近似历史版本不再展示，不删除已获道具或重置领奖进度。
+
+## v0.16.61 血量与伤害跳变修复
+- 原rune-skills数据damageVector万分比及damageValue固定值接入实际伤害；怪物配置skill1/skill2优先，显示与伤害技能ID一致。原属性成长/装备/宝石/符文/升星/培养继续复用现有提取，不虚构已恢复服务器防御/暴击/怒气规则。
+- 旧3回合脚本finishing不是原版证据，已删除运行模块及其镜像测试。新增确定性逐击HP求解和守恒/真实死亡/30回合不强杀验证，防御公式等本地适配完整列COMBAT.md。冒险旧40%离线强度改在真实攻防血执行，血战原怪物属性保持独立。

@@ -47,7 +47,7 @@ test('one-click feeding stops after one level or when food is insufficient',()=>
 });
 test('shop decorations buy, place, collide, sell and persist',()=>{
  let s=createGame(T);s.coins=10000;s=action(s,'buyStructure',{itemId:150},T);assert.equal(s.structures.length,1);assert.equal(s.coins,9000);const id=s.structures[0].id;
- assert.throws(()=>action(s,'placeStructure',{id,position:[41,50]},T),/重叠/);s=action(s,'placeStructure',{id,position:[50,35]},T);assert.deepEqual(validate(JSON.parse(JSON.stringify(s))).structures,s.structures);
+ assert.throws(()=>action(s,'placeStructure',{id,position:[41,50]},T),/重叠/);assert.throws(()=>action(s,'placeStructure',{id,position:[50,35]},T),/地块/);s=action(s,'placeStructure',{id,position:[50,50]},T);assert.deepEqual(validate(JSON.parse(JSON.stringify(s))).structures,s.structures);
  s=action(s,'sellStructure',{id},T);assert.equal(s.structures.length,0);assert.equal(s.coins,9500);
 });
 test('formation and offline adventure battle form a saved playable loop',()=>{

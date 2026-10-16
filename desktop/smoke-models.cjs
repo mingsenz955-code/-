@@ -1,5 +1,6 @@
 const assert=require('node:assert/strict'),fs=require('node:fs/promises'),path=require('node:path');
 const wait=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+exports.prepare=async store=>{const {createGame}=await import('../src/game.mjs');const s=createGame();s.dragons.forEach(d=>d.level=7);await store.save(s);};
 exports.run=async(window)=>{
  const js=code=>window.webContents.executeJavaScript(code);
  for(let i=0;i<100;i++){if(await js("document.querySelectorAll('.world-object canvas[data-model-ready=true]').length>=2"))break;await wait(100)}

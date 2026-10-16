@@ -1,6 +1,7 @@
 // Source-backed data and legacy compatibility defaults are distinguished in docs/EVIDENCE.md.
 import ORIGINAL_CATALOG from '../assets/original/catalog.mjs';
 import {ORIGINAL_BREEDING} from '../assets/original/data/rules.mjs';
+import PROFILE_GROWTH from '../assets/original/data/profile-growth.mjs';
 export const SPECIES = {
   ember: { name:'烈火龙', element:'火', color:'#f18c59', accent:'#ffc77c', rarity:'基础', income:2,original:'1020_dragon_fire_a' },
   leaf: { name:'草龙', element:'木', color:'#83bc71', accent:'#d1e99b', rarity:'基础', income:2,original:'1000_dragon_plant_b' },
@@ -10,7 +11,7 @@ export const SPECIES = {
   steam: { name:'流焰龙', element:'火 / 水', color:'#a59bd8', accent:'#eee0ff', rarity:'稀有', income:4 },
 };
 export {ORIGINAL_CROPS,ORIGINAL_LEVELS,ORIGINAL_FARMS} from '../assets/original/data/rules.mjs';
-export const RULES = { cropCost:50, cropYield:10, cropMs:30000, breedCost:120, breedMs:20000, hatchMs:15000, habitatCost:300, habitatCapacity:3, maxHabitats:6, incomeCapMs:8*3600000, maxLevel:20,feedsPerLevel:4,breedMinLevel:4 };
+export const RULES = { cropCost:50, cropYield:10, cropMs:30000, breedCost:120, breedMs:20000, hatchMs:15000, habitatCost:300, habitatCapacity:3, maxHabitats:6, incomeCapMs:8*3600000, maxLevel:PROFILE_GROWTH.maxLevel,feedsPerLevel:4,breedMinLevel:4 };
 export const RECIPES = { 'ember+leaf':'bloom', 'leaf+tide':'mist', 'ember+tide':'steam' };
 export const speciesKey=id=>({1000:'leaf',1020:'ember',1033:'tide'})[id]||`original${id}`;
 const elements={e:'岩土',f:'烈火',w:'深水',p:'草木',m:'金属',i:'寒冰',el:'闪电',d:'黑暗',l:'传奇'};

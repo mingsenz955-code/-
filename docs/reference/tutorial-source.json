@@ -1,0 +1,23 @@
+{
+  "baseline": "2.9.35-202402271124",
+  "sha256": "71cc1e48fe962392e3328f54e40ba1d572e7940f976f298772baad2b36c8d007",
+  "steps": 47,
+  "noLayoutSteps": [
+    11,
+    12,
+    41,
+    44,
+    45
+  ],
+  "literalPCs": [
+    [
+      40,
+      273
+    ],
+    [
+      285,
+      333
+    ]
+  ],
+  "limits": "Original initial server resources/obstacles unavailable; offline opening resources preserved, earth level 4 based on original tutorial parent requirement."
+}

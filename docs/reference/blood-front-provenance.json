@@ -1,0 +1,22 @@
+{
+  "tablesSha256": "1408d684c2a6530668a8ed4816ad1697d579077fed5d02b887d06f035395e750",
+  "source": [
+    "LibBloodWarInfo ctor array columns",
+    "LibBloodWarLevelInfo ctor static disassembly",
+    "BloodWarLibrary first/isFirst chain",
+    "BloodBattleNextWavePanel three monster previews and score multipliers",
+    "BloodBattleResultPanel score and training pills",
+    "BloodBattlePanel source layout and 17-level entrance",
+    "VipInfo.bloodTime arr[15]: VIP 0-6=1, 7-9=2, 10=3",
+    "BloodBattlePanel result resets buff and first-wave cursor after failure",
+    "ui_battle_blood temporary-run score notice"
+  ],
+  "offline": [
+    "Source monster packs and stats; winner uses offline aggregate power comparison, not server combat AI",
+    "One/two/three points per won wave; server pointnum receipts unavailable",
+    "Run wallet is separate from stage record; cumulative scope inferred from 200-point later buffs versus 30-point maximum stage score and temporary-run notice",
+    "Daily reset at UTC+8; reset allowance uses original VIP bloodTime",
+    "Buffs are charged immediately once for the current stage; original network transaction timing not reproduced",
+    "Sweep awards use the saved full-score record and source passAward; server settlement and health carry-over unavailable"
+  ]
+}
