@@ -10,7 +10,8 @@ import {ORIGINAL_RECHARGE_PRODUCTS,ORIGINAL_SINGLE_RECHARGE_TIERS,ORIGINAL_VIP_L
 // says so on screen, which is what the user asked for. Nothing here pretends to charge money.
 export const RECHARGE_POLICY='original-recharge-products-v1';
 export const RECHARGE_TEST_MODE=true;
-export const RECHARGE_NOTICE='测试模式：点击即到账，不进行任何真实扣款。';
+export const RECHARGE_DAILY_LIMIT_YUAN=500;
+export const RECHARGE_NOTICE='测试模式：点击即到账，不进行任何真实扣款；每日最多500元。';
 export const RECHARGE_PRODUCTS=Object.freeze(ORIGINAL_RECHARGE_PRODUCTS.map(product=>Object.freeze({
  id:product.id,name:product.name,gems:product.gems,priceYuan:product.priceYuan,priceJiao:product.priceJiao,
  rebate:product.rebate,firstGift:product.rebateMultiple>0?product.gems:product.rebate,xid:product.xid,img:product.img,
@@ -28,6 +29,8 @@ export const VIP_LEVELS=Object.freeze(ORIGINAL_VIP_LEVELS.map(entry=>Object.free
 
 export function rechargeProduct(id){return RECHARGE_PRODUCTS.find(product=>product.id===id)??null}
 export function rechargeProductIds(){return RECHARGE_PRODUCTS.map(product=>product.id)}
+export function rechargeDayKey(now=Date.now()){return new Date(now+8*60*60*1000).toISOString().slice(0,10)}
+export function rechargeDailyUsage(recharge,now=Date.now()){const used=recharge?.dailyDay===rechargeDayKey(now)?recharge.dailyYuan??0:0;return {day:rechargeDayKey(now),used,remaining:Math.max(0,RECHARGE_DAILY_LIMIT_YUAN-used)}}
 // First purchase of a tier doubles it ("再送" the same amount, the client's itwice/doublecashs
 // flag); every later purchase of that tier adds its own rebate instead.
 export function rechargeGift(product,{firstPurchase}){return firstPurchase?product.firstGift:product.rebate}

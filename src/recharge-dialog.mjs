@@ -1,7 +1,7 @@
 import SOURCE from '../assets/original/data/arena-vip.mjs';
 import {renderSourceLayout} from './source-layout.mjs';
 import {sourceLayout,showSource,esc,openNativePaper} from './ranch-dialogs.mjs';
-import {RECHARGE_PRODUCTS,RECHARGE_NOTICE,vipProgress,VIP_LEVELS} from './recharge.mjs';
+import {RECHARGE_PRODUCTS,RECHARGE_NOTICE,rechargeDailyUsage,vipProgress,VIP_LEVELS} from './recharge.mjs';
 
 // The client's own recharge panel (panel_recharge) with its own tier card (item_recharge_data),
 // filled exactly the way ui/vip/VipStoreRender.lua fills it:
@@ -11,16 +11,16 @@ import {RECHARGE_PRODUCTS,RECHARGE_NOTICE,vipProgress,VIP_LEVELS} from './rechar
 // No payment happens: the panel says so on screen instead of pretending to charge.
 export async function openRechargeDialog(state){
  const [layout,card]=await Promise.all([sourceLayout('panel_recharge'),sourceLayout('item_recharge_data')]);
- const doubled=state.recharge?.doubled??[],total=state.recharge?.totalGems??0,vip=vipProgress(total);
+ const doubled=state.recharge?.doubled??[],total=state.recharge?.totalGems??0,vip=vipProgress(total),daily=rechargeDailyUsage(state.recharge);
  const cards=RECHARGE_PRODUCTS.map(product=>{
   const first=!doubled.includes(product.id),gift=first?product.firstGift:product.rebate;
   const hidden=first?new Set(['image_3']):new Set(['hint']);
-  return `<button class="source-recharge-card" data-action="recharge" data-id="${product.id}" aria-label="${product.gems} 魔晶 ${product.priceYuan} 元">`
+  return `<button class="source-recharge-card" data-action="recharge" data-id="${product.id}" ${product.priceYuan>daily.remaining?'disabled':''} aria-label="${product.gems} 魔晶 ${product.priceYuan} 元">`
    +renderSourceLayout(card,{values:{num:`${product.gems} 魔晶`,give:`再送${gift}魔晶`,price:`¥${product.priceYuan}`},hidden,slots:{icon:`<img class="source-recharge-icon" src="assets/original/ui/${esc(product.img.replace(/^#/,''))}" alt="">`}})
    +'</button>';
  }).join('');
  const vipText=vip.next?`累计充值 ${vip.total} 魔晶，距 VIP${vip.next.level} 还差 ${vip.remaining}`:`累计充值 ${vip.total} 魔晶，已是最高 VIP${vip.level}`;
- const status=`<span class="source-recharge-status">${esc(RECHARGE_NOTICE)}　已充值 ${state.recharge?.count??0} 次　${esc(vipText)}</span>`;
+ const status=`<span class="source-recharge-status">${esc(RECHARGE_NOTICE)}　今日 ${daily.used}/500 元，剩余 ${daily.remaining} 元　已充值 ${state.recharge?.count??0} 次　${esc(vipText)}</span>`;
  const values={title:'充值',hint1:'再充值',hint2:'魔晶，即可成为',vip_lv:`VIP${vip.level}`,vip_lv_next:'',mojing:String(vip.remaining),vip_lv_target:vip.next?`VIP${vip.next.level}`:'—',exp_num:`${vip.total}/${vip.next?vip.next.needExp:'—'}`};
  const d=showSource('sourceRecharge',renderSourceLayout(layout,{values,hidden:new Set(['ui_recharge_bg9']),actions:{close:{type:'close',label:'关闭充值'},'btn_privilege/btn':{type:'rechargeVip',label:'VIP特权'}},progress:{exp:vip.percent},slots:{'data/hadong':`<div class="source-recharge-list">${cards}</div>`,'data/status':status}}));
  d.dataset.mode='sourceRecharge';

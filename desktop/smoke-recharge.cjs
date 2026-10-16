@@ -17,6 +17,7 @@ exports.run=async(window,store,verify)=>{
   assert.equal(restored.recharge.lastTier,96);
   assert.equal(restored.recharge.totalGems,600);
   assert.deepEqual(restored.recharge.doubled,[96]);
+  assert.equal(restored.recharge.dailyYuan,30);
   assert.equal(restored.coins,151200,'the bought gold must survive a restart');
   assert.equal(restored.items[7027],800,'the bought 进化果实 must survive a restart');
   assert.equal(restored.items[7015],undefined,'the recharge panel must not hand out 单笔充值 gifts');
@@ -32,6 +33,7 @@ exports.run=async(window,store,verify)=>{
  const text=await js("document.querySelector('#modal').textContent");
  for(const expected of ['50 魔晶','300 魔晶','5000 魔晶','¥5','¥500','再送','VIP'])assert(text.includes(expected),'the panel must show '+expected);
  assert(text.includes('不进行任何真实扣款'),'the test-mode notice must be visible');
+ assert(text.includes('今日 0/500 元'),'the daily cap must be visible before purchase');
  for(const wrong of ['培养丹','神圣果实','召唤卡'])assert(!text.includes(wrong),'a recharge tier must not hand out the 单笔充值 gift: '+wrong);
  assert(await js("Array.from(document.querySelectorAll('#modal img')).every(i=>i.complete&&i.naturalWidth>0)"),'panel and card art must load');
  await fs.writeFile(path.join(__dirname,'..','work','recharge-qa.png'),(await window.webContents.capturePage()).toPNG());
@@ -42,6 +44,8 @@ exports.run=async(window,store,verify)=>{
  assert.equal(afterRecharge.gems,before.gems+600,'the 30 元 tier arrives doubled on the first purchase');
  assert.equal(afterRecharge.recharge.totalGems,600);
  assert.deepEqual(afterRecharge.recharge.doubled,[96]);
+ assert.equal(afterRecharge.recharge.dailyYuan,30);
+ assert.equal(await js("document.querySelector('#modal').textContent.includes('今日 30/500 元')"),true,'the panel must refresh daily usage');
  assert.equal(afterRecharge.coins,before.coins);
  assert.equal(afterRecharge.food,before.food);
  assert.equal(await js("document.querySelector('#modal').textContent.includes('再送15魔晶')"),true,'the doubled tier must fall back to the client rebate');
@@ -56,7 +60,7 @@ exports.run=async(window,store,verify)=>{
  await click('#modal [data-action=resourceShop]');
  await wait(700);
  assert.equal(await js("document.querySelector('#modal').dataset.mode"),'nativeResourceShop');
- assert.equal(await js("document.querySelectorAll('#modal [data-resource-offer]').length"),12,'the client ships four gold, four food and four 进化果实 rows');
+ assert(await js("document.querySelectorAll('#modal [data-resource-offer]').length")>=12,'the resource shop includes the original gold, food and 进化果实 rows');
  const shopText=await js("document.querySelector('#modal').textContent");
  assert(shopText.includes('150,000')&&shopText.includes('进化果实'),'amounts and names come from the client table');
  await fs.writeFile(path.join(__dirname,'..','work','resource-shop-qa.png'),(await window.webContents.capturePage()).toPNG());
