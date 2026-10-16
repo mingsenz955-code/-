@@ -1,0 +1,4 @@
+import {speciesKey} from './data.mjs';
+// A warehouse egg keeps its provenance until the transaction consumes that exact entry.
+export function dragonMaterials(s){return [...s.dragons,...[['gift',s.giftEggs],['raffle',s.raffle.pending],['lottery',s.lottery.pending.filter(e=>e.type===16)]].flatMap(([source,list])=>list.map(e=>({id:`${source}:${e.id}`,species:speciesKey(e.dragonId??e.itemId),level:1,star:1,fromEgg:true,source,entryId:e.id})))];}
+export function consumeDragonMaterials(s,materials){const owned=new Set(materials.filter(v=>!v.fromEgg).map(v=>v.id));s.dragons=s.dragons.filter(v=>!owned.has(v.id));s.formation=s.formation.filter(id=>!owned.has(id));for(const [source,list]of [['gift',s.giftEggs],['raffle',s.raffle.pending],['lottery',s.lottery.pending]]){const ids=new Set(materials.filter(v=>v.source===source).map(v=>v.entryId));for(let i=list.length-1;i>=0;i--)if(ids.has(list[i].id))list.splice(i,1);}}

@@ -55,7 +55,7 @@ export async function openEquipDialog(state,dragonId,{returnToDragon=false,forma
  values['right/change/txt_name']='更换龙';
  values['right/equip/txt_name']='一键装备';
  values['left/btn_formation/txt_name']='阵型';
- slots['right/dragong_info/dragon']=`<div class="source-equip-model">${dragonArt(dragon.species,'',dragon.level)}</div>`;
+ slots['right/dragong_info/dragon']=`<div class="source-equip-model">${dragonArt(dragon.species,'',dragon.level,dragon.wake?.star??0)}</div>`;
  for(let i=1;i<=5;i++)slots['right/dragong_info/lv'+i]='';
  values['right/dragong_info/lv/level']=String(dragon.level);
  // dragong_info displays the current source-based equipment/gem attribute totals.
