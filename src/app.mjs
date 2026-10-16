@@ -29,7 +29,7 @@ import {habitatMotionArea,startHabitatMotion} from './habitat-motion.mjs';
 import BUILDING_ART from '../assets/original/data/building-art.mjs';
 import {zoomCameraAt,clampWorldCamera} from './ranch-camera.mjs';
 import {openGemDialog,openGemInfo,openGemUpgrade} from './gem-dialog.mjs';
-import {openWarehouse,chooseWarehouseDragon} from './warehouse-dialog.mjs';
+import {confirmEggQualitySale,openWarehouse,chooseWarehouseDragon} from './warehouse-dialog.mjs';
 import {openEquipDialog,openEquipInfoDialog,openEquipChangeDialog,openEquipSourceDialog,openEquipEnhanceDialog} from './equip-dialog.mjs';
 import {openAdventureDialog} from './adventure-dialog.mjs';
 import {openRechargeDialog,openVipThresholds} from './recharge-dialog.mjs';
@@ -103,7 +103,7 @@ async function returnResourcePage(){if(busy||!resourceReturnStack.length)return;
  const search=$('#modal').querySelector('#history-search');if(search&&frame.search!==undefined){search.value=frame.search;search.dispatchEvent(new Event('input',{bubbles:true}));}
  for(const {selector,index,top,left} of frame.scrolls){const el=$('#modal').querySelectorAll(selector)[index];if(el){el.scrollTop=top;el.scrollLeft=left;}}
  }finally{busy=false;}}
-function closeDialog(){if(closeHistoryResult())return;const d=$('#modal');if(resourceReturnStack.length&&['nativeResourceShop','sourceRecharge','nativeVipThresholds'].includes(d.dataset.mode)){void returnResourcePage().catch(e=>toast(e.message));return;}d.close();d.className='';delete d.dataset.mode;delete d.dataset.returnToCollection;}
+function closeDialog(){if(closeHistoryResult())return;const d=$('#modal');if(d.dataset.mode==='sourceHistoryHelp'){void openHistoryActivity(state,d.dataset.activity).catch(e=>toast(e.message));return;}if(d.dataset.mode==='sourceHistoryCatalogHelp'){void openActivities(state).catch(e=>toast(e.message));return;}if(d.dataset.mode==='warehouseEggSaleConfirm'){void openWarehouse(state).catch(e=>toast(e.message));return;}if(resourceReturnStack.length&&['nativeResourceShop','sourceRecharge','nativeVipThresholds'].includes(d.dataset.mode)){void returnResourcePage().catch(e=>toast(e.message));return;}d.close();d.className='';delete d.dataset.mode;delete d.dataset.returnToCollection;}
 async function showSettings(){const version=await window.ranch?.version?.().catch(()=>null);await openNativePaper('本地存档',`<p>御龙高手 <b>v${version??'未知'}</b>　操作后自动保存</p><div class="native-save-actions">${nativeButton('立即保存','save')}${nativeButton('导出存档','export')}${nativeButton('导入存档','import')}</div>`,'nativeSettings')}
 let suppressHabitatClick=false;
 const clipNames={breath:'呼吸',walk:'步行',especial:'特殊动作',combat:'战斗姿态',breathinbattle:'战斗待机',movein:'入场',hurt:'受击',dead:'倒下',airattack:'空中攻击',airattackend:'空中攻击收招',landattack:'地面攻击',landattackend:'地面攻击收招',magic:'施法',magicend:'施法收招',fly:'飞行',walk2:'步行二',walk3:'步行三'};
@@ -126,12 +126,14 @@ document.addEventListener('click',async e=>{
   if(type==='historyChestWarehouse'){resourceReturnStack.push(captureResourcePage());await openWarehouse(state,'prop');return}
   if(type==='historyPillShop'){resourceReturnStack.push(captureResourcePage());await openResourceShop(state,{type:'i'});return}
   if(type==='historyTrain'){const returnKey=$('#modal').dataset.trainingReturnKey;await persist(action(state,'activityTrain',{id,count:Number(el.dataset.count??1)}));render();await openHistoryTraining(state,returnKey);toast(state.log[0]);return}
+  if(type==='warehouseSellByQuality'){await confirmEggQualitySale(state,Number(document.querySelector('#warehouse-egg-quality').value));return}
+  if(type==='sellEggsByQuality'){const ids=$('#modal').dataset.saleEggIds.split(',').map(Number);await persist(action(state,type,{quality:id,ids}));render();await openWarehouse(state,'dragon');toast(state.log[0]);return}
   if(type==='historyTrainingBuy'){const key=$('#modal').dataset.activity,offer=resourceShopRow(id);if(state.gems<offer.priceGems){resourceReturnStack.push(captureResourcePage());await openRechargeDialog(state);toast(`魔晶不足，还差${offer.priceGems-state.gems}魔晶。`);return;}await persist(action(state,'buyResource',{id}));render();await openHistoryActivity(state,key);toast(state.log[0]);return}
   if(type==='historyFilter'){await openActivities(state,el.dataset.value);return}
   if(type==='historyOpen'){if(!state.activities.history){await persist(action(state,'activityVisit'));render();}await openHistoryActivity(state,el.dataset.value);return}
   if(type==='historyHelp'){await openHistoryHelp(el.dataset.value);return}
   if(type==='historyCatalogHelp'){await openHistoryCatalogHelp();return}
-  if(type==='historyInventory'){await openHistoryInventory(state);return}
+  if(type==='historyInventory'){await openWarehouse(state,'prop');return}
   if(type==='historyAct'){const key=el.dataset.value,old=state.activities.history.boards[key]?.position??0;await persist(action(state,'historyActivity',{key,id,token:el.dataset.token,count:Number(el.dataset.count??1),op:el.dataset.op,code:document.querySelector('#history-code')?.value}));render();const dialog=await openHistoryActivity(state,key);if(state.activities.history.last.length&&await playHistoryAnimation(dialog,state,key,old))await openHistoryResult(state,key);toast(state.log[0]);return}
   if(type==='openSingleRecharge'){await openSingleRecharge(state);return}
   if(type==='singleRechargeHelp'){await openSingleRechargeHelp();return}

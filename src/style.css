@@ -346,3 +346,11 @@ body:has(#modal[open].native-fullscreen){background:#09242e}
 .spring-source-list>header{display:grid;grid-template-columns:90px 1fr 140px 125px 100px;color:#674322;font-size:18px;border-bottom:2px solid #b99555;padding:10px 0}.spring-source-task{position:relative;width:840px;height:64px}.spring-source-task .source-label{font-size:17px!important}.spring-source-list>p{font-size:17px}.spring-source-list>button{font-size:18px;height:42px}
 
 .cultivation-task-list,.cultivation-reward-list{overflow-x:hidden}
+
+.source-activity-help-scroll{position:absolute;width:464px;height:282px;transform:translate(-50%,-50%);overflow-y:auto;overflow-x:hidden;pointer-events:auto;overscroll-behavior:contain;color:#21150e;font-size:20px;line-height:1.6;white-space:normal}.source-activity-help-scroll p{margin:0 0 16px}.source-acquisition-body,.source-acquisition-pairs{pointer-events:auto;overscroll-behavior:contain;touch-action:pan-y;overflow-y:auto;overflow-x:hidden}.source-acquisition-body{box-sizing:border-box;scrollbar-color:#9c6b3b #dfc88b}
+
+.warehouse-bulk-sale{position:absolute;left:200px;top:700px;display:flex;align-items:center;gap:18px;color:#ffe7ba;pointer-events:auto;font-size:19px}.warehouse-bulk-sale select{font-size:18px;padding:5px;background:#f3dfad;color:#603b19}.warehouse-bulk-sale button{height:42px;font-size:19px}
+
+.battle-skill-text{display:block;padding:12px 30px;white-space:nowrap;font-size:32px;font-weight:bold;color:#ffed8e;text-shadow:2px 2px 3px #421404,-1px -1px 2px #421404;background:linear-gradient(90deg,transparent,#572023bb,transparent)}
+
+.source-acquisition-pairs{max-height:none;overflow:visible;overscroll-behavior:auto}

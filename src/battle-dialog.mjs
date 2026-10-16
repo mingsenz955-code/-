@@ -4,10 +4,10 @@ import {playSourceProjectile,playSourceHit} from './battle-effects.mjs';
 import {sourceAnimate} from './acquisition-animation.mjs';
 import {battlePositions} from './battle-positions.mjs';
 import {formationPosition,formationDefinition} from './formation.mjs';
-import {runeSkill,runeOfDragon,runeDefinition} from './runes.mjs';
+import {runeSkill,runeOfDragon,runeDefinition,sourceCombatSkill,activeCombatSkill} from './runes.mjs';
 import SKILL_ART from '../assets/original/data/battle-skill-art.mjs';
 import {renderSourceLayout} from './source-layout.mjs';
-import {sourceLayout,showSource} from './ranch-dialogs.mjs';
+import {sourceLayout,showSource,esc} from './ranch-dialogs.mjs';
 import {dragonArt} from './art.mjs';
 import {SPECIES} from './data.mjs';
 import MODELS from '../assets/original/models/index.mjs';
@@ -29,7 +29,7 @@ export async function openBattleDialog(state,{nodeId=null,enemyGroup=null}={}){
   slots[`${key}/icon`]=`<div class="source-battle-portrait" data-portrait="${team}${index-1}"><img class="battle-portrait-art" src="${`assets/original/ui/ui_bookdragon_${sp.original}_1.png`}" alt="${sp.name}"><img class="battle-portrait-border" src="assets/original/ui/ui_battle_txk60_${Math.min(5,sp.quality??1)}.png" alt=""><img class="battle-dead-mark" src="assets/original/ui/ui_battle_zhenwang.png" alt="阵亡"></div>`;
  }
  values['round/num']=`1/${BATTLE_ROUND_LIMIT}`;values['skip/miaoshu']='退出';
- values.power_left=String(lineupPower(lineup,state));values.power_right=String(battleRequirement(nodeId)??'');
+ values.power_left=String(lineupPower(lineup,state));values.power_right=String(enemyGroup?Math.floor(enemies.reduce((n,e)=>n+(e.attack??0)+(e.defend??0)+(e.life??0)/3,0)):battleRequirement(nodeId)??'');
  const allyPositions=battlePositions(lineup),enemyPositions=battlePositions(enemies,'enemy');
  const stage=`<div class="battle-stage" aria-label="自动战斗"><div class="battle-bg-fx-layer"></div>${lineup.map((d,i)=>fighter(d,'ally',i,allyPositions)).join('')}${enemies.filter(d=>d.species).map((d,i)=>fighter(d,'enemy',i,enemyPositions)).join('')}<div class="battle-fx-layer"></div></div>`;
  const d=showSource('sourceBattle',renderSourceLayout(layout,{values,slots,hidden,actions:{'skip/btn':{type:'close',label:'退出战斗'}}})+stage,'source-battle-dialog native-fullscreen');
@@ -50,8 +50,8 @@ function healthBar(unit,hp){
  for(const a of bar.getAnimations())a.cancel();bar.style.opacity='1';void sourceAnimate(bar,[{opacity:1},{opacity:0}],{delay:500,duration:500}).then(()=>{bar.style.opacity='0'}).catch(cancelled);
 }
 async function skillName(layer,skill,common,legend){
- if(!common?.nameImage)return;
- const name=document.createElement('div');name.className='battle-skill-name';name.innerHTML=(legend?'<img class="battle-legend-skill" src="assets/original/ui/skill_shensheng_bg.png" alt="">':'')+`<img src="assets/original/ui/${common.nameImage}" alt="${skill.name}">`;layer.append(name);
+ if(!skill)return;
+ const name=document.createElement('div');name.className='battle-skill-name';name.dataset.skillName=skill.name??'普通攻击';name.innerHTML=(legend?'<img class="battle-legend-skill" src="assets/original/ui/skill_shensheng_bg.png" alt="">':'')+(common?.nameImage?`<img src="assets/original/ui/${common.nameImage}" alt="${esc(skill.name??'技能')}">`:`<span class="battle-skill-text">${esc(skill.name??'普通攻击')}</span>`);layer.append(name);const img=name.querySelector('img:not(.battle-legend-skill)');if(img)img.addEventListener('error',()=>{const label=document.createElement('span');label.className='battle-skill-text';label.textContent=skill.name??'普通攻击';img.replaceWith(label);},{once:true});
  try{await sourceAnimate(name,[{opacity:0,scale:.1,offset:0},{opacity:0,scale:.1,offset:.1},{opacity:1,scale:1.5,offset:.2},{opacity:1,scale:1,offset:.5},{opacity:1,scale:1,offset:.7},{opacity:0,scale:1,offset:1}],{duration:1000})}finally{name.remove()}
 }
 let glyphs;
@@ -76,8 +76,8 @@ export async function playBattleAnimation(state,nodeId,result){
   const finishing=turn%2===1,target=finishing?losers[Math.floor(turn/2)]:winners[turn%winners.length],attacker=finishing?winners[turn%winners.length]:losers[Math.floor(turn/2)];
   const round=d.querySelector('[data-source="round/num"]');if(round)round.textContent=`${Math.floor(turn/6)+1}/${BATTLE_ROUND_LIMIT}`;
   const {x,y:ay}=(attacker.side==='ally'?allyPositions:enemyPositions)[attacker.index],{x:targetX,y:ty}=(target.side==='ally'?allyPositions:enemyPositions)[target.index];
-  const magic=turn%3===2,slot=magic?2:1,rune=attacker.side==='ally'?runeOfDragon(state,attacker.item.id,slot):null,skill=runeSkill(attacker.item,runeDefinition(rune?.type),slot),common=SKILL_ART[skill?.kind],key=common?common.fireEff:`${magic?'magic':'attack'}_${SPECIES[attacker.item.species].originalId}`;
-  if(magic)void skillName(layer,skill,common,formationDefinition(attacker.item)?.isLegend===1);
+  const skill=activeCombatSkill(attacker.side==='ally'?state:null,attacker.item,turn%3===2?2:1),magic=skill?.type===2,common=SKILL_ART[skill?.kind],key=common?common.fireEff:`${magic?'magic':'attack'}_${SPECIES[attacker.item.species].originalId}`;
+  void skillName(layer,skill,common,formationDefinition(attacker.item)?.isLegend===1);
   const attackMotion=magic?'magic':formationPosition(target.item)===1?'airattack':'landattack';
   if(!await motion(attacker.el,attackMotion,live))return false;
   const points=projectilePoints(attacker.item,{x,y:ay},target.item,{x:targetX,y:ty},attacker.side);
@@ -96,10 +96,15 @@ export async function playBattleAnimation(state,nodeId,result){
 
 // Offline world-boss encounter: recorded partial damage, never fake a defeated boss.
 export async function playBossAnimation(state,plan){
- const d=document.querySelector('#modal'),run=d.dataset.battleRun,layer=d.querySelector('.battle-fx-layer'),target=d.querySelector('[data-unit="enemy0"]'),team=configuredLineup(state),positions=battlePositions(team),targetPos=battlePositions([plan.enemy],'enemy')[0];let hp=plan.startHp;
- const live=()=>d.open&&d.dataset.battleRun===run&&d.dataset.mode==='sourceBattle';
+ const d=document.querySelector('#modal'),run=d.dataset.battleRun,layer=d.querySelector('.battle-fx-layer'),team=configuredLineup(state),allies=battlePositions(team),enemies=battlePositions([plan.enemy],'enemy');const live=()=>d.open&&d.dataset.battleRun===run&&d.dataset.mode==='sourceBattle';
+ const initial=100*plan.startHp/plan.enemy.life,initialTarget=d.querySelector('[data-unit=enemy0]');healthBar({el:initialTarget},initial);d.querySelector('[data-source="right1/hp"]').style.clipPath=`inset(0 ${100-initial}% 0 0)`;
  if(!(await Promise.all([...d.querySelectorAll('.battle-fighter')].map(el=>motion(el,'movein',live)))).every(Boolean))return false;
- await wait(100);
- for(const hit of plan.hits){if(!live())return false;const actor=d.querySelector(`[data-unit="ally${hit.index}"]`);const r=d.querySelector('[data-source="round/num"]');if(r)r.textContent=`${hit.round}/30`;if(!await motion(actor,'magic',live))return false;const fx=playSourceHit(layer,'magic_'+SPECIES[team[hit.index].species].originalId,'bomb2',{x:targetPos.x,y:targetPos.y-45},live),hurt=motion(target,'hurt',live);await damageNumber(layer,hit.damage,targetPos.x,targetPos.y-75);hp-=hit.damage;const percent=Math.max(0,hp/plan.enemy.life*100);healthBar({el:target},percent);const bar=d.querySelector('[data-source="right1/hp"]');if(bar)bar.style.clipPath=`inset(0 ${100-percent}% 0 0)`;if(!(await Promise.all([fx,hurt])).every(Boolean))return false;}
- if(live()&&plan.won){target.classList.add('is-dead');if(!await motion(target,'dead',live))return false;await wait(100);target.hidden=true}await wait(500);return live();
+ for(const hit of plan.events){if(!live())return false;const ally=hit.side==='ally',actor=d.querySelector(`[data-unit="${ally?'ally'+hit.index:'enemy0'}"]`),target=d.querySelector(`[data-unit="${ally?'enemy0':'ally'+hit.target}"]`),actorItem=ally?team[hit.index]:plan.enemy,targetItem=ally?plan.enemy:team[hit.target],from=ally?allies[hit.index]:enemies[0],to=ally?enemies[0]:allies[hit.target],skill=sourceCombatSkill(hit.skillId),art=SKILL_ART[skill?.kind],key=art?.fireEff??`${hit.slot===2?'magic':'attack'}_${SPECIES[actorItem.species].originalId}`;
+ const label=d.querySelector('[data-source="round/num"]');if(label)label.textContent=`${hit.round}/${plan.roundLimit}`;d.dataset.lastBattleSide=hit.side;d.dataset.bossRound=hit.round;void skillName(layer,skill,art,formationDefinition(actorItem)?.isLegend===1);
+ if(!await motion(actor,hit.slot===2?'magic':formationPosition(targetItem)===1?'airattack':'landattack',live))return false;
+ const points=projectilePoints(actorItem,from,targetItem,to,ally?'ally':'enemy');if(!await playSourceProjectile(layer,key,art?.type??3,points.from,points.to,live))return false;
+ const fx=playSourceHit(layer,art?.hitEff??key,'bomb2',{x:to.x,y:to.y-45},live),hurt=hit.hp>0?motion(target,'hurt',live):Promise.resolve(true);await damageNumber(layer,hit.damage,to.x,to.y-75);const percent=Math.max(0,hit.hp/hit.maxHp*100);healthBar({el:target},percent);const bar=d.querySelector(`[data-source="${ally?'right1':'left'+(hit.target+1)}/hp"]`);if(bar)bar.style.clipPath=`inset(0 ${100-percent}% 0 0)`;if(!(await Promise.all([fx,hurt])).every(Boolean))return false;
+ if(hit.hp===0){target.classList.add('is-dead');d.querySelector(`[data-portrait="${ally?'enemy0':'ally'+hit.target}"]`)?.classList.add('is-dead');if(!await motion(target,'dead',live))return false;target.hidden=true;}
+ }
+ d.dataset.bossEndReason=plan.endedBy;await wait(500);return live();
 }

@@ -61,7 +61,7 @@ for i,title in enumerate(['爪','角','骨','鳞'],1):
  table='runehuodong_'+str(i);add('fire-'+str(i),'点燃圣火·橙装'+title,'draw',table,[simple(r,[prize(r[1],r[2],r[3],r[6] if len(r)>6 else None)],weight=r[4]-(t[table][n-1][4] if n else 0)) for n,r in enumerate(t[table])],price=30,group='抽奖',odds='原累计区间用于离线抽取；30魔晶单抽价格为离线设置。')
 for i in [1,2,3]:
  add('recharge-wheel-'+str(i),'充值转盘·'+['普通','高级','豪华'][i-1],'rechargeDraw','Recharge_table1-1',[simple(r,[prize(r[2],r[3],r[4],r[6])],weight=r[5]) for r in t['Recharge_table1-1'] if r[1]==i],goal=[30,100,300][i-1],group='抽奖',odds='原奖池保留；每轮充值门槛30/100/300元为离线设置。')
-for i,title in enumerate(['狂龙','高能威龙','大圣龙','蛋壳龙','大圣龙·复刻'],1):
+for i,title in enumerate(['狂龙','高能威龙','大圣龙','蛋壳龙','火凤凰'],1):
  table='shenlong_'+str(i);add('limited-'+str(i),'限时神龙·'+title,'limited',table,[simple(r,groups(r,1),goal=r[0]) for r in t[table]],price=280,tenPrice=2800,featured=[1200,1202,1203,1204,1206][i-1],simulation=[simple(r,[prize(5,r[1],1,r[2])],weight={2:60,3:30,4:9,5:1}.get(r[2],1)) for r in t['choujiangyulan']],group='神龙',odds='该配置是排名奖励表，不是抽奖池。抽取使用客户端扭蛋预览池作离线模拟，不代表原限时奖池或概率；每抽10分，200分后可领一次本地第一名奖励，无真人排名。')
 add('spring-wheel','春节·红包转盘','springDraw','chunjiezhuanpan',[simple(r,[prize(r[1],r[2],r[3],r[6])],weight=r[4]) for r in t['chunjiezhuanpan']],price=12,tenPrice=118,couponCosts={str(r[2]):r[3] for r in t['chunjiexiaohao'] if r[1]==1},group='节日',odds='原奖池及红包/魔晶消费配置：红包单抽1、十抽10，魔晶单抽12、十抽118。原奖池区间权重用于离线抽取；任务红包由本地实际操作获得。')
 add('spring-tasks','春节·红包任务','springTask','chunjierenwu',[{'id':r[0],'goal':r[1],'limit':r[2],'coupons':r[3],'description':r[4],'rewards':[]} for r in t['chunjierenwu']],group='节日',odds='每日真实操作计数，按原任务次数与红包数量领取。HARD驯龙挑战尚未接通，不以其它战斗替代。')
