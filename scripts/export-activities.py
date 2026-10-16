@@ -97,7 +97,23 @@ for row in t['items']:
   r=rows[0];rewards.append(prize(r[2],r[3],r[5]))
  else:
   if rewards:fixed_packs[str(row[0])]={'pools':pools,'rewards':rewards}
-data={'fixedPacks':fixed_packs,'eggPoints':t['longdan_zhonglei'],'training':t['Dragon_peiyang'],'trainingPoints':t['peiyanghuodongjifen'],'activities':defs,'items':meta,'baseline':'2.9.35-202402271124','scope':'活动资料来自该APK，不能证明涵盖所有历史发布版本。'}
+# Generic consumable packs use one weighted roll per configured group. Keyed
+# chests keep their dedicated transaction. Legacy gem IDs have no modern mapping.
+random_packs={}
+blocked_packs={}
+for row in t['items']:
+ if str(row[0]) in fixed_packs or row[0] in [6013,6015] or len(row)<=60 or not isinstance(row[60],str) or not row[60]:continue
+ try:pools=[int(p) for p in row[60].split('|')]
+ except ValueError:continue
+ groups_=[]
+ for pool in pools:
+  rows=[r for r in t['randgive'] if r[1]==pool and r[4]>0]
+  if not rows or any(r[2] not in [1,2,3,4,5,8,9,19,20,21,22,23,26,27,28,29] or r[5]<=0 or r[6]<r[5] for r in rows):break
+  groups_.append([dict(prize(r[2],r[3],r[5]),max=r[6],weight=r[4],sourceRow=r[0]) for r in rows])
+ else:
+  if groups_:random_packs[str(row[0])]={'pools':pools,'groups':groups_};continue
+ blocked_packs[str(row[0])]={'pools':pools,'reason':'旧版宝石奖励尚无对应的使用系统，暂不能开启；原物品保留。'}
+data={'randomPacks':random_packs,'blockedPacks':blocked_packs,'fixedPacks':fixed_packs,'eggPoints':t['longdan_zhonglei'],'training':t['Dragon_peiyang'],'trainingPoints':t['peiyanghuodongjifen'],'activities':defs,'items':meta,'baseline':'2.9.35-202402271124','scope':'活动资料来自该APK，不能证明涵盖所有历史发布版本。'}
 (ROOT/'assets/original/data/activities.mjs').write_text('export default '+json.dumps(data,ensure_ascii=False,separators=(',',':'))+';\n',encoding='utf8')
 report={'baseline':data['baseline'],'tablesSha256':hashlib.sha256((ROOT/'assets/original/data/tables.json').read_bytes()).hexdigest(),'activityCount':len(defs),'rewardRows':sum(len(d['items']) for d in defs),'scope':data['scope'],'activities':[{k:v for k,v in d.items() if k not in ['items','points','tiles']} for d in defs],'limitations':['历史活动永久开放属于用户要求的离线适配','未声称恢复真人排行、服务器开奖、外部兑换码、所有历史发行版本','客户端库未保存的周期、资格与概率在活动说明中标出本地政策']}
 (ROOT/'docs/reference/activities-source.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf8');print('Activities:',len(defs),'source reward rows:',report['rewardRows'])

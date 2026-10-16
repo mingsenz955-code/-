@@ -136,7 +136,7 @@ export function action(state,type,payload={},now=Date.now(),random=Math.random) 
  refreshEncounters(s,now);observeActivityDay(s,now);
  switch(type){
  case 'activityTrain':message=trainDragon(s,payload.id,payload.count??1,random,now);break;
- case 'activityGift':message=openActivityGift(s,payload.id);break;
+ case 'activityGift':message=openActivityGift(s,payload.id,random);break;
  case 'activityVisit':message='历史活动已开放。';break;
  case 'historyActivity':message=historyAction(s,payload,now,random);break;
  case 'singleRechargeClaim':message=claimSingleRecharge(s,payload.id);break;

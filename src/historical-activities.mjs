@@ -5,9 +5,13 @@ import {deliverLoot,lootProp,equipmentFragment} from './loot.mjs';
 import {equipmentDefinition} from './equipment.mjs';
 import {runeDefinition,runeIcon} from './runes.mjs';
 import {vipInfo} from './vip.mjs';
-export const HISTORICAL_ACTIVITIES=SOURCE.activities;
+export const obsoleteActivityPrize=p=>[12,13,30].includes(p.type)||(p.type===4&&[6025,6026,6027].includes(p.itemId));
+// Preserve raw source IDs for existing claim records; retire obsolete reward rows.
+export const HISTORICAL_ACTIVITIES=SOURCE.activities.map(d=>({...d,items:d.items.map(r=>({...r,rewards:r.rewards.filter(p=>!obsoleteActivityPrize(p))}))}));
+export const visibleActivities=()=>HISTORICAL_ACTIVITIES.filter(d=>d.key!=='legacy-sign');
 export const activityPropMeta=id=>SOURCE.items[id]??null;
-export const activityGiftPack=id=>SOURCE.fixedPacks[id]??null;
+export const activityGiftPack=id=>SOURCE.fixedPacks[id]??SOURCE.randomPacks[id]??null;
+export const activityGiftBlock=id=>SOURCE.blockedPacks[id]?.reason??null;
 export const activityDefinition=key=>HISTORICAL_ACTIVITIES.find(d=>d.key===key);
 export const activityDay=now=>Math.floor((now+28800000)/86400000);
 const integer=(x,min=0,max=Number.MAX_SAFE_INTEGER)=>Number.isSafeInteger(x)&&x>=min&&x<=max;
@@ -32,7 +36,7 @@ export function recordActivitySpend(s,amount){const h=s.activities?.history;if(h
 export function recordHistoryRecharge(s,product,now){const h=s.activities.history;h.paid+=product.priceYuan;const day=activityDay(now);h.paidDays[day]=(h.paidDays[day]??0)+product.gems;}
 const held=(s,t,id)=>{const h=s.activities.history;if(t===1)return s.coins;if(t===2)return s.food;if(t===3)return s.gems;if(t===4)return [6047,6048,6049].includes(id)?s.raffle.tickets[id]??0:s.items[id]??0;if(t===9)return s.equipmentFragments[id]??0;if(t===19)return s.equipmentMaterials.stone;if(t===26)return s.equipmentMaterials.wing;if(t===27)return s.equipmentMaterials.crystal;if(t===28)return s.runeHunt.shenfu;return h.inventory[`${t}:${id}`]??0;};
 export function activityPay(s,p){if(!p||!integer(p.amount,1,1e9))throw Error('活动费用无效。');if(held(s,p.type,p.itemId)<p.amount)throw Error(`${activityPrizeInfo(p).name}不足。`);const n=-p.amount,id=p.itemId,t=p.type,h=s.activities.history;if(t===1)s.coins+=n;else if(t===2)s.food+=n;else if(t===3){s.gems+=n;recordActivitySpend(s,p.amount);}else if(t===4){if([6047,6048,6049].includes(id))s.raffle.tickets[id]+=n;else s.items[id]+=n;}else if(t===9)s.equipmentFragments[id]+=n;else if([19,26,27].includes(t))s.equipmentMaterials[{19:'stone',26:'wing',27:'crystal'}[t]]+=n;else if(t===28)s.runeHunt.shenfu+=n;else h.inventory[`${t}:${id}`]+=n;}
-export function activityDeliver(s,prizes){for(const p of prizes){if(!integer(p.type,0,33)||!Number.isSafeInteger(p.itemId)||!integer(p.amount,1,1e9))throw Error('活动奖励无效。');const t=p.type,id=p.itemId;
+export function activityDeliver(s,prizes){for(const p of prizes){if(obsoleteActivityPrize(p))continue;if(!integer(p.type,0,33)||!Number.isSafeInteger(p.itemId)||!integer(p.amount,1,1e9))throw Error('活动奖励无效。');const t=p.type,id=p.itemId;
  if([1,2,19,20,21,22].includes(t)||t===4&&lootProp(id)||t===8&&equipmentDefinition(id)||t===9&&equipmentFragment(id)){deliverLoot(s,[p]);continue;}
  if(t===4){if(!SOURCE.items[id])throw Error('活动道具定义缺失。');s.items[id]=(s.items[id]??0)+p.amount;continue;}
  if(t===3){s.gems+=p.amount;continue;}
@@ -49,9 +53,9 @@ export function activityPrizeInfo(p){const t=p.type,id=p.itemId,d=t===9?equipmen
 export const activityToken=s=>String(s.activities.history.revision);
 const visits=s=>s.activities.history.days.length;
 function taskProgress(s,id){const h=s.activities.history;switch(id){case 1:return s.dragons.filter(d=>SPECIES[d.species].quality>=4).length;case 2:return s.gemInventory.filter(g=>(gemDefinition(g.type)?.quality??0)>=5).length;case 3:return Object.keys(s.adventure.cleared).length;case 4:return h.discovered.length;case 5:return s.equipment.some(e=>equipmentDefinition(e.type)?.quality===3&&(equipmentDefinition(e.type)?.grade??0)>=60)?1:0;case 6:return s.dragons.some(d=>(d.training?.stage??0)>=2)?1:0;case 7:return s.equipment.some(e=>equipmentDefinition(e.type)?.quality===5)?1:0;default:return 0;}}
-export function activityRows(s,key,now=Date.now()){const d=activityDefinition(key);if(!d)throw Error('活动不存在。');const h=s.activities.history,day=activityDay(now),month=new Date(now+28800000).getUTCMonth()+1,claims=h.claims[key]??[],count=h.counts[key]??0;return d.items.filter(r=>d.kind!=='sign'||r.month===month).map(r=>{let current=0,goal=r.goal??1,claimed=claims.includes(r.id),label='领取',ready=true,note='';
+export function activityRows(s,key,now=Date.now()){const d=activityDefinition(key);if(!d)throw Error('活动不存在。');const h=s.activities.history,day=activityDay(now),month=new Date(now+28800000).getUTCMonth()+1,claims=h.claims[key]??[],count=h.counts[key]??0;return d.items.filter(r=>(r.rewards.length||['trainingMission','springTask','eggs','cashback'].includes(d.kind))&&(d.kind!=='sign'||r.month===month)).map(r=>{let current=0,goal=r.goal??1,claimed=claims.includes(r.id),label='领取',ready=true,note='';
  switch(d.kind){
- case 'first':current=s.recharge.count;break;
+ case 'first':current=Math.min(1,s.recharge.count);note=current?'已完成首次充值':'首次充值后可领取一次';break;
  case 'cdkey':current=1;label='输入档案码';ready=false;note='本地档案码 YULONG-CDK-'+r.id;break;
  case 'springTask':current=r.id===9?(h.spentDays[day]??0):(h.counts[`spring-${day}-${r.id}`]??0);claimed=h.counts[`spring-claimed-${day}-${r.id}`]>=r.limit;ready=r.id!==4;note=r.description+`；奖励 ${r.coupons} 活动红包`+(!ready?'（对应玩法尚未接通）':'');break;
  case 'trainingRank':current=h.counts['training-attempts']??0;ready=r.rankMin===1;note=`第${r.rankMin}${r.rankMax===r.rankMin?'':'～'+r.rankMax}名原奖励；当前本地单人榜，至少完成一次培养`;break;
@@ -68,7 +72,7 @@ export function activityRows(s,key,now=Date.now()){const d=activityDefinition(ke
  case 'purchase':current=1;label='购买';ready=(h.counts[`${key}:${r.id}`]??0)<(r.limit??1e9)&&visits(s)>=(r.day??1);note=r.limit?`剩余 ${Math.max(0,r.limit-(h.counts[`${key}:${r.id}`]??0))} 次`:'';break;
  case 'exchange':current=held(s,r.cost.type,r.cost.itemId);goal=r.cost.amount;label='兑换';claimed=false;break;
  case 'pointShop':current=Math.floor(h.paid)-(h.pointsUsed[key]??0);label='兑换';claimed=false;break;
- case 'chestShop':current=s.loot.boxesOpened-(h.pointsUsed[key]??0);label='兑换';claimed=false;break;
+ case 'chestShop':current=s.loot.boxesOpened*10-(h.pointsUsed[key]??0);label='兑换';claimed=false;break;
  case 'trainShop':case 'trainTask':current=(h.counts['source-training-points']??0)-(h.pointsUsed[key]??0);label=d.kind==='trainShop'?'兑换':'领取';note=`累计培养积分 ${h.counts['source-training-points']??0}`;break;
  case 'collection':current=r.conditionType===2?s.equipment.filter(e=>e.type===r.dragon).length:s.dragons.filter(d=>SPECIES[d.species]?.originalId===r.dragon).length;note='拥有'+activityPrizeInfo({type:r.conditionType===2?8:5,itemId:r.dragon,amount:1}).name;break;
  case 'trainingMission':{const k=r.id<=3?'training-pills':r.id<=5?'training-perfect':r.id<=7?'training-failures':'training-gains';current=h.counts[k]??0;note=({"training-pills":'消耗培养丹',"training-perfect":'培养完美次数',"training-failures":'培养失败次数',"training-gains":'累计培养属性增量'})[k]+` ${current}/${goal}，奖励 ${r.points} 分`;break;}
@@ -79,6 +83,7 @@ export function activityRows(s,key,now=Date.now()){const d=activityDefinition(ke
  case 'dailySale':current=r.category===1?1:(h.paidDays[day]??0);goal=r.category===1?1:50;claimed=h.counts[`${key}:${r.id}`]===day;note=r.category===1?'每日登录奖励':'当日测试充值50魔晶可领；离线资格';break;
  default:current=1;claimed=false;label='查看';
  }
+ if(['pointShop','chestShop','trainShop'].includes(d.kind)&&r.limit>0&&(h.counts[`${key}:${r.id}`]??0)>=r.limit){ready=false;note='已达到兑换上限';}
  return {...r,current,goal,claimed,label,ready:ready&&current>=goal&&!claimed,note};});}
 // Kept separate to avoid importing game.mjs back into its own rule module.
 const SOURCE_LEVEL=s=>ORIGINAL_LEVELS.findLast(r=>r.xp_required<=s.playerXp)?.level??1;
@@ -122,4 +127,4 @@ export function historyAction(s,p,now,random=Math.random){const d=activityDefini
 
 export function recordActivityBreed(s,id){const h=s.activities.history;h.bred[id]=(h.bred[id]??0)+1;const r=SOURCE.eggPoints.find(r=>r[1]===id);if(r)h.counts['egg-points']=(h.counts['egg-points']??0)+r[3];}
 export function recordSpringTask(s,id,count=1,now=s.updatedAt){const h=s.activities.history,k=`spring-${activityDay(now)}-${id}`;h.counts[k]=(h.counts[k]??0)+count;}
-export function openActivityGift(s,id){const pack=activityGiftPack(id);if(!pack)throw Error('该礼包尚无确定的固定内容。');activityPay(s,{type:4,itemId:id,amount:1});activityDeliver(s,pack.rewards);s.activities.history.last=structuredClone(pack.rewards);s.activities.history.revision++;return '礼包已打开，奖励已发放到对应库存。';}
+export function openActivityGift(s,id,random=Math.random){const pack=activityGiftPack(id);if(!pack)throw Error(activityGiftBlock(id)??'该礼包尚无确定的固定内容。');activityPay(s,{type:4,itemId:id,amount:1});const rewards=pack.rewards??pack.groups.map(group=>{const row=pick(group,random);return {type:row.type,itemId:row.itemId,amount:row.amount+Math.floor(unit(random)*(row.max-row.amount+1))};});activityDeliver(s,rewards);s.activities.history.last=structuredClone(rewards);s.activities.history.revision++;return '礼包已打开，奖励已发放到对应库存。';}

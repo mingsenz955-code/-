@@ -123,7 +123,8 @@ document.addEventListener('click',async e=>{
   if(type==='historyRanks'){await openHistoryRanks(state,el.dataset.value);return}
   if(type==='historyGift'){await persist(action(state,'activityGift',{id}));render();await openHistoryGiftResult(state);return}
   if(type==='historyTraining'){await openHistoryTraining(state);return}
-  if(type==='historyPillShop'){await openResourceShop(state,{type:'i'});return}
+  if(type==='historyChestWarehouse'){resourceReturnStack.push(captureResourcePage());await openWarehouse(state,'prop');return}
+  if(type==='historyPillShop'){resourceReturnStack.push(captureResourcePage());await openResourceShop(state,{type:'i'});return}
   if(type==='historyTrain'){await persist(action(state,'activityTrain',{id,count:Number(el.dataset.count??1)}));render();await openHistoryTraining(state);toast(state.log[0]);return}
   if(type==='historyFilter'){await openActivities(state,el.dataset.value);return}
   if(type==='historyOpen'){if(!state.activities.history){await persist(action(state,'activityVisit'));render();}await openHistoryActivity(state,el.dataset.value);return}
