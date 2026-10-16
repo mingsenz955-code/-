@@ -223,7 +223,7 @@
       "kind": "trainingMission",
       "table": "peiyangrenwu",
       "group": "培养",
-      "odds": "培养丹消耗、完美/失败次数及属性增量由本地培养记录。任务8～14采用累计属性增量，属于离线条件。"
+      "odds": "按原peiyangrenwu描述，任务1～3累计消耗培养丹，4～7培养暴击/失败，8～14购买获得培养丹；达标积分自动累计。培养暴击概率仍为本地规则。"
     },
     {
       "key": "train-tasks",

@@ -43,7 +43,7 @@ add('rose-date','七夕·玫瑰之约','exchange','love_duihuan',[simple(r,[priz
 add('chest-exchange','宝箱积分兑换','chestShop','baoxiang_duihuan',[simple(r,[prize(r[1],r[2],r[3],r[4])],goal=r[5],limit=r[6]) for r in t['baoxiang_duihuan']],group='兑换')
 add('train-points','培养回馈·积分兑换','trainShop','peiyangjifenduihuan',[simple(r,[prize(r[1],r[2],r[3])],goal=r[4]) for r in t['peiyangjifenduihuan']],group='培养')
 add('training-rank','培养回馈·排名奖励','trainingRank','peiyangpaihangjiangli',[simple(r,[prize(r[1],r[2],r[3],r[6])],rankMin=r[4],rankMax=r[5]) for r in t['peiyangpaihangjiangli']],group='培养',odds='原排名奖励目录；本地单人榜，至少完成一次培养可领取一次第一名奖励。没有原在线排行与结算日期，常驻领取属于本地适配。')
-add('training-missions','培养回馈·任务','trainingMission','peiyangrenwu',[{'id':r[0],'goal':r[1],'points':r[2],'rewards':[]} for r in t['peiyangrenwu']],group='培养',odds='培养丹消耗、完美/失败次数及属性增量由本地培养记录。任务8～14采用累计属性增量，属于离线条件。')
+add('training-missions','培养回馈·任务','trainingMission','peiyangrenwu',[{'id':r[0],'goal':r[1],'points':r[2],'description':r[4],'rewards':[]} for r in t['peiyangrenwu']],group='培养',odds='按原peiyangrenwu描述，任务1～3累计消耗培养丹，4～7培养暴击/失败，8～14购买获得培养丹；达标积分自动累计。培养暴击概率仍为本地规则。')
 add('train-tasks','培养送豪礼','trainTask','peiyangduihuan',[simple(r,groups(r,3,width=3,count=2),goal=r[1]) for r in t['peiyangduihuan']],group='培养')
 for group in sorted({r[19] for r in t['longdan_jiangli']}):
  rows=[r for r in t['longdan_jiangli'] if r[19]==group];items=[]

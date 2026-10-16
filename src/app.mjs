@@ -91,12 +91,12 @@ function render(){
 function tick(){const modal=$('#modal');if(!busy&&modal?.open&&modal.dataset.mode==='sourceGemExplore'&&Number(modal.dataset.freeReady)>0&&Date.now()>=Number(modal.dataset.freeReady)){delete modal.dataset.freeReady;void openGemExplore(state)}if(!busy&&modal?.open&&modal.dataset.mode==='sourceShenfu'&&Number(modal.dataset.freeReady)>0&&Date.now()>=Number(modal.dataset.freeReady)){delete modal.dataset.freeReady;void openShenfuDialog(state)}document.querySelectorAll('[data-timer]').forEach(el=>el.textContent=el.classList.contains('source-pve-reward-state')&&Date.now()>=Number(el.dataset.timer)?'可领取':time(Number(el.dataset.timer)));document.querySelectorAll('[data-ready]').forEach(el=>el.disabled=busy||Date.now()<Number(el.dataset.ready));document.querySelectorAll('[data-income]').forEach(el=>{const h=state.habitats.find(h=>h.id===Number(el.dataset.income));if(h)el.textContent=fmt(income(state,h))})}
 async function persist(next){busy=true;saveStatus='正在保存…';if($('#save-status'))$('#save-status').textContent=saveStatus;try{await storage.save(next);state=next;saveStatus=`已保存 · ${new Date().toLocaleTimeString('zh-CN')}`;}catch(e){saveStatus='保存失败 · 请重试';throw e}finally{busy=false}}
 const resourceReturnStack=[];
-const resourceScrollSelectors=['.history-reward-list','.history-activity-grid','.history-categories','.native-shop-list','.native-resource-groups','.native-resource-row'];
+const resourceScrollSelectors=['.cultivation-task-list','.cultivation-reward-list','.history-reward-list','.history-activity-grid','.history-categories','.native-shop-list','.native-resource-groups','.native-resource-row'];
 function captureResourcePage(){const d=$('#modal');return {mode:d.dataset.mode,dataset:{...d.dataset},html:d.innerHTML,className:d.className,style:d.style.cssText,search:d.querySelector('#history-search')?.value,scrolls:resourceScrollSelectors.flatMap(selector=>[...d.querySelectorAll(selector)].map((el,index)=>({selector,index,top:el.scrollTop,left:el.scrollLeft})))};}
 async function returnResourcePage(){if(busy||!resourceReturnStack.length)return;const frame=resourceReturnStack.pop();busy=true;try{
  if(frame.mode==='sourceHistoryActivity')await openHistoryActivity(state,frame.dataset.activity);
  else if(frame.mode==='sourceHistoryHub')await openActivities(state,frame.dataset.historyFilter??'全部');
- else if(frame.mode==='sourceHistoryTraining')await openHistoryTraining(state);
+ else if(frame.mode==='sourceHistoryTraining')await openHistoryTraining(state,frame.dataset.trainingReturnKey);
  else if(frame.mode==='sourceHistoryInventory')await openHistoryInventory(state);
  else if(frame.mode==='sourceHistoryRanks')await openHistoryRanks(state,frame.dataset.activity);
  else{const d=$('#modal');if(d.open)d.close();d.className=frame.className;d.style.cssText=frame.style;d.style.setProperty('--source-scale',Math.min((innerWidth-20)/1024,(innerHeight-20)/768));for(const key of Object.keys(d.dataset))delete d.dataset[key];Object.assign(d.dataset,frame.dataset);d.innerHTML=frame.html;for(const [key,value] of Object.entries(resourceBarValues(state)))for(const el of d.querySelectorAll(`[data-source="${key}"]`))el.textContent=value;d.showModal();}
@@ -122,10 +122,11 @@ document.addEventListener('click',async e=>{
   if(type==='historyResultClose'){closeHistoryResult();return}
   if(type==='historyRanks'){await openHistoryRanks(state,el.dataset.value);return}
   if(type==='historyGift'){await persist(action(state,'activityGift',{id}));render();await openHistoryGiftResult(state);return}
-  if(type==='historyTraining'){await openHistoryTraining(state);return}
+  if(type==='historyTraining'){await openHistoryTraining(state,$('#modal').dataset.activity??'train-points');return}
   if(type==='historyChestWarehouse'){resourceReturnStack.push(captureResourcePage());await openWarehouse(state,'prop');return}
   if(type==='historyPillShop'){resourceReturnStack.push(captureResourcePage());await openResourceShop(state,{type:'i'});return}
-  if(type==='historyTrain'){await persist(action(state,'activityTrain',{id,count:Number(el.dataset.count??1)}));render();await openHistoryTraining(state);toast(state.log[0]);return}
+  if(type==='historyTrain'){const returnKey=$('#modal').dataset.trainingReturnKey;await persist(action(state,'activityTrain',{id,count:Number(el.dataset.count??1)}));render();await openHistoryTraining(state,returnKey);toast(state.log[0]);return}
+  if(type==='historyTrainingBuy'){const key=$('#modal').dataset.activity,offer=resourceShopRow(id);if(state.gems<offer.priceGems){resourceReturnStack.push(captureResourcePage());await openRechargeDialog(state);toast(`魔晶不足，还差${offer.priceGems-state.gems}魔晶。`);return;}await persist(action(state,'buyResource',{id}));render();await openHistoryActivity(state,key);toast(state.log[0]);return}
   if(type==='historyFilter'){await openActivities(state,el.dataset.value);return}
   if(type==='historyOpen'){if(!state.activities.history){await persist(action(state,'activityVisit'));render();}await openHistoryActivity(state,el.dataset.value);return}
   if(type==='historyHelp'){await openHistoryHelp(el.dataset.value);return}

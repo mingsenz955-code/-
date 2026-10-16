@@ -1,0 +1,19 @@
+import {activityRows,activityDefinition,activityToken,activityPrizeInfo,trainingMissionPoints} from './historical-activities.mjs';
+import {resourceShopRow} from './resource-shop.mjs';
+import {renderSourceLayout} from './source-layout.mjs';
+import {sourceLayout,nativeButton,esc} from './ranch-dialogs.mjs';
+function itemSlot(base,p,values,slots,hidden){const info=activityPrizeInfo(p);hidden.add(base+'/bg');hidden.add(base+'/eff');slots[base+'/quality']=`<img class="activity-original-frame" src="assets/original/ui/ui_common_DaoJuKuang${Math.min(5,info.quality)}.png" alt="">`;slots[base+'/image']=`<img class="activity-original-icon" src="${esc(info.image)}" alt="${esc(info.name)}" title="${esc(info.name)}">`;values[base+'/txt_num']='×'+p.amount;}
+// PeiYangPart, PeiYangTaskItemRender and PeiYangRewardItemRender use these exact layouts.
+export async function trainingEventView(s,key){
+ const rewards=key==='train-tasks',[panel,taskItem,rewardItem]=await Promise.all(['ui_peiyanghuodong_panel','item_peiyanghuodong_task','item_peiyanghuodong_reward'].map(sourceLayout)),values={txt_point:trainingMissionPoints(s)},slots={},hidden=new Set([rewards?'node_pad1':'node_pad2']),checked=new Set([`node_tab/node_tab${rewards?2:1}/btn`]),actions={
+ 'node_tab/node_tab1/btn':{type:'historyOpen',value:'training-missions',label:'任务清单'},
+ 'node_tab/node_tab2/btn':{type:'historyOpen',value:'train-tasks',label:'领取奖励'},
+ 'node_btn_help/btn':{type:'historyHelp',value:key,label:'规则说明'}
+ };
+ slots['node_onsell_pad/node_time']='<span class="cultivation-permanent">常驻开放</span>';
+ for(const [i,id] of [[1,113],[2,114]]){const offer=resourceShopRow(id),base=`node_onsell_pad/node_item${i}`;itemSlot(base+'/node_showitem',{type:4,itemId:6022,amount:offer.amount},values,slots,hidden);values[base+'/node_costbar/txt_cost']=offer.priceGems;slots[base+'/node_costbar/img_money']='<img class="cultivation-money" src="assets/original/ui/ui_main_08.png" alt="魔晶">';actions[base+'/node_buy/btn']={type:'historyTrainingBuy',id,label:`花${offer.priceGems}魔晶购买${offer.amount}培养丹`};}
+ if(!rewards){const rows=activityRows(s,'training-missions');slots['node_pad1/huadong']=`<div class="cultivation-task-list" aria-label="培养任务清单">${rows.map(r=>{const done=r.current>=r.goal;return `<article class="cultivation-task-row" data-training-task="${r.id}" aria-label="${esc(r.description)}，${Math.min(r.current,r.goal)}/${r.goal}，${r.points}积分，${done?'已完成':'未完成'}">${renderSourceLayout(taskItem,{values:{txt_index:r.id,txt_info:r.description,txt_now:`${Math.min(r.current,r.goal)}/${r.goal}`,txt_rewardpoint:r.points},hidden:new Set([done?'image_off':'image_on'])})}</article>`;}).join('')}</div>`;
+ }else{const rows=activityRows(s,'train-tasks');slots['node_pad2/huadong']=`<div class="cultivation-reward-list" aria-label="培养积分奖励">${rows.map(r=>{const rv={txt_info:`积分到${r.goal}可领取`},rs={},rh=new Set(['image_on',...(r.claimed?['node_btn_on','node_btn_off']:r.ready?['node_btn_off','node_btn_isget']:['node_btn_on','node_btn_isget'])]);for(let i=1;i<=2;i++){const p=r.rewards[i-1],base='item_'+i;if(p)itemSlot(base,p,rv,rs,rh);else rh.add(base);}const html=renderSourceLayout(rewardItem,{values:rv,slots:rs,hidden:rh,actions:{'node_btn_on/btn':{type:'historyAct',id:r.id,value:'train-tasks',label:`领取${r.goal}积分奖励`}}}).replaceAll('data-action="historyAct"',`data-action="historyAct" data-token="${activityToken(s)}"`);return `<article class="cultivation-reward-row" data-training-reward="${r.id}">${html}</article>`;}).join('')}</div>`;
+ }
+ return `<section class="activity-cultivation history-detail"><div class="cultivation-source-board">${renderSourceLayout(panel,{values,slots,hidden,actions,checked})}</div></section><footer class="activity-cultivation-footer">${nativeButton('返回活动中心','openActivities')}${nativeButton('培养龙','historyTraining')}<span>培养丹 ${s.items[6022]??0}　任务达标自动计分，礼包各领一次</span></footer>`;
+}
