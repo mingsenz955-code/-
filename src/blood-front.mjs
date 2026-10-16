@@ -1,3 +1,4 @@
+import {simulateCombat} from './combat.mjs';
 import {vipInfo} from './vip.mjs';
 import {recordActivitySpend} from './historical-activities.mjs';
 import SOURCE from '../assets/original/data/blood-front.mjs';
@@ -24,7 +25,7 @@ export function bloodTeamPower(s){const stats=bloodTeamStats(s);return Math.floo
 export function bloodPlan(s,difficulty=1,token=bloodToken(s)){
  const b=s.bloodFront;if(token!==bloodToken(s))throw Error('血战进度已变化，请重新选择。');if(b.finished)throw Error('血战全部关卡已通关。');if(![1,2,3].includes(difficulty))throw Error('请选择一至三星敌阵。');if(!configuredLineup(s).length)throw Error('你还没有派龙出战。');
  const wave=bloodWaves(b.stage)[b.wave],enemies=bloodEnemies(wave,difficulty),required=Math.floor(enemies.reduce((n,e)=>n+e.attack+e.defend+e.life/3+e.crit+e.uncrit,0)),power=bloodTeamPower(s);
- return {token,stage:b.stage,wave:wave.id,waveIndex:b.wave+1,difficulty,enemies,required,power,won:power>=required,allyStats:bloodTeamStats(s)};
+ const allyStats=bloodTeamStats(s),combat=simulateCombat(s,enemies,{allyStats});return {token,stage:b.stage,wave:wave.id,waveIndex:b.wave+1,difficulty,enemies,required,power,won:combat.won,allyStats,combat};
 }
 export function bloodAction(s,type,p,now){
  refreshBloodFront(s,now);const b=s.bloodFront,l=bloodLevel(b.stage);

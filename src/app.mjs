@@ -1,3 +1,4 @@
+import {simulateCombat} from './combat.mjs';
 import {openBloodFront,openBloodBuff,openBloodResult,openBloodReset} from './blood-front-dialog.mjs';
 import {bloodPlan,bloodToken,refreshBloodFront} from './blood-front.mjs';
 import {landBoardPosition} from './islands.mjs';
@@ -184,7 +185,7 @@ document.addEventListener('click',async e=>{
   if(type==='arenaRecords'){await openArenaRecords(state);return}
   if(type==='arenaRanks'){await openArenaRanks(state);return}
   if(type==='arenaBuyConfirm'||type==='arenaResetConfirm'){const buy=type==='arenaBuyConfirm';await openNativePaper(buy?'增加挑战次数':'重置挑战冷却',buy?`<p>花费10魔晶增加一次挑战。当前VIP每日最多购买 ${vipInfo(state).pvpBuyTime} 次，今日已购买 ${state.arena.bought} 次。</p>${nativeButton('确定','arenaBuy')}${nativeButton('返回','openArena')}`:`<p>花费50魔晶立即清除挑战冷却。</p>${nativeButton('确定','arenaReset')}${nativeButton('返回','openArena')}`,'sourceArenaConfirm');return}
-  if(type==='arenaChallenge'){const before=structuredClone(state);refreshArena(before,Date.now());const plan=arenaPlan(before,id,Date.now(),el.dataset.value);await persist(action(state,type,{id,token:el.dataset.value}));render();await openBattleDialog(before,{enemyGroup:[plan.enemy]});if(await playBattleAnimation(before,null,{won:plan.won,enemyGroup:[plan.enemy]})){await openArena(state);tick();toast(state.log[0]);}return}
+  if(type==='arenaChallenge'){const before=structuredClone(state);refreshArena(before,Date.now());const plan=arenaPlan(before,id,Date.now(),el.dataset.value);await persist(action(state,type,{id,token:el.dataset.value}));render();await openBattleDialog(before,{enemyGroup:[plan.enemy]});if(await playBattleAnimation(before,null,{won:plan.won,enemyGroup:[plan.enemy],combat:plan.combat})){await openArena(state);tick();toast(state.log[0]);}return}
   if(['arenaBuy','arenaReset','arenaRefresh','arenaClaim','arenaExchange'].includes(type)){await persist(action(state,type,{id}));render();if(type==='arenaExchange')await openArenaExchange(state);else await openArena(state);tick();toast(state.log[0]);return}
   if(type==='openWorldBoss'){if(playerProgress(state).level<15){toast('15级开启远古首领。');return}await openWorldBoss(state);return}
   if(type==='openHolyTree'){if(playerProgress(state).level<10){toast('10级开启圣树抢夺战。');return}await openHolyTree(state);tick();return}
@@ -197,7 +198,7 @@ document.addEventListener('click',async e=>{
   if(type==='bossBuyAttempt'){await persist(action(state,type));await openWorldBoss(state);toast(state.log[0]);return}
   if(type==='bossHistory'){const b=state.encounters.boss;await openNativePaper('首领战绩',`<p>累计伤害：${fmt(b.totalDamage)}</p><p>已击杀首领：${b.kills}</p>`,'sourceBossHistory');return}
   if(type==='bossAchievements'){await openNativePaper('首领成就',`<p>累计伤害：${fmt(state.encounters.boss.totalDamage)}</p><p>原成就阈值：100000、250000等；完整奖励类型与领取结算尚未核实。</p>`,'sourceBossAchievement');return}
-  if(type==='treePlunder'){const before=structuredClone(state),op=treeOpponent(state,id),won=lineupPower(configuredLineup(state),state)>=op.power;await persist(action(state,type,{id}));render();await openBattleDialog(before,{enemyGroup:op.enemies});if(await playBattleAnimation(before,null,{won,enemyGroup:op.enemies})){await openTreeTargets(state);toast(state.log[0]);}return}
+  if(type==='treePlunder'){const before=structuredClone(state),op=treeOpponent(state,id),combat=simulateCombat(state,op.enemies),won=combat.won;await persist(action(state,type,{id}));render();await openBattleDialog(before,{enemyGroup:op.enemies});if(await playBattleAnimation(before,null,{won,enemyGroup:op.enemies,combat})){await openTreeTargets(state);toast(state.log[0]);}return}
   if(type==='openBloodFront'){if(playerProgress(state).level<17){toast('17级开启血战前线。');return}bloodReturn=false;refreshBloodFront(state,Date.now());await openBloodFront(state);return}
   if(type==='close'&&bloodReturn){bloodReturn=false;await openBloodFront(state);return}
   if(type==='bloodSelect'){await openBloodFront(state,id,$('#modal').dataset.mode==='sourceBloodNext');return}
@@ -211,7 +212,7 @@ document.addEventListener('click',async e=>{
    await persist(action(state,type,{difficulty:id,token}));render();
    if(type==='bloodSweep'){await openBloodResult(state);return}
    bloodReturn=true;await openBattleDialog(before,{enemyGroup:plan.enemies,layoutName:'ui_battleblood',allyPower:plan.power,enemyPower:plan.required});busy=true;
-   let complete;try{complete=await playBattleAnimation(before,null,{won:plan.won,enemyGroup:plan.enemies,allyStats:plan.allyStats});}finally{busy=false}
+   let complete;try{complete=await playBattleAnimation(before,null,{won:plan.won,enemyGroup:plan.enemies,allyStats:plan.allyStats,combat:plan.combat});}finally{busy=false}
    if(complete){bloodReturn=false;if(state.bloodFront.last)await openBloodResult(state);else await openBloodFront(state,id,true);toast(state.log[0]);}return;
   }
   if(type==='openRunes'||type==='openRuneHunt'){await openRuneHunt(state);return}

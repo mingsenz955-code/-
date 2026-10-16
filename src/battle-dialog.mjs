@@ -3,9 +3,9 @@ import {waitForSourceMotion} from './source-motion.mjs';
 import {playSourceProjectile,playSourceHit} from './battle-effects.mjs';
 import {sourceAnimate} from './acquisition-animation.mjs';
 import {battlePositions} from './battle-positions.mjs';
-import {battleTurnPlan} from './battle-turns.mjs';
+import {simulateCombat} from './combat.mjs';
 import {formationPosition,formationDefinition} from './formation.mjs';
-import {runeSkill,runeOfDragon,runeDefinition} from './runes.mjs';
+import {runeSkill,runeOfDragon,runeDefinition,sourceSkill} from './runes.mjs';
 import SKILL_ART from '../assets/original/data/battle-skill-art.mjs';
 import {renderSourceLayout} from './source-layout.mjs';
 import {sourceLayout,showSource} from './ranch-dialogs.mjs';
@@ -30,7 +30,7 @@ export async function openBattleDialog(state,{nodeId=null,enemyGroup=null,layout
   slots[`${key}/icon`]=`<div class="source-battle-portrait" data-portrait="${team}${index-1}"><img class="battle-portrait-art" src="${`assets/original/ui/ui_bookdragon_${sp.original}_1.png`}" alt="${sp.name}"><img class="battle-portrait-border" src="assets/original/ui/ui_battle_txk60_${Math.min(5,sp.quality??1)}.png" alt=""><img class="battle-dead-mark" src="assets/original/ui/ui_battle_zhenwang.png" alt="阵亡"></div>`;
  }
  values['round/num']=`1/${BATTLE_ROUND_LIMIT}`;values['skip/miaoshu']='退出';
- values.power_left=String(allyPower??lineupPower(lineup,state));values.power_right=String(enemyPower??battleRequirement(nodeId)??'');
+ values.power_left=String(allyPower??lineupPower(lineup,state));values.power_right=String(enemyPower??(enemyGroup?Math.floor(enemies.reduce((n,e)=>n+e.attack+e.defend+e.life/3+(e.crit??0)+(e.uncrit??0),0)):battleRequirement(nodeId)??''));
  const allyPositions=battlePositions(lineup),enemyPositions=battlePositions(enemies,'enemy');
  const stage=`<div class="battle-stage" aria-label="自动战斗"><div class="battle-bg-fx-layer"></div>${lineup.map((d,i)=>fighter(d,'ally',i,allyPositions)).join('')}${enemies.filter(d=>d.species).map((d,i)=>fighter(d,'enemy',i,enemyPositions)).join('')}<div class="battle-fx-layer"></div></div>`;
  const d=showSource('sourceBattle',renderSourceLayout(layout,{values,slots,hidden,actions:{'skip/btn':{type:'close',label:'退出战斗'}}})+stage,'source-battle-dialog native-fullscreen');
@@ -57,30 +57,29 @@ async function skillName(layer,skill,common,legend){
 }
 let glyphs;
 async function damageNumber(layer,value,x,y){glyphs??=await fetch('assets/original/fonts/red_50.json').then(r=>r.json());const number=document.createElement('span');number.className='battle-damage';number.style.cssText=`left:${x}px;top:${y}px`;number.setAttribute('aria-label',String(value));for(const char of String(value)){const g=glyphs[char];if(!g)continue;const digit=document.createElement('i');digit.style.cssText=`width:${g.width}px;height:${g.height}px;background-position:-${g.x}px -${g.y}px;margin-right:${g.xadvance-g.width}px`;number.append(digit)}layer.append(number);setTimeout(()=>number.remove(),1000)}
-// Source assets are preserved. Targeting and damage remain offline presentation
-// of the existing balance result until authoritative server combat data is available.
+// Render the same HP/damage record used for settlement; never force a last-hit kill.
 export async function playBattleAnimation(state,nodeId,result){
  const d=document.querySelector('#modal'),run=d.dataset.battleRun,layer=d.querySelector('.battle-fx-layer');
  const live=()=>d.open&&d.dataset.mode==='sourceBattle'&&d.dataset.battleRun===run;
- const make=(item,side,index)=>({item,side,index,el:d.querySelector(`[data-unit="${side}${index}"]`),stats:side==='ally'?(result.allyStats?.[item.id]??dragonAttributes(item,state)):{attack:item.attack,defend:item.defend,life:item.life},hp:100});
+ const make=(item,side,index)=>{const stats=side==='ally'?(result.allyStats?.[item.id]??dragonAttributes(item,state)):{attack:item.attack,defend:item.defend,life:item.life};const unit={item,side,index,el:d.querySelector(`[data-unit="${side}${index}"]`),stats,maxHp:stats.life,hp:stats.life};unit.el.dataset.maxHp=String(unit.maxHp);unit.el.dataset.currentHp=String(unit.hp);return unit;};
  const allies=configuredLineup(state).map((v,i)=>make(v,'ally',i)),enemies=(result.enemyGroup??battleEnemyGroup(nodeId)?.monsters??[]).filter(v=>v.species).map((v,i)=>make(v,'enemy',i));
  const allyPositions=battlePositions(allies.map(v=>v.item)),enemyPositions=battlePositions(enemies.map(v=>v.item),'enemy');
- const winners=result.won?allies:enemies,losers=result.won?enemies:allies;
+ const combat=result.combat??simulateCombat(state,enemies.map(u=>u.item),{allyStats:result.allyStats});if(combat.won!==result.won)throw Error('战斗记录与结算结果不一致。');d.dataset.combatPolicy=combat.policy;
  const deaths=[];
  const setHp=(u,hp)=>{
-  u.hp=hp;healthBar(u,hp);const key=`${u.side==='ally'?'left':'right'}${u.index+1}/hp`,bar=d.querySelector(`[data-source="${key}"]`);if(bar)bar.style.clipPath=`inset(0 ${100-hp}% 0 0)`;
+  u.hp=hp;const percent=100*hp/u.maxHp;u.el.dataset.currentHp=String(hp);u.el.querySelector('.battle-unit-hp').title=`${hp} / ${u.maxHp}`;healthBar(u,percent);const key=`${u.side==='ally'?'left':'right'}${u.index+1}/hp`,bar=d.querySelector(`[data-source="${key}"]`);if(bar){bar.style.clipPath=`inset(0 ${100-percent}% 0 0)`;bar.dataset.currentHp=String(hp);bar.dataset.maxHp=String(u.maxHp);}
   if(hp<=0){u.el.classList.add('is-dead');d.querySelector(`[data-portrait="${u.side}${u.index}"]`)?.classList.add('is-dead');deaths.push(motion(u.el,'dead',live).then(async complete=>{if(complete){await wait(100);u.el.hidden=true;u.el.dataset.deathComplete='true'}}))}
  };
  if(!(await Promise.all([...allies,...enemies].map(u=>motion(u.el,'movein',live)))).every(Boolean))return false;
  await wait(100);if(!live())return false;
- for(const turn of battleTurnPlan(winners.length,losers.length)){
+ for(const turn of combat.events){
   if(!live())return false;
-  const {finishing}=turn,target=(turn.winning?losers:winners)[turn.target],attacker=(turn.winning?winners:losers)[turn.actor];
-  if(attacker.hp<=0||target.hp<=0)continue;
+  const target=(turn.side==='ally'?enemies:allies)[turn.target],attacker=(turn.side==='ally'?allies:enemies)[turn.actor];
+  if(attacker.hp<=0||target.hp!==turn.hpBefore)throw Error('战斗回放生命值不一致。');
   attacker.el.dataset.attacks=String(Number(attacker.el.dataset.attacks??0)+1);
   const round=d.querySelector('[data-source="round/num"]');if(round)round.textContent=`${turn.round}/${BATTLE_ROUND_LIMIT}`;
   const {x,y:ay}=(attacker.side==='ally'?allyPositions:enemyPositions)[attacker.index],{x:targetX,y:ty}=(target.side==='ally'?allyPositions:enemyPositions)[target.index];
-  const magic=turn.round===2,slot=magic?2:1,rune=attacker.side==='ally'?runeOfDragon(state,attacker.item.id,slot):null,skill=runeSkill(attacker.item,runeDefinition(rune?.type),slot),common=SKILL_ART[skill?.kind],key=common?common.fireEff:`${magic?'magic':'attack'}_${SPECIES[attacker.item.species].originalId}`;
+  const magic=turn.slot===2,slot=turn.slot,rune=attacker.side==='ally'?runeOfDragon(state,attacker.item.id,slot):null,skill=sourceSkill(turn.skillId)??runeSkill(attacker.item,runeDefinition(rune?.type),slot),common=SKILL_ART[skill?.kind],key=common?common.fireEff:`${magic?'magic':'attack'}_${SPECIES[attacker.item.species].originalId}`;
   if(magic)void skillName(layer,skill,common,formationDefinition(attacker.item)?.isLegend===1);
   const attackMotion=magic?'magic':formationPosition(target.item)===1?'airattack':'landattack';
   if(!await motion(attacker.el,attackMotion,live))return false;
@@ -90,9 +89,8 @@ export async function playBattleAnimation(state,nodeId,result){
   const hitPoint={x:targetX,y:ty-offset};
   const foreground=playSourceHit(layer,hitKey,'bomb2',hitPoint,live,{direction});
   void playSourceHit(d.querySelector('.battle-bg-fx-layer'),hitKey,'bomb3',hitPoint,live,{direction,depth:-1});
-  const hurt=finishing?Promise.resolve(true):motion(target.el,'hurt',live);
-  const damage=finishing?Math.max(1,Math.floor((target.stats?.life??1)*target.hp/100)):Math.max(1,Math.floor((attacker.stats?.attack??1)*.4));
-  await damageNumber(layer,damage,targetX,ty-75);setHp(target,finishing?0:Math.max(30,target.hp-10));
+  const hurt=turn.hpAfter===0?Promise.resolve(true):motion(target.el,'hurt',live);
+  await damageNumber(layer,turn.damage,targetX,ty-75);setHp(target,turn.hpAfter);d.dispatchEvent(new CustomEvent('battle-hp-applied',{bubbles:true,detail:turn}));
   attacker.el.dataset.resolvedAttacks=String(Number(attacker.el.dataset.resolvedAttacks??0)+1);
   const results=await Promise.all([foreground,target.hp>0?hurt:Promise.resolve(true)]);if(!results.every(Boolean))return false;
  }
@@ -103,8 +101,10 @@ export async function playBattleAnimation(state,nodeId,result){
 export async function playBossAnimation(state,plan){
  const d=document.querySelector('#modal'),run=d.dataset.battleRun,layer=d.querySelector('.battle-fx-layer'),target=d.querySelector('[data-unit="enemy0"]'),team=configuredLineup(state),positions=battlePositions(team),targetPos=battlePositions([plan.enemy],'enemy')[0];let hp=plan.startHp;
  const live=()=>d.open&&d.dataset.battleRun===run&&d.dataset.mode==='sourceBattle';
+ const paintHp=(initial=false)=>{const percent=Math.max(0,hp/plan.enemy.life*100),bar=target.querySelector('.battle-unit-hp'),top=d.querySelector('[data-source="right1/hp"]');target.dataset.maxHp=String(plan.enemy.life);target.dataset.currentHp=String(hp);bar.title=`${hp} / ${plan.enemy.life}`;if(initial){bar.dataset.hp=String(percent);for(const image of bar.querySelectorAll('.hp-current,.hp-delay'))image.style.scale=percent/100+' 1';}else healthBar({el:target},percent);if(top){top.style.clipPath=`inset(0 ${100-percent}% 0 0)`;top.dataset.currentHp=String(hp);top.dataset.maxHp=String(plan.enemy.life);}};
+ paintHp(true);
  if(!(await Promise.all([...d.querySelectorAll('.battle-fighter')].map(el=>motion(el,'movein',live)))).every(Boolean))return false;
  await wait(100);
- for(const hit of plan.hits){if(!live())return false;const actor=d.querySelector(`[data-unit="ally${hit.index}"]`);const r=d.querySelector('[data-source="round/num"]');if(r)r.textContent=`${hit.round}/30`;if(!await motion(actor,'magic',live))return false;const fx=playSourceHit(layer,'magic_'+SPECIES[team[hit.index].species].originalId,'bomb2',{x:targetPos.x,y:targetPos.y-45},live),hurt=motion(target,'hurt',live);await damageNumber(layer,hit.damage,targetPos.x,targetPos.y-75);hp-=hit.damage;const percent=Math.max(0,hp/plan.enemy.life*100);healthBar({el:target},percent);const bar=d.querySelector('[data-source="right1/hp"]');if(bar)bar.style.clipPath=`inset(0 ${100-percent}% 0 0)`;if(!(await Promise.all([fx,hurt])).every(Boolean))return false;}
+ for(const hit of plan.hits){if(!live())return false;const actor=d.querySelector(`[data-unit="ally${hit.index}"]`);const r=d.querySelector('[data-source="round/num"]');if(r)r.textContent=`${hit.round}/30`;if(!await motion(actor,'magic',live))return false;const fx=playSourceHit(layer,'magic_'+SPECIES[team[hit.index].species].originalId,'bomb2',{x:targetPos.x,y:targetPos.y-45},live),hurt=motion(target,'hurt',live);await damageNumber(layer,hit.damage,targetPos.x,targetPos.y-75);hp-=hit.damage;paintHp();if(!(await Promise.all([fx,hurt])).every(Boolean))return false;}
  if(live()&&plan.won){target.classList.add('is-dead');if(!await motion(target,'dead',live))return false;await wait(100);target.hidden=true}await wait(500);return live();
 }

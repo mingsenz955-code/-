@@ -417,3 +417,7 @@
 - 静态BloodBattlePanel SHA256 5f177ae1bfecd20a032ad81ccdc7abfd3c9145bdec0c74f17a415dbe9a1e63b1，函数0载入ui_battle_blood；函数6/23对应下一波/失败重来/满纪录扫荡；LibBloodWarLevelInfo SHA256 25623bed96372947237bdbc2862d27641906f0eeef1ebe44a6d63ac43fc2362c恢复16字段。BloodWarLibrary与NextWavePanel明示三档原怪物组、积分x1/2/3；ResultPanel按关卡/score/itemnum显示结算。未执行Lua。
 - BloodWar/BloodWarLevel原表50关485波，全部1455组4365怪物及原属性导出；源VIP血战次数bloodTime=VipInfo arr[15]。原字段/源SHA/离线适配在reference/blood-front-provenance.json；BLOOD-FRONT.md明确钱包/判胜/每日刷新等证据边界。
 - 用户要求去掉过多相似活动，活动菜单43→19，保留不同玩法代表版本。76份源定义和旧claims/inventory保留，57个重复或近似历史版本不再展示，不删除已获道具或重置领奖进度。
+
+## v0.16.61 血量与伤害跳变修复
+- 原rune-skills数据damageVector万分比及damageValue固定值接入实际伤害；怪物配置skill1/skill2优先，显示与伤害技能ID一致。原属性成长/装备/宝石/符文/升星/培养继续复用现有提取，不虚构已恢复服务器防御/暴击/怒气规则。
+- 旧3回合脚本finishing不是原版证据，已删除运行模块及其镜像测试。新增确定性逐击HP求解和守恒/真实死亡/30回合不强杀验证，防御公式等本地适配完整列COMBAT.md。冒险旧40%离线强度改在真实攻防血执行，血战原怪物属性保持独立。
