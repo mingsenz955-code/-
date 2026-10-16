@@ -1,3 +1,4 @@
+import {monopolyAction} from './monopoly.mjs';
 import SOURCE from '../assets/original/data/activities.mjs';
 import {SPECIES,speciesKey,ORIGINAL_LEVELS} from './data.mjs';
 import {gemDefinition} from './gems.mjs';
@@ -8,7 +9,7 @@ import {vipInfo} from './vip.mjs';
 export const obsoleteActivityPrize=p=>[12,13,30].includes(p.type)||(p.type===4&&[6025,6026,6027].includes(p.itemId));
 // Preserve raw source IDs for existing claim records; retire obsolete reward rows.
 export const HISTORICAL_ACTIVITIES=SOURCE.activities.map(d=>({...d,items:d.items.map(r=>({...r,rewards:r.rewards.filter(p=>!obsoleteActivityPrize(p))}))}));
-export const visibleActivities=()=>HISTORICAL_ACTIVITIES.filter(d=>d.key!=='legacy-sign');
+export const visibleActivities=()=>HISTORICAL_ACTIVITIES.filter(d=>!['legacy-sign','monopoly-2','monopoly-3','monopoly-rebate'].includes(d.key));
 export const activityPropMeta=id=>SOURCE.items[id]??null;
 export const activityGiftPack=id=>SOURCE.fixedPacks[id]??SOURCE.randomPacks[id]??null;
 export const activityGiftBlock=id=>SOURCE.blockedPacks[id]?.reason??null;
@@ -27,6 +28,7 @@ export function validateHistory(s){const a=s.activities;a.history??={...createHi
  for(const [key,n] of Object.entries(h.pointsUsed))if(!['recharge-points','chest-exchange','train-points','train-tasks'].includes(key)||!integer(n))throw Error('活动积分无效。');
  for(const [key,c] of Object.entries(h.cards))if(!HISTORICAL_ACTIVITIES.find(d=>d.kind==='card'&&d.items.some(r=>String(r.id)===key))||!integer(c.end)||!Number.isSafeInteger(c.claimed)||c.claimed< -1)throw Error('月卡活动存档无效。');
  for(const [key,b] of Object.entries(h.boards)){const d=activityDefinition(key);if(d?.kind!=='board'||!integer(b.position,0,d.points.length-1)||!integer(b.rolls)||!integer(b.dice,0,6))throw Error('大富翁进度无效。');}
+ for(const [key,b] of Object.entries(h.boards))if(b.journeyVersion!==undefined){const d=activityDefinition(key);if(b.journeyVersion!==1||typeof b.active!=='boolean'||!integer(b.entries)||!Array.isArray(b.cells)||![0,48].includes(b.cells.length)||!Array.isArray(b.collected)||new Set(b.collected).size!==b.collected.length||b.collected.some(n=>!integer(n,1,48))||!Array.isArray(b.lastPath)||b.lastPath.some(n=>!integer(n,1,48)))throw Error('大富翁本轮记录无效。');for(const p of b.cells){const r=d.items.find(r=>r.id===p.sourceRow&&r.pool===p.pool),v=r?.rewards[0];if(!v||p.type!==v.type||p.itemId!==v.itemId||!integer(p.amount,v.amount,r.max??v.amount))throw Error('大富翁格子奖励来源无效。');}}
  for(const [key,p] of Object.entries(h.packets))if(!activityDefinition('red-packets').items.some(r=>String(r.id)===key)||!integer(p.left)||!integer(p.opens))throw Error('红包记录无效。');
  for(const [key,p] of Object.entries(h.eggs)){const r=activityDefinition('children-eggs').items.find(r=>String(r.id)===key);if(!r||!integer(p.hits,0,r.health))throw Error('砸蛋记录无效。');}
  for(const p of h.last)if(!p||!integer(p.type,0,33)||!Number.isSafeInteger(p.itemId)||!integer(p.amount,1,1e9))throw Error('活动结果无效。');
@@ -49,6 +51,12 @@ export function activityDeliver(s,prizes){for(const p of prizes){if(obsoleteActi
 }}
 const unit=random=>{const v=random();if(!Number.isFinite(v)||v<0||v>=1)throw Error('随机值无效。');return v;};
 function pick(items,random){const total=items.reduce((sum,r)=>sum+Math.max(0,r.weight??1),0);if(!total)throw Error('活动奖池无效。');let n=unit(random)*total;for(const r of items){n-=Math.max(0,r.weight??1);if(n<0)return r;}return items.at(-1);}
+export const ACTIVITY_PITY_LIMIT=50;
+export const activityPityCount=(s,key)=>s.activities.history.counts['pity-'+key]??Math.min(49,s.activities.history.counts[key]??0);
+export function activityDrawPool(d){if(d.kind!=='limited')return d.items;const pool=d.simulation;if(pool.some(r=>r.rewards.some(p=>p.type===5&&p.itemId===d.featured)))return pool;return [...pool,{id:-d.featured,weight:1,rewards:[{type:5,itemId:d.featured,amount:1,quality:5}]}];}
+export function activityGuaranteePool(d,pool=activityDrawPool(d)){if(d.kind==='limited')return pool.filter(r=>r.rewards.some(p=>p.type===5&&p.itemId===d.featured));const best=Math.max(...pool.map(r=>Math.max(...r.rewards.map(p=>activityPrizeInfo(p).quality))));let rare=pool.filter(r=>r.rewards.some(p=>activityPrizeInfo(p).quality===best));if(rare.length===pool.length){const min=Math.min(...pool.map(r=>r.weight??1));rare=pool.filter(r=>(r.weight??1)===min);}return rare;}
+export function activityDrawOdds(d){const pool=activityDrawPool(d),total=pool.reduce((n,r)=>n+(r.weight??1),0),rare=activityGuaranteePool(d,pool);return pool.map(r=>({id:r.id,rewards:r.rewards,probability:(r.weight??1)/total,guaranteed:rare.includes(r)}));}
+function pityPick(s,d,pool,random,key=d.key){const k='pity-'+key,n=activityPityCount(s,key),rare=activityGuaranteePool(d,pool),row=pick(n+1>=ACTIVITY_PITY_LIMIT?rare:pool,random);s.activities.history.counts[k]=rare.includes(row)?0:n+1;return row;}
 export function activityPrizeInfo(p){const t=p.type,id=p.itemId,d=t===9?equipmentFragment(id):t===8?equipmentDefinition(id):null,sp=t===5?SPECIES[speciesKey(id)]:null,r=t===29?runeDefinition(id):null,meta=SOURCE.items[id],names={0:'经验',1:'金币',2:'龙粮',3:'魔晶',7:'龙魂',13:'旧版宝石',19:'强化石',20:'初级龙珠',21:'中级龙珠',22:'高级龙珠',23:'竞技奖章',26:'羽翼',27:'水晶',28:'神符',30:'旧版符文碎片',31:'冒险岛入场券',32:'宝藏岛入场券',33:'金银岛入场券'};return {name:sp?sp.name+'龙蛋':d?.name??r?.name??(t===4?meta?.name:null)??((names[t]??'活动道具')+([7,13,30].includes(t)?` ${id}`:'')),image:sp?`assets/original/ui/thumbs_${sp.original}_0.png`:t===9&&d?`assets/original/ui/thumbs_${d.icon}.png`:t===8&&d?`assets/original/ui/thumbs_equip_${d.quality}_${d.part}.png`:r?runeIcon(r):t===4&&meta?.image?'assets/original/ui/'+meta.image:'assets/original/ui/'+({1:'ui_main_06.png',2:'ui_main_07.png',3:'ui_main_08.png',19:'resource_icon_80_qhs.png',20:'ui_main_10.png',21:'ui_main_11.png',22:'ui_main_12.png',26:'resource_icon_80_yuyi.png',27:'resource_icon_80_shuijing.png',31:'thumbs_store_t1_l.png',32:'thumbs_store_t2_l.png',33:'thumbs_store_t3_l.png'}[t]??'ui_common_DaoJuKuang1.png'),quality:p.quality??d?.quality??meta?.quality??1};}
 export const activityToken=s=>String(s.activities.history.revision);
 const visits=s=>s.activities.history.days.length;
@@ -94,23 +102,23 @@ export function historyAction(s,p,now,random=Math.random){const d=activityDefini
  if(d.kind==='springTask')throw Error('任务完成后红包自动到账；HARD任务需对应挑战玩法。');
  if(d.kind==='trainingMission')throw Error('任务达标后积分自动累计，请到领取奖励页领取。');
  if(d.kind==='cdkey'){const match=String(p.code??'').trim().toUpperCase().match(/^YULONG-CDK-([1-9][0-9]?)$/),r=match&&d.items.find(r=>r.id===Number(match[1]));if(!r)throw Error('本地档案码无效。');if((h.claims[d.key]??[]).includes(r.id))throw Error('该档案码已经使用。');rewards=r.rewards;(h.claims[d.key]??=[]).push(r.id);message='本地档案码兑换成功。';}
- else if(p.op==='rankClaim'){if(d.kind!=='limited'||count*10<200)throw Error('至少200积分才可领取本地排名奖励。');if((h.claims[d.key]??[]).includes(1))throw Error('本轮排名奖励已领取。');rewards=d.items.find(r=>r.id===1).rewards;(h.claims[d.key]??=[]).push(1);message='领取本地第一名奖励；无真人排名。';}
+ else if(p.op==='rankClaim'){if(d.kind!=='limited'||count<1)throw Error('先参与一次本活动即可领取单机排名奖励。');if((h.claims[d.key]??[]).includes(1))throw Error('本轮排名奖励已领取。');rewards=d.items.find(r=>r.id===1).rewards;(h.claims[d.key]??=[]).push(1);message='领取本地第一名奖励；无真人排名。';}
  else if(p.op==='growthBuy'){if(d.kind!=='growth'||h.growth)throw Error('成长计划已购买或操作无效。');activityPay(s,{type:3,itemId:-1,amount:d.unlockCost});h.growth=true;message='成长计划已购买。';}
  else if(['draw','rechargeDraw','springDraw','limited','board'].includes(d.kind)){
   if(![1,10,50].includes(p.count??1))throw Error('抽取次数无效。');const n=p.count??1;
   if(d.kind==='board'){
-   if(n!==1)throw Error('每次只能掷一枚骰子。');const ticket={type:d.entryType,itemId:-1,amount:1};if(held(s,ticket.type,-1))activityPay(s,ticket);else activityPay(s,{type:3,itemId:-1,amount:d.entryGems});const b=h.boards[d.key]??={position:0,rolls:0,dice:0};b.dice=1+Math.floor(unit(random)*6);b.position=(b.position+b.dice)%d.points.length;b.rolls++;const tile=d.tiles[b.position%d.tiles.length],index=d.entryType-31,pool=tile[2+index*2],items=d.items.filter(r=>r.pool===pool);const r=pick(items.length?items:d.items,random),prize={...r.rewards[0]};if(r.max>prize.amount)prize.amount+=Math.floor(unit(random)*(r.max-prize.amount+1));rewards=[prize];message=`掷出 ${b.dice} 点，到达第 ${b.position+1} 格。`;
+   if(n!==1)throw Error('每次只能掷一枚骰子。');rewards=monopolyAction(s,d,p,random,activityPay);const b=h.boards[d.key];message=p.op==='enter'?'已进入岛屿，本局掷骰不再扣入场券。':p.op==='exit'?'本轮结束。':`掷出${b.dice}点，到达第${b.position+1}格。`;
   }else if(d.kind==='limited'){
-   activityPay(s,{type:3,itemId:-1,amount:n===10?d.tenPrice:d.price*n});for(let i=0;i<n;i++)rewards.push(...pick(d.simulation,random).rewards);message=`神龙召唤 ${n} 次。`;
+   activityPay(s,{type:3,itemId:-1,amount:n===10?d.tenPrice:d.price*n});for(let i=0;i<n;i++)rewards.push(...pityPick(s,d,activityDrawPool(d),random).rewards);message=`神龙召唤 ${n} 次。`;
   }else{
    if(d.kind==='rechargeDraw'){const used=h.counts[d.key]??0;if(n!==1||Math.floor(h.paid/d.goal)<=used)throw Error(`本轮每充值 ${d.goal} 元增加一次抽取机会。`);}
    else if(d.kind==='springDraw'&&p.op==='couponDraw'){const cost=d.couponCosts[n];if(!cost)throw Error('请选择红包单抽或十抽。');if((h.counts['spring-coupons']??0)<cost)throw Error('活动红包不足，请完成春节任务。');h.counts['spring-coupons']-=cost;}
    else{const free=d.freeDaily&&n===1&&h.counts['free-'+d.key]!==day;const price=free?0:n===10&&d.tenPrice?d.tenPrice:n===50&&d.fiftyPrice?d.fiftyPrice:d.price*n;if(price)activityPay(s,{type:3,itemId:-1,amount:price});if(free)h.counts['free-'+d.key]=day;}
-   for(let i=0;i<n;i++)rewards.push(...pick(d.items,random).rewards);message=`抽取 ${n} 次。`;
+   for(let i=0;i<n;i++)rewards.push(...pityPick(s,d,d.items,random).rewards);message=`抽取 ${n} 次。`;
   }h.counts[d.key]=count+n;
  }else if(d.kind==='eggs'&&p.op==='buyEgg'){const r=d.items.find(r=>r.id===p.id);if(!r)throw Error('金蛋不存在。');activityPay(s,{type:3,itemId:-1,amount:r.price});rewards=[{type:4,itemId:r.prop,amount:1}];message='已购买一枚砸蛋道具。';}
  else if(d.kind==='eggs'){
-  const r=d.items.find(r=>r.id===p.id);if(!r)throw Error('金蛋不存在。');const e=h.eggs[r.id]??={hits:0};activityPay(s,{type:4,itemId:r.prop,amount:1});e.hits++;if(e.hits>=r.health){const prize=pick(r.pools,random);rewards=[{type:prize.type,itemId:prize.itemId,amount:prize.min+Math.floor(unit(random)*(prize.max-prize.min+1))}];e.hits=0;}message=`击打金蛋，进度 ${e.hits}/${r.health}${rewards.length?'，已获得奖励':''}。`;
+  const r=d.items.find(r=>r.id===p.id);if(!r)throw Error('金蛋不存在。');const e=h.eggs[r.id]??={hits:0};activityPay(s,{type:4,itemId:r.prop,amount:1});e.hits++;if(e.hits>=r.health){const pool=r.pools.map((p,i)=>({id:i,weight:p.weight,max:p.max,rewards:[{type:p.type,itemId:p.itemId,amount:p.min}]})),row=pityPick(s,{...d,kind:'eggPrize'},pool,random,`${d.key}:${r.id}`),prize=row.rewards[0];rewards=[{...prize,amount:prize.amount+Math.floor(unit(random)*(row.max-prize.amount+1))}];e.hits=0;}message=`击打金蛋，进度 ${e.hits}/${r.health}${rewards.length?'，已获得奖励':''}。`;
  }else{
   const r=activityRows(s,d.key,now).find(r=>r.id===p.id);if(!r)throw Error('活动条目不存在。');if(!r.ready)throw Error(r.claimed?'该奖励已领取。':r.note||'尚未达成活动条件。');rewards=r.rewards.map(p=>({...p}));
   if(r.cost&&!(d.kind==='packet'&&h.packets[r.id]?.left))activityPay(s,r.cost);

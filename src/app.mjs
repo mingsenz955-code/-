@@ -1,6 +1,8 @@
+import {openMonopolyHome,openMonopolyRewards} from './monopoly-dialog.mjs';
+import {openCommonDrawOdds,closeCommonDrawOdds} from './draw-odds-dialog.mjs';
 import {defaultRuneDragon} from './runes.mjs';
 import {resourceBarValues} from './resource-bar.mjs';
-import {closeHistoryResult,openHistoryGiftResult,openHistoryRanks,openHistoryTraining,openHistoryActivity,openHistoryHelp,openHistoryCatalogHelp,openHistoryInventory,playHistoryAnimation,openHistoryResult} from './history-activity-dialog.mjs';
+import {openHistoryOdds,closeHistoryResult,openHistoryGiftResult,openHistoryRanks,openHistoryTraining,openHistoryActivity,openHistoryHelp,openHistoryCatalogHelp,openHistoryInventory,playHistoryAnimation,openHistoryResult} from './history-activity-dialog.mjs';
 import {openActivities,openSingleRecharge,openSingleRechargeHelp} from './activity-dialog.mjs';
 import {openArena,openArenaExchange,openArenaRecords,openArenaRanks,openArenaHelp} from './arena-dialog.mjs';
 import {arenaPlan,refreshArena,vipInfo} from './arena.mjs';
@@ -103,7 +105,7 @@ async function returnResourcePage(){if(busy||!resourceReturnStack.length)return;
  const search=$('#modal').querySelector('#history-search');if(search&&frame.search!==undefined){search.value=frame.search;search.dispatchEvent(new Event('input',{bubbles:true}));}
  for(const {selector,index,top,left} of frame.scrolls){const el=$('#modal').querySelectorAll(selector)[index];if(el){el.scrollTop=top;el.scrollLeft=left;}}
  }finally{busy=false;}}
-function closeDialog(){if(closeHistoryResult())return;const d=$('#modal');if(d.dataset.mode==='sourceHistoryHelp'){void openHistoryActivity(state,d.dataset.activity).catch(e=>toast(e.message));return;}if(d.dataset.mode==='sourceHistoryCatalogHelp'){void openActivities(state).catch(e=>toast(e.message));return;}if(d.dataset.mode==='warehouseEggSaleConfirm'){void openWarehouse(state).catch(e=>toast(e.message));return;}if(resourceReturnStack.length&&['nativeResourceShop','sourceRecharge','nativeVipThresholds'].includes(d.dataset.mode)){void returnResourcePage().catch(e=>toast(e.message));return;}d.close();d.className='';delete d.dataset.mode;delete d.dataset.returnToCollection;}
+function closeDialog(){if(closeCommonDrawOdds()||closeHistoryResult())return;const d=$('#modal');if(['sourceHistoryHelp','sourceHistoryOdds'].includes(d.dataset.mode)){void openHistoryActivity(state,d.dataset.activity).catch(e=>toast(e.message));return;}if(d.dataset.mode==='sourceMonopolyRewards'||d.classList.contains('source-monopoly-board')){void openMonopolyHome(state).catch(e=>toast(e.message));return;}if(d.dataset.mode==='sourceHistoryCatalogHelp'){void openActivities(state).catch(e=>toast(e.message));return;}if(d.dataset.mode==='warehouseEggSaleConfirm'){void openWarehouse(state).catch(e=>toast(e.message));return;}if(resourceReturnStack.length&&['nativeResourceShop','sourceRecharge','nativeVipThresholds'].includes(d.dataset.mode)){void returnResourcePage().catch(e=>toast(e.message));return;}d.close();d.className='';delete d.dataset.mode;delete d.dataset.returnToCollection;}
 async function showSettings(){const version=await window.ranch?.version?.().catch(()=>null);await openNativePaper('本地存档',`<p>御龙高手 <b>v${version??'未知'}</b>　操作后自动保存</p><div class="native-save-actions">${nativeButton('立即保存','save')}${nativeButton('导出存档','export')}${nativeButton('导入存档','import')}</div>`,'nativeSettings')}
 let suppressHabitatClick=false;
 const clipNames={breath:'呼吸',walk:'步行',especial:'特殊动作',combat:'战斗姿态',breathinbattle:'战斗待机',movein:'入场',hurt:'受击',dead:'倒下',airattack:'空中攻击',airattackend:'空中攻击收招',landattack:'地面攻击',landattackend:'地面攻击收招',magic:'施法',magicend:'施法收招',fly:'飞行',walk2:'步行二',walk3:'步行三'};
@@ -120,6 +122,13 @@ document.addEventListener('click',async e=>{
   if(type==='openActivities'||type==='openWelfare'||type==='openMonopolyActivities'){await persist(action(state,'activityVisit'));render();await openActivities(state,type==='openWelfare'?'福利':type==='openMonopolyActivities'?'大富翁':'全部');return}
   if(type==='openFirstCharge'){await persist(action(state,'activityVisit'));render();await openHistoryActivity(state,'first');return}
   if(type==='historyResultClose'){closeHistoryResult();return}
+  if(type==='raffleOdds'){await openCommonDrawOdds('raffle',el.dataset.value);return}
+  if(type==='lotteryOdds'){await openCommonDrawOdds('lottery',$('#modal').dataset.lotteryMode??1);return}
+  if(type==='drawOddsClose'){closeCommonDrawOdds();return}
+  if(type==='monopolyHome'){await openMonopolyHome(state);return}
+  if(type==='monopolyRewards'){await openMonopolyRewards(state,el.dataset.value);return}
+  if(type==='monopolyEnter'){const key=el.dataset.value;await persist(action(state,'historyActivity',{key,op:'enter',token:String(state.activities.history.revision)}));render();await openHistoryActivity(state,key);return}
+  if(type==='historyOdds'){await openHistoryOdds(state,el.dataset.value,id||1);return}
   if(type==='historyRanks'){await openHistoryRanks(state,el.dataset.value);return}
   if(type==='historyGift'){await persist(action(state,'activityGift',{id}));render();await openHistoryGiftResult(state);return}
   if(type==='historyTraining'){await openHistoryTraining(state,$('#modal').dataset.activity??'train-points');return}

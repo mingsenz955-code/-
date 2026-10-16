@@ -37738,6 +37738,18 @@
       "texture": "assets/res/Effects/Effect_Normal/equip_strengthen.pkm",
       "conversion": "static numeric source skeleton and all clips; easing pending comparison",
       "sha256": "0cbfb4715d95d6c99fef98b709d8f2dc91b27c3b5abaaf2b26b9569de54b84ac"
+    },
+    "effects/eff_shaizi.webp": {
+      "archive": "assets/res/Effects/eff_shaizi.xml",
+      "texture": "assets/res/Effects/eff_shaizi.pkm",
+      "conversion": "original ETC1 atlas decoded to lossless WebP",
+      "sha256": "4f24b65523b4296bbf095f0d4eb3a5d3115ebf89c9e331280a7bb374b14531ae"
+    },
+    "effects/eff_shaizi.json": {
+      "archive": "assets/res/Effects/eff_shaizi.xml",
+      "texture": "assets/res/Effects/eff_shaizi.pkm",
+      "conversion": "static numeric source skeleton and all clips; easing pending comparison",
+      "sha256": "fea5df338bb9ce4a96b9a920b7bc661b12c5f9d9a27076914578332b96137d2b"
     }
   }
 }

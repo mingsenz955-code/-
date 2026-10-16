@@ -11,11 +11,12 @@ export function lotteryCost(lottery,mode,count){
  const total=definition.cost*count,tokens=Math.min(lottery[definition.tokens],total);
  return {tokens,gems:total-tokens,total,tokenKey:definition.tokens};
 }
-export function sampleLottery(mode,random=Math.random){
- const pool=lotteryPool(mode);if(!pool.length)throw new Error('奖池未取得。');
+export function sampleLottery(mode,random=Math.random,{guarantee=false}={}){
+ const sourcePool=lotteryPool(mode),forced=sourcePool.filter(r=>r.type===16);const pool=guarantee?forced:sourcePool;if(!pool.length)throw new Error('奖池未取得。');
  const unit=()=>{const value=random();if(!Number.isFinite(value)||value<0||value>=1)throw new Error('抽奖随机值无效。');return value};
- const roll=Math.floor(unit()*pool.at(-1).offlineCumulative)+1;
- const row=pool.find(row=>roll<=row.offlineCumulative);
+ let row;if(guarantee){const weights=pool.map(r=>{const i=sourcePool.indexOf(r);return r.offlineCumulative-(sourcePool[i-1]?.offlineCumulative??0);}),total=weights.reduce((n,w)=>n+w,0);let roll=unit()*total;row=pool.at(-1);for(let i=0;i<pool.length;i++){roll-=weights[i];if(roll<0){row=pool[i];break;}}}else{const roll=Math.floor(unit()*pool.at(-1).offlineCumulative)+1;row=pool.find(row=>roll<=row.offlineCumulative);}
  const amount=row.min===row.max?row.min:row.min+Math.floor(unit()*(row.max-row.min+1));
  return {sourceRow:row.id,mode,type:row.type,itemId:row.itemId,amount,policy:LOTTERY_POLICY};
 }
+
+export function lotteryOdds(mode){const p=lotteryPool(mode),total=p.at(-1).offlineCumulative;return p.map((r,i)=>({...r,probability:(r.offlineCumulative-(p[i-1]?.offlineCumulative??0))/total}));}

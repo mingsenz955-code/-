@@ -35,7 +35,7 @@ test('offline sampler respects cumulative boundaries and inclusive quantity boun
 test('30 pending slots block draws before debit or random generation; claiming resources cannot duplicate',()=>{
  let s=fixture();for(let i=0;i<3;i++)s=action(s,'lotteryDraw',{mode:1,count:10},T,()=>0);
  const before=JSON.stringify(s);assert.throws(()=>action(s,'lotteryDraw',{mode:1,count:1},T,()=>{throw Error('RNG must not be called')}),/30格/);assert.equal(JSON.stringify(s),before);
- const claimed=action(s,'lotteryClaimResources',{},T);assert.equal(claimed.coins,s.coins+30000);assert.equal(claimed.lottery.pending.length,0);assert.equal(claimed.lottery.draws,30);assert.throws(()=>action(claimed,'lotteryClaimResources',{},T),/没有待领取/);
+ const claimed=action(s,'lotteryClaimResources',{},T);assert.equal(claimed.coins,s.coins+27000);assert.equal(claimed.lottery.pending.length,3);assert.equal(claimed.lottery.draws,30);assert.throws(()=>action(claimed,'lotteryClaimResources',{},T),/没有待领取/);
 });
 
 test('won dragon goes to chosen compatible habitat once; full or incompatible habitats retain the reward',()=>{
@@ -46,7 +46,7 @@ test('won dragon goes to chosen compatible habitat once; full or incompatible ha
 });
 
 test('v1-v4 saves migrate without granting draw currency and reject malformed/newer lottery records',()=>{
- for(const version of [1,2,3,4]){const s=createGame(T);s.version=version;delete s.lottery;const before=JSON.stringify(s),next=validate(s);assert.equal(next.version,12);assert.deepEqual(next.lottery,{normalTokens:0,advancedTokens:0,draws:0,pending:[]});assert.equal(JSON.stringify(s),before);assert.deepEqual(next.dragons,s.dragons);}
+ for(const version of [1,2,3,4]){const s=createGame(T);s.version=version;delete s.lottery;const before=JSON.stringify(s),next=validate(s);assert.equal(next.version,12);assert.deepEqual(next.lottery,{normalTokens:0,advancedTokens:0,draws:0,pending:[],pity:{1:0,2:0}});assert.equal(JSON.stringify(s),before);assert.deepEqual(next.dragons,s.dragons);}
  const s=action(fixture(),'lotteryDraw',{mode:1,count:1},T,()=>0.52);
  for(const mutate of [s=>delete s.lottery,s=>s.lottery.normalTokens=-1,s=>s.lottery.pending[0].id=2,s=>s.lottery.pending[0].sourceRow=-1,s=>s.lottery.pending[0].amount=2,s=>s.lottery.pending[0].policy='server-verified',s=>s.lottery.pending[0].mode=2]){const bad=structuredClone(s);mutate(bad);assert.throws(()=>validate(bad));}
 });

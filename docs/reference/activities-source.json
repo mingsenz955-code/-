@@ -484,7 +484,7 @@
     },
     {
       "key": "limited-1",
-      "title": "限时神龙·狂龙",
+      "title": "限时神龙·远古•三眼魔龙",
       "kind": "limited",
       "table": "shenlong_1",
       "price": 280,
@@ -1133,7 +1133,7 @@
     },
     {
       "key": "limited-2",
-      "title": "限时神龙·高能威龙",
+      "title": "限时神龙·远古•高能威龙",
       "kind": "limited",
       "table": "shenlong_2",
       "price": 280,
@@ -1782,7 +1782,7 @@
     },
     {
       "key": "limited-3",
-      "title": "限时神龙·大圣龙",
+      "title": "限时神龙·远古•大圣龙",
       "kind": "limited",
       "table": "shenlong_3",
       "price": 280,
@@ -2431,12 +2431,12 @@
     },
     {
       "key": "limited-4",
-      "title": "限时神龙·蛋壳龙",
+      "title": "限时神龙·远古•大黄蜂",
       "kind": "limited",
       "table": "shenlong_4",
       "price": 280,
       "tenPrice": 2800,
-      "featured": 1204,
+      "featured": 1205,
       "simulation": [
         {
           "id": 1,
@@ -3080,12 +3080,12 @@
     },
     {
       "key": "limited-5",
-      "title": "限时神龙·火凤凰",
+      "title": "限时神龙·远古•大黄蜂",
       "kind": "limited",
       "table": "shenlong_5",
       "price": 280,
       "tenPrice": 2800,
-      "featured": 1206,
+      "featured": 1205,
       "simulation": [
         {
           "id": 1,

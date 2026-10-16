@@ -28,7 +28,7 @@ export async function openRaffleDialog(state){
  // With no ticket it swaps the same two positions to gems and shows 100/900 or 280/2500.
  for(const node of layout.children)if((node.name==='zhongji'&&(tickets[6048]??0)===0)||(node.name==='gaoji'&&(tickets[6049]??0)===0))for(const group of node.children??[])if(group.name==='money')for(const image of group.children??[])if(image.name?.startsWith('daijuan_'))image.img='#ui_lotterydragon_mojing.png';
  const scale=Math.min((innerWidth-20)/1024,(innerHeight-20)/770);dialog.style.setProperty('--source-scale',scale);
- dialog.innerHTML=`<div class="source-artboard">${renderSourceLayout(layout,{values,slots,actions,hidden:new Set(['txt1','zhongji/money/mojing_one','zhongji/money/mojing_ten','gaoji/money/mojing_one','gaoji/money/mojing_ten'])})}</div>`;dialog.showModal();
+ dialog.innerHTML=`<div class="source-artboard">${renderSourceLayout(layout,{values,slots,actions,hidden:new Set(['txt1','zhongji/money/mojing_one','zhongji/money/mojing_ten','gaoji/money/mojing_one','gaoji/money/mojing_ten'])})}<nav class="raffle-odds-buttons">${['junior','mid','senior'].map((m,i)=>`<button data-action="raffleOdds" data-value="${m}">${['初级','中级','高级'][i]}概率与保底</button>`).join('')}</nav></div>`;dialog.showModal();
 }
 
 export async function playRaffleDraw(mode){

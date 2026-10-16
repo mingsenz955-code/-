@@ -7,7 +7,7 @@ const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&g
 const layouts=new Map();
 async function layout(name){if(!layouts.has(name))layouts.set(name,fetch(`assets/original/layouts/${name}.json`).then(r=>r.json()));return layouts.get(name);}
 function openShell(mode,lotteryMode){const dialog=document.querySelector('#modal');if(dialog.open)dialog.close();dialog.className='source-dragon-dialog source-lottery-dialog';dialog.dataset.mode=mode;dialog.dataset.lotteryMode=String(lotteryMode);dialog.style.setProperty('--source-scale',Math.min((innerWidth-20)/1024,(innerHeight-20)/768));return dialog;}
-const notice='<p class="lottery-notice">离线基础池：服务器概率、奖励数量待核实；活动抽奖尚未开放。</p>';
+const notice='<p class="lottery-notice">本机概率与新增十抽保底可查看 <button data-action="lotteryOdds">概率与保底</button></p>';
 export async function openLotteryOptions(){
  const source=await layout('ui_dragonrand_options'),dialog=openShell('sourceLotteryOptions',1);
  const slots={'normal/icon':`<div class="lottery-option-model">${dragonArt(speciesKey(1001),'',7)}</div>`,'pro/icon':`<div class="lottery-option-model">${dragonArt(speciesKey(1041),'',7)}</div>`};
@@ -24,7 +24,7 @@ export async function openLotteryDialog(state,mode=1){
  const actions={close:{type:'close',label:'关闭'},fanhui:{type:'lotteryOptions',label:'切换抽奖档位'},tishi:{type:'lotteryHelp',label:'奖池说明'},'btn_one/btn':{type:'lotteryDraw',value:1,label:'抽取1次'},'btn_ten/btn':{type:'lotteryDraw',value:10,label:'抽取10次'},'lingqu/btn':{type:'lotteryClaimResources',label:'领取所有资源'}};
  const disabled=new Set();for(const [count,key] of [[1,'btn_one/btn'],[10,'btn_ten/btn']])if(state.lottery.pending.length+count>30||state.gems<lotteryCost(state.lottery,mode,count).gems)disabled.add(key);
  if(!state.lottery.pending.some(prize=>prize.type!==16))disabled.add('lingqu/btn');
- dialog.innerHTML=`<div class="source-artboard">${renderSourceLayout(source,{values,slots,actions,disabled})}<p class="lottery-count">待领取 ${state.lottery.pending.length}/30 · 总抽取 ${state.lottery.draws}</p>${notice}</div>`;dialog.showModal();
+ dialog.innerHTML=`<div class="source-artboard">${renderSourceLayout(source,{values,slots,actions,disabled})}<p class="lottery-count">待领取 ${state.lottery.pending.length}/30 · 总抽取 ${state.lottery.draws} · 保底剩余 ${10-(state.lottery.pity?.[mode]??0)}抽</p>${notice}</div>`;dialog.showModal();
 }
 export function openLotteryPrize(state,id){
  const prize=state.lottery.pending.find(prize=>prize.id===id);if(!prize)return;
@@ -34,4 +34,4 @@ export function openLotteryPrize(state,id){
  else content=`<h2>${{1:'金币',2:'食物',3:'魔晶'}[prize.type]} × ${prize.amount}</h2><p>领取全部资源奖励，幼龙留在待领取栏。</p><button class="primary" data-action="lotteryClaimResources">领取所有资源</button>`;
  dialog.innerHTML=`<button class="small close" data-action="returnLottery">返回抽奖</button>${content}<p class="muted">本次结果已保存，关闭或重启不会重抽。</p>`;dialog.showModal();
 }
-export function lotteryHelp(){return '单抽/十连优先扣对应抽奖币，不足部分用魔晶补齐。待领取栏30格，资源需领取，幼龙需安置。\n\n离线抽取使用客户端表的第7列累计数值和第5/6列数量范围；该解释与服务器真实概率、数量尚未核实。无虚构免费次数、保底或活动奖池。\n基础池记录：普通'+lotteryPool(1).length+'行，高级'+lotteryPool(2).length+'行。';}
+export function lotteryHelp(){return '单抽/十连优先扣对应抽奖币，不足部分用魔晶补齐。待领取栏30格，资源需领取，幼龙需安置。\n\n离线抽取使用客户端表的第7列累计数值和第5/6列数量范围；该解释与服务器真实概率、数量尚未核实。新增连续十抽内必得龙的本地保底，免费次数和活动奖池不改变。\n基础池记录：普通'+lotteryPool(1).length+'行，高级'+lotteryPool(2).length+'行。';}

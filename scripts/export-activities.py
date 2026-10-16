@@ -85,6 +85,10 @@ for n in config['items']:
 for d in defs:
  if d['key'].startswith('wheel-'):
   preview=[1092,1076,1041,1073,1071,1093][int(d['key'].split('-')[1])];d['preview']=preview;d['title']='幸运抽奖·'+meta[str(preview)]['name']
+for d in defs:
+ if d['kind']=='limited':
+  featured=next(p['itemId'] for r in d['items'] if r['id']==1 for p in r['rewards'] if p['type']==5)
+  d['featured']=featured;d['title']='限时神龙·'+meta[str(featured)]['name']
 fixed_packs={}
 for row in t['items']:
  if row[0] in [6013,6015] or len(row)<=60 or not row[60] or not isinstance(row[60],str):continue
