@@ -389,3 +389,9 @@
 
 ## v0.16.55 装备滚动输入
 - 原装备分组/列表布局和原卡片未更改。本地source-bag-equipment-list不在原有wheel适配选择器内，也没有拖动输入，原生mouseWheel修前失败；现共用列表补PC滚轮横移与按实际缩放比例左键拖动，源版及正式包真实鼠标回归通过。属于桌面输入适配，不把鼠标滚轮称为原手机交互。
+
+
+## v0.16.56 玩家资料与等级依据
+- UserInfoPanelFromTopUI静态确认实际布局是panel_user_name_info，昵称revise/btn和bg_icon触摸分别打开ChangeNickNamePanel/HeadSelectPanel。改名6字、第一次免费/之后100魔晶、ConfirmPanel使用panel_msg，均取原客户端；HeadSelectPanel明文确认7列94/96间距、图鉴曾拥有列表、预览后关闭保存。
+- DragonManager根字节码BASE_MAX_DRAGON_LEVEL=10，函数29遍历已完工dragonLevelAmplifiers取max；APK建筑9—12上限15/20/25/30。SpeedUpPanel.openBreed及GoalSpeedBreed明文确认费用公式和两亲代类型白名单事件。源SHA/提取规则见reference/profile-growth-source.json，可重跑scripts/export-profile-growth.py。
+- 资料在线重名/敏感词服务、平台账号不可离线证明；LOCAL ID与本地原表词串检查明确属于适配。236规则测试及源/最终Windows包真实鼠标、独立重启通过，仅证明所列流程，不等于所有任务/界面逐像素验收。

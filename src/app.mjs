@@ -1,4 +1,7 @@
 import {missionById} from './missions.mjs';
+import {profileOf,avatarImage,nicknameError,renameCost} from './player-profile.mjs';
+import {openPlayerProfile,openProfileRename,openProfileHeads,confirmProfileRename} from './player-profile-dialog.mjs';
+import {openBreedSpeed} from './ranch-dialogs.mjs';
 import {openMissions,openMissionReward} from './missions-dialog.mjs';
 import {activityFragment,activityItemDescription} from './historical-activities.mjs';
 import {showFarmOptions,clearBuildingOptions,openFarmSourceInfo} from './building-options.mjs';
@@ -94,7 +97,7 @@ async function showAcquisition(id){await openAcquisition(state,id)}
 function render(){
  clearBuildingOptions();tab='ranch';$('#app').innerHTML=`<div class="app ranch-mode"><main class="main"><section class="scene" aria-label="牧场主区域">${ranch()}${originalHud(state,{expanded:moreExpanded})}</section></main></div>`;applyCamera();tick();
 }
-function tick(){const modal=$('#modal');if(!busy&&modal?.open&&modal.dataset.mode==='farm'&&Number(modal.dataset.farmReady)>0&&Date.now()>=Number(modal.dataset.farmReady)){delete modal.dataset.farmReady;void openFarmDialog(state,Number(modal.dataset.farmId??0))}if(!busy&&modal?.open&&modal.dataset.mode==='sourceGemExplore'&&Number(modal.dataset.freeReady)>0&&Date.now()>=Number(modal.dataset.freeReady)){delete modal.dataset.freeReady;void openGemExplore(state)}if(!busy&&modal?.open&&modal.dataset.mode==='sourceShenfu'&&Number(modal.dataset.freeReady)>0&&Date.now()>=Number(modal.dataset.freeReady)){delete modal.dataset.freeReady;void openShenfuDialog(state)}document.querySelectorAll('[data-timer]').forEach(el=>el.textContent=el.classList.contains('source-pve-reward-state')&&Date.now()>=Number(el.dataset.timer)?'可领取':time(Number(el.dataset.timer)));document.querySelectorAll('[data-ready]').forEach(el=>el.disabled=busy||Date.now()<Number(el.dataset.ready));document.querySelectorAll('[data-income]').forEach(el=>{const h=state.habitats.find(h=>h.id===Number(el.dataset.income));if(h)el.textContent=fmt(income(state,h))})}
+function tick(){const modal=$('#modal');if(!busy&&modal?.open&&['nativeBreedingJob','nativeBreedSpeed'].includes(modal.dataset.mode)&&state.breeding?.phase==='breeding'&&Date.now()>=state.breeding.readyAt&&modal.querySelector('[data-action=openBreedSpeed],[data-action=speedBreed]'))void openBreed(state);if(!busy&&modal?.open&&modal.dataset.mode==='farm'&&Number(modal.dataset.farmReady)>0&&Date.now()>=Number(modal.dataset.farmReady)){delete modal.dataset.farmReady;void openFarmDialog(state,Number(modal.dataset.farmId??0))}if(!busy&&modal?.open&&modal.dataset.mode==='sourceGemExplore'&&Number(modal.dataset.freeReady)>0&&Date.now()>=Number(modal.dataset.freeReady)){delete modal.dataset.freeReady;void openGemExplore(state)}if(!busy&&modal?.open&&modal.dataset.mode==='sourceShenfu'&&Number(modal.dataset.freeReady)>0&&Date.now()>=Number(modal.dataset.freeReady)){delete modal.dataset.freeReady;void openShenfuDialog(state)}document.querySelectorAll('[data-timer]').forEach(el=>el.textContent=el.classList.contains('source-pve-reward-state')&&Date.now()>=Number(el.dataset.timer)?'可领取':time(Number(el.dataset.timer)));document.querySelectorAll('[data-ready]').forEach(el=>el.disabled=busy||Date.now()<Number(el.dataset.ready));document.querySelectorAll('[data-income]').forEach(el=>{const h=state.habitats.find(h=>h.id===Number(el.dataset.income));if(h)el.textContent=fmt(income(state,h))})}
 async function persist(next){busy=true;saveStatus='正在保存…';if($('#save-status'))$('#save-status').textContent=saveStatus;try{await storage.save(next);state=next;saveStatus=`已保存 · ${new Date().toLocaleTimeString('zh-CN')}`;}catch(e){saveStatus='保存失败 · 请重试';throw e}finally{busy=false}}
 const resourceReturnStack=[];
 const resourceScrollSelectors=['.history-reward-list','.history-activity-grid','.history-categories','.native-shop-list','.native-resource-groups','.native-resource-row'];
@@ -110,7 +113,8 @@ async function returnResourcePage(){if(busy||!resourceReturnStack.length)return;
  const search=$('#modal').querySelector('#history-search');if(search&&frame.search!==undefined){search.value=frame.search;search.dispatchEvent(new Event('input',{bubbles:true}));}
  for(const {selector,index,top,left} of frame.scrolls){const el=$('#modal').querySelectorAll(selector)[index];if(el){el.scrollTop=top;el.scrollLeft=left;}}
  }finally{busy=false;}}
-function closeDialog(){if(closeHistoryResult())return;const d=$('#modal');if(resourceReturnStack.length&&['nativeResourceShop','sourceRecharge','nativeVipThresholds'].includes(d.dataset.mode)){void returnResourcePage().catch(e=>toast(e.message));return;}d.close();d.className='';delete d.dataset.mode;delete d.dataset.returnToCollection;}
+async function finishProfileHeads(){const d=$('#modal');if(busy)return;const avatar=Number(d.dataset.profileAvatar);if(avatar!==profileOf(state).avatar)await persist(action(state,'changePlayerAvatar',{avatar}));render();await openPlayerProfile(state);}
+function closeDialog(){if(closeHistoryResult())return;const d=$('#modal');if(d.dataset.mode==='sourceProfileHeads'){void finishProfileHeads().catch(e=>toast(e.message));return;}if(d.dataset.mode==='sourceProfileRename'){void openPlayerProfile(state);return;}if(d.dataset.mode==='sourceProfileRenameConfirm'){void openProfileRename(state,d.dataset.profileName);return;}if(resourceReturnStack.length&&['nativeResourceShop','sourceRecharge','nativeVipThresholds'].includes(d.dataset.mode)){void returnResourcePage().catch(e=>toast(e.message));return;}d.close();d.className='';delete d.dataset.mode;delete d.dataset.returnToCollection;}
 async function showSettings(){const version=await window.ranch?.version?.().catch(()=>null);await openNativePaper('本地存档',`<p>御龙高手 <b>v${version??'未知'}</b>　操作后自动保存</p><div class="native-save-actions">${nativeButton('立即保存','save')}${nativeButton('导出存档','export')}${nativeButton('导入存档','import')}</div>`,'nativeSettings')}
 let suppressHabitatClick=false;
 const clipNames={breath:'呼吸',walk:'步行',especial:'特殊动作',combat:'战斗姿态',breathinbattle:'战斗待机',movein:'入场',hurt:'受击',dead:'倒下',airattack:'空中攻击',airattackend:'空中攻击收招',landattack:'地面攻击',landattackend:'地面攻击收招',magic:'施法',magicend:'施法收招',fly:'飞行',walk2:'步行二',walk3:'步行三'};
@@ -136,6 +140,16 @@ document.addEventListener('click',async e=>{
   if(type==='historyPillShop'){await openResourceShop(state,{type:'i'});return}
   if(type==='historyTrain'){await persist(action(state,'activityTrain',{id,count:Number(el.dataset.count??1)}));render();await openHistoryTraining(state);toast(state.log[0]);return}
   if(type==='historyFilter'){await openActivities(state,el.dataset.value);return}
+  if(type==='openPlayerProfile'){if(!state.profile)await persist(action(state,'initProfile'));render();await openPlayerProfile(state);return}
+  if(type==='profileRename'){await openProfileRename(state);return}
+  if(type==='profileRenameConfirm'){const name=$('#profile-nickname').value;if(name===''){await openPlayerProfile(state);return;}const error=nicknameError(name);if(error)throw Error(error);if(name===profileOf(state).name){await openPlayerProfile(state);return;}if(renameCost(state)){await confirmProfileRename(name);return;}await persist(action(state,'renamePlayer',{name}));render();await openPlayerProfile(state);return}
+  if(type==='profileRenameCancel'){await openProfileRename(state,$('#modal').dataset.profileName);return}
+  if(type==='profileRenameApply'){await persist(action(state,'renamePlayer',{name:$('#modal').dataset.profileName}));render();await openPlayerProfile(state);return}
+  if(type==='profileHeads'){await openProfileHeads(state);return}
+  if(type==='profileHeadSelect'){const d=$('#modal');d.dataset.profileAvatar=id;d.querySelectorAll('.profile-head-choice').forEach(b=>b.classList.toggle('is-selected',Number(b.dataset.id)===id));document.querySelector('.hud-avatar').src=avatarImage(id);return}
+  if(type==='profileHeadsClose'){await finishProfileHeads();return}
+  if(type==='openBreedSpeed'){await openBreedSpeed(state);return}
+  if(type==='speedBreed'){await persist(action(state,'speedBreed'));render();await openBreed(state);tick();toast(state.log[0]);return}
   if(type==='historyFamily'){await openHistoryFamily(state,el.dataset.value);return}
   if(type==='historyOpen'){if(!state.activities.history){await persist(action(state,'activityVisit'));render();}await openHistoryActivity(state,el.dataset.value);return}
   if(type==='historyHelp'){await openHistoryHelp(el.dataset.value);return}

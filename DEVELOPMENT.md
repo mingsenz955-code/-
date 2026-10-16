@@ -844,3 +844,12 @@
 - 新equipment-list-scroll仅作用于共用装备/碎片横向行：垂直滚轮转scrollLeft，原横向触控板滚动保留；鼠标左键横拖超过8px后按真实画板scale换算距离，并捕获指针。拖动结束抑制该手势生成的误点击，新一次按下立即解除抑制；普通按钮点击、原浏览器滚动条手势、地图缩放均不拦截。禁止卡片文字选择和原生图片拖拽，原布局/卡片/图像和升星规则未改。
 - 新smoke-equipment-scroll真实mouseWheel/反向滚轮/从升星按钮开始拖动验证列表移动且不误开；修后源版与v55包均通过，随后正常点eq-1进入升星、添加/移除材料、原费用56000/事务/详情及包内独立重启通过。源版装备强化/分解确认与取消/已穿戴保护/龙珠购买原鼠标流程同时通过。未为纯UI修改重新跑无关战斗或活动测试。
 - 发布前备份player-data/recovery/before-equipment-scroll-v55-1792085146621.json；正式99级/10龙/12巢与个人资源不注入测试材料。根启动器继续载入工程统一存档，dist只留最新v55，旧包移入回收站。
+
+
+## 最新检查点 — v0.16.56 原玩家资料与任务养成依赖（2026-10-16）
+- 用户要求符合原版并加入资料修改。静态核对UserInfoPanelFromTopUI/ChangeNickNamePanel/HeadSelectPanel/ConfirmPanel，复用panel_user_name_info、panel_user_name、panel_userhead_change、panel_msg及原头像资源，不自创可编辑等级/ID。左上头像打开资料，改名首次免费、随后100魔晶并确认；取消保留草稿不扣费，中文输入法组合不提前截断，最多6字。头像原7列布局，只列曾拥有记录，选择预览、关闭保存，同步HUD与竞技自身头像。
+- profile为可选旧档字段，仅实际打开资料才建立本地ID；不向正式存档写测试昵称/头像。原zanghua去重31961词用于本地检查，未知在线重名/外部过滤、账号认证不冒充还原。设置仍是本地存档管理，原完整设置未恢复。详见PROFILE.md及reference/profile-growth-source.json。
+- 核对原DragonManager基础上限10及完工祭坛9/10/11/12上限15/20/25/30，接入真实喂养；旧高等级龙不降级，施工中不提前解锁。原任务146/159需两条25/30级龙，已验证第一条不完成、第二条才完成。原繁殖加速panel_breed_speedup接真实扣费、两亲代类型事件和领取蛋流程，五条SpeedBreed任务都有事务回归。
+- 236项规则测试全通过，最终等级提示调整后新增5项再次通过。源版、正式v56包均原生鼠标验证免费/付费改名及取消、头像预览/Esc保存、任务前往繁殖加速及25/30级实际喂养；最终包profile-package-v56-release完整验收及独立重启通过。现有任务原生鼠标回归亦通过。截图work/player-profile-original.png、player-head-original.png、breed-speed-original.png已目视检查。
+- 任务已有原147条后教程定义、10活跃上限；本轮补上加速与高等级前置，不把数量足够称为147条全部实机完成。新手教程、可交互障碍物、逐地块扩建和出现动画仍待核对，继续见MISSIONS.md/GAPS.md。
+- 发布前备份player-data/recovery/before-profile-growth-v56-1792109852308.json；根启动游戏.exe实际载入v56、desktopBridge=true、工程统一存档。99级/10龙/12巢及资源、装备/宝石/符文、活动/任务逐字段保持。启动后正式档出现昵称“木木木”、renameCount=1，故profile相对备份新增是实际资料操作，不回滚成空字段或QA昵称。dist仅留v56，旧v55移入回收站。

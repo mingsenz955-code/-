@@ -29,6 +29,7 @@ function eventStep(s,old,g,type,p){const a=g.args;
  if(g.kind==='BuyResources')return type==='buyResource'&&a[0].includes(p.id)?1:0;
  if(g.kind==='Expand')return type==='expandIsland'?1:0;
  if(g.kind==='Breed'){const ids=[p.a,p.b].map(id=>dragonId(old.dragons.find(d=>d.id===id)));return type==='breed'&&ids.every(id=>a[0].includes(id))?1:0;}
+ if(g.kind==='SpeedBreed'){const ids=(old.breeding?.parents??[]).map(id=>dragonId(old.dragons.find(d=>d.id===id)));return type==='speedBreed'&&ids.length===2&&ids.every(id=>a[0].includes(id))?1:0;}
  if(g.kind==='HatchEgg'){if(type!=='hatch'||(a[2]??[]).some(id=>!s.missions.done.includes(id)&&!s.missions.linked.includes(id)))return 0;return a[0].includes(dragonId(old.incubator))?1:0;}
  if(g.kind==='SpeedHatchByElement'){if(type!=='speedIncubator'||(a[3]??[]).some(id=>!s.missions.done.includes(id)&&!s.missions.linked.includes(id)))return 0;const elements=a[2]===false?a[0]:[...new Set(a[0].flatMap(id=>Object.values(SPECIES).find(d=>d.originalId===id)?.attributes??[]))];return (SPECIES[old.incubator?.species]?.attributes??['?']).every(v=>elements.includes(v))?1:0;}
  return 0;
