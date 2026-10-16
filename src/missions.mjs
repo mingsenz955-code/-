@@ -9,7 +9,7 @@ export const activeMissions=s=>s.missions?MISSIONS.filter(g=>!s.missions.done.in
 export function validateMissions(s){const m=s.missions;if(m===undefined)return;if(!m||m.version!==1||!m.progress||Array.isArray(m.progress))throw Error('任务存档无效。');for(const k of ['done','linked','notices'])if(!Array.isArray(m[k])||new Set(m[k]).size!==m[k].length||m[k].some(id=>!missionById(id)))throw Error('任务完成记录无效。');if(m.linked.some(id=>m.done.includes(id))||m.notices.some(id=>!m.done.includes(id)))throw Error('任务奖励记录无效。');for(const [id,n] of Object.entries(m.progress))if(!missionById(id)||!Number.isSafeInteger(n)||n<0||n>missionTarget(missionById(id)))throw Error('任务进度无效。');}
 export function missionRewards(g){const r=g.reward,out=[];for(const i of [0,2])if(['g','f','c','x'].includes(r[i])&&r[i+1]>0)out.push({type:{g:1,f:2,c:3,x:0}[r[i]],itemId:-1,amount:r[i+1]});if(r[4]===1&&r[7]>0)out.push({type:r[5],itemId:r[6],amount:r[7]});return out;}
 const dragonId=d=>SPECIES[d?.species]?.originalId;
-const buildings=s=>[19,1,s.farmBuildingId??16,...s.habitats.filter(h=>!h.job).map(h=>h.buildingId??24),...s.structures.filter(o=>!o.readyAt).map(o=>o.itemId)];
+const buildings=s=>[...(!s.tutorial?.sourceOpening?[19,s.farmBuildingId??16]:[]),1,...s.habitats.filter(h=>!h.job).map(h=>h.buildingId??24),...s.structures.filter(o=>!o.readyAt).map(o=>o.itemId)];
 const nodeId=mission=>(Math.floor(mission/1000)+900)*100+mission%1000;
 function snapshot(s,g){const a=g.args,b=buildings(s);switch(g.kind){
  case 'BuildId':return b.filter(id=>a[0].includes(id)).length;

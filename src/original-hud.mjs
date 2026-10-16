@@ -1,3 +1,4 @@
+import {guideActive} from './tutorial.mjs';
 import {configuredLineup,lineupPower} from './battle.mjs';
 import {vipInfo} from './vip.mjs';
 import {playerProgress} from './game.mjs';
@@ -46,5 +47,5 @@ export function originalHud(state,{expanded=false}={}){
   return `<${act?'button':'div'} class="hud-node ${act?'hud-clickable':''}" style="${style}" ${act?`data-action="${act}" aria-label="${label}"`:''}>${children}${text}${portrait}</${act?'button':'div'}>`;
  };
  const chosen=['level','gold','food','gem','btn_RenWU','btn_YouJian','btn_pickAll','btn_GengDuo','btn_ZhanDou','btn_recharge',...(!expanded?['act_btn']:[]),...(expanded?['btn_TuJian','btn_NiuDanJi','btn_mydragon','btn_YuLong','btn_ShangDian','btn_SheZhi','btn_ZhuangBei','btn_FuWen','btn_CangKu','btn_Rank','btn_BaoShi','btn_BuZhen','btn_Guild']:[])];
- return `<button class="hud-vip-entry" data-action="rechargeVip">VIP${vipInfo(state).level}</button><div class="original-hud" style="width:${rootWidth}px;height:${rootHeight}px;--hud-scale:${scale}">${layout.children.filter(n=>chosen.includes(n.name)).map(n=>render(n,true)).join('')}</div>`;
+ return `<button class="hud-vip-entry" data-action="rechargeVip">VIP${vipInfo(state).level}</button><div class="original-hud" style="width:${rootWidth}px;height:${rootHeight}px;--hud-scale:${scale}">${layout.children.filter(n=>chosen.includes(n.name)&&(!guideActive(state)||!['btn_RenWU','act_btn','btn_ZhanDou'].includes(n.name))).map(n=>render(n,true)).join('')}</div>`;
 }

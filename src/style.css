@@ -364,3 +364,15 @@ body:has(#modal[open].native-fullscreen){background:#09242e}
 .mission-speaker{position:absolute;width:300px;height:250px;object-fit:fill;transform:translate(-50%,-50%);pointer-events:none}
 
 .original-land-board{position:absolute;z-index:900;width:94px;height:100px;padding:0;background:none;border:0;transform:translate(-50%,-100%);pointer-events:auto}.original-land-board:hover,.original-land-board:active,.original-land-board:focus{transform:translate(-50%,-100%);background:none}.original-land-board img{width:100%;height:100%;object-fit:contain;pointer-events:none}.original-land-board span{position:absolute;left:0;top:13px;width:100%;font-size:24px;color:white;text-shadow:1px 2px 2px #492b16}
+
+.original-land-mask{position:absolute;transform:translate(-50%,-50%);z-index:1;pointer-events:none;image-rendering:auto}.ranch-world .world-objects{z-index:2}
+
+.world-object[hidden]{display:none!important}.tutorial-layer:popover-open{display:block;position:fixed;inset:0;width:100vw;height:100vh;margin:0;padding:0;max-width:none;max-height:none;border:0;background:none;overflow:visible;pointer-events:none}.tutorial-layer::backdrop{background:none;pointer-events:none}.tutorial-artboard{position:absolute;width:1024px;height:768px;left:50%;top:50%;transform:translate(-50%,-50%) scale(var(--guide-scale));pointer-events:none}.tutorial-artboard .source-label{line-height:1.35;white-space:normal}.tutorial-artboard .source-sprite{pointer-events:none}.tutorial-pause{position:absolute;right:8px;top:8px;font-size:15px;min-width:100px;pointer-events:auto}.tutorial-finish{position:absolute;left:460px;top:480px;pointer-events:auto}.tutorial-live-arrow{position:fixed;width:60px;height:80px;object-fit:contain;transform:translate(-50%,-100%);animation:tutorial-bounce .8s ease-in-out infinite;pointer-events:none}@keyframes tutorial-bounce{50%{transform:translate(-50%,calc(-100% - 12px))}}
+
+.original-land-board{z-index:2}.ranch-world .world-objects{z-index:3}
+
+.original-land-board.is-selecting{z-index:900}
+
+.tutorial-pause{left:460px;right:auto;top:8px}
+
+.tutorial-artboard [data-source="miaoshu"]{align-items:flex-start}

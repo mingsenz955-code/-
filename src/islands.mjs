@@ -6,12 +6,12 @@ export const ISLANDS=[{id:0,name:'草地龙岛',art:'islandleft_g_bg.png'},{id:1
 export const islandOf=o=>o?.islandId??0;
 export const unlockedIslands=s=>currentIsland(s);
 export function validateIsland(s,id){if(!Number.isInteger(id)||id<0||id>=unlockedIslands(s))throw Error('龙岛尚未解锁。');return id;}
-export function findIslandPosition(island,objects,info,plots=0){
- if(!island)return findBuildingPosition(objects,info,plots);
+export function findIslandPosition(island,objects,info,plots=0,state=null){
+ if(!island)return findBuildingPosition(objects,info,plots,state,island);
  const g=placementGrid(plots),candidates=[];
  for(let r=0;r<g.rows;r++)for(let c=0;c<g.columns;c++){const p=gridPosition(c,r);if(p[0]<22||p[0]>72||p[1]<38||p[1]>69)continue;candidates.push(p);}
  candidates.sort((a,b)=>(a[0]-47)**2+(a[1]-48)**2-((b[0]-47)**2+(b[1]-48)**2));
- return candidates.find(p=>canPlaceObject(objects,'new',info,p,plots))??null;
+ return candidates.find(p=>canPlaceObject(objects,'new',info,p,plots,state,island))??null;
 }
 
 // Lua uses bottom-up Y. Use one uniform source-to-PC scale for every island.

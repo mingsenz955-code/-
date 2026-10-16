@@ -401,3 +401,9 @@
 - APK config_cn_qq.expansion_prices明确定义cash/coins/neighbors/inventory_qte；原pcf列2是cash，旧minLevel推断错误，列4为neighbors，不能拿它扣魔晶。原Config_CN_QQ.getExpansionPrices与ExpandShopPanel.initData具名字段直接佐证；onBtnBuy只扣costs[cost]=price，金币/魔晶独立商品。
 - ExpansionManager SHA256 36e41972dadd2f0342e0697e54d55313d06334497cbd5ed3fd992e2e20ff85bc根初始化字面量提供16待购矩形、20地块分组8/4/6/2及first_land 22/31/42；getTotalLandsNumber累加全部分组。未执行Lua，导出拒绝非字面量指令，详情见expansion-provenance.json/scripts/export-expansion.py。
 - globals.ISLANDS_COSTS为g0/g100000/c125/c500，ExpandShopPanel及LandBoardDelegate恢复地图牌/选币/选择地块流程。原地图牌偏移有来源，初始障碍物服务器分布及原建筑全局tile平面未取得，分别记录，不能用离线碰撞范围冒充原精确地块。
+
+
+## v0.16.58 教学与原地块遮罩
+- TutorialManager SHA256 71cc1e48fe962392e3328f54e40ba1d572e7940f976f298772baad2b36c8d007；根初始化PC40—273为46个箭头，PC285—333为47文本键。函数20按原step前缀译标题，描述TOP；11/12/41/44/45不加载独立UI_XinShou布局。export-tutorial.py只读取字面量，配置及SHA见reference/tutorial-source.json。
+- 原Base SHA256 2e49418576b4d2902610a9dbd2dc6c9bf6a2e5fccf1294b92434c643b4923655；函数9 PC35—64把未购地的ui_mapland_land<ID>按各岛中心加x/y叠加，购买后移除。export-land-masks.py从原PNG逐行导出alpha及源SHA，不用近似矩形替代曲边遮罩。
+- 地块遮罩和已用27/13.5菱形在同一画板相交；不是声称已恢复Base全局rects/白格原平面。教学1800预算、4级岩土开局与教学固定熔岩是有来源文本支撑的离线教学方案，原服务器初始包/教程结果协议仍未知，TUTORIAL.md单独记录，不修改普通繁殖概率。
