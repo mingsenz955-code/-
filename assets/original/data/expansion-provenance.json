@@ -1,22 +1,39 @@
 {
   "baseline": "2.9.35-202402271124",
-  "tablesSha256": "1408d684c2a6530668a8ed4816ad1697d579077fed5d02b887d06f035395e750",
+  "namedConfigSha256": "84b4e22d525b8dc14cbbdbf5f3f5a15cceede9949dbf4ccd87a2e38ac13de8e9",
+  "landSourceSha256": "36e41972dadd2f0342e0697e54d55313d06334497cbd5ed3fd992e2e20ff85bc",
   "rows": 100,
-  "stepsWithCost": 94,
-  "inferredColumns": {
-    "1": "row index",
-    "2": "required ranch level (rises 2 -> 100 and stops at the level cap)",
-    "3": "gold price (rises 4000 -> 370000, never decreases)",
-    "4": "gem price (small integers 0..50, non-decreasing)",
-    "5": "plot number (1..N, the expansion slot the client unlocks)"
+  "lands": 16,
+  "columns": {
+    "1": "pcf row index",
+    "2": "cash price, NOT ranch level",
+    "3": "coins",
+    "4": "neighbors, NOT cash price",
+    "5": "inventory_qte, NOT plot ID"
   },
-  "evidence": [
-    "Columns 3 and 2 are monotonically non-decreasing across the whole table, which is what a price and a level gate look like.",
-    "The first four rows are all zero and carry plot 0, i.e. the starting island the player already owns.",
-    "The client ships islandtop/islandbottom/islandleft/islandright layouts with an entry sprite, lock sprites (nine on the top side) and islandtop_g_top_btn, plus thumbs_store_expansion_island_2/3/4 in the shop atlas, which is the expansion feature this table prices."
+  "islandCosts": [
+    {
+      "g": 0
+    },
+    {
+      "g": 100000
+    },
+    {
+      "c": 125
+    },
+    {
+      "c": 500
+    }
+  ],
+  "verified": [
+    "ExpandShopPanel.initData uses #expansions + 1 and prices.coins/prices.cash, independent currency offers",
+    "getIslandCost reads globals.ISLANDS_COSTS",
+    "ExpansionManager literal land rectangles and 8/4/6/2 grouping",
+    "ExpandShopPanel requires existing island fully owned before next island"
   ],
   "unverified": [
-    "The literal column meanings are not proven by any client column definition and must not be presented as the original rule.",
-    "Whether the server consumes this table unchanged, and how plots map onto ui_mapland_land<N> art, is unknown."
+    "Initial server obstacle distribution absent; do not fabricate original placements",
+    "Offline placement coordinate plane and prior saves differ from source tile plane; legacy islands grandfathered",
+    "neighbors is unused/commented in this client; real multiplayer excluded"
   ]
 }

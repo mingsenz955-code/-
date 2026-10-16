@@ -1,44 +1,29 @@
-"""Island expansion price evidence.
-
-expansion_prices is a pcf table with no *Info.lua column definition, so the reading below
-is an explicit inference from the values themselves and is recorded as such. The table is
-what the client uses for the 扩建 (island expansion) entries in the shop.
-"""
+"""Export named original expansion config and literal land tables, never execute Lua."""
 from pathlib import Path
-import json, hashlib
-ROOT = Path(__file__).resolve().parents[1]
-raw = (ROOT / 'assets/original/data/tables.json').read_bytes()
-tables = json.loads(raw)
-rows = tables['expansion_prices']
-valid = [row for row in rows if row[4] > 0]
-coins = [row[2] for row in valid]
-levels = [row[1] for row in valid]
-gems = [row[3] for row in valid]
-text = 'export const ORIGINAL_EXPANSION_PRICES=' + json.dumps(rows, ensure_ascii=False) + ';\n'
-(ROOT / 'assets/original/data/expansion.mjs').write_bytes(text.encode('utf8'))
-report = {
-    'baseline': '2.9.35-202402271124',
-    'tablesSha256': hashlib.sha256(raw).hexdigest(),
-    'rows': len(rows),
-    'stepsWithCost': len(valid),
-    'inferredColumns': {
-        '1': 'row index',
-        '2': 'required ranch level (rises 2 -> 100 and stops at the level cap)',
-        '3': 'gold price (rises 4000 -> 370000, never decreases)',
-        '4': 'gem price (small integers 0..50, non-decreasing)',
-        '5': 'plot number (1..N, the expansion slot the client unlocks)',
-    },
-    'evidence': [
-        'Columns 3 and 2 are monotonically non-decreasing across the whole table, which is what a price and a level gate look like.',
-        'The first four rows are all zero and carry plot 0, i.e. the starting island the player already owns.',
-        'The client ships islandtop/islandbottom/islandleft/islandright layouts with an entry sprite, lock sprites (nine on the top side) and islandtop_g_top_btn, plus thumbs_store_expansion_island_2/3/4 in the shop atlas, which is the expansion feature this table prices.',
-    ],
-    'unverified': [
-        'The literal column meanings are not proven by any client column definition and must not be presented as the original rule.',
-        'Whether the server consumes this table unchanged, and how plots map onto ui_mapland_land<N> art, is unknown.',
-    ],
-}
-(ROOT / 'assets/original/data/expansion-provenance.json').write_bytes(
-    (json.dumps(report, ensure_ascii=False, indent=2) + '\n').encode('utf8'))
-print('Expansion:', len(rows), 'rows,', len(valid), 'priced steps; gold', coins[0], '->', coins[-1],
-      '; level', levels[0], '->', levels[-1], '; gems max', max(gems))
+import json,hashlib,zipfile,runpy
+ROOT=Path(__file__).resolve().parents[1]
+z=zipfile.ZipFile(ROOT/'work/yulong-dcn.apk');raw=z.read('assets/res/config/config_cn_qq.json');c=json.loads(raw)
+r=runpy.run_path(str(ROOT/'scripts/lua-table-reader.py'));source=ROOT/'work/client-config/dragon/core/dragonfarm/ExpansionManager.lua';fn=r['parse'](source);regs={};globals_={};k=fn['constants']
+def rk(v): return k[v-256] if v>=256 else regs[v]
+# Only the literal initialization prefix; stop before first closure. No CALL/branch accepted.
+for ins in fn['code']:
+ op=ins&63;a=(ins>>6)&255;b=(ins>>23)&511;cc=(ins>>14)&511;bx=ins>>14
+ if op==36:break
+ if op==10:regs[a]={}
+ elif op==7:globals_[k[bx]]=regs[a]
+ elif op==5:regs[a]=globals_[k[bx]]
+ elif op==1:regs[a]=k[bx]
+ elif op==9:regs[a][rk(b)]=rk(cc)
+ elif op==34:
+  assert cc==1
+  for i in range(1,b+1):regs[a][i]=regs[a+i]
+ else:raise ValueError(('Unexpected nonliteral opcode',op))
+e=globals_['ExpansionManager'];lands=list(e['big_tiles_data'].values());islands=[list(v.values()) for v in e['lands_in_island'].values()]
+assert len(lands)==16 and [len(v) for v in islands]==[8,4,6,2]
+rows=json.loads((ROOT/'assets/original/data/tables.json').read_text('utf8'))['expansion_prices']
+text='export const ORIGINAL_EXPANSION_PRICES='+json.dumps(rows,separators=(',',':'))+';\n'
+for key,value in [('EXPANSION_PRICES_NAMED',c['expansion_prices']),('ORIGINAL_LANDS',lands),('LANDS_IN_ISLAND',islands),('FIRST_ISLAND_LANDS',e['first_land']),('ISLAND_COSTS',c['globals']['ISLANDS_COSTS'])]:text+='export const '+key+'='+json.dumps(value,separators=(',',':'))+';\n'
+(ROOT/'assets/original/data/expansion.mjs').write_text(text,encoding='utf8')
+report={'baseline':'2.9.35-202402271124','namedConfigSha256':hashlib.sha256(raw).hexdigest(),'landSourceSha256':hashlib.sha256(source.read_bytes()).hexdigest(),'rows':len(rows),'lands':len(lands),'columns':{'1':'pcf row index','2':'cash price, NOT ranch level','3':'coins','4':'neighbors, NOT cash price','5':'inventory_qte, NOT plot ID'},'islandCosts':c['globals']['ISLANDS_COSTS'],'verified':['ExpandShopPanel.initData uses #expansions + 1 and prices.coins/prices.cash, independent currency offers','getIslandCost reads globals.ISLANDS_COSTS','ExpansionManager literal land rectangles and 8/4/6/2 grouping','ExpandShopPanel requires existing island fully owned before next island'], 'unverified':['Initial server obstacle distribution absent; do not fabricate original placements','Offline placement coordinate plane and prior saves differ from source tile plane; legacy islands grandfathered','neighbors is unused/commented in this client; real multiplayer excluded']}
+(ROOT/'assets/original/data/expansion-provenance.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+print('Exported named prices, 16 exact lands, four island costs')

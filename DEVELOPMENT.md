@@ -853,3 +853,12 @@
 - 236项规则测试全通过，最终等级提示调整后新增5项再次通过。源版、正式v56包均原生鼠标验证免费/付费改名及取消、头像预览/Esc保存、任务前往繁殖加速及25/30级实际喂养；最终包profile-package-v56-release完整验收及独立重启通过。现有任务原生鼠标回归亦通过。截图work/player-profile-original.png、player-head-original.png、breed-speed-original.png已目视检查。
 - 任务已有原147条后教程定义、10活跃上限；本轮补上加速与高等级前置，不把数量足够称为147条全部实机完成。新手教程、可交互障碍物、逐地块扩建和出现动画仍待核对，继续见MISSIONS.md/GAPS.md。
 - 发布前备份player-data/recovery/before-profile-growth-v56-1792109852308.json；根启动游戏.exe实际载入v56、desktopBridge=true、工程统一存档。99级/10龙/12巢及资源、装备/宝石/符文、活动/任务逐字段保持。启动后正式档出现昵称“木木木”、renameCount=1，故profile相对备份新增是实际资料操作，不回滚成空字段或QA昵称。dist仅留v56，旧v55移入回收站。
+
+
+## 最新检查点 — v0.16.57 扩建错误推断撤回与原支付流程（2026-10-16）
+- 用户要求继续复刻未完成项。先静态检查原ObstacleDelegate/ObstacleManager/GoalCollectId/GoalSpeedClear，确认付金币激活→activation计时→魔晶加速→点击领取collect_xp→删除；原新玩家服务器障碍物分布未取得，未伪造并称原初始地图。TutorialManager确认原47步、箭头坐标与文本键，完整流程仍待接通。
+- 扩建发现实质错误：旧脚本把pcf第2列当等级、第4列当魔晶。APK具名config_cn_qq明确cash/coins/neighbors/inventory_qte；Config_CN_QQ.getExpansionPrices和ExpandShopPanel.initData读取本具名表，价格是二选一。撤回旧推断，首地4000金币或2魔晶，无猜测等级锁；不再同时扣金币和伪魔晶。
+- 只静态读取ExpansionManager初始化字面量，原20地块分8/4/6/2，16待购地块有确切矩形/牌偏移；三座新岛首地22/31/42、费用10万金币/125魔晶/500魔晶，原代码要求先完成当前岛。原木牌、原商店三类图与原价格已接，商店选币再点木牌、取消无费用；从木牌入店则购买该地。ExpandIsland/IslandComplete按真正岛开放/全地块判定，Expand按实际扩地事件及全图完成分支，不用plots>=岛号假完成。
+- 旧plots只读派生保留所有原已解锁岛和已买空间，首次新交易才保存可选lands；不改用户建筑/龙/位置，不自动重扣/退款。原版主岛初始4块的服务器包和地块遮罩尚未取得/接入，现12/13/15/16为当前牧场初始适配，原tile全局平面/可摆放边界仍是现有离线平面，详见EXPANSION.md。不能以价格和地块任务修正宣称全地图一比一完成。
+- 236项规则测试通过，包含原币种独立扣费、无等级误锁、买重复/未解锁拒绝、三岛真正费用/前置、全部20块结束、老档原岛权限/库存重启、IslandComplete完整岛门槛。隔离源版原生鼠标：点牌→金币、商店魔晶选择→取消、魔晶买第二地、主岛补全→10万解锁第二岛，以及独立重启通过；源截图work/expansion-original-v57.png已目视核对原卡片资源/金额。
+- 正式v57包原生鼠标扩建全流程及独立重启通过，最终包再次重启通过。发布前备份player-data/recovery/before-expansion-v57-1792111134300.json；根启动游戏.exe实际载入v57/desktopBridge=true/统一存档，99级/木木木/10龙/12巢/已买plots9及资源、阵容/装备/宝石/符文、活动/任务逐字段保持。未向正式档注入lands或QA完成记录。dist仅留v57，旧v56移入回收站。

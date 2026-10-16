@@ -362,3 +362,5 @@ body:has(#modal[open].native-fullscreen){background:#09242e}
 
 .mission-details-word{position:absolute;transform:translate(-50%,-50%);width:85px;height:auto;pointer-events:none}
 .mission-speaker{position:absolute;width:300px;height:250px;object-fit:fill;transform:translate(-50%,-50%);pointer-events:none}
+
+.original-land-board{position:absolute;z-index:900;width:94px;height:100px;padding:0;background:none;border:0;transform:translate(-50%,-100%);pointer-events:auto}.original-land-board:hover,.original-land-board:active,.original-land-board:focus{transform:translate(-50%,-100%);background:none}.original-land-board img{width:100%;height:100%;object-fit:contain;pointer-events:none}.original-land-board span{position:absolute;left:0;top:13px;width:100%;font-size:24px;color:white;text-shadow:1px 2px 2px #492b16}

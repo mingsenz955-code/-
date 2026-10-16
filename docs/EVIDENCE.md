@@ -395,3 +395,9 @@
 - UserInfoPanelFromTopUI静态确认实际布局是panel_user_name_info，昵称revise/btn和bg_icon触摸分别打开ChangeNickNamePanel/HeadSelectPanel。改名6字、第一次免费/之后100魔晶、ConfirmPanel使用panel_msg，均取原客户端；HeadSelectPanel明文确认7列94/96间距、图鉴曾拥有列表、预览后关闭保存。
 - DragonManager根字节码BASE_MAX_DRAGON_LEVEL=10，函数29遍历已完工dragonLevelAmplifiers取max；APK建筑9—12上限15/20/25/30。SpeedUpPanel.openBreed及GoalSpeedBreed明文确认费用公式和两亲代类型白名单事件。源SHA/提取规则见reference/profile-growth-source.json，可重跑scripts/export-profile-growth.py。
 - 资料在线重名/敏感词服务、平台账号不可离线证明；LOCAL ID与本地原表词串检查明确属于适配。236规则测试及源/最终Windows包真实鼠标、独立重启通过，仅证明所列流程，不等于所有任务/界面逐像素验收。
+
+
+## v0.16.57 原具名扩建配置纠正
+- APK config_cn_qq.expansion_prices明确定义cash/coins/neighbors/inventory_qte；原pcf列2是cash，旧minLevel推断错误，列4为neighbors，不能拿它扣魔晶。原Config_CN_QQ.getExpansionPrices与ExpandShopPanel.initData具名字段直接佐证；onBtnBuy只扣costs[cost]=price，金币/魔晶独立商品。
+- ExpansionManager SHA256 36e41972dadd2f0342e0697e54d55313d06334497cbd5ed3fd992e2e20ff85bc根初始化字面量提供16待购矩形、20地块分组8/4/6/2及first_land 22/31/42；getTotalLandsNumber累加全部分组。未执行Lua，导出拒绝非字面量指令，详情见expansion-provenance.json/scripts/export-expansion.py。
+- globals.ISLANDS_COSTS为g0/g100000/c125/c500，ExpandShopPanel及LandBoardDelegate恢复地图牌/选币/选择地块流程。原地图牌偏移有来源，初始障碍物服务器分布及原建筑全局tile平面未取得，分别记录，不能用离线碰撞范围冒充原精确地块。

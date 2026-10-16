@@ -1,3 +1,4 @@
+import {currentIsland,islandOwnership,LANDS_IN_ISLAND} from './expansion.mjs';
 import SOURCE from '../assets/original/data/missions.mjs';
 import {SPECIES} from './data.mjs';
 export const MISSIONS=SOURCE.goals;
@@ -17,7 +18,9 @@ function snapshot(s,g){const a=g.args,b=buildings(s);switch(g.kind){
  case 'DragonAmount':return s.dragons.length;
  case 'BuyDragon':return s.dragons.filter(d=>a[0].includes(dragonId(d))).length;
  case 'WinPVEBattle':return s.adventure.cleared[nodeId(a[1])]?1:0;
- case 'ExpandIsland':case 'IslandComplete':return s.expansion.plots>=a[0]?1:0;
+ case 'Expand':return LANDS_IN_ISLAND.every((_,i)=>islandOwnership(s,i+1)==='full')?missionTarget(g):null;
+ case 'ExpandIsland':return currentIsland(s)>=a[0]?1:0;
+ case 'IslandComplete':return islandOwnership(s,a[0])==='full'?1:0;
  case 'SpeedClear':return a[0].every(id=>!b.includes(id))?missionTarget(g):null;
  case 'CollectId':return a[0].every(id=>SOURCE.obstacleIds.includes(id)&&!b.includes(id))?missionTarget(g):null;
  default:return null;
@@ -27,7 +30,7 @@ function eventStep(s,old,g,type,p){const a=g.args;
  if(g.kind==='CollectGroup')return type==='harvest'&&a[0]==='FARM'?1:0;
  if(g.kind==='BuyDragon')return type==='buyShopEgg'&&a[0].includes(p.id)?1:0;
  if(g.kind==='BuyResources')return type==='buyResource'&&a[0].includes(p.id)?1:0;
- if(g.kind==='Expand')return type==='expandIsland'?1:0;
+ if(g.kind==='Expand')return ['expandIsland','expandLand'].includes(type)?1:0;
  if(g.kind==='Breed'){const ids=[p.a,p.b].map(id=>dragonId(old.dragons.find(d=>d.id===id)));return type==='breed'&&ids.every(id=>a[0].includes(id))?1:0;}
  if(g.kind==='SpeedBreed'){const ids=(old.breeding?.parents??[]).map(id=>dragonId(old.dragons.find(d=>d.id===id)));return type==='speedBreed'&&ids.length===2&&ids.every(id=>a[0].includes(id))?1:0;}
  if(g.kind==='HatchEgg'){if(type!=='hatch'||(a[2]??[]).some(id=>!s.missions.done.includes(id)&&!s.missions.linked.includes(id)))return 0;return a[0].includes(dragonId(old.incubator))?1:0;}
