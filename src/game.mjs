@@ -1,3 +1,4 @@
+import {createBloodFront,validateBloodFront,bloodAction} from './blood-front.mjs';
 import {consumeEgg,eggQuantity} from './user-eggs.mjs';
 import {createTutorial,validateTutorial,updateTutorial,guideActive} from './tutorial.mjs';
 import {createMissions,validateMissions,updateMissions} from './missions.mjs';
@@ -33,7 +34,7 @@ import {resourceShopRow,EVOLUTION_FRUIT_ITEM_ID} from './resource-shop.mjs';
 const fail = message => {throw new Error(message)};
 const number = (v,min=0,max=Number.MAX_SAFE_INTEGER) => Number.isSafeInteger(v)&&v>=min&&v<=max;
 export function createGame(now=Date.now()) {
- return {version:12,activities:createActivities(now),arena:createArena(now),encounters:createEncounters(now),shopInventory:{},fixedPositions:{},giftEggs:[],equipmentFragments:{},loot:{policy:LOOT_POLICY,boxesOpened:0,lastOpened:null,nodeRewards:createNodeRewards(now)},gemExplore:createGemExplore(now),runeHunt:createRuneHunt(now),runes:[],nextRuneId:1,equipmentMaterials:{stone:0,wing:0,crystal:0},gemInventory:[],gemSockets:Array(12).fill(null),nextGemId:1,structures:[],formation:[2,3],adventure:{cleared:{},energy:10,energyAt:now,policy:OFFLINE_BATTLE_POLICY},lottery:{normalTokens:0,advancedTokens:0,draws:0,pending:[]},raffle:{tickets:{},counters:{junior:0,mid:0,senior:0},pending:[]},expansion:{plots:0},items:{},recharge:{count:0,lastTier:0,totalGems:0,doubled:[]},equipment:[],nextEquipId:1,coins:1200,food:400,gems:0,playerXp:0,nextId:4,updatedAt:now,habitats:[{id:1,name:'晨曦栖息地',lastCollected:now}],dragons:[{id:2,species:'ember',level:1,habitatId:1},{id:3,species:'leaf',level:1,habitatId:1}],farm:null,nest:null,breeding:null,incubator:null,stats:{harvests:0,hatches:0,feeds:0},log:['欢迎来到云上牧场。种下第一份龙粮吧。']};
+ return {version:12,bloodFront:createBloodFront(now),activities:createActivities(now),arena:createArena(now),encounters:createEncounters(now),shopInventory:{},fixedPositions:{},giftEggs:[],equipmentFragments:{},loot:{policy:LOOT_POLICY,boxesOpened:0,lastOpened:null,nodeRewards:createNodeRewards(now)},gemExplore:createGemExplore(now),runeHunt:createRuneHunt(now),runes:[],nextRuneId:1,equipmentMaterials:{stone:0,wing:0,crystal:0},gemInventory:[],gemSockets:Array(12).fill(null),nextGemId:1,structures:[],formation:[2,3],adventure:{cleared:{},energy:10,energyAt:now,policy:OFFLINE_BATTLE_POLICY},lottery:{normalTokens:0,advancedTokens:0,draws:0,pending:[]},raffle:{tickets:{},counters:{junior:0,mid:0,senior:0},pending:[]},expansion:{plots:0},items:{},recharge:{count:0,lastTier:0,totalGems:0,doubled:[]},equipment:[],nextEquipId:1,coins:1200,food:400,gems:0,playerXp:0,nextId:4,updatedAt:now,habitats:[{id:1,name:'晨曦栖息地',lastCollected:now}],dragons:[{id:2,species:'ember',level:1,habitatId:1},{id:3,species:'leaf',level:1,habitatId:1}],farm:null,nest:null,breeding:null,incubator:null,stats:{harvests:0,hatches:0,feeds:0},log:['欢迎来到云上牧场。种下第一份龙粮吧。']};
 }
 export function createTutorialGame(now=Date.now()){const s=createGame(now);s.tutorial={...createTutorial(),sourceOpening:true};s.coins=Math.max(s.coins,habitatDefinition(28).costs.g+ORIGINAL_SHOP_ITEMS.filter(r=>[16,19,1020].includes(r.id)).reduce((n,r)=>n+(r.costs.g??0),0)+ORIGINAL_CROPS[0].cost);s.habitats[0].buildingId=26;s.habitats[0].name='岩土系龙巢';s.dragons=[{id:2,species:'original1011',level:4,habitatId:1}];s.nextId=3;s.formation=[2];return s}
 export function validate(s) {
@@ -45,7 +46,7 @@ export function validate(s) {
  if(s.version<6){s.equipment??=[];s.nextEquipId??=1;}
  s.activities??={...createActivities(s.updatedAt),history:undefined};validateActivities(s);
  s.arena??=createArena(s.updatedAt);validateArena(s);
- s.encounters??=createEncounters(s.updatedAt);validateEncounters(s);
+ s.encounters??=createEncounters(s.updatedAt);validateEncounters(s);s.bloodFront??=createBloodFront(s.updatedAt,s);validateBloodFront(s);
  s.fixedPositions??={};
  if(!s.fixedPositions||typeof s.fixedPositions!=='object'||Array.isArray(s.fixedPositions)||Object.entries(s.fixedPositions).some(([key,p])=>!FIXED_BUILDINGS.some(b=>b.key===key)||!Array.isArray(p)||p.length!==2||!p.every(Number.isFinite)))fail('基础建筑位置无效。');
  s.shopInventory??={};if(!s.shopInventory||typeof s.shopInventory!=='object'||Array.isArray(s.shopInventory)||Object.entries(s.shopInventory).some(([id,n])=>!resourceShopRow(Number(id))||!number(n,0,1e9)))fail('购买物品库存无效。');s.giftEggs??=[];
@@ -143,6 +144,7 @@ export function action(state,type,payload={},now=Date.now(),random=Math.random) 
  const settle=h=>{h.storedCoins=rawIncome(s,h,now);h.lastCollected=now;};
  refreshEncounters(s,now);observeActivityDay(s,now);
  switch(type){
+ case 'bloodFight':case 'bloodSweep':case 'bloodBuff':case 'bloodReset':if(playerProgress(s).level<17)fail('17级开启血战前线。');message=bloodAction(s,type,payload,now);break;
  case 'initProfile':s.profile??=createProfile(now);message='玩家资料已打开。';break;
  case 'renamePlayer':{const error=nicknameError(payload.name);if(error)fail(error);if(payload.name===profileOf(s).name)fail('昵称没有变化。');const cost=renameCost(s);spend('gems',cost);s.profile??=createProfile(now);s.profile.name=payload.name;s.profile.renameCount++;message='昵称修改成功。';break;}
  case 'changePlayerAvatar':{if(!profileAvatars(s).some(p=>p.id===payload.avatar))fail('只有已拥有的龙可以设置成头像。');s.profile??=createProfile(now);s.profile.avatar=payload.avatar;message='头像已更换。';break;}

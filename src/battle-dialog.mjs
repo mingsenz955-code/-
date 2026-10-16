@@ -18,8 +18,8 @@ let activeRun=0;
 // BattleUI normalizes appearance level to at least 7 before getDragonGraphic.
 // The younger ranch models intentionally contain no combat tracks.
 function fighter(item,side,index,positions){const p=positions[index],art=dragonArt(item.species,'',Math.max(7,item.level??7)).replace('data-clip="breath"',`data-clip="breathinbattle" data-battle-scale="${p.scale}" data-native-size="true"`);return `<div class="battle-fighter ${side}" data-unit="${side}${index}" data-position="${p.type}" style="left:${p.x}px;top:${p.y}px;z-index:${Math.round(p.y)}"><div class="battle-model">${art}</div><span class="battle-unit-hp"><img class="hp-background" src="assets/original/ui/ui_battle_hp_diban.png" alt=""><img class="hp-delay" src="assets/original/ui/ui_battle_hp_delay.png" alt=""><img class="hp-current" src="assets/original/ui/ui_battle_hp_${side==='enemy'?'defender':'attacker'}.png" alt=""></span></div>`}
-export async function openBattleDialog(state,{nodeId=null,enemyGroup=null}={}){
- const layout=await sourceLayout('ui_battlenormal');
+export async function openBattleDialog(state,{nodeId=null,enemyGroup=null,layoutName='ui_battlenormal',allyPower=null,enemyPower=null}={}){
+ const layout=await sourceLayout(layoutName);
  const lineup=configuredLineup(state),enemies=enemyGroup??battleEnemyGroup(nodeId)?.monsters??[],values={},slots={},hidden=new Set();
  for(let index=1;index<=BATTLE_SLOTS;index++)for(const side of ['left','right']){
   const item=(side==='left'?lineup:enemies)[index-1],key=`${side}${index}`,team=side==='left'?'ally':'enemy';
@@ -30,7 +30,7 @@ export async function openBattleDialog(state,{nodeId=null,enemyGroup=null}={}){
   slots[`${key}/icon`]=`<div class="source-battle-portrait" data-portrait="${team}${index-1}"><img class="battle-portrait-art" src="${`assets/original/ui/ui_bookdragon_${sp.original}_1.png`}" alt="${sp.name}"><img class="battle-portrait-border" src="assets/original/ui/ui_battle_txk60_${Math.min(5,sp.quality??1)}.png" alt=""><img class="battle-dead-mark" src="assets/original/ui/ui_battle_zhenwang.png" alt="阵亡"></div>`;
  }
  values['round/num']=`1/${BATTLE_ROUND_LIMIT}`;values['skip/miaoshu']='退出';
- values.power_left=String(lineupPower(lineup,state));values.power_right=String(battleRequirement(nodeId)??'');
+ values.power_left=String(allyPower??lineupPower(lineup,state));values.power_right=String(enemyPower??battleRequirement(nodeId)??'');
  const allyPositions=battlePositions(lineup),enemyPositions=battlePositions(enemies,'enemy');
  const stage=`<div class="battle-stage" aria-label="自动战斗"><div class="battle-bg-fx-layer"></div>${lineup.map((d,i)=>fighter(d,'ally',i,allyPositions)).join('')}${enemies.filter(d=>d.species).map((d,i)=>fighter(d,'enemy',i,enemyPositions)).join('')}<div class="battle-fx-layer"></div></div>`;
  const d=showSource('sourceBattle',renderSourceLayout(layout,{values,slots,hidden,actions:{'skip/btn':{type:'close',label:'退出战斗'}}})+stage,'source-battle-dialog native-fullscreen');
@@ -62,7 +62,7 @@ async function damageNumber(layer,value,x,y){glyphs??=await fetch('assets/origin
 export async function playBattleAnimation(state,nodeId,result){
  const d=document.querySelector('#modal'),run=d.dataset.battleRun,layer=d.querySelector('.battle-fx-layer');
  const live=()=>d.open&&d.dataset.mode==='sourceBattle'&&d.dataset.battleRun===run;
- const make=(item,side,index)=>({item,side,index,el:d.querySelector(`[data-unit="${side}${index}"]`),stats:side==='ally'?dragonAttributes(item,state):{attack:item.attack,defend:item.defend,life:item.life},hp:100});
+ const make=(item,side,index)=>({item,side,index,el:d.querySelector(`[data-unit="${side}${index}"]`),stats:side==='ally'?(result.allyStats?.[item.id]??dragonAttributes(item,state)):{attack:item.attack,defend:item.defend,life:item.life},hp:100});
  const allies=configuredLineup(state).map((v,i)=>make(v,'ally',i)),enemies=(result.enemyGroup??battleEnemyGroup(nodeId)?.monsters??[]).filter(v=>v.species).map((v,i)=>make(v,'enemy',i));
  const allyPositions=battlePositions(allies.map(v=>v.item)),enemyPositions=battlePositions(enemies.map(v=>v.item),'enemy');
  const winners=result.won?allies:enemies,losers=result.won?enemies:allies;

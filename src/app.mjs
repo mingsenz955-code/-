@@ -1,3 +1,5 @@
+import {openBloodFront,openBloodBuff,openBloodResult,openBloodReset} from './blood-front-dialog.mjs';
+import {bloodPlan,bloodToken,refreshBloodFront} from './blood-front.mjs';
 import {landBoardPosition} from './islands.mjs';
 import {renderSourceLayout} from './source-layout.mjs';
 import {guideActive,tutorialNavAllowed} from './tutorial.mjs';
@@ -79,6 +81,7 @@ function applyCamera(){const el=document.querySelector('.ranch-world'),scene=doc
 function buildingStyle(info,y){const a=BUILDING_ART[info.id??24],w=a?.width??210,h=a?.height??140,ground=((info.width??5)+(info.height??5)-2)*6.75;return `z-index:${Math.round(y*10)};--art-w:${w}px;--art-h:${h}px;--art-x:${(a?.x??0)-w/2}px;--art-y:${ground-(a?.y??ground)-h/2}px;--plot-w:${info.width??5};--plot-h:${info.height??5}`;}
 let collectionFilter='all';
 let activeIsland=0;let moreExpanded=false;
+let bloodReturn=false;
 let state,tab='ranch',selected=2,location='',busy=false,saveStatus='尚未保存',toastTimer;
 const $=s=>document.querySelector(s);
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -195,7 +198,22 @@ document.addEventListener('click',async e=>{
   if(type==='bossHistory'){const b=state.encounters.boss;await openNativePaper('首领战绩',`<p>累计伤害：${fmt(b.totalDamage)}</p><p>已击杀首领：${b.kills}</p>`,'sourceBossHistory');return}
   if(type==='bossAchievements'){await openNativePaper('首领成就',`<p>累计伤害：${fmt(state.encounters.boss.totalDamage)}</p><p>原成就阈值：100000、250000等；完整奖励类型与领取结算尚未核实。</p>`,'sourceBossAchievement');return}
   if(type==='treePlunder'){const before=structuredClone(state),op=treeOpponent(state,id),won=lineupPower(configuredLineup(state),state)>=op.power;await persist(action(state,type,{id}));render();await openBattleDialog(before,{enemyGroup:op.enemies});if(await playBattleAnimation(before,null,{won,enemyGroup:op.enemies})){await openTreeTargets(state);toast(state.log[0]);}return}
-  if(type==='openBloodFront'){await openNativePaper(type==='openArena'?'竞技之神':'血战前线','<p>原地图入口已恢复。此模式的离线挑战与奖励结算仍在开发，暂不伪造原服务器对手。</p>','sourceWorldModePending');return}
+  if(type==='openBloodFront'){if(playerProgress(state).level<17){toast('17级开启血战前线。');return}bloodReturn=false;refreshBloodFront(state,Date.now());await openBloodFront(state);return}
+  if(type==='close'&&bloodReturn){bloodReturn=false;await openBloodFront(state);return}
+  if(type==='bloodSelect'){await openBloodFront(state,id,$('#modal').dataset.mode==='sourceBloodNext');return}
+  if(type==='bloodBuffInfo'){if(state.bloodFront.buffs.includes(id)){toast('本关该增益已激活。');return}await openBloodBuff(state,id);return}
+  if(type==='bloodBuffCurrency'){await openBloodBuff(state,id,el.dataset.value);return}
+  if(type==='bloodResetConfirm'){await openBloodReset();return}
+  if(type==='bloodBuff'||type==='bloodReset'){await persist(action(state,type,{id,currency:el.dataset.value}));render();await openBloodFront(state);toast(state.log[0]);return}
+  if(type==='bloodFormation'||type==='bloodEquipment'){bloodReturn=true;if(type==='bloodFormation')await openFormationDialog(state);else await openEquipDialog(state,configuredLineup(state)[0]?.id??state.dragons[0]?.id);return}
+  if(type==='bloodFight'||type==='bloodSweep'){
+   const token=$('#modal').dataset.bloodToken,before=structuredClone(state),plan=type==='bloodFight'?bloodPlan(state,id,token):null;
+   await persist(action(state,type,{difficulty:id,token}));render();
+   if(type==='bloodSweep'){await openBloodResult(state);return}
+   bloodReturn=true;await openBattleDialog(before,{enemyGroup:plan.enemies,layoutName:'ui_battleblood',allyPower:plan.power,enemyPower:plan.required});busy=true;
+   let complete;try{complete=await playBattleAnimation(before,null,{won:plan.won,enemyGroup:plan.enemies,allyStats:plan.allyStats});}finally{busy=false}
+   if(complete){bloodReturn=false;if(state.bloodFront.last)await openBloodResult(state);else await openBloodFront(state,id,true);toast(state.log[0]);}return;
+  }
   if(type==='openRunes'||type==='openRuneHunt'){await openRuneHunt(state);return}
   if(type==='runeEquipment'||type==='runePanelDragon'){const target=type==='runePanelDragon'?id:defaultRuneDragon(state,id||selected)?.id;await openRunePanel(state,target);return}
   if(type==='openShenfu'){await openShenfuDialog(state);tick();return}

@@ -412,3 +412,8 @@
 - 原 MainScene:initIslands 的 orders={1,2,3,4}、names={left,top,right,bottom}；source2 为火山 top、source3 为荒漠 right。旧实现把2/3反配，导致原 land32—36 的购买木牌画在火山/血战前线上。恢复源编号/中心/尺寸/z次序，不改地块购买记录。
 - Base.setLandBoard 函数63 PC56—78取(tx+w/2,ty+h/2)，根 upvalue r2=r3=27，生成 x=27*(tx-ty), y=27-27*(tx+ty)/2；MainScene buildingLayer=(0,0)、islandLayer.y=-2500。木牌应在全局 buildingLayer，不应使用遮罩的x/y，也不应困在各岛的stacking context。
 - LandBoardDelegate 原sprite132×194、anchor(.5,0)、delegate.scale(.5)、原文字50在y120；PC世界统一缩放.5，因此木牌33×48.5、字12.5。血战前线原(-30,2010)入口保留，未用搬动原入口掩盖木牌错误。静态反汇编见work/base-board-v59.txt，未执行原Lua。
+
+## v0.16.60 血战与活动入口
+- 静态BloodBattlePanel SHA256 5f177ae1bfecd20a032ad81ccdc7abfd3c9145bdec0c74f17a415dbe9a1e63b1，函数0载入ui_battle_blood；函数6/23对应下一波/失败重来/满纪录扫荡；LibBloodWarLevelInfo SHA256 25623bed96372947237bdbc2862d27641906f0eeef1ebe44a6d63ac43fc2362c恢复16字段。BloodWarLibrary与NextWavePanel明示三档原怪物组、积分x1/2/3；ResultPanel按关卡/score/itemnum显示结算。未执行Lua。
+- BloodWar/BloodWarLevel原表50关485波，全部1455组4365怪物及原属性导出；源VIP血战次数bloodTime=VipInfo arr[15]。原字段/源SHA/离线适配在reference/blood-front-provenance.json；BLOOD-FRONT.md明确钱包/判胜/每日刷新等证据边界。
+- 用户要求去掉过多相似活动，活动菜单43→19，保留不同玩法代表版本。76份源定义和旧claims/inventory保留，57个重复或近似历史版本不再展示，不删除已获道具或重置领奖进度。

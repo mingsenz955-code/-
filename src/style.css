@@ -383,3 +383,12 @@ body:has(#modal[open].native-fullscreen){background:#09242e}
 
 /* Original boards live in buildingLayer, above islandLayer and its entrances. */
 .ranch-world>.original-land-board{z-index:900}
+
+.blood-digits{position:absolute;top:0;display:flex;transform:translate(-50%,-50%);pointer-events:none}.blood-digits i{display:block;background-repeat:no-repeat}
+.blood-enemy{position:absolute;left:-34px;top:-34px;width:68px;height:68px;pointer-events:none}.blood-enemy img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}.blood-enemy b{position:absolute;right:0;bottom:-5px;border-radius:12px;background:#f7e2b3;color:#402a1a;font-size:16px;padding:1px 5px}
+.blood-stars{position:absolute;display:flex;gap:0;transform:translate(-50%,-50%)}.blood-stars img{width:30px;height:30px}
+.source-blood-front [data-action=bloodBuffInfo]{width:100px;height:100px;transform:translate(-50%,-50%);cursor:pointer;pointer-events:auto}
+.source-blood-front [data-action=bloodBuffInfo]>.source-node{left:47px!important;top:50px!important}
+.source-blood-front [data-action=bloodBuffInfo]>.source-label{left:-12px!important;top:76px!important}
+
+.source-blood-front .source-label{white-space:normal}
