@@ -1,4 +1,5 @@
 import {awakeningAttributes} from './dragon-awakening.mjs';
+import {privateTenStars} from './private-stars.mjs';
 import {evolutionRate} from './evolution.mjs';
 import {dragonStars} from './dragon-stars.mjs';
 import {runePower,passiveAttributes} from './runes.mjs';
@@ -31,10 +32,11 @@ export function dragonAttributes(dragon,state=null){
  const level=Math.max(1,dragon.level??1);
  const gems=state?gemBonus(state,dragon):{attack:0,defend:0,blood:0,crit:0,uncrit:0};
  const bonus=state?equipmentBonus(equipmentOfDragon(state,dragon.id)):{atk:0,def:0,hp:0};
- const rate=evolutionRate(dragon);
- const attack=Math.floor(Math.floor(row.baseAttack+(level-1)*row.attackQuality+passive.attack+wake.attack)*rate)+bonus.atk+gems.attack+(dragon.training?.attack??0);
- const defend=Math.floor(Math.floor(row.baseDefence+(level-1)*row.defenceQuality+passive.defend+wake.defend)*rate)+bonus.def+gems.defend+(dragon.training?.defend??0);
- const life=Math.floor(Math.floor(row.baseLife+(level-1)*row.lifeQuality+passive.life+wake.blood)*rate)+bonus.hp+gems.blood+(dragon.training?.life??0);
+ const privateRatio=privateTenStars(dragon)?10/dragonStars(dragon):1;
+ const rate=evolutionRate(dragon)*privateRatio;
+ const attack=Math.floor(Math.floor(row.baseAttack+(level-1)*row.attackQuality+passive.attack+wake.attack)*rate)+bonus.atk+gems.attack+Math.floor((dragon.training?.attack??0)*privateRatio);
+ const defend=Math.floor(Math.floor(row.baseDefence+(level-1)*row.defenceQuality+passive.defend+wake.defend)*rate)+bonus.def+gems.defend+Math.floor((dragon.training?.defend??0)*privateRatio);
+ const life=Math.floor(Math.floor(row.baseLife+(level-1)*row.lifeQuality+passive.life+wake.blood)*rate)+bonus.hp+gems.blood+Math.floor((dragon.training?.life??0)*privateRatio);
  return {attack,defend,life,crit:Math.floor((wake.crit+passive.crit)*rate)+gems.crit+(bonus.antResist??0),uncrit:Math.floor((wake.uncrit+passive.uncrit)*rate)+gems.uncrit+(bonus.resist??0),quality:species.quality};
 }
 

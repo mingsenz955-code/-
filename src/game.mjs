@@ -1,4 +1,5 @@
 import {energyCapacity,energyDay,energyPurchasePlan,validateEnergyPurchases} from './adventure-energy.mjs';
+import {PRIVATE_TEN_STAR_POLICY,privateTenStars} from './private-stars.mjs';
 import {bossAchievementPlan,bossRankingRow} from './boss-achievements.mjs';
 import {validateMail,claimMail} from './mail.mjs';
 import {migrateAwakeningPurchases} from './awakening-items.mjs';
@@ -120,7 +121,8 @@ export function validate(s) {
   const serial=Number(item.id.slice(3));
   if(serial>=s.nextEquipId)fail('装备实例编号与计数器不一致。');
   const definition=equipmentDefinition(item.type);if(!definition)fail('装备定义编号无效。');
-  if(!number(item.exp,0,1e9)||!number(item.star,0,5)||!Array.isArray(item.randinfo)||item.randinfo.length>8)fail('装备实例数值无效。');
+  if(item.privateStars!==undefined&&(item.privateStars!==PRIVATE_TEN_STAR_POLICY||item.star!==10))fail('自定义装备星级无效。');
+  if(!number(item.exp,0,1e9)||!number(item.star,0,privateTenStars(item)?10:5)||!Array.isArray(item.randinfo)||item.randinfo.length>8)fail('装备实例数值无效。');
   for(const trait of item.randinfo)if(!trait||!number(trait.traitid,1))fail('装备随机属性无效。');
   if(!number(item.dragonid))fail('装备所属龙编号无效。');
   if(item.dragonid){if(!s.dragons.some(d=>d.id===item.dragonid))fail('装备所属的龙不存在。');const key=item.dragonid+':'+definitionPart(item);if(equipped.has(key))fail('同一部位不能同时装备两件装备。');equipped.add(key);}

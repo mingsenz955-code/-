@@ -1,8 +1,9 @@
 import rows from '../assets/original/data/equipment-stars.mjs';
+import {privateTenStars,privateEquipmentRow} from './private-stars.mjs';
 import {equipmentDefinition,equipmentInstance} from './equipment.mjs';
 export const EQUIPMENT_STAR_POLICY='offline-source-equipment-star-v1';
 const lookup=new Map(rows.map(r=>[`${r.equipIDFix}:${r.quality}:${r.part}:${r.star}`,Object.freeze(r)]));
-export function equipmentStarRow(item,star=item?.star??0){const d=equipmentDefinition(item?.type);return d?lookup.get(`${String(d.id).slice(0,3)}:${d.quality}:${d.part}:${star}`)??null:null}
+export function equipmentStarRow(item,star=item?.star??0){const d=equipmentDefinition(item?.type);if(!d)return null;const key=`${String(d.id).slice(0,3)}:${d.quality}:${d.part}:`;if(privateTenStars(item)&&star===10){const native=rows.filter(r=>`${r.equipIDFix}:${r.quality}:${r.part}:`===key).at(-1);return privateEquipmentRow(item,d,native)}return lookup.get(key+star)??null}
 export function equipmentStarMaterialError(target,material){
  const a=equipmentDefinition(target?.type),b=equipmentDefinition(material?.type);
  if(!a||!equipmentStarRow(target))return '只有蓝色及以上装备可以升星。';

@@ -100,6 +100,10 @@ try {
         $manifest = Get-Content -LiteralPath $downloadedManifest -Raw -Encoding UTF8 | ConvertFrom-Json
     }
     if ($manifest.schema -ne 1 -or $manifest.version -notmatch '^\d+\.\d+\.\d+$' -or $manifest.commit -notmatch '^[a-f0-9]{40}$' -or @($manifest.files).Count -lt 1 -or @($manifest.files).Count -gt 20000) { throw '更新清单格式无效。' }
+    $privateSave = Join-Path $GameDirectory 'player-data/saves/ranch-v1.json'
+    if ((Test-Path -LiteralPath $privateSave) -and ([IO.File]::ReadAllText($privateSave).Contains('private-proportional-ten-star-v1'))) {
+        if (-not @($manifest.files | Where-Object { $_.path -eq 'resources/app/src/private-stars.mjs' }).Count) { throw '此账号包含专用十星配置，目标版本尚不兼容；已保留当前程序和存档，阻止覆盖。' }
+    }
     $version = [version]$manifest.version
     $releaseName = '御龙高手-v' + $manifest.version + '-win32-x64'
     $release = Safe-Path $dist $releaseName

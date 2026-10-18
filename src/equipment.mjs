@@ -100,7 +100,7 @@ export function equipmentBonus(list){
 
 export function equipmentLabel(instance){
  const definition=equipmentDefinition(instance?.type);
- return definition?`${definition.name}${definition.grade>1?` +${definition.grade-1}`:''}`:'';
+ return definition?`${definition.name}${definition.grade>1?` +${definition.grade-1}`:''}${instance.star===10?' · 10星':''}`:'';
 }
 export const EQUIPMENT_MATERIAL_NAMES={stone:'强化石',wing:'羽翼',crystal:'水晶'};
 export function equipmentDecomposePlan(state,ids){
