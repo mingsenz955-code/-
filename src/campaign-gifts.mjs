@@ -4,7 +4,7 @@ import {RULES} from './data.mjs';
 import {acceptsDragon,habitatInfo} from './habitats.mjs';
 export const FARM_FIX_GIFT=Object.freeze({
  id:'update-0.16.73',version:'0.16.73',title:'农场修复更新礼物',sender:'御龙高手',campaign:true,adultDragon:true,
- content:`附件：满级${RULES.maxLevel}级、五星棒棒糖龙1条，已穿戴六部位满强化+99五星橙装和四类10级红符文。棒棒糖龙原表没有觉醒配置，使用原表五星上限。龙巢满时成品龙先存仓库待安置，装备与符文先入背包，安置后自动穿戴仍闲置的配套物品。每份存档仅可领取一次。`,
+ content:`附件：满级${RULES.maxLevel}级、五星棒棒糖龙1条（可继续觉醒至十星），已穿戴六部位满强化+99五星橙装和四类10级红符文。棒棒糖龙可由五星继续觉醒至十星。龙巢满时成品龙先存仓库待安置，装备与符文先入背包，安置后自动穿戴仍闲置的配套物品。每份存档仅可领取一次。`,
  dragonId:1204,amount:1,equipmentSets:1,equipmentQuality:5,equipmentGrade:100,equipmentStar:5,runeTypes:[60110,60210,60310,60410],
 });
 export const BOSS_CELEBRATION=Object.freeze({

@@ -451,3 +451,4 @@ body:has(#modal[open].native-fullscreen){background:#09242e}
 .source-battle-dialog .battle-speed-button{position:absolute;right:22px;top:16%;z-index:20000;font-size:20px;min-width:105px;min-height:46px;padding:4px 14px;pointer-events:auto}.source-battle-dialog .battle-speed-button[aria-pressed=true]{filter:brightness(1.18)}
 .source-battle-dialog .battle-exit-button{position:absolute;right:22px;top:23%;z-index:20000;font-size:16px;min-width:105px;padding:4px 14px;pointer-events:auto}
 .native-habitat-upgrade{width:550px;flex-wrap:wrap}.native-habitat-upgrade>span{flex-basis:100%;max-width:550px}
+.blood-world-entry,.blood-world-entry canvas{pointer-events:none}.blood-world-hit{position:absolute;left:-30px;top:-175px;width:220px;height:190px;clip-path:ellipse(50% 50% at 50% 50%);pointer-events:auto;cursor:pointer}

@@ -1,4 +1,3 @@
-import {confirmIncubatorSpeed} from './incubator-speed-dialog.mjs';
 import {confirmHabitatSale} from './habitat-sale-dialog.mjs';
 import {energyPurchasePlan} from './adventure-energy.mjs';
 import {openBossAchievements,openBossSettlement} from './boss-achievement-dialog.mjs';
@@ -172,8 +171,7 @@ document.addEventListener('click',async e=>{
  try{
   if(type==='tutorialPause'||type==='tutorialResume'){await persist(action(state,type));if(type==='tutorialResume'){closeDialog();moreExpanded=false;render();await recoverTutorialView();}void renderTutorial(state);return}
   if(type==='tutorialFinish'){await persist(action(state,type));render();return}
-  if(type==='speedIncubator'){await confirmIncubatorSpeed(state);return}
-  if(type==='applyIncubatorSpeed')type='speedIncubator';
+  if(type==='speedIncubator'||type==='applyIncubatorSpeed'){el.disabled=true;try{await persist(action(state,'speedIncubator'));render();await openIncubator(state);tick();toast(state.log[0]);}finally{if(el.isConnected)el.disabled=false;}return}
   if(type==='openIncubatorSpeedConfirm'){const cost=incubatorSpeedCost(state.incubator.readyAt);showSource('tutorialIncubatorConfirm',renderSourceLayout(await sourceLayout('panel_msg'),{values:{txt:`立即完成孵化需要 ${cost} 魔晶，是否继续？`,'btn_QueDing/txt_name':'是'},actions:{btn_close:{type:'cancelTutorialIncubator',label:'取消'},'btn_QueDing/btn':{type:'confirmTutorialIncubator',label:'是'}}}));return}
   if(type==='cancelTutorialIncubator'){await openIncubator(state);return}
   if(type==='breed'&&guideActive(state)&&state.tutorial.step===37){const a=Number($('#modal').dataset.parentA),b=Number($('#modal').dataset.parentB);const d=showSource('tutorialBreedConfirm',renderSourceLayout(await sourceLayout('panel_msg'),{values:{txt:'是否立即培育？','btn_QueDing/txt_name':'立即培育'},actions:{btn_close:{type:'cancelTutorialBreed',label:'取消'},'btn_QueDing/btn':{type:'confirmTutorialBreed',label:'立即培育'}}}));d.dataset.parentA=a;d.dataset.parentB=b;await persist(action(state,'tutorialNavigate',{event:'openTutorialBreedConfirm'}));return}
