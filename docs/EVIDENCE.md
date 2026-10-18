@@ -436,3 +436,6 @@
 - world_boss_chengjiu 8行由LibWorldBossAchievementInfo列定义，原WorldBossAchievementItem写单日总伤害，WorldBossData以historydamage及flag位判定；保存每日峰值和永久领取记录。
 - world_boss_paiming 5行由LibWorldBossRewardInfo定义；7044是神圣·冰域皇龙蛋碎片，原item-use配置10片合成1201。原排名第一5片，非直接龙蛋。原13类通过lib_holyfire取图/等级，820601等六种均能对应现有宝石配置，已接可用实例。所有SHA与源列记录见reference/boss-achievements-provenance.json。
 - 本轮新增镜像通道传输实测，两份下载清单规范换行后与GitHub完全一致。镜像升级的发布者签名校验、逐文件哈希、真实小文件下载/复用及旧档SHA均通过；镜像不是原游戏内容证据。
+
+## v0.16.68 冒险与体力
+原PvePanel明文确认加号、50魔晶补满、VIP容量与pveBuyPowerTime；PveRender显示普通图节点与星级。原农场17建造10秒、18建造30秒，既有VIP缩短保留。原装备最高grade100显示+99，六部位均有橙色五星属性行。SHA/参数见reference/update-v68-provenance.json。

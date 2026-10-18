@@ -442,3 +442,7 @@ body:has(#modal[open].native-fullscreen){background:#09242e}
 .boss-name-icon{position:absolute;width:120px;height:40px;transform:translate(-50%,-50%)}[data-mode="sourceBossSettlement"] [data-source="item1/item_name"]{white-space:normal;font-size:16px!important;height:45px!important;text-align:center}
 
 .boss-achievement-list{overflow-x:hidden}
+
+.source-pve-dialog{height:calc(768px * var(--source-scale))}.source-pve-dialog .source-artboard{height:768px}.source-pve-map{height:450px;overflow:hidden}.source-pve-scene{position:absolute;width:1024px;height:768px;left:128px;top:-63px;transform:scale(.75);transform-origin:0 0}
+
+.mail-attachment-icon{width:65px;height:65px;object-fit:contain}.mail-equipment-preview{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.mail-equipment-preview>div{display:flex;gap:10px;align-items:center;font-size:16px}.mail-equipment-preview img{width:65px;height:65px;object-fit:contain}

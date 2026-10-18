@@ -1,0 +1,27 @@
+{
+  "baseline": "2.9.35-202402271124",
+  "source": [
+    {
+      "path": "work/client-config/ui/pve/PvePanel.lua",
+      "sha256": "60fa6215349ceb27f6203a0874b134791c48939792a0f2c7421a9efcaced1cd2"
+    },
+    {
+      "path": "work/client-config/ui/pve/PveRender.lua",
+      "sha256": "1a17b2c1882cbcfb628ed4f92bb587b9af97d74eb949e7245fddcf452cbff24c"
+    }
+  ],
+  "rules": {
+    "energyPrice": 50,
+    "energyCapacity": "VIP.pvePower (minimum 10)",
+    "dailyBuys": "VIP.pveBuyPowerTime; offline configured limit enforced atomically, source UI uses >",
+    "farmLargeBaseSeconds": 10,
+    "superFarmBaseSeconds": 30,
+    "boss": "user override 5000000, old HP proportion migrated once",
+    "equipment": "six parts x six copies, original quality 5 grade 100 (+99), star 5 with original rows"
+  },
+  "differences": [
+    "Existing offline 5-minute energy recovery retained; original PvePanel refill label references 1201 seconds. Full server timer/recovery is not asserted equal.",
+    "Map coordinates unchanged; PC viewport clips/scales source map below original header and above footer.",
+    "Boss 5M and v68 update gift are explicit user changes, not original live rewards."
+  ]
+}

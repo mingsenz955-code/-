@@ -46,7 +46,7 @@ def main():
     releases=request(api+'/releases?per_page=100')
     release=next((r for r in releases if r['tag_name']=='v'+VERSION),None)
     if not release:
-        release=request(api+'/releases',{'tag_name':'v'+VERSION,'target_commitish':manifest['commit'],'name':'御龙高手 v'+VERSION+' · 觉醒与首领奖励','draft':True,'body':(OUT/'release-notes.md').read_text(encoding='utf8')},'POST')
+        release=request(api+'/releases',{'tag_name':'v'+VERSION,'target_commitish':manifest['commit'],'name':'御龙高手 v'+VERSION+' · 冒险与养成更新','draft':True,'body':(OUT/'release-notes.md').read_text(encoding='utf8')},'POST')
     if not release['draft'] and not args.publish:raise RuntimeError('Published release is immutable to this tool; choose a new version')
     if args.publish:
         names={a['name'] for a in release['assets']}

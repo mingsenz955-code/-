@@ -1,10 +1,10 @@
 import {ORIGINAL_CROPS,ORIGINAL_FARMS} from './data.mjs';
 import {farmOwner,farmInfo,unlockedCrops,playerProgress,incubatorSpeedCost} from './game.mjs';
 import {renderSourceLayout} from './source-layout.mjs';
-import {sourceLayout,showSource,nativeButton,esc} from './ranch-dialogs.mjs';
+import {sourceLayout,showSource,nativeButton,esc,openStructureInfo} from './ranch-dialogs.mjs';
 const time=ms=>ms>=3600000?`${Math.floor(ms/3600000)}小时`:ms>=60000?`${Math.floor(ms/60000)}分`:`${ms/1000}秒`;
 export async function openFarmDialog(state,farmId=0){
- const owner=farmOwner(state,farmId);
+ const owner=farmOwner(state,farmId);if(owner.readyAt)return openStructureInfo(state,farmId);
  const info=farmInfo(state,farmId),next=ORIGINAL_FARMS.find(f=>f.id===info.upgrades_to),crop=ORIGINAL_CROPS.find(c=>c.id===owner.farm?.cropId);
  if(owner.farm||owner.farmUpgrade){
   const l=await sourceLayout('panel_building_speedup'),job=owner.farmUpgrade??owner.farm,act=owner.farmUpgrade?(Date.now()<owner.farmUpgrade.readyAt?'openBuildingSpeed':'completeFarmUpgrade'):(Date.now()<owner.farm.readyAt?'speedCrop':'harvest'),title=owner.farmUpgrade?'农场升级中':crop?.name??'作物',ready=job.readyAt;
