@@ -7,7 +7,7 @@ const ready=()=>{const s=createGame(now);s.playerXp=2060310572;s.gems=1000;for(c
 test('all 50 blood stages have complete source chains and three real enemy packs per wave',()=>{
  assert.equal(BLOOD_SOURCE.waves.length,485);assert.equal(BLOOD_SOURCE.levels.length,50);
  for(const l of BLOOD_SOURCE.levels){const waves=bloodWaves(l.id);assert.equal(waves.filter(w=>w.isFirst).length,1);assert.equal(waves[0].isFirst,1);assert.equal(l.autoPassNeed,waves.length*3);
-  for(let i=0;i<waves.length;i++){assert.equal(waves[i].nextMissionId,waves[i+1]?.id??-1);for(const d of [1,2,3]){const es=bloodEnemies(waves[i],d);assert.equal(es.length,3);assert(es.every(e=>e.life>0&&e.attack>0&&e.species));}}
+  for(let i=0;i<waves.length;i++){assert.equal(waves[i].nextMissionId,waves[i+1]?.id??-1);for(const d of [1,2,3]){const es=bloodEnemies(waves[i],d);assert.equal(es.length,6);assert(es.every(e=>e.life>0&&e.attack>0&&e.species));}}
  }
 });
 test('winning waves settle once, preserve mid-stage progress, grant source pills and unlock sweep after reset',()=>{

@@ -1,3 +1,4 @@
+import {sixNpcRoster} from './npc-roster.mjs';
 import {simulateCombat} from './combat.mjs';
 import {vipInfo} from './vip.mjs';
 import {recordActivitySpend} from './historical-activities.mjs';
@@ -16,9 +17,12 @@ export function validateBloodFront(s){
 }
 export function refreshBloodFront(s,now){if(day(now)>s.bloodFront.day){s.bloodFront.day=day(now);s.bloodFront.resets=vipInfo(s).bloodTime;}}
 export const bloodToken=s=>`${s.bloodFront.generation}:${s.bloodFront.stage}:${s.bloodFront.wave}`;
+const bloodSpecies=new Map(Object.entries(SPECIES).map(([key,d])=>[d.originalId,key]));
+const bloodPool=SOURCE.monsters.map(r=>({...r,species:bloodSpecies.get(r.dragonId)})).filter(r=>r.species);
 export function bloodEnemies(wave,difficulty){
  const group=SOURCE.groups.find(g=>g.id===wave['pack'+difficulty]);if(!group)throw Error('血战敌阵不存在。');
- return group.monsterIds.map(id=>{const r=SOURCE.monsters.find(m=>m.id===id),species=Object.keys(SPECIES).find(k=>SPECIES[k].originalId===r?.dragonId);if(!species)throw Error('血战怪物资料缺失。');return {...r,species};});
+ const originals=group.monsterIds.map(id=>{const r=SOURCE.monsters.find(m=>m.id===id),species=Object.keys(SPECIES).find(k=>SPECIES[k].originalId===r?.dragonId);if(!species)throw Error('血战怪物资料缺失。');return {...r,species};});
+ return sixNpcRoster(originals,bloodPool);
 }
 export function bloodTeamStats(s){const b=s.bloodFront,l=bloodLevel(b.stage),stats={};for(const d of configuredLineup(s)){const a={...dragonAttributes(d,s)};for(const [i,key] of [[1,'attack'],[2,'defend'],[3,'life']])if(b.buffs.includes(i))a[key]=Math.floor(a[key]*(1+parseFloat(l['desc'+i])/100));stats[d.id]=a;}return stats;}
 export function bloodTeamPower(s){const stats=bloodTeamStats(s);return Math.floor(configuredLineup(s).reduce((n,d)=>{const a=dragonAttributes(d,s),b=stats[d.id];return n+dragonPower(d,s)+(b.attack-a.attack)+(b.defend-a.defend)+(b.life-a.life)/3;},0));}

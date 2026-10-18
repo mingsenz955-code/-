@@ -1,5 +1,7 @@
+import {RED_RUNE_BOX,ORANGE_SET_BOX} from './compensation-boxes.mjs';
 import {createEquipmentInstance,equipmentCatalog} from './equipment.mjs';
 import CATALOG from '../assets/original/catalog.mjs';
+export const UPDATE_MAIL_V71=Object.freeze({id:'update-0.16.71',version:'0.16.71',title:'版本更新补偿',sender:'御龙高手',content:'附件：50000魔晶、红色符文随机宝箱4个、橙色装备套装随机宝箱1个。请在仓库开启宝箱。每个符文箱随机获得四类红符文之一；装备箱获得六部位橙装各1件。此为本次更新补偿。',gems:50000,boxes:[{id:RED_RUNE_BOX,amount:4},{id:ORANGE_SET_BOX,amount:1}]});
 export const MUTANT_MAIL_POOL=CATALOG.filter(d=>d.id>=2000&&d.extended.baseID>0).map(d=>d.id);
 export const UPDATE_MAIL_V69=Object.freeze({id:'update-0.16.69',version:'0.16.69',title:'版本更新礼包',sender:'御龙高手',content:'更新附件：随机变异龙蛋1颗、棒棒糖龙蛋1颗、100000魔晶、一套紫色装备（六部位，初始强化与星级）。随机龙蛋从已收录10种变异龙等概率抽取，领取后确定并保存。',dragonId:1204,amount:1,gems:100000,equipmentSets:1,equipmentQuality:4,equipmentGrade:1,equipmentStar:0,randomMutant:true});
 export function deliverLatestMail(s,mail,random=Math.random){

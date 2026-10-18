@@ -1,0 +1,15 @@
+const assert=require('node:assert/strict'),wait=ms=>new Promise(r=>setTimeout(r,ms));
+exports.prepare=async store=>{const {createGame}=await import('../src/game.mjs'),{ORIGINAL_LEVELS}=await import('../src/data.mjs');const s=createGame();s.playerXp=ORIGINAL_LEVELS.at(-1).xp_required;s.dragons.forEach(d=>d.level=20);s.mail.claimed=['update-0.16.67','update-0.16.68','update-0.16.69'];s.encounters.boss.stage=4;s.coins=1e7;await store.save(s);};
+exports.run=async(w,store,verify)=>{
+ const js=c=>w.webContents.executeJavaScript(c),click=s=>require('./smoke-input.cjs').nativeClick(w,s),inject=async action=>{await js(`(()=>{let b=document.createElement('button');b.dataset.action=${JSON.stringify(action)};document.body.append(b);b.click();b.remove();})()`);await wait(200);};
+ if(verify){const s=(await store.load()).state;assert(s.mail.claimed.includes('update-0.16.71'));assert.equal(s.runes.length,4);assert.equal(s.equipment.length,6);assert.equal(s.encounters.boss.attempts,9);console.log('PASS v71 restart: compensation boxes opened, red runes, orange set, Boss attempts and migration preserved');return;}
+ for(let i=0;i<80;i++){if(await js("!!document.querySelector('.ranch-world')"))break;await wait(100);}
+ await inject('openMail');await click('[data-action=readMail][data-value="update-0.16.71"]');assert(await js("document.querySelector('#modal').textContent.includes('50000')"));await click('[data-action=claimMail]');await wait(200);assert.equal((await store.load()).state.gems,50000);
+ for(const id of [990071,990072]){await inject('openWarehouse');await click(`[data-loot-prop="${id}"] [data-action=historyGift]`);if(id===990071)await click('[data-action=giftUseCount][data-value=max]');await click('[data-action=confirmGiftUse]');await wait(200);}
+ let s=(await store.load()).state;assert.equal(s.runes.length,4);assert.equal(s.equipment.length,6);
+ await inject('openWorldBoss');assert(await js("document.querySelector('#modal').textContent.includes('20000000')"));await click('[data-action=bossChallenge]');assert.equal(await js("document.querySelectorAll('.battle-fighter.enemy').length"),1);assert.equal((await store.load()).state.encounters.boss.attempts,9);
+ for(let i=0;i<300;i++){if(await js("document.querySelector('#modal').dataset.mode!=='sourceBattle'"))break;await wait(100);}assert.notEqual(await js("document.querySelector('#modal').dataset.mode"),'sourceBattle');
+ await inject('openArena');assert(await js("document.querySelector('#modal').textContent.includes('（6龙）')"));
+ await js("(()=>{let b=document.createElement('button');b.dataset.action='buyStructure';b.dataset.id='17';document.body.append(b);b.click();b.remove();})()");await wait(11000);await click('[data-action=confirmBuildingMove]');s=(await store.load()).state;assert(s.structures.at(-1).readyAt>Date.now()+7000);assert.equal(await js("document.querySelector('#modal').dataset.mode"),'nativeBuildingSpeed');await click('[data-action=speedBuilding]');assert(!(await store.load()).state.structures.at(-1).readyAt);
+ console.log('PASS v71 native: exact compensation, warehouse random boxes open, stage-4 Boss loads and fights with 20M HP, six-dragon NPC list');
+};

@@ -439,3 +439,5 @@
 
 ## v0.16.68 冒险与体力
 原PvePanel明文确认加号、50魔晶补满、VIP容量与pveBuyPowerTime；PveRender显示普通图节点与星级。原农场17建造10秒、18建造30秒，既有VIP缩短保留。原装备最高grade100显示+99，六部位均有橙色五星属性行。SHA/参数见reference/update-v68-provenance.json。
+
+- v71：pcf/tuhao_2与duihuan原导出确认喵星碎片7043奖励、10换1100；ErTongPart.lua根常量1204/7141确认儿童节棒棒糖展示与碎片，SHA256 1aabcbf29bc3b6f252a21066c4c30a2cf4834c8b0f60227b87c7f570e1d64f27；20%每击1片由用户明确指定，不是原服务器证据。

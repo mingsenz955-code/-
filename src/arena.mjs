@@ -1,3 +1,4 @@
+import {sixNpcRoster} from './npc-roster.mjs';
 import {simulateCombat} from './combat.mjs';
 import {recordActivitySpend} from './historical-activities.mjs';
 import SOURCE from '../assets/original/data/arena-vip.mjs';
@@ -20,8 +21,8 @@ export function arenaOpponents(s){
  return [0,1,2,3].map(i=>{
   const row=WORLD_SOURCE.robots[(i+s.arena.generation)%WORLD_SOURCE.robots.length],group=WORLD_SOURCE.groups.find(g=>g.id===row.packId);
   if(!group?.monsterIds.length)throw Error('原竞技对手阵容缺失。');
-  const originals=group.monsterIds.map(monster),ratio=[.55,.75,.95,1.15][i],totals=Object.fromEntries(['attack','defend','life'].map(k=>[k,originals.reduce((n,m)=>n+m[k],0)]));
-  const enemies=originals.map(m=>{const e={...m,level:Math.min(50,level+i)};for(const k of ['attack','defend','life'])e[k]=Math.max(1,Math.floor(budget[k]*ratio*m[k]/Math.max(1,totals[k])));e.skillValueScale=e.attack/Math.max(1,m.attack);return e;});
+  const originals=sixNpcRoster(group.monsterIds.map(monster),WORLD_SOURCE.monsters.map(m=>monster(m.id))),ratio=[.55,.75,.95,1.15][i],totals=Object.fromEntries(['attack','defend','life'].map(k=>[k,originals.reduce((n,m)=>n+m[k],0)]));
+  const enemies=originals.map(m=>{const e={...m,level:Math.min(50,level+i)};for(const k of ['attack','defend','life'])e[k]=Math.max(1,Math.floor(budget[k]*ratio*m[k]/Math.max(1,totals[k])));e.skillValueScale=(m.skillValueScale??1)*e.attack/Math.max(1,m.attack);return e;});
   return {id:i,name:`${row.name}·${i+1}`,rank:Math.max(1,s.arena.rank-[40,100,250,500][i]),enemy:enemies[0],enemies,power:Math.floor(enemies.reduce((n,e)=>n+e.attack+e.defend+e.life/3,0)),policy:'offline-arena-selected-team-v2'};
  });
 }

@@ -1,3 +1,4 @@
+import {compensationBox,compensationRewards} from './compensation-boxes.mjs';
 import {monopolyAction} from './monopoly.mjs';
 import SOURCE from '../assets/original/data/activities.mjs';
 import ITEM_USE from '../assets/original/data/item-use.mjs';
@@ -11,9 +12,9 @@ export const obsoleteActivityPrize=p=>[12,30].includes(p.type)||(p.type===13&&!g
 // Preserve raw source IDs for existing claim records; retire obsolete reward rows.
 export const HISTORICAL_ACTIVITIES=SOURCE.activities.map(d=>({...d,items:d.items.map(r=>({...r,rewards:r.rewards.filter(p=>!obsoleteActivityPrize(p))}))}));
 export const visibleActivities=()=>HISTORICAL_ACTIVITIES.filter(d=>!['legacy-sign','monopoly-2','monopoly-3','monopoly-rebate'].includes(d.key));
-export const activityPropMeta=id=>SOURCE.items[id]??null;
-export const activityGiftPack=id=>ITEM_USE.packs[id]??SOURCE.fixedPacks[id]??null;
-export const activityItemDescription=id=>ITEM_USE.descriptions[id]??'';
+export const activityPropMeta=id=>SOURCE.items[id]??lootProp(id)??null;
+export const activityGiftPack=id=>compensationBox(id)??ITEM_USE.packs[id]??SOURCE.fixedPacks[id]??null;
+export const activityItemDescription=id=>compensationBox(id)?.description??ITEM_USE.descriptions[id]??'';
 export const activityFragment=id=>ITEM_USE.fragments[id]??null;
 export const activityFragmentCount=(s,id)=>(s.items[id]??0)+(s.activities?.history?.inventory?.[`4:${id}`]??0);
 export function composeActivityFragment(s,id,count=1){const r=activityFragment(id);if(!r||!integer(count,1,99))throw Error('龙蛋碎片或数量无效。');const cost=count*r.cost;if(activityFragmentCount(s,id)<cost)throw Error(`碎片不足：合成需要${cost}片，当前${activityFragmentCount(s,id)}片。`);const fromItems=Math.min(s.items[id]??0,cost);s.items[id]=(s.items[id]??0)-fromItems;if(cost>fromItems)s.activities.history.inventory[`4:${id}`]-=cost-fromItems;const rewards=[{type:5,itemId:r.dragonId,amount:count}];activityDeliver(s,rewards);s.activities.history.last=rewards;s.activities.history.revision++;return `合成 ${count} 枚龙蛋，已进入仓库。`;}
@@ -52,7 +53,7 @@ export function activityDeliver(s,prizes){for(const p of prizes){if(obsoleteActi
  if(t===26||t===27){s.equipmentMaterials[t===26?'wing':'crystal']+=p.amount;continue;}
  if(t===28){s.runeHunt.shenfu+=p.amount;continue;}
  if(t===23){s.arena.medals+=p.amount;continue;}
- if(t===29&&runeDefinition(id)){if(s.runes.length+p.amount>100)throw Error('符文背包已满。');for(let i=0;i<p.amount;i++)s.runes.push({id:`fw-${s.nextRuneId++}`,type:id,exp:0,dragonid:0});continue;}
+ if(t===29&&runeDefinition(id)){if(s.runes.length+p.amount>500)throw Error('符文背包已满。');for(let i=0;i<p.amount;i++)s.runes.push({id:`fw-${s.nextRuneId++}`,type:id,exp:0,dragonid:0});continue;}
  const k=`${t}:${id}`;s.activities.history.inventory[k]=(s.activities.history.inventory[k]??0)+p.amount;
 }}
 const unit=random=>{const v=random();if(!Number.isFinite(v)||v<0||v>=1)throw Error('随机值无效。');return v;};
@@ -124,7 +125,7 @@ export function historyAction(s,p,now,random=Math.random){const d=activityDefini
   }h.counts[d.key]=count+n;
  }else if(d.kind==='eggs'&&p.op==='buyEgg'){const r=d.items.find(r=>r.id===p.id);if(!r)throw Error('金蛋不存在。');activityPay(s,{type:3,itemId:-1,amount:r.price});rewards=[{type:4,itemId:r.prop,amount:1}];message='已购买一枚砸蛋道具。';}
  else if(d.kind==='eggs'){
-  const r=d.items.find(r=>r.id===p.id);if(!r)throw Error('金蛋不存在。');const e=h.eggs[r.id]??={hits:0};activityPay(s,{type:4,itemId:r.prop,amount:1});e.hits++;if(e.hits>=r.health){const pool=r.pools.map((p,i)=>({id:i,weight:p.weight,max:p.max,rewards:[{type:p.type,itemId:p.itemId,amount:p.min}]})),row=pityPick(s,{...d,kind:'eggPrize'},pool,random,`${d.key}:${r.id}`),prize=row.rewards[0];rewards=[{...prize,amount:prize.amount+Math.floor(unit(random)*(row.max-prize.amount+1))}];e.hits=0;}message=`击打金蛋，进度 ${e.hits}/${r.health}${rewards.length?'，已获得奖励':''}。`;
+  const r=d.items.find(r=>r.id===p.id);if(!r)throw Error('金蛋不存在。');const e=h.eggs[r.id]??={hits:0};activityPay(s,{type:4,itemId:r.prop,amount:1});e.hits++;if(e.hits>=r.health){const pool=r.pools.map((p,i)=>({id:i,weight:p.weight,max:p.max,rewards:[{type:p.type,itemId:p.itemId,amount:p.min}]})),row=pityPick(s,{...d,kind:'eggPrize'},pool,random,`${d.key}:${r.id}`),prize=row.rewards[0];rewards=[{...prize,amount:prize.amount+Math.floor(unit(random)*(row.max-prize.amount+1))}];e.hits=0;}if(unit(random)<.2)rewards.push({type:4,itemId:7141,amount:1});message=`击打金蛋，进度 ${e.hits}/${r.health}${rewards.length?'，已获得奖励':''}。`;
  }else{
   const r=activityRows(s,d.key,now).find(r=>r.id===p.id);if(!r)throw Error('活动条目不存在。');if(!r.ready)throw Error(r.claimed?'该奖励已领取。':r.note||'尚未达成活动条件。');rewards=r.rewards.map(p=>({...p}));
   if(r.cost&&!(d.kind==='packet'&&h.packets[r.id]?.left))activityPay(s,r.cost);
@@ -145,4 +146,4 @@ export function historyAction(s,p,now,random=Math.random){const d=activityDefini
 export function settleSpringTaskCoupons(s,now){const h=s.activities.history,day=activityDay(now);for(const r of activityDefinition('spring-tasks').items){if(r.id===4)continue;const n=r.id===9?(h.spentDays[day]??0):(h.counts[`spring-${day}-${r.id}`]??0),earned=Math.min(r.limit,Math.floor(n/r.goal)),k=`spring-claimed-${day}-${r.id}`,already=h.counts[k]??0;if(earned>already){h.counts['spring-coupons']=(h.counts['spring-coupons']??0)+(earned-already)*r.coupons;h.counts[k]=earned;}}}
 export function recordActivityBreed(s,id){const h=s.activities.history;h.bred[id]=(h.bred[id]??0)+1;const r=SOURCE.eggPoints.find(r=>r[1]===id);if(r)h.counts['egg-points']=(h.counts['egg-points']??0)+r[3];}
 export function recordSpringTask(s,id,count=1,now=s.updatedAt){const h=s.activities.history,k=`spring-${activityDay(now)}-${id}`;h.counts[k]=(h.counts[k]??0)+count;}
-export function openActivityGift(s,id,count=1,random=Math.random){const blocked=activityGiftBlock(id);if(blocked)throw Error(blocked);const pack=activityGiftPack(id);if(!pack)throw Error('该礼包尚无确定的固定内容或客户端奖池。');if(!integer(count,1,99))throw Error('请选择1至99个礼包。');activityPay(s,{type:4,itemId:id,amount:count});const rewards=[];for(let i=0;i<count;i++){if(pack.rewards)rewards.push(...pack.rewards);else for(const pool of pack.pools){const r=pick(ITEM_USE.pools[pool],random),amount=r.min===r.max?r.min:r.min+Math.floor(unit(random)*(r.max-r.min+1));rewards.push({type:r.type,itemId:r.itemId,amount});}}activityDeliver(s,rewards);const combined=new Map();for(const r of rewards){const k=`${r.type}:${r.itemId}`,p=combined.get(k);if(p)p.amount+=r.amount;else combined.set(k,{...r});}s.activities.history.last=[...combined.values()].slice(0,50);s.activities.history.revision++;return `已打开 ${count} 个礼包，奖励已发放到对应库存。`;}
+export function openActivityGift(s,id,count=1,random=Math.random){const blocked=activityGiftBlock(id);if(blocked)throw Error(blocked);const pack=activityGiftPack(id);if(!pack)throw Error('该礼包尚无确定的固定内容或客户端奖池。');if(!integer(count,1,99))throw Error('请选择1至99个礼包。');if(compensationBox(id)){const rewards=compensationRewards(id,count,random);if(s.runes.length+rewards.filter(p=>p.type===29).length>500)throw Error('符文背包已满。');if(s.equipment.length+rewards.filter(p=>p.type===8).length>2000)throw Error('装备背包空间不足。');activityPay(s,{type:4,itemId:id,amount:count});activityDeliver(s,rewards);s.activities.history.last=rewards;s.activities.history.revision++;return `已开启${count}个补偿宝箱，奖励已入库。`;}activityPay(s,{type:4,itemId:id,amount:count});const rewards=[];for(let i=0;i<count;i++){if(pack.rewards)rewards.push(...pack.rewards);else for(const pool of pack.pools){const r=pick(ITEM_USE.pools[pool],random),amount=r.min===r.max?r.min:r.min+Math.floor(unit(random)*(r.max-r.min+1));rewards.push({type:r.type,itemId:r.itemId,amount});}}activityDeliver(s,rewards);const combined=new Map();for(const r of rewards){const k=`${r.type}:${r.itemId}`,p=combined.get(k);if(p)p.amount+=r.amount;else combined.set(k,{...r});}s.activities.history.last=[...combined.values()].slice(0,50);s.activities.history.revision++;return `已打开 ${count} 个礼包，奖励已发放到对应库存。`;}

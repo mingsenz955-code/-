@@ -1,3 +1,4 @@
+import {COMPENSATION_PROPS} from './compensation-boxes.mjs';
 import {AWAKENING_STONES} from './awakening-items.mjs';
 import SOURCE from '../assets/original/data/loot.mjs';
 import {equipmentDefinition,createEquipmentInstance} from './equipment.mjs';
@@ -5,7 +6,7 @@ import {adventureLevel} from './adventure.mjs';
 export const LOOT_POLICY='offline-source-loot-v1';
 export const createNodeRewards=now=>({day:Math.floor((now+28800000)/86400000),records:{}});
 export function nodeRewardStatus(s,nodeId,now=Date.now()){const level=sourceAdventureLevel(nodeId);if(!level||level.kind<=2||!level.specialAmount)throw Error('该节点不是奖励点。');const data=structuredClone(s.loot.nodeRewards??createNodeRewards(now)),day=Math.floor((now+28800000)/86400000);if(day>data.day){data.day=day;for(const r of Object.values(data.records))r.count=0}const record=data.records[nodeId]??{count:0,at:null},readyAt=record.at===null?0:record.at+10800000;return {data,record,level,readyAt,ready:record.count<3&&now>=readyAt}}
-export const LOOT_PROPS=[...SOURCE.props,...AWAKENING_STONES.filter(p=>!SOURCE.props.some(v=>v.id===p.id))];
+export const LOOT_PROPS=[...COMPENSATION_PROPS,...SOURCE.props,...AWAKENING_STONES.filter(p=>!SOURCE.props.some(v=>v.id===p.id))];
 export const EQUIPMENT_FRAGMENTS=SOURCE.fragments;
 export const lootProp=id=>LOOT_PROPS.find(v=>v.id===Number(id))??null;
 export const equipmentFragment=id=>SOURCE.fragments.find(v=>v.id===Number(id))??null;
