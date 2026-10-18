@@ -3,8 +3,8 @@ import {recordActivitySpend} from './historical-activities.mjs';
 import SOURCE from '../assets/original/data/arena-vip.mjs';
 import {vipInfo} from './vip.mjs';
 export {vipInfo} from './vip.mjs';
-import {treeDifficultyReference,monster,WORLD_SOURCE} from './world-encounters.mjs';
-import {configuredLineup,lineupPower} from './battle.mjs';
+import {monster,WORLD_SOURCE} from './world-encounters.mjs';
+import {configuredLineup,lineupPower,dragonAttributes} from './battle.mjs';
 import {deliverLoot,lootProp,equipmentFragment} from './loot.mjs';
 import {equipmentDefinition} from './equipment.mjs';
 export {SOURCE as ARENA_SOURCE};
@@ -14,8 +14,18 @@ export function validateArena(s){const a=s.arena,ints=['day','rank','best','atte
 export function refreshArena(s,now){if(arenaDay(now)>s.arena.day)Object.assign(s.arena,{day:arenaDay(now),attempts:5,bought:0,generation:s.arena.generation+1});}
 export const arenaToken=s=>`${s.arena.day}:${s.arena.generation}:${s.arena.rank}`;
 export const arenaAward=rank=>SOURCE.awards.find(r=>r.maxRank<=rank&&r.minRank>=rank);
-export function arenaOpponents(s){const reference=treeDifficultyReference(s);return [0,1,2,3].map(i=>{const row=WORLD_SOURCE.robots[(i+s.arena.generation)%WORLD_SOURCE.robots.length],base=monster(WORLD_SOURCE.groups.find(g=>g.id===row.packId)?.monsterIds[0]),rank=Math.max(1,s.arena.rank-[40,100,250,500][i]),ratio=[.65,.85,1.05,1.3][i]*(1+(5000-rank)/10000),scale=reference.bucket*ratio/(base.attack+base.defend+base.life/3),enemy={...base,level:Math.min(50,reference.level+i),attack:Math.max(1,Math.floor(base.attack*scale)),defend:Math.max(1,Math.floor(base.defend*scale)),life:Math.max(1,Math.floor(base.life*scale))};return {id:i,name:`${row.name}·${i+1}`,rank,enemy,power:Math.floor(enemy.attack+enemy.defend+enemy.life/3)};});}
-export function arenaPlan(s,id,now=Date.now(),token=arenaToken(s)){if(token!==arenaToken(s))throw Error('对手列表已变化，请重新选择。');if(!s.arena.attempts)throw Error('今日已无挑战次数，请点击+购买。');if(!vipInfo(s).pvpNoCD&&now<s.arena.readyAt)throw Error('挑战尚在冷却，可等待或花费50魔晶重置。');const team=configuredLineup(s);if(!team.length)throw Error('还没有选择出战的龙。');const op=arenaOpponents(s).find(r=>r.id===id);if(!op)throw Error('挑战对手不存在。');const combat=simulateCombat(s,[op.enemy]);return {...op,won:combat.won,combat};}
+// Offline matchmaking follows the selected team; source packs retain every member.
+export function arenaOpponents(s){
+ const team=configuredLineup(s),stats=team.map(d=>dragonAttributes(d,s)),budget=Object.fromEntries(['attack','defend','life'].map(k=>[k,Math.max(1,stats.reduce((n,d)=>n+(d?.[k]??0),0))])),level=team.length?Math.round(team.reduce((n,d)=>n+d.level,0)/team.length):1;
+ return [0,1,2,3].map(i=>{
+  const row=WORLD_SOURCE.robots[(i+s.arena.generation)%WORLD_SOURCE.robots.length],group=WORLD_SOURCE.groups.find(g=>g.id===row.packId);
+  if(!group?.monsterIds.length)throw Error('原竞技对手阵容缺失。');
+  const originals=group.monsterIds.map(monster),ratio=[.55,.75,.95,1.15][i],totals=Object.fromEntries(['attack','defend','life'].map(k=>[k,originals.reduce((n,m)=>n+m[k],0)]));
+  const enemies=originals.map(m=>{const e={...m,level:Math.min(50,level+i)};for(const k of ['attack','defend','life'])e[k]=Math.max(1,Math.floor(budget[k]*ratio*m[k]/Math.max(1,totals[k])));e.skillValueScale=e.attack/Math.max(1,m.attack);return e;});
+  return {id:i,name:`${row.name}·${i+1}`,rank:Math.max(1,s.arena.rank-[40,100,250,500][i]),enemy:enemies[0],enemies,power:Math.floor(enemies.reduce((n,e)=>n+e.attack+e.defend+e.life/3,0)),policy:'offline-arena-selected-team-v2'};
+ });
+}
+export function arenaPlan(s,id,now=Date.now(),token=arenaToken(s)){if(token!==arenaToken(s))throw Error('对手列表已变化，请重新选择。');if(!s.arena.attempts)throw Error('今日已无挑战次数，请点击+购买。');if(!vipInfo(s).pvpNoCD&&now<s.arena.readyAt)throw Error('挑战尚在冷却，可等待或花费50魔晶重置。');const team=configuredLineup(s);if(!team.length)throw Error('还没有选择出战的龙。');const op=arenaOpponents(s).find(r=>r.id===id);if(!op)throw Error('挑战对手不存在。');const combat=simulateCombat(s,op.enemies);return {...op,won:combat.won,combat};}
 export const exchangeSupported=r=>r.exchangeType===1&&([1,2,19,20,21,22].includes(r.itemType)||r.itemType===4&&!!lootProp(r.itemID)||r.itemType===8&&!!equipmentDefinition(r.itemID)||r.itemType===9&&!!equipmentFragment(r.itemID));
 export function arenaAction(s,type,payload,now){refreshArena(s,now);const a=s.arena,pay=n=>{if(s.gems<n)throw Error('魔晶不足。');s.gems-=n;recordActivitySpend(s,n);};
  switch(type){

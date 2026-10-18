@@ -19,7 +19,8 @@ export function simulateCombat(state,enemies,{allyStats={},roundLimit=BATTLE_ROU
   for(let i=0;i<Math.max(allies.length,opponents.length);i++)for(const [side,team,targets] of [['ally',allies,opponents],['enemy',opponents,allies]]){
    const actor=team[i],alive=targets.filter(t=>t.hp>0);if(!actor||actor.hp<=0||!alive.length)continue;
    const target=alive[i%alive.length],slot=round%2===0?2:1,rune=side==='ally'?runeOfDragon(state,actor.item.id,slot):null,skill=side==='enemy'?(sourceSkill(actor.item['skill'+slot])??runeSkill(actor.item,null,slot)):runeSkill(actor.item,runeDefinition(rune?.type),slot);
-   const damage=hitDamage(actor.stats.attack,target.stats.defend,skill),hpBefore=target.hp;target.hp=Math.max(0,target.hp-damage);
+   const effectiveSkill=side==='enemy'&&Number.isFinite(actor.item.skillValueScale)&&skill?{...skill,damageValue:Math.floor((skill.damageValue??0)*Math.max(0,actor.item.skillValueScale))}:skill;
+   const damage=hitDamage(actor.stats.attack,target.stats.defend,effectiveSkill),hpBefore=target.hp;target.hp=Math.max(0,target.hp-damage);
    events.push({round,side,actor:i,target:target.index,slot,skillId:skill?.id??null,damage,appliedDamage:hpBefore-target.hp,hpBefore,hpAfter:target.hp,maxHp:target.maxHp});
   }
  }
