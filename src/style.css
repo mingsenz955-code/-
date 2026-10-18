@@ -452,3 +452,6 @@ body:has(#modal[open].native-fullscreen){background:#09242e}
 .source-battle-dialog .battle-exit-button{position:absolute;right:22px;top:23%;z-index:20000;font-size:16px;min-width:105px;padding:4px 14px;pointer-events:auto}
 .native-habitat-upgrade{width:550px;flex-wrap:wrap}.native-habitat-upgrade>span{flex-basis:100%;max-width:550px}
 .blood-world-entry,.blood-world-entry canvas{pointer-events:none}.blood-world-hit{position:absolute;left:-30px;top:-175px;width:220px;height:190px;clip-path:ellipse(50% 50% at 50% 50%);pointer-events:auto;cursor:pointer}
+
+.gem-auto-feed{position:absolute;transform:translate(-50%,-50%);width:136px;height:43px;border:0;color:#fff;font-size:22px;cursor:pointer;background:url("../assets/original/ui/ui_common_btn_3.png") center/100% 100% no-repeat;background-color:#795233;border-radius:8px}
+.gem-auto-feed{pointer-events:auto;z-index:2}

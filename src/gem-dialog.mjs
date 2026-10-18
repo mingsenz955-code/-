@@ -23,5 +23,6 @@ export async function openGemUpgrade(state,id,tab='land'){
  const attrs=Object.entries(GEM_ATTRS).filter(([key])=>info[key]>0);
  for(let i=0;i<2;i++){const row=attrs[i],key=`shuxing${i+2}`;if(!row){hidden.add(key);continue}values[`${key}/miaoshu`]=row[1]+'：';values[`${key}/shuzi`]='+'+info[row[0]];hidden.add(`${key}/hint_levelup`);hidden.add(`${key}/shuzi_levelup`)}
  const choices=state.gemInventory.filter(v=>v.id!==id&&gemSocket(state,v.id)<0&&gemDefinition(v.type).quality<=info.quality);slots.huadong_xiao=`<div class="source-gem-inventory gem-feed-list">${choices.map(v=>cell(card,v,'gemFeedSelect')).join('')}</div>`;
+ slots.quanxuan=`<button class="gem-auto-feed" data-action="autoFuseGem" data-id="${id}" title="吞噬背包中同品质及更低品质宝石；保留已镶嵌宝石，满级停止">一键吞噬</button>`;hidden.delete('quanxuan');
  const d=showSource('sourceGemUpgrade',renderSourceLayout(layout,{values,slots,hidden,actions:{close:{type:'gemInfo',id,label:'返回宝石'},'btn_shengji/btn':{type:'fuseGem',id,label:'吞噬选中宝石'}}}));d.dataset.gemTab=tab;
 }

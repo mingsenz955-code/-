@@ -32,7 +32,7 @@ import {LOOT_PROPS,validateLoot,createNodeRewards,nodeRewardStatus,sampleLoot,de
 import {createGemExplore,validateGemExplore,gemExplorePlan,sampleGemExplore,GEM_EXPLORE_POLICY} from './gem-explore.mjs';
 import {createRuneHunt,validateRuneHunt,runeHuntStatus,shenfuPurchasePlan,sampleRuneHunt,RUNE_NPCS,RUNE_HUNT_POLICY} from './rune-hunt.mjs';
 import {bestRunesForDragon,validateRunes,runeInstance,runeDefinition,runeOfDragon,runeEquipError,runeUpgradePlan} from './runes.mjs';
-import {validateGems,gemItem,gemSocket,gemInsertIndex,gemFusionPlan} from './gems.mjs';
+import {validateGems,gemItem,gemSocket,gemInsertIndex,gemFusionPlan,gemAutoFusionMaterials} from './gems.mjs';
 import {formationError} from './formation.mjs';
 import {LOTTERY_POLICY,LOTTERY_CAPACITY,lotteryRow,lotteryCost,sampleLottery} from './lottery.mjs';
 import {SPECIES, RULES, RECIPES, ORIGINAL_CROPS, ORIGINAL_LEVELS, ORIGINAL_FARMS, breedingOptions, speciesKey} from './data.mjs';
@@ -260,6 +260,7 @@ export function action(state,type,payload={},now=Date.now(),random=Math.random) 
  case 'wearEquipment': {const target=dragon(payload.id),item=equipmentInstance(s,payload.equipmentId)||fail('找不到这件装备。');if(item.dragonid)fail('这件装备已经穿在龙身上。');const definition=equipmentDefinition(item.type);const existing=equipmentInPart(equipmentOfDragon(s,target.id),definition.part);if(existing)existing.dragonid=0;item.dragonid=target.id;message=`${SPECIES[target.species].name} 装备了${equipmentLabel(item)}。`;break;}
  case 'insertGem': {const index=gemInsertIndex(s,payload.gemId,payload.tab),old=gemSocket(s,payload.gemId);if(old>=0)s.gemSockets[old]=null;s.gemSockets[index]=payload.gemId;message='宝石已镶嵌，祭坛属性已生效。';break;}
  case 'removeGem': {const index=gemSocket(s,payload.gemId);if(index<0)fail('宝石不在祭坛中。');if(s.gemInventory.length-s.gemSockets.filter(Boolean).length>=150)fail('宝石背包已满，无法卸下。');s.gemSockets[index]=null;message='宝石已卸下。';break;}
+ case 'autoFuseGem': {const materials=gemAutoFusionMaterials(s,payload.gemId),plan=gemFusionPlan(s,payload.gemId,materials),item=gemItem(s,payload.gemId);item.type=plan.type;item.exp=plan.exp;s.gemInventory=s.gemInventory.filter(v=>!materials.includes(v.id));message=`一键吞噬完成，消耗${materials.length}颗宝石。`;break;}
  case 'fuseGem': {const plan=gemFusionPlan(s,payload.gemId,payload.materials),item=gemItem(s,payload.gemId);item.type=plan.type;item.exp=plan.exp;s.gemInventory=s.gemInventory.filter(v=>!payload.materials.includes(v.id));message='宝石吞噬完成，属性已更新。';break;}
  case 'starEquipment': {const plan=equipmentStarPlan(s,payload.equipmentId,payload.ids);if(!plan.gained)fail('请选择要吞噬的装备。');if(s.coins<plan.cost)fail(`金币不足，需要 ${plan.cost}。`);s.coins-=plan.cost;const item=equipmentInstance(s,payload.equipmentId);item.star=plan.star;item.exp=plan.exp;s.equipment=s.equipment.filter(v=>!plan.ids.includes(v.id));message=`${equipmentLabel(item)}升星培养完成，当前 ${plan.star} 星。`;break;}
  case 'decomposeEquipment': {const materials=equipmentDecomposePlan(s,payload.ids);for(const key in materials)s.equipmentMaterials[key]+=materials[key];s.equipment=s.equipment.filter(v=>!payload.ids.includes(v.id));message='分解获得 '+Object.entries(materials).filter(([,v])=>v>0).map(([k,v])=>`${v} ${EQUIPMENT_MATERIAL_NAMES[k]}`).join('、')+'。';break;}

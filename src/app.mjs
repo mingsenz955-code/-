@@ -383,7 +383,7 @@ document.addEventListener('click',async e=>{
   if(type==='gemInfo'){await openGemInfo(state,el.dataset.id,$('#modal').dataset.gemTab||'land');return}
   if(type==='gemUpgrade'){await openGemUpgrade(state,el.dataset.id,$('#modal').dataset.gemTab||'land');return}
   if(type==='gemFeedSelect'){el.classList.toggle('is-selected');return}
-  if(['insertGem','removeGem','fuseGem'].includes(type)){const tab=$('#modal').dataset.gemTab||'land',materials=Array.from($('#modal').querySelectorAll('.gem-feed-list .is-selected')).map(v=>v.dataset.id);await persist(action(state,type,{gemId:el.dataset.id,tab,materials}));render();await openGemDialog(state,tab);toast(state.log[0]);return}
+  if(['insertGem','removeGem','fuseGem','autoFuseGem'].includes(type)){const tab=$('#modal').dataset.gemTab||'land',materials=Array.from($('#modal').querySelectorAll('.gem-feed-list .is-selected')).map(v=>v.dataset.id);await persist(action(state,type,{gemId:el.dataset.id,tab,materials}));render();await openGemDialog(state,tab);toast(state.log[0]);return}
   if(type==='openFormation'){await openFormationDialog(state);return}
   if(type==='formationSlot'){await openFormationDialog(state,id);return}
   if(type==='formationPick'){await openFormationPicker(state,id);return}
