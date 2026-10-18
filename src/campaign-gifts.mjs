@@ -4,7 +4,7 @@ import {RULES} from './data.mjs';
 import {acceptsDragon,habitatInfo} from './habitats.mjs';
 export const FARM_FIX_GIFT=Object.freeze({
  id:'update-0.16.73',version:'0.16.73',title:'农场修复更新礼物',sender:'御龙高手',campaign:true,adultDragon:true,
- content:`附件：满级${RULES.maxLevel}级、五星棒棒糖龙1条，已穿戴六部位满强化+99五星橙装和四类10级红符文。棒棒糖龙原表没有觉醒配置，使用原表五星上限。领取需要一处已建成且有空位的神圣系龙巢；不足时邮件保留。每份存档仅可领取一次。`,
+ content:`附件：满级${RULES.maxLevel}级、五星棒棒糖龙1条，已穿戴六部位满强化+99五星橙装和四类10级红符文。棒棒糖龙原表没有觉醒配置，使用原表五星上限。龙巢满时成品龙先存仓库待安置，装备与符文先入背包，安置后自动穿戴仍闲置的配套物品。每份存档仅可领取一次。`,
  dragonId:1204,amount:1,equipmentSets:1,equipmentQuality:5,equipmentGrade:100,equipmentStar:5,runeTypes:[60110,60210,60310,60410],
 });
 export const BOSS_CELEBRATION=Object.freeze({
@@ -16,12 +16,13 @@ export const BOSS_CELEBRATION=Object.freeze({
 export function deliverCampaignGift(s,mail=BOSS_CELEBRATION){
  if(mail.adultDragon){
   const species='original1204',h=s.habitats.find(h=>acceptsDragon(h,species)&&s.dragons.filter(d=>d.habitatId===h.id).length<habitatInfo(h).capacity);
-  if(!h)throw Error('请先准备一个已建成且有空位的神圣系龙巢，邮件会保留。');
+  if(!h&&(s.giftDragons??[]).length>=200)throw Error('成品龙待安置仓库已满，请先安置后领取。');
   if(s.equipment.length+6>2000)throw Error('装备背包空间不足，请腾出位置后领取。');
   if(s.runes.length+4>500)throw Error('符文背包已满，请腾出位置后领取。');
   const id=s.nextId,gear=mailEquipmentTypes(mail).map((type,i)=>({...createEquipmentInstance(`eq-${s.nextEquipId+i}`,type),star:5,dragonid:id}));
   const runes=mail.runeTypes.map((type,i)=>({id:`fw-${s.nextRuneId+i}`,type,exp:0,dragonid:id}));
-  s.dragons.push({id,species,level:RULES.maxLevel,star:5,starExp:0,habitatId:h.id});s.nextId++;
+  if(h)s.dragons.push({id,species,level:RULES.maxLevel,star:5,starExp:0,habitatId:h.id});
+  else{for(const v of [...gear,...runes])v.dragonid=0;(s.giftDragons??=[]).push({id,itemId:1204,type:16,amount:1,gift:mail.id,level:RULES.maxLevel,star:5,equipmentIds:gear.map(v=>v.id),runeIds:runes.map(v=>v.id)});}s.nextId++;
   s.equipment.push(...gear);s.nextEquipId+=6;s.runes.push(...runes);s.nextRuneId+=4;return;
  }
  const stack=s.giftEggs.find(e=>e.dragonId===mail.dragonId&&e.source==='activity'&&(e.quantity??1)+mail.amount<=999999);

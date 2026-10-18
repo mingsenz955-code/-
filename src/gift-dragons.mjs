@@ -1,0 +1,3 @@
+import {RULES} from './data.mjs';
+export function validateGiftDragons(s){s.giftDragons??=[];if(!Array.isArray(s.giftDragons)||s.giftDragons.length>200||s.giftDragons.some(p=>p.gift!=='update-0.16.73'||p.itemId!==1204||p.type!==16||p.level!==RULES.maxLevel||p.star!==5||!['equipmentIds','runeIds'].every((key,i)=>Array.isArray(p[key])&&p[key].length===[6,4][i]&&new Set(p[key]).size===p[key].length&&p[key].every(id=>typeof id==='string'&&new RegExp(i?'^fw-[1-9][0-9]*$':'^eq-[1-9][0-9]*$').test(id)))))throw Error('成品龙奖励记录无效。');}
+export function equipGiftDragon(s,p){for(const e of s.equipment)if(p.equipmentIds.includes(e.id)&&!e.dragonid)e.dragonid=p.id;for(const r of s.runes)if(p.runeIds.includes(r.id)&&!r.dragonid)r.dragonid=p.id;}
