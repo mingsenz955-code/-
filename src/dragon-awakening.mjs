@@ -1,10 +1,11 @@
-import CATALOG from '../assets/original/catalog.mjs';
 import SOURCE from '../assets/original/data/dragon-growth.mjs';
 import {SPECIES} from './data.mjs';
 import {dragonStars,dragonRemovalError} from './dragon-stars.mjs';
 import {dragonMaterials,consumeDragonMaterials} from './dragon-materials.mjs';
 const idOf=d=>SPECIES[d?.species]?.originalId;
-export const awakeningConfig=d=>CATALOG.find(r=>r.id===idOf(d))?.extended.canWakeup===1?SOURCE.dragon_juexingjingyan.find(r=>r[0]===idOf(d)):null;
+// Offline availability: open every complete source configuration, including the
+// five entries hidden by the old client flag. Never synthesize missing costs.
+export const awakeningConfig=d=>SOURCE.dragon_juexingjingyan.find(r=>r[0]===idOf(d))??null;
 export const awakeningRows=d=>SOURCE.dragon_juexingshengxing.filter(r=>r[1]===idOf(d));
 export function awakeningStatus(d){const rows=awakeningRows(d),star=d.wake?.star??0,exp=d.wake?.exp??0,row=rows.find(r=>r[2]===5+star);if(!row)throw Error('该龙尚无原版觉醒配置。');const stage=Math.min(5,Math.floor(exp/row[4]*5));return {star,exp,row,stage,percent:Math.min(100,Math.floor(exp/row[4]*100)),max:star===5,active:!!d.wake};}
 export const dragonDisplayStars=d=>dragonStars(d)+(d.wake?.star??0);

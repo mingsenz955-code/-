@@ -10,8 +10,8 @@ import {ORIGINAL_RECHARGE_PRODUCTS,ORIGINAL_SINGLE_RECHARGE_TIERS,ORIGINAL_VIP_L
 // says so on screen, which is what the user asked for. Nothing here pretends to charge money.
 export const RECHARGE_POLICY='original-recharge-products-v1';
 export const RECHARGE_TEST_MODE=true;
-export const RECHARGE_DAILY_LIMIT_YUAN=500;
-export const RECHARGE_NOTICE='测试模式：点击即到账，不进行任何真实扣款；每日最多500元。';
+export const RECHARGE_DAILY_LIMIT_YUAN=2000;
+export const RECHARGE_NOTICE='测试模式：点击即到账，不进行任何真实扣款；每日最多2000元。';
 export const RECHARGE_PRODUCTS=Object.freeze(ORIGINAL_RECHARGE_PRODUCTS.map(product=>Object.freeze({
  id:product.id,name:product.name,gems:product.gems,priceYuan:product.priceYuan,priceJiao:product.priceJiao,
  rebate:product.rebate,firstGift:product.rebateMultiple>0?product.gems:product.rebate,xid:product.xid,img:product.img,

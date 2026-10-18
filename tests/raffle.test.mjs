@@ -3,16 +3,10 @@ import assert from 'node:assert/strict';
 import {createGame,validate,action} from '../src/game.mjs';
 import {RAFFLE_POLICY,ANCIENT_DRAGONS,RAFFLE_GUARANTEE_DRAWS,raffleMachine,raffleCost,rafflePool,sampleRaffle,advanceRaffleCounter} from '../src/raffle.mjs';
 const T=1800000000000;
-test('offline senior pool gives ancient dragons a 20 percent bucket and a saved ten-draw safety net',()=>{
- for(const id of ANCIENT_DRAGONS)assert(rafflePool('senior').some(r=>r.dragonId===id));
- for(const roll of [0,.199999])assert(ANCIENT_DRAGONS.includes(sampleRaffle('senior',()=>roll).dragonId));
- assert(!ANCIENT_DRAGONS.includes(sampleRaffle('senior',()=>.2).dragonId));
- let s=createGame(T);s.gems=100000;
- for(let i=0;i<9;i++)s=action(s,'raffleDraw',{mode:'senior',count:1},T,()=>.9);
- assert.equal(s.raffle.ancientCounter,9);s=validate(JSON.parse(JSON.stringify(s)));
- s=action(s,'raffleDraw',{mode:'senior',count:1},T,()=>.9);
- assert(ANCIENT_DRAGONS.includes(s.raffle.pending.at(-1).dragonId));assert.equal(s.raffle.ancientCounter,0);
- const old=createGame(T);old.nextId=101;old.raffle.pending=[{id:100,policy:'offline-raffle-preview-v1',machine:'senior',dragonId:1073,quality:5,previewIndex:2}];validate(old);
+test('all machines exclude ancient dragons and preserve already earned legacy eggs',()=>{
+ for(const key of ['junior','mid','senior'])for(let i=0;i<100;i++){assert(!rafflePool(key).some(r=>ANCIENT_DRAGONS.includes(r.dragonId)));assert(!ANCIENT_DRAGONS.includes(sampleRaffle(key,()=>i/100,{guarantee:i%2===0,ancientGuarantee:true}).dragonId));}
+ let s=createGame(T);s.gems=100000;s.raffle.ancientCounter=9;s.raffle.pending=[{id:99,policy:'offline-raffle-ancient-v2',machine:'senior',dragonId:1200,quality:5,previewIndex:54}];s.nextId=100;
+ s=validate(s);s=action(s,'raffleDraw',{mode:'senior',count:10},T,()=>0);assert.equal(s.raffle.pending[0].dragonId,1200);assert(!s.raffle.pending.slice(1).some(r=>ANCIENT_DRAGONS.includes(r.dragonId)));
  const before=structuredClone(s);assert.throws(()=>action(s,'raffleDraw',{mode:'senior',count:1},T,()=>NaN),/随机/);assert.deepEqual(s,before);
 });
 

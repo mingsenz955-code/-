@@ -132,7 +132,8 @@ const resourceReturnStack=[];
 const resourceScrollSelectors=['.cultivation-task-list','.cultivation-reward-list','.history-reward-list','.history-activity-grid','.history-categories','.native-shop-list','.native-resource-groups','.native-resource-row'];
 function captureResourcePage(){const d=$('#modal');return {mode:d.dataset.mode,dataset:{...d.dataset},html:d.innerHTML,className:d.className,style:d.style.cssText,search:d.querySelector('#history-search')?.value,scrolls:resourceScrollSelectors.flatMap(selector=>[...d.querySelectorAll(selector)].map((el,index)=>({selector,index,top:el.scrollTop,left:el.scrollLeft})))};}
 async function returnResourcePage(){if(busy||!resourceReturnStack.length)return;const frame=resourceReturnStack.pop();busy=true;try{
- if(frame.mode==='sourceHistoryActivity')await openHistoryActivity(state,frame.dataset.activity);
+ if(frame.mode==='sourceEvolution')await openEvolutionDialog(state,Number(frame.dataset.dragonId),{returnToCollection:frame.dataset.returnToCollection==='true'});
+ else if(frame.mode==='sourceHistoryActivity')await openHistoryActivity(state,frame.dataset.activity);
  else if(frame.mode==='sourceHistoryHub')await openActivities(state,frame.dataset.historyFilter??'全部');
  else if(frame.mode==='sourceHistoryFamily')await openHistoryFamily(state,frame.dataset.historyFamily);
  else if(frame.mode==='sourceHistoryTraining')await openHistoryTraining(state,frame.dataset.trainingReturnKey);
@@ -313,9 +314,11 @@ document.addEventListener('click',async e=>{
   if(type==='dragonMutationHelp'||type==='openMutations'){await openMutations(state,id);return}
   if(type==='mutationHelp'){await openMutationHelp(state,Number.isFinite(id)?id:Number($('#modal').dataset.mutationId));return}
   if(type==='claimMutation'){const events=activeMutations(state),index=events.findIndex(e=>e.id===id),remaining=events.filter(e=>e.id!==id),nextId=remaining[Math.min(index,remaining.length-1)]?.id;await persist(action(state,type,{id}));render();await openMutations(state,nextId);toast(state.log[0]);return}
+  if(type==='evolutionResources'){resourceReturnStack.push(captureResourcePage());await openResourceShop(state,{type:el.dataset.value});return}
+  if(type==='evolveDragon'){const from=$('#modal').dataset.returnToCollection==='true';await persist(action(state,type,{id}));render();await openEvolutionDialog(state,id,{returnToCollection:from});toast(state.log[0]);return}
   if(type==='openEvolution'){await openEvolutionDialog(state,id,{returnToCollection:$('#modal').dataset.returnToCollection==='true'});return}
   if(type==='returnFromEvolution'){await openDragonDialog(state,id,{returnToCollection:$('#modal').dataset.returnToCollection==='true'});return}
-  if(type==='evolutionHelp'){await openNativePaper('进化说明',`<p>${escape(EVOLUTION_TEXT['ev.evolution tip'])}</p>`);return}
+  if(type==='evolutionHelp'){await openNativePaper('进化说明',`<p>${escape(EVOLUTION_TEXT['ev.evolution tip'])}</p><p>离线结算：按客户端区间表解释当前成功率，失败增加1点进化值，达到进化条上限后必成；成功清空本阶进化值。原服务器结算尚未取得。</p>`);return}
   if(type==='dragonSkillInfo'){const prev=$('#modal'),origin={mode:prev.dataset.mode,catalogId:prev.dataset.catalogId,collection:prev.dataset.returnToCollection},dragon=state.dragons.find(d=>d.id===id)??{id:0,species:speciesKey(Number(origin.catalogId)),level:1};const dialog=await openSkillDialog(state,dragon,Number(el.dataset.value));dialog.dataset.returnCatalogId=origin.mode==='sourceCatalogDetail'?origin.catalogId:'';dialog.dataset.returnRunePanel=String(origin.mode==='sourceRunePanel');dialog.dataset.returnToCollection=origin.collection??'false';return}
   if(type==='returnSkillDragon'){const d=$('#modal');if(d.dataset.returnRunePanel==='true')await openRunePanel(state,id);else if(d.dataset.returnCatalogId)await openCatalogDetail(state,Number(d.dataset.returnCatalogId));else await openDragonDialog(state,id,{returnToCollection:d.dataset.returnToCollection==='true'});return}
   if(type==='formationReorder'){const first=Number($('#modal').dataset.selectedFormationId);if(!first||first===id){await openFormationPreview(state,first===id?null:id);return}await persist(action(state,'setFormation',{ids:formationSwap(state,first,id)}));await openFormationPreview(state);render();toast('阵位已保存。');return}

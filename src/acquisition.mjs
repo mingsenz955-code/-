@@ -1,9 +1,12 @@
 import {RESOURCE_SHOP_OFFERS} from './resource-shop.mjs';
 import {ORIGINAL_SHOP_ITEMS} from '../assets/original/data/shop.mjs';
 import {lotteryPool} from './lottery.mjs';
+import {ACTIVITY_CATALOG,activityFamilyEntries} from './activity-catalog.mjs';
+import ITEM_USE from '../assets/original/data/item-use.mjs';
 import CATALOG from '../assets/original/catalog.mjs';
 import {ORIGINAL_BREEDING} from '../assets/original/data/rules.mjs';
 const records=new Map(CATALOG.map(record=>[record.id,record]));
+export function dragonActivitySources(id){return ACTIVITY_CATALOG.flatMap(d=>d.family?activityFamilyEntries(d.family):[d]).flatMap(d=>{const rewards=d.items.flatMap(r=>r.rewards??[]),direct=rewards.some(p=>p.type===5&&p.itemId===id),fragments=[...new Set(rewards.filter(p=>p.type===4&&ITEM_USE.fragments[p.itemId]?.dragonId===id).map(p=>p.itemId))];return direct||fragments.length?[{key:d.key,title:d.title,direct,fragments:fragments.map(itemId=>({itemId,...ITEM_USE.fragments[itemId]}))}]:[];});}
 const pools=new Map(CATALOG.map(record=>[record.id,[]]));
 for(const row of ORIGINAL_BREEDING){
  if(row[3]!==1)continue;

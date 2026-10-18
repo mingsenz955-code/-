@@ -20,7 +20,7 @@ export async function openRechargeDialog(state){
    +'</button>';
  }).join('');
  const vipText=vip.next?`累计充值 ${vip.total} 魔晶，距 VIP${vip.next.level} 还差 ${vip.remaining}`:`累计充值 ${vip.total} 魔晶，已是最高 VIP${vip.level}`;
- const status=`<span class="source-recharge-status">${esc(RECHARGE_NOTICE)}　今日 ${daily.used}/500 元，剩余 ${daily.remaining} 元　已充值 ${state.recharge?.count??0} 次　${esc(vipText)}</span>`;
+ const status=`<span class="source-recharge-status">${esc(RECHARGE_NOTICE)}　今日 ${daily.used}/2000 元，剩余 ${daily.remaining} 元　已充值 ${state.recharge?.count??0} 次　${esc(vipText)}</span>`;
  const values={title:'充值',hint1:'再充值',hint2:'魔晶，即可成为',vip_lv:`VIP${vip.level}`,vip_lv_next:'',mojing:String(vip.remaining),vip_lv_target:vip.next?`VIP${vip.next.level}`:'—',exp_num:`${vip.total}/${vip.next?vip.next.needExp:'—'}`};
  const d=showSource('sourceRecharge',renderSourceLayout(layout,{values,hidden:new Set(['ui_recharge_bg9']),actions:{close:{type:'close',label:'关闭充值'},'btn_privilege/btn':{type:'rechargeVip',label:'VIP特权'}},progress:{exp:vip.percent},slots:{'data/hadong':`<div class="source-recharge-list">${cards}</div>`,'data/status':status}}));
  d.dataset.mode='sourceRecharge';

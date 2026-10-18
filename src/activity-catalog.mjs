@@ -9,11 +9,11 @@ export const ACTIVITY_FAMILIES=Object.freeze([
  {key:'wheel',title:'幸运抽奖',keys:Array.from({length:6},(_,i)=>`wheel-${i}`)},
  {key:'fire',title:'点燃圣火',keys:['fire-1','fire-2','fire-3','fire-4']},
  {key:'recharge-wheel',title:'充值转盘',keys:['recharge-wheel-1','recharge-wheel-2','recharge-wheel-3']},
- {key:'limited',title:'限时神龙',keys:['limited-1','limited-2','limited-3','limited-4','limited-5']},
+ {key:'limited',title:'限时神龙',keys:['limited-1','limited-2','limited-3','limited-4']},
 ]);
 export const activityFamily=key=>ACTIVITY_FAMILIES.find(f=>f.key===key)??null;
 export const activityFamilyEntries=key=>(activityFamily(key)?.keys??[]).map(k=>SOURCE.activities.find(d=>d.key===k));
 // Keep distinct playable activities; retire overlapping historical versions from the menu.
-export const ACTIVE_ACTIVITY_KEYS=Object.freeze(['first','growth','monthly-sign','seven-tasks','training-missions','train-points','egg-event-10','dragon-exchange','chest-exchange','collection','lucky-cat','wheel-5','limited-5','children-eggs','monopoly-1','daily-sale','month-card','cdkeys','single']);
-export const ACTIVITY_CATALOG=Object.freeze(ACTIVE_ACTIVITY_KEYS.map(key=>SOURCE.activities.find(d=>d.key===key)));
-export const RETIRED_ACTIVITY_KEYS=Object.freeze(SOURCE.activities.filter(d=>!ACTIVE_ACTIVITY_KEYS.includes(d.key)).map(d=>d.key));
+export const ACTIVE_ACTIVITY_KEYS=Object.freeze(['first','growth','monthly-sign','seven-tasks','training-missions','train-points','egg-event-10','dragon-exchange','chest-exchange','collection','lucky-cat','wheel-5','limited','spring-wheel','spring-tasks','recharge-points','limited-spend','children-eggs','monopoly-1','daily-sale','month-card','cdkeys','single']);
+export const ACTIVITY_CATALOG=Object.freeze(ACTIVE_ACTIVITY_KEYS.map(key=>key==='limited'?{key,title:'限时神龙',family:'limited',group:'神龙',kind:'family',items:[]}:SOURCE.activities.find(d=>d.key===key)));
+export const RETIRED_ACTIVITY_KEYS=Object.freeze(SOURCE.activities.filter(d=>!ACTIVE_ACTIVITY_KEYS.includes(d.key)&&!ACTIVITY_FAMILIES.some(f=>ACTIVE_ACTIVITY_KEYS.includes(f.key)&&f.keys.includes(d.key))).map(d=>d.key));

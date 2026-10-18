@@ -29,7 +29,7 @@ export async function openRaffleDialog(state){
  for(const node of layout.children)if((node.name==='zhongji'&&(tickets[6048]??0)===0)||(node.name==='gaoji'&&(tickets[6049]??0)===0))for(const group of node.children??[])if(group.name==='money')for(const image of group.children??[])if(image.name?.startsWith('daijuan_'))image.img='#ui_lotterydragon_mojing.png';
  const scale=Math.min((innerWidth-20)/1024,(innerHeight-20)/770);dialog.style.setProperty('--source-scale',scale);
  dialog.innerHTML=`<div class="source-artboard">${renderSourceLayout(layout,{values,slots,actions,hidden:new Set(['txt1','zhongji/money/mojing_one','zhongji/money/mojing_ten','gaoji/money/mojing_one','gaoji/money/mojing_ten'])})}<nav class="raffle-odds-buttons">${['junior','mid','senior'].map((m,i)=>`<button data-action="raffleOdds" data-value="${m}">${['初级','中级','高级'][i]}概率与保底</button>`).join('')}</nav></div>`;dialog.showModal();
- for(const button of dialog.querySelectorAll('[data-action=raffleDraw][data-value^="senior:"]'))button.title=`单机规则：远古龙基础概率20%，至多再抽${10-(state.raffle.ancientCounter??0)}次获得远古龙。原服务器概率未取得。`;
+ for(const button of dialog.querySelectorAll('[data-action=raffleDraw][data-value^="senior:"]'))button.title=`远古龙仅通过活动获取；高级扭蛋十次必得普通橙色品质龙。`;
 }
 
 export async function playRaffleDraw(mode){

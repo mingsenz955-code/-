@@ -27,7 +27,7 @@
     "Fusion selection includes warehouse eggs; mutants have real sixth/seventh xp rows, separate from legendary awakening",
     "Awakening material selection max4; same dragon, egg or matching shard; all source exp amounts, five 20-percent stages, four upgrade costs",
     "Awakening attributes use cumulative totals in dragon_juexingshuxing; skill row quality+wakestar; getDragonGraphic returns stage4 after first awakening",
-    "Eight canWakeup=1 catalog entries and their stage4 models; five other table-bearing species remain closed by original flag",
+    "Eight canWakeup=1 catalog entries and their stage4 models; five other table-bearing species have an old closed flag; v66 locally opens their complete original data",
     "Mutation is a distinct egg species via a timed event; original ten specific 188-gem offers, 1800 seconds, maximum five events",
     "Equipment same-quality max5, original part compatibility, source expHave/expCost, per-material current-row gold cost, original magic circle/star/exp effects"
   ],
@@ -35,7 +35,7 @@
     "Local encounters evaluated once at breeding completion; completion timestamp defines expiry, speedups retain scheduled duration, offline expired outcomes discarded before five-entry eviction",
     "Server mutation trigger rate absent: user-requested fixed 50% at every VIP level, disclosed in help; select matching purple offspring variant or original generic weighted pool",
     "Local fusion XP arithmetic and overflow retained; authoritative server settlement unavailable",
-    "Wake readiness inferred from source canWakeup flag, level7 and star5; server wakestate scheduling unavailable",
+    "Wake readiness: v66 locally opens all 13 complete configurations at level7 and star5; original server scheduling and five old closed flags differ",
     "Local awakening training caps exp at stage threshold; server overflow behavior unavailable",
     "Equipment random traits, conditional bonus terms and full original battle settlement still incomplete"
   ]

@@ -33,7 +33,7 @@ exports.run=async(window,store,verify)=>{
  const text=await js("document.querySelector('#modal').textContent");
  for(const expected of ['50 魔晶','300 魔晶','5000 魔晶','¥5','¥500','再送','VIP'])assert(text.includes(expected),'the panel must show '+expected);
  assert(text.includes('不进行任何真实扣款'),'the test-mode notice must be visible');
- assert(text.includes('今日 0/500 元'),'the daily cap must be visible before purchase');
+ assert(text.includes('今日 0/2000 元'),'the daily cap must be visible before purchase');
  for(const wrong of ['培养丹','神圣果实','召唤卡'])assert(!text.includes(wrong),'a recharge tier must not hand out the 单笔充值 gift: '+wrong);
  assert(await js("Array.from(document.querySelectorAll('#modal img')).every(i=>i.complete&&i.naturalWidth>0)"),'panel and card art must load');
  await fs.writeFile(path.join(__dirname,'..','work','recharge-qa.png'),(await window.webContents.capturePage()).toPNG());
@@ -45,7 +45,7 @@ exports.run=async(window,store,verify)=>{
  assert.equal(afterRecharge.recharge.totalGems,600);
  assert.deepEqual(afterRecharge.recharge.doubled,[96]);
  assert.equal(afterRecharge.recharge.dailyYuan,30);
- assert.equal(await js("document.querySelector('#modal').textContent.includes('今日 30/500 元')"),true,'the panel must refresh daily usage');
+ assert.equal(await js("document.querySelector('#modal').textContent.includes('今日 30/2000 元')"),true,'the panel must refresh daily usage');
  assert.equal(afterRecharge.coins,before.coins);
  assert.equal(afterRecharge.food,before.food);
  assert.equal(await js("document.querySelector('#modal').textContent.includes('再送15魔晶')"),true,'the doubled tier must fall back to the client rebate');

@@ -1,0 +1,20 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import {createHash} from 'node:crypto';
+import {spawnSync} from 'node:child_process';
+const project=path.resolve('.'),script=path.join(project,'scripts/update-game.ps1');
+const hash=b=>createHash('sha256').update(b).digest('hex');
+function write(file,content){fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,content);}
+function fixture(){const root=fs.mkdtempSync(path.join(project,'work/updater-test-')),game=path.join(root,'旧游戏 空格'),old=path.join(game,'dist/御龙高手-v0.16.65-win32-x64'),payload=path.join(root,'payload'),manifest=path.join(root,'latest.json');const commit='a'.repeat(40);const files=[['resources/app/package.json',JSON.stringify({version:'0.16.66'}),'app'],['resources/app/src/demo.mjs','export const value=66;\n','app'],['resources/app/assets/demo.png',Buffer.from([1,2,3]),'app'],['御龙高手.exe','fixture-runtime','runtime']].map(([p,b,kind])=>{write(path.join(payload,p),b);return {path:p,kind,bytes:Buffer.byteLength(b),sha256:hash(b),text:p.endsWith('.mjs'),...(kind==='app'?{url:`https://raw.githubusercontent.com/mingsenz955-code/-/${commit}/${p.slice(14)}`}:{})};});write(path.join(old,'resources/app/package.json'),'{"version":"0.16.65"}');write(path.join(old,'resources/app/src/demo.mjs'),'export const value=65;\n');for(const f of files.slice(2))write(path.join(old,f.path),fs.readFileSync(path.join(payload,f.path)));write(path.join(game,'player-data/saves/ranch-v1.json'),'{"version":12,"coins":12345,"profile":{"name":"同学"}}');write(manifest,JSON.stringify({schema:1,version:'0.16.66',commit,files}));return {root,game,old,payload,manifest,files};}
+function run(f){const r=spawnSync('powershell.exe',['-NoProfile','-ExecutionPolicy','Bypass','-File',script,'-GameDirectory',f.game,'-LocalManifest',f.manifest],{encoding:'utf8',timeout:90000});return {status:r.status,output:r.stdout+r.stderr,error:r.error};}
+test('incremental updater reuses matching runtime/assets, applies changed files, backs up but never replaces saves; repeat downloads zero',()=>{
+ const f=fixture(),save=path.join(f.game,'player-data/saves/ranch-v1.json'),before=hash(fs.readFileSync(save)),r=run(f);assert.equal(r.status,0,r.output+String(r.error));const report=JSON.parse(fs.readFileSync(path.join(f.game,'.update-cache/last-update.json')));assert.equal(report.downloadedFiles,2);assert.equal(report.reusedFiles,2);assert.equal(hash(fs.readFileSync(save)),before);assert.equal(hash(fs.readFileSync(report.backup)),before);assert(fs.existsSync(f.old));for(const file of f.files)assert.equal(hash(fs.readFileSync(path.join(report.release,file.path))),file.sha256);const second=run(f);assert.equal(second.status,0,second.output);assert.match(second.output,/v0.16.66/);assert.equal(hash(fs.readFileSync(save)),before);
+});
+test('updater rejects traversal, unexpected download host and corrupt payload without activation or save changes',()=>{
+ for(const bad of ['traversal','host','corrupt']){const f=fixture(),save=path.join(f.game,'player-data/saves/ranch-v1.json'),before=hash(fs.readFileSync(save)),m=JSON.parse(fs.readFileSync(f.manifest));if(bad==='traversal')m.files[0].path='../player-data/saves/ranch-v1.json';else if(bad==='host')m.files[0].url='https://example.com/bad';else write(path.join(f.payload,m.files[0].path),'broken');write(f.manifest,JSON.stringify(m));const r=run(f);assert.equal(r.status,1,r.output);assert(!fs.existsSync(path.join(f.game,'dist/御龙高手-v0.16.66-win32-x64')));assert.equal(hash(fs.readFileSync(save)),before);assert(fs.existsSync(f.old));}
+});
+test('updater canonicalizes unchanged CRLF source without a network download',()=>{
+ const f=fixture(),file=f.files[1];write(path.join(f.old,file.path),'export const value=66;\r\n');const r=run(f);assert.equal(r.status,0,r.output);const report=JSON.parse(fs.readFileSync(path.join(f.game,'.update-cache/last-update.json')));assert.equal(report.downloadedFiles,1);assert.equal(report.reusedFiles,3);assert.equal(hash(fs.readFileSync(path.join(report.release,file.path))),file.sha256);
+});

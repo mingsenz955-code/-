@@ -35,7 +35,7 @@ test('the recharge export keeps the six client 魔晶 products with their own pr
  assert.deepEqual(rechargeProductIds(),[95,96,97,98,99,100]);
  assert.equal(RECHARGE_POLICY,'original-recharge-products-v1');
  assert.equal(RECHARGE_TEST_MODE,true);
- assert.equal(RECHARGE_DAILY_LIMIT_YUAN,500);
+ assert.equal(RECHARGE_DAILY_LIMIT_YUAN,2000);
  assert.match(RECHARGE_NOTICE,/不进行任何真实扣款/);
 });
 
@@ -70,14 +70,14 @@ test('a test recharge credits 魔晶, tracks the total and never touches gold or
  s=action(s,'recharge',{tierId:95},T);
  assert.equal(s.gems,150,'a repeated purchase only adds the tier rebate');
  assert.equal(s.recharge.totalGems,150);
- assert.deepEqual(rechargeDailyUsage(s.recharge,T),{day:s.recharge.dailyDay,used:10,remaining:490});
- assert.throws(()=>action(s,'recharge',{tierId:100},T),/今日充值上限500元/);
+ assert.deepEqual(rechargeDailyUsage(s.recharge,T),{day:s.recharge.dailyDay,used:10,remaining:1990});
+ const capTest=structuredClone(s);capTest.recharge.dailyYuan=1990;assert.throws(()=>action(capTest,'recharge',{tierId:100},T),/今日充值上限2000元/);
  assert.equal(s.gems,150,'a refused tier must not grant any 魔晶');
  s=action(s,'recharge',{tierId:100},T+86400000);
  assert.equal(s.gems,10150,'the 500 元 tier delivers 5000 魔晶 plus its first-purchase double on top of the 150 already credited');
  assert.equal(s.recharge.totalGems,10150);
  assert.equal(s.recharge.dailyYuan,500);
- assert.throws(()=>action(s,'recharge',{tierId:95},T+86400000),/今日充值上限500元/);
+ for(let i=0;i<3;i++)s=action(s,'recharge',{tierId:100},T+86400000);assert.equal(s.recharge.dailyYuan,2000);assert.throws(()=>action(s,'recharge',{tierId:95},T+86400000),/今日充值上限2000元/);
  assert.equal(s.coins,coinsBefore);
  assert.equal(s.food,foodBefore);
  assert.throws(()=>action(s,'recharge',{tierId:11},T),/找不到这个充值档位/);
@@ -108,6 +108,6 @@ test('save validation migrates v9 recharge records and rejects malformed ones',(
  assert.throws(()=>validate(badDoubled),/首充双倍记录无效/);
  const badId=createGame(T);badId.recharge={count:0,lastTier:0,totalGems:0,doubled:[11]};
  assert.throws(()=>validate(badId),/首充双倍记录包含未知档位/);
- const badDaily=createGame(T);badDaily.recharge.dailyDay='2026-99-99';badDaily.recharge.dailyYuan=501;
+ const badDaily=createGame(T);badDaily.recharge.dailyDay='2026-99-99';badDaily.recharge.dailyYuan=2001;
  assert.throws(()=>validate(badDaily),/每日充值记录无效/);
 });
