@@ -160,7 +160,7 @@ export function action(state,type,payload={},now=Date.now(),random=Math.random) 
  refreshEncounters(s,now);observeActivityDay(s,now);
  switch(type){
  case 'buyAdventureEnergy':{const p=energyPurchasePlan(s,now);if(s.adventure.energy>=p.capacity)fail('体力值尚满不用购买。');if(!p.remaining)fail('今日体力购买次数已达到上限。');spend('gems',p.cost);s.adventure.energy=p.capacity;s.adventure.energyAt=now;s.adventure.energyPurchases={day:energyDay(now),count:p.count+1};message='已花费50魔晶补满冒险体力。';break;}
- case 'claimMail': message=claimMail(s,payload.id);break;
+ case 'claimMail': message=claimMail(s,payload.id,random);break;
  case 'deleteReadMail': s.mail.deleted=[...s.mail.claimed];message='已读邮件已删除。';break;
  case 'refreshMutations':{message=refreshMutations(s,now,random)?'发现新的奇遇！':'奇遇状态已更新。';break;}
  case 'claimMutation': {const e=s.mutations.events.find(e=>e.id===payload.id);if(!e||now>=e.expiresAt)fail('奇遇已结束。');const info=mutationEvent(e.tableId);if(![1,2].includes(info.evType))fail('该奇遇缺少原版结算资料。');if(info.evType===1)spend('gems',info.price);activityDeliver(s,[info]);s.mutations.events=s.mutations.events.filter(v=>v.id!==e.id);message=`获得${info.name}。${info.type===5?'龙蛋已放入仓库，可送入育龙塔孵化。':''}`;break;}
