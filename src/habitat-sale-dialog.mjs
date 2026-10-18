@@ -1,0 +1,5 @@
+import {habitatSalePlan} from './habitat-sale.mjs';
+import {income} from './game.mjs';
+import {sourceLayout,showSource} from './ranch-dialogs.mjs';
+import {renderSourceLayout} from './source-layout.mjs';
+export async function confirmHabitatSale(s,id){const p=habitatSalePlan(s,id),stored=income(s,p.habitat),previous=document.querySelector('#modal .source-artboard')?.innerHTML??'',layout=await sourceLayout('panel_apply_or_cancel');return showSource('sourceHabitatSale',`<div class="source-equipment-confirm-bg">${previous}</div><div class="source-equipment-confirm-shade"></div><div class="source-equipment-confirm-panel">${renderSourceLayout(layout,{values:{txt_name:'出售龙巢',txt_miaoshu:`确定出售${p.info.nameCN??p.habitat.name}，获得 ${p.gold} 金币吗？${stored?`另收取待领金币 ${stored}。`:''}${p.info.legacy?'旧版初始龙巢回收无返还。':''}`,'btn_QueDing/txt_name':'出售','btn_quxiao/txt_name':'取消'},actions:{'btn_QueDing/btn':{type:'sellHabitat',id,label:'确认出售龙巢'},'btn_quxiao/btn':{type:'cancelHabitatSale',id,label:'取消出售'},btn_close:{type:'cancelHabitatSale',id,label:'取消出售'}}})}</div>`,'native-fullscreen source-equipment-confirm');}

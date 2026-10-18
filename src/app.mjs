@@ -1,3 +1,5 @@
+import {confirmIncubatorSpeed} from './incubator-speed-dialog.mjs';
+import {confirmHabitatSale} from './habitat-sale-dialog.mjs';
 import {energyPurchasePlan} from './adventure-energy.mjs';
 import {openBossAchievements,openBossSettlement} from './boss-achievement-dialog.mjs';
 import {openMail,openMailDetail} from './mail-dialog.mjs';
@@ -125,7 +127,7 @@ async function refreshMutationState(){
  try{
   await persist(action(state,'refreshMutations'));
   render();
-  const modal=$('#modal');
+  const modal=$('#modal');if(!busy&&modal?.open&&['nativeIncubator','nativeIncubatorSpeedConfirm'].includes(modal.dataset.mode)&&Number(modal.dataset.incubatorReady)>0&&Date.now()>=Number(modal.dataset.incubatorReady)){delete modal.dataset.incubatorReady;void openIncubator(state);}
   if(modal?.open&&modal.dataset.mode==='sourceMutations')await openMutations(state,Number(modal.dataset.mutationId));
  }catch(error){toast(error.message)}finally{mutationRefreshing=false}
 }
@@ -170,6 +172,8 @@ document.addEventListener('click',async e=>{
  try{
   if(type==='tutorialPause'||type==='tutorialResume'){await persist(action(state,type));if(type==='tutorialResume'){closeDialog();moreExpanded=false;render();await recoverTutorialView();}void renderTutorial(state);return}
   if(type==='tutorialFinish'){await persist(action(state,type));render();return}
+  if(type==='speedIncubator'){await confirmIncubatorSpeed(state);return}
+  if(type==='applyIncubatorSpeed')type='speedIncubator';
   if(type==='openIncubatorSpeedConfirm'){const cost=incubatorSpeedCost(state.incubator.readyAt);showSource('tutorialIncubatorConfirm',renderSourceLayout(await sourceLayout('panel_msg'),{values:{txt:`立即完成孵化需要 ${cost} 魔晶，是否继续？`,'btn_QueDing/txt_name':'是'},actions:{btn_close:{type:'cancelTutorialIncubator',label:'取消'},'btn_QueDing/btn':{type:'confirmTutorialIncubator',label:'是'}}}));return}
   if(type==='cancelTutorialIncubator'){await openIncubator(state);return}
   if(type==='breed'&&guideActive(state)&&state.tutorial.step===37){const a=Number($('#modal').dataset.parentA),b=Number($('#modal').dataset.parentB);const d=showSource('tutorialBreedConfirm',renderSourceLayout(await sourceLayout('panel_msg'),{values:{txt:'是否立即培育？','btn_QueDing/txt_name':'立即培育'},actions:{btn_close:{type:'cancelTutorialBreed',label:'取消'},'btn_QueDing/btn':{type:'confirmTutorialBreed',label:'立即培育'}}}));d.dataset.parentA=a;d.dataset.parentB=b;await persist(action(state,'tutorialNavigate',{event:'openTutorialBreedConfirm'}));return}
@@ -302,6 +306,9 @@ document.addEventListener('click',async e=>{
   if(type==='returnLottery'){await openLotteryDialog(state,Number($('#modal').dataset.lotteryMode));return}
   if(type==='lotteryPrize'){openLotteryPrize(state,id);return}
   if(type==='lotteryHelp'){await openNativePaper('抽奖说明',`<p>${escape(lotteryHelp())}</p>`);return}
+  if(type==='confirmSellHabitat'){await confirmHabitatSale(state,id);return}
+  if(type==='cancelHabitatSale'){await openHabitatInfo(state,id);return}
+  if(type==='sellHabitat'){await persist(action(state,type,{id}));closeDialog();render();tick();toast(state.log[0]);return}
   if(type==='confirmSellDragon'){await confirmDragonSale(state,id);return}
   if(type==='cancelDragonSale'||type==='returnStarDragon'){await openDragonDialog(state,id,{returnToCollection:$('#modal').dataset.returnToCollection==='true'});return}
   if(type==='sellDragon'){const collection=$('#modal').dataset.returnToCollection==='true';await persist(action(state,type,{id}));selected=state.dragons[0]?.id;render();closeDialog();if(collection)await openCollectionDialog(state,collectionFilter);toast(state.log[0]);return}
@@ -443,7 +450,6 @@ document.addEventListener('click',async e=>{
   const lotteryMode=Number($('#modal').dataset.lotteryMode??1);const refreshWarehouse=priorMode==='nativeWarehouse'||priorMode==='nativeWarehousePlace';const warehouseGroup=$('#modal').dataset.warehouseGroup??'all';const pendingPrize=Number($('#modal').dataset.pendingPrize);const refreshLottery=!refreshWarehouse&&['lotteryDraw','lotteryClaimResources','lotteryPlace'].includes(type);const payload={id,islandId:activeIsland};if(['plantNative','plant','harvest','speedCrop','upgradeFarm','completeFarmUpgrade'].includes(type))payload.farmId=Number($('#modal').dataset.farmId??0);if(type==='unwearEquipment')payload.equipmentId=$('#modal').dataset.equipmentId;if(type==='wearEquipment')payload.equipmentId=el.dataset.value;if(type==='recharge')payload.tierId=id;if(type==='plantNative'){type='plant';payload.cropId=id}if(type==='buyHabitat'){type='build';payload.buildingId=id}if(type==='moveNative'){type=priorMode==='nativeWarehousePlace'?'lotteryPlace':'move';payload.id=priorMode==='nativeWarehousePlace'?pendingPrize:moveDragon;payload.habitatId=id}if(type==='hatchNative'){type='hatch';payload.habitatId=id}if(type==='lotteryDraw'){payload.mode=lotteryMode;payload.count=Number(el.dataset.value);const cost=lotteryCost(state.lottery,payload.mode,payload.count);if(cost.gems>0&&!confirm(`本次扣除 ${cost.tokens} 抽奖币及 ${cost.gems} 魔晶，继续吗？`))return}if(type==='lotteryPlace')payload.habitatId??=Number($('#lottery-habitat').value);if(type==='build')payload.buildingId??=Number(el.dataset.buildingId);if(type==='plant')payload.cropId??=Number(el.dataset.cropId??el.closest('.card')?.querySelector('[data-crop]')?.value??1);if(type==='breed'){payload.a=Number($('#modal').dataset.parentA);payload.b=Number($('#modal').dataset.parentB)}
   if(type==='hatch')payload.habitatId??=Number($('#hatch-target')?.value);
   if(type==='move')payload.habitatId??=Number($('#move-target')?.value);
-  if(type==='speedIncubator'&&el.dataset.action!=='confirmTutorialIncubator'){const cost=incubatorSpeedCost(state.incubator?.readyAt??0);if(!confirm(`立即完成孵化需要 ${cost} 魔晶，继续吗？`))return}
   if(type==='sellIncubator'){const sp=SPECIES[state.incubator?.species],gold=dragonSellGold(state.incubator?.species);if(!confirm(`确定出售${sp?.name??'幼龙'}并获得 ${gold} 金币吗？`))return}
   if(type==='sellRaffleEgg'){const prize=[...state.raffle.pending,...(state.giftEggs??[])].find(p=>p.id===id),species=prize?speciesKey(prize.dragonId):null,sp=SPECIES[species];if(!prize||!confirm(`确定出售${sp?.name??'这枚'}龙蛋并获得 ${dragonSellGold(species)} 金币吗？`))return}
   if(type==='sellLotteryDragon'){const prize=state.lottery.pending.find(p=>p.id===id),species=prize?speciesKey(prize.itemId):null,sp=SPECIES[species];if(!prize||!confirm(`确定出售${sp?.name??'这只幼龙'}并获得 ${dragonSellGold(species)} 金币吗？`))return}
