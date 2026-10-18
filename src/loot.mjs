@@ -1,12 +1,13 @@
+import {AWAKENING_STONES} from './awakening-items.mjs';
 import SOURCE from '../assets/original/data/loot.mjs';
 import {equipmentDefinition,createEquipmentInstance} from './equipment.mjs';
 import {adventureLevel} from './adventure.mjs';
 export const LOOT_POLICY='offline-source-loot-v1';
 export const createNodeRewards=now=>({day:Math.floor((now+28800000)/86400000),records:{}});
 export function nodeRewardStatus(s,nodeId,now=Date.now()){const level=sourceAdventureLevel(nodeId);if(!level||level.kind<=2||!level.specialAmount)throw Error('该节点不是奖励点。');const data=structuredClone(s.loot.nodeRewards??createNodeRewards(now)),day=Math.floor((now+28800000)/86400000);if(day>data.day){data.day=day;for(const r of Object.values(data.records))r.count=0}const record=data.records[nodeId]??{count:0,at:null},readyAt=record.at===null?0:record.at+10800000;return {data,record,level,readyAt,ready:record.count<3&&now>=readyAt}}
-export const LOOT_PROPS=SOURCE.props;
+export const LOOT_PROPS=[...SOURCE.props,...AWAKENING_STONES.filter(p=>!SOURCE.props.some(v=>v.id===p.id))];
 export const EQUIPMENT_FRAGMENTS=SOURCE.fragments;
-export const lootProp=id=>SOURCE.props.find(v=>v.id===Number(id))??null;
+export const lootProp=id=>LOOT_PROPS.find(v=>v.id===Number(id))??null;
 export const equipmentFragment=id=>SOURCE.fragments.find(v=>v.id===Number(id))??null;
 export const lootBox=id=>SOURCE.boxes.find(v=>v.id===Number(id)||v.keyId===Number(id))??null;
 export function lootDescription(prize){const d=prize.type===8?equipmentDefinition(prize.itemId):prize.type===9?equipmentFragment(prize.itemId):prize.type===4?lootProp(prize.itemId):null;return {name:d?.name??({1:'金币',2:'龙粮',19:'强化石',20:'低级龙珠',21:'中级龙珠',22:'高级龙珠'}[prize.type]??'物品'),quality:d?.quality??1,image:prize.type===8?`thumbs_equip_${d.quality}_${d.part}.png`:prize.type===9?`thumbs_${d.icon}.png`:prize.type===4?d?.image:({1:'ui_main_06.png',2:'ui_main_07.png',19:'resource_icon_80_qhs.png',20:'ui_main_10.png',21:'ui_main_11.png',22:'ui_main_12.png'}[prize.type])}}

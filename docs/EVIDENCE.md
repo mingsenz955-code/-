@@ -430,3 +430,8 @@
 - DragonEvolutionUI SHA256 e8542e253911e525533763ab89937fabd3b71a06c2322daded3023be80958c4c 的函数1/5/8确认15/25级、20/50条、原三材料位置和两阶段；DragonElement SHA256 558a78516ea4fdf94157c0e569f50a9ab617837548923c1624481eb66ae86880 函数56/57确认总倍率1/1.15/1.3224999999999998。EvolutionLibrary明文按品质/阶段首行取成本，列7—10具名，列4—6无具名消费，区间概率仅离线解释。
 - 原限时神龙1—4排名首奖分别1200/1202/1203/1205；第5仍1205重复，不改为1206。春节chunjiezhuanpan原7171火凤凰碎片20片合成，四期活动与春节兑换/背包共用原记录。原扭蛋预览不含这五种远古；本轮撤回旧单机新增池，保留旧奖品兼容。
 - 原13种觉醒完整配置与8个开放标志的差异继续记录；本机开放另外5种完整数据不等于恢复原服排期，缺失三种不补造原成本。详EVOLUTION.md。
+
+## v0.16.67 觉醒石与首领原奖品
+- 原宝藏商店119—122为风林火山7111—7114，各1颗20魔晶且sourceEnabled=true；原JueXingPanel.lua的onWakeUp检查enought，数量不足红字。获取页、商店直接定位及旧已付费库存迁移为本机接通。
+- world_boss_chengjiu 8行由LibWorldBossAchievementInfo列定义，原WorldBossAchievementItem写单日总伤害，WorldBossData以historydamage及flag位判定；保存每日峰值和永久领取记录。
+- world_boss_paiming 5行由LibWorldBossRewardInfo定义；7044是神圣·冰域皇龙蛋碎片，原item-use配置10片合成1201。原排名第一5片，非直接龙蛋。原13类通过lib_holyfire取图/等级，820601等六种均能对应现有宝石配置，已接可用实例。所有SHA与源列记录见reference/boss-achievements-provenance.json。

@@ -1,6 +1,8 @@
+import {openBossAchievements,openBossSettlement} from './boss-achievement-dialog.mjs';
+import {openMail,openMailDetail} from './mail-dialog.mjs';
 import {dragonMaterials} from './dragon-materials.mjs';
 import {dragonStarMaterialError} from './dragon-stars.mjs';
-import {openAwakening,openAwakeningSelect} from './awakening-dialog.mjs';
+import {openAwakening,openAwakeningSelect,openAwakeningItem} from './awakening-dialog.mjs';
 import {openMutations,openMutationHelp,updateMutationTimers} from './mutation-dialog.mjs';
 import {activeMutations,mutationNeedsRefresh} from './mutation-events.mjs';
 import {openMonopolyHome,openMonopolyRewards} from './monopoly-dialog.mjs';
@@ -132,7 +134,8 @@ const resourceReturnStack=[];
 const resourceScrollSelectors=['.cultivation-task-list','.cultivation-reward-list','.history-reward-list','.history-activity-grid','.history-categories','.native-shop-list','.native-resource-groups','.native-resource-row'];
 function captureResourcePage(){const d=$('#modal');return {mode:d.dataset.mode,dataset:{...d.dataset},html:d.innerHTML,className:d.className,style:d.style.cssText,search:d.querySelector('#history-search')?.value,scrolls:resourceScrollSelectors.flatMap(selector=>[...d.querySelectorAll(selector)].map((el,index)=>({selector,index,top:el.scrollTop,left:el.scrollLeft})))};}
 async function returnResourcePage(){if(busy||!resourceReturnStack.length)return;const frame=resourceReturnStack.pop();busy=true;try{
- if(frame.mode==='sourceEvolution')await openEvolutionDialog(state,Number(frame.dataset.dragonId),{returnToCollection:frame.dataset.returnToCollection==='true'});
+ if(frame.mode==='sourceAwakening'||frame.mode==='sourceAwakeningItem'){if(Number(frame.dataset.dragonId))await openAwakening(state,Number(frame.dataset.dragonId));else await openWarehouse(state);}
+ else if(frame.mode==='sourceEvolution')await openEvolutionDialog(state,Number(frame.dataset.dragonId),{returnToCollection:frame.dataset.returnToCollection==='true'});
  else if(frame.mode==='sourceHistoryActivity')await openHistoryActivity(state,frame.dataset.activity);
  else if(frame.mode==='sourceHistoryHub')await openActivities(state,frame.dataset.historyFilter??'全部');
  else if(frame.mode==='sourceHistoryFamily')await openHistoryFamily(state,frame.dataset.historyFamily);
@@ -144,7 +147,7 @@ async function returnResourcePage(){if(busy||!resourceReturnStack.length)return;
  for(const {selector,index,top,left} of frame.scrolls){const el=$('#modal').querySelectorAll(selector)[index];if(el){el.scrollTop=top;el.scrollLeft=left;}}
  }finally{busy=false;}}
 async function finishProfileHeads(){const d=$('#modal');if(busy)return;const avatar=Number(d.dataset.profileAvatar);if(avatar!==profileOf(state).avatar)await persist(action(state,'changePlayerAvatar',{avatar}));render();await openPlayerProfile(state);}
-function closeDialog(){if(closeCommonDrawOdds()||closeHistoryResult())return;const d=$('#modal');if(d.dataset.mode==='sourceProfileHeads'){void finishProfileHeads().catch(e=>toast(e.message));return;}if(d.dataset.mode==='sourceProfileRename'){void openPlayerProfile(state);return;}if(d.dataset.mode==='sourceProfileRenameConfirm'){void openProfileRename(state,d.dataset.profileName);return;}if(d.dataset.mode==='sourceDragonStarConfirm'){void openDragonStar(state,Number(d.dataset.dragonId),JSON.parse(d.dataset.dragonMaterialIds||'[]')).catch(e=>toast(e.message));return;}if(d.dataset.mode==='sourceAwakeningSelect'){void openAwakening(state,Number(d.dataset.dragonId)).catch(e=>toast(e.message));return;}if(d.dataset.mode==='sourceAwakening'){void openDragonStar(state,Number(d.dataset.dragonId)).catch(e=>toast(e.message));return;}if(d.dataset.mode==='sourceMutationHelp'){void openMutations(state,Number(d.dataset.mutationId)).catch(e=>toast(e.message));return;}if(['sourceHistoryHelp','sourceHistoryOdds'].includes(d.dataset.mode)){void openHistoryActivity(state,d.dataset.activity).catch(e=>toast(e.message));return;}if(d.dataset.mode==='sourceMonopolyRewards'||d.classList.contains('source-monopoly-board')){void openMonopolyHome(state).catch(e=>toast(e.message));return;}if(d.dataset.mode==='sourceHistoryCatalogHelp'){void openActivities(state).catch(e=>toast(e.message));return;}if(d.dataset.mode==='warehouseEggSaleConfirm'){void openWarehouse(state).catch(e=>toast(e.message));return;}if(resourceReturnStack.length&&['nativeResourceShop','sourceRecharge','nativeVipThresholds'].includes(d.dataset.mode)){void returnResourcePage().catch(e=>toast(e.message));return;}d.close();d.className='';delete d.dataset.mode;delete d.dataset.returnToCollection;}
+function closeDialog(){if(closeCommonDrawOdds()||closeHistoryResult())return;const d=$('#modal');if(d.dataset.mode==='sourceProfileHeads'){void finishProfileHeads().catch(e=>toast(e.message));return;}if(d.dataset.mode==='sourceProfileRename'){void openPlayerProfile(state);return;}if(d.dataset.mode==='sourceProfileRenameConfirm'){void openProfileRename(state,d.dataset.profileName);return;}if(d.dataset.mode==='sourceDragonStarConfirm'){void openDragonStar(state,Number(d.dataset.dragonId),JSON.parse(d.dataset.dragonMaterialIds||'[]')).catch(e=>toast(e.message));return;}if(d.dataset.mode==='sourceMailDetail'){void openMail(state);return;}if(d.dataset.mode==='sourceAwakeningItem'){if(Number(d.dataset.dragonId))void openAwakening(state,Number(d.dataset.dragonId));else void openWarehouse(state);return;}if(d.dataset.mode==='sourceAwakeningSelect'){void openAwakening(state,Number(d.dataset.dragonId)).catch(e=>toast(e.message));return;}if(d.dataset.mode==='sourceAwakening'){void openDragonStar(state,Number(d.dataset.dragonId)).catch(e=>toast(e.message));return;}if(d.dataset.mode==='sourceMutationHelp'){void openMutations(state,Number(d.dataset.mutationId)).catch(e=>toast(e.message));return;}if(['sourceHistoryHelp','sourceHistoryOdds'].includes(d.dataset.mode)){void openHistoryActivity(state,d.dataset.activity).catch(e=>toast(e.message));return;}if(d.dataset.mode==='sourceMonopolyRewards'||d.classList.contains('source-monopoly-board')){void openMonopolyHome(state).catch(e=>toast(e.message));return;}if(d.dataset.mode==='sourceHistoryCatalogHelp'){void openActivities(state).catch(e=>toast(e.message));return;}if(d.dataset.mode==='warehouseEggSaleConfirm'){void openWarehouse(state).catch(e=>toast(e.message));return;}if(resourceReturnStack.length&&['nativeResourceShop','sourceRecharge','nativeVipThresholds'].includes(d.dataset.mode)){void returnResourcePage().catch(e=>toast(e.message));return;}d.close();d.className='';delete d.dataset.mode;delete d.dataset.returnToCollection;}
 async function showSettings(){const version=await window.ranch?.version?.().catch(()=>null);await openNativePaper('本地存档',`<p>御龙高手 <b>v${version??'未知'}</b>　操作后自动保存</p><div class="native-save-actions">${nativeButton('立即保存','save')}${nativeButton('导出存档','export')}${nativeButton('导入存档','import')}${state.tutorial&&!state.tutorial.done?nativeButton('继续新手引导','tutorialResume'):''}</div>`,'nativeSettings')}
 let suppressHabitatClick=false,buildingClickTimer;
 function cancelBuildingClick(){clearTimeout(buildingClickTimer);buildingClickTimer=undefined;}
@@ -189,7 +192,7 @@ document.addEventListener('click',async e=>{
   if(type==='historyGift'){await openGiftUseDialog(state,id);return}
   if(type==='giftUseCount'){const d=$('#modal');await openGiftUseDialog(state,Number(d.dataset.giftId),el.dataset.value==='max'?Number(d.dataset.giftMax):Number(d.dataset.giftCount)+Number(el.dataset.value));return}
   if(type==='confirmGiftUse'){await persist(action(state,activityFragment(id)?'composeActivityFragment':'activityGift',{id,count:Number($('#modal').dataset.giftCount)}));render();await openHistoryGiftResult(state);return}
-  if(type==='warehouseItemInfo'){toast(activityItemDescription(id)||'原客户端未取得该道具的使用说明。');return}
+  if(type==='warehouseItemInfo'){if([7111,7112,7113,7114].includes(id)){await openAwakeningItem(state,null,id);return}toast(activityItemDescription(id)||'原客户端未取得该道具的使用说明。');return}
   if(type==='historyTraining'){await openHistoryTraining(state,$('#modal').dataset.activity??'train-points');return}
   if(type==='historyChestWarehouse'){resourceReturnStack.push(captureResourcePage());await openWarehouse(state,'prop');return}
   if(type==='historyPillShop'){resourceReturnStack.push(captureResourcePage());await openResourceShop(state,{type:'i'});return}
@@ -231,11 +234,12 @@ document.addEventListener('click',async e=>{
   if(type==='treeChooseSeed'){await openTreeSeeds(state,id);return}
   if(type==='treeTargets'){await openTreeTargets(state);return}
   if(['treePlant','treeHarvest'].includes(type)){await persist(action(state,type,{id,slot:el.dataset.slot===undefined?undefined:Number(el.dataset.slot)}));render();await openHolyTree(state);tick();toast(state.log[0]);return}
-  if(type==='bossChallenge'){const before=structuredClone(state),plan=bossAttackPlan(state);await persist(action(state,type));render();await openBattleDialog(before,{enemyGroup:[plan.enemy]});if(await playBossAnimation(before,plan)){await openWorldBoss(state);toast(state.log[0]);}return}
+  if(type==='bossChallenge'){const before=structuredClone(state),plan=bossAttackPlan(state);await persist(action(state,type));render();await openBattleDialog(before,{enemyGroup:[plan.enemy]});if(await playBossAnimation(before,plan)){if(plan.won)await openBossSettlement(state);else await openWorldBoss(state);toast(state.log[0]);}return}
   if(type==='bossAttemptInfo'){const cost=[10,30,50,70,90][Math.min(state.encounters.boss.bought,4)];await openNativePaper('增加首领挑战次数',`<p>花费 ${cost} 魔晶增加1次挑战。</p>${nativeButton('确定','bossBuyAttempt')}`,'sourceBossAttempt');return}
   if(type==='bossBuyAttempt'){await persist(action(state,type));await openWorldBoss(state);toast(state.log[0]);return}
   if(type==='bossHistory'){const b=state.encounters.boss;await openNativePaper('首领战绩',`<p>累计伤害：${fmt(b.totalDamage)}</p><p>已击杀首领：${b.kills}</p>`,'sourceBossHistory');return}
-  if(type==='bossAchievements'){await openNativePaper('首领成就',`<p>累计伤害：${fmt(state.encounters.boss.totalDamage)}</p><p>原成就阈值：100000、250000等；完整奖励类型与领取结算尚未核实。</p>`,'sourceBossAchievement');return}
+  if(type==='bossAchievements'){await openBossAchievements(state);return}
+  if(type==='bossAchievementClaim'){await persist(action(state,type,{id}));render();await openBossAchievements(state);toast(state.log[0]);return}
   if(type==='treePlunder'){const before=structuredClone(state),op=treeOpponent(state,id),combat=simulateCombat(state,op.enemies),won=combat.won;await persist(action(state,type,{id}));render();await openBattleDialog(before,{enemyGroup:op.enemies});if(await playBattleAnimation(before,null,{won,enemyGroup:op.enemies,combat})){await openTreeTargets(state);toast(state.log[0]);}return}
   if(type==='openBloodFront'){if(playerProgress(state).level<17){toast('17级开启血战前线。');return}bloodReturn=false;refreshBloodFront(state,Date.now());await openBloodFront(state);return}
   if(type==='close'&&bloodReturn){bloodReturn=false;await openBloodFront(state);return}
@@ -306,6 +310,11 @@ document.addEventListener('click',async e=>{
   if(type==='cancelStarDragon'){await openDragonStar(state,id,JSON.parse($('#modal').dataset.dragonMaterialIds||'[]'));return}
   if(type==='starDragon'){const ids=JSON.parse($('#modal').dataset.dragonMaterialIds||'[]');const before=state.dragons.find(v=>v.id===id)?.star??1;await persist(action(state,type,{id,ids}));render();await openDragonStar(state,id);void playEquipmentEffect($('#modal'),(state.dragons.find(v=>v.id===id)?.star??1)>before?'star_up':'exp_up','.dragon-star-right [data-source=tx_star]').catch(console.error);toast(state.log[0]);return}
   if(type==='dragonStarAll'){const d=state.dragons.find(v=>v.id===id),candidates=dragonMaterials(state).filter(v=>!dragonStarMaterialError(state,d,v)).map(v=>v.id),chosen=JSON.parse($('#modal').dataset.dragonMaterialIds||'[]');await openDragonStar(state,id,chosen.length===candidates.length?[]:candidates);return}
+  if(type==='openMail'){await openMail(state);return}
+  if(type==='readMail'){await openMailDetail(state);return}
+  if(type==='claimMail'||type==='deleteReadMail'){await persist(action(state,type,{id:el.dataset.value}));render();await openMail(state);toast(state.log[0]);return}
+  if(type==='awakeningItem'){await openAwakeningItem(state,id,Number(el.dataset.value));return}
+  if(type==='awakeningShop'){resourceReturnStack.push(captureResourcePage());await openResourceShop(state,{type:'i',itemId:Number(el.dataset.value)});return}
   if(type==='openAwakening'){await openAwakening(state,id);return}
   if(type==='awakeningSelect'){const d=$('#modal');await openAwakeningSelect(state,id,JSON.parse(d.dataset.awakeningKeys||'[]'));return}
   if(type==='awakeningMaterial'){const d=$('#modal'),keys=JSON.parse(d.dataset.awakeningKeys||'[]'),key=el.dataset.value.includes(':')?el.dataset.value:id,next=keys.includes(key)?keys.filter(v=>v!==key):[...keys,key];await openAwakeningSelect(state,Number(d.dataset.dragonId),next);return}
@@ -358,7 +367,7 @@ document.addEventListener('click',async e=>{
   if(type==='resourceShop'){await openResourceShop(state);return}
   if(type==='resourceShopGold'){await openResourceShop(state,{type:'g'});return}
   if(type==='resourceShopFood'){await openResourceShop(state,{type:'f'});return}
-  if(type==='buyResource'){const offer=resourceShopRow(id);if(!offer){toast('这个商品尚未开放。');return}const kind=$('#modal')?.dataset.resourceKind||null;if(state.gems<offer.priceGems){toast(`魔晶不足，还差 ${offer.priceGems-state.gems} 魔晶。`);resourceReturnStack.push(captureResourcePage());await openRechargeDialog(state);return}const next=action(state,'buyResource',{id});await persist(next);render();await openResourceShop(state,{type:kind});toast(state.log[0]);return}
+  if(type==='buyResource'){const offer=resourceShopRow(id);if(!offer){toast('这个商品尚未开放。');return}const kind=$('#modal')?.dataset.resourceKind||null,itemId=Number($('#modal')?.dataset.resourceItem)||null;if(state.gems<offer.priceGems){toast(`魔晶不足，还差 ${offer.priceGems-state.gems} 魔晶。`);resourceReturnStack.push(captureResourcePage());await openRechargeDialog(state);return}const next=action(state,'buyResource',{id});await persist(next);render();await openResourceShop(state,{type:kind,itemId});toast(state.log[0]);return}
   if(type==='openAdventure'){await openAdventureDialog(state);return}
   if(type==='openGemExplore'){await openGemExplore(state);return}
   if(type==='exploreGem'){const [mode,count]=el.dataset.value.split(':');await persist(action(state,type,{mode,count:Number(count)}));busy=true;try{render();await openGemExploreResult(state,state.gemInventory.slice(-Number(count)),mode,Number(count))}finally{busy=false}toast(state.log[0]);return}

@@ -1,0 +1,21 @@
+{
+  "baseline": "2.9.35-202402271124",
+  "rows": 8,
+  "tablesSha256": "1408d684c2a6530668a8ed4816ad1697d579077fed5d02b887d06f035395e750",
+  "sources": {
+    "pcf/world_boss_paiming.lua": "20149dd4c8630c72c7f555038f7bbfea965ec0ceac1302a34dec0be212f7bff6",
+    "dragon/pconfig/librarys/worldboss/LibWorldBossRewardInfo.lua": "335d7731fea7b206a38c690c22482aa63f867a9ee9aef00acdbca33a50c2f5a5",
+    "ui/worldboss/WorldBossRewardPanel.lua": "690aa18add05cdb75490f9e5e0445fba3a588011f5933402b0ec68a2bda80b1e",
+    "pcf/world_boss_chengjiu.lua": "be10d3c3026d82f25e096be924e3c829c8bedc0ea6e670fbbd16b27408d18a0b",
+    "dragon/pconfig/librarys/worldboss/LibWorldBossAchievementInfo.lua": "9b4746827983cc9140282f6c1e028a0bfdb274f9b6c63630fb3023abc508913e",
+    "ui/worldboss/WorldBossAchievementPanel.lua": "d8a8b1dffb898ea924f17e4713705c1a0daddef4ebca8003f4ad3127431c580b",
+    "ui/worldboss/WorldBossAchievementItem.lua": "ac337d8d53a35bb8764d17b0942d7f79c11bb6711d2b81d1cda7118783b78134",
+    "dragon/data/clientdatas/WorldBossData.lua": "bb81bc50d542715623c2260358b581b25c05827712658910486b1a0603558cef"
+  },
+  "rules": [
+    "Original UI says single-day total damage; WorldBossData uses per-boss historydamage and persistent flag bits. Keep highest daily total and a permanent claimed ledger.",
+    "Type 13 resolves through lib_holyfire; these six IDs are exactly the existing gem definitions, not generic unusable props.",
+    "Offline 10 daily attempts, damage solver and UTC+8 reset are existing local policy; real server rankings and schedules are not invented.",
+    "Old saves retain known todayDamage as minimum peak; cannot reconstruct past daily peak from cumulative damage."
+  ]
+}

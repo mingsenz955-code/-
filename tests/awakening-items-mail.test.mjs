@@ -1,0 +1,17 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {createGame,action,validate} from '../src/game.mjs';
+import {AWAKENING_STONES} from '../src/awakening-items.mjs';
+import {lootProp} from '../src/loot.mjs';
+import {dragonAttributes} from '../src/battle.mjs';
+import {resourceShopRow} from '../src/resource-shop.mjs';
+import {UPDATE_MAIL,mailbox} from '../src/mail.mjs';
+test('original four awakening offers deliver usable stones then pay for real six-star awakening',()=>{
+ let s=createGame(1000);s.gems=1000;s.dragons[0]={...s.dragons[0],species:'original1041',level:7,star:5};s.dragons.push({id:4,species:'original1041',level:7,star:5,habitatId:1});s.nextId=5;
+ s=action(s,'dragonAwaken',{id:2,op:'start'},1000);s=action(s,'dragonAwaken',{id:2,op:'train',keys:[4]},1000);const before=dragonAttributes(s.dragons[0],s),unchanged=structuredClone(s);assert.throws(()=>action(s,'dragonAwaken',{id:2,op:'upgrade'},1000),/材料不足/);assert.deepEqual(s,unchanged);
+ for(const stone of AWAKENING_STONES){const offer=resourceShopRow(stone.shopId);assert.equal(offer.xid,stone.id);assert.equal(offer.amount,1);assert.equal(offer.priceGems,20);assert(offer.sourceEnabled);assert(lootProp(stone.id));for(let i=0;i<5;i++)s=action(s,'buyResource',{id:stone.shopId},1000);assert.equal(s.items[stone.id],5);assert.equal(s.shopInventory[stone.shopId],undefined);}
+ assert.equal(s.gems,600);s=action(s,'dragonAwaken',{id:2,op:'upgrade'},1000);assert.equal(s.dragons[0].wake.star,1);assert.deepEqual(dragonAttributes(s.dragons[0],s),before);assert(before.attack>dragonAttributes({...s.dragons[0],wake:undefined},s).attack);for(const stone of AWAKENING_STONES)assert.equal(s.items[stone.id],0);assert.deepEqual(validate(JSON.parse(JSON.stringify(s))),s);
+});
+test('already paid stones migrate once without changing input, gems or unrelated shop inventory',()=>{const raw=createGame(1000);raw.shopInventory={119:7,120:3,121:2,122:1,85:8};raw.items[7111]=2;raw.gems=80;const before=structuredClone(raw),s=validate(raw);assert.deepEqual(raw,before);assert.equal(s.items[7111],9);assert.equal(s.items[7112],3);assert.equal(s.items[7113],2);assert.equal(s.items[7114],1);assert.equal(s.gems,80);assert.deepEqual(s.shopInventory,{85:8});assert.deepEqual(validate(s),s);const bad=structuredClone(raw);bad.items[7111]=1e9;assert.throws(()=>validate(bad),/超出上限/);});
+test('update mail claims one China dragon egg, survives deletion/restart, never duplicates',()=>{let s=validate(createGame(1000));assert.equal(mailbox(s).length,1);s=action(s,'deleteReadMail',{},1000);assert.equal(mailbox(s).length,1);s=action(s,'claimMail',{id:UPDATE_MAIL.id},1000);assert.equal(s.giftEggs[0].dragonId,1041);assert.equal(s.giftEggs[0].quantity,1);const before=structuredClone(s);assert.throws(()=>action(s,'claimMail',{id:UPDATE_MAIL.id},1000),/已经领取/);assert.deepEqual(before,s);s=action(s,'deleteReadMail',{},1000);assert.equal(mailbox(validate(JSON.parse(JSON.stringify(s)))).length,0);assert.throws(()=>action(s,'claimMail',{id:UPDATE_MAIL.id},1000));});
+test('full warehouse leaves update attachment pending; existing China egg stack accepts exactly one',()=>{let s=createGame(1000);s.giftEggs=Array.from({length:200},(_,i)=>({id:i+4,dragonId:1001,source:'activity'}));s.nextId=204;const raw=structuredClone(s);assert.throws(()=>action(s,'claimMail',{id:UPDATE_MAIL.id},1000),/已满/);assert.deepEqual(s,raw);s.giftEggs[0].dragonId=1041;s=action(s,'claimMail',{id:UPDATE_MAIL.id},1000);assert.equal(s.giftEggs.length,200);assert.equal(s.giftEggs[0].quantity,2);});

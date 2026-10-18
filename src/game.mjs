@@ -1,3 +1,6 @@
+import {bossAchievementPlan,bossRankingRow} from './boss-achievements.mjs';
+import {validateMail,claimMail} from './mail.mjs';
+import {migrateAwakeningPurchases} from './awakening-items.mjs';
 import {validateMutations,refreshMutations,mutationEvent} from './mutation-events.mjs';
 import {consumeDragonMaterials} from './dragon-materials.mjs';
 import {awakenDragon,awakeningPlan,validateAwakening} from './dragon-awakening.mjs';
@@ -40,7 +43,7 @@ import {resourceShopRow,EVOLUTION_FRUIT_ITEM_ID} from './resource-shop.mjs';
 const fail = message => {throw new Error(message)};
 const number = (v,min=0,max=Number.MAX_SAFE_INTEGER) => Number.isSafeInteger(v)&&v>=min&&v<=max;
 export function createGame(now=Date.now()) {
- return {version:12,bloodFront:createBloodFront(now),mutations:{nextId:1,events:[]},activities:createActivities(now),arena:createArena(now),encounters:createEncounters(now),shopInventory:{},fixedPositions:{},giftEggs:[],equipmentFragments:{},loot:{policy:LOOT_POLICY,boxesOpened:0,lastOpened:null,nodeRewards:createNodeRewards(now)},gemExplore:createGemExplore(now),runeHunt:createRuneHunt(now),runes:[],nextRuneId:1,equipmentMaterials:{stone:0,wing:0,crystal:0},gemInventory:[],gemSockets:Array(12).fill(null),nextGemId:1,structures:[],formation:[2,3],adventure:{cleared:{},energy:10,energyAt:now,policy:OFFLINE_BATTLE_POLICY},lottery:{normalTokens:0,advancedTokens:0,draws:0,pending:[],pity:{1:0,2:0}},raffle:{tickets:{},counters:{junior:0,mid:0,senior:0},pending:[]},expansion:{plots:0},items:{},recharge:{count:0,lastTier:0,totalGems:0,doubled:[],dailyDay:'',dailyYuan:0},equipment:[],nextEquipId:1,coins:1200,food:400,gems:0,playerXp:0,nextId:4,updatedAt:now,habitats:[{id:1,name:'晨曦栖息地',lastCollected:now}],dragons:[{id:2,species:'ember',level:1,habitatId:1},{id:3,species:'leaf',level:1,habitatId:1}],farm:null,nest:null,breeding:null,incubator:null,stats:{harvests:0,hatches:0,feeds:0},log:['欢迎来到云上牧场。种下第一份龙粮吧。']};
+ return {version:12,mail:{claimed:[],deleted:[]},bloodFront:createBloodFront(now),mutations:{nextId:1,events:[]},activities:createActivities(now),arena:createArena(now),encounters:createEncounters(now),shopInventory:{},fixedPositions:{},giftEggs:[],equipmentFragments:{},loot:{policy:LOOT_POLICY,boxesOpened:0,lastOpened:null,nodeRewards:createNodeRewards(now)},gemExplore:createGemExplore(now),runeHunt:createRuneHunt(now),runes:[],nextRuneId:1,equipmentMaterials:{stone:0,wing:0,crystal:0},gemInventory:[],gemSockets:Array(12).fill(null),nextGemId:1,structures:[],formation:[2,3],adventure:{cleared:{},energy:10,energyAt:now,policy:OFFLINE_BATTLE_POLICY},lottery:{normalTokens:0,advancedTokens:0,draws:0,pending:[],pity:{1:0,2:0}},raffle:{tickets:{},counters:{junior:0,mid:0,senior:0},pending:[]},expansion:{plots:0},items:{},recharge:{count:0,lastTier:0,totalGems:0,doubled:[],dailyDay:'',dailyYuan:0},equipment:[],nextEquipId:1,coins:1200,food:400,gems:0,playerXp:0,nextId:4,updatedAt:now,habitats:[{id:1,name:'晨曦栖息地',lastCollected:now}],dragons:[{id:2,species:'ember',level:1,habitatId:1},{id:3,species:'leaf',level:1,habitatId:1}],farm:null,nest:null,breeding:null,incubator:null,stats:{harvests:0,hatches:0,feeds:0},log:['欢迎来到云上牧场。种下第一份龙粮吧。']};
 }
 export function createTutorialGame(now=Date.now()){const s=createGame(now);s.tutorial={...createTutorial(),sourceOpening:true};s.coins=Math.max(s.coins,habitatDefinition(28).costs.g+ORIGINAL_SHOP_ITEMS.filter(r=>[16,19,1020].includes(r.id)).reduce((n,r)=>n+(r.costs.g??0),0)+ORIGINAL_CROPS[0].cost);s.habitats[0].buildingId=26;s.habitats[0].name='岩土系龙巢';s.dragons=[{id:2,species:'original1011',level:4,habitatId:1}];s.nextId=3;s.formation=[2];return s}
 export function validate(s) {
@@ -101,6 +104,7 @@ export function validate(s) {
  if(!s.expansion||!number(s.expansion.plots,0,EXPANSION_PAID_STEPS))fail('岛屿扩建存档无效。');validateLands(s);
  if(!s.items||typeof s.items!=='object'||Array.isArray(s.items))fail('道具库存无效。');
  for(const [key,value] of Object.entries(s.items))if(!/^[0-9]+$/.test(key)||!number(value,0,1e9))fail('道具库存记录无效。');
+ migrateAwakeningPurchases(s);validateMail(s);
  if(!s.recharge||!number(s.recharge.count,0,1e9)||!number(s.recharge.lastTier,0,1e9))fail('充值记录无效。');
  if(!number(s.recharge.totalGems,0,1e15))fail('累计充值魔晶无效。');
  if(!Array.isArray(s.recharge.doubled)||s.recharge.doubled.length>rechargeProductIds().length||new Set(s.recharge.doubled).size!==s.recharge.doubled.length)fail('首充双倍记录无效。');
@@ -151,6 +155,8 @@ export function action(state,type,payload={},now=Date.now(),random=Math.random) 
  const settle=h=>{h.storedCoins=rawIncome(s,h,now);h.lastCollected=now;};
  refreshEncounters(s,now);observeActivityDay(s,now);
  switch(type){
+ case 'claimMail': message=claimMail(s,payload.id);break;
+ case 'deleteReadMail': s.mail.deleted=[...s.mail.claimed];message='已读邮件已删除。';break;
  case 'refreshMutations':{message=refreshMutations(s,now,random)?'发现新的奇遇！':'奇遇状态已更新。';break;}
  case 'claimMutation': {const e=s.mutations.events.find(e=>e.id===payload.id);if(!e||now>=e.expiresAt)fail('奇遇已结束。');const info=mutationEvent(e.tableId);if(![1,2].includes(info.evType))fail('该奇遇缺少原版结算资料。');if(info.evType===1)spend('gems',info.price);activityDeliver(s,[info]);s.mutations.events=s.mutations.events.filter(v=>v.id!==e.id);message=`获得${info.name}。${info.type===5?'龙蛋已放入仓库，可送入育龙塔孵化。':''}`;break;}
  case 'bloodFight':case 'bloodSweep':case 'bloodBuff':case 'bloodReset':if(playerProgress(s).level<17)fail('17级开启血战前线。');message=bloodAction(s,type,payload,now);break;
@@ -171,7 +177,8 @@ export function action(state,type,payload={},now=Date.now(),random=Math.random) 
  case 'historyActivity':message=historyAction(s,payload,now,random);break;
  case 'singleRechargeClaim':message=claimSingleRecharge(s,payload.id);break;
  case 'arenaChallenge':case 'arenaBuy':case 'arenaReset':case 'arenaRefresh':case 'arenaClaim':case 'arenaExchange':message=arenaAction(s,type,payload,now);break;
- case 'bossChallenge':{if(playerProgress(s).level<15)fail('15级开启远古首领。');const b=s.encounters.boss;if(!b.attempts)fail('挑战次数不足。');const plan=bossAttackPlan(s),info=bossInfo(s);b.attempts--;b.damage+=plan.damage;b.totalDamage+=plan.damage;b.todayDamage+=plan.damage;if(plan.won){deliverLoot(s,[{type:info.rewardType,itemId:info.rewardId,amount:info.rewardCount}]);b.kills++;b.damage=0;b.stage=Math.min(b.stage+1,21);}message=`远古首领造成 ${plan.damage} 伤害${plan.won?'，击杀奖励已入库':''}。`;break;}
+ case 'bossAchievementClaim':{if(playerProgress(s).level<15)fail('15级开启远古首领。');const r=bossAchievementPlan(s,payload.id);activityDeliver(s,r.rewards);s.encounters.boss.achievementClaimed.push(r.id);message='首领成就奖励已领取。';break;}
+ case 'bossChallenge':{if(playerProgress(s).level<15)fail('15级开启远古首领。');const b=s.encounters.boss;if(!b.attempts)fail('挑战次数不足。');const plan=bossAttackPlan(s),info=bossInfo(s);b.attempts--;b.damage+=plan.damage;b.totalDamage+=plan.damage;b.todayDamage+=plan.damage;b.highestDailyDamage=Math.max(b.highestDailyDamage,b.todayDamage);if(plan.won){deliverLoot(s,[{type:info.rewardType,itemId:info.rewardId,amount:info.rewardCount}]);const rank=bossRankingRow(1);activityDeliver(s,rank.rewards);b.kills++;b.rankSettlement={rank:1,rowId:rank.id,kill:b.kills};b.damage=0;b.stage=Math.min(b.stage+1,21);}message=`远古首领造成 ${plan.damage} 伤害${plan.won?'，击杀与个人场排名奖励已入库':''}。`;break;}
  case 'bossBuyAttempt':{if(playerProgress(s).level<15)fail('15级开启远古首领。');const b=s.encounters.boss,cost=[10,30,50,70,90][Math.min(b.bought,4)];spend('gems',cost);b.attempts++;b.bought++;message=`花费 ${cost} 魔晶增加一次首领挑战。`;break;}
  case 'treePlant':{if(playerProgress(s).level<10)fail('10级开启圣树。');const r=availableSeeds(playerProgress(s).level,now).find(r=>r.id===payload.id),t=s.encounters.tree,index=payload.slot===undefined?t.plots.indexOf(null):payload.slot;if(!Number.isInteger(index)||index<0||index>=3||t.plots[index]!==null)fail('该果位不可种植或已占用。');if(!r||t.used.includes(r.id))fail('该种子本日已使用或不在当前供应中。');if(index<0)fail('圣树没有空闲位置。');t.used.push(r.id);t.plots[index]={seedId:r.id,readyAt:now+r.plantTime*1000};message=`已种植${r.seedName}，等待成熟。`;break;}
  case 'treeHarvest':{const t=s.encounters.tree,p=t.plots[payload.id];if(!p||now<p.readyAt)fail('果实尚未成熟。');const r=seedInfo(p.seedId);deliverLoot(s,[{type:r.propType,itemId:r.propID,amount:r.propNum}]);t.plots[payload.id]=null;message=`收获圣树${r.seedName} × ${r.propNum}。`;break;}

@@ -1,3 +1,4 @@
+import {mailbox} from './mail.mjs';
 import {guideActive} from './tutorial.mjs';
 import {configuredLineup,lineupPower} from './battle.mjs';
 import {vipInfo} from './vip.mjs';
@@ -6,7 +7,7 @@ import {profileOf,avatarImage} from './player-profile.mjs';
 import layout from '../assets/original/layout-main.mjs';
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const LABELS={btn_RenWU:'任务',btn_pickAll:'收金币',btn_GengDuo:'更多',btn_ZhanDou:'战斗',btn_YouJian:'邮件',btn_TuJian:'图鉴',btn_NiuDanJi:'扭蛋机',btn_mydragon:'我的龙族',btn_YuLong:'育龙',btn_ShangDian:'商店',btn_ZhuangBei:'装备',btn_FuWen:'符文',btn_CangKu:'仓库',btn_Rank:'排行',btn_BaoShi:'宝石',btn_BuZhen:'布阵',btn_Guild:'公会',btn_SheZhi:'设置',btn_firstrecharge:'首充',btn_welfare:'福利中心',btn_Huodongzhongxin:'限时活动',btn_dafuweng:'大富翁',btn_JinBi:'获取金币',btn_ShiWu:'获取食物',btn_MoJing:'获取魔晶'};
-const ACTIONS={btn_RenWU:'showTasks',btn_pickAll:'collectAll',btn_GengDuo:'showMore',btn_ZhanDou:'openAdventure',btn_YouJian:'unavailable',btn_recharge:'openRecharge',btn_TuJian:'openOriginal',btn_NiuDanJi:'lotteryOptions',btn_mydragon:'openMyDragons',btn_YuLong:'openDragonGrowth',btn_ShangDian:'openHabitats',btn_SheZhi:'settings',btn_ZhuangBei:'openEquipmentBag',btn_FuWen:'openRunes',btn_CangKu:'openWarehouse',btn_Rank:'unavailable',btn_BaoShi:'openGems',btn_BuZhen:'openFormation',btn_Guild:'unavailable',btn_firstrecharge:'openFirstCharge',btn_welfare:'openWelfare',btn_Huodongzhongxin:'openActivities',btn_dafuweng:'openMonopolyActivities',
+const ACTIONS={btn_RenWU:'showTasks',btn_pickAll:'collectAll',btn_GengDuo:'showMore',btn_ZhanDou:'openAdventure',btn_YouJian:'openMail',btn_recharge:'openRecharge',btn_TuJian:'openOriginal',btn_NiuDanJi:'lotteryOptions',btn_mydragon:'openMyDragons',btn_YuLong:'openDragonGrowth',btn_ShangDian:'openHabitats',btn_SheZhi:'settings',btn_ZhuangBei:'openEquipmentBag',btn_FuWen:'openRunes',btn_CangKu:'openWarehouse',btn_Rank:'unavailable',btn_BaoShi:'openGems',btn_BuZhen:'openFormation',btn_Guild:'unavailable',btn_firstrecharge:'openFirstCharge',btn_welfare:'openWelfare',btn_Huodongzhongxin:'openActivities',btn_dafuweng:'openMonopolyActivities',
  // The three ＋ buttons inside gold/food/gem carry no action in the client table. 魔晶 opens the
  // recharge panel; 金币 and 食物 open the shop's 资源 category, which is the client's own 魔晶
  // sink for those two resources. That mapping is a decision, not a recovered rule.
@@ -19,6 +20,8 @@ export function originalHud(state,{expanded=false}={}){
  const values={txt_JinBi:state.coins.toLocaleString('zh-CN'),txt_ShiWu:state.food.toLocaleString('zh-CN'),txt_MoJing:String(state.gems??0),txt_exp:progress.percent+'%',txt_level:String(progress.level),player_name:profileOf(state).name,power:String(lineupPower(configuredLineup(state),state)),vip_num:String(vipInfo(state).level)};
  const render=(node,root=false)=>{
   if(node.name==='act_btn')node={...node,children:node.children.filter(n=>['btn_firstrecharge','btn_welfare','btn_Huodongzhongxin','btn_dafuweng'].includes(n.name))};
+  if(node.name==='bubble'&&node.mailBubble)return `<div class="hud-node hud-mail-bubble" style="width:35px;height:35px;left:calc(50% + 22px);top:calc(50% - 29px)"><img src="assets/original/ui/ui_main_shu.png" width="35" height="35" alt=""><span>${mailbox(state).filter(m=>!m.claimed).length}</span></div>`;
+  if(node.name==='btn_YouJian'&&state.mail&&mailbox(state).some(m=>!m.claimed))node={...node,children:node.children.map(c=>c.name==='bubble'?{...c,mailBubble:true}:c)};
   if(['bubble','label','label_good','go1','go2','new','pbar_exp','vip'].includes(node.name))return '';
   const w=node.width??0,h=node.height??0;let x=node.x??0,y=node.y??0;
   if(root){
