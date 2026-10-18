@@ -1,3 +1,4 @@
+import {battleSpeed} from './battle-playback.mjs';
 import {sourceParticles} from './source-particles.mjs';
 
 // Cocos rate=2 and BACKIN, sampled for the Web Animations timeline.
@@ -8,7 +9,7 @@ const frames=fn=>Array.from({length:61},(_,i)=>({...fn(i/60),offset:i/60}));
 
 export async function sourceAnimate(el,keyframes,options){
  if(!el?.isConnected)return;
- const animation=el.animate(keyframes,{fill:'both',...options});
+ const animation=el.animate(keyframes,{fill:'both',...options});animation.playbackRate=battleSpeed(el);
  try{await animation.finished}finally{animation.cancel()}
 }
 

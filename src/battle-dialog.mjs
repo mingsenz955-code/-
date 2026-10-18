@@ -1,3 +1,4 @@
+import {installBattleControls,runBattlePlayback,battleWait,battleSpeed} from './battle-playback.mjs';
 import {BATTLE_VIEWPORT,projectilePoints} from './battle-presentation.mjs';
 import {waitForSourceMotion} from './source-motion.mjs';
 import {playSourceProjectile,playSourceHit} from './battle-effects.mjs';
@@ -29,14 +30,14 @@ export async function openBattleDialog(state,{nodeId=null,enemyGroup=null,layout
   const sp=SPECIES[item.species];
   slots[`${key}/icon`]=`<div class="source-battle-portrait" data-portrait="${team}${index-1}"><img class="battle-portrait-art" src="${`assets/original/ui/ui_bookdragon_${sp.original}_1.png`}" alt="${sp.name}"><img class="battle-portrait-border" src="assets/original/ui/ui_battle_txk60_${Math.min(5,sp.quality??1)}.png" alt=""><img class="battle-dead-mark" src="assets/original/ui/ui_battle_zhenwang.png" alt="阵亡"></div>`;
  }
- values['round/num']=`1/${BATTLE_ROUND_LIMIT}`;values['skip/miaoshu']='退出';
+ values['round/num']=`1/${BATTLE_ROUND_LIMIT}`;values['skip/miaoshu']='跳过';
  values.power_left=String(allyPower??lineupPower(lineup,state));values.power_right=String(enemyPower??(enemyGroup?Math.floor(enemies.reduce((n,e)=>n+e.attack+e.defend+e.life/3+(e.crit??0)+(e.uncrit??0),0)):battleRequirement(nodeId)??''));
  const allyPositions=battlePositions(lineup),enemyPositions=battlePositions(enemies,'enemy');
  const stage=`<div class="battle-stage" aria-label="自动战斗"><div class="battle-bg-fx-layer"></div>${lineup.map((d,i)=>fighter(d,'ally',i,allyPositions)).join('')}${enemies.filter(d=>d.species).map((d,i)=>fighter(d,'enemy',i,enemyPositions)).join('')}<div class="battle-fx-layer"></div></div>`;
- const d=showSource('sourceBattle',renderSourceLayout(layout,{values,slots,hidden,actions:{'skip/btn':{type:'close',label:'退出战斗'}}})+stage,'source-battle-dialog native-fullscreen');
+ const d=showSource('sourceBattle',renderSourceLayout(layout,{values,slots,hidden,actions:{'skip/btn':{type:'battleSkip',label:'跳过战斗并查看计算结果'}}})+stage,'source-battle-dialog native-fullscreen');
  d.style.setProperty('--source-scale',Math.min((innerWidth-20)/1024,(innerHeight-20)/BATTLE_VIEWPORT.height));
  d.querySelector('.battle-stage').addEventListener('dragon-clip-complete',e=>{const fighter=e.target.closest('.battle-fighter');if(!fighter)return;if(['airattack','landattack','magic'].includes(e.detail.clip))fighter.classList.remove('is-attacking');if(e.detail.clip==='hurt')fighter.classList.remove('is-hit');});d.dataset.battleNode=String(nodeId);d.dataset.battleRun=String(++activeRun);
- return d;
+ installBattleControls(d);return d;
 }
 function clip(el,name){const c=el.querySelector('canvas[data-model]');if(c){const clips=MODELS[c.dataset.model]?.clips??[];c.dataset.clip=clips.includes(name)?name:clips.includes('breathinbattle')?'breathinbattle':'breath';delete c.dataset.afterNextClip;if(['airattack','landattack','magic','hurt','movein'].includes(name)){const idle=clips.includes('breathinbattle')?'breathinbattle':'breath',end=name+'end';c.dataset.nextClip=clips.includes(end)?end:idle;if(clips.includes(end))c.dataset.afterNextClip=idle;}else delete c.dataset.nextClip;c.dataset.replay=String((+c.dataset.replay||0)+1)}}
 function motion(el,name,live){
@@ -56,11 +57,12 @@ async function skillName(layer,skill,common,legend){
  try{await sourceAnimate(name,[{opacity:0,scale:.1,offset:0},{opacity:0,scale:.1,offset:.1},{opacity:1,scale:1.5,offset:.2},{opacity:1,scale:1,offset:.5},{opacity:1,scale:1,offset:.7},{opacity:0,scale:1,offset:1}],{duration:1000})}finally{name.remove()}
 }
 let glyphs;
-async function damageNumber(layer,value,x,y){glyphs??=await fetch('assets/original/fonts/red_50.json').then(r=>r.json());const number=document.createElement('span');number.className='battle-damage';number.style.cssText=`left:${x}px;top:${y}px`;number.setAttribute('aria-label',String(value));for(const char of String(value)){const g=glyphs[char];if(!g)continue;const digit=document.createElement('i');digit.style.cssText=`width:${g.width}px;height:${g.height}px;background-position:-${g.x}px -${g.y}px;margin-right:${g.xadvance-g.width}px`;number.append(digit)}layer.append(number);setTimeout(()=>number.remove(),1000)}
+async function damageNumber(layer,value,x,y){glyphs??=await fetch('assets/original/fonts/red_50.json').then(r=>r.json());const number=document.createElement('span');number.className='battle-damage';number.style.cssText=`left:${x}px;top:${y}px`;number.setAttribute('aria-label',String(value));for(const char of String(value)){const g=glyphs[char];if(!g)continue;const digit=document.createElement('i');digit.style.cssText=`width:${g.width}px;height:${g.height}px;background-position:-${g.x}px -${g.y}px;margin-right:${g.xadvance-g.width}px`;number.append(digit)}layer.append(number);void battleWait(layer,1000).then(()=>number.remove());for(const a of number.getAnimations())a.playbackRate=battleSpeed(number)}
 // Render the same HP/damage record used for settlement; never force a last-hit kill.
-export async function playBattleAnimation(state,nodeId,result){
+export async function playBattleAnimation(state,nodeId,result){return runBattlePlayback(document.querySelector('#modal'),()=>replayBattleAnimation(state,nodeId,result));}
+async function replayBattleAnimation(state,nodeId,result){
  const d=document.querySelector('#modal'),run=d.dataset.battleRun,layer=d.querySelector('.battle-fx-layer');
- const live=()=>d.open&&d.dataset.mode==='sourceBattle'&&d.dataset.battleRun===run;
+ const live=()=>d.open&&d.dataset.battleSkipped!=='true'&&d.dataset.mode==='sourceBattle'&&d.dataset.battleRun===run;
  const make=(item,side,index)=>{const stats=side==='ally'?(result.allyStats?.[item.id]??dragonAttributes(item,state)):{attack:item.attack,defend:item.defend,life:item.life};const unit={item,side,index,el:d.querySelector(`[data-unit="${side}${index}"]`),stats,maxHp:stats.life,hp:stats.life};unit.el.dataset.maxHp=String(unit.maxHp);unit.el.dataset.currentHp=String(unit.hp);return unit;};
  const allies=configuredLineup(state).map((v,i)=>make(v,'ally',i)),enemies=(result.enemyGroup??battleEnemyGroup(nodeId)?.monsters??[]).filter(v=>v.species).map((v,i)=>make(v,'enemy',i));
  const allyPositions=battlePositions(allies.map(v=>v.item)),enemyPositions=battlePositions(enemies.map(v=>v.item),'enemy');
@@ -68,10 +70,10 @@ export async function playBattleAnimation(state,nodeId,result){
  const deaths=[];
  const setHp=(u,hp)=>{
   u.hp=hp;const percent=100*hp/u.maxHp;u.el.dataset.currentHp=String(hp);u.el.querySelector('.battle-unit-hp').title=`${hp} / ${u.maxHp}`;healthBar(u,percent);const key=`${u.side==='ally'?'left':'right'}${u.index+1}/hp`,bar=d.querySelector(`[data-source="${key}"]`);if(bar){bar.style.clipPath=`inset(0 ${100-percent}% 0 0)`;bar.dataset.currentHp=String(hp);bar.dataset.maxHp=String(u.maxHp);}
-  if(hp<=0){u.el.classList.add('is-dead');d.querySelector(`[data-portrait="${u.side}${u.index}"]`)?.classList.add('is-dead');deaths.push(motion(u.el,'dead',live).then(async complete=>{if(complete){await wait(100);u.el.hidden=true;u.el.dataset.deathComplete='true'}}))}
+  if(hp<=0){u.el.classList.add('is-dead');d.querySelector(`[data-portrait="${u.side}${u.index}"]`)?.classList.add('is-dead');deaths.push(motion(u.el,'dead',live).then(async complete=>{if(complete){await battleWait(d,100);u.el.hidden=true;u.el.dataset.deathComplete='true'}}))}
  };
  if(!(await Promise.all([...allies,...enemies].map(u=>motion(u.el,'movein',live)))).every(Boolean))return false;
- await wait(100);if(!live())return false;
+ await battleWait(d,100);if(!live())return false;
  for(const turn of combat.events){
   if(!live())return false;
   const target=(turn.side==='ally'?enemies:allies)[turn.target],attacker=(turn.side==='ally'?allies:enemies)[turn.actor];
@@ -94,12 +96,13 @@ export async function playBattleAnimation(state,nodeId,result){
   attacker.el.dataset.resolvedAttacks=String(Number(attacker.el.dataset.resolvedAttacks??0)+1);
   const results=await Promise.all([foreground,target.hp>0?hurt:Promise.resolve(true)]);if(!results.every(Boolean))return false;
  }
- await Promise.all(deaths);await wait(1000);return live();
+ await Promise.all(deaths);await battleWait(d,1000);return live();
 }
 
 // Offline world-boss encounter: recorded partial damage, never fake a defeated boss.
-export async function playBossAnimation(state,plan){
- const d=document.querySelector('#modal'),run=d.dataset.battleRun,layer=d.querySelector('.battle-fx-layer'),team=configuredLineup(state),allies=battlePositions(team),enemies=battlePositions([plan.enemy],'enemy');const live=()=>d.open&&d.dataset.battleRun===run&&d.dataset.mode==='sourceBattle';
+export async function playBossAnimation(state,plan){return runBattlePlayback(document.querySelector('#modal'),()=>replayBossAnimation(state,plan));}
+async function replayBossAnimation(state,plan){
+ const d=document.querySelector('#modal'),run=d.dataset.battleRun,layer=d.querySelector('.battle-fx-layer'),team=configuredLineup(state),allies=battlePositions(team),enemies=battlePositions([plan.enemy],'enemy');const live=()=>d.open&&d.dataset.battleSkipped!=='true'&&d.dataset.battleRun===run&&d.dataset.mode==='sourceBattle';
  const applyHp=(el,hp,max,barKey)=>{const percent=Math.max(0,hp/max*100);el.dataset.currentHp=String(hp);el.dataset.maxHp=String(max);healthBar({el},percent);const top=d.querySelector(`[data-source="${barKey}/hp"]`);if(top){top.dataset.currentHp=String(hp);top.dataset.maxHp=String(max);top.style.clipPath=`inset(0 ${100-percent}% 0 0)`;}};
  const initialTarget=d.querySelector('[data-unit=enemy0]');applyHp(initialTarget,plan.startHp,plan.enemy.life,'right1');for(let i=0;i<team.length;i++)applyHp(d.querySelector(`[data-unit=ally${i}]`),dragonAttributes(team[i],state).life,dragonAttributes(team[i],state).life,'left'+(i+1));
  let hp=plan.startHp;const events=plan.events??plan.hits.map(hit=>({...hit,side:'ally',slot:hit.slot??2,hp:hp=Math.max(0,hp-hit.damage),maxHp:plan.enemy.life}));
@@ -111,5 +114,5 @@ export async function playBossAnimation(state,plan){
  const fx=playSourceHit(layer,art?.hitEff??key,'bomb2',{x:to.x,y:to.y-45},live),hurt=hit.hp>0?motion(target,'hurt',live):Promise.resolve(true);await damageNumber(layer,hit.damage,to.x,to.y-75);applyHp(target,hit.hp,hit.maxHp,ally?'right1':'left'+(hit.target+1));if(!(await Promise.all([fx,hurt])).every(Boolean))return false;
  if(hit.hp===0){target.classList.add('is-dead');d.querySelector(`[data-portrait="${ally?'enemy0':'ally'+hit.target}"]`)?.classList.add('is-dead');if(!await motion(target,'dead',live))return false;target.hidden=true;}
  }
- d.dataset.bossEndReason=plan.endedBy;await wait(500);return live();
+ d.dataset.bossEndReason=plan.endedBy;await battleWait(d,500);return live();
 }

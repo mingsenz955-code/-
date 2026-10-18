@@ -1,3 +1,4 @@
+import {battleWait} from './battle-playback.mjs';
 import EFFECTS from '../assets/original/effects/index.mjs';
 import {projectilePlan} from './battle-presentation.mjs';
 import {waitForSourceMotion} from './source-motion.mjs';
@@ -27,5 +28,5 @@ export async function playSourceProjectile(layer,key,type,from,to,live){
 
 export async function playSourceHit(layer,key,name,point,live,{direction=1,depth=20}={}){
  const fx=sourceBattleEffect(layer,key,name,point,{scaleX:2*direction,depth,once:true});if(!fx)return live();
- try{if(!await waitForSourceMotion(fx.canvas,name,live))return false;await new Promise(resolve=>setTimeout(resolve,100));return live()}finally{fx.remove()}
+ try{if(!await waitForSourceMotion(fx.canvas,name,live))return false;await battleWait(layer,100);return live()}finally{fx.remove()}
 }
