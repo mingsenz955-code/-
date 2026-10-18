@@ -27,6 +27,8 @@ def main():
                 if row['kind']=='runtime':archive.write(release_dir/row['path'],row['path'])
         blob=runtime.read_bytes();manifest['runtime'].update(bytes=len(blob),sha256=hashlib.sha256(blob).hexdigest())
         (OUT/'latest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+        subprocess.run(['node','scripts/sign-update.cjs',str(OUT/'latest.json'),str(OUT/'latest.sig')],cwd=ROOT,check=True)
+        subprocess.run(['python','scripts/build-china-updater.py'],cwd=ROOT,check=True)
         bootstrap=OUT/'Yulong-Update.zip'
         with zipfile.ZipFile(bootstrap,'w',compression=zipfile.ZIP_DEFLATED) as archive:
             archive.write(ROOT/'scripts/update-game.ps1','update-game.ps1')
@@ -52,7 +54,7 @@ def main():
         release=request(api+'/releases/'+str(release['id']),{'draft':False,'make_latest':'true'},'PATCH')
         print(json.dumps({'published':True,'url':release['html_url']}));return
     if manifest['runtime']['sha256']=='pending':raise RuntimeError('Prepare runtime ZIP before uploading')
-    for name in ['runtime-win32-x64.zip','Yulong-Update.zip','latest.json']:
+    for name in ['runtime-win32-x64.zip','Yulong-Update.zip','Yulong-Update-China.zip','latest.json','latest.sig']:
         local=OUT/name;digest='sha256:'+hashlib.sha256(local.read_bytes()).hexdigest()
         existing=next((a for a in release['assets'] if a['name']==name),None)
         if existing:

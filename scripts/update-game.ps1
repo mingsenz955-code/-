@@ -1,6 +1,7 @@
 ﻿param(
     [string]$GameDirectory,
     [switch]$Launch,
+    [ValidateSet("Auto","China","Direct")][string]$DownloadSource = "Auto",
     [string]$LocalManifest
 )
 $ErrorActionPreference = 'Stop'
@@ -40,11 +41,26 @@ function Matches([string]$file, $entry) {
     return $false
 }
 function Download([string]$url, [string]$file) {
-    for ($attempt=1; $attempt -le 3; $attempt++) {
-        try { Invoke-WebRequest -UseBasicParsing -Uri $url -OutFile $file -Headers $headers -TimeoutSec 120; return }
-        catch { if ($attempt -eq 3) { throw }; Start-Sleep -Seconds 2 }
+    if (-not ($url.StartsWith($rawRoot,[StringComparison]::Ordinal) -or $url.StartsWith("https://github.com/$repo/releases/download/",[StringComparison]::Ordinal))) { throw '下载源不属于指定游戏仓库。' }
+    $mirrors=@('https://gh-proxy.org/','https://ghfast.top/')
+    $prefixes=if($DownloadSource -eq 'Direct'){@('')}elseif($DownloadSource -eq 'China'){@($mirrors)+@('')}else{@('')+@($mirrors)}
+    if($null -ne $script:downloadPrefix){$prefixes=@($script:downloadPrefix)+@($prefixes|Where-Object{$_ -ne $script:downloadPrefix})}
+    foreach($prefix in $prefixes){
+        try { Invoke-WebRequest -UseBasicParsing -Uri ($prefix+$url) -OutFile $file -Headers $headers -TimeoutSec 30; $script:downloadPrefix=$prefix; return }
+        catch { Write-Host ('连接失败，切换下载通道：'+$(if($prefix){$prefix}else{'GitHub直连'}));$lastDownloadError=$_ }
     }
+    throw $lastDownloadError
 }
+function Verify-ManifestSignature([string]$file,[string]$signatureFile){
+    $rsa=New-Object Security.Cryptography.RSACryptoServiceProvider
+    try {
+        $rsa.FromXmlString('<RSAKeyValue><Modulus>sL/cqUI13LRIppPBwdtlduVEjbefNcvpxqLUgiPQ1fdVLxBsf/nUg0LmRmVDVJfTRKTjh8+IrE5LPIgptjm1iuVn8hCNnkJ6KZJUzGDjPqLSVHd+emUomEgxu43wIif5Dw5xWxAk6X0XAwKIk+6OIxUmRKFcAsEGVKYfHv3FcfOk0/xPeLjg+/ZGP6jhjA34OYmMO5dmU8Dzg49pPSQp2l81A8b1w6UXzXG+y3x6/iREUG1ONCP811K7hp7F9rukUsjBfkTlSq+wab5PFdAHZKgNAYMK7+mXw6J2Oq17tyywbCy3R1jHIMudGsYMVIvPUW0DPWmTfmXB3ITtYTng4Q==</Modulus><Exponent>AQAB</Exponent></RSAKeyValue>')
+        $bytes=[Text.Encoding]::UTF8.GetBytes([IO.File]::ReadAllText($file).Replace("`r`n","`n"))
+        $signature=[Convert]::FromBase64String([IO.File]::ReadAllText($signatureFile).Trim())
+        if(-not $rsa.VerifyData($bytes,'SHA256',$signature)){throw '更新清单签名不一致，已停止更新。'}
+    } finally {$rsa.Dispose()}
+}
+
 try {
     if (-not $GameDirectory -and (Test-Path -LiteralPath (Join-Path $PSScriptRoot 'updater-settings.json'))) {
         $settings=Get-Content -LiteralPath (Join-Path $PSScriptRoot 'updater-settings.json') -Raw -Encoding UTF8 | ConvertFrom-Json
@@ -75,9 +91,12 @@ try {
         # Fixture input for repeatable offline installer tests; not used by the shortcut.
         $manifest = Get-Content -LiteralPath $LocalManifest -Raw -Encoding UTF8 | ConvertFrom-Json
     } else {
-        Write-Host '正在从GitHub检查更新……'
+        Write-Host ('正在检查更新，下载通道：'+$DownloadSource+'……')
         $downloadedManifest = Join-Path $cache 'latest.download.json'
         Download $manifestUrl $downloadedManifest
+        $downloadedSignature=Join-Path $cache "latest.sig"
+        Download ($rawRoot+"master/updates/latest.sig") $downloadedSignature
+        Verify-ManifestSignature $downloadedManifest $downloadedSignature
         $manifest = Get-Content -LiteralPath $downloadedManifest -Raw -Encoding UTF8 | ConvertFrom-Json
     }
     if ($manifest.schema -ne 1 -or $manifest.version -notmatch '^\d+\.\d+\.\d+$' -or $manifest.commit -notmatch '^[a-f0-9]{40}$' -or @($manifest.files).Count -lt 1 -or @($manifest.files).Count -gt 20000) { throw '更新清单格式无效。' }
