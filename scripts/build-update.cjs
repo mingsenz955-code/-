@@ -14,7 +14,10 @@ async function build(){
   const b=await fs.readFile(path.join(release,rel));const f={path:rel,kind,bytes:b.length,sha256:digest(b)};
   if(kind==='app'){
    const source=rel.slice(14),blob=crypto.createHash('sha1').update(`blob ${b.length}\0`).update(b).digest('hex');
-   if(gitFiles.get(source)!==blob)throw Error('Packaged file differs from pinned GitHub source: '+source);
+   if(gitFiles.get(source)!==blob){
+    const original=execFileSync('git',['show',`${commit}:${source}`],{cwd:root,maxBuffer:50e6});
+    if(!/\.(mjs|cjs|json|html|css|txt|svg|xml|md)$/.test(source)||!Buffer.from(original.toString('utf8').replace(/\r\n/g,'\n')).equals(b))throw Error('Packaged file differs from pinned GitHub source: '+source);
+   }
    f.url=`https://raw.githubusercontent.com/mingsenz955-code/-/${commit}/${source}`;f.text=/\.(mjs|cjs|json|html|css|txt|svg|xml|md)$/.test(source);
   }
   files.push(f);
