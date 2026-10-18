@@ -1,0 +1,23 @@
+const assert=require('node:assert/strict'),wait=ms=>new Promise(r=>setTimeout(r,ms));
+exports.prepare=async store=>{const {createGame,action}=await import('../src/game.mjs'),{ORIGINAL_LEVELS}=await import('../src/data.mjs');let s=createGame();s.coins=1e7;s.playerXp=ORIGINAL_LEVELS.at(-1).xp_required;s=action(s,'buyStructure',{itemId:17});s.structures.at(-1).readyAt=Date.now()+9000;s=action(s,'buyStructure',{itemId:19});delete s.structures.at(-1).readyAt;await store.save(s);};
+exports.run=async(w,store,verify)=>{
+ const js=c=>w.webContents.executeJavaScript(c),click=s=>require('./smoke-input.cjs').nativeClick(w,s),load=async()=>(await store.load()).state;
+ if(verify){const s=await load();assert(s.mail.claimed.includes('update-0.16.73'));assert(s.dragons.some(d=>d.species==='original1204'));assert(!s.structures.find(o=>o.itemId===17).readyAt);assert(s.fixedPositions['fixed:breed']);console.log('PASS v73 restart completion, moved mountain and equipped adult reward retained');return;}
+ const inject=async(type,id,kind)=>{await js(`(()=>{const b=document.createElement('button');b.dataset.action=${JSON.stringify(type)};b.dataset.id='${id??0}';b.dataset.kind=${JSON.stringify(kind??'')};document.body.append(b);b.click();b.remove();})()`);await wait(250);};
+ for(let i=0;i<100&&!await js("!!document.querySelector('.ranch-world')");i++)await wait(100);
+ let s=await load(),farm=s.structures.find(o=>o.itemId===17);await inject('openBuildingSpeed',farm.id,'structure');await wait(Math.max(0,farm.readyAt-Date.now())+1500);
+ assert(await js("document.querySelector('#modal').textContent.includes('完成')"));const gems=s.gems;await click('[data-action=speedBuilding]');s=await load();assert(!s.structures.find(o=>o.id===farm.id).readyAt);assert.equal(s.gems,gems);
+ assert.equal(await js("document.querySelectorAll('[data-place-kind=fixed][data-place-id=\"1\"]').length"),1);
+ for(const kind of ['fixed','structure']){
+  s=await load();const id=kind==='fixed'?1:s.structures.find(o=>o.itemId===19).id;
+  await inject(kind==='fixed'?'openBreed':'structureInfo',id);await click(`[data-action=${kind==='fixed'?'beginFixedMove':'beginStructureMove'}]`);
+  const {action}=await import('../src/game.mjs'),{gridPosition,fixedBuildings}=await import('../src/habitats.mjs');
+  const source=kind==='fixed'?fixedBuildings(s).find(v=>v.id===id).position:s.structures.find(v=>v.id===id).position;
+  let dest;outer:for(let r=6;r<24;r++)for(let c=6;c<24;c++){const p=gridPosition(c,r);if(Math.hypot(p[0]-source[0],p[1]-source[1])<3)continue;try{action(s,kind==='fixed'?'placeFixed':'placeStructure',{id,position:p});dest=p;break outer;}catch{}}
+  assert(dest,'legal empty destination');const q=await js(`(()=>{const e=document.querySelector('[data-place-kind="${kind}"][data-place-id="${id}"]'),r=e.querySelector('.original-building,.habitat-art').getBoundingClientRect(),p=e.parentElement.getBoundingClientRect();for(let y=Math.max(10,r.top);y<Math.min(innerHeight-100,r.bottom);y+=6)for(let x=Math.max(10,r.left);x<Math.min(innerWidth-10,r.right);x+=6)if(document.elementFromPoint(x,y)?.closest('[data-place-id]')===e)return{x,y,w:p.width,h:p.height};return{error:true,rect:{x:r.x,y:r.y,w:r.width,h:r.height},el:e.outerHTML.slice(0,250),cover:document.elementFromPoint(r.x+r.width/2,r.y+r.height*.7)?.outerHTML.slice(0,200)}})()`);
+  if(q.error){await require('node:fs/promises').writeFile(require('node:path').join(__dirname,'..','work','v73-move-failure.png'),(await w.webContents.capturePage()).toPNG());throw Error(JSON.stringify(q));}const mouse=async(type,x,y)=>{w.webContents.sendInputEvent({type,x:Math.round(x),y:Math.round(y),button:'left',clickCount:1});await wait(120);};const x=q.x+(dest[0]-source[0])*q.w/100,y=q.y+(dest[1]-source[1])*q.h/100;
+  await mouse('mouseDown',q.x,q.y);await mouse('mouseMove',x,y);await mouse('mouseUp',x,y);console.log(kind,await js("document.querySelector('.placement-tiles')?.className"));await wait(550);await click('[data-action=confirmBuildingMove]');s=await load();assert.deepEqual(kind==='fixed'?s.fixedPositions['fixed:breed']:s.structures.find(v=>v.id===id).position,dest);
+ }
+ await inject('openMail');await click('[data-action=readMail][data-value="update-0.16.73"]');assert(await js("document.querySelector('#modal').textContent.includes('成品龙')"));await click('[data-action=claimMail]');s=await load();const d=s.dragons.at(-1);assert.equal(d.species,'original1204');assert.equal(s.equipment.filter(e=>e.dragonid===d.id).length,6);assert.equal(s.runes.filter(e=>e.dragonid===d.id).length,4);
+ console.log('PASS v73 native expired construction completes free, both breeding mountains drag and persist, adult mail equips max gear/runes');
+};

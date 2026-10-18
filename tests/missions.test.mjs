@@ -19,7 +19,7 @@ test('only active future planting counts, original rewards issue once and dismis
 });
 test('purchased farm must finish construction and unlocks the next original task',()=>{
  let s=action(fixture(),'activateMissions',{},now);s=action(s,'buyStructure',{itemId:17},now);assert(!s.missions.done.includes(9));assert.equal(s.missions.progress[9],1);
- const id=s.structures.at(-1).id,before=structuredClone(s);s=action(s,'completeStructure',{id},now+10000);assert(s.missions.done.includes(9));assert.equal(s.coins,before.coins+1000);assert.equal(s.missions.progress[9],2);assert.equal(activeMissions(s).length,10);
+ const id=s.structures.at(-1).id,before=structuredClone(s);s=action(s,'completeStructure',{id},now+300000);assert(s.missions.done.includes(9));assert.equal(s.coins,before.coins+1000);assert.equal(s.missions.progress[9],2);assert.equal(activeMissions(s).length,10);
 });
 test('hatching respects prerequisite and suppresses linked speed mission without granting its reward',()=>{
  let s=fixture(21);s.missions.done=s.missions.done.filter(id=>id!==20);s.incubator={source:'raffle',parents:[],species:'tide',phase:'hatching',readyAt:now-1};s=action(s,'hatch',{habitatId:1},now);assert(s.missions.done.includes(21));assert(s.missions.linked.includes(20));assert(!s.missions.done.includes(20));assert(!s.missions.notices.includes(20));
