@@ -13,3 +13,5 @@
 
 ## 国内网络通道
 Yulong-Update-China.zip优先GH-Proxy、再GHFast、最后直连；普通更新器Auto优先直连。无需GitHub登录，每份清单校验发布者RSA-SHA256签名，程序逐文件SHA256。公钥固定在更新器，私钥仅开发机LocalAppData/YulongRanchPublisher，不进入仓库或玩家包。传输通道不改变固定仓库/固定提交地址、路径校验、增量复用或存档备份。第三方加速是否可用依当地网络；失败不替换当前游戏。
+
+后续发布时，签名工具用现有发布密钥签名，latest.json和latest.sig必须一起更新到updates/。prepare已自动签名并生成镜像分享包；现有Release追加镜像包可用scripts/publish-mirror-bootstrap.py，不覆盖已发布资产。
