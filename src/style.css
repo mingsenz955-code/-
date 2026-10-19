@@ -455,3 +455,7 @@ body:has(#modal[open].native-fullscreen){background:#09242e}
 
 .gem-auto-feed{position:absolute;transform:translate(-50%,-50%);width:136px;height:43px;border:0;color:#fff;font-size:22px;cursor:pointer;background:url("../assets/original/ui/ui_common_btn_3.png") center/100% 100% no-repeat;background-color:#795233;border-radius:8px}
 .gem-auto-feed{pointer-events:auto;z-index:2}
+
+.native-audio-settings{display:flex;justify-content:center;gap:45px;margin:24px 0;font-size:26px}.native-audio-settings label{cursor:pointer;display:flex;align-items:center;gap:12px}.native-audio-settings input{width:28px;height:28px;accent-color:#b28235;cursor:pointer}
+
+.source-original-settings .source-button:disabled{opacity:1}

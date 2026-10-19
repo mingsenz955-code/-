@@ -443,3 +443,8 @@
 - v71：pcf/tuhao_2与duihuan原导出确认喵星碎片7043奖励、10换1100；ErTongPart.lua根常量1204/7141确认儿童节棒棒糖展示与碎片，SHA256 1aabcbf29bc3b6f252a21066c4c30a2cf4834c8b0f60227b87c7f570e1d64f27；20%每击1片由用户明确指定，不是原服务器证据。
 
 - v76龙巢出售价来自现有18行ORIGINAL_HABITATS.sell_price.g，40/41为50000；原GoalSellBuilding.lua监听Event_SellBuilding，Base字节码亦含该事件符号。确认界面复用原panel_apply_or_cancel。出售顺带收取存金、旧原型巢0金币回收及最少留一巢为本地兼容规则。
+
+## v0.16.81 原音频与设置证据
+- assets/original/audio/manifest.json逐文件记录来自APK assets/res/sound/的39个原始MP3，未重新合成/转码；SoundManager.lua SHA256 a296fd21074c5e5b5d40b352463e4ffd9418e72518e8290cd18a6a18c3227a3f，音乐id1/2 town、3/4 battle，MAIN_MUSIC_GAP=60。
+- SkillNewCommonInfo.lua SHA256 6676cd61c3289138036988c0dfa64116dd6c9ce9c11f84fcf2d708bcfa06bbdd，函数0常量fireSoundID=8、hitSoundID=9；BattleField onFire_/onHit_实际读取两字段；BattleUI函数5 PC27—41选择血战advance/其它normal，音量0.6。
+- 原panel_userinfo.json SHA256 56b2049d03319c382a7fa5fc973bdb351d269ab2afd1f3d9c5dfdc090fa51bf8，567×482；UserInfoPanel函数0开/关同时切music+sound，函数13/14切图/勾和触摸开关。实现沿用这些原节点，不重排主设置页。

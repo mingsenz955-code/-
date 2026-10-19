@@ -1,0 +1,240 @@
+{
+  "sourceApkSha256": "6011e9026f35d3377edf6dae7ec7479fde82c058ad413a4f4327e31e1c2555c5",
+  "soundManagerSha256": "a296fd21074c5e5b5d40b352463e4ffd9418e72518e8290cd18a6a18c3227a3f",
+  "files": [
+    {
+      "archive": "assets/res/sound/town_1.mp3",
+      "file": "town_1.mp3",
+      "bytes": 964440,
+      "sha256": "dbcc8d5dacb992952baf7d9e562fa8c80a7d99f143293ef54e799c15148ef136"
+    },
+    {
+      "archive": "assets/res/sound/town_2.mp3",
+      "file": "town_2.mp3",
+      "bytes": 1528200,
+      "sha256": "6d37774cae56997d36be70c735e6570687ccf1fccb952da7f2cc84228abf019e"
+    },
+    {
+      "archive": "assets/res/sound/battle_1.mp3",
+      "file": "battle_1.mp3",
+      "bytes": 1179128,
+      "sha256": "c1b203d29e0973c8ad23ec63d54b1b3709ac7d01e76edbccc572347ff6fee5ee"
+    },
+    {
+      "archive": "assets/res/sound/battle_2.mp3",
+      "file": "battle_2.mp3",
+      "bytes": 632648,
+      "sha256": "82ebd162141b99bb75b41b2b2ed94ac25b899d25fe592c1a1cbbff965ae09fad"
+    },
+    {
+      "archive": "assets/res/sound/1_click_building.mp3",
+      "file": "1_click_building.mp3",
+      "bytes": 5496,
+      "sha256": "f330cbe215497a3bb89e718b79cd22b6275dd227c24dc008e0c57980f9c583d8"
+    },
+    {
+      "archive": "assets/res/sound/2_click_button.mp3",
+      "file": "2_click_button.mp3",
+      "bytes": 5235,
+      "sha256": "249828cb463ea4dea4c4f9b39f7c5e8dc342e453c8590e07efb7cce2beaf0f4f"
+    },
+    {
+      "archive": "assets/res/sound/3_close_panel.mp3",
+      "file": "3_close_panel.mp3",
+      "bytes": 4973,
+      "sha256": "7b421f1570978a91a9474a249fd8364b0d249fc29179396b7f3cbecd67f2fed7"
+    },
+    {
+      "archive": "assets/res/sound/4_clear_building.mp3",
+      "file": "4_clear_building.mp3",
+      "bytes": 19331,
+      "sha256": "5bd34d27eeb22fc776691096f0c2708b0136a31034111fc64046c82fdb7c5f62"
+    },
+    {
+      "archive": "assets/res/sound/5_clear_tree.mp3",
+      "file": "5_clear_tree.mp3",
+      "bytes": 6802,
+      "sha256": "27bdfe652ccc4b66b9a96afec86c3116d14f479fbeb24d9f1c3334e9e1df3d6f"
+    },
+    {
+      "archive": "assets/res/sound/6_clear_rock.mp3",
+      "file": "6_clear_rock.mp3",
+      "bytes": 13594,
+      "sha256": "2e0b27d591024d3769f3d15ac466cc54d60dc7e8fb5f3a4d78c2c20b181e96e5"
+    },
+    {
+      "archive": "assets/res/sound/7_add_coins.mp3",
+      "file": "7_add_coins.mp3",
+      "bytes": 8882,
+      "sha256": "dadbff8bfa734d8b9600ec37bb9beed4fa333096b40254e1d3d7b3312cffab3f"
+    },
+    {
+      "archive": "assets/res/sound/8_add_food.mp3",
+      "file": "8_add_food.mp3",
+      "bytes": 35768,
+      "sha256": "d3698723c62dc583a66b86326fb978d6b785b408f90f39a5e4ff5358553da34e"
+    },
+    {
+      "archive": "assets/res/sound/9_level_up.mp3",
+      "file": "9_level_up.mp3",
+      "bytes": 45976,
+      "sha256": "4b03a0199d76733fb69439ccda29626a185e8e0573596ba2b6b8a013002db0ec"
+    },
+    {
+      "archive": "assets/res/sound/10_breed_hatch.mp3",
+      "file": "10_breed_hatch.mp3",
+      "bytes": 14116,
+      "sha256": "7ea949384b87f94ae2a62c73dec4c62f7c12158b29b0a8760fa83a060ce02b3e"
+    },
+    {
+      "archive": "assets/res/sound/12_feed.mp3",
+      "file": "12_feed.mp3",
+      "bytes": 10720,
+      "sha256": "ee6253ed47520a0a50a1b79b5979822afa84e57c9b65db4f97fedae54998f80a"
+    },
+    {
+      "archive": "assets/res/sound/13_plant.mp3",
+      "file": "13_plant.mp3",
+      "bytes": 7837,
+      "sha256": "e78065ed0cf8503a6e84e3bc5f59188ce9b839df4d8046e636405f2cb9a1455e"
+    },
+    {
+      "archive": "assets/res/sound/33_switch.mp3",
+      "file": "33_switch.mp3",
+      "bytes": 2090,
+      "sha256": "dec49eb27d8f88d233e02138ffbe01aefdf714411ec2fd9bcd914126f62318e3"
+    },
+    {
+      "archive": "assets/res/sound/36_goal_complete.mp3",
+      "file": "36_goal_complete.mp3",
+      "bytes": 20480,
+      "sha256": "667b920a3f6aafa06c7c2e5942507df36cccaf14d728e5e05e656a553fbbb95c"
+    },
+    {
+      "archive": "assets/res/sound/37_build.mp3",
+      "file": "37_build.mp3",
+      "bytes": 9665,
+      "sha256": "ffe586d233084254e2f9cc9d1034c774ef9b0456fdfc4bd7ee386c425df0dc27"
+    },
+    {
+      "archive": "assets/res/sound/38_ice_spike.mp3",
+      "file": "38_ice_spike.mp3",
+      "bytes": 18321,
+      "sha256": "d6355ed5dcde4e08e1347d91aa4dd042cc39f432083bb940a30901bf27c5f6d0"
+    },
+    {
+      "archive": "assets/res/sound/39_earth_quake.mp3",
+      "file": "39_earth_quake.mp3",
+      "bytes": 37130,
+      "sha256": "bc999a3109540168fd331db620fcd66d1cd754165eb99031aaa79090602c15b6"
+    },
+    {
+      "archive": "assets/res/sound/41_flamingarrows.mp3",
+      "file": "41_flamingarrows.mp3",
+      "bytes": 77125,
+      "sha256": "bb50a1fbc6801b850657c5836f624f1d7684720be152dd090e67995da3f2e743"
+    },
+    {
+      "archive": "assets/res/sound/43_frostnova2.mp3",
+      "file": "43_frostnova2.mp3",
+      "bytes": 58133,
+      "sha256": "9ac83f0a5324ddc6cb38f2d2f3206aabc4efbc7f47a51bc5af5cfaf751e26cb1"
+    },
+    {
+      "archive": "assets/res/sound/44_GhostCloud.mp3",
+      "file": "44_GhostCloud.mp3",
+      "bytes": 26889,
+      "sha256": "d2c3c04a39d264270e307b59f01314f8471c0170ea78fc599bb230e08121ec26"
+    },
+    {
+      "archive": "assets/res/sound/48_laserbeam.mp3",
+      "file": "48_laserbeam.mp3",
+      "bytes": 14327,
+      "sha256": "35c66c4e6a210ecc10d457efbf34198b0bd1b9fe573b73beb0eb5399b076f24f"
+    },
+    {
+      "archive": "assets/res/sound/49_lavaballs.mp3",
+      "file": "49_lavaballs.mp3",
+      "bytes": 32998,
+      "sha256": "a88643aff6b09e04f92ddb18bbfe362fa3489f66463910efb1e084ba24cc3602"
+    },
+    {
+      "archive": "assets/res/sound/50_leech.mp3",
+      "file": "50_leech.mp3",
+      "bytes": 25217,
+      "sha256": "7ebc2032fef267376c5e7501f6692db3f46b06e36f77962cf5d08d8366af6a37"
+    },
+    {
+      "archive": "assets/res/sound/52_LifeDrain.mp3",
+      "file": "52_LifeDrain.mp3",
+      "bytes": 28151,
+      "sha256": "8846a702ad2e6ae106f3ad57dd4b94909a2ae2f33fc3f0e6802b9eab293360c1"
+    },
+    {
+      "archive": "assets/res/sound/54_electric_shock.mp3",
+      "file": "54_electric_shock.mp3",
+      "bytes": 32940,
+      "sha256": "550debef1d160253603ffbd6d228353ec1ca982062e0e4895bfb74ddb32babce"
+    },
+    {
+      "archive": "assets/res/sound/55_magneto.mp3",
+      "file": "55_magneto.mp3",
+      "bytes": 44263,
+      "sha256": "473cb53d640dce3939b7c66398bc647174cba0800e0472423c7718fe7a7cda53"
+    },
+    {
+      "archive": "assets/res/sound/56_nailrain.mp3",
+      "file": "56_nailrain.mp3",
+      "bytes": 24807,
+      "sha256": "15aafd03c59494c2a3513826b9d486cac03553e33c9c11069fa51e4d1ba1870e"
+    },
+    {
+      "archive": "assets/res/sound/57_Paralyzingspell.mp3",
+      "file": "57_Paralyzingspell.mp3",
+      "bytes": 20231,
+      "sha256": "db50c889955ee7ffc6ec4b8cbb522dbc8118d6f17cf6a0362ad551cf01a76cd9"
+    },
+    {
+      "archive": "assets/res/sound/58_poison.mp3",
+      "file": "58_poison.mp3",
+      "bytes": 43164,
+      "sha256": "c41a1a953b99f7d599f98e3adda57dfecf802774eaadf80330aa5ca987c38086"
+    },
+    {
+      "archive": "assets/res/sound/59_hit2.mp3",
+      "file": "59_hit2.mp3",
+      "bytes": 11977,
+      "sha256": "495f2d13bd7cfb5f5795e475c7d5b210d6242bbfdb6d1365eebefeeca7bd8feb"
+    },
+    {
+      "archive": "assets/res/sound/62_snowstorm.mp3",
+      "file": "62_snowstorm.mp3",
+      "bytes": 16022,
+      "sha256": "429dd12822df11a9699ef917dd6fe095570acac47e5b43ea911ef3e9f77b9778"
+    },
+    {
+      "archive": "assets/res/sound/64_stitchingroots.mp3",
+      "file": "64_stitchingroots.mp3",
+      "bytes": 26423,
+      "sha256": "0289cd63f613540a2198028746696a42b651f6ee02c2182f566240303b8e1781"
+    },
+    {
+      "archive": "assets/res/sound/67_tsunami.mp3",
+      "file": "67_tsunami.mp3",
+      "bytes": 115511,
+      "sha256": "a6332d8bf0058d304ba1cb9f01ab97fadc17f1ff0515d9bbcf93c2f386f85460"
+    },
+    {
+      "archive": "assets/res/sound/68_tumbleweed.mp3",
+      "file": "68_tumbleweed.mp3",
+      "bytes": 25217,
+      "sha256": "b3f036c5fd34789299bc77f6fd5d0f5ba98ad291baf667bce45f5e3402bee0e7"
+    },
+    {
+      "archive": "assets/res/sound/72_flooding.mp3",
+      "file": "72_flooding.mp3",
+      "bytes": 48311,
+      "sha256": "9031ce4e792dd9b4adb816e30292d2dabc0427db7b45b0e382dec8c7ee816754"
+    }
+  ]
+}

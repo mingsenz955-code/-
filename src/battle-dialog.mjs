@@ -1,3 +1,4 @@
+import {gameAudio} from './audio.mjs';
 import {installBattleControls,runBattlePlayback,battleWait,battleSpeed} from './battle-playback.mjs';
 import {BATTLE_VIEWPORT,projectilePoints} from './battle-presentation.mjs';
 import {waitForSourceMotion} from './source-motion.mjs';
@@ -37,7 +38,7 @@ export async function openBattleDialog(state,{nodeId=null,enemyGroup=null,layout
  const d=showSource('sourceBattle',renderSourceLayout(layout,{values,slots,hidden,actions:{'skip/btn':{type:'battleSkip',label:'跳过战斗并查看计算结果'}}})+stage,'source-battle-dialog native-fullscreen');
  d.style.setProperty('--source-scale',Math.min((innerWidth-20)/1024,(innerHeight-20)/BATTLE_VIEWPORT.height));
  d.querySelector('.battle-stage').addEventListener('dragon-clip-complete',e=>{const fighter=e.target.closest('.battle-fighter');if(!fighter)return;if(['airattack','landattack','magic'].includes(e.detail.clip))fighter.classList.remove('is-attacking');if(e.detail.clip==='hurt')fighter.classList.remove('is-hit');});d.dataset.battleNode=String(nodeId);d.dataset.battleRun=String(++activeRun);
- installBattleControls(d);return d;
+ d.dataset.battleMusic=layoutName==='ui_battleblood'?'advance':'normal';installBattleControls(d);return d;
 }
 function clip(el,name){const c=el.querySelector('canvas[data-model]');if(c){const clips=MODELS[c.dataset.model]?.clips??[];c.dataset.clip=clips.includes(name)?name:clips.includes('breathinbattle')?'breathinbattle':'breath';delete c.dataset.afterNextClip;if(['airattack','landattack','magic','hurt','movein'].includes(name)){const idle=clips.includes('breathinbattle')?'breathinbattle':'breath',end=name+'end';c.dataset.nextClip=clips.includes(end)?end:idle;if(clips.includes(end))c.dataset.afterNextClip=idle;}else delete c.dataset.nextClip;c.dataset.replay=String((+c.dataset.replay||0)+1)}}
 function motion(el,name,live){
@@ -85,8 +86,10 @@ async function replayBattleAnimation(state,nodeId,result){
   void skillName(layer,skill,common,formationDefinition(attacker.item)?.isLegend===1);
   const attackMotion=magic?'magic':formationPosition(target.item)===1?'airattack':'landattack';
   if(!await motion(attacker.el,attackMotion,live))return false;
+  gameAudio.skill(skill?.kind,'fire',battleSpeed(d));
   const points=projectilePoints(attacker.item,{x,y:ay},target.item,{x:targetX,y:ty},attacker.side);
   if(!await playSourceProjectile(layer,key,common?.type??3,points.from,points.to,live))return false;
+  gameAudio.skill(skill?.kind,'hit',battleSpeed(d));
   const hitKey=common?.hitEff||key,offset=formationDefinition(target.item)?.offsetY??0,direction=target.side==='ally'?-1:1;
   const hitPoint={x:targetX,y:ty-offset};
   const foreground=playSourceHit(layer,hitKey,'bomb2',hitPoint,live,{direction});
@@ -110,7 +113,9 @@ async function replayBossAnimation(state,plan){
  for(const hit of events){if(!live())return false;const ally=hit.side==='ally',actor=d.querySelector(`[data-unit="${ally?'ally'+hit.index:'enemy0'}"]`),target=d.querySelector(`[data-unit="${ally?'enemy0':'ally'+hit.target}"]`),actorItem=ally?team[hit.index]:plan.enemy,targetItem=ally?plan.enemy:team[hit.target],from=ally?allies[hit.index]:enemies[0],to=ally?enemies[0]:allies[hit.target],skill=sourceCombatSkill(hit.skillId)??activeCombatSkill(ally?state:null,actorItem,hit.slot),art=SKILL_ART[skill?.kind],key=art?.fireEff??`${hit.slot===2?'magic':'attack'}_${SPECIES[actorItem.species].originalId}`;
  const label=d.querySelector('[data-source="round/num"]');if(label)label.textContent=`${hit.round}/${plan.roundLimit??30}`;d.dataset.lastBattleSide=hit.side;d.dataset.bossRound=hit.round;void skillName(layer,skill,art,formationDefinition(actorItem)?.isLegend===1);
  if(!await motion(actor,hit.slot===2?'magic':formationPosition(targetItem)===1?'airattack':'landattack',live))return false;
+ gameAudio.skill(skill?.kind,'fire',battleSpeed(d));
  const points=projectilePoints(actorItem,from,targetItem,to,ally?'ally':'enemy');if(!await playSourceProjectile(layer,key,art?.type??3,points.from,points.to,live))return false;
+ gameAudio.skill(skill?.kind,'hit',battleSpeed(d));
  const fx=playSourceHit(layer,art?.hitEff??key,'bomb2',{x:to.x,y:to.y-45},live),hurt=hit.hp>0?motion(target,'hurt',live):Promise.resolve(true);await damageNumber(layer,hit.damage,to.x,to.y-75);applyHp(target,hit.hp,hit.maxHp,ally?'right1':'left'+(hit.target+1));if(!(await Promise.all([fx,hurt])).every(Boolean))return false;
  if(hit.hp===0){target.classList.add('is-dead');d.querySelector(`[data-portrait="${ally?'enemy0':'ally'+hit.target}"]`)?.classList.add('is-dead');if(!await motion(target,'dead',live))return false;target.hidden=true;}
  }
