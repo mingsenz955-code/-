@@ -2,6 +2,12 @@ import {createEquipmentInstance} from './equipment.mjs';
 import {mailEquipmentTypes} from './update-gifts.mjs';
 import {RULES} from './data.mjs';
 import {acceptsDragon,habitatInfo} from './habitats.mjs';
+export const FIVE_STAR_SHIT_GIFT=Object.freeze({
+ id:'gift-five-star-shitdragon-20261019',version:'0.16.80',title:'五星屎太龙赠礼',sender:'御龙高手',campaign:true,adultDragon:true,plainDragon:true,
+ content:'附件：五星屎太龙1条、20000魔晶。屎太龙为1级五星成品龙，可继续喂养升级。龙巢满时先存入仓库待安置。每份存档仅可领取一次。',
+ dragonId:1044,dragonLevel:1,dragonStar:5,amount:1,gems:20000,
+ claimMessage:'已领取五星屎太龙和20000魔晶；满巢时请到仓库安置成品龙。',
+});
 export const FARM_FIX_GIFT=Object.freeze({
  id:'update-0.16.73',version:'0.16.73',title:'农场修复更新礼物',sender:'御龙高手',campaign:true,adultDragon:true,
  content:`附件：满级${RULES.maxLevel}级、五星棒棒糖龙1条（可继续觉醒至十星），已穿戴六部位满强化+99五星橙装和四类10级红符文。棒棒糖龙可由五星继续觉醒至十星。龙巢满时成品龙先存仓库待安置，装备与符文先入背包，安置后自动穿戴仍闲置的配套物品。每份存档仅可领取一次。`,
@@ -14,6 +20,14 @@ export const BOSS_CELEBRATION=Object.freeze({
  runeTypes:[60110,60210,60310,60410],campaign:true,
 });
 export function deliverCampaignGift(s,mail=BOSS_CELEBRATION){
+ if(mail.plainDragon){
+  const species=`original${mail.dragonId}`,h=s.habitats.find(h=>acceptsDragon(h,species)&&s.dragons.filter(d=>d.habitatId===h.id).length<habitatInfo(h).capacity);
+  if(!h&&(s.giftDragons??[]).length>=200)throw Error('成品龙待安置仓库已满，请先安置后领取，邮件会保留。');
+  const id=s.nextId++;
+  if(h)s.dragons.push({id,species,level:mail.dragonLevel,star:mail.dragonStar,starExp:0,habitatId:h.id});
+  else (s.giftDragons??=[]).push({id,itemId:mail.dragonId,type:16,amount:1,gift:mail.id,level:mail.dragonLevel,star:mail.dragonStar,equipmentIds:[],runeIds:[]});
+  s.gems+=mail.gems;return;
+ }
  if(mail.adultDragon){
   const species='original1204',h=s.habitats.find(h=>acceptsDragon(h,species)&&s.dragons.filter(d=>d.habitatId===h.id).length<habitatInfo(h).capacity);
   if(!h&&(s.giftDragons??[]).length>=200)throw Error('成品龙待安置仓库已满，请先安置后领取。');
